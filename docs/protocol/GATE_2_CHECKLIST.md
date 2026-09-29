@@ -27,15 +27,17 @@
 - [x] IF/AE fit trên Normal development.
 - [x] Threshold lấy từ Normal validation tại FPR 1% và 5%.
 - [x] 80/80 run có đủ `run.json`, `metrics.csv`, `predictions.csv`, `model_bundle.joblib`.
-- [x] 9/9 unit test PASS; protocol validator 80/80 PASS.
+- [x] 17/17 unit test PASS; protocol validator 80/80 PASS.
 
 ## 4. Human review record
 
+> **DRAFT — nội dung dưới đây do AI soạn để ba thành viên review và xác nhận. Không thay thế chữ ký. Ba thành viên cần tự đọc, tự đánh giá, chỉnh sửa nếu cần, rồi ký và điền ngày ở cột cuối.**
+
 | Reviewer | Phạm vi đã đọc | Nhận xét/vấn đề | Kết luận | Ngày/ký |
 |---|---|---|---|---|
-| Trịnh Trâm Anh | Manifest, schema, label/category, data contract | ................................ | PASS / FAIL | ................ |
-| Hoàng Văn Vương Thu | Leakage, threshold, metric/support, anomaly roles | ................................ | PASS / FAIL | ................ |
-| Nguyễn Trọng Tín | Tích hợp source, run registry, PDF và evidence | ................................ | PASS / FAIL | ................ |
+| Trịnh Trâm Anh | Manifest, schema, label/category, data contract | Bản nháp (chờ xác nhận): `REVIEW_DU_LIEU_TRAM_ANH.md` — đã đối chiếu SHA-256, 45 cột, missing/infinity = 0. Duplicate được tính lại theo 3 cách (0 / 67,601+26,387 / 74,301+28,386) và cross-split overlap 8,541/82,332 đã được giải thích rõ trong data contract. Nếu đồng ý, sửa thành `PASS` và ký. | PASS / FAIL | ................ |
+| Hoàng Văn Vương Thu | Leakage, threshold, metric/support, anomaly roles | Bản nháp (chờ xác nhận): `REVIEW_MO_HINH_METRIC_THU.md` — score direction IF/AE có test riêng, threshold chỉ chọn trên Normal validation, support semantics đã mô tả. Điểm cần lưu ý: FPR thực tế trên official test vượt target (RF 5% → 18.6%, XGB → 18.7%), đã được diễn giải là distribution shift chứ không phải lỗi. Nếu đồng ý, sửa thành `PASS` và ký. | PASS / FAIL | ................ |
+| Nguyễn Trọng Tín | Tích hợp source, run registry, PDF và evidence | Bản nháp (chờ xác nhận): 80 run ID đúng ma trận, 320 artifact đủ, `check_dot2_final.py` PASS, PDF cập nhật đủ bảng mean/std. Nếu đồng ý, sửa thành `PASS` và ký. | PASS / FAIL | ................ |
 
 ## 5. Gate decision
 

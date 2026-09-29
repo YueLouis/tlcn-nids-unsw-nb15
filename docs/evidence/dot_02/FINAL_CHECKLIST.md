@@ -10,16 +10,16 @@ Ngày kiểm tra: 26/09/2026
 | D2.2 | Manifest và fingerprint hai official split | `artifacts/data/data_manifest.json` | PASS kỹ thuật |
 | D2.3 | Audit schema/chất lượng/label/category | `artifacts/data/data_manifest.json`, báo cáo PDF | PASS kỹ thuật |
 | D2.4 | Data contract | `docs/evidence/dot_02/DATA_CONTRACT.md`, `docs/protocol/GATE_2_CHECKLIST.md` | PASS kỹ thuật; chờ review Gate 2 |
-| D2.5 | Preprocessing chống leakage | `src/nids_benchmark/preprocessing.py`, `src/nids_benchmark/data.py`, 9 unit tests | PASS kỹ thuật |
+| D2.5 | Preprocessing chống leakage | `src/nids_benchmark/preprocessing.py`, `src/nids_benchmark/data.py`, 17 unit tests | PASS kỹ thuật |
 | D2.6 | Bốn scenario và LOACO roles | Bảng scenario trong PDF | PASS tài liệu |
 | D2.7 | Bốn baseline và artifact | `results/runs/`: 80 run x 4 artifact | PASS kỹ thuật |
-| D2.8 | Test có tên, input/hành vi, expected và kết quả | `tests/`, log kiểm tra cuối, ảnh `D2_03` | PASS: 9/9 |
+| D2.8 | Test có tên, input/hành vi, expected và kết quả | `tests/`, log kiểm tra cuối, ảnh `D2_03` | PASS: 17/17 |
 | D2.9 | Metric, threshold, support, mean/std | `docs/reports/DOT_02_METRICS_ALL_RUNS.csv`, `DOT_02_METRICS_MEAN_STD.csv` | PASS kỹ thuật |
 | D2.10 | Ma trận tiến độ chi tiết | Chương 1 và phụ lục PDF | PASS tài liệu |
 
 ## Kiểm tra tự động cuối
 
-- `python -m unittest discover -s tests -q`: 9/9 PASS.
+- `python -m unittest discover -s tests -q`: 17/17 PASS.
 - `python scripts/validate_protocol.py`: 80 run ID hợp lệ.
 - 80 thư mục run tồn tại.
 - Mỗi run có `run.json`, `metrics.csv`, `predictions.csv`, `model_bundle.joblib`.

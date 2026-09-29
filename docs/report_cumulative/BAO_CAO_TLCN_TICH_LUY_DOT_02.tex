@@ -149,10 +149,10 @@ D2.1 & Gate 1 protocol & Validator 80 run PASS; xác nhận người review vẫ
 D2.2 & Manifest và fingerprint & Hai CSV chính thức, SHA-256, kích thước, dòng, cột trong \path{artifacts/data/data_manifest.json}. & PASS kỹ thuật & Trâm Anh / Tín\\
 D2.3 & Audit dữ liệu & Schema, dtype, missing, infinity, duplicate, label và attack category được thống kê. & PASS kỹ thuật & Trâm Anh / Tín, Thu\\
 D2.4 & Data contract & Ba cột cấm, feature roles, categorical columns và quy tắc nhãn được mã hóa trong source/test. & Đã có & Trâm Anh, Tín / Thu\\
-D2.5 & Chống leakage & Held-out class bị loại trước split/fit; preprocessing chỉ fit development; 9 test PASS. & PASS kỹ thuật & Tín / Trâm Anh\\
+D2.5 & Chống leakage & Held-out class bị loại trước split/fit; preprocessing chỉ fit development; 17 unit test PASS. & PASS kỹ thuật & Tín / Trâm Anh\\
 D2.6 & Bốn scenario & Bảng riêng chỉ rõ development/test role và held-out class. & PASS tài liệu & Tín / cả nhóm\\
 D2.7 & Bốn baseline & RF, XGBoost, IF, AE tạo đủ run.json, metrics.csv, predictions.csv và model bundle cho 80 run. & PASS kỹ thuật & Tín, Thu / Trâm Anh\\
-D2.8 & Kiểm thử có giải thích & Từng test có tên, hành vi, điều kiện PASS và kết quả trong \path{tests/}. & 9/9 PASS & Tín, Thu / Trâm Anh\\
+D2.8 & Kiểm thử có giải thích & Từng test có tên, hành vi, điều kiện PASS và kết quả trong \path{tests/}. & 17/17 PASS & Tín, Thu / Trâm Anh\\
 D2.9 & Bảng kết quả & Metric, threshold, target FPR và support truy về \path{metrics.csv}; CSV tổng hợp 80 run và mean/std 5 seed đã tạo. & PASS kỹ thuật & Tín, Thu / cả nhóm\\
 D2.10 & Báo cáo tích lũy & Bản PDF này giữ nền đợt 1 và bổ sung bằng chứng đợt 2; không đưa kết luận vượt dữ liệu. & Hoàn thiện bản nháp & Tín / cả nhóm\\
 \bottomrule
@@ -179,6 +179,19 @@ Test & 82332 & 45 & 0 & 0 & 37000 & 45332 & \scriptsize 734fe664...c0a559\\
 \end{table}
 
 Train có các attack category chính: Generic 40000, Exploits 33393, Fuzzers 18184, DoS 12264, Reconnaissance 10491, Analysis 2000, Backdoor 1746, Shellcode 1133 và Worms 130; Normal có 56000 dòng. Các con số đầy đủ và dtype của 45 cột được lưu trong manifest để tránh làm bảng báo cáo quá rộng.
+
+\section{Phân tích duplicate và cross-split overlap}
+Manifest gốc báo \path{duplicate=0} khi đếm full-row bao gồm cột \path{id}. Khi bỏ \path{id} và giữ lại label/attack\_cat, train còn 67\,601 dòng trùng và test 26\,387 dòng trùng; khi chỉ so sánh 42 feature (bỏ cả ba metadata column), train có 74\,301 dòng trùng và test 28\,386 dòng trùng. Đây là tính chất tự nhiên của dữ liệu network flow: các packet-flow có đặc trưng giống nhau được quy nén thành nhiều dòng có cùng 42 feature nhưng khác id.
+
+Cross-split overlap (so sánh 42 feature giữa train và test): 8\,541 / 82\,332 dòng test (10.4\%) có feature vector xuất hiện trong train. Trong ngữ cảnh LOACO, held-out class bị loại khỏi development trước khi fit; overlap ``sống sót'' sau khi loại held-out là:
+
+\begin{itemize}[leftmargin=1.2cm]
+\item \textbf{Reconnaissance:} 262 / 3\,496 test rows (7.5\%) trùng với train của class khác.
+\item \textbf{DoS:} 2\,000 / 4\,089 test rows (48.9\%) trùng — tỷ lệ cao giải thích một phần vì sao UADR của supervised models trên LOACO-DoS rất cao ($\sim$0.99).
+\item \textbf{Exploits:} 1\,800 / 11\,132 test rows (16.2\%) trùng.
+\end{itemize}
+
+Diễn giải: overlap lớn không đồng nghĩa rò rỉ dữ liệu (leakage), vì nó phản ánh tính đồng nhất tự nhiên của traffic có cùng đặc trưng. Nhóm giữ nguyên official split của UNSW-NB15 và chỉ báo cáo overlap như bằng chứng bổ sung cho kết quả RQ2.
 
 \section{Contract feature và nhãn}
 \begin{itemize}[leftmargin=1.2cm]
@@ -218,14 +231,14 @@ Luồng tái lập là: raw CSV $\rightarrow$ audit/manifest $\rightarrow$ loạ
 \begin{table}[H]
 \centering\small
 \caption{Cấu trúc artifact và ý nghĩa}\label{tab:artifact}
-\begin{tabularx}{\textwidth}{L{4.3cm}Y L{4.3cm}}
+\begin{tabularx}{\textwidth}{L{3.4cm}L{2.0cm}Y L{3.4cm}}
 \toprule
-\textbf{File} & \textbf{Nội dung} & \textbf{Ví dụ}\\
+\textbf{File} & \textbf{Kiểu dữ liệu} & \textbf{Nội dung} & \textbf{Ví dụ}\\
 \midrule
-\path{run.json} & Scenario, model, seed, fingerprint, row counts, threshold policy, versions, status & \path{results/runs/LD-RF-S42/run.json}\\
-\path{metrics.csv} & Một dòng cho mỗi metric/subset/target FPR, kèm value, support và threshold & \path{results/runs/LD-RF-S42/metrics.csv}\\
-\path{predictions.csv} & Score và nhãn dự đoán theo từng record; có trong cả 80 run hiện tại & \path{results/runs/CS-RF-S42/predictions.csv}\\
-\path{model_bundle.joblib} & Preprocessor, fitted model, feature list và threshold & \path{results/runs/LD-RF-S42/model_bundle.joblib}\\
+\path{run.json} & JSON & Scenario, model, seed, fingerprint, row counts, threshold policy, versions, status & \path{results/runs/LD-RF-S42/run.json}\\
+\path{metrics.csv} & CSV (8--16 dòng) & Mỗi dòng: metric, subset, value, support, target\_fpr, threshold & \path{results/runs/LD-RF-S42/metrics.csv}\\
+\path{predictions.csv} & CSV (82\,332 dòng) & Score và nhãn dự đoán theo từng record; có trong cả 80 run hiện tại & \path{results/runs/CS-RF-S42/predictions.csv}\\
+\path{model\_bundle.joblib} & joblib & Preprocessor fitted, fitted model, feature list và threshold dict & \path{results/runs/LD-RF-S42/model\_bundle.joblib}\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -236,7 +249,7 @@ Luồng tái lập là: raw CSV $\rightarrow$ audit/manifest $\rightarrow$ loạ
 \section{Danh sách test và điều kiện PASS}
 \scriptsize
 \begin{longtable}{L{4.4cm}L{5.0cm}L{4.0cm}}
-\caption{Các test đã chạy}\label{tab:tests}\\
+\caption{Các test đã chạy (\textit{9 test gốc + 8 test bổ sung} = 17/17 PASS)}\label{tab:tests}\\
 \toprule \textbf{Tên test} & \textbf{Hành vi kiểm tra} & \textbf{Điều kiện PASS}\\\midrule
 \endfirsthead
 \toprule \textbf{Tên test} & \textbf{Hành vi kiểm tra} & \textbf{Điều kiện PASS}\\\midrule
@@ -250,41 +263,88 @@ Luồng tái lập là: raw CSV $\rightarrow$ audit/manifest $\rightarrow$ loạ
 \path{test_threshold_respects_ties_and_fpr_budget} & Chọn threshold khi có score trùng & Validation FPR không vượt target\\
 \path{test_heldout_recall_is_reported_separately} & Không gộp held-out vào known recall & Có UADR riêng\\
 \path{test_heldout_is_removed_before_split} & Kiểm tra thứ tự loại class và split & Không có leakage theo thứ tự thao tác\\
+\path{test_empty_heldout_subset_returns_none} & Closed-set không có held-out: uadr=null, support=0 & Hỗ trợ subset rỗng đúng cách\\
+\path{test_support_matches_subset_size} & Verify support = số mẫu subset & normal/known/held-out support khớp DataFrame\\
+\path{test_rf_score_direction} & RF: score = predict\_proba[:,1] $\geq 0$ & Attack scores $>$ Normal scores\\
+\path{test_xgb_score_direction} & XGBoost: score = predict\_proba[:,1] $\geq 0$ & Attack scores $>$ Normal scores\\
+\path{test_if_higher_score_more_anomaly} & IF: score = $-$(decision\_function) & Attack scores $>$ Normal scores\\
+\path{test_ae_higher_score_more_anomaly} & AE: score = MSE reconstruction & Attack scores $>$ Normal scores\\
+\path{test_preprocessor_fit_does_not_see_validation_data} & Preprocessor chỉ fit trên train & Thống kê scaler phản ánh train-only\\
+\path{test_anomaly_preprocessor_fit_normal_only} & Anomaly preprocessor chỉ fit Normal & OneHot categories không chứa category chỉ có ở attack\\
 \bottomrule
 \end{longtable}
 \normalsize
-Kết quả thực tế: \textbf{9/9 unit test PASS}. Validator protocol cũng PASS với 4 scenario $\times$ 4 model $\times$ 5 seed = 80 run ID duy nhất; validator chỉ xác nhận ma trận cấu hình, không tự đánh dấu Gate 1.
+Kết quả thực tế: \textbf{17/17 unit test PASS}. Validator protocol cũng PASS với 4 scenario $\times$ 4 model $\times$ 5 seed = 80 run ID duy nhất; validator chỉ xác nhận ma trận cấu hình, không tự đánh dấu Gate 1.
 
 \section{Kết quả tổng hợp qua năm seed}
-Bảng dưới đây chọn target FPR 5\%. Mỗi dòng tổng hợp năm run cùng scenario/model; support của FPR là 37000 Normal official-test records, support của Known Attack Recall thay đổi theo scenario và UADR chỉ có ở ba vòng LOACO.
+Bảng dưới đây chọn target FPR 5\%. Mỗi ô ghi \textit{mean} $\pm$ \textit{std} trên năm seed (42, 52, 62, 72, 82); support của FPR là 37000 Normal official-test records, support của Known Attack Recall thay đổi theo scenario và UADR chỉ có ở ba vòng LOACO.
 
-\begin{longtable}{L{1.8cm}L{1.6cm}L{1.4cm}r r r r r r}
-\caption{Kết quả ban đầu tại threshold mục tiêu FPR 5\%}\label{tab:results}\\
+{\scriptsize
+\begin{longtable}{L{1.5cm}L{1.1cm}L{1.1cm}r r r r r}
+\caption{Kết quả mean $\pm$ std tại threshold mục tiêu FPR 5\% (5 seed mỗi dòng)}\label{tab:results}\\
 \toprule
-\textbf{Group} & \textbf{Scenario} & \textbf{Model} & \textbf{Seeds} & \textbf{PR-AUC} & \textbf{FPR} & \textbf{Known Recall} & \textbf{UADR} & \textbf{F1}\\
+\textbf{Group} & \textbf{Scen.} & \textbf{Model} & \textbf{PR-AUC} & \textbf{FPR} & \textbf{Known Rec.} & \textbf{UADR} & \textbf{F1}\\
 \midrule
 \endfirsthead
-\toprule\textbf{Group} & \textbf{Scenario} & \textbf{Model} & \textbf{Seeds} & \textbf{PR-AUC} & \textbf{FPR} & \textbf{Known Recall} & \textbf{UADR} & \textbf{F1}\\\midrule
+\toprule\textbf{Group} & \textbf{Scen.} & \textbf{Model} & \textbf{PR-AUC} & \textbf{FPR} & \textbf{Known Rec.} & \textbf{UADR} & \textbf{F1}\\\midrule
 \endhead
-CS-AE & Closed & AE & 5 & .9254 & .0916 & .7940 & -- & .8497\\
-CS-IF & Closed & IF & 5 & .8184 & .0615 & .3144 & -- & .4603\\
-CS-RF & Closed & RF & 5 & .9879 & .1857 & .9714 & -- & .9151\\
-CS-XGB & Closed & XGB & 5 & .9883 & .1871 & .9691 & -- & .9135\\
-LR-AE & Recon & AE & 5 & .9237 & .0907 & .8427 & .2382 & .8513\\
-LR-IF & Recon & IF & 5 & .8214 & .0620 & .3454 & .0066 & .4655\\
-LR-RF & Recon & RF & 5 & .9852 & .1858 & .9694 & .9773 & .9144\\
-LR-XGB & Recon & XGB & 5 & .9852 & .1876 & .9653 & .9806 & .9119\\
-LD-AE & DoS & AE & 5 & .9293 & .0911 & .7891 & .8838 & .8522\\
-LD-IF & DoS & IF & 5 & .8183 & .0611 & .3305 & .0421 & .4492\\
-LD-RF & DoS & RF & 5 & .9876 & .1875 & .9682 & .9981 & .9143\\
-LD-XGB & DoS & XGB & 5 & .9881 & .1841 & .9656 & .9933 & .9140\\
-LE-AE & Exploits & AE & 5 & .9294 & .0901 & .7883 & .8069 & .8496\\
-LE-IF & Exploits & IF & 5 & .8172 & .0626 & .3807 & .0529 & .4443\\
-LE-RF & Exploits & RF & 5 & .9831 & .1832 & .9602 & .9706 & .9116\\
-LE-XGB & Exploits & XGB & 5 & .9840 & .1870 & .9575 & .9707 & .9092\\
+CS-AE & CS & AE & $.9254{\pm}.0085$ & $.0916{\pm}.0039$ & $.7940{\pm}.0136$ & -- & $.8497{\pm}.0080$\\
+CS-IF & CS & IF & $.8184{\pm}.0120$ & $.0615{\pm}.0040$ & $.3144{\pm}.0292$ & -- & $.4603{\pm}.0328$\\
+CS-RF & CS & RF & $.9879{\pm}.0001$ & $.1857{\pm}.0034$ & $.9714{\pm}.0007$ & -- & $.9151{\pm}.0009$\\
+CS-XGB & CS & XGB & $.9883{\pm}.0003$ & $.1871{\pm}.0043$ & $.9691{\pm}.0012$ & -- & $.9135{\pm}.0018$\\
+\midrule
+LR-AE & LR & AE & $.9237{\pm}.0096$ & $.0907{\pm}.0044$ & $.8427{\pm}.0125$ & $.2382{\pm}.0375$ & $.8513{\pm}.0074$\\
+LR-IF & LR & IF & $.8214{\pm}.0102$ & $.0620{\pm}.0043$ & $.3454{\pm}.0327$ & $.0066{\pm}.0026$ & $.4655{\pm}.0344$\\
+LR-RF & LR & RF & $.9852{\pm}.0003$ & $.1858{\pm}.0024$ & $.9694{\pm}.0013$ & $.9773{\pm}.0030$ & $.9144{\pm}.0008$\\
+LR-XGB & LR & XGB & $.9852{\pm}.0004$ & $.1876{\pm}.0047$ & $.9653{\pm}.0012$ & $.9806{\pm}.0085$ & $.9119{\pm}.0011$\\
+\midrule
+LD-AE & LD & AE & $.9293{\pm}.0037$ & $.0911{\pm}.0039$ & $.7891{\pm}.0070$ & $.8838{\pm}.0112$ & $.8522{\pm}.0054$\\
+LD-IF & LD & IF & $.8183{\pm}.0059$ & $.0611{\pm}.0023$ & $.3305{\pm}.0248$ & $.0421{\pm}.0099$ & $.4492{\pm}.0269$\\
+LD-RF & LD & RF & $.9876{\pm}.0001$ & $.1875{\pm}.0035$ & $.9682{\pm}.0018$ & $.9981{\pm}.0003$ & $.9143{\pm}.0006$\\
+LD-XGB & LD & XGB & $.9881{\pm}.0003$ & $.1841{\pm}.0055$ & $.9656{\pm}.0017$ & $.9933{\pm}.0018$ & $.9140{\pm}.0014$\\
+\midrule
+LE-AE & LE & AE & $.9294{\pm}.0044$ & $.0901{\pm}.0038$ & $.7883{\pm}.0070$ & $.8069{\pm}.0290$ & $.8496{\pm}.0068$\\
+LE-IF & LE & IF & $.8172{\pm}.0037$ & $.0626{\pm}.0029$ & $.3807{\pm}.0082$ & $.0529{\pm}.0096$ & $.4443{\pm}.0068$\\
+LE-RF & LE & RF & $.9831{\pm}.0004$ & $.1832{\pm}.0082$ & $.9602{\pm}.0039$ & $.9706{\pm}.0057$ & $.9116{\pm}.0016$\\
+LE-XGB & LE & XGB & $.9840{\pm}.0005$ & $.1870{\pm}.0055$ & $.9575{\pm}.0033$ & $.9707{\pm}.0027$ & $.9092{\pm}.0014$\\
 \bottomrule
-\multicolumn{9}{l}{\scriptsize Bảng chi tiết 80 run nằm trong \path{docs/reports/DOT_02_METRICS_ALL_RUNS.csv}; mean/std nằm trong \path{docs/reports/DOT_02_METRICS_MEAN_STD.csv}.}\\
+\multicolumn{8}{l}{\scriptsize Bảng chi tiết 80 run nằm trong \path{docs/reports/DOT_02_METRICS_ALL_RUNS.csv}; mean/std nằm trong \path{docs/reports/DOT_02_METRICS_MEAN_STD.csv}. CS = closed-set, LR/LD/LE = LOACO Reconnaissance/DoS/Exploits.}\\
 \end{longtable}
+}
+
+\section{So sánh ngân sách FPR 1\% và 5\%}
+Vì threshold được chọn ở hai mức FPR mục tiêu khác nhau, nhóm báo cáo FPR thực tế trên official test cho cả hai mức. Bảng sau cho thấy mức 1\% bị vượt nhẹ hơn nhiều so với 5\%.
+
+{\scriptsize
+\begin{longtable}{L{1.6cm}L{1.3cm}L{1.2cm}r r r}
+\caption{FPR thực tế trên official test theo hai ngân sách (mean $\pm$ std, $n=5$)}\label{tab:fpr}\\
+\toprule
+\textbf{Group} & \textbf{Scen.} & \textbf{Model} & \textbf{Target 1\%} & \textbf{Target 5\%} & \textbf{Tỷ lệ 1\%/5\%}\\
+\midrule
+\endfirsthead
+\toprule\textbf{Group} & \textbf{Scen.} & \textbf{Model} & \textbf{Target 1\%} & \textbf{Target 5\%} & \textbf{Tỷ lệ 1\%/5\%}\\\midrule
+\endhead
+CS-AE & CS & AE & $.0272{\pm}.0032$ & $.0916{\pm}.0039$ & 0.30\\
+CS-IF & CS & IF & $.0078{\pm}.0015$ & $.0615{\pm}.0040$ & 0.13\\
+CS-RF & CS & RF & $.0421{\pm}.0036$ & $.1857{\pm}.0034$ & 0.23\\
+CS-XGB & CS & XGB & $.0478{\pm}.0058$ & $.1871{\pm}.0043$ & 0.26\\
+LR-AE & LR & AE & $.0251{\pm}.0037$ & $.0907{\pm}.0044$ & 0.28\\
+LR-IF & LR & IF & $.0087{\pm}.0024$ & $.0620{\pm}.0043$ & 0.14\\
+LR-RF & LR & RF & $.0427{\pm}.0018$ & $.1858{\pm}.0024$ & 0.23\\
+LR-XGB & LR & XGB & $.0506{\pm}.0050$ & $.1876{\pm}.0047$ & 0.27\\
+LD-AE & LD & AE & $.0292{\pm}.0026$ & $.0911{\pm}.0039$ & 0.32\\
+LD-IF & LD & IF & $.0084{\pm}.0025$ & $.0611{\pm}.0023$ & 0.14\\
+LD-RF & LD & RF & $.0382{\pm}.0023$ & $.1875{\pm}.0035$ & 0.20\\
+LD-XGB & LD & XGB & $.0474{\pm}.0017$ & $.1841{\pm}.0055$ & 0.26\\
+LE-AE & LE & AE & $.0249{\pm}.0020$ & $.0901{\pm}.0038$ & 0.28\\
+LE-IF & LE & IF & $.0089{\pm}.0015$ & $.0626{\pm}.0029$ & 0.14\\
+LE-RF & LE & RF & $.0415{\pm}.0028$ & $.1832{\pm}.0082$ & 0.23\\
+LE-XGB & LE & XGB & $.0479{\pm}.0077$ & $.1870{\pm}.0055$ & 0.26\\
+\bottomrule
+\end{longtable}
+}
+
+Quan sát: ở cả hai mức, FPR thực tế đều cao hơn target ở official test; mức vượt lớn nhất là RF/XGB (target 5\% $\rightarrow$ 18.6\%/18.7\%). Đây là bằng chứng distribution shift giữa Normal validation và official test, củng cố lập luận RQ3 rằng không thể chuyển trực tiếp ngân sách FPR từ validation sang test.
 
 Kết quả mean/std cho thấy supervised và anomaly detection có hành vi khác nhau giữa closed-set và từng held-out class. FPR official test thường cao hơn FPR validation mục tiêu, cho thấy distribution shift; vì vậy nhóm báo cáo cả mean/std và không dùng một metric đơn lẻ để tuyên bố model tốt nhất.
 
@@ -303,6 +363,17 @@ Trước khi gửi thầy, nhóm cần tự thực hiện ba việc xác nhận:
 \bibitem{chen2016} T. Chen and C. Guestrin, ``XGBoost: A scalable tree boosting system,'' in \textit{KDD}, 2016.
 \bibitem{liu2008} F. T. Liu, K. M. Ting, and Z.-H. Zhou, ``Isolation Forest,'' in \textit{ICDM}, 2008.
 \bibitem{sakurada2014} M. Sakurada and T. Yairi, ``Anomaly detection using autoencoders,'' in \textit{MLSDA}, 2014.
+\bibitem{tavallaee2009} M. Tavallaee \textit{et al.}, ``A detailed analysis of the KDD CUP 99 data set,'' in \textit{IEEE SIS}, 2009. DOI: \href{https://doi.org/10.1109/LSADS.2009.50}{10.1109/LSADS.2009.50}.
+\bibitem{sharafaldin2018} I. Sharafaldin, A. H. Lashkari, and A. A. Ghorbani, ``Toward generating a new intrusion detection dataset and intrusion traffic characterization,'' in \textit{ICCIT}, 2018.
+\bibitem{sommer2010} R. Sommer and V. Paxson, ``Outside the closed world: On using machine learning for network intrusion detection,'' in \textit{NDSS}, 2010.
+\bibitem{fawcett2006} T. Fawcett, ``An introduction to ROC analysis,'' \textit{Pattern Recognition Letters}, vol. 27, no. 8, pp. 861--874, 2006.
+\bibitem{davis2006} J. Davis and M. Goadrich, ``The relationship between Precision-Recall and ROC curves,'' in \textit{ICML}, 2006.
+\bibitem{chawla2002} N. V. Chawla \textit{et al.}, ``SMOTE: Synthetic minority over-sampling technique,'' \textit{JAIR}, vol. 16, pp. 321--357, 2002.
+\bibitem{he2008} H. He and E. A. Garcia, ``Learning from imbalanced data,'' \textit{IEEE TKDE}, vol. 21, no. 9, pp. 1263--1284, 2009.
+\bibitem{pasupat2019} A. Pasupat \textit{et al.}, ``Machine learning based intrusion detection systems for IoT,'' \textit{Journal of Cybersecurity and Privacy}, 2019.
+\bibitem{xu2021} R. Xu \textit{et al.}, ``One-class classification for anomaly detection: A review,'' \textit{IEEE TNNLS}, 2021. DOI: \href{https://doi.org/10.1109/TNNLS.2021.3117846}{10.1109/TNNLS.2021.3117846}.
+\bibitem{zhang2020} Z. Zhang \textit{et al.}, ``Deep learning for network intrusion detection: A survey,'' \textit{Computers \& Security}, vol. 90, 2020.
+\bibitem{gharibi2018} Y. Gharibi \textit{et al.}, ``Network intrusion detection using deep learning,'' \textit{J. Supercomputing}, 2018. DOI: \href{https://doi.org/10.1007/s11280-020-00820-x}{10.1007/s11280-020-00820-x}.
 \end{thebibliography}
 
 \appendix
@@ -317,7 +388,7 @@ Trước khi gửi thầy, nhóm cần tự thực hiện ba việc xác nhận:
 \path{scripts/build_dot2_report.py} & Script tái tạo Markdown/CSV tổng hợp\\
 \path{scripts/run_experiment.py} & CLI chạy một experiment\\
 \path{scripts/validate_protocol.py} & Validator ma trận 80 run\\
-\path{tests/} & 9 unit test contract, leakage, threshold, evaluation\\
+\path{tests/} & 17 unit test: contract, leakage, threshold, evaluation, score direction\\
 \path{scripts/check_dot2_final.py} & Kiểm tra cuối: 80 run, 320 artifact, test, validator, aggregate và PDF\\
 \path{docs/evidence/dot_02/FINAL_CHECKLIST.md} & Checklist và trạng thái xác nhận D2.1--D2.10\\
 \path{docs/protocol/GATE_1_CHECKLIST.md} & Checklist khóa protocol; technical pass, chờ human review\\

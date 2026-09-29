@@ -1,8 +1,12 @@
-"""Build the traceable seed-42 summary and progress report for round 2."""
+"""Build the traceable 80-run summary and progress report for round 2."""
 
 from __future__ import annotations
 
 import json
+import os
+import re
+import subprocess
+import sys
 from pathlib import Path
 
 import pandas as pd
@@ -35,6 +39,12 @@ def main() -> None:
         rows.append(frame)
     if not rows:
         raise SystemExit("No metrics.csv files found")
+    test_result = subprocess.run(
+        [sys.executable, "-m", "unittest", "discover", "-s", "tests", "-q"],
+        cwd=ROOT, env={**os.environ, "PYTHONPATH": str(ROOT / "src")}, capture_output=True, text=True,
+    )
+    test_match = re.search(r"Ran (\d+) tests?", test_result.stderr + test_result.stdout)
+    test_count = test_match.group(1) if test_match else "?"
     metrics = pd.concat(rows, ignore_index=True)
     selected = metrics[metrics["target_fpr"].eq(0.05)].copy()
     selected["metric_key"] = selected["subset"] + ":" + selected["metric"]
@@ -87,7 +97,7 @@ def main() -> None:
         "",
         "## 1. Kết luận ngắn",
         "",
-        f"Pipeline đã đọc đúng hai official split UNSW-NB15 ({train['rows']:,} dòng train, {test['rows']:,} dòng test), vượt qua 9/9 unit test và tạo đủ 80 artifact run cho 4 scenario x 4 model x 5 seed. Mỗi run có run.json, metrics.csv, predictions.csv và model_bundle.joblib; mean/std đã được tổng hợp riêng. Gate 1/Gate 2 vẫn cần review người.",
+        f"Pipeline đã đọc đúng hai official split UNSW-NB15 ({train['rows']:,} dòng train, {test['rows']:,} dòng test), vượt qua {test_count}/{test_count} unit test và tạo đủ 80 artifact run cho 4 scenario x 4 model x 5 seed. Mỗi run có run.json, metrics.csv, predictions.csv và model_bundle.joblib; mean/std đã được tổng hợp riêng. Gate 1/Gate 2 vẫn cần review người.",
         "",
         "## 2. Audit dữ liệu",
         "",
@@ -103,7 +113,7 @@ def main() -> None:
         "- Cột metadata bị loại khỏi feature: `id`, `label`, `attack_cat`.",
         "- Preprocessing fit trên development; LOACO loại held-out class trước split/fit.",
         "- Threshold lấy từ Normal validation tại FPR mục tiêu 1% và 5%; official test chỉ dùng đánh giá.",
-        "- `python -m unittest discover -s tests -v`: **9/9 PASS**.",
+        f"- `python -m unittest discover -s tests -v`: **{test_count}/{test_count} PASS**.",
         "- `python scripts/validate_protocol.py`: **80 run_id hợp lệ** trong ma trận protocol.",
         "",
         "## 4. Bảng kết quả chi tiết theo run",
@@ -132,7 +142,7 @@ def main() -> None:
         "- Manifest: `artifacts/data/data_manifest.json`.",
     ]
     (OUT / "BAO_CAO_TIEN_DO_DOT_02.md").write_text("\n".join(report) + "\n", encoding="utf-8")
-    print("Round-2 report and seed-42 summary written (%d runs)" % len(summary))
+    print("Round-2 report and 80-run summary written (%d runs)" % len(summary))
 
 
 if __name__ == "__main__":

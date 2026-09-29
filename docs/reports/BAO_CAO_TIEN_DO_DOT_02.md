@@ -4,7 +4,7 @@
 
 ## 1. Kết luận ngắn
 
-Pipeline đã đọc đúng hai official split UNSW-NB15 (175,341 dòng train, 82,332 dòng test), vượt qua 9/9 unit test và tạo đủ 80 artifact run cho 4 scenario x 4 model x 5 seed. Mỗi run có run.json, metrics.csv, predictions.csv và model_bundle.joblib; mean/std đã được tổng hợp riêng. Gate 1/Gate 2 vẫn cần review người.
+Pipeline đã đọc đúng hai official split UNSW-NB15 (175,341 dòng train, 82,332 dòng test), vượt qua 17/17 unit test và tạo đủ 80 artifact run cho 4 scenario x 4 model x 5 seed. Mỗi run có run.json, metrics.csv, predictions.csv và model_bundle.joblib; mean/std đã được tổng hợp riêng. Gate 1/Gate 2 vẫn cần review người.
 
 ## 2. Audit dữ liệu
 
@@ -20,7 +20,7 @@ Artifact đầy đủ: `artifacts/data/data_manifest.json`.
 - Cột metadata bị loại khỏi feature: `id`, `label`, `attack_cat`.
 - Preprocessing fit trên development; LOACO loại held-out class trước split/fit.
 - Threshold lấy từ Normal validation tại FPR mục tiêu 1% và 5%; official test chỉ dùng đánh giá.
-- `python -m unittest discover -s tests -v`: **9/9 PASS**.
+- `python -m unittest discover -s tests -v`: **17/17 PASS**.
 - `python scripts/validate_protocol.py`: **80 run_id hợp lệ** trong ma trận protocol.
 
 ## 4. Bảng kết quả chi tiết theo run

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -26,6 +27,19 @@ def main() -> None:
     if missing:
         fail(f"missing artifacts: {missing[:3]}")
     run_ids = [json.loads((run / "run.json").read_text(encoding="utf-8"))["run_id"] for run in runs]
+    statuses = [json.loads((run / "run.json").read_text(encoding="utf-8"))["status"] for run in runs]
+    bad_status = [run.name for run, st in zip(runs, statuses) if st != "completed"]
+    if bad_status:
+        fail(f"runs with non-completed status: {bad_status[:3]}")
+    SCENARIOS = ["CS", "LR", "LD", "LE"]
+    MODELS = ["RF", "XGB", "IF", "AE"]
+    SEEDS = [42, 52, 62, 72, 82]
+    expected_ids = {f"{s}-{m}-S{seed}" for s in SCENARIOS for m in MODELS for seed in SEEDS}
+    actual_ids = set(run_ids)
+    if actual_ids != expected_ids:
+        missing = expected_ids - actual_ids
+        extra = actual_ids - expected_ids
+        fail(f"run_id mismatch: missing={missing}, extra={extra}")
     if len(set(run_ids)) != 80:
         fail("run IDs are not unique")
     aggregate = ROOT / "docs" / "reports" / "DOT_02_METRICS_MEAN_STD.csv"
@@ -41,6 +55,8 @@ def main() -> None:
         print(result.stdout)
         print(result.stderr)
         fail("unit tests failed")
+    test_match = re.search(r"Ran (\d+) tests?", result.stderr + result.stdout)
+    test_count = test_match.group(1) if test_match else "?"
     result = subprocess.run([sys.executable, "scripts/validate_protocol.py"], cwd=ROOT, env=env, capture_output=True, text=True)
     if result.returncode:
         print(result.stdout)
@@ -49,7 +65,10 @@ def main() -> None:
     pdf = ROOT / "output" / "pdf" / "BAO_CAO_TLCN_TICH_LUY_DOT_02.pdf"
     if not pdf.exists() or pdf.stat().st_size < 100000:
         fail("final PDF missing or unexpectedly small")
-    print("PASS: 80 runs, 320 required artifacts, unique IDs, manifest, 9 tests, validator, aggregate table and PDF")
+    tex = ROOT / "docs" / "report_cumulative" / "BAO_CAO_TLCN_TICH_LUY_DOT_02.tex"
+    if tex.exists() and pdf.stat().st_mtime < tex.stat().st_mtime:
+        fail("PDF is older than LaTeX source — rebuild needed")
+    print(f"PASS: 80 runs, 320 required artifacts, unique IDs, manifest, {test_count} tests, validator, aggregate table and PDF")
 
 
 if __name__ == "__main__":
