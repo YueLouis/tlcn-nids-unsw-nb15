@@ -1,0 +1,782 @@
+\documentclass[12pt,a4paper,oneside]{report}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Consolas}
+
+\usepackage[
+  a4paper,
+  portrait,
+  top=2cm,
+  bottom=2cm,
+  left=2cm,
+  right=2cm,
+  headheight=16pt,
+  headsep=0.45cm,
+  footskip=0.9cm
+]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{indentfirst}
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{0.12em}
+\setlength{\emergencystretch}{3em}
+
+\usepackage{xcolor}
+\definecolor{HCMUTEBlue}{HTML}{005A9C}
+\definecolor{HCMUTEDark}{HTML}{163A5F}
+\definecolor{HCMUTELight}{HTML}{EAF3F9}
+\definecolor{SoftGray}{HTML}{F3F5F7}
+\definecolor{DoneGreen}{HTML}{2F6F50}
+\definecolor{WarnOrange}{HTML}{B8681B}
+\definecolor{NotDoneRed}{HTML}{9A3E3E}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{enumitem}
+\usepackage{amsmath,amssymb}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc}
+\usepackage{pgfgantt}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{fancyhdr}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{microtype}
+
+% Keep short pages top-aligned instead of stretching headings and paragraphs.
+\raggedbottom
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=HCMUTEDark,
+  citecolor=HCMUTEDark,
+  urlcolor=HCMUTEBlue,
+  pdftitle={Báo cáo Tiểu luận chuyên ngành - Bản tích lũy đợt 1},
+  pdfauthor={Nguyễn Trọng Tín; Trịnh Trâm Anh; Hoàng Văn Vương Thu},
+  pdfsubject={NIDS trên UNSW-NB15 với đánh giá LOACO},
+  pdfkeywords={UNSW-NB15, NIDS, anomaly detection, supervised learning, LOACO}
+}
+
+\captionsetup{font=small,labelfont=bf,labelsep=period,justification=centering}
+\renewcommand{\figurename}{Hình}
+\renewcommand{\tablename}{Bảng}
+\renewcommand{\contentsname}{MỤC LỤC}
+\renewcommand{\listfigurename}{DANH MỤC HÌNH}
+\renewcommand{\listtablename}{DANH MỤC BẢNG}
+\renewcommand{\bibname}{TÀI LIỆU THAM KHẢO}
+\renewcommand{\chaptername}{Chương}
+
+\titleformat{\chapter}[hang]
+  {\normalfont\bfseries\fontsize{15pt}{19pt}\selectfont\color{HCMUTEDark}}
+  {CHƯƠNG \thechapter.}{0.55em}{\MakeUppercase}
+\titlespacing*{\chapter}{0pt}{-0.55cm}{0.5cm}
+\titleformat{\section}
+  {\normalfont\bfseries\fontsize{14pt}{18pt}\selectfont\color{HCMUTEDark}}
+  {\thesection}{0.5em}{}
+\titlespacing*{\section}{0pt}{0.65em}{0.25em}
+\titleformat{\subsection}
+  {\normalfont\bfseries\fontsize{13pt}{17pt}\selectfont}
+  {\thesubsection}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{0.45em}{0.15em}
+
+\setlength{\cftbeforechapskip}{0.2em}
+\setlength{\cftbeforesecskip}{0.04em}
+\setlength{\cftbeforetoctitleskip}{-0.55cm}
+\setlength{\cftaftertoctitleskip}{0.5cm}
+\setlength{\cftbeforeloftitleskip}{-0.55cm}
+\setlength{\cftafterloftitleskip}{0.5cm}
+\setlength{\cftbeforelottitleskip}{-0.55cm}
+\setlength{\cftafterlottitleskip}{0.5cm}
+\renewcommand{\cftchapfont}{\bfseries}
+\renewcommand{\cftchappagefont}{\bfseries}
+\setcounter{tocdepth}{1}
+
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textit{Báo cáo TLCN - Bản tích lũy đợt 1}}
+\fancyhead[R]{\small\textit{HCMUTE - FIT}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[L]{\small\textit{Báo cáo TLCN - Bản tích lũy đợt 1}}
+  \fancyhead[R]{\small\textit{HCMUTE - FIT}}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcommand{\methodname}{leave-one-attack-class-out}
+\newcommand{\topicvi}{So sánh mô hình học có giám sát và phát hiện bất thường cho hệ thống phát hiện xâm nhập mạng trên UNSW-NB15: Đánh giá theo phương pháp leave-one-attack-class-out}
+\newcommand{\topicen}{Comparing Supervised and Anomaly Detection Models for Network Intrusion Detection on UNSW-NB15: A Leave-One-Attack-Class-Out Evaluation}
+\newcommand{\statusdone}{\textcolor{DoneGreen}{\textbf{Đạt bản nháp}}}
+\newcommand{\statuspart}{\textcolor{WarnOrange}{\textbf{Đạt một phần}}}
+\newcommand{\statusnone}{\textcolor{NotDoneRed}{\textbf{Chưa đạt đầu ra}}}
+
+\tikzset{
+  process/.style={rounded corners=2pt, draw=HCMUTEBlue, thick, fill=HCMUTELight,
+    align=center, minimum height=1cm, text width=3.4cm},
+  arrow/.style={-{Latex[length=2.5mm]}, thick, draw=HCMUTEDark}
+}
+
+\begin{document}
+\fontsize{13pt}{18pt}\selectfont
+
+% ============================================================
+% TRANG BÌA
+% ============================================================
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+  \draw[HCMUTEBlue,line width=1.2pt]
+    ($(current page.north west)+(1.15cm,-1.15cm)$)
+    rectangle
+    ($(current page.south east)+(-1.15cm,1.15cm)$);
+\end{tikzpicture}
+\begin{center}
+  \vspace*{0.25cm}
+  {\bfseries\fontsize{13pt}{17pt}\selectfont
+  BỘ GIÁO DỤC VÀ ĐÀO TẠO\\
+  TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT\\
+  THÀNH PHỐ HỒ CHÍ MINH}
+
+  \vspace{0.12cm}
+  {\bfseries\fontsize{13pt}{17pt}\selectfont\color{HCMUTEDark}
+  KHOA CÔNG NGHỆ THÔNG TIN}
+
+  \vspace{0.3cm}
+  \includegraphics[width=4.4cm]{docs/report_cumulative/assets/logo_fithcmute.png}
+
+  \vspace{0.28cm}
+  {\bfseries\fontsize{18pt}{22pt}\selectfont\color{HCMUTEDark}
+  BÁO CÁO TIỂU LUẬN CHUYÊN NGÀNH}
+
+  \vspace{0.1cm}
+  {\bfseries\fontsize{14pt}{18pt}\selectfont BẢN TÍCH LŨY - ĐỢT 1/4}
+
+  \vspace{0.45cm}
+  {\bfseries\fontsize{14pt}{18pt}\selectfont ĐỀ TÀI}\par
+  \vspace{0.12cm}
+  {\bfseries\fontsize{16pt}{20pt}\selectfont\color{HCMUTEBlue}
+  \MakeUppercase{\topicvi}}\par
+
+  \vspace{0.16cm}
+  {\itshape\fontsize{10.5pt}{13.5pt}\selectfont \topicen}\par
+\end{center}
+
+\vfill
+\begin{center}
+  {\fontsize{11pt}{14pt}\selectfont
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabularx}{0.86\textwidth}{L{6.0cm}Y}
+    \textbf{Ngành:} & An toàn thông tin \\
+    \textbf{Giảng viên hướng dẫn:} & ThS. Nguyễn Đăng Quang \\
+    \textbf{Nhóm trưởng:} & Nguyễn Trọng Tín - MSSV: 23162102 \\
+    \textbf{Thành viên:} & Trịnh Trâm Anh - MSSV: 23162005 \\
+    & Hoàng Văn Vương Thu - MSSV: 23162099 \\
+    \textbf{Khoảng tiến độ được tổng hợp:} & 17/08/2026 - 13/09/2026 \\
+    \textbf{Ngày cập nhật theo hướng dẫn:} & 17/09/2026 \\
+  \end{tabularx}}
+\end{center}
+
+\vfill
+\begin{center}
+  {\bfseries Thành phố Hồ Chí Minh, tháng 09 năm 2026}
+\end{center}
+\vspace*{0.1cm}
+\end{titlepage}
+
+% ============================================================
+% THÔNG TIN PHIÊN BẢN
+% ============================================================
+\thispagestyle{empty}
+\vspace*{-1.05cm}
+\begin{center}
+  {\bfseries\fontsize{16pt}{20pt}\selectfont\color{HCMUTEDark}
+  THÔNG TIN PHIÊN BẢN BÁO CÁO}
+\end{center}
+\vspace{0.25cm}
+\begingroup
+  \fontsize{10.5pt}{13pt}\selectfont
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabularx}{\textwidth}{L{4.2cm}Y}
+  \toprule
+  \textbf{Hạng mục} & \textbf{Thông tin} \\
+  \midrule
+  Loại tài liệu & Bản thảo báo cáo cuối kỳ được cập nhật tích lũy, không phải nhật ký công việc theo tuần. \\
+  Đợt báo cáo & Đợt 1 trong bốn đợt; ba đợt đầu là các mốc cập nhật, đợt cuối là bản hoàn chỉnh. \\
+  Nội dung chốt tiến độ & Những phần đã thực hiện từ ngày 17/08/2026 đến hết ngày 13/09/2026. \\
+  Nguyên tắc cập nhật & Mỗi khi hoàn thành thêm một nội dung, nhóm viết trực tiếp vào đúng chương và nộp lại toàn bộ tài liệu. \\
+  Trạng thái thực nghiệm & Chưa huấn luyện mô hình trên dữ liệu thật; chưa có kết quả closed-set hoặc LOACO. \\
+  Trạng thái kiểm duyệt nội bộ & Gate 1 còn ở trạng thái \texttt{NOT REVIEWED}; cần cả nhóm kiểm tra chéo. \\
+  \bottomrule
+  \end{tabularx}
+\endgroup
+
+\vspace{0.45cm}
+\noindent
+\begin{minipage}[t]{\textwidth}
+  \fcolorbox{HCMUTEDark}{SoftGray}{%
+    \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{%
+      \fontsize{10pt}{15pt}\selectfont
+      \textbf{\color{DoneGreen}Nhóm đã có minh chứng}\par
+      \vspace{0.12cm}
+      \begin{itemize}[leftmargin=*,itemsep=0.1em,topsep=0.08em]
+        \item Đề cương, phạm vi và ba câu hỏi nghiên cứu.
+        \item Phân công và Gantt cho toàn đề tài.
+        \item Cấu hình 4 scenario, 4 model, 5 seed và 80 run ID dự kiến.
+        \item Result schema, checklist, contract code, 6 unit test và validator.
+      \end{itemize}
+    }%
+  }%
+\end{minipage}
+
+\vspace{0.35cm}
+\noindent
+\begin{minipage}[t]{\textwidth}
+  \fcolorbox{HCMUTEDark}{SoftGray}{%
+    \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{%
+      \fontsize{10pt}{15pt}\selectfont
+      \textbf{\color{NotDoneRed}Chưa có minh chứng hoàn thành}\par
+      \vspace{0.12cm}
+      \begin{itemize}[leftmargin=*,itemsep=0.1em,topsep=0.08em]
+        \item Data manifest/checksum và báo cáo audit dữ liệu.
+        \item Preprocessing trên dữ liệu thật và bốn model artifact.
+        \item Kết quả closed-set, LOACO, bảng/hình RQ1--RQ3.
+        \item Phân tích lỗi, prototype và xác nhận Gate 1 của cả nhóm.
+      \end{itemize}
+    }%
+  }%
+\end{minipage}
+
+\vspace{0.45cm}
+\noindent
+\fcolorbox{HCMUTEDark}{HCMUTELight}{%
+  \parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}{%
+    \fontsize{10pt}{15pt}\selectfont
+    \textbf{Cách đọc tài liệu:} phần ``Kế hoạch và đối chiếu tiến độ'' cho biết nội dung, thời gian, người phụ trách và mức hoàn thành. Nội dung chưa có bằng chứng không được trình bày như kết quả đã hoàn thành.
+  }%
+}%
+\par
+
+\clearpage
+\pagenumbering{roman}
+\setcounter{page}{1}
+\begingroup
+\fontsize{10.5pt}{12.5pt}\selectfont
+\tableofcontents
+\endgroup
+\clearpage
+\begingroup
+\fontsize{10.5pt}{12.5pt}\selectfont
+\noindent{\bfseries\fontsize{16pt}{20pt}\selectfont DANH MỤC HÌNH}\par
+\vspace{0.45cm}
+\makeatletter
+\@starttoc{lof}
+\makeatother
+\addcontentsline{toc}{chapter}{DANH MỤC HÌNH}
+\vspace{0.9cm}
+\noindent{\bfseries\fontsize{16pt}{20pt}\selectfont DANH MỤC BẢNG}\par
+\vspace{0.45cm}
+\makeatletter
+\@starttoc{lot}
+\makeatother
+\addcontentsline{toc}{chapter}{DANH MỤC BẢNG}
+\endgroup
+
+\clearpage
+\chapter*{DANH MỤC TỪ VIẾT TẮT}
+\addcontentsline{toc}{chapter}{DANH MỤC TỪ VIẾT TẮT}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{L{2.7cm}L{5.0cm}L{7.1cm}}
+\toprule
+\textbf{Viết tắt} & \textbf{Thuật ngữ tiếng Anh} & \textbf{Diễn giải dùng trong đề tài} \\
+\midrule
+AE & Autoencoder & Mô hình học tái tạo lưu lượng bình thường; sai số tái tạo được dùng làm điểm bất thường. \\
+FPR & False Positive Rate & Tỷ lệ lưu lượng bình thường bị cảnh báo nhầm. \\
+IDS & Intrusion Detection System & Hệ thống phát hiện xâm nhập. \\
+IF & Isolation Forest & Thuật toán phát hiện bất thường bằng khả năng cô lập mẫu. \\
+LOACO & Leave-One-Attack-Class-Out & Loại một lớp tấn công khỏi toàn bộ giai đoạn phát triển mô hình rồi đánh giá lớp đó trên test. \\
+NIDS & Network Intrusion Detection System & Hệ thống phát hiện xâm nhập mạng. \\
+PR-AUC & Area Under the Precision-Recall Curve & Diện tích dưới đường Precision-Recall. \\
+RF & Random Forest & Mô hình tổ hợp nhiều cây quyết định. \\
+RQ & Research Question & Câu hỏi nghiên cứu. \\
+UADR & Unseen Attack Detection Rate & Recall trên lớp tấn công bị giữ lại trong một vòng LOACO. \\
+XGB & Extreme Gradient Boosting & Thuật toán boosting cây quyết định tối ưu theo gradient. \\
+\bottomrule
+\end{longtable}
+
+% ============================================================
+% KẾ HOẠCH TOÀN ĐỀ TÀI
+% ============================================================
+\clearpage
+\chapter*{KẾ HOẠCH VÀ ĐỐI CHIẾU TIẾN ĐỘ}
+\addcontentsline{toc}{chapter}{KẾ HOẠCH VÀ ĐỐI CHIẾU TIẾN ĐỘ}
+
+\section*{Nguyên tắc lập kế hoạch}
+\addcontentsline{toc}{section}{Nguyên tắc lập kế hoạch}
+
+Kế hoạch được xây dựng cho toàn bộ đề tài, không chỉ cho giai đoạn kế tiếp. Mỗi thanh ngang trong Hình~\ref{fig:gantt} biểu diễn khoảng thực hiện của một nội dung. Các thanh có thể chồng lấn vì nhiều công việc được triển khai song song. Tỷ lệ tô đậm là ước lượng nội bộ dựa trên đầu ra đã có đến hết ngày 13/09/2026; tỷ lệ này không thay thế việc kiểm tra chất lượng artifact.
+
+\begin{table}[H]
+\centering
+\caption{Quy đổi tuần sang khoảng ngày và mốc báo cáo}
+\label{tab:periods}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{L{2.5cm}L{4.2cm}Y}
+\toprule
+\textbf{Mốc} & \textbf{Khoảng thời gian} & \textbf{Ý nghĩa} \\
+\midrule
+Đợt 1 & 17/08 - 13/09/2026 & Nộp toàn bộ phần đặt vấn đề, lý thuyết và thiết kế kỹ thuật đã viết được trong bốn tuần đầu. \\
+Đợt 2 & 14/09 - 11/10/2026 & Cập nhật chính tài liệu tích lũy sau bốn tuần tiếp theo; không tạo báo cáo rời theo tuần. \\
+Đợt 3 & 12/10 - 08/11/2026 & Cập nhật tài liệu tích lũy lần ba, gắn kết quả thực nghiệm vào đúng chương khi có bằng chứng. \\
+Đợt cuối & 09/11 - 23/12/2026 & Hoàn thiện toàn bộ báo cáo, mã nguồn/cấu hình, kết quả, prototype, slide và khả năng bảo vệ sản phẩm. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{figure}[p]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{ganttchart}[
+  hgrid,
+  vgrid,
+  x unit=0.78cm,
+  y unit title=0.95cm,
+  y unit chart=1.25cm,
+  title label font=\scriptsize\bfseries,
+  bar label font=\scriptsize,
+  milestone label font=\scriptsize\bfseries,
+  group label font=\scriptsize\bfseries,
+  bar height=0.64,
+  bar/.append style={fill=HCMUTEBlue!70, draw=HCMUTEDark},
+  bar incomplete/.append style={fill=gray!22, draw=HCMUTEDark},
+  milestone/.append style={fill=WarnOrange, draw=WarnOrange},
+  progress label text={}
+]{1}{19}
+\gantttitle{Tuần thực hiện kể từ 17/08/2026}{19}\\
+\gantttitlelist{1,...,19}{1}\\
+\ganttbar[progress=90]{ND1. Đặt vấn đề, mục tiêu, phạm vi}{1}{4}\\
+\ganttbar[progress=35]{ND2. Lý thuyết và nghiên cứu liên quan}{2}{8}\\
+\ganttbar[progress=70]{ND3. Thiết kế protocol và thí nghiệm}{3}{6}\\
+\ganttbar[progress=10]{ND4. Kiểm kê, audit và tiền xử lý dữ liệu}{5}{8}\\
+\ganttbar[progress=0]{ND5. Cài đặt bốn mô hình}{8}{10}\\
+\ganttbar[progress=0]{ND6. Closed-set, LOACO và đánh giá}{10}{15}\\
+\ganttbar[progress=0]{ND7. Phân tích lỗi và prototype}{15}{17}\\
+\ganttbar[progress=25]{ND8. Viết báo cáo, slide và đóng gói}{1}{19}\\
+\ganttmilestone{Báo cáo đợt 1}{4}\\
+\ganttmilestone{Báo cáo đợt 2}{8}\\
+\ganttmilestone{Báo cáo đợt 3}{12}\\
+\ganttmilestone{Báo cáo hoàn chỉnh}{19}\\
+\ganttvrule{Nội dung chốt đợt 1}{4}
+\end{ganttchart}
+}
+\caption{Kế hoạch toàn đề tài dạng Gantt ngang và trạng thái tại đợt 1}
+\label{fig:gantt}
+\end{figure}
+
+\section*{Đối chiếu nội dung tại mốc đợt 1}
+\addcontentsline{toc}{section}{Đối chiếu nội dung tại mốc đợt 1}
+
+\small
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{L{0.8cm}L{2.35cm}L{2.05cm}L{4.25cm}C{1.1cm}L{2.75cm}}
+\caption{Nội dung, phân công, minh chứng và mức độ hoàn thành đến 13/09/2026}
+\label{tab:progress}\\
+\toprule
+\textbf{Mã} & \textbf{Nội dung} & \textbf{Phụ trách chính} & \textbf{Minh chứng hiện có} & \textbf{Tiến độ} & \textbf{Đánh giá} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Mã} & \textbf{Nội dung} & \textbf{Phụ trách chính} & \textbf{Minh chứng hiện có} & \textbf{Tiến độ} & \textbf{Đánh giá} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+ND1 & Đặt vấn đề, mục tiêu, câu hỏi nghiên cứu và phạm vi & Cả nhóm; Tín tổng hợp & Đề cương Markdown, DOCX/PDF và bản LaTeX chi tiết; tên đề tài và ba RQ đã có bản làm việc. & 90\% & \statusdone \\
+ND2 & Cơ sở lý thuyết và nghiên cứu liên quan & Trâm Anh; cả nhóm review & Bản thảo lý thuyết NIDS, UNSW-NB15, bốn mô hình; glossary và mẫu related-work matrix. Ma trận nguồn chưa được điền đầy đủ. & 35\% & \statuspart \\
+ND3 & Thiết kế protocol, thí nghiệm và đầu ra & Tín; Thu review metric & Cấu hình bốn scenario, bốn model, năm seed; RQ-to-evidence; result schema; Gate 1 checklist; 80 run ID duy nhất. & 70\% & \statuspart \\
+ND4 & Kiểm kê, audit và tiền xử lý dữ liệu & Trâm Anh + Tín & Đã có checklist data audit và hợp đồng cột cấm; chưa có raw-file fingerprint, schema report hoặc pipeline trên dữ liệu thật. & 10\% & \statusnone \\
+ND5 & Cài đặt Random Forest, XGBoost, Isolation Forest và Autoencoder & Tín + Thu & Chưa có mã huấn luyện bốn mô hình và chưa có model artifact. & 0\% & \statusnone \\
+ND6 & Closed-set, ba vòng LOACO và đánh giá & Tín + Thu & Có ma trận kế hoạch và định nghĩa metric; chưa thực hiện lượt chạy chính thức. & 0\% & \statusnone \\
+ND7 & Phân tích lỗi và prototype & Thu + cả nhóm & Chưa có kết quả để phân tích và chưa có prototype. & 0\% & \statusnone \\
+ND8 & Viết báo cáo, slide, demo và đóng gói & Trâm Anh biên tập; cả nhóm chịu trách nhiệm & Đã có đề cương, bản thảo tích lũy đợt 1 và cấu trúc repository; chưa có chương kết quả, slide hoặc gói cuối. & 25\% & \statuspart \\
+\end{longtable}
+\normalsize
+
+\section*{Phân công và cách phối hợp}
+\addcontentsline{toc}{section}{Phân công và cách phối hợp}
+
+\begin{table}[H]
+\centering
+\caption{Phân công theo sản phẩm và trách nhiệm review}
+\label{tab:assignment}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{L{3.1cm}Y Y}
+\toprule
+\textbf{Thành viên} & \textbf{Sản phẩm chịu trách nhiệm chính} & \textbf{Vai trò phối hợp} \\
+\midrule
+Nguyễn Trọng Tín & Repository, protocol, preprocessing, Random Forest, XGBoost, registry thí nghiệm và tích hợp. & Điều phối tiến độ; review data contract; bảo đảm các module dùng chung schema và có thể chạy lại. \\
+Trịnh Trâm Anh & Nền tảng NIDS/UNSW-NB15, data audit, related work và biên tập liên tục bản báo cáo tích lũy. & Bàn giao data contract; kiểm tra cách diễn giải; tổng hợp nội dung do từng thành viên viết. \\
+Hoàng Văn Vương Thu & Isolation Forest, Autoencoder, score adapter, threshold, metric và phân tích FP/FN. & Review support lớp và cách đánh giá; bảo đảm so sánh bốn mô hình tại cùng điểm vận hành. \\
+Cả nhóm & Quyết định protocol, phân tích kết quả, kết luận, slide, demo và bảo vệ. & Review chéo trước mỗi mốc; mỗi người phải hiểu luồng sản phẩm chung, không chỉ phần mình viết. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\noindent\textbf{Nhận xét tại đợt 1.} Phần đặt vấn đề và khung nghiên cứu đã có bản nháp tương đối đầy đủ. Phần protocol đã có cấu hình và công cụ kiểm tra nhưng chưa đủ điều kiện xem là hoàn thành vì Gate 1 chưa được cả ba thành viên review. Phần dữ liệu và mô hình chưa đạt đầu ra thực nghiệm. Do đó, tài liệu này không đưa ra bất kỳ kết luận nào về mô hình tốt hơn.
+
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% ============================================================
+% CHƯƠNG 1
+% ============================================================
+\chapter{ĐẶT VẤN ĐỀ VÀ PHẠM VI NGHIÊN CỨU}
+
+\section{Bối cảnh nghiên cứu}
+
+Hạ tầng số ngày càng phụ thuộc vào dịch vụ mạng, nền tảng đám mây và các thiết bị kết nối. Cùng với lợi ích đó, lưu lượng mạng cũng chứa các hành vi quét dò, khai thác lỗ hổng, từ chối dịch vụ và truy cập trái phép. Hệ thống phát hiện xâm nhập mạng quan sát lưu lượng hoặc đặc trưng dòng mạng để phát hiện dấu hiệu bất thường, từ đó hỗ trợ người vận hành nhận biết và phản ứng sự cố \cite{nist80094}.
+
+Phương pháp dựa trên chữ ký thường hoạt động tốt với mẫu tấn công đã biết nhưng phụ thuộc vào tập luật được cập nhật. Phương pháp học máy có thể học ranh giới giữa lưu lượng bình thường và tấn công từ dữ liệu. Mô hình học có giám sát tận dụng nhãn của cả hai lớp; mô hình phát hiện bất thường thường học cấu trúc của lưu lượng bình thường rồi gắn cờ mẫu lệch khỏi cấu trúc đó. Hai hướng tiếp cận có giả định, ưu điểm và rủi ro cảnh báo nhầm khác nhau.
+
+UNSW-NB15 cung cấp dữ liệu lưu lượng bình thường và nhiều nhóm tấn công, kèm tập training và testing chính thức \cite{moustafa2015,moustafa2016,unswsite}. Đây là nền tảng phù hợp để nhóm xây dựng một nghiên cứu so sánh có kiểm soát trong phạm vi tiểu luận chuyên ngành.
+
+\section{Vấn đề cần giải quyết}
+
+Nhiều nghiên cứu phân loại xâm nhập được đánh giá theo closed-set: các loại tấn công trong test đã có đại diện trong train. Cách đánh giá này cần thiết nhưng chưa trả lời trực tiếp việc mô hình phản ứng như thế nào khi gặp một nhóm tấn công không xuất hiện trong giai đoạn phát triển. Ngoài ra, Accuracy tổng thể có thể che khuất việc bỏ sót lớp hiếm và chi phí cảnh báo nhầm trên lưu lượng bình thường, đặc biệt trong dữ liệu mất cân bằng \cite{saito2015}.
+
+Đề tài vì vậy bổ sung đánh giá \methodname{} (LOACO). Trong mỗi vòng, một lớp tấn công được loại khỏi toàn bộ vùng phát triển trước khi chia validation, fit preprocessing, huấn luyện và chọn threshold. Lớp đó chỉ được dùng khi đánh giá trên tập test chính thức. Đây là thí nghiệm held-out-class trong phạm vi benchmark, không phải bằng chứng cho khả năng phát hiện mọi zero-day ngoài thực tế.
+
+\section{Mục tiêu nghiên cứu}
+
+\subsection{Mục tiêu tổng quát}
+
+Xây dựng quy trình thực nghiệm có thể tái lập để so sánh mô hình học có giám sát và mô hình phát hiện bất thường cho NIDS trên UNSW-NB15, tập trung vào khả năng phát hiện các nhóm tấn công đã biết, nhóm bị giữ lại và chi phí cảnh báo nhầm.
+
+\subsection{Mục tiêu cụ thể}
+
+\begin{enumerate}[label=\arabic*.,leftmargin=1.1cm,itemsep=0.2em]
+  \item Kiểm kê và tiền xử lý UNSW-NB15 mà không gây rò rỉ dữ liệu.
+  \item Cài đặt bốn mô hình: Random Forest, XGBoost, Isolation Forest và Autoencoder.
+  \item Thiết lập baseline closed-set trên tập train/test chính thức.
+  \item Thực hiện LOACO với Reconnaissance, DoS và Exploits sau khi kiểm tra support.
+  \item So sánh các mô hình tại cùng ngân sách FPR trên lưu lượng bình thường.
+  \item Phân tích lỗi, độ ổn định qua nhiều seed và giới hạn khái quát hóa.
+  \item Xây dựng prototype dự đoán trên network-flow record đúng schema.
+\end{enumerate}
+
+\section{Câu hỏi nghiên cứu}
+
+\begin{table}[H]
+\centering
+\caption{Ba câu hỏi nghiên cứu chính}
+\label{tab:rq}
+\begin{tabularx}{\textwidth}{L{1.3cm}Y Y}
+\toprule
+\textbf{Mã} & \textbf{Câu hỏi} & \textbf{Bằng chứng dự kiến} \\
+\midrule
+RQ1 & Trong closed-set, bốn mô hình phát hiện Attack như thế nào? & Precision, Recall, F1, PR-AUC, FPR, confusion matrix và support qua năm seed. \\
+RQ2 & Khi một attack class bị loại khỏi phát triển mô hình, mỗi mô hình còn phát hiện được bao nhiêu mẫu của lớp đó? & Held-out Attack Recall/UADR, Known Attack Recall và FPR trên Normal. \\
+RQ3 & Khả năng phát hiện thay đổi như thế nào tại cùng ngân sách cảnh báo nhầm? & Recall tại threshold chọn trên Normal validation với FPR mục tiêu 1\% và 5\%. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Đối tượng và phạm vi}
+
+Đối tượng nghiên cứu là bài toán phát hiện xâm nhập nhị phân trên network-flow records. Phạm vi dữ liệu giới hạn ở hai tập train/test chính thức của UNSW-NB15. Bốn mô hình được chọn đại diện cho hai nhóm phương pháp: Random Forest và XGBoost cho học có giám sát; Isolation Forest và Autoencoder cho phát hiện bất thường.
+
+Đề tài không xây dựng một SOC hoàn chỉnh, không thu thập dữ liệu doanh nghiệp thật và không đánh giá packet payload. Prototype cuối chỉ sử dụng bản ghi flow phù hợp schema đã huấn luyện. PCAP, Zeek, dashboard hoặc ánh xạ MITRE ATT\&CK chỉ được xem là hướng mở rộng nếu phần bắt buộc đã hoàn thành.
+
+\clearpage
+\section{Sản phẩm của đề tài}
+
+Sản phẩm cuối không chỉ là cuốn báo cáo. Phần cốt lõi là một quy trình thực nghiệm NIDS có thể chạy lại trên UNSW-NB15, gồm dữ liệu được kiểm kê, pipeline tiền xử lý chống leakage, bốn mô hình, các cấu hình closed-set và LOACO, kết quả có thể truy vết, cùng một prototype local nhận network-flow record đúng schema và trả về dự đoán Normal/Attack kèm score.
+
+Những kết quả dùng để trả lời ba câu hỏi nghiên cứu phải được sinh từ result files thay vì nhập tay. Gói bàn giao cần có mã nguồn và cấu hình, hướng dẫn cài đặt/chạy lại, model artifact cần thiết, bảng/biểu đồ, phân tích lỗi, báo cáo tích lũy hoàn chỉnh và slide. Như vậy, báo cáo là phần giải thích có hệ thống cho sản phẩm kỹ thuật và bằng chứng thực nghiệm, không thay thế sản phẩm.
+
+Khi bảo vệ, cả ba thành viên phải hiểu đường đi của dữ liệu từ đầu vào đến kết quả, lý do chọn mô hình và metric, cách chống leakage, cách đặt threshold, cũng như giới hạn của LOACO. Mỗi thành viên chịu trách nhiệm sâu cho phần được phân công nhưng vẫn phải đọc được cấu trúc chung, giải thích được cấu hình và thực hiện một thay đổi code/config có kiểm soát. Nhóm sẽ chuẩn bị các bài luyện riêng cho từng người trước mốc cuối.
+
+% ============================================================
+% CHƯƠNG 2
+% ============================================================
+\chapter{CƠ SỞ LÝ THUYẾT VÀ NGHIÊN CỨU LIÊN QUAN}
+
+\section{Hệ thống phát hiện xâm nhập mạng}
+
+IDS là hệ thống giám sát sự kiện trên máy chủ hoặc mạng nhằm tìm dấu hiệu vi phạm chính sách và hành vi tấn công \cite{nist80094}. NIDS tập trung vào dữ liệu mạng. Trong đề tài này, mỗi mẫu là một network-flow record đã được tổng hợp, không phải toàn bộ payload của từng packet.
+
+\subsection{Phát hiện dựa trên chữ ký và phát hiện bất thường}
+
+Phát hiện dựa trên chữ ký so khớp hành vi với mẫu đã biết, thường có độ chính xác cao khi chữ ký phù hợp nhưng khó nhận diện biến thể chưa được cập nhật. Phát hiện bất thường xây dựng mô hình của trạng thái bình thường và cảnh báo khi dữ liệu lệch khỏi trạng thái đó. Cách tiếp cận thứ hai có tiềm năng phản ứng với mẫu lạ nhưng dễ tạo cảnh báo nhầm nếu dữ liệu bình thường đa dạng \cite{chandola2009}.
+
+\subsection{Học có giám sát và anomaly detection}
+
+Mô hình học có giám sát nhận các cặp $(\mathbf{x},y)$ có nhãn và học hàm phân loại Normal/Attack. Trong closed-set, train và test chia sẻ các nhóm tấn công theo thiết kế. Trong LOACO, mô hình supervised chỉ học Normal và các known attacks; held-out class bị loại khỏi development.
+
+Mô hình anomaly detection trong phạm vi đề tài chủ yếu được fit bằng Normal training data. Mô hình trả về score bất thường; threshold được chọn trên Normal validation theo ngân sách FPR đã khóa. Việc dùng cùng định nghĩa score và cùng điểm vận hành giúp hạn chế so sánh thiên lệch giữa các mô hình.
+
+\section{Bốn mô hình được lựa chọn}
+
+\subsection{Random Forest}
+
+Random Forest kết hợp nhiều cây quyết định được huấn luyện trên các mẫu bootstrap và tập con đặc trưng. Dự đoán cuối được tổng hợp từ các cây, giúp giảm phương sai so với một cây đơn lẻ. Mô hình phù hợp làm baseline cho dữ liệu dạng bảng và hỗ trợ phân tích feature importance \cite{breiman2001}.
+
+\subsection{XGBoost}
+
+XGBoost xây dựng các cây theo chuỗi; mỗi cây mới tập trung sửa sai số của tổ hợp trước đó. Thuật toán có cơ chế regularization và tối ưu hiệu quả trên dữ liệu dạng bảng \cite{chen2016}. Trong đề tài, XGBoost đại diện cho nhóm supervised boosting.
+
+\subsection{Isolation Forest}
+
+Isolation Forest cô lập mẫu bằng các phép chia ngẫu nhiên. Mẫu khác biệt thường bị cô lập với ít bước hơn và nhận score bất thường cao hơn sau khi quy đổi về chiều score chung \cite{liu2008}. Mô hình được fit chủ yếu trên Normal training data.
+
+\subsection{Autoencoder}
+
+Autoencoder học hàm mã hóa và giải mã để tái tạo đầu vào. Khi được huấn luyện trên Normal, mẫu có sai số tái tạo lớn có thể được xem là bất thường \cite{sakurada2014}. Việc chuẩn hóa dữ liệu, kiến trúc mạng và threshold ảnh hưởng trực tiếp đến kết quả.
+
+\section{Bộ dữ liệu UNSW-NB15}
+
+UNSW-NB15 được xây dựng từ lưu lượng bình thường và tấn công, cung cấp đặc trưng flow, nhãn nhị phân và attack category. Nguồn chính thức công bố tập training 175.341 bản ghi và tập testing 82.332 bản ghi \cite{unswsite,moustafa2015}. Các nhóm tấn công gồm Fuzzers, Analysis, Backdoors, DoS, Exploits, Generic, Reconnaissance, Shellcode và Worms.
+
+Đề tài giữ nguyên official train/test. Validation được tạo từ official training set. Các cột \texttt{id}, \texttt{label} và \texttt{attack\_cat} không được dùng làm feature. Trước khi huấn luyện, nhóm phải kiểm tra kiểu dữ liệu, missing, infinity, duplicate, support lớp và category mới ở test.
+
+\section{Chỉ số đánh giá}
+
+Với $TP$, $FP$, $TN$ và $FN$ theo bài toán nhị phân, các chỉ số cơ bản được tính như sau:
+\begin{align}
+\mathrm{Precision} &= \frac{TP}{TP+FP}, &
+\mathrm{Recall} &= \frac{TP}{TP+FN},\\
+\mathrm{F1} &= \frac{2\,\mathrm{Precision}\,\mathrm{Recall}}
+{\mathrm{Precision}+\mathrm{Recall}}, &
+\mathrm{FPR} &= \frac{FP}{FP+TN}.
+\end{align}
+
+Trong LOACO, UADR là recall trên held-out attack; Known Attack Recall chỉ tính các attack class không bị giữ lại. Mọi metric phải đi kèm support, scenario, seed và threshold policy. Accuracy có thể được ghi nhận nhưng không dùng làm bằng chứng chính vì dữ liệu mất cân bằng.
+
+\section{Khoảng trống và định vị đề tài}
+
+Các thuật toán RF, XGBoost, IF và AE đều đã được nghiên cứu rộng rãi. Đóng góp của nhóm không phải phát minh mô hình mới mà là xây dựng một phép so sánh có kiểm soát: giữ official split, chống leakage, loại held-out class trước mọi bước phát triển, chọn threshold ngoài test, lặp qua nhiều seed và truy vết được artifact. Kết luận chỉ giới hạn trong benchmark và protocol được công bố.
+
+Phần related work hiện mới có cấu trúc thu thập; nhóm chưa điền đủ ma trận 10-15 nguồn đã kiểm chứng. Vì vậy, nội dung tổng quan nghiên cứu liên quan trong phiên bản đợt 1 được xem là bản nháp và chưa dùng để khẳng định tính mới tuyệt đối.
+
+% ============================================================
+% CHƯƠNG 3
+% ============================================================
+\chapter{NỘI DUNG THỰC HIỆN VÀ THIẾT KẾ KỸ THUẬT}
+
+\section{Quy trình nghiên cứu tổng thể}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.65cm and 0.75cm]
+  \node[process] (scope) {Đặt vấn đề, RQ và phạm vi};
+  \node[process, right=of scope] (data) {Kiểm kê và audit dữ liệu};
+  \node[process, right=of data] (prep) {Tiền xử lý chống leakage};
+  \node[process, below=of prep] (models) {RF, XGBoost, IF, Autoencoder};
+  \node[process, left=of models] (runs) {Closed-set và ba vòng LOACO};
+  \node[process, left=of runs] (eval) {Metric, phân tích lỗi và bảng/hình};
+  \node[process, below=of runs] (deliver) {Prototype, báo cáo và gói tái lập};
+  \draw[arrow] (scope) -- (data);
+  \draw[arrow] (data) -- (prep);
+  \draw[arrow] (prep) -- (models);
+  \draw[arrow] (models) -- (runs);
+  \draw[arrow] (runs) -- (eval);
+  \draw[arrow] (eval) |- (deliver);
+\end{tikzpicture}
+\caption{Luồng nội dung của đề tài từ phạm vi đến sản phẩm cuối}
+\label{fig:workflow}
+\end{figure}
+
+Tại đợt 1, nhóm đã tạo bản nháp cho khối đặt vấn đề và protocol; mới chuẩn bị checklist cho khối dữ liệu. Các khối mô hình, lượt chạy, đánh giá và prototype chưa có kết quả thực tế.
+
+\section{Thiết kế closed-set và LOACO}
+
+Closed-set sử dụng Normal và toàn bộ attack class trong official training set để phát triển hai mô hình supervised; IF và AE chỉ dùng Normal training data. Tập test chính thức được giữ nguyên để đánh giá cuối.
+
+Trong vòng LOACO của lớp $h$, mọi mẫu có \texttt{attack\_cat} bằng $h$ phải bị loại khỏi development trước khi chia validation, fit encoder/scaler, tuning và chọn threshold. Official test vẫn giữ Normal, known attacks và held-out attack $h$ để tính các metric riêng.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.75cm and 1.0cm]
+  \node[process] (train) {Official training set};
+  \node[process, below left=of train] (remove) {Loại held-out class trước development};
+  \node[process, below right=of train] (test) {Official test giữ nguyên};
+  \node[process, below=of remove] (sup) {Supervised: Normal + known attacks};
+  \node[process, right=of sup] (anom) {Anomaly: Normal only};
+  \node[process, below=of test] (roles) {Normal / known / held-out};
+  \draw[arrow] (train) -- (remove);
+  \draw[arrow] (train) -- (test);
+  \draw[arrow] (remove) -- (sup);
+  \draw[arrow] (remove) -- (anom);
+  \draw[arrow] (test) -- (roles);
+\end{tikzpicture}
+\caption{Nguyên tắc tách vùng phát triển và vùng đánh giá trong LOACO}
+\label{fig:loaco}
+\end{figure}
+
+Ba lớp được đề xuất cho các vòng chính là Reconnaissance, DoS và Exploits. Đây chưa phải quyết định cuối cho đến khi nhóm kiểm tra support và hoàn tất review Gate 1.
+
+\section{Ma trận thí nghiệm}
+
+Phiên bản cấu hình hiện tại gồm bốn scenario, bốn model và năm seed:
+\begin{equation}
+4\ \text{scenario} \times 4\ \text{model} \times 5\ \text{seed}
+= 80\ \text{cấu hình dự kiến}.
+\end{equation}
+
+\begin{table}[H]
+\centering
+\caption{Các thành phần của ma trận thí nghiệm bản nháp}
+\label{tab:matrix}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{L{3.4cm}Y}
+\toprule
+\textbf{Thành phần} & \textbf{Giá trị} \\
+\midrule
+Scenario & Closed-set; LOACO-Reconnaissance; LOACO-DoS; LOACO-Exploits. \\
+Model & Random Forest; XGBoost; Isolation Forest; Autoencoder. \\
+Seed & 42; 52; 62; 72; 82. \\
+FPR mục tiêu & 1\% và 5\% trên Normal validation. \\
+Chiều score & Score cao hơn luôn có nghĩa giống Attack/anomaly hơn. \\
+Cột cấm & \texttt{id}, \texttt{label}, \texttt{attack\_cat}. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Tệp \path{docs/protocol/RUN_MATRIX.csv} hiện có 80 \texttt{run\_id} duy nhất. Đây là danh sách kế hoạch, không phải 80 kết quả đã chạy.
+
+\section{Hợp đồng dữ liệu và chống rò rỉ}
+
+Mã trong \path{src/nids_benchmark/contracts.py} đang cung cấp các kiểm tra tối thiểu:
+\begin{itemize}[leftmargin=1.05cm,itemsep=0.15em]
+  \item yêu cầu tồn tại các cột metadata cần thiết;
+  \item loại \texttt{id}, \texttt{label}, \texttt{attack\_cat} khỏi feature list;
+  \item chuẩn hóa nhãn nhị phân về Normal = 0 và Attack = 1;
+  \item gán vai trò đánh giá \texttt{normal}, \texttt{known\_attack}, \texttt{heldout\_attack};
+  \item loại held-out class khỏi development và báo lỗi nếu lớp đó còn rò rỉ.
+\end{itemize}
+
+Các hàm trên mới là scaffold cho contract, chưa phải preprocessing pipeline hoàn chỉnh. Nhóm chưa tải dữ liệu chính thức vào quy trình và chưa có fingerprint của raw files.
+
+\section{Quy định đầu ra của một lượt chạy}
+
+Mỗi run dự kiến tạo ba nhóm artifact: metadata trong \texttt{run.json}, metric dạng long trong \texttt{metrics.csv}, và prediction theo record trong \texttt{predictions.csv}. Metadata phải lưu scenario, model, seed, protocol version, data/config fingerprint, threshold policy, software version và đường dẫn artifact.
+
+Metric phải ghi rõ split, subset, support, target FPR và threshold. Prediction phải lưu vai trò đánh giá, nhãn thật, score, threshold và nhãn dự đoán. Cấu trúc này nhằm bảo đảm mọi con số trong báo cáo cuối có thể truy ngược về lượt chạy, thay vì nhập tay.
+
+\section{Kiểm tra đã thực hiện}
+
+Ngày 17/09/2026, nhóm chạy lại hai lớp kiểm tra trên trạng thái repository hiện tại:
+\begin{itemize}[leftmargin=1.05cm,itemsep=0.15em]
+  \item sáu unit test trong \path{tests/test_contracts.py} đều PASS;
+  \item \path{scripts/validate_protocol.py} xác nhận đủ bốn scenario, bốn model, năm seed và 80 \texttt{run\_id} duy nhất.
+\end{itemize}
+
+Sáu test kiểm tra chuẩn hóa nhãn, loại cột metadata, gán vai trò đánh giá và phát hiện held-out leakage trên dữ liệu giả lập nhỏ. Validator kiểm tra cấu hình và sự tồn tại của artifact protocol. Kết quả PASS chỉ xác nhận khung kỹ thuật đáp ứng các điều kiện đã mã hóa; nó không xác nhận dữ liệu thật, mô hình hoặc Gate 1 đã hoàn thành.
+
+\section{Trạng thái nội dung thực hiện tại đợt 1}
+
+\begin{table}[H]
+\centering
+\caption{Phân biệt đầu ra đã có và đầu ra chưa có}
+\label{tab:evidence}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{Y Y}
+\toprule
+\textbf{Đã có bằng chứng trong thư mục dự án} & \textbf{Chưa có bằng chứng hoàn thành} \\
+\midrule
+Đề cương và bản thảo lý thuyết; phân công; Gantt; config; run matrix; RQ-to-evidence; result schema; checklist; contract code; sáu unit test và validator. & Data manifest/checksum; báo cáo schema/chất lượng; preprocessing trên dữ liệu thật; bốn model đã train; 80 result files; bảng/hình RQ1-RQ3; error analysis; prototype; Gate 1 có xác nhận của cả ba thành viên. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Do chưa có kết quả thực nghiệm, phiên bản đợt 1 dừng ở việc mô tả vấn đề, cơ sở lý thuyết và phần kỹ thuật đã được hiện thực hóa ở mức scaffold. Các chương kết quả, thảo luận và kết luận về hiệu quả mô hình sẽ chỉ được bổ sung khi có result files hợp lệ.
+
+% ============================================================
+% TÀI LIỆU THAM KHẢO
+% ============================================================
+\clearpage
+\sloppy
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{TÀI LIỆU THAM KHẢO}
+
+\bibitem{moustafa2015}
+N. Moustafa and J. Slay, ``UNSW-NB15: A comprehensive data set for network intrusion detection systems,'' in \textit{2015 Military Communications and Information Systems Conference (MilCIS)}, 2015, pp. 1--6. doi: \href{https://doi.org/10.1109/MilCIS.2015.7348942}{10.1109/MilCIS.2015.7348942}.
+
+\bibitem{moustafa2016}
+N. Moustafa and J. Slay, ``The evaluation of Network Anomaly Detection Systems: Statistical analysis of the UNSW-NB15 data set and the comparison with the KDD99 data set,'' \textit{Information Security Journal: A Global Perspective}, vol. 25, no. 1--3, pp. 18--31, 2016. doi: \href{https://doi.org/10.1080/19393555.2015.1125974}{10.1080/19393555.2015.1125974}.
+
+\bibitem{unswsite}
+UNSW Research, ``The UNSW-NB15 Dataset.'' [Online]. Available: \url{https://research.unsw.edu.au/projects/unsw-nb15-dataset}. Accessed: Aug. 22, 2026.
+
+\bibitem{nist80094}
+K. Scarfone and P. Mell, \textit{Guide to Intrusion Detection and Prevention Systems (IDPS)}, NIST Special Publication 800-94, National Institute of Standards and Technology, 2007. doi: \href{https://doi.org/10.6028/NIST.SP.800-94}{10.6028/NIST.SP.800-94}.
+
+\bibitem{breiman2001}
+L. Breiman, ``Random Forests,'' \textit{Machine Learning}, vol. 45, pp. 5--32, 2001. doi: \url{10.1023/A:1010933404324}.
+
+\bibitem{chen2016}
+T. Chen and C. Guestrin, ``XGBoost: A scalable tree boosting system,'' in \textit{Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining}, 2016, pp. 785--794. doi: \href{https://doi.org/10.1145/2939672.2939785}{10.1145/2939672.2939785}.
+
+\bibitem{liu2008}
+F. T. Liu, K. M. Ting, and Z.-H. Zhou, ``Isolation Forest,'' in \textit{2008 Eighth IEEE International Conference on Data Mining}, 2008, pp. 413--422. doi: \href{https://doi.org/10.1109/ICDM.2008.17}{10.1109/ICDM.2008.17}.
+
+\bibitem{sakurada2014}
+M. Sakurada and T. Yairi, ``Anomaly detection using autoencoders with nonlinear dimensionality reduction,'' in \textit{Proceedings of the MLSDA 2014 2nd Workshop on Machine Learning for Sensory Data Analysis}, 2014, pp. 4--11. doi: \href{https://doi.org/10.1145/2689746.2689747}{10.1145/2689746.2689747}.
+
+\bibitem{saito2015}
+T. Saito and M. Rehmsmeier, ``The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets,'' \textit{PLOS ONE}, vol. 10, no. 3, e0118432, 2015. doi: \href{https://doi.org/10.1371/journal.pone.0118432}{10.1371/journal.pone.0118432}.
+
+\bibitem{chandola2009}
+V. Chandola, A. Banerjee, and V. Kumar, ``Anomaly detection: A survey,'' \textit{ACM Computing Surveys}, vol. 41, no. 3, art. 15, 2009. doi: \href{https://doi.org/10.1145/1541880.1541882}{10.1145/1541880.1541882}.
+
+\end{thebibliography}
+
+% ============================================================
+% PHỤ LỤC
+% ============================================================
+\appendix
+\chapter{DANH MỤC ARTIFACT TẠI ĐỢT 1}
+
+\small
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{L{4.7cm}L{8.5cm}L{2.0cm}}
+\toprule
+\textbf{Đường dẫn} & \textbf{Mục đích} & \textbf{Trạng thái} \\
+\midrule
+\path{configs/experiment_matrix.yaml} & Khóa bốn scenario, bốn model, năm seed, FPR target và cột cấm. & Bản nháp \\
+\path{docs/protocol/RUN_MATRIX.csv} & Liệt kê 80 cấu hình dự kiến với run ID duy nhất. & Validator PASS \\
+\path{docs/protocol/RQ_TO_EVIDENCE.md} & Ánh xạ RQ sang metric, bảng và hình cần thu thập. & Bản nháp \\
+\path{docs/protocol/RESULT_SCHEMA.md} & Quy định cấu trúc run metadata, metric và prediction. & Bản nháp \\
+\path{docs/protocol/GATE_1_CHECKLIST.md} & Checklist khóa phạm vi, leakage, đánh giá và tổ chức. & NOT REVIEWED \\
+\path{docs/week_01/DATA_AUDIT_CHECKLIST.md} & Danh sách kiểm tra nguồn, schema, nhãn và chất lượng dữ liệu. & Chưa thực thi \\
+\path{docs/week_01/METRIC_THRESHOLD_SPEC.md} & Định nghĩa metric và threshold policy. & Bản nháp \\
+\path{src/nids_benchmark/contracts.py} & Hàm contract tối thiểu cho cột, nhãn và LOACO development. & 6 test PASS \\
+\path{scripts/validate_protocol.py} & Kiểm tra cấu hình và run matrix. & PASS \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\chapter{NGUYÊN TẮC CẬP NHẬT CÁC ĐỢT SAU}
+
+Tài liệu này là nền của báo cáo cuối kỳ. Khi có thêm data audit, preprocessing, mã mô hình hoặc kết quả, nhóm phải viết vào đúng chương liên quan và nộp lại toàn bộ tài liệu. Nhóm không tạo một bản kể việc độc lập cho từng tuần. Các thay đổi của kế hoạch được cập nhật trên Gantt tổng thể và ghi rõ lý do; các kết quả chỉ được đưa vào báo cáo khi có artifact có thể kiểm chứng.
+
+\end{document}

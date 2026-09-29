@@ -1,8 +1,10 @@
 # PHÂN CÔNG NHÓM
 
+> **Bản đồ hiện tại:** đọc `docs/START_HERE_NHOM.md` trước. Bảng này giữ phân công nền; trạng thái và đầu việc đợt 2 được cập nhật trong bản đồ dự án.
+
 **Đề tài:** So sánh supervised learning và anomaly detection cho NIDS trên
 UNSW-NB15 bằng LOACO  
-**Tuần hiện tại:** 10/09/2026-16/09/2026  
+**Tuần hiện tại trong tài liệu nền:** 14/09/2026-20/09/2026 (Tuần 5)  
 **Nhóm trưởng:** Nguyễn Trọng Tín
 
 ## Trách nhiệm chính

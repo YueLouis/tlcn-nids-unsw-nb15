@@ -1,5 +1,10 @@
 # TLCN NIDS - UNSW-NB15
 
+**Kho GitHub hiện tại:** `https://github.com/YueLouis/tlcn-nids-unsw-nb15`  
+**Nhánh làm việc chuẩn:** `main`  
+**Thư mục Drive của nhóm:** `https://drive.google.com/drive/folders/13KGqMT4NUr8JfvTpF0IEKfUDT0Dlvq5S?hl=vi`  
+**Lưu ý lưu trữ:** GitHub giữ code, config và tài liệu nguồn; dataset, model, prediction và artifact nặng được giữ ở Drive dùng chung.
+
 So sánh mô hình học có giám sát và phát hiện bất thường cho hệ thống phát hiện
 xâm nhập mạng trên UNSW-NB15 bằng đánh giá leave-one-attack-class-out (LOACO).
 
@@ -17,9 +22,18 @@ Ba câu hỏi nghiên cứu chính và bằng chứng cần thu thập được 
 
 ## Trạng thái
 
-Tuần 1 (10/09/2026-16/09/2026): khóa giao thức, phân công, ma trận thí nghiệm,
-schema kết quả và điều kiện PASS/FAIL của Gate 1. Nhóm chưa huấn luyện mô hình
-trước khi hoàn tất kiểm kê dữ liệu và Gate 2.
+- Đã có hai tập train/test UNSW-NB15 thật, data manifest, checksum SHA-256 và
+  báo cáo audit schema/nhãn.
+- Pipeline end-to-end đã chạy được Random Forest, XGBoost, Isolation Forest và
+  Autoencoder trên closed-set và cả ba kịch bản LOACO.
+- Mỗi run sinh `run.json`, `metrics.csv`, `predictions.csv` và
+  `model_bundle.joblib`; prototype local đã đọc CSV và trả về Normal/Attack kèm score.
+- Đã có đủ 80 full run theo ma trận 4 scenario x 4 model x 5 seed, mỗi run có
+  `run.json`, `metrics.csv`, `predictions.csv` và `model_bundle.joblib`. Bản tổng hợp
+  mean/std đợt 2 nằm tại
+  `docs/reports/BAO_CAO_TIEN_DO_DOT_02.md`.
+- Gate 1/Gate 2 còn chờ review của nhóm. Các điểm cần kiểm tra thêm, gồm
+  duplicate/overlap dữ liệu và định nghĩa metric, được ghi trong phân công đợt 2.
 
 ## Cấu trúc repository
 
@@ -30,9 +44,13 @@ docs/meetings/          Biên bản họp nhóm
 docs/protocol/          Giao thức, schema và checklist các gate
 docs/week_01/           Kế hoạch và đầu ra tuần 1
 scripts/                Công cụ tạo/kiểm tra artifact
-src/nids_benchmark/     Mã nguồn (bắt đầu sau khi hợp đồng dữ liệu được duyệt)
+src/nids_benchmark/     Data, preprocessing, model adapters, evaluator và runner
 tests/                  Kiểm thử chống sai protocol và data leakage
 ```
+
+## Bắt đầu cho thành viên mới
+
+Đọc [`docs/START_HERE_NHOM.md`](docs/START_HERE_NHOM.md) để lấy code, nhận dữ liệu và chọn nhánh riêng. Phân công chi tiết nằm ở [`docs/management/PHAN_CONG_DOT_02_HIEN_TAI_20260929.md`](docs/management/PHAN_CONG_DOT_02_HIEN_TAI_20260929.md).
 
 ## Quy tắc dữ liệu và bảo mật
 
@@ -43,13 +61,80 @@ tests/                  Kiểm thử chống sai protocol và data leakage
 - Official test chỉ dùng để đánh giá cuối; không dùng để fit preprocessing,
   chọn hyperparameter hoặc chọn threshold.
 
-## Bắt đầu tuần 1
+## Cài đặt và kiểm tra code
 
-1. Đọc [`docs/week_01/KE_HOACH_TUAN_01.md`](docs/week_01/KE_HOACH_TUAN_01.md).
-2. Mỗi thành viên nhận đúng artifact trong
-   [`docs/management/PHAN_CONG_NHOM.md`](docs/management/PHAN_CONG_NHOM.md).
-3. Cả nhóm review và ký Gate 1 ngày 16/09/2026.
-4. Tạo lại ma trận 80 run bằng `python scripts/generate_run_matrix.py`.
+Môi trường thực nghiệm đã kiểm chứng: Python 3.14.4. Các phiên bản thư viện
+được ghi trong `requirements-repro.txt`; `requirements.txt` giữ khoảng phiên bản
+cho phát triển. Lệnh dưới đây dùng PowerShell trên Windows, không cần kích hoạt
+môi trường bằng `Activate.ps1`.
+
+```powershell
+git clone https://github.com/YueLouis/tlcn-nids-unsw-nb15.git
+cd tlcn-nids-unsw-nb15
+git switch -c work/ten-cua-ban
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-repro.txt
+$env:PYTHONPATH = "src"
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe scripts/validate_protocol.py
+```
+
+Unit test và validator chạy được ngay sau cài đặt, không cần dataset. Trên
+Linux/macOS, dùng `.venv/bin/python` và `export PYTHONPATH=src` tương ứng.
+
+## Chạy thí nghiệm
+
+Nhận hai file từ Drive dùng chung, đối chiếu SHA-256 trong
+[`artifacts/data/data_manifest.json`](artifacts/data/data_manifest.json), rồi đặt vào:
+
+```text
+data/raw/UNSW_NB15_training-set.csv
+data/raw/UNSW_NB15_testing-set.csv
+```
+
+Chạy trong PowerShell tại thư mục repo:
+
+```powershell
+$env:PYTHONPATH = "src"
+
+# Audit dữ liệu thật và ghi manifest/checksum.
+.\.venv\Scripts\python.exe scripts/audit_data.py
+
+# Chạy thử trong thư mục riêng, bảo toàn kết quả gốc.
+.\.venv\Scripts\python.exe scripts/run_experiment.py `
+  --scenario closed_set --model random_forest --seed 42 `
+  --max-development-rows 20000 --max-test-rows 10000 `
+  --output-dir results/member_checks/local
+
+# Run đầy đủ: không dùng hai tham số --max-... .
+.\.venv\Scripts\python.exe scripts/run_experiment.py `
+  --scenario loaco_reconnaissance --model xgboost --seed 42 `
+  --output-dir results/member_checks/local
+
+# Prototype dự đoán CSV bằng model vừa chạy hoặc nhận từ Drive.
+.\.venv\Scripts\python.exe scripts/predict_csv.py `
+  --bundle results/member_checks/local/CS-RF-S42/model_bundle.joblib `
+  --input duong_dan_flow.csv --output predictions_demo.csv
+```
+
+Các lần chạy cùng scenario/model/seed dùng chung mã run và sẽ ghi cùng thư mục.
+Mỗi thành viên thay `local` bằng tên mình; dùng thư mục mới khi muốn giữ nhiều lần
+thử. Không chạy smoke vào `results/runs/` chứa 80 run chuẩn.
+
+## Đối chiếu toàn bộ hồ sơ đợt 2
+
+Chỉ chạy bước này sau khi đã nhận đủ `results/runs/` và bản PDF từ Drive,
+hoặc tự tái tạo chúng. Bản PDF đặt tại
+`output/pdf/BAO_CAO_TLCN_TICH_LUY_DOT_02.pdf`.
+
+```powershell
+$env:PYTHONPATH = "src"
+.\.venv\Scripts\python.exe scripts/check_dot2_final.py
+```
+
+Các test kiểm tra cột cấm, chuẩn hóa nhãn, LOACO leakage, threshold theo
+FPR, UADR và vai trò đánh giá. Validator protocol kiểm tra ma trận 80 run.
+Gate 1 vẫn là bước review của cả nhóm, không được tự động đánh dấu PASS.
 
 ## Thành viên
 

@@ -224,9 +224,11 @@ data/processed/*
 !data/raw/.gitkeep
 !data/interim/.gitkeep
 !data/processed/.gitkeep
-artifacts/
+artifacts/*
 models/
 results/runs/
+results/demo/
+results/member_checks/
 *.joblib
 *.pkl
 *.pickle
@@ -234,9 +236,34 @@ results/runs/
 *.pth
 *.onnx
 
+# Generated reports, renders, caches, and local run directories
+$build/
+$out/
+output/
+tmp/
+__pycache__/
+docs/**/build/
+docs/**/build_*/
+docs/**/qa_render*/
+docs/**/_render*/
+docs/report_cumulative/build_dot2/
+docs/evidence/dot_02/screenshots/
+*.aux
+*.log
+*.toc
+*.lot
+*.pdf
+*.docx
+
+# Keep the small audit manifest versioned while raw data and generated artifacts stay out.
+!artifacts/data/
+artifacts/data/*
+!artifacts/data/data_manifest.json
+
 # Local secrets and editor state
 .env
 .env.*
 !.env.example
 .vscode/
 .idea/
+.kilo/

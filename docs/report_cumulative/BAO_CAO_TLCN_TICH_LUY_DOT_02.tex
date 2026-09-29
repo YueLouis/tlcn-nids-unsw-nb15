@@ -1,0 +1,330 @@
+\documentclass[12pt,a4paper,oneside]{report}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Consolas}
+\usepackage[a4paper,portrait,top=2cm,bottom=2cm,left=2cm,right=2cm,headheight=16pt,headsep=0.45cm,footskip=0.9cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{indentfirst}
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{0.12em}
+\setlength{\emergencystretch}{3em}
+\usepackage{xcolor,graphicx,booktabs,tabularx,longtable,array,makecell,enumitem,amsmath,amssymb,float,caption,tikz,titlesec,tocloft,fancyhdr,url,hyperref,bookmark,microtype}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc}
+\definecolor{HCMUTEBlue}{HTML}{005A9C}
+\definecolor{HCMUTEDark}{HTML}{163A5F}
+\definecolor{SoftGray}{HTML}{F3F5F7}
+\definecolor{HCMUTELight}{HTML}{EAF3F9}
+\definecolor{DoneGreen}{HTML}{2F6F50}
+\definecolor{WarnOrange}{HTML}{B8681B}
+\definecolor{NotDoneRed}{HTML}{9A3E3E}
+\hypersetup{colorlinks=true,linkcolor=HCMUTEDark,urlcolor=HCMUTEBlue,pdftitle={Báo cáo Tiểu luận chuyên ngành - Tích lũy đợt 2},pdfauthor={Nguyễn Trọng Tín; Trịnh Trâm Anh; Hoàng Văn Vương Thu}}
+\captionsetup{font=small,labelfont=bf,labelsep=period,justification=centering}
+\renewcommand{\figurename}{Hình}
+\renewcommand{\tablename}{Bảng}
+\renewcommand{\contentsname}{MỤC LỤC}
+\renewcommand{\listtablename}{DANH MỤC BẢNG}
+\renewcommand{\chaptername}{Chương}
+\titleformat{\chapter}[hang]{\normalfont\bfseries\fontsize{15pt}{19pt}\selectfont\color{HCMUTEDark}}{CHƯƠNG \thechapter.}{0.55em}{\MakeUppercase}
+\titlespacing*{\chapter}{0pt}{-0.55cm}{0.5cm}
+\titleformat{\section}{\normalfont\bfseries\fontsize{14pt}{18pt}\selectfont\color{HCMUTEDark}}{\thesection}{0.5em}{}
+\titlespacing*{\section}{0pt}{0.65em}{0.25em}
+\titleformat{\subsection}{\normalfont\bfseries\fontsize{13pt}{17pt}\selectfont}{\thesubsection}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{0.45em}{0.15em}
+\setlength{\cftbeforechapskip}{0.2em}
+\setlength{\cftbeforesecskip}{0.04em}
+\setlength{\cftbeforetoctitleskip}{-0.55cm}
+\setlength{\cftaftertoctitleskip}{0.5cm}
+\setcounter{tocdepth}{1}
+\raggedbottom
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small\textit{Báo cáo TLCN - Bản tích lũy đợt 2}}
+\rhead{\small\textit{HCMUTE - FIT}}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyhead[L]{\small\textit{Báo cáo TLCN - Bản tích lũy đợt 2}}\fancyhead[R]{\small\textit{HCMUTE - FIT}}\fancyfoot[C]{\thepage}\renewcommand{\headrulewidth}{0.4pt}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\pass}{\textbf{PASS}}
+\newcommand{\partialstatus}{\textbf{Đã có một phần}}
+
+\begin{document}
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+  \draw[HCMUTEBlue,line width=1.2pt]
+    ($(current page.north west)+(1.15cm,-1.15cm)$)
+    rectangle ($(current page.south east)+(-1.15cm,1.15cm)$);
+\end{tikzpicture}
+\begin{center}
+  \vspace*{0.25cm}
+  {\bfseries\fontsize{13pt}{17pt}\selectfont
+  BỘ GIÁO DỤC VÀ ĐÀO TẠO\\
+  TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT\\
+  THÀNH PHỐ HỒ CHÍ MINH}\par
+  \vspace{0.12cm}
+  {\bfseries\fontsize{13pt}{17pt}\selectfont\color{HCMUTEDark}
+  KHOA CÔNG NGHỆ THÔNG TIN}\par
+  \vspace{0.3cm}
+  \includegraphics[width=4.4cm]{assets/logo_fithcmute.png}\par
+  \vspace{0.28cm}
+  {\bfseries\fontsize{18pt}{22pt}\selectfont\color{HCMUTEDark}
+  BÁO CÁO TIỂU LUẬN CHUYÊN NGÀNH}\par
+  \vspace{0.1cm}
+  {\bfseries\fontsize{14pt}{18pt}\selectfont BẢN TÍCH LŨY - ĐỢT 2/4}\par
+  \vspace{0.45cm}
+  {\bfseries\fontsize{14pt}{18pt}\selectfont ĐỀ TÀI}\par
+  \vspace{0.12cm}
+  {\bfseries\fontsize{16pt}{20pt}\selectfont\color{HCMUTEBlue}
+  So sánh mô hình học có giám sát và phát hiện bất thường cho hệ thống phát hiện xâm nhập mạng trên UNSW-NB15: Đánh giá theo phương pháp leave-one-attack-class-out}\par
+  \vspace{0.16cm}
+  {\itshape\fontsize{10.5pt}{13.5pt}\selectfont Comparing Supervised and Anomaly Detection Models for Network Intrusion Detection on UNSW-NB15: A Leave-One-Attack-Class-Out Evaluation}\par
+\end{center}
+\vfill
+\begin{center}
+  {\fontsize{11pt}{14pt}\selectfont
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabularx}{0.86\textwidth}{L{6.0cm}Y}
+    \textbf{Ngành:} & An toàn thông tin \\
+    \textbf{Giảng viên hướng dẫn:} & ThS. Nguyễn Đăng Quang \\
+    \textbf{Nhóm trưởng:} & Nguyễn Trọng Tín - MSSV: 23162102 \\
+    \textbf{Thành viên:} & Trịnh Trâm Anh - MSSV: 23162005 \\
+    & Hoàng Văn Vương Thu - MSSV: 23162099 \\
+    \textbf{Khoảng tiến độ được tổng hợp:} & 14/09/2026 - 26/09/2026 \\
+    \textbf{Ngày cập nhật theo hướng dẫn:} & 26/09/2026 \\
+  \end{tabularx}}
+\end{center}
+\vfill
+\begin{center}{\bfseries Thành phố Hồ Chí Minh, tháng 09 năm 2026}\end{center}
+\end{titlepage}
+
+\thispagestyle{empty}
+\vspace*{-1.05cm}
+\begin{center}{\bfseries\fontsize{16pt}{20pt}\selectfont\color{HCMUTEDark} THÔNG TIN PHIÊN BẢN BÁO CÁO}\end{center}
+\vspace{0.25cm}
+\begingroup\fontsize{10.5pt}{13pt}\selectfont\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{L{4.2cm}Y}\toprule
+\textbf{Hạng mục} & \textbf{Thông tin}\\\midrule
+Loại tài liệu & Bản thảo báo cáo tích lũy đợt 2, cập nhật trực tiếp từ nền đợt 1; không phải nhật ký công việc theo tuần.\\
+Đợt báo cáo & Đợt 2 trong bốn đợt cập nhật của đề tài.\\
+Nội dung chốt tiến độ & Audit dữ liệu, data contract, pipeline, test, đủ 80 run và tổng hợp mean/std qua 5 seed.\\
+Trạng thái thực nghiệm & Đủ 80/80 artifact run theo protocol; đã tổng hợp mean/std qua 5 seed.\\
+Trạng thái kiểm duyệt nội bộ & Gate 1/Gate 2 đã có bằng chứng kỹ thuật nhưng còn chờ cả ba thành viên review và ký.\\
+\bottomrule\end{tabularx}\endgroup
+\vspace{0.35cm}
+\fcolorbox{HCMUTEDark}{HCMUTELight}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}{\fontsize{10pt}{15pt}\selectfont\textbf{Cách đọc tài liệu:} số liệu chỉ được xem là kết quả khi có run ID, support, threshold và file truy vết tương ứng.}}
+\par
+\clearpage
+\pagenumbering{roman}
+\setcounter{page}{1}
+\begingroup\fontsize{10.5pt}{12.5pt}\selectfont\tableofcontents\endgroup
+\clearpage
+\begingroup\fontsize{10.5pt}{12.5pt}\selectfont
+\noindent{\bfseries\fontsize{16pt}{20pt}\selectfont DANH MỤC BẢNG}\par\vspace{0.45cm}
+\makeatletter\@starttoc{lot}\makeatother
+\addcontentsline{toc}{chapter}{DANH MỤC BẢNG}
+\endgroup
+\clearpage
+\chapter*{TÓM TẮT TIẾN ĐỘ}
+\addcontentsline{toc}{chapter}{TÓM TẮT TIẾN ĐỘ}
+Sau đợt 1, nhóm đã chuyển từ khung protocol sang kiểm chứng pipeline trên hai official split của UNSW-NB15. Đến mốc báo cáo này, dữ liệu đã được fingerprint và audit; pipeline đã loại cột metadata, kiểm soát LOACO leakage, chọn threshold chỉ từ Normal validation và chạy đủ bốn baseline. Nhóm đã hoàn thành 80/80 run theo ma trận 4 scenario $\times$ 4 model $\times$ 5 seed, mỗi run có bốn artifact chính và đã tổng hợp mean/std. Kết quả vẫn được trình bày như kết quả benchmark của protocol này, không suy diễn thành khẳng định zero-day thực tế.
+
+\textbf{Thông điệp chính:} báo cáo này chỉ trình bày những gì có artifact truy vết. Các số liệu đều gắn với run ID, seed, support, threshold và fingerprint dữ liệu; không dùng một run để khẳng định tính ưu việt tổng quát.
+
+\chapter{ĐỐI CHIẾU GÓP Ý ĐỢT 1 VÀ TIẾN ĐỘ ĐỢT 2}
+\section{Các yêu cầu đã sửa theo góp ý}
+Đợt 1 yêu cầu nhóm không gộp nhiều đầu việc thành một tỷ lệ chung, giải thích thuật ngữ kỹ thuật bằng cấu trúc cụ thể, không ghi ``unit test PASS'' chung chung, mô tả rõ bốn scenario và LOACO, ghi support cho mọi số liệu, không kết luận model tốt nhất từ một seed, và không đưa kế hoạch tương lai vào phần kết quả. Báo cáo đợt 2 áp dụng các nguyên tắc đó bằng bảng đầu việc dưới đây và các chương chuyên môn tiếp theo.
+
+\begin{longtable}{L{2.0cm}L{3.5cm}L{4.3cm}L{2.3cm}L{2.3cm}}
+\caption{Ma trận tiến độ theo từng đầu việc đợt 2}\label{tab:progress}\\
+\toprule
+\textbf{Mã} & \textbf{Sản phẩm cụ thể} & \textbf{Tiêu chí PASS và bằng chứng} & \textbf{Trạng thái} & \textbf{Owner/Review}\\
+\midrule
+\endfirsthead
+\toprule\textbf{Mã} & \textbf{Sản phẩm cụ thể} & \textbf{Tiêu chí PASS và bằng chứng} & \textbf{Trạng thái} & \textbf{Owner/Review}\\\midrule
+\endhead
+D2.1 & Gate 1 protocol & Validator 80 run PASS; xác nhận người review vẫn cần biên bản ba thành viên. & Đang chờ ký & Tín / cả nhóm\\
+D2.2 & Manifest và fingerprint & Hai CSV chính thức, SHA-256, kích thước, dòng, cột trong \path{artifacts/data/data_manifest.json}. & PASS kỹ thuật & Trâm Anh / Tín\\
+D2.3 & Audit dữ liệu & Schema, dtype, missing, infinity, duplicate, label và attack category được thống kê. & PASS kỹ thuật & Trâm Anh / Tín, Thu\\
+D2.4 & Data contract & Ba cột cấm, feature roles, categorical columns và quy tắc nhãn được mã hóa trong source/test. & Đã có & Trâm Anh, Tín / Thu\\
+D2.5 & Chống leakage & Held-out class bị loại trước split/fit; preprocessing chỉ fit development; 9 test PASS. & PASS kỹ thuật & Tín / Trâm Anh\\
+D2.6 & Bốn scenario & Bảng riêng chỉ rõ development/test role và held-out class. & PASS tài liệu & Tín / cả nhóm\\
+D2.7 & Bốn baseline & RF, XGBoost, IF, AE tạo đủ run.json, metrics.csv, predictions.csv và model bundle cho 80 run. & PASS kỹ thuật & Tín, Thu / Trâm Anh\\
+D2.8 & Kiểm thử có giải thích & Từng test có tên, hành vi, điều kiện PASS và kết quả trong \path{tests/}. & 9/9 PASS & Tín, Thu / Trâm Anh\\
+D2.9 & Bảng kết quả & Metric, threshold, target FPR và support truy về \path{metrics.csv}; CSV tổng hợp 80 run và mean/std 5 seed đã tạo. & PASS kỹ thuật & Tín, Thu / cả nhóm\\
+D2.10 & Báo cáo tích lũy & Bản PDF này giữ nền đợt 1 và bổ sung bằng chứng đợt 2; không đưa kết luận vượt dữ liệu. & Hoàn thiện bản nháp & Tín / cả nhóm\\
+\bottomrule
+\end{longtable}
+
+\section{Trạng thái kiểm duyệt}
+Các kiểm tra tự động đã PASS nhưng không thay thế review người. Gate 1 và Gate 2 chỉ được đánh dấu hoàn thành sau khi cả ba thành viên đọc protocol, manifest, data contract và bản PDF cuối, ghi nhận xét và ký vào biên bản. Vì vậy, báo cáo dùng trạng thái ``PASS kỹ thuật'' cho phần đã có log/file; trạng thái ``đang chờ ký'' cho phần cần xác nhận của nhóm.
+
+\chapter{DỮ LIỆU VÀ DATA CONTRACT}
+\section{Nguồn và fingerprint}
+Nhóm sử dụng hai official split của UNSW-NB15: \path{UNSW_NB15_training-set.csv} và \path{UNSW_NB15_testing-set.csv}. Manifest lưu tại \path{artifacts/data/data_manifest.json}; checksum SHA-256 được tính trên file raw trước khi đọc vào pipeline.
+
+\begin{table}[H]
+\centering\small
+\caption{Audit chất lượng hai official split}\label{tab:audit}
+\begin{tabular}{lrrrrrrL{5.4cm}}
+\toprule
+\textbf{Split} & \textbf{Dòng} & \textbf{Cột} & \textbf{Dup.} & \textbf{Missing} & \textbf{Label 0} & \textbf{Label 1} & \textbf{SHA-256}\\
+\midrule
+Train & 175341 & 45 & 0 & 0 & 56000 & 119341 & \scriptsize bec7dd5e...e0648fa\\
+Test & 82332 & 45 & 0 & 0 & 37000 & 45332 & \scriptsize 734fe664...c0a559\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Train có các attack category chính: Generic 40000, Exploits 33393, Fuzzers 18184, DoS 12264, Reconnaissance 10491, Analysis 2000, Backdoor 1746, Shellcode 1133 và Worms 130; Normal có 56000 dòng. Các con số đầy đủ và dtype của 45 cột được lưu trong manifest để tránh làm bảng báo cáo quá rộng.
+
+\section{Contract feature và nhãn}
+\begin{itemize}[leftmargin=1.2cm]
+\item \textbf{Ba cột cấm:} \path{id} là định danh dòng; \path{label} là nhãn nhị phân; \path{attack_cat} là category. Cả ba đều bị loại trước khi fit model.
+\item \textbf{Feature:} 42 cột còn lại gồm numeric và categorical; categorical được one-hot trong preprocessor.
+\item \textbf{Nhãn:} Normal tương ứng 0, traffic attack tương ứng 1; trong LOACO, category held-out bị giữ lại cho đánh giá và không xuất hiện trong development.
+\item \textbf{Anomaly model:} preprocessor và model chỉ học từ Normal development; threshold được chọn trên Normal validation.
+\end{itemize}
+
+\chapter{PROTOCOL, SCENARIO VÀ CHỐNG LEAKAGE}
+\section{Bốn scenario}
+\begin{table}[H]
+\centering\small
+\caption{Vai trò dữ liệu trong bốn scenario}\label{tab:scenario}
+\begin{tabularx}{\textwidth}{L{3.1cm}Y Y L{3.2cm}}
+\toprule
+\textbf{Scenario} & \textbf{Development} & \textbf{Official test} & \textbf{Held-out class}\\
+\midrule
+Closed-set & Tất cả category trong train, chia train/validation & Đánh giá toàn bộ test & Không có\\
+LOACO-Reconnaissance & Loại Reconnaissance trước split và fit & Đánh giá known attack và Reconnaissance & Reconnaissance\\
+LOACO-DoS & Loại DoS trước split và fit & Đánh giá known attack và DoS & DoS\\
+LOACO-Exploits & Loại Exploits trước split và fit & Đánh giá known attack và Exploits & Exploits\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Với mỗi scenario, development được chia thành train/validation theo seed. Official test không được dùng để fit preprocessing, chọn hyperparameter hoặc chọn threshold. Trong LOACO, thao tác loại held-out xảy ra trước khi chia và trước khi fit để held-out không thể ảnh hưởng gián tiếp tới model.
+
+\section{Threshold và metric}
+Score được chuẩn hóa theo quy ước ``cao hơn là giống attack hơn''. Với mỗi target FPR 1\% và 5\%, threshold là phân vị chọn trên score của Normal validation. Bảng metric ghi support: FPR có mẫu số là số Normal official test; Known Attack Recall có mẫu số là số known attack; UADR có mẫu số là số held-out attack; PR-AUC dùng toàn bộ official test và không phụ thuộc threshold.
+
+\chapter{PIPELINE VÀ ARTIFACT}
+\section{Luồng xử lý}
+Luồng tái lập là: raw CSV $\rightarrow$ audit/manifest $\rightarrow$ loại metadata và held-out $\rightarrow$ split development $\rightarrow$ fit preprocessor trên vùng hợp lệ $\rightarrow$ fit model $\rightarrow$ threshold trên Normal validation $\rightarrow$ official-test metrics. Mỗi run có fingerprint dữ liệu, fingerprint cấu hình, seed, số dòng, version phần mềm và thời gian chạy.
+
+\section{Cấu trúc artifact một run}
+\begin{table}[H]
+\centering\small
+\caption{Cấu trúc artifact và ý nghĩa}\label{tab:artifact}
+\begin{tabularx}{\textwidth}{L{4.3cm}Y L{4.3cm}}
+\toprule
+\textbf{File} & \textbf{Nội dung} & \textbf{Ví dụ}\\
+\midrule
+\path{run.json} & Scenario, model, seed, fingerprint, row counts, threshold policy, versions, status & \path{results/runs/LD-RF-S42/run.json}\\
+\path{metrics.csv} & Một dòng cho mỗi metric/subset/target FPR, kèm value, support và threshold & \path{results/runs/LD-RF-S42/metrics.csv}\\
+\path{predictions.csv} & Score và nhãn dự đoán theo từng record; có trong cả 80 run hiện tại & \path{results/runs/CS-RF-S42/predictions.csv}\\
+\path{model_bundle.joblib} & Preprocessor, fitted model, feature list và threshold & \path{results/runs/LD-RF-S42/model_bundle.joblib}\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Đợt này có 80 thư mục run; mỗi thư mục có \path{run.json}, \path{metrics.csv}, \path{predictions.csv} và \path{model_bundle.joblib}. Các file prediction được giữ trong artifact cục bộ/Drive do kích thước, không đưa lên GitHub.
+
+\chapter{KIỂM THỬ VÀ KẾT QUẢ BAN ĐẦU}
+\section{Danh sách test và điều kiện PASS}
+\scriptsize
+\begin{longtable}{L{4.4cm}L{5.0cm}L{4.0cm}}
+\caption{Các test đã chạy}\label{tab:tests}\\
+\toprule \textbf{Tên test} & \textbf{Hành vi kiểm tra} & \textbf{Điều kiện PASS}\\\midrule
+\endfirsthead
+\toprule \textbf{Tên test} & \textbf{Hành vi kiểm tra} & \textbf{Điều kiện PASS}\\\midrule
+\endhead
+\path{test_binary_label_normalization} & Chuẩn hóa nhãn Normal/Attack thành 0/1 & Không sai mapping\\
+\path{test_feature_columns_remove_metadata} & Loại id, label, attack\_cat & Ba cột không còn trong feature\\
+\path{test_forbidden_feature_is_rejected} & Từ chối feature list chứa cột cấm & Ném lỗi đúng contract\\
+\path{test_loaco_removes_heldout_before_split} & Kiểm tra Reconnaissance/DoS/Exploits không lọt development & Held-out count bằng 0 trong development\\
+\path{test_loaco_validator_catches_leakage} & Cố tình đưa held-out vào để kiểm tra validator & Validator phát hiện lỗi\\
+\path{test_evaluation_roles} & Tách known attack và held-out attack & Subset/support đúng role\\
+\path{test_threshold_respects_ties_and_fpr_budget} & Chọn threshold khi có score trùng & Validation FPR không vượt target\\
+\path{test_heldout_recall_is_reported_separately} & Không gộp held-out vào known recall & Có UADR riêng\\
+\path{test_heldout_is_removed_before_split} & Kiểm tra thứ tự loại class và split & Không có leakage theo thứ tự thao tác\\
+\bottomrule
+\end{longtable}
+\normalsize
+Kết quả thực tế: \textbf{9/9 unit test PASS}. Validator protocol cũng PASS với 4 scenario $\times$ 4 model $\times$ 5 seed = 80 run ID duy nhất; validator chỉ xác nhận ma trận cấu hình, không tự đánh dấu Gate 1.
+
+\section{Kết quả tổng hợp qua năm seed}
+Bảng dưới đây chọn target FPR 5\%. Mỗi dòng tổng hợp năm run cùng scenario/model; support của FPR là 37000 Normal official-test records, support của Known Attack Recall thay đổi theo scenario và UADR chỉ có ở ba vòng LOACO.
+
+\begin{longtable}{L{1.8cm}L{1.6cm}L{1.4cm}r r r r r r}
+\caption{Kết quả ban đầu tại threshold mục tiêu FPR 5\%}\label{tab:results}\\
+\toprule
+\textbf{Group} & \textbf{Scenario} & \textbf{Model} & \textbf{Seeds} & \textbf{PR-AUC} & \textbf{FPR} & \textbf{Known Recall} & \textbf{UADR} & \textbf{F1}\\
+\midrule
+\endfirsthead
+\toprule\textbf{Group} & \textbf{Scenario} & \textbf{Model} & \textbf{Seeds} & \textbf{PR-AUC} & \textbf{FPR} & \textbf{Known Recall} & \textbf{UADR} & \textbf{F1}\\\midrule
+\endhead
+CS-AE & Closed & AE & 5 & .9254 & .0916 & .7940 & -- & .8497\\
+CS-IF & Closed & IF & 5 & .8184 & .0615 & .3144 & -- & .4603\\
+CS-RF & Closed & RF & 5 & .9879 & .1857 & .9714 & -- & .9151\\
+CS-XGB & Closed & XGB & 5 & .9883 & .1871 & .9691 & -- & .9135\\
+LR-AE & Recon & AE & 5 & .9237 & .0907 & .8427 & .2382 & .8513\\
+LR-IF & Recon & IF & 5 & .8214 & .0620 & .3454 & .0066 & .4655\\
+LR-RF & Recon & RF & 5 & .9852 & .1858 & .9694 & .9773 & .9144\\
+LR-XGB & Recon & XGB & 5 & .9852 & .1876 & .9653 & .9806 & .9119\\
+LD-AE & DoS & AE & 5 & .9293 & .0911 & .7891 & .8838 & .8522\\
+LD-IF & DoS & IF & 5 & .8183 & .0611 & .3305 & .0421 & .4492\\
+LD-RF & DoS & RF & 5 & .9876 & .1875 & .9682 & .9981 & .9143\\
+LD-XGB & DoS & XGB & 5 & .9881 & .1841 & .9656 & .9933 & .9140\\
+LE-AE & Exploits & AE & 5 & .9294 & .0901 & .7883 & .8069 & .8496\\
+LE-IF & Exploits & IF & 5 & .8172 & .0626 & .3807 & .0529 & .4443\\
+LE-RF & Exploits & RF & 5 & .9831 & .1832 & .9602 & .9706 & .9116\\
+LE-XGB & Exploits & XGB & 5 & .9840 & .1870 & .9575 & .9707 & .9092\\
+\bottomrule
+\multicolumn{9}{l}{\scriptsize Bảng chi tiết 80 run nằm trong \path{docs/reports/DOT_02_METRICS_ALL_RUNS.csv}; mean/std nằm trong \path{docs/reports/DOT_02_METRICS_MEAN_STD.csv}.}\\
+\end{longtable}
+
+Kết quả mean/std cho thấy supervised và anomaly detection có hành vi khác nhau giữa closed-set và từng held-out class. FPR official test thường cao hơn FPR validation mục tiêu, cho thấy distribution shift; vì vậy nhóm báo cáo cả mean/std và không dùng một metric đơn lẻ để tuyên bố model tốt nhất.
+
+\chapter{KẾT LUẬN VÀ PHẦN CẦN XÁC NHẬN}
+Đợt 2 đã hoàn thành phần kỹ thuật cốt lõi: dữ liệu thật, audit, data contract, chống leakage, đủ 80 run, artifact truy vết, unit test và bảng mean/std. Báo cáo này vẫn chưa phải hồ sơ cuối của toàn đề tài vì Gate 1/Gate 2 cần chữ ký ba thành viên và phần error analysis/RQ1--RQ3 chuyên sâu cần được nhóm review trước khi gửi.
+
+Trước khi gửi thầy, nhóm cần tự thực hiện ba việc xác nhận: (1) mỗi thành viên đọc PDF và ký phần mình phụ trách; (2) đối chiếu checksum và đường dẫn artifact trên máy/Drive; (3) chốt Gate 1/Gate 2 bằng biên bản. Các việc này là xác nhận học thuật của nhóm, không thể thay thế bằng lệnh tự động.
+
+\clearpage
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{TÀI LIỆU THAM KHẢO}
+\bibitem{moustafa2015} N. Moustafa and J. Slay, ``UNSW-NB15: A comprehensive data set for network intrusion detection systems,'' in \textit{MilCIS}, 2015. DOI: \href{https://doi.org/10.1109/MilCIS.2015.7348942}{10.1109/MilCIS.2015.7348942}.
+\bibitem{moustafa2016} N. Moustafa and J. Slay, ``The evaluation of Network Anomaly Detection Systems,'' \textit{Information Security Journal}, vol. 25, 2016.
+\bibitem{unswsite} UNSW Research, ``The UNSW-NB15 Dataset.'' \url{https://research.unsw.edu.au/projects/unsw-nb15-dataset}.
+\bibitem{breiman2001} L. Breiman, ``Random Forests,'' \textit{Machine Learning}, vol. 45, 2001.
+\bibitem{chen2016} T. Chen and C. Guestrin, ``XGBoost: A scalable tree boosting system,'' in \textit{KDD}, 2016.
+\bibitem{liu2008} F. T. Liu, K. M. Ting, and Z.-H. Zhou, ``Isolation Forest,'' in \textit{ICDM}, 2008.
+\bibitem{sakurada2014} M. Sakurada and T. Yairi, ``Anomaly detection using autoencoders,'' in \textit{MLSDA}, 2014.
+\end{thebibliography}
+
+\appendix
+\chapter{DANH MỤC FILE BÀN GIAO}
+\small
+\begin{longtable}{L{7cm}L{7cm}}
+\toprule \textbf{Artifact} & \textbf{Vai trò}\\\midrule
+\path{docs/reports/BAO_CAO_TIEN_DO_DOT_02.md} & Bản nội dung kiểm tra nhanh\\
+\path{docs/reports/DOT_02_METRICS_ALL_RUNS.csv} & Bảng metric dạng máy đọc được cho 80 run\\
+\path{docs/reports/DOT_02_METRICS_MEAN_STD.csv} & Bảng mean/std theo scenario, model và 5 seed\\
+\path{artifacts/data/data_manifest.json} & Fingerprint và audit dữ liệu\\
+\path{scripts/build_dot2_report.py} & Script tái tạo Markdown/CSV tổng hợp\\
+\path{scripts/run_experiment.py} & CLI chạy một experiment\\
+\path{scripts/validate_protocol.py} & Validator ma trận 80 run\\
+\path{tests/} & 9 unit test contract, leakage, threshold, evaluation\\
+\path{scripts/check_dot2_final.py} & Kiểm tra cuối: 80 run, 320 artifact, test, validator, aggregate và PDF\\
+\path{docs/evidence/dot_02/FINAL_CHECKLIST.md} & Checklist và trạng thái xác nhận D2.1--D2.10\\
+\path{docs/protocol/GATE_1_CHECKLIST.md} & Checklist khóa protocol; technical pass, chờ human review\\
+\path{docs/protocol/GATE_2_CHECKLIST.md} & Checklist data contract và biên bản review Gate 2\\
+\path{docs/evidence/dot_02/screenshots/} & Ảnh minh chứng audit, protocol, test, registry, mean/std và PDF\\
+\path{results/runs/<run-id>/} & run.json, metrics.csv, model bundle của từng run\\
+\bottomrule
+\end{longtable}
+\normalsize
+\end{document}
