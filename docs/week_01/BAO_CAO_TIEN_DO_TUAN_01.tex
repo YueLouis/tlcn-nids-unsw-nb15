@@ -1,0 +1,337 @@
+\documentclass[12pt,a4paper,oneside]{article}
+
+% Bao cao noi bo Tuan 1 - bien dich bang XeLaTeX.
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Consolas}
+
+\usepackage[
+  a4paper,
+  top=2.1cm,
+  bottom=2.0cm,
+  left=2.5cm,
+  right=2.0cm,
+  headheight=16pt,
+  headsep=0.45cm,
+  footskip=0.9cm
+]{geometry}
+\usepackage{setspace}
+\setstretch{1.22}
+\setlength{\parindent}{1.1cm}
+\setlength{\parskip}{0.25em}
+\setlength{\emergencystretch}{3em}
+
+\usepackage{xcolor}
+\definecolor{HCMUTEBlue}{HTML}{005A9C}
+\definecolor{HCMUTEDark}{HTML}{163A5F}
+\definecolor{HCMUTELight}{HTML}{EAF3F9}
+\definecolor{SoftGray}{HTML}{F3F5F7}
+\definecolor{RiskRed}{HTML}{A23B3B}
+\definecolor{SuccessGreen}{HTML}{2F6F50}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{microtype}
+
+\renewcommand{\contentsname}{MỤC LỤC}
+\renewcommand{\tablename}{Bảng}
+\renewcommand{\figurename}{Hình}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=HCMUTEDark,
+  urlcolor=HCMUTEBlue,
+  pdftitle={Bao cao tien do noi bo Tuan 1},
+  pdfauthor={Trinh Tram Anh; Nguyen Trong Tin; Hoang Van Vuong Thu},
+  pdfsubject={Bao cao tien do de tai UNSW-NB15}
+}
+\urlstyle{tt}
+
+\titleformat{\section}
+  {\normalfont\bfseries\fontsize{14pt}{18pt}\selectfont\color{HCMUTEDark}}
+  {\thesection}{0.5em}{}
+\titlespacing*{\section}{0pt}{0.9em}{0.35em}
+\titleformat{\subsection}
+  {\normalfont\bfseries\fontsize{12.5pt}{16pt}\selectfont\color{HCMUTEDark}}
+  {\thesubsection}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{0.55em}{0.2em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textit{Báo cáo tiến độ nội bộ Tuần 1}}
+\fancyhead[R]{\small\textit{HCMUTE -- FIT}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[L]{\small\textit{Báo cáo tiến độ nội bộ Tuần 1}}
+  \fancyhead[R]{\small\textit{HCMUTE -- FIT}}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcommand{\statusbox}[1]{%
+  \fcolorbox{HCMUTEDark}{HCMUTELight}{\parbox{0.91\textwidth}{\centering\bfseries\color{HCMUTEDark}#1}}}
+
+\begin{document}
+\fontsize{12.5pt}{17pt}\selectfont
+
+% ------------------------------------------------------------------
+% Trang bia
+% ------------------------------------------------------------------
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{center}
+  {\bfseries\fontsize{14pt}{18pt}\selectfont
+  BỘ GIÁO DỤC VÀ ĐÀO TẠO\\
+  TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT\\
+  THÀNH PHỐ HỒ CHÍ MINH\\[0.15cm]}
+  {\bfseries\fontsize{14pt}{18pt}\selectfont\color{HCMUTEDark}
+  KHOA CÔNG NGHỆ THÔNG TIN}
+
+  \vspace{0.35cm}
+  \IfFileExists{../../../De_Cuong_Chi_Tiet_LaTeX/assets/logo_fithcmute.png}{%
+    \includegraphics[width=4.4cm]{../../../De_Cuong_Chi_Tiet_LaTeX/assets/logo_fithcmute.png}}{}
+
+  \vspace{0.4cm}
+  {\bfseries\fontsize{19pt}{24pt}\selectfont\color{HCMUTEDark}
+  BÁO CÁO TIẾN ĐỘ NỘI BỘ\\[0.1cm]
+  TUẦN 1}
+
+  \vspace{0.65cm}
+  {\bfseries\fontsize{13pt}{18pt}\selectfont ĐỀ TÀI}
+
+  \vspace{0.18cm}
+  \begin{minipage}{0.91\textwidth}
+    \centering
+    {\bfseries\fontsize{15pt}{20pt}\selectfont\color{HCMUTEBlue}
+    So sánh mô hình học có giám sát và phát hiện bất thường cho hệ thống phát hiện xâm nhập mạng trên UNSW-NB15: Đánh giá theo phương pháp leave-one-attack-class-out}
+  \end{minipage}
+
+  \vfill
+  \renewcommand{\arraystretch}{1.35}
+  \noindent\begin{tabularx}{0.91\textwidth}{L{5.25cm}Y}
+    \textbf{Nhóm thực hiện:} & Trịnh Trâm Anh (23162005)\\
+    & Nguyễn Trọng Tín (23162102)\\
+    & Hoàng Văn Vương Thu (23162099)\\
+    \textbf{Người hướng dẫn:} & Nguyễn Đăng Quang\\
+    \textbf{Kỳ báo cáo:} & 10/09/2026--16/09/2026\\
+    \textbf{Phiên bản:} & 0.1 -- cập nhật đến 11/09/2026\\
+  \end{tabularx}
+
+  \vfill
+  \statusbox{BẢN NỘI BỘ CHUẨN BỊ GATE 1 -- CHƯA REVIEW}
+\end{center}
+\end{titlepage}
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\section*{Thông tin báo cáo}
+\addcontentsline{toc}{section}{Thông tin báo cáo}
+\renewcommand{\arraystretch}{1.35}
+\noindent\begin{tabularx}{\textwidth}{L{4.2cm}Y}
+\toprule
+\textbf{Hạng mục} & \textbf{Thông tin}\\
+\midrule
+Đề tài & So sánh mô hình học có giám sát và phát hiện bất thường cho NIDS trên UNSW-NB15 theo LOACO.\\
+Mục đích & Báo cáo tình trạng hoàn thành các đầu việc chuẩn bị protocol trong Tuần 1.\\
+Phạm vi & Chuẩn bị Gate 1; chưa tải dữ liệu và chưa huấn luyện mô hình.\\
+Trạng thái hiện tại & \textbf{NOT REVIEWED} -- chờ review chéo, họp kickoff và xác nhận bằng văn bản.\\
+\bottomrule
+\end{tabularx}
+
+\vspace{0.55cm}
+\statusbox{KẾT LUẬN HIỆN TẠI: NOT REVIEWED -- CHƯA ĐỦ CƠ SỞ GHI GATE 1 LÀ PASS}
+
+\clearpage
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% ------------------------------------------------------------------
+% Noi dung bao cao
+% ------------------------------------------------------------------
+\section{Tóm tắt tiến độ}
+
+Trong những ngày đầu của Tuần 1, nhóm đã dựng repository nghiên cứu, thống nhất phạm vi dự kiến, ba câu hỏi nghiên cứu, bốn mô hình, ba vòng LOACO, năm random seed và bộ quy tắc đánh giá. Nhóm cũng đã tạo ma trận 80 run, schema kết quả, ánh xạ câu hỏi nghiên cứu sang bằng chứng, đặc tả metric/threshold và danh sách kiểm thử synthetic.
+
+Theo kế hoạch, nhóm \textbf{chưa tải dataset và chưa huấn luyện mô hình}. Đây không phải là thiếu tiến độ: Tuần 1 chỉ nhằm khóa protocol và hoàn tất Gate 1 trước khi chuyển sang kiểm kê dữ liệu. Tại thời điểm lập báo cáo, hồ sơ kỹ thuật đã sẵn sàng để review nhưng Gate 1 \textbf{chưa được kết luận PASS} vì biên bản họp, ngày họp, nhận xét review chéo và xác nhận của cả ba thành viên còn bỏ trống.
+
+\section{Công việc đã thực hiện}
+
+\small
+\renewcommand{\arraystretch}{1.28}
+\noindent\begin{longtable}{L{3.2cm}L{6.8cm}L{4.0cm}}
+\caption{Các hạng mục đã hoàn thành trong Tuần 1}\label{tab:completed}\\
+\toprule
+\textbf{Hạng mục} & \textbf{Kết quả hiện có} & \textbf{Bằng chứng}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Hạng mục} & \textbf{Kết quả hiện có} & \textbf{Bằng chứng}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Cấu trúc repository và quy tắc lưu trữ & Đã tạo repo GitHub, thư mục \path{configs}, \path{docs}, \path{scripts}, \path{src}, \path{data}; raw data và model nặng được loại khỏi Git. & \path{README.md}, \path{.gitignore}\\
+Phạm vi và câu hỏi nghiên cứu & Đã khóa dự thảo RQ1 closed-set, RQ2 held-out attack và RQ3 detection/false-alarm trade-off. & \path{docs/protocol/RQ_TO_EVIDENCE.md}\\
+Kịch bản thí nghiệm & Đã định nghĩa closed-set và LOACO cho Reconnaissance, DoS, Exploits. & \path{configs/experiment_matrix.yaml}\\
+Mô hình và seed & Random Forest, XGBoost, Isolation Forest, Autoencoder; seed 42, 52, 62, 72, 82. & \path{configs/experiment_matrix.yaml}\\
+Ma trận run & Có 80 run dự kiến, gồm 4 scenario x 4 model x 5 seed; \path{run_id} không trùng. & \path{docs/protocol/RUN_MATRIX.csv}, \path{scripts/generate_run_matrix.py}\\
+Hợp đồng đầu ra & Đã mô tả \path{run.json}, \path{metrics.csv}, \path{predictions.csv} và điều kiện một run hợp lệ. & \path{docs/protocol/RESULT_SCHEMA.md}\\
+Metric và threshold & Đã quy ước score cao hơn = giống Attack/anomaly hơn; threshold lấy từ Normal validation tại FPR 1\% và 5\%. & \path{docs/week_01/METRIC_THRESHOLD_SPEC.md}\\
+Kiểm thử trước dataset thật & Đã lập 10 synthetic tests cho score direction, threshold, label mapping, mẫu số bằng 0 và duplicate \path{run_id}. & \path{docs/week_01/SYNTHETIC_TESTS.md}\\
+Artifact dữ liệu và thuật ngữ & Đã có glossary, checklist data audit và mẫu ma trận related work. & \path{docs/week_01/GLOSSARY.md}, \path{DATA_AUDIT_CHECKLIST.md}, \path{RELATED_WORK_MATRIX.csv}\\
+Kế hoạch và phân công & Đã ghi mốc ngày cụ thể, owner, reviewer và mốc báo cáo 4 tuần/lần. & \path{docs/management/PHAN_CONG_NHOM.md}, \path{GANTT_CHART.md}\\
+\end{longtable}
+\normalsize
+
+\section{Kiểm tra bằng chứng kỹ thuật}
+
+\begin{itemize}[leftmargin=1.05cm,itemsep=0.25em]
+  \item Trước khi tạo báo cáo, repository đang ở nhánh \path{main} và bộ artifact nền tảng đã được commit; báo cáo Tuần 1 này là các file bổ sung đang chờ commit.
+  \item Commit gần nhất chứa bộ artifact Tuần 1 là \path{f5686f0} (\texttt{docs: add week 1 team artifacts}).
+  \item \path{RUN_MATRIX.csv} có 80 dòng dữ liệu; phân bố là 20 run cho mỗi scenario: \path{closed_set}, \path{loaco_reconnaissance}, \path{loaco_dos} và \path{loaco_exploits}.
+  \item Kiểm tra ma trận run cho thấy không có bản ghi \path{run_id} trùng.
+  \item Dataset raw chưa xuất hiện trong repository, phù hợp với quy tắc bảo mật và kế hoạch chỉ tải dữ liệu sau khi Gate 1 được duyệt.
+\end{itemize}
+
+\section{Tiến độ theo thành viên}
+
+\small
+\renewcommand{\arraystretch}{1.3}
+\noindent\begin{longtable}{L{3.0cm}L{4.5cm}L{5.2cm}C{1.5cm}}
+\caption{Phân công và trạng thái cập nhật}\label{tab:members}\\
+\toprule
+\textbf{Thành viên} & \textbf{Đã có} & \textbf{Còn phải đóng trong Tuần 1} & \textbf{Trạng thái}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Thành viên} & \textbf{Đã có} & \textbf{Còn phải đóng trong Tuần 1} & \textbf{Trạng thái}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Trịnh Trâm Anh & Glossary, data-audit checklist, related-work template. & Review chéo, bổ sung nguồn/tiêu chí nếu nhóm thống nhất, xác nhận trong biên bản. & Đang review\\
+Hoàng Văn Vương Thu & Metric/threshold specification, 10 synthetic tests. & Review score direction và metric với hai thành viên còn lại, ghi test owner. & Đang review\\
+Nguyễn Trọng Tín & Repository, config, ma trận 80 run, result schema, Gate 1 checklist. & Mời/xác nhận tài khoản GitHub, tổng hợp review chéo, điền biên bản họp. & Đang tích hợp\\
+\end{longtable}
+\normalsize
+
+\section{Các quyết định protocol cần xác nhận bằng văn bản}
+
+Các điểm dưới đây đã có đề xuất thống nhất trong tài liệu làm việc nhưng chưa được đánh dấu PASS trong biên bản họp:
+
+\begin{enumerate}[label=\arabic*.,leftmargin=1.1cm,itemsep=0.25em]
+  \item Giữ official train/test split của UNSW-NB15 và không dùng official test để fit, tuning hoặc chọn threshold.
+  \item Chọn Reconnaissance, DoS và Exploits làm ba held-out attack classes.
+  \item Dùng bốn mô hình Random Forest, XGBoost, Isolation Forest và Autoencoder.
+  \item Chạy năm seed 42, 52, 62, 72, 82 và báo cáo mean +/- standard deviation.
+  \item Chọn threshold trên Normal validation tại ngân sách FPR 1\% và 5\%.
+  \item Loại \path{id}, \path{label} và \path{attack_cat} khỏi feature matrix.
+  \item Chỉ gọi kết quả là held-out/unseen trong thiết kế LOACO, không gọi là bằng chứng phát hiện zero-day thực tế.
+\end{enumerate}
+
+\section{Vấn đề còn mở và cách đóng}
+
+\small
+\renewcommand{\arraystretch}{1.3}
+\noindent\begin{longtable}{L{4.2cm}C{2.0cm}C{2.1cm}L{5.0cm}}
+\caption{Các vấn đề cần đóng trước hoặc ngay sau kickoff}\label{tab:open}\\
+\toprule
+\textbf{Vấn đề} & \textbf{Owner} & \textbf{Hạn nội bộ} & \textbf{Cách đóng}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Vấn đề} & \textbf{Owner} & \textbf{Hạn nội bộ} & \textbf{Cách đóng}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Chưa có ngày, hình thức và nội dung kết luận của kickoff & Tín + cả nhóm & 16/09/2026 & Họp 30--45 phút, điền \path{BIEN_BAN_HOP_01.md}.\\
+Chưa có review chéo và xác nhận của ba thành viên & Cả nhóm & 15/09/2026 & Review từng artifact, ghi người review và commit/link.\\
+Chưa xác nhận username GitHub của Trâm Anh và Vương Thu & Tín & 11/09/2026 & Xác nhận tài khoản riêng và quyền truy cập repo.\\
+Related-work matrix mới là header, chưa có bài cụ thể & Trâm Anh & Tuần 2 & Dùng đúng template để lập danh mục 10--15 nguồn có kiểm chứng.\\
+Gantt và nhịp báo cáo cần đối chiếu deadline chính thức của môn & Tín & 16/09/2026 & Xác nhận với giảng viên; giữ mốc 07/10/2026 là mốc nội bộ hiện tại.\\
+\end{longtable}
+\normalsize
+
+\section{Kế hoạch ngay sau Gate 1}
+
+Trong giai đoạn 17/09--23/09/2026, nhóm dự kiến:
+
+\begin{itemize}[leftmargin=1.05cm,itemsep=0.25em]
+  \item hoàn thiện related work có nguồn và tiêu chí so sánh;
+  \item thiết kế kiến trúc pipeline, interface model và test plan;
+  \item rà lại protocol theo góp ý của giảng viên nếu có;
+  \item chuẩn bị checklist tải dữ liệu chính thức cho giai đoạn 24/09--30/09/2026;
+  \item không đưa số liệu thực nghiệm vào báo cáo trước khi có data audit và Gate 2.
+\end{itemize}
+
+\section{Kết luận và đề nghị xác nhận}
+
+Tuần 1 đã tạo được nền tảng cần thiết để bắt đầu nghiên cứu có kiểm soát: phạm vi, protocol dự thảo, ma trận run, schema kết quả và phân công đều đã có artifact truy vết được. Mức hoàn thành hiện tại phù hợp với mục tiêu Tuần 1, nhưng chưa đủ cơ sở để ghi Gate 1 là PASS.
+
+Nhóm đề nghị xác nhận ba việc trong buổi kickoff ngày 16/09/2026:
+
+\begin{enumerate}[label=\arabic*.,leftmargin=1.1cm,itemsep=0.25em]
+  \item chấp thuận các quyết định protocol ở Mục 5;
+  \item ghi rõ vấn đề còn mở, owner và deadline nếu có thay đổi;
+  \item ký kết luận PASS/FAIL trong \path{docs/meetings/BIEN_BAN_HOP_01.md}.
+\end{enumerate}
+
+\vspace{0.25cm}
+\statusbox{KẾT LUẬN HIỆN TẠI: \texttt{NOT REVIEWED} -- CHỜ REVIEW CHÉO VÀ XÁC NHẬN GATE 1}
+
+\clearpage
+\section*{Phụ lục A -- Danh mục artifact Tuần 1}
+\addcontentsline{toc}{section}{Phụ lục A -- Danh mục artifact Tuần 1}
+
+\small
+\renewcommand{\arraystretch}{1.3}
+\noindent\begin{longtable}{L{8.1cm}L{5.2cm}}
+\caption{Danh mục artifact và vai trò}\label{tab:artifacts}\\
+\toprule
+\textbf{Artifact} & \textbf{Vai trò}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Artifact} & \textbf{Vai trò}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\path{docs/week_01/KE_HOACH_TUAN_01.md} & Mục tiêu và lịch 7 ngày.\\
+\path{docs/week_01/GLOSSARY.md} & Thuật ngữ thống nhất.\\
+\path{docs/week_01/DATA_AUDIT_CHECKLIST.md} & Checklist chuẩn bị Gate 2.\\
+\path{docs/week_01/RELATED_WORK_MATRIX.csv} & Mẫu tổng hợp tài liệu liên quan.\\
+\path{docs/week_01/METRIC_THRESHOLD_SPEC.md} & Metric, score và threshold.\\
+\path{docs/week_01/SYNTHETIC_TESTS.md} & Danh sách test trước dataset thật.\\
+\path{docs/protocol/RQ_TO_EVIDENCE.md} & Ánh xạ RQ sang bằng chứng.\\
+\path{docs/protocol/RESULT_SCHEMA.md} & Hợp đồng artifact kết quả.\\
+\path{docs/protocol/RUN_MATRIX.csv} & Ma trận 80 run.\\
+\path{docs/protocol/GATE_1_CHECKLIST.md} & Điều kiện PASS/FAIL Gate 1.\\
+\path{docs/meetings/BIEN_BAN_HOP_01.md} & Biên bản kickoff và xác nhận Gate 1.\\
+\end{longtable}
+\normalsize
+
+\vspace{0.35cm}
+\noindent\textit{Ghi chú:} Báo cáo này là snapshot nội bộ cập nhật đến 11/09/2026. Các kết quả thực nghiệm, data fingerprint và model artifacts sẽ chỉ được bổ sung sau khi protocol được review và Gate 1 được xác nhận.
+
+\end{document}

@@ -1,0 +1,282 @@
+\documentclass[12pt,a4paper,oneside]{article}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Consolas}
+\usepackage[a4paper,top=2.1cm,bottom=2cm,left=2.5cm,right=2cm,headheight=16pt,headsep=0.45cm,footskip=0.9cm]{geometry}
+\usepackage{setspace}
+\setstretch{1.18}
+\setlength{\parindent}{1.1cm}
+\setlength{\parskip}{0.25em}
+\setlength{\emergencystretch}{3em}
+\usepackage{xcolor,graphicx,booktabs,tabularx,longtable,array,enumitem,fancyhdr,titlesec,url,hyperref,bookmark,microtype}
+\definecolor{HCMUTEBlue}{HTML}{005A9C}
+\definecolor{HCMUTEDark}{HTML}{163A5F}
+\definecolor{HCMUTELight}{HTML}{EAF3F9}
+\definecolor{SoftGray}{HTML}{F3F5F7}
+\renewcommand{\contentsname}{MỤC LỤC}
+\renewcommand{\tablename}{Bảng}
+\hypersetup{colorlinks=true,linkcolor=HCMUTEDark,urlcolor=HCMUTEBlue,pdftitle={Bao cao tien do 4 tuan lan 1},pdfauthor={Nhom Nguyen Trong Tin},pdfsubject={Bao cao tien do TLCN UNSW-NB15}}
+\urlstyle{tt}
+\titleformat{\section}{\normalfont\bfseries\fontsize{14pt}{18pt}\selectfont\color{HCMUTEDark}}{\thesection}{0.5em}{}
+\titlespacing*{\section}{0pt}{0.9em}{0.35em}
+\titleformat{\subsection}{\normalfont\bfseries\fontsize{12.5pt}{16pt}\selectfont\color{HCMUTEDark}}{\thesubsection}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{0.55em}{0.2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textit{Báo cáo tiến độ 4 tuần lần 1}}
+\fancyhead[R]{\small\textit{HCMUTE -- FIT}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcommand{\statusbox}[1]{\fcolorbox{HCMUTEDark}{HCMUTELight}{\parbox{0.91\textwidth}{\centering\bfseries\color{HCMUTEDark}#1}}}
+\begin{document}
+\fontsize{12.3pt}{16.5pt}\selectfont
+
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{center}
+{\bfseries\fontsize{14pt}{18pt}\selectfont BỘ GIÁO DỤC VÀ ĐÀO TẠO\\ TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT\\ THÀNH PHỐ HỒ CHÍ MINH\\[0.15cm]}\par
+{\bfseries\fontsize{14pt}{18pt}\selectfont\color{HCMUTEDark} KHOA CÔNG NGHỆ THÔNG TIN}\par
+\vspace{0.35cm}
+\IfFileExists{../De_Cuong_Chi_Tiet_LaTeX/assets/logo_fithcmute.png}{\includegraphics[width=3.8cm]{../De_Cuong_Chi_Tiet_LaTeX/assets/logo_fithcmute.png}}{\IfFileExists{../../../De_Cuong_Chi_Tiet_LaTeX/assets/logo_fithcmute.png}{\includegraphics[width=3.8cm]{../../../De_Cuong_Chi_Tiet_LaTeX/assets/logo_fithcmute.png}}{}}\par
+\vspace{0.4cm}
+{\bfseries\fontsize{19pt}{24pt}\selectfont\color{HCMUTEDark} BÁO CÁO TIẾN ĐỘ\\[0.1cm] TIỂU LUẬN CHUYÊN NGÀNH}\par
+\vspace{0.12cm}
+{\bfseries\fontsize{14pt}{18pt}\selectfont (4 TUẦN - LẦN 1)}\par
+\vspace{0.85cm}
+{\bfseries\fontsize{13pt}{18pt}\selectfont ĐỀ TÀI}
+\vspace{0.18cm}
+\begin{minipage}{0.91\textwidth}\centering
+{\bfseries\fontsize{15pt}{20pt}\selectfont\color{HCMUTEBlue} So sánh mô hình học có giám sát và phát hiện bất thường cho hệ thống phát hiện xâm nhập mạng trên UNSW-NB15: Đánh giá theo phương pháp leave-one-attack-class-out}
+\end{minipage}
+\vfill
+\renewcommand{\arraystretch}{1.35}
+\noindent\begin{tabularx}{0.91\textwidth}{L{5.25cm}Y}
+\textbf{Nhóm sinh viên thực hiện:} & Trịnh Trâm Anh (23162005)\\ & Nguyễn Trọng Tín (23162102)\\ & Hoàng Văn Vương Thu (23162099)\\
+\textbf{Giảng viên hướng dẫn:} & ThS. Nguyễn Đăng Quang\\
+\textbf{Thời gian báo cáo:} & 17/08/2026--13/09/2026\\
+\textbf{Ngày gửi lần đầu:} & 14/09/2026\\
+\textbf{Ngày cập nhật:} & 16/09/2026\\
+\end{tabularx}
+\vfill
+{\bfseries Thành phố Hồ Chí Minh, tháng 09 năm 2026}\par
+\end{center}
+\end{titlepage}
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+\section*{Thông tin báo cáo}
+\addcontentsline{toc}{section}{Thông tin báo cáo}
+\renewcommand{\arraystretch}{1.35}
+\noindent\begin{tabularx}{\textwidth}{L{4.2cm}Y}
+\toprule
+\textbf{Hạng mục} & \textbf{Thông tin}\\
+\midrule
+Đề tài & So sánh mô hình học có giám sát và phát hiện bất thường cho NIDS trên UNSW-NB15 theo phương pháp LOACO.\\
+Giảng viên hướng dẫn & ThS. Nguyễn Đăng Quang.\\
+Thời gian báo cáo & Từ ngày 17/08/2026 đến ngày 13/09/2026.\\
+Ngày gửi lần đầu & 14/09/2026.\\
+Ngày cập nhật & 16/09/2026, bổ sung kế hoạch thực hiện theo góp ý của giảng viên hướng dẫn.\\
+Tình hình chung & Nhóm đã hoàn thành đề cương, phân công, kế hoạch và khung kỹ thuật; chưa có kết quả mô hình thật.\\
+\bottomrule
+\end{tabularx}
+\vspace{0.55cm}
+\noindent\textbf{Lưu ý:} Báo cáo này trình bày đúng tiến độ hiện tại của nhóm. Các kết quả mô hình sẽ được bổ sung sau khi nhóm hoàn tất việc kiểm tra dữ liệu và thống nhất cách chạy thí nghiệm.
+\clearpage
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section{Tóm tắt tiến độ}
+
+Nhóm đăng ký thực hiện đề tài từ ngày 17/08/2026. Trong bốn tuần đầu, nhóm tập trung làm rõ nội dung đề tài, hoàn thiện đề cương, phân công công việc và chuẩn bị khung thực nghiệm. Đến ngày 13/09/2026, nhóm đã có kho mã nguồn, tệp cấu hình thí nghiệm, danh sách 80 lượt chạy dự kiến, quy định cấu trúc lưu kết quả và chương trình kiểm tra cấu hình.
+
+Nhóm \textbf{chưa huấn luyện mô hình và chưa có số liệu đánh giá trên dữ liệu thật}. Các công việc này sẽ được thực hiện từ Tuần 5 sau khi ba thành viên kiểm tra chéo phần thiết kế và hoàn tất bước chuẩn bị dữ liệu.
+
+\section{Bảng theo dõi công việc}
+Bảng này trả lời trực tiếp câu hỏi của giảng viên: mỗi công việc do ai làm, bằng chứng ở đâu, đang ở trạng thái nào và việc tiếp theo là gì. Trạng thái dùng bốn mức: \textbf{Hoàn thành} (có bằng chứng kiểm chứng được), \textbf{Nháp} (đã có sản phẩm sơ bộ nhưng chưa qua review của cả ba thành viên), \textbf{Chưa bắt đầu} (chưa có sản phẩm) và \textbf{Chờ xác nhận} (đã xong nhưng cần giảng viên hoặc nhóm chốt).
+
+\small
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{4pt}
+\noindent\begin{longtable}{L{3.5cm}L{2.1cm}L{4.0cm}L{1.9cm}L{2.9cm}}
+\caption{Bảng theo dõi công việc bốn tuần đầu}\label{tab:worklog}\\
+\toprule\textbf{Công việc} & \textbf{Phụ trách} & \textbf{Bằng chứng} & \textbf{Trạng thái} & \textbf{Việc tiếp theo}\\
+\midrule\endfirsthead
+\toprule\textbf{Công việc} & \textbf{Phụ trách} & \textbf{Bằng chứng} & \textbf{Trạng thái} & \textbf{Việc tiếp theo}\\
+\midrule\endhead\bottomrule\endfoot
+Chốt đề cương, vấn đề và ba câu hỏi nghiên cứu & Tín + cả nhóm & \path{00_GIAO_THUC_NGHIEN_CRU.docx}, \path{De_Cuong_Chi_Tiet_LaTeX/} & Hoàn thành & Chờ thầy xác nhận phạm vi\\
+Phân công nhiệm vụ và Gantt theo ngày & Cả nhóm & \path{Phan_Cong/}, \path{docs/management/GANTT_CHART.md} & Hoàn thành & Cập nhật sau mỗi đợt\\
+Cấu hình 4 kịch bản, 4 mô hình, 5 seed & Tín & \path{configs/experiment_matrix.yaml} & Hoàn thành & Chốt tại Gate 1\\
+Danh sách 80 lượt chạy dự kiến & Tín & \path{docs/protocol/RUN_MATRIX.csv} & Hoàn thành & Chốt tại Gate 1\\
+Quy định cấu trúc lưu kết quả & Tín & \path{docs/protocol/RESULT_SCHEMA.md} & Hoàn thành & Cập nhật theo kết quả thật\\
+Quy điểm ba RQ về bằng chứng & Cả nhóm & \path{docs/protocol/RQ_TO_EVIDENCE.md} & Nháp & Bổ sung file kết quả khi có\\
+Mã hoá quy tắc chống dùng cột đáp án & Tín & \path{src/nids_benchmark/contracts.py} & Hoàn thành & Bổ sung test khi có pipeline\\
+Chương trình kiểm tra cấu hình & Tín & \path{scripts/validate_protocol.py} & Hoàn thành & Dùng lại cho đợt 2\\
+Kiểm thử chống sai giao thức & Tín + Thu & \path{tests/} (6 kiểm thử PASS) & Hoàn thành & Mở rộng khi có pipeline thật\\
+Checklist khóa giao thức & Cả nhóm & \path{docs/protocol/GATE_1_CHECKLIST.md} & Nháp & Ba thành viên review và ký\\
+Tải và kiểm tra toàn vẹn dữ liệu UNSW-NB15 & Trâm Anh & Chưa có & Chưa bắt đầu & Tải đúng hai tệp chính thức, tạo checksum\\
+Thống kê schema, chất lượng và phân bố nhãn & Trâm Anh & Chưa có & Chưa bắt đầu & Làm sau khi có manifest\\
+Tổng quan tài liệu 10--15 nguồn đã kiểm tra & Trâm Anh & \path{docs/week_01/RELATED_WORK_MATRIX.csv} (khung) & Nháp & Điền nguồn và kiểm tra từng dòng\\
+Pipeline tiền xử lý chống rò rỉ & Tín & Chưa có & Chưa bắt đầu & Làm sau khi chốt data contract\\
+Cài đặt Random Forest, XGBoost và bộ đánh giá & Tín & Chưa có & Chưa bắt đầu & Làm sau khi có pipeline\\
+Cài đặt Isolation Forest, Autoencoder và cách chọn ngưỡng & Thu & Chưa có & Chưa bắt đầu & Làm sau khi có pipeline\\
+Chạy 80 lượt và tổng hợp kết quả & Tín + Thu & Chưa có & Chưa bắt đầu & Làm sau khi có đủ bốn mô hình\\
+Prototype chạy thử và báo cáo cuối & Cả nhóm & Chưa có & Chưa bắt đầu & Giai đoạn cuối, theo kế hoạch\\
+\end{longtable}
+\normalsize
+
+\section{Nội dung đề tài}
+
+Nhóm thực hiện thí nghiệm so sánh bốn mô hình phát hiện xâm nhập mạng trên bộ dữ liệu UNSW-NB15:
+\begin{itemize}[leftmargin=1.05cm,itemsep=0.2em]
+\item \textbf{Random Forest} và \textbf{XGBoost}: mô hình học có giám sát, được học từ lưu lượng bình thường và các nhóm tấn công đã biết.
+\item \textbf{Isolation Forest} và \textbf{Autoencoder}: mô hình phát hiện bất thường, chủ yếu học từ lưu lượng bình thường rồi xác định các mẫu có dấu hiệu khác biệt.
+\end{itemize}
+
+Nhóm dự kiến đánh giá theo hai trường hợp. Trường hợp thứ nhất là \textbf{closed-set}, trong đó các nhóm tấn công cần kiểm tra đều đã xuất hiện trong dữ liệu huấn luyện. Trường hợp thứ hai là \textbf{LOACO}, trong đó nhóm giữ lại hoàn toàn một nhóm tấn công khi phát triển mô hình, sau đó mới dùng nhóm tấn công đó để kiểm tra. Ba nhóm tấn công được đề xuất là \textbf{Reconnaissance, DoS và Exploits}. Cách làm này dùng để mô phỏng tình huống gặp dạng tấn công chưa xuất hiện trong dữ liệu huấn luyện; nhóm không xem đây là bằng chứng phát hiện được mọi tấn công zero-day ngoài thực tế.
+
+Khi có kết quả, nhóm sẽ so sánh khả năng phát hiện nhóm tấn công được giữ lại, khả năng nhận diện các nhóm tấn công đã biết và tỷ lệ cảnh báo nhầm trên lưu lượng bình thường. Nhóm cũng theo dõi Precision, F1-score, PR-AUC, ma trận nhầm lẫn và thời gian chạy.
+
+\section{Tiến độ theo từng tuần}
+
+\subsection{Tuần 1: 17/08--23/08 -- Chọn hướng và soạn đề cương}
+\textbf{Đã thực hiện:} soạn tên đề tài, vấn đề, mục tiêu, câu hỏi nghiên cứu, phạm vi dữ liệu và nhóm mô hình; chọn UNSW-NB15; đề xuất so sánh mô hình học có giám sát với mô hình phát hiện bất thường và đánh giá tấn công chưa xuất hiện trong huấn luyện.
+
+\textbf{Tài liệu đã có:} đề cương Markdown, DOCX/PDF và bản đề cương chi tiết LaTeX được tạo trong hồ sơ nhóm từ ngày 19 đến 22/08/2026.
+
+\textbf{Chưa hoàn thành:} chưa có data inventory, pipeline chạy trên dataset và kết quả thực nghiệm.
+
+\subsection{Tuần 2: 24/08--30/08 -- Đăng ký và làm rõ phạm vi}
+\textbf{Đã thực hiện:} hoàn thiện nội dung đăng ký hướng dẫn với danh sách ba thành viên; chuẩn bị tài liệu giải thích NIDS, UNSW-NB15, bốn mô hình, LOACO và các chỉ số đánh giá; thống nhất không mở rộng quá nhiều thuật toán ở giai đoạn đầu.
+
+\textbf{Tài liệu đã có:} hồ sơ đăng ký, thư trao đổi với thầy và bộ hình giải thích đề tài được chuẩn bị ngày 27/08/2026.
+
+\textbf{Chưa hoàn thành:} phần tổng quan tài liệu chưa đủ 10--15 nguồn đã kiểm tra và nhóm chưa họp để chốt toàn bộ cách chạy thí nghiệm.
+
+\subsection{Tuần 3: 31/08--06/09 -- Phân công và chuẩn bị bàn giao}
+\textbf{Đã thực hiện:} chia công việc thành ba phần gồm dữ liệu và tài liệu tham khảo; xử lý dữ liệu, mô hình học có giám sát và tích hợp; mô hình phát hiện bất thường và đánh giá. Nhóm cũng ghi rõ người phụ trách, người kiểm tra và đầu ra cần bàn giao ở từng phần.
+
+\textbf{Tài liệu đã có:} bảng phân công tổng hợp, ba tài liệu mô tả công việc chi tiết và bộ hình phân công được tạo ngày 04/09/2026.
+
+\textbf{Chưa hoàn thành:} ba thành viên chưa kiểm tra chéo toàn bộ phần việc của nhau và chưa tải dữ liệu chính thức.
+
+\subsection{Tuần 4: 07/09--13/09 -- Chuẩn bị khung thực nghiệm và kho mã nguồn}
+\textbf{Đã thực hiện:}
+\begin{itemize}[leftmargin=1.05cm,itemsep=0.2em]
+\item Tổng hợp yêu cầu của thầy về việc viết báo cáo liên tục, báo cáo theo từng đợt bốn tuần, lập Gantt theo ngày và chuẩn bị mã nguồn để có thể trình bày khi cần.
+\item Tạo kho mã nguồn GitHub ở chế độ riêng tư, gồm các thư mục \path{configs}, \path{docs}, \path{scripts}, \path{src} và \path{data}.
+\item Thống nhất bản làm việc gồm bốn mô hình, ba nhóm tấn công dùng cho LOACO, năm giá trị seed \path{42, 52, 62, 72, 82}, cách chia dữ liệu, cách chọn ngưỡng và các cột không được dùng làm đặc trưng.
+\item Tạo \path{RUN_MATRIX.csv} gồm 80 lượt chạy dự kiến (4 trường hợp x 4 mô hình x 5 seed) và quy định cấu trúc cho các tệp lưu kết quả.
+\item Viết danh sách kiểm tra trước khi chạy dữ liệu và chương trình kiểm tra cấu hình thí nghiệm.
+\end{itemize}
+
+\textbf{Kiểm tra đã chạy:} chương trình \path{scripts/validate_protocol.py} xác nhận đủ 80 lượt chạy, không trùng mã chạy. Sáu kiểm thử trong thư mục \path{tests} cũng đã chạy thành công, gồm kiểm tra cột dữ liệu bị cấm, chuẩn hóa nhãn và tránh rò rỉ nhóm tấn công được giữ lại.
+
+\textbf{Chưa hoàn thành:} chưa có danh mục và mã kiểm tra toàn vẹn của dữ liệu; chưa huấn luyện bốn mô hình; chưa có kết quả closed-set/LOACO và chưa có bản chương trình chạy thử hoàn chỉnh.
+
+\section{Phân công và kết quả của từng thành viên}
+
+\small
+\renewcommand{\arraystretch}{1.35}
+\noindent\begin{longtable}{L{3.0cm}L{4.2cm}L{4.3cm}L{3.0cm}}
+\caption{Phân công và tình trạng công việc}\label{tab:members}\\
+\toprule\textbf{Thành viên} & \textbf{Phụ trách} & \textbf{Đã có trong 4 tuần đầu} & \textbf{Việc tiếp theo}\\
+\midrule\endfirsthead
+\toprule\textbf{Thành viên} & \textbf{Phụ trách} & \textbf{Đã có trong 4 tuần đầu} & \textbf{Việc tiếp theo}\\
+\midrule\endhead\bottomrule\endfoot
+Nguyễn Trọng Tín & Nhóm trưởng; khung mã nguồn, xử lý dữ liệu, Random Forest/XGBoost và tích hợp. & Tệp cấu hình, danh sách lượt chạy, cấu trúc tệp kết quả, Gantt, chương trình kiểm tra và báo cáo. & Tổ chức họp nhóm, hoàn thiện xử lý dữ liệu và chạy hai mô hình học có giám sát.\\
+Trịnh Trâm Anh & Dữ liệu UNSW-NB15, nguồn tài liệu, kiểm tra chất lượng dữ liệu và biên tập. & Đề cương, bảng thuật ngữ, danh sách kiểm tra dữ liệu và khung tổng quan tài liệu. & Tải dữ liệu chính thức, tạo checksum, thống kê cấu trúc/chất lượng dữ liệu và hoàn thiện tài liệu tham khảo.\\
+Hoàng Văn Vương Thu & Isolation Forest, Autoencoder, cách chọn ngưỡng, chỉ số đánh giá và phân tích lỗi. & Quy định chỉ số, cách chọn ngưỡng và danh sách kiểm thử dự kiến. & Hoàn thiện phần đánh giá, hai mô hình phát hiện bất thường và phân tích cảnh báo sai/bỏ sót.\\
+\end{longtable}
+\normalsize
+
+Ba thành viên cùng kiểm tra chéo phần việc, thống nhất cách chạy thí nghiệm, phân tích kết quả, viết báo cáo, chuẩn bị slide và demo. Nguyễn Trọng Tín phụ trách tích hợp chung nhưng mỗi thành viên vẫn chịu trách nhiệm đối với phần chuyên môn đã được phân công.
+
+\section{Kết quả đã có và việc chưa hoàn thành}
+\subsection{Đã có}
+\begin{itemize}[leftmargin=1.05cm,itemsep=0.2em]
+\item Đề cương, kế hoạch nghiên cứu, bảng phân công và Gantt theo ngày bắt đầu 17/08/2026.
+\item Kho mã nguồn riêng tư, tệp cấu hình thí nghiệm và danh sách 80 lượt chạy dự kiến.
+\item Quy định cấu trúc tệp kết quả, danh sách kiểm tra trước khi chạy và chương trình kiểm tra cấu hình.
+\item Sáu kiểm thử tự động và chương trình kiểm tra danh sách lượt chạy đều cho kết quả đạt.
+\end{itemize}
+\subsection{Chưa có và không được báo cáo như đã xong}
+\begin{itemize}[leftmargin=1.05cm,itemsep=0.2em]
+\item Tải, kiểm tra toàn vẹn và thống kê đầy đủ dữ liệu UNSW-NB15.
+\item Xử lý dữ liệu thật và huấn luyện bốn mô hình.
+\item Thực hiện đủ các lượt chạy closed-set/LOACO, tổng hợp bảng biểu và phân tích kết quả.
+\item Xây dựng bản chương trình chạy thử, demo và hoàn thiện báo cáo cuối kỳ.
+\end{itemize}
+
+\section{Kế hoạch thực hiện đề tài}
+
+Kế hoạch dưới đây bao quát toàn bộ thời gian thực hiện từ ngày đăng ký đề tài đến khi đóng gói hồ sơ cuối. Các mốc đã qua được giữ lại để đối chiếu với phần tiến độ; các mốc sắp tới là căn cứ để nhóm phân công, kiểm tra chéo và cập nhật báo cáo định kỳ.
+
+\small
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{4.5pt}
+\noindent\begin{longtable}{L{2.45cm}L{5.65cm}L{2.75cm}L{4.25cm}}
+\caption{Kế hoạch thực hiện toàn bộ đề tài}\label{tab:implementation-plan}\\
+\toprule\textbf{Thời gian} & \textbf{Nội dung thực hiện} & \textbf{Phụ trách chính} & \textbf{Sản phẩm/mốc kiểm tra}\\
+\midrule\endfirsthead
+\toprule\textbf{Thời gian} & \textbf{Nội dung thực hiện} & \textbf{Phụ trách chính} & \textbf{Sản phẩm/mốc kiểm tra}\\
+\midrule\endhead\bottomrule\endfoot
+17/08--23/08 & Chọn hướng nghiên cứu, xác định vấn đề, mục tiêu, câu hỏi nghiên cứu và bộ dữ liệu. & Cả nhóm & Đề cương ban đầu.\\
+24/08--30/08 & Hoàn thiện nội dung đăng ký, làm rõ phạm vi và chuẩn bị tài liệu giải thích đề tài. & Tín + cả nhóm & Hồ sơ đăng ký và tài liệu giải thích.\\
+31/08--06/09 & Phân công ba luồng công việc, xác định đầu ra và cách bàn giao giữa các thành viên. & Cả nhóm & Bảng phân công và luồng bàn giao.\\
+07/09--13/09 & Khóa bản nháp giao thức, câu hỏi nghiên cứu, ma trận lượt chạy, cấu trúc kết quả và chương trình kiểm tra. & Tín + cả nhóm & Gate 1 bản nháp; báo cáo tiến độ lần 1.\\
+14/09--20/09 & Kiểm tra chéo giao thức; họp nhóm; tải đúng dữ liệu chính thức; tạo checksum và danh mục dữ liệu. & Cả nhóm; Trâm Anh chủ trì dữ liệu & Biên bản Gate 1 và data manifest.\\
+21/09--27/09 & Kiểm tra schema, kiểu dữ liệu, giá trị thiếu, dữ liệu trùng, phân bố nhãn và thống nhất data contract. & Trâm Anh + Tín & Báo cáo kiểm tra dữ liệu; Gate 2.\\
+28/09--04/10 & Xây dựng tiền xử lý, chia vùng phát triển/validation và kiểm thử chống rò rỉ dữ liệu. & Tín & Pipeline tiền xử lý; Gate 3.\\
+05/10--11/10 & Cài đặt Random Forest, XGBoost và bộ đánh giá dùng chung. & Tín + Thu & Hai baseline học có giám sát và evaluator.\\
+12/10--18/10 & Cài đặt Isolation Forest, Autoencoder; chạy thử cả bốn mô hình và kiểm tra tệp kết quả. & Thu + Tín & Bốn mô hình chạy được; Gate 4.\\
+19/10--25/10 & Chạy kịch bản closed-set với đủ năm seed; tổng hợp chỉ số và biểu đồ cho câu hỏi RQ1. & Tín + Thu & Kết quả closed-set và bảng/hình RQ1.\\
+26/10--01/11 & Chạy LOACO với Reconnaissance bị loại khỏi vùng phát triển. & Tín + Thu & Kết quả LOACO-Reconnaissance.\\
+02/11--08/11 & Chạy LOACO với DoS bị loại khỏi vùng phát triển. & Tín + Thu & Kết quả LOACO-DoS.\\
+09/11--15/11 & Chạy LOACO với Exploits; kiểm tra đủ 80 lượt chạy và tổng hợp kết quả RQ2--RQ3. & Tín + Thu & Kết quả LOACO-Exploits; Gate 5.\\
+16/11--22/11 & Phân tích cảnh báo nhầm, bỏ sót, phân bố score, feature importance và các giới hạn của thí nghiệm. & Thu + Trâm Anh & Error analysis và nội dung thảo luận.\\
+23/11--29/11 & Xây dựng prototype đọc network-flow record và hiển thị nhãn/score cùng mô hình sử dụng. & Tín + cả nhóm & Prototype chạy local; Gate 6.\\
+30/11--06/12 & Hoàn thiện các chương phương pháp, kết quả, thảo luận, kết luận; đối chiếu mọi số liệu với tệp kết quả. & Trâm Anh + cả nhóm & Bản báo cáo hoàn chỉnh để kiểm tra chéo.\\
+07/12--13/12 & Chuẩn bị slide, bộ câu hỏi phản biện, kịch bản demo và tập trình bày theo phần việc. & Cả nhóm & Slide, câu hỏi phản biện và buổi chạy thử.\\
+14/12--20/12 & Đóng gói mã nguồn, cấu hình, hướng dẫn chạy; kiểm tra khả năng tái lập và rà soát hình thức. & Cả nhóm & Gói tái lập; Gate 7.\\
+21/12--23/12 & Hoàn thiện và nộp hồ sơ cuối theo yêu cầu của môn học. & Cả nhóm & Báo cáo, code/config, slide và demo cuối.\\
+\end{longtable}
+\normalsize
+
+\subsection{Mốc báo cáo và nguyên tắc cập nhật}
+\begin{itemize}[leftmargin=1.05cm,itemsep=0.25em]
+\item \textbf{14/09/2026:} báo cáo lần 1, tổng hợp bốn tuần đầu; bản ngày 16/09/2026 bổ sung kế hoạch thực hiện theo góp ý của thầy.
+\item \textbf{12/10/2026:} báo cáo lần 2, dự kiến gồm kiểm tra dữ liệu, pipeline tiền xử lý, kiểm thử chống rò rỉ và kết quả baseline ban đầu.
+\item \textbf{09/11/2026:} báo cáo lần 3, dự kiến gồm kết quả LOACO đang có, bảng/biểu đồ và phân tích lỗi ban đầu.
+\item \textbf{23/12/2026:} hoàn thiện hồ sơ cuối gồm báo cáo, mã nguồn/cấu hình, slide, prototype và hướng dẫn chạy.
+\end{itemize}
+
+Nhóm sẽ cập nhật tiến độ liên tục trong cùng chuỗi thư trao đổi với giảng viên hướng dẫn. Mỗi đợt báo cáo ghi rõ phần đã hoàn thành, tệp hoặc kết quả dùng để kiểm chứng, vấn đề còn mở và kế hoạch của giai đoạn tiếp theo. Các mốc có thể được điều chỉnh theo lịch chính thức của môn học hoặc góp ý của giảng viên.
+
+\section{Nội dung nhóm xin ý kiến thầy}
+\begin{enumerate}[label=\arabic*.,leftmargin=1.1cm,itemsep=0.25em]
+\item Tên đề tài, phạm vi bốn mô hình và ba nhóm tấn công được chọn để kiểm tra theo LOACO đã phù hợp chưa.
+\item Nhóm có thể tiếp tục dùng bộ train/test chính thức của UNSW-NB15 và chọn ngưỡng trên phần validation chỉ gồm lưu lượng bình thường như kế hoạch hay không.
+\item Ở giai đoạn hiện tại, thầy có yêu cầu nhóm trình bày trực tiếp kho mã nguồn và tệp cấu hình hay không.
+\item Mốc báo cáo tiếp theo dự kiến là ngày 12/10/2026; nhóm xin thầy góp ý nếu cần điều chỉnh thời điểm hoặc nội dung báo cáo.
+\end{enumerate}
+
+\section{Kết luận}
+
+Bốn tuần đầu, nhóm đã hoàn thành phần chuẩn bị gồm đề cương, phân công, kế hoạch và khung thực nghiệm. Đây là nền tảng để nhóm bắt đầu xử lý dữ liệu và huấn luyện mô hình, chưa phải hệ thống IDS hoàn chỉnh và chưa có kết quả thực nghiệm để kết luận mô hình nào tốt hơn. Từ Tuần 5, nhóm sẽ ưu tiên hoàn tất kiểm tra dữ liệu, chạy thử bốn mô hình và cập nhật kết quả vào báo cáo tiếp theo.
+
+\section*{Phụ lục A -- Danh mục tệp đã chuẩn bị}
+\addcontentsline{toc}{section}{Phụ lục A -- Danh mục tệp đã chuẩn bị}
+\begin{itemize}[leftmargin=1.05cm,itemsep=0.35em]
+\item Cấu hình thí nghiệm: \path{configs/experiment_matrix.yaml}.
+\item Danh sách lượt chạy: \path{docs/protocol/RUN_MATRIX.csv}.
+\item Quy định cấu trúc kết quả: \path{docs/protocol/RESULT_SCHEMA.md}.
+\item Danh sách kiểm tra trước khi chạy: \path{docs/protocol/GATE_1_CHECKLIST.md}.
+\item Chương trình kiểm tra: \path{scripts/validate_protocol.py} và thư mục \path{tests/}.
+\end{itemize}
+\end{document}
