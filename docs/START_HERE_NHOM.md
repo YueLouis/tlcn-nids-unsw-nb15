@@ -8,7 +8,7 @@ Clone repo và cài môi trường theo [README](../README.md).
 Sau khi cài đặt, chạy unit test và validator; hai bước này không cần dataset.
 
 GitHub giữ code, config, test, manifest, bảng kết quả nhẹ và tài liệu nguồn.
-Dataset, model, predictions và bản PDF nằm ngoài GitHub.
+Dataset, model, predictions và PDF nộp nhận từ Drive. Trên máy nhóm trưởng, PDF có thêm bản sao tại `output/pdf/`; thư mục này không có trong bản clone GitHub.
 
 ## 2. Nhận dữ liệu
 
@@ -33,8 +33,8 @@ vào `results/member_checks/<ten>/` để bảo toàn 80 run hiện có.
 | Vương Thu | IF/AE, threshold, metric và phân tích lỗi | `models.py`, `evaluation.py` trong `src/nids_benchmark/`, bảng metric |
 | Tín | GitHub, môi trường, preprocessing, RF/XGBoost, tích hợp | `preprocessing.py`, `runner.py` trong `src/nids_benchmark/`, test và script |
 
-Xem [phân công đợt 2](management/PHAN_CONG_DOT_02_HIEN_TAI_20260929.md)
-để biết đầu ra, người review và hạn đề xuất.
+Xem [tiến độ hiện tại](management/TIEN_DO_HIEN_TAI_20261013.md) để biết đầu ra và người phụ trách.
+[Phân công tháng 9](management/PHAN_CONG_DOT_02_HIEN_TAI_20260929.md) được giữ làm hồ sơ lịch sử.
 
 ## 4. Gửi thay đổi
 

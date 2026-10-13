@@ -35,7 +35,7 @@ Ba câu hỏi nghiên cứu chính và bằng chứng cần thu thập được 
 - Nhóm trưởng xác nhận ngày 13/10/2026 rằng cả ba thành viên đã thống nhất nội dung; bản ghi tại `docs/evidence/dot_02/final_20261013/XAC_NHAN_NHOM_20261013.md`. Không tạo chữ ký thay thành viên.
 - Bản hiện tại: `output/pdf/NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf` (30 trang). Kiểm tra lại: 80 run, 320 artifact, 17 test; audit prediction khớp.
 - Còn mở: ma trận so sánh toàn văn, phân tích lỗi sâu/độ nhạy overlap, demo hoàn chỉnh và bộ cuối đề tài. Xem `docs/management/TIEN_DO_HIEN_TAI_20261013.md`.
-- Đồng bộ 13/10: hai PDF đã tải lên Drive; bảng tổng hợp/log kiểm tra đã có ở `05_Ket_qua_Thi_nghiem`. Bộ 80 run (model/prediction) và tập raw train vẫn đang tải, chưa xác nhận đủ artifact nặng trên Drive. Xem [trạng thái bàn giao](docs/evidence/dot_02/final_20261013/REMOTE_DELIVERY.md).
+- Kiểm bàn giao 14/10: Drive đủ 80 thư mục run duy nhất/320 artifact, SHA-256 khớp local; hai CSV raw, hai PDF và hồ sơ học tập đã đối chiếu. Các bản trùng đã chuyển vào thùng rác có thể khôi phục. Xem [trạng thái bàn giao](docs/evidence/dot_02/final_20261013/REMOTE_DELIVERY.md).
 
 ## Cấu trúc repository
 

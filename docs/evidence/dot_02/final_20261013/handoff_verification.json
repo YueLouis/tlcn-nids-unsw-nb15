@@ -7,7 +7,7 @@
       "root_equals_repo": true
     },
     "NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf": {
-      "sha256": "77e2a953e30f463aa084a34ec9b44b900bb350a8673ae522d713a6239d190a0c",
+      "sha256": "8fda778ef5e15f8a4328cf29d9c0ae83a484c6cc486696390d2b9e3995eb8edb",
       "pages": 30,
       "root_equals_repo": true
     }
@@ -43,5 +43,12 @@
     "printed_page": 7,
     "physical_page": 12
   },
-  "verification_scope": "local artifact audit; remote delivery recorded separately"
+  "verification_scope": "local artifact audit; remote delivery recorded separately",
+  "content_rechecked_on": "2026-10-14",
+  "corrections": {
+    "gantt_axis": "dd/mm, original date windows retained",
+    "development_split": "stratify=attack_cat, binary prediction unchanged",
+    "saved_scaler_stats": "80/80 match deterministic attack_cat partitions; 0/80 binary partitions",
+    "unchanged_experiment_runs": true
+  }
 }

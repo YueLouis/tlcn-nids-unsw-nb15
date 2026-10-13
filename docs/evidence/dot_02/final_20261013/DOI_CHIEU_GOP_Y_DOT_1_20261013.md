@@ -17,3 +17,5 @@ Bản đợt 2: `NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf`, 30 trang. Bảng 
 Kiểm tra lại ngày 13/10: 80 run, 320 artifact, 17/17 test; 13.173.120 dòng prediction, 1.040 metric, 80 summary và 16 nhóm tổng hợp, không phát hiện sai lệch. SHA-256 raw khớp manifest. PDF không có cảnh báo tràn mép, thiếu glyph hay tham chiếu chưa giải quyết.
 
 Còn mở và đã nêu trong PDF: so sánh toàn văn 13 nguồn; phân tích lỗi sâu và độ nhạy overlap; demo hoàn chỉnh và sản phẩm cuối đề tài. Metadata nguồn đã kiểm chứng không có nghĩa là đã đọc/nghiệm thu toàn văn. Xác nhận nội dung chung qua nhóm trưởng không thay chữ ký từng biên bản hoặc phê duyệt của giảng viên.
+
+Rà soát 14/10 từ thư 08/09 và mã/artifact: Hình 3.1 (trang in 8) đổi trục sang mốc ngày dd/mm; Mục 5.1 (trang in 14) sửa phân tầng từ nhãn nhị phân thành attack_cat. Thống kê scaler của 80/80 model khớp phân tầng theo attack_cat, không huấn luyện lại. Bản đợt 2 vẫn 30 trang.

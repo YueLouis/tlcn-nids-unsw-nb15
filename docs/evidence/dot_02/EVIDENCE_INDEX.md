@@ -8,6 +8,7 @@
 | Test | tests/; final_20261013/unit_tests.log | 17/17 PASS |
 | Artifact | results/runs/ | 80 run completed; 320 file bắt buộc |
 | Audit prediction | final_20261013/audit_current.py; numerical_audit.json | 13.173.120 dòng; không sai lệch |
+| Cách chia dữ liệu đã lưu | scripts/audit_saved_partitions.py; final_20261013/saved_split_audit.json | Scaler của 80/80 model khớp phân tầng theo attack_cat; không huấn luyện lại |
 | PDF | output/pdf/NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf | 30 trang, tích lũy từ đợt 1 |
 | Tài liệu nền | docs/references/; final_20261013/references_verified.json | 12 DOI metadata + trang UNSW; full-text review còn mở |
 | Xác nhận nhóm | final_20261013/XAC_NHAN_NHOM_20261013.md | Nhóm trưởng cung cấp xác nhận cả ba; không thay chữ ký/duyệt của thầy |
