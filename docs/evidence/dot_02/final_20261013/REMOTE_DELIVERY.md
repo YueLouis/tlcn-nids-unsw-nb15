@@ -15,7 +15,7 @@ Rà soát nội dung ngày 14/10/2026. **Drive đã kiểm đủ bộ bàn giao,
 
 ## GitHub rồi local
 
-- GitHub main đã push và đối chiếu remote. Ghi chú này mô tả bộ đã kiểm chứng; phiếu tại thư mục bàn giao ghi commit cuối sau push.
+- GitHub main đã push nguồn báo cáo, ma trận nguồn và phân tích lỗi bổ sung ngày 14/10; HEAD từ xa đã đối chiếu. Phiếu tại thư mục bàn giao ghi commit cuối sau push.
 - Local: đúng 80 run/320 artifact, không bad run; hai PDF root/repo trùng SHA-256. Mã thí nghiệm không đổi, giữ kết quả 17 test đạt ở lần kiểm trước, không huấn luyện lại.
 - PDF đợt 1: 20 trang, SHA-256 `8a9b77a5cc9c120f6a0d3c603ad69d6eb75a53ef8281ef21f58a754f24739ae6`.
 - PDF đợt 2: 32 trang, SHA-256 `22b68ec396c88845879d8e33f7433a6ea047a5da5668d3a2462d7ad34c365d0c`.
