@@ -1,67 +1,25 @@
 # Trạng thái đồng bộ hồ sơ đợt 2
 
-Cập nhật 04:05 ngày 14/10/2026. **Drive chưa hoàn tất bàn giao.**
+Cập nhật 04:46 ngày 14/10/2026. **Drive đã kiểm đủ bộ bàn giao, các bản trùng đã dọn vào thùng rác khôi phục được.**
 
 ## Drive
 
-- Đã quan sát đủ `run.json`, `metrics.csv`, `predictions.csv`, `model_bundle.joblib` ở **80/80 tên run**. Đây là kiểm tra sự hiện diện theo thư mục; chưa xác nhận toàn bộ 80 thư mục duy nhất/320 file và chưa tính hash cho toàn bộ Drive.
-- Bốn run vừa xác minh thêm: `LE-XGB-S42`, `LE-RF-S72`, `LE-IF-S72`, `LE-AE-S72`. `LE-IF-S72` còn bản lặp trong cùng thư mục.
-- `LE-XGB-S42`: đã tải xuống cả bảy file, kiểm CRC và SHA-256 khớp local; chuyển ba bản lặp vào thùng rác có thể khôi phục. Thư mục ID `1zi3UO7ITb4YoI_fEONEk_6qdh4DPDUk_` đã đổi về tên `LE-XGB-S42`, còn đúng bốn artifact.
-- `LE-RF-S72` đủ bốn artifact ở ID `1ZrE40Mtr3u_KNOiNZDF8m8TKA5Xp3IYw`, hiện tên `LE-RF-S72 (1)`. `LE-IF-S72` đủ bốn loại ở ID `1DVt5RU8CBkM_fAZfvH07HrlbkO46uK-w`, hiện tên `LE-IF-S72 (1)`. Cần hợp nhất các bản sau khi kiểm nội dung.
-- Hai lượt `LD-RF-S82` và `LD-RF-S42 (1)` đã báo 4/4 và đọc lại đủ bốn loại tệp. LD82: ID `1pWRUwh7G5MfmCduTNiElLjW3QYc8bajz` có đúng bốn tệp. LD42: ID `157GMHq8YyWJuamP32nzWN1igmJmw63gA` có bảy tệp, gồm bốn metrics.csv; đã yêu cầu tải các metrics để đối chiếu, còn chờ ZIP. Chưa dọn khi chưa có hash.
-- `CS-IF-S62` ở ID `1hrt3Mn5OkydyXOwZrW6_KQKaHWdiYQ-l` đã tải xong và đọc đúng bốn tệp. `CS-RF-S62` ở ID `1Nfst9SQV1EdoORHQiv53xydN9WFPeGUW` đã báo xong 4/4 sau Thử lại predictions.csv do lỗi. Đọc lại năm tệp/bốn loại, gồm hai predictions.csv; chưa hash/dọn bản lặp.
-- `CS-RF-S42` ID `1Wi9nIZPqDKT8vz2FigGtXnA_NUQF5fq3`: sau khi làm mới riêng đã đọc được sáu tệp, đủ bốn loại, có hai run.json và hai metrics.csv; chưa đối chiếu hash bản lặp. Không tải lại run này.
-- Đã kiểm đúng breadcrumb và thư mục trống trước khi bổ sung riêng bốn tệp vào các ID hiện có. `CS-IF-S82` có bảy tệp/bốn loại ở `1WfnfvgShfd3UoYkFkdWePv0CO4Gxb9AL`; `LE-IF-S42` có năm tệp/bốn loại ở `1lcd2C1fewMXQkGRDwQDh1206rOYvSrik`, lượt tải báo hoàn tất. `LE-XGB-S82` có 11 tệp/bốn loại ở `1URZaCCbb9wgMecduM3ll3KAX8vuGMaXx`; lượt tải đã báo xong 4/4 sau khi dùng Thử lại cho run.json và predictions.csv do lỗi kết nối. Cả ba còn bản lặp chưa đối chiếu hash. Giữ nguyên các lượt đang chạy.
-- `01_De_cuong_Ke_hoach` ID `154dxGCWFhjVMx_mvHg2gnWexnc8BjEJ2`: năm tài liệu cấp đầu đã báo tải xong và đọc đủ năm tên, nhưng hiện 20 tệp do bản lặp. PDF đề cương tên nhóm SHA-256 `2be9849ec1b7d6c071e646cc82e74a06a6562d3294158d092a6d43e15e1ac23c` và `00_GIAO_THUC_NGHIEN_CUU.md` SHA-256 `8cf655e87c597acbf1ecdf433c0b69a2b85374daaf062e59535de83e8eef9d7c` tải xuống khớp local. Yêu cầu ZIP và tải hai PDF lặp gặp timeout/lỗi HTTP; chưa dọn các bản đó. Nguồn `De_Cuong_Chi_Tiet_LaTeX` đã báo 6/6 mục (gồm thư mục assets); đọc đủ bốn tên cấp đầu và logo_fithcmute.png ở assets, có ghi chú lịch sử. ID nguồn `12iRUkVmhVLOnmclkSnV3Wa1-x1k4AoAV`; bản lặp trong nguồn chưa dọn.
-- Đã yêu cầu tải toàn bộ thư mục runs xuống để kiểm kê/hash lúc khoảng 03:33; Drive từng báo đang nén; sau đó hộp thoại biến mất nhưng chưa thấy ZIP hoặc link tải trong trang/Downloads. Chưa rõ kết quả, không yêu cầu lại mù. Tải riêng Word/protocol lặp cũng gặp lỗi HTTP, chưa dọn bản lặp.
-- Trang kiểm tra mới vẫn thiếu đường dẫn hoặc báo Đang xử lý khi xem trước/tải bản lặp; không dùng trạng thái đó để kết luận thư mục trống. Chưa dọn thêm tệp/folder trong lượt này.
-- `02_Bao_cao` đã có hai PDF; bản đợt 2 đã mở được 30 trang trước đó. Raw data/manifest/audit có bốn tên; tài liệu tham khảo ba tên; comment/yêu cầu hai tên; quy ước/đối chiếu hai tên. Chưa kiểm hash từ xa các tài liệu này.
-- Phiếu Drive ID `1c37eZOMLW0JqnFvTcgvG2PUFmnC0xygr` đã cập nhật thành công qua quản lý phiên bản lúc 03:43; có phiên bản hiện tại và mười bản trước, cùng ID. Nội dung tải lên ghi mốc 80/80, còn CS-RF-S62 đang tải tại thời điểm đó. Cần cập nhật bản cuối sau dọn và kiểm chứng. Không tạo file phiếu mới.
+- `05_Ket_qua_Thi_nghiem/runs`: đúng 80 thư mục có tên chuẩn, 320 tệp; mỗi run gồm `run.json`, `metrics.csv`, `predictions.csv`, `model_bundle.joblib`. Toàn bộ 320 SHA-256 khớp local.
+- Cách kiểm: đọc 496 tệp trước dọn qua ổ Drive đồng bộ; đối chiếu từng tệp với local. Sau giữ bản chuẩn, kiểm hash lại toàn bộ 320 tệp; làm mới web và đọc đủ 80 ID/80 tên duy nhất. Một model gặp lỗi đọc ban đầu đã đọc lại và hash khớp.
+- 176 artifact dư, 50 thư mục run dư và 26 tài liệu trùng đã gom thành một gói và chuyển vào Thùng rác lúc 04:34; web xác nhận có nút khôi phục. Không xóa vĩnh viễn, không dọn dựa theo tên.
+- Hai PDF, hai CSV raw, manifest/audit, bảng tổng hợp và các tài liệu tham khảo/góp ý đã đối chiếu hash. Đề cương và nguồn LaTeX đã giữ một bản cho mỗi tệp.
+- Đã bổ sung các tài liệu học tập nhẹ còn thiếu, phân công có ghi chú lịch sử, ghi âm/thư gốc và log kiểm; không upload thư mục hỗ trợ cá nhân hoặc lịch sử nháp.
+- Phiếu bàn giao cập nhật tại cùng file đang có. 00_MO_DAU là điểm mở hồ sơ trên máy và Drive.
 
-[Drive nhóm](https://drive.google.com/drive/folders/13KGqMT4NUr8JfvTpF0IEKfUDT0Dlvq5S) · [runs](https://drive.google.com/drive/u/0/folders/15CTWUOaQ_tq95N9fzCP-chk8QHTjC_zu) · [PDF đợt 2](https://drive.google.com/file/d/10BIGA6jecCcQnlGO2nK-M2QBm0Atj7fc/view)
+## GitHub rồi local
 
-## GitHub và local
+- GitHub main đã push và đối chiếu remote. Ghi chú này mô tả bộ đã kiểm chứng; phiếu tại thư mục bàn giao ghi commit cuối sau push.
+- Local: đúng 80 run/320 artifact, không bad run; hai PDF root/repo trùng SHA-256. Mã thí nghiệm không đổi, giữ kết quả 17 test đạt ở lần kiểm trước, không huấn luyện lại.
+- PDF đợt 1: 20 trang, SHA-256 `8a9b77a5cc9c120f6a0d3c603ad69d6eb75a53ef8281ef21f58a754f24739ae6`.
+- PDF đợt 2: 30 trang, SHA-256 `77e2a953e30f463aa084a34ec9b44b900bb350a8673ae522d713a6239d190a0c`.
 
-- GitHub main đã push và đối chiếu remote tại commit `4a3df088f56570bad75df5fa96a5d29edf87daed` lúc khoảng 04:00 trước lần cập nhật ghi chú này. [Kho mã nguồn](https://github.com/YueLouis/tlcn-nids-unsw-nb15).
-- Lần kiểm kỹ thuật khoảng 02:30 ngày 14/10: `check_dot2_final.py` PASS 80 run/320 artifact, unique ID, manifest, 17 test, validator, bảng tổng hợp và PDF. Không huấn luyện lại.
-- Hai cặp PDF trong `02_Bao_cao` và repo vẫn trùng SHA-256: đợt 1 `8a9b77a5cc9c120f6a0d3c603ad69d6eb75a53ef8281ef21f58a754f24739ae6`; đợt 2 `77e2a953e30f463aa084a34ec9b44b900bb350a8673ae522d713a6239d190a0c`.
-- Audit số liệu trước đó: 13.173.120 prediction, 1.040 metric, 80 summary, 16 nhóm; không phát hiện sai lệch. Không chạy lại huấn luyện khi đồng bộ.
-- Hồ sơ hỗ trợ cá nhân, lịch sử nháp và cache nằm ngoài thư mục làm việc; không đưa lên Drive/GitHub. 11 cache phát sinh từ kiểm tra vừa được chuyển ra ngoài và đối chiếu hash.
+[Drive nhóm](https://drive.google.com/drive/folders/13KGqMT4NUr8JfvTpF0IEKfUDT0Dlvq5S) · [GitHub](https://github.com/YueLouis/tlcn-nids-unsw-nb15)
 
-Còn mở về học thuật: so sánh toàn văn 13 nguồn, phân tích lỗi/độ nhạy overlap, demo và bộ cuối đề tài. Nhóm tự đọc, hiểu và chịu trách nhiệm nội dung. Chưa gửi email, chưa nộp thay nhóm, không có xác nhận giảng viên duyệt.
+Còn mở về học thuật: so sánh toàn văn 13 nguồn, phân tích lỗi/độ nhạy overlap, demo và bộ cuối đề tài. Nhóm tự đọc, hiểu và chịu trách nhiệm nội dung; bàn giao tệp không thay cho nghiệm thu những phần này.
 
-Cập nhật đối chiếu lúc 04:05 ngày 14/10/2026:
-
-- Tất cả lượt phục hồi đã báo hoàn tất. CS-RF-S62 có năm tệp/bốn loại; predictions.csv ID `1P4jhrRQATYnGXbI7DZVxmGMeD0UbHIYG` đã tải xuống, 15.735.510 byte, SHA-256 `11640d94722c9ca8ff6e4343a0ee4111616911b088980462ec6f174559c3f11b` khớp local. Bản predictions ID `1Jt3gw-cyEDeoLaRfT65J2hudvehaKpRx` chưa tải được để đối chiếu; chưa dọn.
-- Yêu cầu ZIP runs khoảng 03:33 không trả tệp hay liên kết trong trang/Downloads. Đã thử lại có kiểm soát khoảng 04:01; Drive hiện báo Đang nén 1 tệp. Giữ nguyên tab tải, chưa có ZIP để kiểm CRC/hash. Không gửi lại khi lượt này đang chờ.
-- Chưa dọn thêm bản trùng hoặc thư mục. Thư mục LR-XGB-S72 nghi trống vẫn chưa nạp tên/đường dẫn đầy đủ, chưa đủ bằng chứng để chuyển vào thùng rác.
-- Phiếu Drive cùng ID đã xác minh phiên bản 03:43; bản tại máy mới hơn. Sự hiện diện đủ 80/80 tên run chưa chứng minh đúng 80 thư mục duy nhất/320 tệp trên Drive.
-- GitHub được đối chiếu trước local lúc khoảng 04:00: main local/remote cùng `4a3df088f56570bad75df5fa96a5d29edf87daed`, repo sạch; local 80 run/320 artifact. Mã nguồn không đổi từ lần kiểm 17 test đạt trước đó.
-
-Đối chiếu tiếp lúc 04:08 ngày 14/10:
-
-- Drive đã tạo hai phần ZIP runs; cả hai lần lấy tệp bị hủy và chưa có ZIP trên đĩa. Chưa kiểm CRC/hash toàn bộ runs. Đây là lỗi tải xuống, chưa có bằng chứng mất dữ liệu trên Drive.
-- Thư mục LR-XGB-S72 ID `1wjeFHtMZYKYCrTcHlArgtCG7-wFFRGhQ` đã nạp đúng tên và thông báo trống; lưu bằng chứng. Bản giữ ID `1Vo31PDb22YN7ExBgJ6jKsKuQLRhGAAql` có bốn artifact; cần xác minh đầy đủ trang trước khi dọn bản trống. Chưa chuyển vào thùng rác.
-- Phiếu cùng ID đã hiện ngày sửa đổi 04:06 sau lượt tải phiên bản; danh sách phiên bản còn đang nạp, chưa xác nhận nội dung phiên bản mới bằng tải xuống.
-
-Cập nhật 04:10 ngày 14/10: đã chuyển riêng thư mục LR-XGB-S72 rỗng ID 1wjeFHtMZYKYCrTcHlArgtCG7-wFFRGhQ vào thùng rác có thể khôi phục; giữ bản ID 1Vo31PDb22YN7ExBgJ6jKsKuQLRhGAAql đã đọc đủ bốn artifact. Giao diện xác nhận đã chuyển thư mục vào thùng rác, có nút Hủy. Chưa dọn các bản còn lại.
-
-Phiếu Drive cùng ID hiển thị sửa đổi 04:06 và thông báo Đã tải lên. Bản trên Drive là nội dung local lúc 04:05; phần dọn thư mục rỗng vừa nêu cần cập nhật vào phiên bản sau. Hai phần ZIP runs vẫn chưa tải được, không xem đó là thiếu dữ liệu từ xa.
-
-## Đối chiếu Drive qua thư mục đồng bộ - 04:35 ngày 14/10/2026
-
-- Đã đọc toàn bộ thư mục  5_Ket_qua_Thi_nghiem/runs qua bản đồng bộ Drive: 130 thư mục trước dọn, 496 tệp artifact; 496/496 tệp khớp SHA-256 với bộ local.
-- Sau khi giữ một bản chuẩn cho mỗi tên run và mỗi artifact, Drive còn đúng **80 thư mục duy nhất / 320 artifact**, không có tệp sai hash. Bằng chứng chi tiết: $taskEvidence\DRIVE_RETAINED_VERIFY_20261014_0434.json.
-- 176 artifact dư, 50 thư mục run dư và 26 tài liệu trùng đã được gom vào gói BAN_TRUNG_DA_DOI_CHIEU_20261014_0430 để chuyển vào thùng rác khôi phục được sau bước xác nhận cuối. Không dọn theo tên; các bản được chọn đều đã đối chiếu hash.
-- Một model bundle đọc lần đầu bị lỗi hệ thống tệp; đọc lại bằng bản sao tạm cho SHA-256 3b1223153bd1fe996d6fa629d8112d6a7dc098a2119fc741447b91a70c47ac6f, khớp local.
-- Bản giữ qua ổ Drive đã kiểm đủ 80/320; đang chờ xác nhận web cập nhật hết thao tác đồng bộ.
-
-
-## Xác nhận cuối sau dọn bản trùng - 04:40 ngày 14/10/2026
-
-- Web Drive sau làm mới còn đúng 80 thư mục run chuẩn; thư mục rỗng/bản trùng đã biến mất khỏi danh sách runs.
-- Gói BAN_TRUNG_DA_DOI_CHIEU_20261014_0430 đã chuyển vào Thùng rác lúc 04:34 và còn nút khôi phục; không xóa vĩnh viễn.
-- Bản giữ đã kiểm 80 thư mục / 320 artifact, toàn bộ hash khớp local. Phiếu PHIEU_BAN_GIAO_20261013.md đã cập nhật và bản local/Drive đồng nhất SHA-256.
-- Các tài liệu học tập nhẹ còn thiếu đã bổ sung vào thư mục chung; không đưa thư mục hỗ trợ cá nhân hoặc lịch sử nháp lên Drive/GitHub.
-- Trạng thái này mô tả kiểm chứng kỹ thuật và bàn giao tệp; không thay cho việc nhóm tự đọc, giải thích và giảng viên xác nhận.
-
+Chưa gửi email hoặc nộp thay nhóm; không có xác nhận giảng viên duyệt. Nhật ký đối chiếu đầy đủ và lịch sử thao tác được lưu ngoài thư mục làm việc.
