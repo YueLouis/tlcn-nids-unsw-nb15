@@ -1,6 +1,6 @@
 # Trạng thái đồng bộ hồ sơ đợt 2
 
-Cập nhật 03:51 ngày 14/10/2026. **Drive chưa hoàn tất bàn giao.**
+Cập nhật 04:05 ngày 14/10/2026. **Drive chưa hoàn tất bàn giao.**
 
 ## Drive
 
@@ -22,10 +22,24 @@ Cập nhật 03:51 ngày 14/10/2026. **Drive chưa hoàn tất bàn giao.**
 
 ## GitHub và local
 
-- GitHub main đã push và đối chiếu remote tại commit `3c03bf4afd2402c33436a7bc8a19a43a4d9ffefc` lúc 03:29 trước lần cập nhật ghi chú này. [Kho mã nguồn](https://github.com/YueLouis/tlcn-nids-unsw-nb15).
+- GitHub main đã push và đối chiếu remote tại commit `4a3df088f56570bad75df5fa96a5d29edf87daed` lúc khoảng 04:00 trước lần cập nhật ghi chú này. [Kho mã nguồn](https://github.com/YueLouis/tlcn-nids-unsw-nb15).
 - Lần kiểm kỹ thuật khoảng 02:30 ngày 14/10: `check_dot2_final.py` PASS 80 run/320 artifact, unique ID, manifest, 17 test, validator, bảng tổng hợp và PDF. Không huấn luyện lại.
 - Hai cặp PDF trong `02_Bao_cao` và repo vẫn trùng SHA-256: đợt 1 `8a9b77a5cc9c120f6a0d3c603ad69d6eb75a53ef8281ef21f58a754f24739ae6`; đợt 2 `77e2a953e30f463aa084a34ec9b44b900bb350a8673ae522d713a6239d190a0c`.
 - Audit số liệu trước đó: 13.173.120 prediction, 1.040 metric, 80 summary, 16 nhóm; không phát hiện sai lệch. Không chạy lại huấn luyện khi đồng bộ.
 - Hồ sơ hỗ trợ cá nhân, lịch sử nháp và cache nằm ngoài thư mục làm việc; không đưa lên Drive/GitHub. 11 cache phát sinh từ kiểm tra vừa được chuyển ra ngoài và đối chiếu hash.
 
 Còn mở về học thuật: so sánh toàn văn 13 nguồn, phân tích lỗi/độ nhạy overlap, demo và bộ cuối đề tài. Nhóm tự đọc, hiểu và chịu trách nhiệm nội dung. Chưa gửi email, chưa nộp thay nhóm, không có xác nhận giảng viên duyệt.
+
+Cập nhật đối chiếu lúc 04:05 ngày 14/10/2026:
+
+- Tất cả lượt phục hồi đã báo hoàn tất. CS-RF-S62 có năm tệp/bốn loại; predictions.csv ID `1P4jhrRQATYnGXbI7DZVxmGMeD0UbHIYG` đã tải xuống, 15.735.510 byte, SHA-256 `11640d94722c9ca8ff6e4343a0ee4111616911b088980462ec6f174559c3f11b` khớp local. Bản predictions ID `1Jt3gw-cyEDeoLaRfT65J2hudvehaKpRx` chưa tải được để đối chiếu; chưa dọn.
+- Yêu cầu ZIP runs khoảng 03:33 không trả tệp hay liên kết trong trang/Downloads. Đã thử lại có kiểm soát khoảng 04:01; Drive hiện báo Đang nén 1 tệp. Giữ nguyên tab tải, chưa có ZIP để kiểm CRC/hash. Không gửi lại khi lượt này đang chờ.
+- Chưa dọn thêm bản trùng hoặc thư mục. Thư mục LR-XGB-S72 nghi trống vẫn chưa nạp tên/đường dẫn đầy đủ, chưa đủ bằng chứng để chuyển vào thùng rác.
+- Phiếu Drive cùng ID đã xác minh phiên bản 03:43; bản tại máy mới hơn. Sự hiện diện đủ 80/80 tên run chưa chứng minh đúng 80 thư mục duy nhất/320 tệp trên Drive.
+- GitHub được đối chiếu trước local lúc khoảng 04:00: main local/remote cùng `4a3df088f56570bad75df5fa96a5d29edf87daed`, repo sạch; local 80 run/320 artifact. Mã nguồn không đổi từ lần kiểm 17 test đạt trước đó.
+
+Đối chiếu tiếp lúc 04:10 ngày 14/10:
+
+- Drive đã tạo hai phần ZIP runs; cả hai lần lấy tệp bị hủy và chưa có ZIP trên đĩa. Chưa kiểm CRC/hash toàn bộ runs. Đây là lỗi tải xuống, chưa có bằng chứng mất dữ liệu trên Drive.
+- Thư mục LR-XGB-S72 ID `1wjeFHtMZYKYCrTcHlArgtCG7-wFFRGhQ` đã nạp đúng tên và thông báo trống; lưu bằng chứng. Bản giữ ID `1Vo31PDb22YN7ExBgJ6jKsKuQLRhGAAql` có bốn artifact; cần xác minh đầy đủ trang trước khi dọn bản trống. Chưa chuyển vào thùng rác.
+- Phiếu cùng ID đã hiện ngày sửa đổi 04:06 sau lượt tải phiên bản; danh sách phiên bản còn đang nạp, chưa xác nhận nội dung phiên bản mới bằng tải xuống.
