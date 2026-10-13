@@ -1,19 +1,27 @@
 # Trạng thái đồng bộ hồ sơ đợt 2
 
-Cập nhật lúc 01:25 ngày 14/10/2026. Bàn giao Drive còn mở; chưa gửi email hoặc xác nhận giảng viên đã duyệt.
+Cập nhật 02:02 ngày 14/10/2026. **Chưa hoàn tất bàn giao Drive.** Không có xác nhận nộp hoặc giảng viên duyệt.
 
-- GitHub main: nội dung đã push tại c0662c6a0ee2a318b4939e27310e7be17a790887. Trước cập nhật này HEAD local/remote cùng là 9c68fa9065ec98c8e3641d0d10d712a54276d816; worktree sạch.
-- [02_Bao_cao](https://drive.google.com/drive/u/0/folders/1LzZjXRK7zM_h3ofd0QeRXDs3Y5XswU0Z): đọc lại đủ hai PDF, mỗi tên một bản. [Đợt 2](https://drive.google.com/file/d/10BIGA6jecCcQnlGO2nK-M2QBm0Atj7fc/view) đã mở kiểm tra 30 trang ở lượt trước. SHA-256 local: 77e2a953e30f463aa084a34ec9b44b900bb350a8673ae522d713a6239d190a0c. Chưa tính hash từ bản tải xuống.
-- [04_Du_lieu](https://drive.google.com/drive/u/0/folders/1fnffJ8xoVuHnNVeCbMvj3aLMpYBfIkvS): đủ raw train/test CSV, manifest và overlap audit; chưa tính hash từ xa.
-- [03_Tai_lieu_tham_khao](https://drive.google.com/drive/u/0/folders/1RgtU5blqKd8NZ51sz-ksGLtHA0a66aFp): đủ ba tên ma trận, metadata và trạng thái nguồn.
-- [07_Thu_tu_voi_giang_vien](https://drive.google.com/drive/u/0/folders/1dETJEXQS40jgsYHSaMq-TC0ZXKHSP4-M): đủ PDF comment gốc và bảng yêu cầu/đối chiếu.
-- [06_Bao_cao_tien_do](https://drive.google.com/drive/u/0/folders/1ZRB7Oe3OKDpwSAWKV52Z78sH18EHu4Hr): đủ quy ước tích lũy và bảng đối chiếu góp ý.
-- [05_Ket_qua_Thi_nghiem](https://drive.google.com/drive/u/0/folders/1OTUR12qsUInUWIW6hxHzHO5bHtq-H8NL): bảng/log đã có; runs chưa xác minh đủ. Các tab lượt 2,13 GB cũ không còn, không có bằng chứng hoàn tất.
+## Drive
 
-Danh mục runs ban đầu: 119 thư mục/74 tên. Mở kiểm kê quan sát được 53 tên đủ bốn loại artifact, LR-XGB-S42 chưa thấy model và 20 tên chưa thấy file. Các quan sát trống có thể do trang chưa nạp đủ; cần kiểm tra sâu trước khi phục hồi hoặc dọn. Không xóa thư mục dựa chỉ vào tên.
+- Lượt kiểm danh mục trước các bổ sung gần nhất: 125 thư mục/80 tên run. Đã quan sát đủ bốn loại artifact tại 68 tên; còn bản trùng, chưa đối chiếu hash từ xa. Số thư mục có tên không thay thế số run đủ file.
+- Sáu run phục hồi `CS-IF-S52`, `CS-RF-S52`, `CS-RF-S72`, `CS-XGB-S62`, `LD-XGB-S82`, `LE-AE-S42` đã mở đúng đích và thấy đủ bốn loại file.
+- `LR-XGB-S42` đã có model sau khi bổ sung; `LR-XGB-S72` phục hồi đủ bốn file tại thư mục `1Vo31PDb22YN7ExBgJ6jKsKuQLRhGAAql`.
+- 12 tên còn chưa đủ bằng chứng: `LE-XGB-S82`, `LE-XGB-S42`, `LE-RF-S72`, `LE-IF-S72`, `LE-IF-S42`, `LE-AE-S72`, `LD-RF-S82`, `LD-RF-S42`, `CS-RF-S62`, `CS-RF-S42`, `CS-IF-S82`, `CS-IF-S62`.
+- Đang phục hồi `LE-XGB-S72` và `LE-XGB-S42` bằng tải thư mục; `LE-IF-S42` bằng bốn file vào thư mục đã có. `LE-XGB-S82` đã dùng Thử lại cho prediction sau lỗi; phải chờ xong rồi đọc lại đúng đích. Không khởi động lại các lượt còn chạy.
+- `01_De_cuong_Ke_hoach` trên Drive đang hiển thị trống; còn cần bổ sung tài liệu gốc phù hợp cấu trúc.
+- `02_Bao_cao`: hai tên PDF, mỗi tên một bản. Đợt 2 đã mở được 30 trang ở lượt kiểm tra trước. [PDF đợt 2](https://drive.google.com/file/d/10BIGA6jecCcQnlGO2nK-M2QBm0Atj7fc/view).
+- `04_Du_lieu`: hai raw CSV, manifest và overlap audit, bốn tên. `03_Tai_lieu_tham_khao`: ba tên. `06_Bao_cao_tien_do`: quy ước và đối chiếu góp ý, hai tên. `07_Thu_tu_voi_giang_vien`: comment gốc và bảng yêu cầu, hai tên.
+- Phiếu bàn giao có phiên bản 01:31 tại cùng file ID `1c37eZOMLW0JqnFvTcgvG2PUFmnC0xygr`; còn cần cập nhật trạng thái mới. Chỉ chuyển bản trùng đã kiểm chứng vào thùng rác khi đủ bản giữ lại.
 
-Sáu tên thiếu trong danh mục đã bắt đầu phục hồi: CS-IF-S52 báo 4/4; CS-RF-S52, CS-RF-S72, CS-XGB-S62, LD-XGB-S82, LE-AE-S42 còn chạy và thường tải lại file lớn. Model LR-XGB-S42 báo tải xong nhưng chưa thấy trong danh sách đọc lại. Chưa coi là đủ 80 run/320 file từ xa. Phiếu bàn giao trên Drive cần cập nhật phiên bản và kiểm tra lại.
+[Drive nhóm](https://drive.google.com/drive/folders/13KGqMT4NUr8JfvTpF0IEKfUDT0Dlvq5S) · [Kết quả](https://drive.google.com/drive/u/0/folders/1OTUR12qsUInUWIW6hxHzHO5bHtq-H8NL) · [runs](https://drive.google.com/drive/u/0/folders/15CTWUOaQ_tq95N9fzCP-chk8QHTjC_zu)
 
-Local đã kiểm tra lại đủ 80 tên run duy nhất/320 artifact, mỗi run đủ bộ bốn file. Kiểm tra kỹ thuật và audit số liệu trước đó đã đạt; không cần huấn luyện lại. Các mục học thuật còn mở được ghi trong PDF và bảng tiến độ. Theo dõi tiếp tục đến khi khôi phục, dọn bản trùng và kiểm chứng bàn giao hoàn tất.
+## GitHub và local
 
-Cập nhật sau lúc 01:33: sáu lượt phục hồi đã đồng loạt báo 4/4. Phiếu bàn giao hiện có phiên bản mới lúc 01:31, 5 KB, tại cùng file cũ; không tạo thêm tên trùng. Sau đó Drive báo ngoại tuyến và danh mục đọc lại chưa hiện các thư mục mới hoặc model vừa bổ sung. Hoàn tất lượt tải chưa thay thế kiểm chứng danh sách từ xa; chưa xác nhận đủ 80/320 và chưa dọn run trùng. Cần chờ Drive kết nối lại, tìm vị trí các lượt vừa hoàn tất rồi đọc lại nội dung trước khi tải thêm.
+Trước lần cập nhật này, HEAD local/remote main cùng là `62fde03cb25d2561ccc4a264856c09ee7164a882`, worktree sạch. Không huấn luyện lại. Local đọc lại đủ 80 tên run duy nhất/320 artifact. Các kiểm tra kỹ thuật và audit số liệu trước đó đạt; không suy ra toàn bộ việc học thuật đã hoàn tất.
+
+PDF local/repo kiểm tra lại SHA-256 ngày 14/10: đợt 1 `8a9b77a5cc9c120f6a0d3c603ad69d6eb75a53ef8281ef21f58a754f24739ae6`; đợt 2 `77e2a953e30f463aa084a34ec9b44b900bb350a8673ae522d713a6239d190a0c`. Hai cặp bản sao khớp. Thư mục hỗ trợ cá nhân và lịch sử nháp nằm ngoài workspace; không upload lên Drive/GitHub.
+
+Còn mở: kiểm chứng/hoàn thiện Drive, dọn bản trùng, cập nhật phiếu; so sánh toàn văn 13 nguồn, phân tích lỗi/độ nhạy overlap, demo và bộ cuối đề tài. Chưa gửi email hoặc nộp thay nhóm.
+
+Cập nhật tiếp 02:06: LE-XGB-S72 báo tải xong và đã mở đúng thư mục, thấy đủ bốn file. LE-XGB-S82 và LE-IF-S42 cũng báo tải xong sau xử lý hộp thoại phiên bản/Thử lại, nhưng danh sách đúng đích vẫn chưa nạp đủ; không tải lại các lượt này. Drive tìm kiếm báo "Không thể làm mới; hãy kiểm tra kết nối mạng rồi thử lại". Lượt LE-XGB-S42 đang tải tại tên LE-XGB-S42 (1), chưa đọc lại file và chưa đổi tên/dọn bản cũ. Phiếu Drive đã có phiên bản cập nhật 02:03 tại cùng file ID; phiên bản đó chưa có đoạn 02:06 này. Tiếp tục theo dõi, chưa chốt 80/320 và chưa dọn run trùng. Quan sát đề cương trống vẫn cần kiểm lại khi Drive kết nối ổn định.
