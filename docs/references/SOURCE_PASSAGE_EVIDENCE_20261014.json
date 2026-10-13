@@ -1,0 +1,156 @@
+{
+  "checked_on": "2026-10-14",
+  "sources": 13,
+  "substantive_passage_checks": 12,
+  "local_pdf_copies_checked": 9,
+  "web_pdf_passage_checks": 2,
+  "official_web_description_checked": 1,
+  "abstract_only": [
+    "S07"
+  ],
+  "sources_detail": [
+    {
+      "source_id": "S01",
+      "citation_key": "nist80094",
+      "checked_on": "2026-10-14",
+      "evidence_scope": "fulltext_passages",
+      "passage_url": "https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-94.pdf",
+      "location": "Mục 2.3.1-2.3.3, trang in 2-4 đến 2-6; Chương 4, trang 4-1 trở đi.",
+      "inspected_copy_sha256": "289c2ed27f7e3aac41624bf2e6fad268642bad2dabe352a5ab28fa169824a96e",
+      "full_article_signoff": false,
+      "group_review_status": "pending"
+    },
+    {
+      "source_id": "S02",
+      "citation_key": "moustafa2015",
+      "checked_on": "2026-10-14",
+      "evidence_scope": "web_pdf_passages",
+      "passage_url": "https://www.researchgate.net/profile/Nour-Moustafa/publication/287330529_UNSW-NB15_a_comprehensive_data_set_for_network_intrusion_detection_systems_UNSW-NB15_network_data_set/links/567bf71708ae051f9ae029b6/UNSW-NB15-a-comprehensive-data-set-for-network-intrusion-detection-systems-UNSW-NB15-network-data-set.pdf?origin=publication_detail",
+      "location": "Mục IV.A, IV.C, IV.G; trang bài 2-4 (PDF tác giả có trang bìa ResearchGate).",
+      "inspected_copy_sha256": null,
+      "full_article_signoff": false,
+      "group_review_status": "pending"
+    },
+    {
+      "source_id": "S03",
+      "citation_key": "moustafa2016",
+      "checked_on": "2026-10-14",
+      "evidence_scope": "web_pdf_passages",
+      "passage_url": "https://www.researchgate.net/profile/Jill-Slay/publication/304847859_The_evaluation_of_Network_Anomaly_Detection_Systems_Statistical_analysis_of_the_UNSW-NB15_data_set_and_the_comparison_with_the_KDD99_data_set/links/59ebacba4585151983cb7525/The-evaluation-of-Network-Anomaly-Detection-Systems-Statistical-analysis-of-the-UNSW-NB15-data-set-and-the-comparison-with-the-KDD99-data-set.pdf",
+      "location": "Bảng 6 trang in 22; Bảng 7 và Eq.(19-22) trang 25-26; Mục 7.3 trang 28.",
+      "inspected_copy_sha256": null,
+      "full_article_signoff": false,
+      "group_review_status": "pending"
+    },
+    {
+      "source_id": "S04",
+      "citation_key": "breiman2001",
+      "checked_on": "2026-10-14",
+      "evidence_scope": "fulltext_passages",
+      "passage_url": "https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf",
+      "location": "Bản tác giả January 2001, mục 1.1, 2-4; số trang của bản này khác bản tạp chí 5-32.",
+      "inspected_copy_sha256": "aaa9bc464d1d63eacc807ac8251331aa93b2aeb1c9411033e58cb7e8423fb920",
+      "full_article_signoff": false,
+      "group_review_status": "pending"
+    },
+    {
+      "source_id": "S05",
+      "citation_key": "chen2016",
+      "checked_on": "2026-10-14",
+      "evidence_scope": "fulltext_passages",
+      "passage_url": "https://arxiv.org/pdf/1603.02754",
+      "location": "arXiv v3: Mục 2-4 và 6; trang vật lý 2-9.",
+      "inspected_copy_sha256": "52bc282c922a239134ee4d6f4367c58bf920a9bdd53acbb3b2aa3342e2bb7214",
+      "full_article_signoff": false,
+      "group_review_status": "pending"
+    },
+    {
+      "source_id": "S06",
+      "citation_key": "liu2008",
+      "checked_on": "2026-10-14",
+      "evidence_scope": "fulltext_passages",
+      "passage_url": "https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/icdm08b.pdf",
+      "location": "Mục 2-3 (trang vật lý 2-4); Mục 4 (train/score), 5 (benchmark) và 6 (efficiency).",
+      "inspected_copy_sha256": "188a224c40786174ae6c9037d4a64e2ead1bf5bd1eb6da6334b42d3271021862",
+      "full_article_signoff": false,
+      "group_review_status": "pending"
+    },
+    {
+      "source_id": "S07",
+      "citation_key": "sakurada2014",
+      "checked_on": "2026-10-14",
+      "evidence_scope": "abstract_only",
+      "passage_url": "https://dl.acm.org/doi/10.1145/2689746.2689747",
+      "location": "Abstract của DOI; chưa có bằng chứng trang/bảng toàn văn.",
+      "inspected_copy_sha256": null,
+      "full_article_signoff": false,
+      "group_review_status": "pending"
+    },
+    {
+      "source_id": "S08",
+      "citation_key": "chandola2009",
+      "checked_on": "2026-10-14",
+      "evidence_scope": "fulltext_passages",
+      "passage_url": "https://vs.inf.ethz.ch/edu/HS2011/CPS/papers/chandola09_anomaly-detection-survey.pdf",
+      "location": "Bản ACM 2009: Mục 1.2 và 2.2-2.4, trang 15:3 và 15:5-15:10.",
+      "inspected_copy_sha256": "64150ea3947512e2436c75ef9561349df274382e2f0b842fccf621fe14602ac1",
+      "full_article_signoff": false,
+      "group_review_status": "pending"
+    },
+    {
+      "source_id": "S09",
+      "citation_key": "saito2015",
+      "checked_on": "2026-10-14",
+      "evidence_scope": "fulltext_passages",
+      "passage_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0118432&type=printable",
+      "location": "Theoretical Background và Table 1, trang 3-8; Simulation study, trang 9 trở đi.",
+      "inspected_copy_sha256": "8ae56333b46ffae705ec463b6a3dd1d81bc4fe5934e5e13a635e4bbf401d1a97",
+      "full_article_signoff": false,
+      "group_review_status": "pending"
+    },
+    {
+      "source_id": "S10",
+      "citation_key": "davis2006",
+      "checked_on": "2026-10-14",
+      "evidence_scope": "fulltext_passages",
+      "passage_url": "https://ftp.cs.wisc.edu/machine-learning/shavlik-group/davis.icml06.pdf",
+      "location": "Bản ICML 8 trang: Mục 2-4, Theorem 3.2 và Figure 5.",
+      "inspected_copy_sha256": "94b4a112df164ef28f70a862198c7a7b3c85b1c87c799a51394d3631fa7f3908",
+      "full_article_signoff": false,
+      "group_review_status": "pending"
+    },
+    {
+      "source_id": "S11",
+      "citation_key": "fawcett2006",
+      "checked_on": "2026-10-14",
+      "evidence_scope": "fulltext_passages",
+      "passage_url": "https://www.math.ucdavis.edu/~saito/data/roc/fawcett-roc.pdf",
+      "location": "Mục 2-4, trang in 861-865; Figure 1 trang 862; Mục 7 về AUC.",
+      "inspected_copy_sha256": "f912f86f834709216519d743a29e6457a24ed4ba5bc115d6f8497d9c44018de6",
+      "full_article_signoff": false,
+      "group_review_status": "pending"
+    },
+    {
+      "source_id": "S12",
+      "citation_key": "sommer2010",
+      "checked_on": "2026-10-14",
+      "evidence_scope": "fulltext_passages",
+      "passage_url": "https://www.icir.org/robin/papers/oakland10-ml.pdf",
+      "location": "Bản tác giả 12 trang: Mục III.A-E và IV; trang vật lý 3-10.",
+      "inspected_copy_sha256": "b73595240914c8b75ee6255bf08a0a429b0753f669427107388af7a90281866a",
+      "full_article_signoff": false,
+      "group_review_status": "pending"
+    },
+    {
+      "source_id": "S13",
+      "citation_key": "unswsite",
+      "checked_on": "2026-10-14",
+      "evidence_scope": "official_web_passages",
+      "passage_url": "https://research.unsw.edu.au/projects/unsw-nb15-dataset",
+      "location": "Các đoạn mô tả generation, features và partition trên trang dự án UNSW; truy cập 14/10/2026.",
+      "inspected_copy_sha256": null,
+      "full_article_signoff": false,
+      "group_review_status": "pending"
+    }
+  ]
+}

@@ -8,7 +8,10 @@
 - [x] AP, FPR validation/test, support, duplicate/overlap diễn giải đúng giới hạn.
 - [x] PDF được render kiểm tra mép trang, bảng và tham chiếu.
 - [x] Xác nhận nhóm được ghi theo lời nhóm trưởng, không thêm chữ ký thay người khác.
-- [ ] Ma trận so sánh toàn văn 13 nguồn được nghiệm thu (còn mở, đã nêu trong PDF).
+- [x] Ma trận 13 nguồn có nội dung/điều kiện/giới hạn: 12 có đối chiếu đoạn nguồn; S07 abstract-only được ghi rõ.
+- [x] Phân tích lỗi category ban đầu từ 80 run, hai target; 760 phép đối chiếu metric khớp.
+- [ ] Nhóm đọc và xác nhận phần đối chiếu nguồn/phân tích lỗi bổ sung ngày 14/10.
+- [ ] Nghiệm thu toàn bài của ma trận và toàn văn S07 (còn mở, không giả lập nhận xét thành viên).
 - [ ] Phân tích lỗi sâu, demo hoàn chỉnh, bản cuối/slide/đóng gói cuối (ngoài phạm vi hoàn thành đợt 2).
 
-Bản hiện tại tổng hợp hồ sơ kiểm tra ngày 13/10. Checklist kỹ thuật không xác nhận nhóm đã hiểu mọi nội dung hoặc giảng viên đã duyệt. Bản nháp hỗ trợ cũ được bảo toàn ngoài workspace.
+Bản hiện tại tổng hợp hồ sơ kiểm tra ngày 13/10 và nội dung bổ sung ngày 14/10. Checklist kỹ thuật không xác nhận nhóm đã hiểu mọi nội dung hoặc giảng viên đã duyệt. Bản nháp hỗ trợ cũ được bảo toàn ngoài workspace.

@@ -1,0 +1,335 @@
+{
+  "run_count": 80,
+  "category_rows": 1600,
+  "summary_rows": 320,
+  "prediction_rows_checked": 13173120,
+  "metric_checks": 760,
+  "original_predictions_unchanged": true,
+  "training_performed": false,
+  "denominator": "Normal support for FP; each attack category support for FN",
+  "std": "sample standard deviation across five seeds (ddof=1)",
+  "examples_policy": "first two by record_id per model/error_type; CS seed42 target5%; not representative",
+  "failure_count": 0,
+  "inputs": [
+    {
+      "run_id": "CS-AE-S42",
+      "predictions_sha256": "8adc37b5f692498292c3ff64f10fa474d2470af828a59c5abf331367ce8e3554"
+    },
+    {
+      "run_id": "CS-AE-S52",
+      "predictions_sha256": "4602c3e2c0ecf9f355a78decc2343e3cf7e2fee0aa1481a9ab57cb48ad047e62"
+    },
+    {
+      "run_id": "CS-AE-S62",
+      "predictions_sha256": "5bdf880fa8da4a88989059e7e316bbbd1c7167fbf5150ccde8b64415b12182c8"
+    },
+    {
+      "run_id": "CS-AE-S72",
+      "predictions_sha256": "6d1619a2a2d438cfcef65fa7545930798105311ab09fa4bff206fd829fc84a93"
+    },
+    {
+      "run_id": "CS-AE-S82",
+      "predictions_sha256": "d3992fa0c237356b272b4fdffcae69c35e0e2a0bae8d66415d4650d8d758fe7a"
+    },
+    {
+      "run_id": "CS-IF-S42",
+      "predictions_sha256": "5787c44262cbf9e69b7699fb915fefb043bce7351987b62693573e17e38f6e23"
+    },
+    {
+      "run_id": "CS-IF-S52",
+      "predictions_sha256": "bbd7d5c18c4a01dc6123f79fe795baeaa2995d925df9c247f7a59040c3e6d4f1"
+    },
+    {
+      "run_id": "CS-IF-S62",
+      "predictions_sha256": "c6f54d1340d99bbf16636a580c4b4231fb5c3dfd4ec76d0aaeea6641a794c82d"
+    },
+    {
+      "run_id": "CS-IF-S72",
+      "predictions_sha256": "fae381e170ebb74b994ec29cb2a5fc4a15d5ddf961ef73978dc65a94356b9f54"
+    },
+    {
+      "run_id": "CS-IF-S82",
+      "predictions_sha256": "95849b9c150f0b1fab8988ad2ea3e7c0b1a2bd55b077b991f543d83017425d90"
+    },
+    {
+      "run_id": "CS-RF-S42",
+      "predictions_sha256": "accebef931f682b203c9cbf145af0a1f4f466113d54a808bec342dd0d79a09cc"
+    },
+    {
+      "run_id": "CS-RF-S52",
+      "predictions_sha256": "782998032ebc14923a196b46709fa54c99b2d37e8bf2d194fb02bada7f5c08eb"
+    },
+    {
+      "run_id": "CS-RF-S62",
+      "predictions_sha256": "11640d94722c9ca8ff6e4343a0ee4111616911b088980462ec6f174559c3f11b"
+    },
+    {
+      "run_id": "CS-RF-S72",
+      "predictions_sha256": "3a1c9d58a584c56c83e7b11963f47ffe395c8616496d05643cdc77ce9dd42b7f"
+    },
+    {
+      "run_id": "CS-RF-S82",
+      "predictions_sha256": "842f8bfecaf993cb610d423b0585598b444799fbfbc9c68afd0c05912f249305"
+    },
+    {
+      "run_id": "CS-XGB-S42",
+      "predictions_sha256": "f18dcf2694c10b6ef004a20cd1049e3ebd4185de294f8fec92803a3cfa3a923a"
+    },
+    {
+      "run_id": "CS-XGB-S52",
+      "predictions_sha256": "ffbb30389130c3e2baffe83baa40c17330d24833d6f13c513315bf14f715ba10"
+    },
+    {
+      "run_id": "CS-XGB-S62",
+      "predictions_sha256": "b3823fdd2c4657fc654ea76f220cca515f8d4522859cd61dc79f9a50ba0276ed"
+    },
+    {
+      "run_id": "CS-XGB-S72",
+      "predictions_sha256": "c230d9a308ba436a997baf38c4e66d4f7e328a67edc9544787f878984437949d"
+    },
+    {
+      "run_id": "CS-XGB-S82",
+      "predictions_sha256": "462d44d7258eb9220a88b82ef75bcb85f7218ce6480028cf888c066e44cc0673"
+    },
+    {
+      "run_id": "LD-AE-S42",
+      "predictions_sha256": "a73e230c7b3859359bfc8d5eb3b0030094f0de23c565a174804d5ccd6f5873c7"
+    },
+    {
+      "run_id": "LD-AE-S52",
+      "predictions_sha256": "a4ce26f683d9bdac8762ab317ec3ed1764554d3500b843c9d9b2916df7c2eddf"
+    },
+    {
+      "run_id": "LD-AE-S62",
+      "predictions_sha256": "51f2ae4fd5487b8ce25c42b4e74602c185610351580f03f4f2360e7e6514626b"
+    },
+    {
+      "run_id": "LD-AE-S72",
+      "predictions_sha256": "59f0fbf0ad47f33abc1eb90dcb22a1d0891e025ecd99624bc72809520e8aba06"
+    },
+    {
+      "run_id": "LD-AE-S82",
+      "predictions_sha256": "d9e1c986cfedf49fcd6aac5b2389312136e4ca2137827111b95fa20d50ee11f2"
+    },
+    {
+      "run_id": "LD-IF-S42",
+      "predictions_sha256": "d26632cf6c7cd846776b5b9e62e3dad11424b98f656224ba9ef7dc8830f40901"
+    },
+    {
+      "run_id": "LD-IF-S52",
+      "predictions_sha256": "f169f6876351208049af72bf84b428fa8433937a80cc6e22d91d775c49c15c0c"
+    },
+    {
+      "run_id": "LD-IF-S62",
+      "predictions_sha256": "d0d0bc75d3961b01b1f0b5fac3a157e952d96826746420ba41f8d673fa349b76"
+    },
+    {
+      "run_id": "LD-IF-S72",
+      "predictions_sha256": "8b64684ac63b7bcc0733cdb2281043c1b290414bce6d93aa1c3592f90efdf791"
+    },
+    {
+      "run_id": "LD-IF-S82",
+      "predictions_sha256": "d868facacdd2dbe8dfcfc0fb960ee4d0e4d449ed2ca274aec7a49ba3bdde3dbd"
+    },
+    {
+      "run_id": "LD-RF-S42",
+      "predictions_sha256": "c008c2edc0be8e265d9748ae0c2dde7429532e274d1ca3c0c7e8e6918c995f8f"
+    },
+    {
+      "run_id": "LD-RF-S52",
+      "predictions_sha256": "e30857178d90960b8035f713a0ee07bf4c9ee9e1cd84fb1d984b7bc452865ead"
+    },
+    {
+      "run_id": "LD-RF-S62",
+      "predictions_sha256": "35dd6f0bd391734d3ae7c7bd247391dc3be91df4e04e858f93c7733a39852cd5"
+    },
+    {
+      "run_id": "LD-RF-S72",
+      "predictions_sha256": "0e29ec355b87801b7990b1458ff6c37d93d0b654e3df36ffc3d462e574ef00b9"
+    },
+    {
+      "run_id": "LD-RF-S82",
+      "predictions_sha256": "3b878290234d0d50122d6cebf019c84b427e593b6eef1a37df22f448329909d6"
+    },
+    {
+      "run_id": "LD-XGB-S42",
+      "predictions_sha256": "c8c831c0e19525980514cdbc8426f23a40fd050c6c3e7c58a8f1bf786abe90f8"
+    },
+    {
+      "run_id": "LD-XGB-S52",
+      "predictions_sha256": "2e645c3b34133d0193e7561c947fc3602e6241e63b7f446d5355009f39480d4b"
+    },
+    {
+      "run_id": "LD-XGB-S62",
+      "predictions_sha256": "adfe01c6cc63893788a34c5b56af3cb3960eb04688813022e147ddcb88e5aa1d"
+    },
+    {
+      "run_id": "LD-XGB-S72",
+      "predictions_sha256": "88c83c705d8239178784c886e141c3289c1fc8a1dd927faf9f5a729e956838c0"
+    },
+    {
+      "run_id": "LD-XGB-S82",
+      "predictions_sha256": "0a27acee5e5c414bcc2fbf920584c1a805ba4367a44af48b72e3d5ad8a10f0cc"
+    },
+    {
+      "run_id": "LE-AE-S42",
+      "predictions_sha256": "cd55c391386c656dda558955f49d8015908c85a15125a01d346de5b825d4b75c"
+    },
+    {
+      "run_id": "LE-AE-S52",
+      "predictions_sha256": "948bad37678771de6c06fd9dce0f1a7223d6bb42c9912fd81cd66faa86f7bc6c"
+    },
+    {
+      "run_id": "LE-AE-S62",
+      "predictions_sha256": "1eea4c68d6a61678961bb2b2029d1d14fc406da3e42fc8842a61de2ce5c6c7e2"
+    },
+    {
+      "run_id": "LE-AE-S72",
+      "predictions_sha256": "e96d1109bea1cf6b4aaacaca5b89398dff72ea4c3a77e3c7a74a2f8ecc69ee8e"
+    },
+    {
+      "run_id": "LE-AE-S82",
+      "predictions_sha256": "f8b1fcc2eeaf4ffbe01311844ffea25bbfb71d5d5aa7ad3c34cbc4446eab262a"
+    },
+    {
+      "run_id": "LE-IF-S42",
+      "predictions_sha256": "ab584f04fa62b7920d18dc7783bc8be5eedb881e38c229d44a03ce614c1603eb"
+    },
+    {
+      "run_id": "LE-IF-S52",
+      "predictions_sha256": "06c17215f05a8fc38e15924e9e8ec645fab224dec6dcb9e2b787c598e30951a1"
+    },
+    {
+      "run_id": "LE-IF-S62",
+      "predictions_sha256": "fb3407efd21d6ff7b74873a2a2e45260beefe30dbbca53dbd3a07bdaa740d6b2"
+    },
+    {
+      "run_id": "LE-IF-S72",
+      "predictions_sha256": "179793a00e582a1b1c0efc009d725860c2ccd54fc6c60a319738b68faccf17e7"
+    },
+    {
+      "run_id": "LE-IF-S82",
+      "predictions_sha256": "889c3c638ca56b517d3474138edf87024b36de4f2d973df30a4dacc07aa493c2"
+    },
+    {
+      "run_id": "LE-RF-S42",
+      "predictions_sha256": "f3a45f51f935d5537b430ae91d4d8a9692f8741478368ce2477711e484412ac0"
+    },
+    {
+      "run_id": "LE-RF-S52",
+      "predictions_sha256": "fb61f11f68648a518f56e5069ebc38683d5c6b2bcbde610b9e68ec47ee79a4de"
+    },
+    {
+      "run_id": "LE-RF-S62",
+      "predictions_sha256": "574ce23ae93ce92ee70f1ec72bf877921e07b1f2b55a8fac751c22a643367a55"
+    },
+    {
+      "run_id": "LE-RF-S72",
+      "predictions_sha256": "27d60279186c6eb4d7d15b7fceb9be104738cb1b921d98f1e205f9e2575b7508"
+    },
+    {
+      "run_id": "LE-RF-S82",
+      "predictions_sha256": "0519c0168fe9b0f559f5e1842fdfa1f860b005e0dce74d986c26a1b0729a0748"
+    },
+    {
+      "run_id": "LE-XGB-S42",
+      "predictions_sha256": "36bf4e8a044c341726dd03affd1317dd89bcf403fd54c357580956a58677a353"
+    },
+    {
+      "run_id": "LE-XGB-S52",
+      "predictions_sha256": "0018933fccdc9940ad45e30109645b0bd3eb9f4e4cae17827331b04ea59170de"
+    },
+    {
+      "run_id": "LE-XGB-S62",
+      "predictions_sha256": "3fa7938ecc6c83b34e9faa6163573f19cd5d28cba35dbc94ff38bfc3ada8b183"
+    },
+    {
+      "run_id": "LE-XGB-S72",
+      "predictions_sha256": "c75c09d1b0c62b1dbdd10961a896f632328302205f8dc75695e4b23fa31ffac9"
+    },
+    {
+      "run_id": "LE-XGB-S82",
+      "predictions_sha256": "502cfa8293b42107c4aa85ba79b3b194f2e377b369ffec3f087566e27438ca78"
+    },
+    {
+      "run_id": "LR-AE-S42",
+      "predictions_sha256": "0e475fee73df04b47e9c0d95d364ab1fcd753922783f98faf14f15a0c4ddad45"
+    },
+    {
+      "run_id": "LR-AE-S52",
+      "predictions_sha256": "67577d5436aaffaa69eb65baf36d0d6db96684718af0272c87e51b3dc96c72b3"
+    },
+    {
+      "run_id": "LR-AE-S62",
+      "predictions_sha256": "4bede5df112f1c47e2eda51a2379785d03294322b30589c742877822118adc3b"
+    },
+    {
+      "run_id": "LR-AE-S72",
+      "predictions_sha256": "4fa5e58fa67ddad1f6c508caa8ea664ab033cdb68442a5290ce162cf6cb90930"
+    },
+    {
+      "run_id": "LR-AE-S82",
+      "predictions_sha256": "6915bcb263256fe93feb5474bcc515f4b82564b4bcedcac7a128b53ba15b4d4b"
+    },
+    {
+      "run_id": "LR-IF-S42",
+      "predictions_sha256": "ee87570dc1324818fa474cba50998182608316f0ac3f94ec4a44d6c38d0a5378"
+    },
+    {
+      "run_id": "LR-IF-S52",
+      "predictions_sha256": "5d87adcc471a07f25452ac7fef00e907f32f4c21b73798a471ebc223220a4b9c"
+    },
+    {
+      "run_id": "LR-IF-S62",
+      "predictions_sha256": "2e384ade600a101d7c6e4422f2ba88620fbbb8b7b958cd9477f4b6d0cd34d682"
+    },
+    {
+      "run_id": "LR-IF-S72",
+      "predictions_sha256": "5aa6d636f095d34f67d7d24d1cd5078e47ac4f586b579722aacbc8b425727f91"
+    },
+    {
+      "run_id": "LR-IF-S82",
+      "predictions_sha256": "95d38974384da7474650c3309db671f8ac954a2bacbc60abb38337532fde24dc"
+    },
+    {
+      "run_id": "LR-RF-S42",
+      "predictions_sha256": "19def4540004699c4271b55008f7a793e149360dd6fb1aba9381b634b1026bcc"
+    },
+    {
+      "run_id": "LR-RF-S52",
+      "predictions_sha256": "e9c5728ca819719c8092073adf203603c4777261ab7484f96df40226290e3d9a"
+    },
+    {
+      "run_id": "LR-RF-S62",
+      "predictions_sha256": "8537613cd214800573f000f5a35ef27fad50cddf497e9ba5f56bc2ea4eae766a"
+    },
+    {
+      "run_id": "LR-RF-S72",
+      "predictions_sha256": "308683a1ddb9cb88cc9c65024c39efd80d1939cd340a044c8749b5f3db012ec9"
+    },
+    {
+      "run_id": "LR-RF-S82",
+      "predictions_sha256": "13c4ce3d209d1853cd5f3545d7901ed23916a496383bf2e67781a920a9dc887a"
+    },
+    {
+      "run_id": "LR-XGB-S42",
+      "predictions_sha256": "a8fb4bda2330147689fe3dbcfc4f3c2c48a25d345906963a699ac288ccf086b3"
+    },
+    {
+      "run_id": "LR-XGB-S52",
+      "predictions_sha256": "d24d5a33d80414e4d3d4f594cff9f488789c4cb56e2cec75ff5130e1a41387dc"
+    },
+    {
+      "run_id": "LR-XGB-S62",
+      "predictions_sha256": "1181da2d986ba2eef4ecc88d5cffaa4b95668a974d5000576948b85341f2fb79"
+    },
+    {
+      "run_id": "LR-XGB-S72",
+      "predictions_sha256": "9d1a4a610e61744e7e46cf33afa3819da3ba141778319ca11f59804ee0e8a3e8"
+    },
+    {
+      "run_id": "LR-XGB-S82",
+      "predictions_sha256": "804fffecc1d63afee5309a0e692921dc56c822f8bc5729675d7d1feeaa5004e4"
+    }
+  ]
+}

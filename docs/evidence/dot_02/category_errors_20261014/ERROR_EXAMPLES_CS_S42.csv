@@ -1,0 +1,17 @@
+record_id,run_id,split,attack_cat,evaluation_role,y_true,score,target_fpr,threshold,y_pred,error_type,selection,score_minus_threshold
+28,CS-AE-S42,official_test,Normal,normal,0,0.0123902343755214,0.05,0.0116988682120537,1,FP,lowest_record_id_in_error_subset,0.0006913661634677
+50,CS-AE-S42,official_test,Normal,normal,0,0.0762546239510461,0.05,0.0116988682120537,1,FP,lowest_record_id_in_error_subset,0.0645557557389924
+253,CS-AE-S42,official_test,Exploits,known_attack,1,0.0015037611746161,0.05,0.0116988682120537,0,FN,lowest_record_id_in_error_subset,-0.0101951070374376
+254,CS-AE-S42,official_test,Exploits,known_attack,1,0.001969322339243,0.05,0.0116988682120537,0,FN,lowest_record_id_in_error_subset,-0.009729545872810701
+38,CS-IF-S42,official_test,Normal,normal,0,0.0187213777998596,0.05,0.007770702681887,1,FP,lowest_record_id_in_error_subset,0.0109506751179726
+39,CS-IF-S42,official_test,Normal,normal,0,0.0124331361761962,0.05,0.007770702681887,1,FP,lowest_record_id_in_error_subset,0.004662433494309199
+244,CS-IF-S42,official_test,Reconnaissance,known_attack,1,-0.0598874115563333,0.05,0.007770702681887,0,FN,lowest_record_id_in_error_subset,-0.0676581142382203
+245,CS-IF-S42,official_test,Reconnaissance,known_attack,1,-0.0598874115563333,0.05,0.007770702681887,0,FN,lowest_record_id_in_error_subset,-0.0676581142382203
+1,CS-RF-S42,official_test,Normal,normal,0,0.7057412707296608,0.05,0.5572816867482743,1,FP,lowest_record_id_in_error_subset,0.14845958398138648
+2,CS-RF-S42,official_test,Normal,normal,0,0.8041556327696191,0.05,0.5572816867482743,1,FP,lowest_record_id_in_error_subset,0.24687394602134483
+278,CS-RF-S42,official_test,Fuzzers,known_attack,1,0.4293080713201899,0.05,0.5572816867482743,0,FN,lowest_record_id_in_error_subset,-0.1279736154280844
+282,CS-RF-S42,official_test,Fuzzers,known_attack,1,0.5060292520521813,0.05,0.5572816867482743,0,FN,lowest_record_id_in_error_subset,-0.051252434696092974
+1,CS-XGB-S42,official_test,Normal,normal,0,0.8953522443771362,0.05,0.6332834959030151,1,FP,lowest_record_id_in_error_subset,0.2620687484741211
+2,CS-XGB-S42,official_test,Normal,normal,0,0.838028609752655,0.05,0.6332834959030151,1,FP,lowest_record_id_in_error_subset,0.2047451138496399
+255,CS-XGB-S42,official_test,Exploits,known_attack,1,0.5648226141929626,0.05,0.6332834959030151,0,FN,lowest_record_id_in_error_subset,-0.06846088171005249
+278,CS-XGB-S42,official_test,Fuzzers,known_attack,1,0.4648274481296539,0.05,0.6332834959030151,0,FN,lowest_record_id_in_error_subset,-0.16845604777336126

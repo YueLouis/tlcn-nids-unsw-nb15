@@ -9,8 +9,9 @@
 | Artifact | results/runs/ | 80 run completed; 320 file bắt buộc |
 | Audit prediction | final_20261013/audit_current.py; numerical_audit.json | 13.173.120 dòng; không sai lệch |
 | Cách chia dữ liệu đã lưu | scripts/audit_saved_partitions.py; final_20261013/saved_split_audit.json | Scaler của 80/80 model khớp phân tầng theo attack_cat; không huấn luyện lại |
-| PDF | output/pdf/NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf | 30 trang, tích lũy từ đợt 1 |
-| Tài liệu nền | docs/references/; final_20261013/references_verified.json | 12 DOI metadata + trang UNSW; full-text review còn mở |
+| PDF | output/pdf/NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf | 32 trang, tích lũy từ đợt 1 |
+| Tài liệu nền | docs/references/; final_20261013/references_verified.json | 13 nguồn; 12 đối chiếu đoạn nguồn; S07 abstract-only; nghiệm thu toàn bài còn mở |
 | Xác nhận nhóm | final_20261013/XAC_NHAN_NHOM_20261013.md | Nhóm trưởng cung cấp xác nhận cả ba; không thay chữ ký/duyệt của thầy |
+| Lỗi category ban đầu | category_errors_20261014/; scripts/analyze_category_errors.py | 80 run, 1.600 dòng, 320 nhóm; 760 metric khớp; run gốc không đổi |
 
 Log là đầu ra thật; không dùng ảnh thẻ PASS dựng lại làm chứng cứ. Bản nháp và hình minh họa tháng 9 đã bảo toàn ngoài workspace, có nhật ký di chuyển SHA-256.

@@ -2,7 +2,7 @@
 
 Nguồn đối chiếu: email của ThS. Nguyễn Đăng Quang ngày 19/09/2026 và PDF comment gốc `NhomTLCN_TramAnh_VuongThu_TrongTin_dot1-cmts.pdf` (20 trang). Bản gốc được giữ tại `07_Thu_tu_voi_giang_vien` trong thư mục chung.
 
-Bản đợt 2: `NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf`, 30 trang. Bảng đối chiếu trực tiếp nằm ở Mục 3.1, trang in 7 (trang thứ 12 của tệp PDF).
+Bản đợt 2: `NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf`, 32 trang. Bảng đối chiếu trực tiếp nằm ở Mục 3.1, trang in 7 (trang thứ 12 của tệp PDF).
 
 | Góp ý / vị trí bản gốc | Nội dung đã cập nhật | Vị trí trong PDF đợt 2 (trang in) |
 |---|---|---|
@@ -12,10 +12,12 @@ Bản đợt 2: `NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf`, 30 trang. Bảng 
 | Trang 17: cụ thể test gì, thế nào là PASS | Đủ 17 test thực tế, input/expected/kết quả; phân biệt assertion đạt với độ chính xác của model; lưu log thật | Mục 7.1, trang 18-19; Phụ lục A |
 | Trang 17: scenario được mô tả thế nào | Closed-set và ba LOACO; held-out trước split/fit; support theo scenario; threshold chỉ từ Normal validation | Mục 5.1, trang 14 |
 | Trang 17: số liệu/mô tả cụ thể | Audit raw split, 80 run/320 artifact, 16 nhóm mean/std qua 5 seed, FPR 1%/5%, UADR và support, hai hình từ metric thật | Chương 4; Mục 7.2-7.3, trang 19-21 |
+| Đối chiếu tài liệu tham khảo cụ thể | Ma trận ghi đoạn/trang, điều kiện, giới hạn; 12/13 nguồn có kiểm đoạn, S07 abstract-only | Chương 2; ND2.6; Phụ lục C, trang in 27 |
+| Phân tích số liệu theo lỗi | FN theo category, mean/std năm seed và hai dòng FP/FN truy vết; không đổi threshold/test | Mục 7.4, trang in 22 |
 | Yêu cầu báo cáo tích lũy và kế hoạch toàn đề tài | Giữ đặt vấn đề/RQ/lý thuyết từ nền đợt 1; bổ sung phương pháp/kết quả/giới hạn; Gantt baseline 19 tuần; không sửa ngày artifact cho khớp kế hoạch | Chương 1-3 và 4-8 |
 
 Kiểm tra lại ngày 13/10: 80 run, 320 artifact, 17/17 test; 13.173.120 dòng prediction, 1.040 metric, 80 summary và 16 nhóm tổng hợp, không phát hiện sai lệch. SHA-256 raw khớp manifest. PDF không có cảnh báo tràn mép, thiếu glyph hay tham chiếu chưa giải quyết.
 
-Còn mở và đã nêu trong PDF: so sánh toàn văn 13 nguồn; phân tích lỗi sâu và độ nhạy overlap; demo hoàn chỉnh và sản phẩm cuối đề tài. Metadata nguồn đã kiểm chứng không có nghĩa là đã đọc/nghiệm thu toàn văn. Xác nhận nội dung chung qua nhóm trưởng không thay chữ ký từng biên bản hoặc phê duyệt của giảng viên.
+Đã đối chiếu đoạn nội dung của 12/13 nguồn (92,3%); S07 mới kiểm abstract, toàn văn và nghiệm thu toàn bài còn mở. Phân tích lỗi category ban đầu đã có cho 80 run; PR/score distribution, giải thích feature, độ nhạy overlap, demo và bộ cuối đề tài thuộc bước tiếp nối. Các phần bổ sung ngày 14/10 cần nhóm đọc lại; chưa ghi nhận xác nhận mới. Nhóm tự đọc, hiểu và chịu trách nhiệm nội dung.
 
-Rà soát 14/10 từ thư 08/09 và mã/artifact: Hình 3.1 (trang in 8) đổi trục sang mốc ngày dd/mm; Mục 5.1 (trang in 14) sửa phân tầng từ nhãn nhị phân thành attack_cat. Thống kê scaler của 80/80 model khớp phân tầng theo attack_cat, không huấn luyện lại. Bản đợt 2 vẫn 30 trang.
+Bổ sung 14/10: PDF hiện 32 trang. Mục 7.4 (trang in 22, trang vật lý 27) có phân tích lỗi category từ 80 run, 1.600 dòng chi tiết, 320 nhóm mean/std, 16 ví dụ truy vết; 760 đối chiếu metric khớp. Phụ lục C (trang in 27) truy vết 13 nguồn, phân biệt 12 đối chiếu đoạn nguồn với S07 chỉ abstract. Gantt giữ trục dd/mm; Mục 5.1 mô tả stratify=attack_cat đúng scaler của 80/80 model. Không huấn luyện lại hoặc sửa run gốc.

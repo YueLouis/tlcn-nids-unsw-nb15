@@ -11,17 +11,19 @@ Rà soát nội dung ngày 14/10/2026. **Drive đã kiểm đủ bộ bàn giao,
 - Đã bổ sung các tài liệu học tập nhẹ còn thiếu, phân công có ghi chú lịch sử, ghi âm/thư gốc và log kiểm; không upload thư mục hỗ trợ cá nhân hoặc lịch sử nháp.
 - Phiếu bàn giao cập nhật tại cùng file đang có. 00_MO_DAU là điểm mở hồ sơ trên máy và Drive.
 
+- Bản đợt 2 bổ sung 14/10 đã tải trực tiếp từ máy chủ Drive: 385.265 byte, 32 trang, SHA-256 khớp root/repo/Drive. Web preview từng báo lỗi mạng; kết quả xác minh dùng tệp tải thực tế, không dựa vào trạng thái preview.
+
 ## GitHub rồi local
 
 - GitHub main đã push và đối chiếu remote. Ghi chú này mô tả bộ đã kiểm chứng; phiếu tại thư mục bàn giao ghi commit cuối sau push.
 - Local: đúng 80 run/320 artifact, không bad run; hai PDF root/repo trùng SHA-256. Mã thí nghiệm không đổi, giữ kết quả 17 test đạt ở lần kiểm trước, không huấn luyện lại.
 - PDF đợt 1: 20 trang, SHA-256 `8a9b77a5cc9c120f6a0d3c603ad69d6eb75a53ef8281ef21f58a754f24739ae6`.
-- PDF đợt 2: 30 trang, SHA-256 `8fda778ef5e15f8a4328cf29d9c0ae83a484c6cc486696390d2b9e3995eb8edb`.
+- PDF đợt 2: 32 trang, SHA-256 `22b68ec396c88845879d8e33f7433a6ea047a5da5668d3a2462d7ad34c365d0c`.
 
 [Drive nhóm](https://drive.google.com/drive/folders/13KGqMT4NUr8JfvTpF0IEKfUDT0Dlvq5S) · [GitHub](https://github.com/YueLouis/tlcn-nids-unsw-nb15)
 
-Còn mở về học thuật: so sánh toàn văn 13 nguồn, phân tích lỗi/độ nhạy overlap, demo và bộ cuối đề tài. Nhóm tự đọc, hiểu và chịu trách nhiệm nội dung; bàn giao tệp không thay cho nghiệm thu những phần này.
+Đã đối chiếu đoạn nội dung của 12/13 nguồn (92,3%); S07 mới kiểm abstract, toàn văn và nghiệm thu toàn bài còn mở. Phân tích lỗi category ban đầu đã có cho 80 run; PR/score distribution, giải thích feature, độ nhạy overlap, demo và bộ cuối đề tài thuộc bước tiếp nối. Các phần bổ sung ngày 14/10 cần nhóm đọc lại; chưa ghi nhận xác nhận mới. Nhóm tự đọc, hiểu và chịu trách nhiệm nội dung.
 
 Chưa gửi email hoặc nộp thay nhóm; không có xác nhận giảng viên duyệt. Nhật ký đối chiếu đầy đủ và lịch sử thao tác được lưu ngoài thư mục làm việc.
 
-Rà soát bổ sung 14/10: Gantt ghi mốc dd/mm theo thư 08/09; Mục 5.1 ghi phân tầng theo attack_cat, phân biệt với nhãn dự đoán nhị phân. Thống kê scaler lưu trong 80 model đều khớp cách chia này (80/80, không huấn luyện lại). PDF vẫn 30 trang; chỉ trang vật lý 1, 2, 13 và 19 đổi nội dung.
+Bổ sung 14/10: PDF hiện 32 trang. Mục 7.4 (trang in 22, trang vật lý 27) có phân tích lỗi category từ 80 run, 1.600 dòng chi tiết, 320 nhóm mean/std, 16 ví dụ truy vết; 760 đối chiếu metric khớp. Phụ lục C (trang in 27) truy vết 13 nguồn, phân biệt 12 đối chiếu đoạn nguồn với S07 chỉ abstract. Gantt giữ trục dd/mm; Mục 5.1 mô tả stratify=attack_cat đúng scaler của 80/80 model. Không huấn luyện lại hoặc sửa run gốc.
