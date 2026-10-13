@@ -38,8 +38,12 @@ Cập nhật đối chiếu lúc 04:05 ngày 14/10/2026:
 - Phiếu Drive cùng ID đã xác minh phiên bản 03:43; bản tại máy mới hơn. Sự hiện diện đủ 80/80 tên run chưa chứng minh đúng 80 thư mục duy nhất/320 tệp trên Drive.
 - GitHub được đối chiếu trước local lúc khoảng 04:00: main local/remote cùng `4a3df088f56570bad75df5fa96a5d29edf87daed`, repo sạch; local 80 run/320 artifact. Mã nguồn không đổi từ lần kiểm 17 test đạt trước đó.
 
-Đối chiếu tiếp lúc 04:10 ngày 14/10:
+Đối chiếu tiếp lúc 04:08 ngày 14/10:
 
 - Drive đã tạo hai phần ZIP runs; cả hai lần lấy tệp bị hủy và chưa có ZIP trên đĩa. Chưa kiểm CRC/hash toàn bộ runs. Đây là lỗi tải xuống, chưa có bằng chứng mất dữ liệu trên Drive.
 - Thư mục LR-XGB-S72 ID `1wjeFHtMZYKYCrTcHlArgtCG7-wFFRGhQ` đã nạp đúng tên và thông báo trống; lưu bằng chứng. Bản giữ ID `1Vo31PDb22YN7ExBgJ6jKsKuQLRhGAAql` có bốn artifact; cần xác minh đầy đủ trang trước khi dọn bản trống. Chưa chuyển vào thùng rác.
 - Phiếu cùng ID đã hiện ngày sửa đổi 04:06 sau lượt tải phiên bản; danh sách phiên bản còn đang nạp, chưa xác nhận nội dung phiên bản mới bằng tải xuống.
+
+Cập nhật 04:10 ngày 14/10: đã chuyển riêng thư mục LR-XGB-S72 rỗng ID 1wjeFHtMZYKYCrTcHlArgtCG7-wFFRGhQ vào thùng rác có thể khôi phục; giữ bản ID 1Vo31PDb22YN7ExBgJ6jKsKuQLRhGAAql đã đọc đủ bốn artifact. Giao diện xác nhận đã chuyển thư mục vào thùng rác, có nút Hủy. Chưa dọn các bản còn lại.
+
+Phiếu Drive cùng ID hiển thị sửa đổi 04:06 và thông báo Đã tải lên. Bản trên Drive là nội dung local lúc 04:05; phần dọn thư mục rỗng vừa nêu cần cập nhật vào phiên bản sau. Hai phần ZIP runs vẫn chưa tải được, không xem đó là thiếu dữ liệu từ xa.
