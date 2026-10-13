@@ -1,5 +1,8 @@
 # BẢN ĐỒ CÔNG VIỆC NHÓM TLCN
 
+> Hồ sơ lịch sử tháng 9, giữ nguyên nội dung tại thời điểm lập. Trạng thái hiện tại: `docs/management/TIEN_DO_HIEN_TAI_20261013.md` (tính từ repo). Xác nhận nhóm mới ghi riêng, không điền chữ ký vào mẫu cũ.
+
+
 > **Lưu ý trạng thái:** Đây là bản đồ nền được lập trước khi dữ liệu thật được audit. Đọc `docs/START_HERE_NHOM.md` để xem trạng thái đồng bộ GitHub/Drive và các artifact mới nhất của đợt 2.
 
 **Đề tài:** So sánh supervised learning và anomaly detection cho NIDS trên UNSW-NB15 bằng LOACO  

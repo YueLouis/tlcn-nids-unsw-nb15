@@ -1,0 +1,25 @@
+test_binary_label_normalization (test_contracts.ContractTests.test_binary_label_normalization) ... ok
+test_evaluation_roles (test_contracts.ContractTests.test_evaluation_roles) ... ok
+test_feature_columns_remove_metadata (test_contracts.ContractTests.test_feature_columns_remove_metadata) ... ok
+test_forbidden_feature_is_rejected (test_contracts.ContractTests.test_forbidden_feature_is_rejected) ... ok
+test_loaco_removes_heldout_before_development (test_contracts.ContractTests.test_loaco_removes_heldout_before_development) ... ok
+test_loaco_validator_catches_leakage (test_contracts.ContractTests.test_loaco_validator_catches_leakage) ... ok
+test_heldout_is_removed_before_split (test_data_pipeline.DataPipelineTests.test_heldout_is_removed_before_split) ... ok
+test_empty_heldout_subset_returns_none (test_evaluation.EvaluationTests.test_empty_heldout_subset_returns_none) ... ok
+test_heldout_recall_is_reported_separately (test_evaluation.EvaluationTests.test_heldout_recall_is_reported_separately) ... ok
+test_support_matches_subset_size (test_evaluation.EvaluationTests.test_support_matches_subset_size) ... ok
+test_threshold_respects_ties_and_fpr_budget (test_evaluation.EvaluationTests.test_threshold_respects_ties_and_fpr_budget) ... ok
+test_ae_higher_score_more_anomaly (test_model_score_direction.ScoreDirectionTests.test_ae_higher_score_more_anomaly) ... C:\Users\TrongTin\AppData\Roaming\Python\Python314\site-packages\sklearn\neural_network\_multilayer_perceptron.py:785: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (100) reached and the optimization hasn't converged yet.
+  warnings.warn(
+ok
+test_if_higher_score_more_anomaly (test_model_score_direction.ScoreDirectionTests.test_if_higher_score_more_anomaly) ... ok
+test_rf_score_direction (test_model_score_direction.ScoreDirectionTests.test_rf_score_direction) ... ok
+test_xgb_score_direction (test_model_score_direction.ScoreDirectionTests.test_xgb_score_direction) ... ok
+test_anomaly_preprocessor_fit_normal_only (test_preprocessing_leakage.PreprocessorLeakageTests.test_anomaly_preprocessor_fit_normal_only)
+Fit on Normal-only; verify OneHot categories don't include attack-only. ... ok
+test_preprocessor_fit_does_not_see_validation_data (test_preprocessing_leakage.PreprocessorLeakageTests.test_preprocessor_fit_does_not_see_validation_data) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.933s
+
+OK

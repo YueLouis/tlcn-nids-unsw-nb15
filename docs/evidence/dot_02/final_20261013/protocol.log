@@ -1,0 +1,2 @@
+Protocol validation passed: 4 scenarios x 4 models x 5 seeds = 80 unique runs
+Gate 1 remains a human review step; this script does not mark PASS automatically

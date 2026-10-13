@@ -1,5 +1,8 @@
 # Báo cáo tiến độ tiểu luận chuyên ngành - Đợt 2
 
+> Hồ sơ lịch sử tháng 9, giữ nguyên nội dung tại thời điểm lập. Trạng thái hiện tại: `docs/management/TIEN_DO_HIEN_TAI_20261013.md` (tính từ repo). Xác nhận nhóm mới ghi riêng, không điền chữ ký vào mẫu cũ.
+
+
 **Trạng thái:** Bản tích lũy kỹ thuật ngày 26/09/2026; đã chạy đủ 80 run theo protocol.
 
 ## 1. Kết luận ngắn

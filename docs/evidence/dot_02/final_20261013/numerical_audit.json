@@ -1,0 +1,14 @@
+{
+  "checked_on": "2026-10-13",
+  "runs_checked": 80,
+  "prediction_rows_checked": 13173120,
+  "metric_rows_checked": 1040,
+  "summary_rows_checked": 80,
+  "aggregate_groups_checked": 16,
+  "raw_sha256_matches": {
+    "train": true,
+    "test": true
+  },
+  "failure_count": 0,
+  "failures": []
+}

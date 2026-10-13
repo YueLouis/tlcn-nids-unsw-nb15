@@ -1,5 +1,8 @@
 # PHÂN CÔNG NHÓM
 
+> Hồ sơ lịch sử tháng 9, giữ nguyên nội dung tại thời điểm lập. Trạng thái hiện tại: `docs/management/TIEN_DO_HIEN_TAI_20261013.md` (tính từ repo). Xác nhận nhóm mới ghi riêng, không điền chữ ký vào mẫu cũ.
+
+
 > **Bản đồ hiện tại:** đọc `docs/START_HERE_NHOM.md` trước. Bảng này giữ phân công nền; trạng thái và đầu việc đợt 2 được cập nhật trong bản đồ dự án.
 
 **Đề tài:** So sánh supervised learning và anomaly detection cho NIDS trên

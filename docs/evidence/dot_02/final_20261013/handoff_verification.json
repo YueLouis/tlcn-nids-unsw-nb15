@@ -1,0 +1,47 @@
+{
+  "verified_on": "2026-10-13",
+  "pdfs": {
+    "NhomTLCN_TramAnh_VuongThu_TrongTin_dot1.pdf": {
+      "sha256": "8a9b77a5cc9c120f6a0d3c603ad69d6eb75a53ef8281ef21f58a754f24739ae6",
+      "pages": 20,
+      "root_equals_repo": true
+    },
+    "NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf": {
+      "sha256": "77e2a953e30f463aa084a34ec9b44b900bb350a8673ae522d713a6239d190a0c",
+      "pages": 30,
+      "root_equals_repo": true
+    }
+  },
+  "dot1_original_unchanged": true,
+  "moves_verified": 1403,
+  "move_failures": [],
+  "copied_evidence_matches": true,
+  "helper_folders_found": [],
+  "raw_sha_matches": {
+    "train": true,
+    "test": true
+  },
+  "numeric_audit_failures": 0,
+  "pdf_layout": {
+    "pages": 30,
+    "page_edge_violations": [],
+    "significant_latex_warnings": [],
+    "has_full_plan": true,
+    "has_split_theory_progress": true,
+    "has_metric_tables": true,
+    "question_mark_refs": []
+  },
+  "technical_check": "PASS: 80 runs, 320 required artifacts, unique IDs, manifest, 17 tests, validator, aggregate table and PDF",
+  "open_items": [
+    "related work full-text review",
+    "detailed error and overlap sensitivity analysis",
+    "complete prototype/demo and final deliverables"
+  ],
+  "direct_feedback_mapping": {
+    "original_annotated_pdf": "07_Thu_tu_voi_giang_vien/NhomTLCN_TramAnh_VuongThu_TrongTin_dot1-cmts.pdf",
+    "report_section": "3.1",
+    "printed_page": 7,
+    "physical_page": 12
+  },
+  "verification_scope": "local artifact audit; remote delivery recorded separately"
+}

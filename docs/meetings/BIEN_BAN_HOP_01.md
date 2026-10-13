@@ -1,5 +1,8 @@
 # BIÊN BẢN HỌP NHÓM SỐ 01 - KICKOFF VÀ GATE 1
 
+> Hồ sơ lịch sử tháng 9, giữ nguyên nội dung tại thời điểm lập. Trạng thái hiện tại: `docs/management/TIEN_DO_HIEN_TAI_20261013.md` (tính từ repo). Xác nhận nhóm mới ghi riêng, không điền chữ ký vào mẫu cũ.
+
+
 **Trạng thái:** DRAFT - chỉ đổi thành FINAL sau khi đủ ba thành viên xác nhận  
 **Thời gian:** ......, ngày ..../09/2026  
 **Địa điểm/hình thức:** ........................................................  
@@ -61,4 +64,3 @@
 - Nguyễn Trọng Tín: ................................ ngày ..../09/2026
 - Trịnh Trâm Anh: .................................. ngày ..../09/2026
 - Hoàng Văn Vương Thu: ............................. ngày ..../09/2026
-

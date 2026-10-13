@@ -62,7 +62,7 @@ def main() -> None:
         print(result.stdout)
         print(result.stderr)
         fail("protocol validator failed")
-    pdf = ROOT / "output" / "pdf" / "BAO_CAO_TLCN_TICH_LUY_DOT_02.pdf"
+    pdf = ROOT / "output" / "pdf" / "NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf"
     if not pdf.exists() or pdf.stat().st_size < 100000:
         fail("final PDF missing or unexpectedly small")
     tex = ROOT / "docs" / "report_cumulative" / "BAO_CAO_TLCN_TICH_LUY_DOT_02.tex"

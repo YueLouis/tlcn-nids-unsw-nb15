@@ -1,6 +1,6 @@
 # Bắt đầu làm việc cùng nhóm
 
-**Cập nhật:** 29/09/2026
+**Cập nhật:** 13/10/2026
 
 ## 1. Lấy code về máy
 
@@ -45,11 +45,10 @@ hoặc model nặng.
 
 ## 5. Trạng thái hiện tại
 
-- Có code bốn model, 80 run và bảng tổng hợp qua năm seed.
-- Có 9 unit test; validator xác nhận ma trận 80 run.
-- Có nguồn báo cáo đợt 2; còn việc audit sâu, biên tập và phân tích kết quả.
-- Gate 1/Gate 2 vẫn cần xác nhận thực tế của cả ba thành viên.
+- 80 run, 320 artifact, 17 test PASS; validator xác nhận 80 ID.
+- PDF đợt 2 theo tên nhóm ở `../output/pdf/`; nguồn ở `report_cumulative/`.
+- Audit số liệu ngày 13/10 khớp predictions; bản ghi/log ở `evidence/dot_02/final_20261013/`.
+- Nhóm trưởng cung cấp xác nhận cả ba thành viên; không tạo chữ ký thay thành viên.
+- Related-work toàn văn, phân tích lỗi sâu và demo hoàn chỉnh còn mở, đã ghi trong PDF.
 
-Đọc thêm [protocol](protocol/RQ_TO_EVIDENCE.md),
-[schema đầu ra](protocol/RESULT_SCHEMA.md) và
-[data contract](evidence/dot_02/DATA_CONTRACT.md).
+Đọc [tiến độ hiện tại](management/TIEN_DO_HIEN_TAI_20261013.md), [protocol](protocol/RQ_TO_EVIDENCE.md), [schema](protocol/RESULT_SCHEMA.md), [data contract](evidence/dot_02/DATA_CONTRACT.md) và [tài liệu nền](references/README.md).

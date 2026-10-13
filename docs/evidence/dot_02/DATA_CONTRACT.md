@@ -1,4 +1,4 @@
-# Data Contract - Phase 2 Draft
+# Data Contract - Phase 2 (13/10/2026)
 
 ## Dataset identity
 
@@ -20,7 +20,7 @@ The recorded `duplicate = 0` counts whole rows **including the `id` column**, so
 
 Cross-split overlap over the 42 features is 8,541 / 82,332 test rows (10.4%). After the LOACO held-out class is removed from development, the surviving overlap is 7.5% for Reconnaissance, 48.9% for DoS, and 16.2% for Exploits.
 
-This overlap is a property of network-flow data, not evidence of train/test leakage: repeated feature vectors are distinct flows that the dataset records separately. The group keeps the official UNSW-NB15 split unchanged and reports the overlap as supporting evidence for RQ2 rather than as a defect.
+The feature overlap is observed in the official split. Its origin and causal effect on metrics have not been established, and the counts do not prove independent traffic events. The group keeps the declared official split and reports overlap as a limitation of independence/generalization. Pipeline leakage tests establish partition rules, not that overlap is harmless. A sensitivity experiment is still open.
 
 ## Feature contract
 
@@ -51,4 +51,4 @@ The raw schema contains 45 columns. `id`, `label`, and `attack_cat` are metadata
 
 ## Review state
 
-This is a Phase 2 working draft. It becomes PASS only after Trinh Tram Anh and Hoang Van Vuong Thu review the schema and all three members record their decision in the Gate 2 checklist.
+The team lead reported on 13 October 2026 that all three members confirmed the material. The record is in final_20261013/XAC_NHAN_NHOM_20261013.md; individual signatures have not been fabricated. Technical checks and this human confirmation are separate. This record does not imply lecturer approval.

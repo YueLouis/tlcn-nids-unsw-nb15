@@ -1,5 +1,8 @@
 # GANTT CHART THEO NGÀY
 
+> Đây là baseline dự kiến của toàn đề tài, không phải nhật ký thực hiện. Bốn baseline và 80 run đã có artifact ngày 26/09, sớm hơn cửa sổ dự kiến. Tiến độ thực tế và phần còn thiếu: `TIEN_DO_HIEN_TAI_20261013.md`. Không thay đổi ngày của 80 run để khớp Gantt.
+
+
 **Ngày bắt đầu thực tế:** 17/08/2026  
 **Ngày hoàn thành dự kiến:** 23/12/2026  
 **Lưu ý:** nhóm đăng ký thực hiện từ 17/08/2026. Báo cáo này hiệu chỉnh lại

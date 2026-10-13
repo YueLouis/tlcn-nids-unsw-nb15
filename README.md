@@ -32,8 +32,9 @@ Ba câu hỏi nghiên cứu chính và bằng chứng cần thu thập được 
   `run.json`, `metrics.csv`, `predictions.csv` và `model_bundle.joblib`. Bản tổng hợp
   mean/std đợt 2 nằm tại
   `docs/reports/BAO_CAO_TIEN_DO_DOT_02.md`.
-- Gate 1/Gate 2 còn chờ review của nhóm. Các điểm cần kiểm tra thêm, gồm
-  duplicate/overlap dữ liệu và định nghĩa metric, được ghi trong phân công đợt 2.
+- Nhóm trưởng xác nhận ngày 13/10/2026 rằng cả ba thành viên đã thống nhất nội dung; bản ghi tại `docs/evidence/dot_02/final_20261013/XAC_NHAN_NHOM_20261013.md`. Không tạo chữ ký thay thành viên.
+- Bản hiện tại: `output/pdf/NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf` (30 trang). Kiểm tra lại: 80 run, 320 artifact, 17 test; audit prediction khớp.
+- Còn mở: ma trận so sánh toàn văn, phân tích lỗi sâu/độ nhạy overlap, demo hoàn chỉnh và bộ cuối đề tài. Xem `docs/management/TIEN_DO_HIEN_TAI_20261013.md`.
 
 ## Cấu trúc repository
 
@@ -125,7 +126,7 @@ thử. Không chạy smoke vào `results/runs/` chứa 80 run chuẩn.
 
 Chỉ chạy bước này sau khi đã nhận đủ `results/runs/` và bản PDF từ Drive,
 hoặc tự tái tạo chúng. Bản PDF đặt tại
-`output/pdf/BAO_CAO_TLCN_TICH_LUY_DOT_02.pdf`.
+`output/pdf/NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf`.
 
 ```powershell
 $env:PYTHONPATH = "src"

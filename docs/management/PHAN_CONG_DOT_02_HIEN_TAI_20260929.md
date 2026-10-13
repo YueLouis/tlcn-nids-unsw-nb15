@@ -1,5 +1,8 @@
 # PHÂN CÔNG ĐỢT 2 - TRẠNG THÁI VÀ VIỆC CẦN CHỐT
 
+> Hồ sơ lịch sử tháng 9, giữ nguyên nội dung tại thời điểm lập. Trạng thái hiện tại: `docs/management/TIEN_DO_HIEN_TAI_20261013.md` (tính từ repo). Xác nhận nhóm mới ghi riêng, không điền chữ ký vào mẫu cũ.
+
+
 **Ngày kiểm tra:** 29/09/2026  
 **Đề tài:** So sánh supervised learning và anomaly detection cho NIDS trên UNSW-NB15 bằng LOACO  
 **Mốc nội bộ đề xuất:** chốt review và bản PDF trước 07/10/2026; mốc gửi dự kiến 12/10/2026 theo kế hoạch nội bộ hiện có, chưa phải xác nhận mới từ giảng viên.  
