@@ -47,3 +47,21 @@ Cập nhật đối chiếu lúc 04:05 ngày 14/10/2026:
 Cập nhật 04:10 ngày 14/10: đã chuyển riêng thư mục LR-XGB-S72 rỗng ID 1wjeFHtMZYKYCrTcHlArgtCG7-wFFRGhQ vào thùng rác có thể khôi phục; giữ bản ID 1Vo31PDb22YN7ExBgJ6jKsKuQLRhGAAql đã đọc đủ bốn artifact. Giao diện xác nhận đã chuyển thư mục vào thùng rác, có nút Hủy. Chưa dọn các bản còn lại.
 
 Phiếu Drive cùng ID hiển thị sửa đổi 04:06 và thông báo Đã tải lên. Bản trên Drive là nội dung local lúc 04:05; phần dọn thư mục rỗng vừa nêu cần cập nhật vào phiên bản sau. Hai phần ZIP runs vẫn chưa tải được, không xem đó là thiếu dữ liệu từ xa.
+
+## Đối chiếu Drive qua thư mục đồng bộ - 04:35 ngày 14/10/2026
+
+- Đã đọc toàn bộ thư mục  5_Ket_qua_Thi_nghiem/runs qua bản đồng bộ Drive: 130 thư mục trước dọn, 496 tệp artifact; 496/496 tệp khớp SHA-256 với bộ local.
+- Sau khi giữ một bản chuẩn cho mỗi tên run và mỗi artifact, Drive còn đúng **80 thư mục duy nhất / 320 artifact**, không có tệp sai hash. Bằng chứng chi tiết: $taskEvidence\DRIVE_RETAINED_VERIFY_20261014_0434.json.
+- 176 artifact dư, 50 thư mục run dư và 26 tài liệu trùng đã được gom vào gói BAN_TRUNG_DA_DOI_CHIEU_20261014_0430 để chuyển vào thùng rác khôi phục được sau bước xác nhận cuối. Không dọn theo tên; các bản được chọn đều đã đối chiếu hash.
+- Một model bundle đọc lần đầu bị lỗi hệ thống tệp; đọc lại bằng bản sao tạm cho SHA-256 3b1223153bd1fe996d6fa629d8112d6a7dc098a2119fc741447b91a70c47ac6f, khớp local.
+- Bản giữ qua ổ Drive đã kiểm đủ 80/320; đang chờ xác nhận web cập nhật hết thao tác đồng bộ.
+
+
+## Xác nhận cuối sau dọn bản trùng - 04:40 ngày 14/10/2026
+
+- Web Drive sau làm mới còn đúng 80 thư mục run chuẩn; thư mục rỗng/bản trùng đã biến mất khỏi danh sách runs.
+- Gói BAN_TRUNG_DA_DOI_CHIEU_20261014_0430 đã chuyển vào Thùng rác lúc 04:34 và còn nút khôi phục; không xóa vĩnh viễn.
+- Bản giữ đã kiểm 80 thư mục / 320 artifact, toàn bộ hash khớp local. Phiếu PHIEU_BAN_GIAO_20261013.md đã cập nhật và bản local/Drive đồng nhất SHA-256.
+- Các tài liệu học tập nhẹ còn thiếu đã bổ sung vào thư mục chung; không đưa thư mục hỗ trợ cá nhân hoặc lịch sử nháp lên Drive/GitHub.
+- Trạng thái này mô tả kiểm chứng kỹ thuật và bàn giao tệp; không thay cho việc nhóm tự đọc, giải thích và giảng viên xác nhận.
+
