@@ -1,8 +1,8 @@
 # Xác nhận nội dung đợt 2
 
-**Cập nhật sau trao đổi ngày 17/10/2026:** nhóm trưởng cho biết chưa chắc mức hiểu của từng thành viên; cả nhóm dự kiến tự rà soát đợt 1 và đợt 2 ngày 18/10 sau khi nghỉ ngơi. Do đó, lời báo đã đồng ý trước đó không được dùng để kết luận đã đọc, giải thích được hoặc nghiệm thu nội dung. **Kiểm kỹ thuật đã thực hiện; rà soát nội dung của nhóm còn mở; email giữ nháp, chưa gửi.** PDF 32 trang cập nhật ngày 17/10 làm rõ trạng thái chờ rà soát và phân công theo kế hoạch; số liệu giữ nguyên. SHA-256 hiện tại `043cbf400bfd729ef53f13775250b71900663ef042e1eae6459f81fc98b9487b`. Email chỉ giữ nháp theo yêu cầu mới nhất; chờ quyết định sau khi nhóm xem. Xem `HUONG_DAN_RA_SOAT_HAI_DOT_20261018.md` trong thư mục quản lý nhóm.
+**Hiện tại 17/10:** bản 37 trang mới hiệu chỉnh đang chờ nhóm đọc lại; mức hiểu/đóng góp chưa xác minh. Email chỉ nháp. Các lời báo đồng ý bên dưới thuộc bản trước, không áp sang bản mới.
 
-Phần bên dưới giữ các mốc kiểm tra và lời báo trước đó để truy vết; trạng thái hiện tại theo cập nhật trên.
+## Ghi nhận lịch sử
 
 Ngày ghi nhận: 13/10/2026 (Asia/Saigon).
 

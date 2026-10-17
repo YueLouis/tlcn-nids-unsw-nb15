@@ -8,7 +8,7 @@
 
 **Chuỗi trả lời:** `Re: [TLCN] Báo cáo tiến độ 4 tuần lần 1 - Nhóm Nguyễn Trọng Tín`. Giữ chuỗi gốc theo yêu cầu của Thầy ngày 16/09; nội dung và tệp đính kèm ghi rõ đợt 2. Bản nháp thư riêng trước đó được đổi tên thành bản lưu nội dung, không dùng để gửi.
 
-**Đính kèm:** `NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf` (32 trang, lấy từ `02_Bao_cao`).
+**Đính kèm:** `NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf` (37 trang, lấy từ `02_Bao_cao`).
 
 ## Cách gửi và quyết định hiện tại
 
@@ -25,10 +25,10 @@ Em là Nguyễn Trọng Tín (MSSV 23162102), đại diện nhóm cùng Trịnh 
 Báo cáo được trình bày tích lũy từ đợt 1 và cập nhật theo các góp ý của Thầy trong thư ngày 19/09 và bản PDF có nhận xét, gồm:
 
 - Bảng đối chiếu góp ý và vị trí chỉnh sửa tại Mục 3.1; tiến độ từng nội dung được tách rõ đầu ra đã có, phần còn thiếu và tỷ lệ hoàn thành.
-- Mô tả cụ thể các kịch bản thực nghiệm, cấu trúc JSON/CSV lưu kết quả và tiêu chí kiểm thử.
-- Kết quả 80 lượt chạy, phân tích lỗi ban đầu theo nhóm tấn công, dẫn nguồn và các giới hạn còn tồn tại.
+- Mô tả cơ chế bốn mô hình, quy trình chia dữ liệu/chọn ngưỡng, cấu trúc JSON/CSV và tiêu chí kiểm thử.
+- Kết quả 80 lượt chạy, Precision/AP/FPR/Recall/UADR, so sánh hai mức FPR mục tiêu 1% và 5%, phân tích lỗi ban đầu theo nhóm tấn công, dẫn nguồn và các giới hạn còn tồn tại.
 
-Bản PDF được cập nhật ngày 17/10/2026. Nhóm dự kiến họp ngày 18/10 để tự rà soát phương pháp, kết quả và đối chiếu phần đóng góp của từng thành viên; tiếp tục xử lý góp ý của Thầy khi nhận được. Trạng thái rà soát nội bộ còn mở, các nội dung chưa hoàn thành và kế hoạch tiếp theo được ghi riêng trong báo cáo.
+Bản PDF 37 trang được hiệu chỉnh ngày 17/10/2026; dữ liệu và kết quả chạy gốc được giữ nguyên. Nhóm dự kiến họp ngày 18/10 để tự rà soát phương pháp, kết quả và đối chiếu phần đóng góp của từng thành viên; tiếp tục xử lý góp ý của Thầy khi nhận được. Trạng thái rà soát nội bộ còn mở, các nội dung chưa hoàn thành và kế hoạch tiếp theo được ghi riêng trong báo cáo.
 
 Em gửi kèm bản PDF đợt 2. Hồ sơ và mã nguồn của nhóm được lưu tại:
 

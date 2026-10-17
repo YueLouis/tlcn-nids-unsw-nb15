@@ -1,6 +1,6 @@
 # Gate 1 - Protocol
 
-**Cập nhật sau trao đổi ngày 17/10/2026:** nhóm trưởng cho biết chưa chắc mức hiểu của từng thành viên; cả nhóm dự kiến tự rà soát đợt 1 và đợt 2 ngày 18/10 sau khi nghỉ ngơi. Do đó, lời báo đã đồng ý trước đó không được dùng để kết luận đã đọc, giải thích được hoặc nghiệm thu nội dung. **Kiểm kỹ thuật đã thực hiện; rà soát nội dung của nhóm còn mở; email giữ nháp, chưa gửi.** PDF 32 trang ngày 14/10 giữ nguyên để nhóm kiểm lại. Xem `HUONG_DAN_RA_SOAT_HAI_DOT_20261018.md` trong thư mục quản lý nhóm.
+**Cập nhật sau trao đổi ngày 17/10/2026:** nhóm trưởng cho biết chưa chắc mức hiểu của từng thành viên; cả nhóm dự kiến tự rà soát đợt 1 và đợt 2 ngày 18/10 sau khi nghỉ ngơi. Do đó, lời báo đã đồng ý trước đó không được dùng để kết luận đã đọc, giải thích được hoặc nghiệm thu nội dung. **Kiểm kỹ thuật đã thực hiện; rà soát nội dung của nhóm còn mở; email giữ nháp, chưa gửi.** PDF hiện 37 trang, hiệu chỉnh toàn văn ngày 17/10; nhóm còn đọc lại bản này. Xem `../management/HUONG_DAN_RA_SOAT_HAI_DOT_20261018.md`.
 
 Phần bên dưới giữ các mốc kiểm tra và lời báo trước đó để truy vết; trạng thái hiện tại theo cập nhật trên.
 

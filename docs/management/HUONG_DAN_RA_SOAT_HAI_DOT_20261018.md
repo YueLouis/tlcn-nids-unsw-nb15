@@ -5,9 +5,9 @@ Trạng thái ngày 17/10: nhóm chưa hoàn tất tự kiểm mức hiểu. Đ�
 ## Mở đúng hai bản
 
 - Đợt 1: `NhomTLCN_TramAnh_VuongThu_TrongTin_dot1.pdf`, 20 trang, bản lịch sử. Các nhận xét của thầy giữ ở `07_Thu_tu_voi_giang_vien`.
-- Đợt 2: `NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf`, 32 trang, tích lũy từ đầu đến mốc 11/10; hoàn thiện kỹ thuật 14/10.
-- Đọc Mục 3.1 đợt 2 (trang vật lý 12) cùng comment gốc; tiếp đến Chương 4-7, Mục 7.4 (trang 27), kết luận (trang 28) và Phụ lục C (trang 32).
-- Kết luận PDF mô tả trạng thái xác nhận tại ngày 14/10. Chỉ cập nhật trạng thái nghiệm thu sau khi nhóm thực sự đọc lại; không xem ghi chú cũ hoặc kết quả test là bằng chứng từng người đã hiểu.
+- Đợt 2: `NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf`, 37 trang, tích lũy từ đầu đến mốc 11/10; hiệu chỉnh toàn văn ngày 17/10.
+- Đọc Mục 3.1 đợt 2 (trang vật lý 15) cùng comment gốc; tiếp đến Chương 4-7, Mục 7.4 (trang 32), kết luận (trang 33) và Phụ lục C (trang 37).
+- Mục 3.4 PDF ghi rõ nhóm còn rà soát nội dung ở thời điểm 17/10. Chỉ cập nhật trạng thái nghiệm thu sau khi nhóm thực sự đọc lại; không xem ghi chú cũ hoặc kết quả test là bằng chứng từng người đã hiểu.
 
 ## Chia phần theo phân công hiện có
 

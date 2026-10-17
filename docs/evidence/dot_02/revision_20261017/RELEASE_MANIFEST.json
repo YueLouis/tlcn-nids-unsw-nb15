@@ -37,7 +37,8 @@
     "docs/report_cumulative/figures/nids_concept.tex": "b3ff01beeb9d1ae556c3f0b858e0c5d6a46bb90c7a7e82be290ada93bc51d4e7",
     "docs/report_cumulative/assets/final_20261013/closed_set_fpr.png": "85b56de6b861ff1993e718e7c6bb7a8921cde531c58e5352e8b71ab2e0f0e2a1",
     "docs/report_cumulative/assets/final_20261013/loaco_uadr.png": "5b6f3e22b9b417f3d00cff881a7732737925f64a9dbdae56dfc779c2dd12a755",
-    "requirements.txt": "5876af5153d00fd80a9928d449828b53ea2b137b6eeee03480cfa2a02b665f9c"
+    "requirements.txt": "5876af5153d00fd80a9928d449828b53ea2b137b6eeee03480cfa2a02b665f9c",
+    "requirements-repro.txt": "73d27b93edc7c013fffe20d9f9296475338bf2f5df653179bcbe7b44863bb54e"
   },
   "protected_original_files_sha256": {
     "results/runs/CS-AE-S42/metrics.csv": "f032c8e4d45c85db5f331c29ebcee14199acdc82ff92d2fd3e56d645dc1d7e71",

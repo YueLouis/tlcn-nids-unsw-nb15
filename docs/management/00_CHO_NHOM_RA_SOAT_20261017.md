@@ -1,13 +1,17 @@
-# Trạng thái hiện tại trước nộp - 17/10/2026
+# Trạng thái bản đợt 2 hiện hành - 17/10/2026
 
-**Email giữ nháp, chưa gửi. Nhóm dự kiến tự rà soát hai đợt ngày 18/10/2026 sau khi nghỉ ngơi.** Cập nhật này thay cho cách hiểu các ghi nhận đồng ý trước đó là nhóm đã hoàn tất đọc và nghiệm thu nội dung. Nhóm trưởng hiện chưa chắc mức hiểu từng thành viên; chưa xác nhận thay cho từng người.
+**Email chỉ giữ nháp để nhóm xem trước; chưa gửi hoặc hẹn giờ.** Nhóm dự kiến đọc lại hai đợt ngày 18/10 sau khi nghỉ ngơi. Đồng ý bản trước không chứng minh đã hiểu hoặc đã đọc bản hiệu chỉnh này.
 
-Kiểm kỹ thuật ngày 17/10: 17 test và validator đạt; 80 run/320 artifact đủ. Tính lại 13.173.120 dòng prediction, 1.040 dòng metric, 80 dòng tổng hợp và 16 nhóm mean/std không phát hiện sai lệch. Tái tạo ba bảng phân tích lỗi khớp bản lưu. Không huấn luyện lại hoặc sửa dữ liệu/kết quả gốc.
+PDF hiện tại: `NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf`, 37 trang, 419,315 byte; SHA-256 `edafd81b6d4373fdae40c3086569254130a3148840fd37e026acba93c8a7c0dd`. Đã hiệu chỉnh toàn văn, không còn là lượt chỉ đổi năm trang trạng thái của bản 32 trang.
 
-PDF đợt 2 cập nhật ngày 17/10, 32 trang, 385,448 byte, SHA-256 `043cbf400bfd729ef53f13775250b71900663ef042e1eae6459f81fc98b9487b`. Chỉ năm trang bìa/trạng thái/phân công được cập nhật; văn bản 27 trang còn lại và số liệu giữ nguyên. Gate 1/Gate 2 ghi rõ chưa nghiệm thu nội dung; phân công là kế hoạch, chưa chứng nhận đóng góp thực tế. Email được giữ nháp theo yêu cầu mới nhất, chờ nhóm xem và quyết định. Đợt 1 lịch sử không thay đổi.
+Đã đọc/render toàn bộ 37 trang; 384 giá trị in trong bốn bảng kết quả khớp mức làm tròn; CSV hai target có 32 dòng nhóm/mức. Đối chiếu hash 334 tệp gồm 320 artifact, hai CSV raw, mã và test: không đổi. Audit prediction trước hiệu chỉnh đã tính 13.173.120 dòng và 1.040 metric; không huấn luyện lại. Kết quả 17 test đạt được giữ từ log 13/10, không chạy lại trong lượt chỉnh tài liệu.
 
-Nguồn vẫn có giới hạn: 12/13 có đối chiếu đoạn nguồn; S07 chỉ abstract, chưa toàn văn; chưa nghiệm thu toàn bài của từng thành viên. Phân tích sâu, độ nhạy overlap và demo chưa hoàn tất. Những mục này phải giữ đúng trạng thái khi trình bày với giảng viên.
+Nhóm chưa hoàn tất tự rà soát/giải thích và đối chiếu đóng góp; Gate 1/Gate 2 nội dung còn mở. S07 mới đối chiếu abstract, chưa có toàn văn; không coi kiểm metadata/đoạn nguồn là nghiệm thu toàn bài. Phân tích PR/score distribution, giải thích feature, độ nhạy overlap, demo và bộ cuối đề tài còn là bước tiếp nối.
 
-Mai mở `HUONG_DAN_RA_SOAT_HAI_DOT_20261018.md`: đọc bảng đối chiếu góp ý, phần mình phụ trách và tự giải thích bằng chứng. Chỗ chưa hiểu/chưa thực hiện ghi lại trung thực. Chỉ ghi nhận rà soát sau khi thực sự thực hiện; kiểm lại PDF, email và các bản sao nếu có sửa đổi.
+## Đồng bộ bản hiện hành
 
-Mail đã bỏ câu cả ba thành viên đã rà soát; vẫn lưu nháp cùng PDF đợt 2. Chưa có xác nhận giảng viên duyệt.
+Drive: PDF 37 trang và gói nguồn đã cập nhật, tải lại từ máy chủ và SHA-256 khớp local. Gmail: mở lại từ Thư nháp xác nhận nội dung 37 trang và một PDF đợt 2 mới (410K); chưa gửi, chưa hẹn giờ. GitHub main đã push commit 3995960ce945fe599a3a04aa37dcd3b189ef1f9f; HEAD từ xa khớp local. Nguồn, bảng hai target và manifest/checks phát hành đã có trong commit này.
+
+Đợt 1 vẫn 20 trang, SHA-256 `8a9b77a5cc9c120f6a0d3c603ad69d6eb75a53ef8281ef21f58a754f24739ae6`. Đợt 2 root/repo đã đồng nhất. Các kiểm toàn bộ 80 run/320 hash trên Drive thuộc mốc 14/10; lượt hiệu chỉnh này kiểm PDF và tài liệu thay đổi, không tải lại bộ run.
+
+Chi tiết thay đổi: `../reports/DOT_02_CAP_NHAT_20261017.md`. Hướng dẫn họp: `HUONG_DAN_RA_SOAT_HAI_DOT_20261018.md`. Không có xác nhận giảng viên đã duyệt hoặc ký nghiệm thu nội dung thay thành viên.
