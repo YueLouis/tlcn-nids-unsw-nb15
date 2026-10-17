@@ -1,7 +1,13 @@
 # Nguồn báo cáo tích lũy
 
-Đợt 1 giữ bản lịch sử; đợt 2 cập nhật từ nền đợt 1. PDF nộp: `../../output/pdf/NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf` (32 trang).
+Đợt 1 giữ bản lịch sử. Đợt 2 hiện 37 trang, 419,315 byte; SHA-256 `edafd81b6d4373fdae40c3086569254130a3148840fd37e026acba93c8a7c0dd`; PDF bàn giao ở `../../output/pdf/NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf`.
 
-Biên dịch với XeLaTeX/MiKTeX. Để tránh aux/toc cũ và không làm bẩn workspace, chép file `.tex` cùng `assets/` vào một thư mục build ngoài workspace, chạy XeLaTeX 4 lượt ở thư mục đó: `xelatex -interaction=nonstopmode -halt-on-error -no-shell-escape BAO_CAO_TLCN_TICH_LUY_DOT_02.tex`. Kiểm tra log, render PDF và đối chiếu trước khi cập nhật bản chính.
+Biên dịch bằng XeLaTeX/MiKTeX. Sao chép **toàn bộ thư mục này**, gồm các module `.tex`, `figures/` và `assets/`, sang thư mục build ngoài workspace. Từ thư mục sao chép, chạy bốn lượt:
 
-Hình kết quả ở `assets/final_20261013/` lấy từ metric thật. Log, metadata và audit prediction ở `../evidence/dot_02/final_20261013/`. Không dùng các script dựng thẻ PASS cũ làm bằng chứng terminal.
+```text
+xelatex -interaction=nonstopmode -halt-on-error -no-shell-escape BAO_CAO_TLCN_TICH_LUY_DOT_02.tex
+```
+
+Đọc log để xử lý lỗi/tham chiếu; render từng trang trước khi thay PDF chính. Không chỉ sao chép tệp TeX chính: báo cáo dùng `model_mechanisms.tex`, `related_work_comparison.tex`, `rq3_two_targets.tex` và ba hình TikZ trong `figures/`. Các hình kết quả ở `assets/final_20261013/` sinh từ metric thật.
+
+Log/test/audit gốc tại `../evidence/dot_02/final_20261013/`; bảng hai target tại `../reports/DOT_02_TWO_TARGETS.csv`; ghi chú thay đổi tại `../reports/DOT_02_CAP_NHAT_20261017.md`. Manifest `../evidence/dot_02/revision_20261017/RELEASE_MANIFEST.json` mô tả snapshot hiện tại, không chứng nhận commit mã lịch sử của các run.

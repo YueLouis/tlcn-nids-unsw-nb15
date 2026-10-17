@@ -1,0 +1,40 @@
+\subsection{Random Forest: tổng hợp nhiều cây}
+Mỗi cây được học từ một mẫu bootstrap của tập train; tại mỗi nút, một tập con đặc trưng ngẫu nhiên được xét để chia. Kết hợp các cây giúp giảm độ phụ thuộc vào một cây riêng lẻ \cite{breiman2001}. Trong triển khai, RF nhận Normal và known Attack đã mã hóa, dùng 300 cây, tối thiểu hai mẫu ở lá và trọng số lớp \texttt{balanced\_subsample}. Score là trung bình xác suất lớp Attack do các cây trả về:
+\begin{equation}
+s_{RF}(\mathbf{x})=\frac{1}{B}\sum_{b=1}^{B}p_b(y=1\mid\mathbf{x}),\qquad B=300.
+\end{equation}
+Đây là xác suất ước lượng của mô hình; chưa có bước hiệu chỉnh xác suất độc lập. Nhãn dự đoán vẫn dùng ngưỡng chọn trên Normal validation, không mặc định 0.5. Một lớp bị giữ lại có thể được dự đoán Attack nếu chia sẻ đặc trưng với known attacks; điều đó không chứng minh mô hình nhận biết bản chất của mọi tấn công mới.
+
+\subsection{XGBoost: cộng dần các cây sửa sai}
+XGBoost thêm cây theo từng vòng để giảm hàm mất mát có điều chuẩn, thay vì xây các cây độc lập. Dạng tổng quát của mục tiêu gồm lỗi dự đoán và độ phức tạp của các cây \cite{chen2016}:
+\begin{equation}
+\mathcal{L}=\sum_i\ell(y_i,\hat y_i)+\sum_k\Omega(f_k),\qquad
+F_K(\mathbf{x})=b+\sum_{k=1}^{K}\eta f_k(\mathbf{x}).
+\end{equation}
+Với phân loại nhị phân, $b$ là điểm khởi tạo; score từ \texttt{predict\_proba} là xác suất lớp Attack; liên kết logistic biến điểm cộng cây thành giá trị trong khoảng $[0,1]$. Cấu hình dùng 350 cây, độ sâu tối đa 6 và learning rate 0.08; lấy mẫu hàng/cột 0.85 để hạn chế độ phụ thuộc của từng cây. Không có tìm kiếm siêu tham số hay hiệu chỉnh xác suất được báo cáo. XGB có thể học mẫu của bộ dữ liệu hiện tại; hiệu năng trên một lớp held-out không tự bảo đảm khái quát sang mạng vận hành khác.
+
+\subsection{Isolation Forest: độ dài đường cô lập}
+Isolation Forest chọn ngẫu nhiên đặc trưng và điểm chia; mẫu có cấu trúc khác với vùng dữ liệu phổ biến thường bị cô lập sau ít bước hơn. Bài gốc liên hệ độ dài đường trung bình $E[h(\mathbf{x})]$ với điểm bất thường qua hệ số chuẩn hóa $c(n)$ \cite{liu2008}:
+\begin{equation}
+s_{\mathrm{paper}}(\mathbf{x},n)=2^{-E[h(\mathbf{x})]/c(n)}.
+\end{equation}
+Công thức trên giải thích cơ chế, không được ghi nhầm là giá trị score đã xuất. Adapter trong mã dùng $s_{IF}(\mathbf{x})=-\texttt{decision\_function}(\mathbf{x})$ để thống nhất chiều score cao là bất thường hơn. IF và bộ tiền xử lý chỉ fit Normal train; có 300 cây và \texttt{max\_samples=auto}. Giá trị \texttt{contamination=auto} xác định offset mặc định của thư viện, còn quyết định Attack trong benchmark dùng ngưỡng validation của nhóm. Đường cô lập ngắn không đồng nghĩa có tấn công; những biến thể Normal lạ cũng có thể tạo FP.
+
+\subsection{Autoencoder: nén rồi tái tạo đầu vào}
+AE học ánh xạ $\hat{\mathbf{x}}=g_\theta(f_\theta(\mathbf{x}))$ từ Normal train; sai số tái tạo lớn được dùng làm dấu hiệu bất thường. Abstract của Sakurada và Yairi nêu hướng phát hiện bất thường bằng giảm chiều phi tuyến \cite{sakurada2014}; các chi tiết triển khai sau đây được đối chiếu trực tiếp với mã của nhóm, không quy cho bài chưa đọc toàn văn.
+\begin{equation}
+s_{AE}(\mathbf{x})=\frac{1}{D}\sum_{j=1}^{D}(x_j-\hat{x}_j)^2.
+\end{equation}
+Mã dùng \texttt{MLPRegressor} học tái tạo đầu vào, các lớp ẩn $(64,16,64)$ dùng ReLU, đầu ra tuyến tính và bộ tối ưu Adam. $D$ là chiều sau one-hot encoding, thay đổi theo vùng fit; không phải 42 feature gốc. Ví dụ CS-AE-S42 có $D=65$, fit 44.800 Normal record. Hình~\ref{fig:ae} diễn tả đúng cấu trúc ví dụ này.
+\begin{figure}[H]\centering
+\begin{tikzpicture}[node distance=.75cm,>=Latex,box/.style={draw=HCMUTEDark,rounded corners,fill=HCMUTELight,minimum height=1.2cm,text width=1.75cm,align=center,font=\small}]
+\node[box] (in) {Đầu vào\\65};
+\node[box,right=of in] (h1) {Mã hóa\\64};
+\node[box,right=of h1,fill=WarnOrange!15] (b) {Nút thắt\\16};
+\node[box,right=of b] (h2) {Giải mã\\64};
+\node[box,right=of h2] (o) {Tái tạo\\65};
+\draw[->] (in)--(h1);\draw[->] (h1)--(b);\draw[->] (b)--(h2);\draw[->] (h2)--(o);
+\end{tikzpicture}
+\caption{AE của CS-AE-S42: 65--64--16--64--65; score là MSE giữa đầu vào và bản tái tạo.}\label{fig:ae}
+\end{figure}
+Early stopping dùng 10\% của Normal train bên trong quá trình fit, tách khỏi Normal validation chọn ngưỡng. Mẫu tấn công có thể được tái tạo tốt và bị bỏ sót; MSE còn phụ thuộc chuẩn hóa và cách biểu diễn categorical. Vì vậy AE không được coi mặc nhiên phát hiện tốt mọi lớp chưa thấy.

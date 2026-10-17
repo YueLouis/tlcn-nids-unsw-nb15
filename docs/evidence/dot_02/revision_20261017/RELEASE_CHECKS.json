@@ -1,0 +1,2381 @@
+{
+  "date": "2026-10-17",
+  "pdf_sha256": "edafd81b6d4373fdae40c3086569254130a3148840fd37e026acba93c8a7c0dd",
+  "pdf_pages": 37,
+  "visual_review_physical_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37
+  ],
+  "automated_check_count": 210,
+  "failure_count": 0,
+  "printed_number_checks": [
+    {
+      "check": "aggregate CS/AE/precision/mean",
+      "published": 0.9139,
+      "expected": 0.9139,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/AE/precision/std",
+      "published": 0.0031,
+      "expected": 0.0031,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/AE/pr_auc/mean",
+      "published": 0.9254,
+      "expected": 0.9254,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/AE/pr_auc/std",
+      "published": 0.0085,
+      "expected": 0.0085,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/AE/normal:fpr/mean",
+      "published": 0.0916,
+      "expected": 0.0916,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/AE/normal:fpr/std",
+      "published": 0.0039,
+      "expected": 0.0039,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/AE/known_attack:recall/mean",
+      "published": 0.794,
+      "expected": 0.794,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/AE/known_attack:recall/std",
+      "published": 0.0136,
+      "expected": 0.0136,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/AE/all:f1/mean",
+      "published": 0.8497,
+      "expected": 0.8497,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/AE/all:f1/std",
+      "published": 0.008,
+      "expected": 0.008,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/IF/precision/mean",
+      "published": 0.8617,
+      "expected": 0.8617,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/IF/precision/std",
+      "published": 0.014,
+      "expected": 0.014,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/IF/pr_auc/mean",
+      "published": 0.8184,
+      "expected": 0.8184,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/IF/pr_auc/std",
+      "published": 0.012,
+      "expected": 0.012,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/IF/normal:fpr/mean",
+      "published": 0.0615,
+      "expected": 0.0615,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/IF/normal:fpr/std",
+      "published": 0.004,
+      "expected": 0.004,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/IF/known_attack:recall/mean",
+      "published": 0.3144,
+      "expected": 0.3144,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/IF/known_attack:recall/std",
+      "published": 0.0292,
+      "expected": 0.0292,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/IF/all:f1/mean",
+      "published": 0.4603,
+      "expected": 0.4603,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/IF/all:f1/std",
+      "published": 0.0328,
+      "expected": 0.0328,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/RF/precision/mean",
+      "published": 0.865,
+      "expected": 0.865,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/RF/precision/std",
+      "published": 0.0021,
+      "expected": 0.0021,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/RF/pr_auc/mean",
+      "published": 0.9879,
+      "expected": 0.9879,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/RF/pr_auc/std",
+      "published": 0.0001,
+      "expected": 0.0001,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/RF/normal:fpr/mean",
+      "published": 0.1857,
+      "expected": 0.1857,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/RF/normal:fpr/std",
+      "published": 0.0034,
+      "expected": 0.0034,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/RF/known_attack:recall/mean",
+      "published": 0.9714,
+      "expected": 0.9714,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/RF/known_attack:recall/std",
+      "published": 0.0007,
+      "expected": 0.0007,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/RF/all:f1/mean",
+      "published": 0.9151,
+      "expected": 0.9151,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/RF/all:f1/std",
+      "published": 0.0009,
+      "expected": 0.0009,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/XGB/precision/mean",
+      "published": 0.8639,
+      "expected": 0.8639,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/XGB/precision/std",
+      "published": 0.0028,
+      "expected": 0.0028,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/XGB/pr_auc/mean",
+      "published": 0.9883,
+      "expected": 0.9883,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/XGB/pr_auc/std",
+      "published": 0.0003,
+      "expected": 0.0003,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/XGB/normal:fpr/mean",
+      "published": 0.1871,
+      "expected": 0.1871,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/XGB/normal:fpr/std",
+      "published": 0.0043,
+      "expected": 0.0043,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/XGB/known_attack:recall/mean",
+      "published": 0.9691,
+      "expected": 0.9691,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/XGB/known_attack:recall/std",
+      "published": 0.0012,
+      "expected": 0.0012,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/XGB/all:f1/mean",
+      "published": 0.9135,
+      "expected": 0.9135,
+      "pass": true
+    },
+    {
+      "check": "aggregate CS/XGB/all:f1/std",
+      "published": 0.0018,
+      "expected": 0.0018,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/AE/precision/mean",
+      "published": 0.9148,
+      "expected": 0.9148,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/AE/precision/std",
+      "published": 0.0038,
+      "expected": 0.0038,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/AE/pr_auc/mean",
+      "published": 0.9293,
+      "expected": 0.9293,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/AE/pr_auc/std",
+      "published": 0.0037,
+      "expected": 0.0037,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/AE/normal:fpr/mean",
+      "published": 0.0911,
+      "expected": 0.0911,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/AE/normal:fpr/std",
+      "published": 0.0039,
+      "expected": 0.0039,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/AE/known_attack:recall/mean",
+      "published": 0.7891,
+      "expected": 0.7891,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/AE/known_attack:recall/std",
+      "published": 0.007,
+      "expected": 0.007,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/AE/heldout_attack:uadr/mean",
+      "published": 0.8838,
+      "expected": 0.8838,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/AE/heldout_attack:uadr/std",
+      "published": 0.0112,
+      "expected": 0.0112,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/AE/all:f1/mean",
+      "published": 0.8522,
+      "expected": 0.8522,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/AE/all:f1/std",
+      "published": 0.0054,
+      "expected": 0.0054,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/IF/precision/mean",
+      "published": 0.8587,
+      "expected": 0.8587,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/IF/precision/std",
+      "published": 0.0094,
+      "expected": 0.0094,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/IF/pr_auc/mean",
+      "published": 0.8183,
+      "expected": 0.8183,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/IF/pr_auc/std",
+      "published": 0.0059,
+      "expected": 0.0059,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/IF/normal:fpr/mean",
+      "published": 0.0611,
+      "expected": 0.0611,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/IF/normal:fpr/std",
+      "published": 0.0023,
+      "expected": 0.0023,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/IF/known_attack:recall/mean",
+      "published": 0.3305,
+      "expected": 0.3305,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/IF/known_attack:recall/std",
+      "published": 0.0248,
+      "expected": 0.0248,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/IF/heldout_attack:uadr/mean",
+      "published": 0.0421,
+      "expected": 0.0421,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/IF/heldout_attack:uadr/std",
+      "published": 0.0099,
+      "expected": 0.0099,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/IF/all:f1/mean",
+      "published": 0.4492,
+      "expected": 0.4492,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/IF/all:f1/std",
+      "published": 0.0269,
+      "expected": 0.0269,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/RF/precision/mean",
+      "published": 0.8639,
+      "expected": 0.8639,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/RF/precision/std",
+      "published": 0.002,
+      "expected": 0.002,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/RF/pr_auc/mean",
+      "published": 0.9876,
+      "expected": 0.9876,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/RF/pr_auc/std",
+      "published": 0.0001,
+      "expected": 0.0001,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/RF/normal:fpr/mean",
+      "published": 0.1875,
+      "expected": 0.1875,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/RF/normal:fpr/std",
+      "published": 0.0035,
+      "expected": 0.0035,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/RF/known_attack:recall/mean",
+      "published": 0.9682,
+      "expected": 0.9682,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/RF/known_attack:recall/std",
+      "published": 0.0018,
+      "expected": 0.0018,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/RF/heldout_attack:uadr/mean",
+      "published": 0.9981,
+      "expected": 0.9981,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/RF/heldout_attack:uadr/std",
+      "published": 0.0003,
+      "expected": 0.0003,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/RF/all:f1/mean",
+      "published": 0.9143,
+      "expected": 0.9143,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/RF/all:f1/std",
+      "published": 0.0006,
+      "expected": 0.0006,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/XGB/precision/mean",
+      "published": 0.8657,
+      "expected": 0.8657,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/XGB/precision/std",
+      "published": 0.0033,
+      "expected": 0.0033,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/XGB/pr_auc/mean",
+      "published": 0.9881,
+      "expected": 0.9881,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/XGB/pr_auc/std",
+      "published": 0.0003,
+      "expected": 0.0003,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/XGB/normal:fpr/mean",
+      "published": 0.1841,
+      "expected": 0.1841,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/XGB/normal:fpr/std",
+      "published": 0.0055,
+      "expected": 0.0055,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/XGB/known_attack:recall/mean",
+      "published": 0.9656,
+      "expected": 0.9656,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/XGB/known_attack:recall/std",
+      "published": 0.0017,
+      "expected": 0.0017,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/XGB/heldout_attack:uadr/mean",
+      "published": 0.9933,
+      "expected": 0.9933,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/XGB/heldout_attack:uadr/std",
+      "published": 0.0018,
+      "expected": 0.0018,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/XGB/all:f1/mean",
+      "published": 0.914,
+      "expected": 0.914,
+      "pass": true
+    },
+    {
+      "check": "aggregate LD/XGB/all:f1/std",
+      "published": 0.0014,
+      "expected": 0.0014,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/AE/precision/mean",
+      "published": 0.9152,
+      "expected": 0.9152,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/AE/precision/std",
+      "published": 0.003,
+      "expected": 0.003,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/AE/pr_auc/mean",
+      "published": 0.9294,
+      "expected": 0.9294,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/AE/pr_auc/std",
+      "published": 0.0044,
+      "expected": 0.0044,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/AE/normal:fpr/mean",
+      "published": 0.0901,
+      "expected": 0.0901,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/AE/normal:fpr/std",
+      "published": 0.0038,
+      "expected": 0.0038,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/AE/known_attack:recall/mean",
+      "published": 0.7883,
+      "expected": 0.7883,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/AE/known_attack:recall/std",
+      "published": 0.007,
+      "expected": 0.007,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/AE/heldout_attack:uadr/mean",
+      "published": 0.8069,
+      "expected": 0.8069,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/AE/heldout_attack:uadr/std",
+      "published": 0.029,
+      "expected": 0.029,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/AE/all:f1/mean",
+      "published": 0.8496,
+      "expected": 0.8496,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/AE/all:f1/std",
+      "published": 0.0068,
+      "expected": 0.0068,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/IF/precision/mean",
+      "published": 0.8546,
+      "expected": 0.8546,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/IF/precision/std",
+      "published": 0.0047,
+      "expected": 0.0047,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/IF/pr_auc/mean",
+      "published": 0.8172,
+      "expected": 0.8172,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/IF/pr_auc/std",
+      "published": 0.0037,
+      "expected": 0.0037,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/IF/normal:fpr/mean",
+      "published": 0.0626,
+      "expected": 0.0626,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/IF/normal:fpr/std",
+      "published": 0.0029,
+      "expected": 0.0029,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/IF/known_attack:recall/mean",
+      "published": 0.3807,
+      "expected": 0.3807,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/IF/known_attack:recall/std",
+      "published": 0.0082,
+      "expected": 0.0082,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/IF/heldout_attack:uadr/mean",
+      "published": 0.0529,
+      "expected": 0.0529,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/IF/heldout_attack:uadr/std",
+      "published": 0.0096,
+      "expected": 0.0096,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/IF/all:f1/mean",
+      "published": 0.4443,
+      "expected": 0.4443,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/IF/all:f1/std",
+      "published": 0.0068,
+      "expected": 0.0068,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/RF/precision/mean",
+      "published": 0.8656,
+      "expected": 0.8656,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/RF/precision/std",
+      "published": 0.0049,
+      "expected": 0.0049,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/RF/pr_auc/mean",
+      "published": 0.9831,
+      "expected": 0.9831,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/RF/pr_auc/std",
+      "published": 0.0004,
+      "expected": 0.0004,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/RF/normal:fpr/mean",
+      "published": 0.1832,
+      "expected": 0.1832,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/RF/normal:fpr/std",
+      "published": 0.0082,
+      "expected": 0.0082,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/RF/known_attack:recall/mean",
+      "published": 0.9602,
+      "expected": 0.9602,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/RF/known_attack:recall/std",
+      "published": 0.0039,
+      "expected": 0.0039,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/RF/heldout_attack:uadr/mean",
+      "published": 0.9706,
+      "expected": 0.9706,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/RF/heldout_attack:uadr/std",
+      "published": 0.0057,
+      "expected": 0.0057,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/RF/all:f1/mean",
+      "published": 0.9116,
+      "expected": 0.9116,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/RF/all:f1/std",
+      "published": 0.0016,
+      "expected": 0.0016,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/XGB/precision/mean",
+      "published": 0.8629,
+      "expected": 0.8629,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/XGB/precision/std",
+      "published": 0.0033,
+      "expected": 0.0033,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/XGB/pr_auc/mean",
+      "published": 0.984,
+      "expected": 0.984,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/XGB/pr_auc/std",
+      "published": 0.0005,
+      "expected": 0.0005,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/XGB/normal:fpr/mean",
+      "published": 0.187,
+      "expected": 0.187,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/XGB/normal:fpr/std",
+      "published": 0.0055,
+      "expected": 0.0055,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/XGB/known_attack:recall/mean",
+      "published": 0.9575,
+      "expected": 0.9575,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/XGB/known_attack:recall/std",
+      "published": 0.0033,
+      "expected": 0.0033,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/XGB/heldout_attack:uadr/mean",
+      "published": 0.9707,
+      "expected": 0.9707,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/XGB/heldout_attack:uadr/std",
+      "published": 0.0027,
+      "expected": 0.0027,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/XGB/all:f1/mean",
+      "published": 0.9092,
+      "expected": 0.9092,
+      "pass": true
+    },
+    {
+      "check": "aggregate LE/XGB/all:f1/std",
+      "published": 0.0014,
+      "expected": 0.0014,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/AE/precision/mean",
+      "published": 0.9149,
+      "expected": 0.9149,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/AE/precision/std",
+      "published": 0.0027,
+      "expected": 0.0027,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/AE/pr_auc/mean",
+      "published": 0.9237,
+      "expected": 0.9237,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/AE/pr_auc/std",
+      "published": 0.0096,
+      "expected": 0.0096,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/AE/normal:fpr/mean",
+      "published": 0.0907,
+      "expected": 0.0907,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/AE/normal:fpr/std",
+      "published": 0.0044,
+      "expected": 0.0044,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/AE/known_attack:recall/mean",
+      "published": 0.8427,
+      "expected": 0.8427,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/AE/known_attack:recall/std",
+      "published": 0.0125,
+      "expected": 0.0125,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/AE/heldout_attack:uadr/mean",
+      "published": 0.2382,
+      "expected": 0.2382,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/AE/heldout_attack:uadr/std",
+      "published": 0.0375,
+      "expected": 0.0375,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/AE/all:f1/mean",
+      "published": 0.8513,
+      "expected": 0.8513,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/AE/all:f1/std",
+      "published": 0.0074,
+      "expected": 0.0074,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/IF/precision/mean",
+      "published": 0.8624,
+      "expected": 0.8624,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/IF/precision/std",
+      "published": 0.016,
+      "expected": 0.016,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/IF/pr_auc/mean",
+      "published": 0.8214,
+      "expected": 0.8214,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/IF/pr_auc/std",
+      "published": 0.0102,
+      "expected": 0.0102,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/IF/normal:fpr/mean",
+      "published": 0.062,
+      "expected": 0.062,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/IF/normal:fpr/std",
+      "published": 0.0043,
+      "expected": 0.0043,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/IF/known_attack:recall/mean",
+      "published": 0.3454,
+      "expected": 0.3454,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/IF/known_attack:recall/std",
+      "published": 0.0327,
+      "expected": 0.0327,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/IF/heldout_attack:uadr/mean",
+      "published": 0.0066,
+      "expected": 0.0066,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/IF/heldout_attack:uadr/std",
+      "published": 0.0026,
+      "expected": 0.0026,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/IF/all:f1/mean",
+      "published": 0.4655,
+      "expected": 0.4655,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/IF/all:f1/std",
+      "published": 0.0344,
+      "expected": 0.0344,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/RF/precision/mean",
+      "published": 0.8648,
+      "expected": 0.8648,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/RF/precision/std",
+      "published": 0.0014,
+      "expected": 0.0014,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/RF/pr_auc/mean",
+      "published": 0.9852,
+      "expected": 0.9852,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/RF/pr_auc/std",
+      "published": 0.0003,
+      "expected": 0.0003,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/RF/normal:fpr/mean",
+      "published": 0.1858,
+      "expected": 0.1858,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/RF/normal:fpr/std",
+      "published": 0.0024,
+      "expected": 0.0024,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/RF/known_attack:recall/mean",
+      "published": 0.9694,
+      "expected": 0.9694,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/RF/known_attack:recall/std",
+      "published": 0.0013,
+      "expected": 0.0013,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/RF/heldout_attack:uadr/mean",
+      "published": 0.9773,
+      "expected": 0.9773,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/RF/heldout_attack:uadr/std",
+      "published": 0.003,
+      "expected": 0.003,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/RF/all:f1/mean",
+      "published": 0.9144,
+      "expected": 0.9144,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/RF/all:f1/std",
+      "published": 0.0008,
+      "expected": 0.0008,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/XGB/precision/mean",
+      "published": 0.8632,
+      "expected": 0.8632,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/XGB/precision/std",
+      "published": 0.0028,
+      "expected": 0.0028,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/XGB/pr_auc/mean",
+      "published": 0.9852,
+      "expected": 0.9852,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/XGB/pr_auc/std",
+      "published": 0.0004,
+      "expected": 0.0004,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/XGB/normal:fpr/mean",
+      "published": 0.1876,
+      "expected": 0.1876,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/XGB/normal:fpr/std",
+      "published": 0.0047,
+      "expected": 0.0047,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/XGB/known_attack:recall/mean",
+      "published": 0.9653,
+      "expected": 0.9653,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/XGB/known_attack:recall/std",
+      "published": 0.0012,
+      "expected": 0.0012,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/XGB/heldout_attack:uadr/mean",
+      "published": 0.9806,
+      "expected": 0.9806,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/XGB/heldout_attack:uadr/std",
+      "published": 0.0085,
+      "expected": 0.0085,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/XGB/all:f1/mean",
+      "published": 0.9119,
+      "expected": 0.9119,
+      "pass": true
+    },
+    {
+      "check": "aggregate LR/XGB/all:f1/std",
+      "published": 0.0011,
+      "expected": 0.0011,
+      "pass": true
+    },
+    {
+      "check": "fpr CS/AE/0.01/mean",
+      "published": 2.72,
+      "expected": 2.72,
+      "pass": true
+    },
+    {
+      "check": "fpr CS/AE/0.01/std",
+      "published": 0.32,
+      "expected": 0.32,
+      "pass": true
+    },
+    {
+      "check": "fpr CS/AE/0.05/mean",
+      "published": 9.16,
+      "expected": 9.16,
+      "pass": true
+    },
+    {
+      "check": "fpr CS/AE/0.05/std",
+      "published": 0.39,
+      "expected": 0.39,
+      "pass": true
+    },
+    {
+      "check": "fpr CS/IF/0.01/mean",
+      "published": 0.78,
+      "expected": 0.78,
+      "pass": true
+    },
+    {
+      "check": "fpr CS/IF/0.01/std",
+      "published": 0.15,
+      "expected": 0.15,
+      "pass": true
+    },
+    {
+      "check": "fpr CS/IF/0.05/mean",
+      "published": 6.15,
+      "expected": 6.15,
+      "pass": true
+    },
+    {
+      "check": "fpr CS/IF/0.05/std",
+      "published": 0.4,
+      "expected": 0.4,
+      "pass": true
+    },
+    {
+      "check": "fpr CS/RF/0.01/mean",
+      "published": 4.21,
+      "expected": 4.21,
+      "pass": true
+    },
+    {
+      "check": "fpr CS/RF/0.01/std",
+      "published": 0.36,
+      "expected": 0.36,
+      "pass": true
+    },
+    {
+      "check": "fpr CS/RF/0.05/mean",
+      "published": 18.57,
+      "expected": 18.57,
+      "pass": true
+    },
+    {
+      "check": "fpr CS/RF/0.05/std",
+      "published": 0.34,
+      "expected": 0.34,
+      "pass": true
+    },
+    {
+      "check": "fpr CS/XGB/0.01/mean",
+      "published": 4.78,
+      "expected": 4.78,
+      "pass": true
+    },
+    {
+      "check": "fpr CS/XGB/0.01/std",
+      "published": 0.58,
+      "expected": 0.58,
+      "pass": true
+    },
+    {
+      "check": "fpr CS/XGB/0.05/mean",
+      "published": 18.71,
+      "expected": 18.71,
+      "pass": true
+    },
+    {
+      "check": "fpr CS/XGB/0.05/std",
+      "published": 0.43,
+      "expected": 0.43,
+      "pass": true
+    },
+    {
+      "check": "fpr LD/AE/0.01/mean",
+      "published": 2.92,
+      "expected": 2.92,
+      "pass": true
+    },
+    {
+      "check": "fpr LD/AE/0.01/std",
+      "published": 0.26,
+      "expected": 0.26,
+      "pass": true
+    },
+    {
+      "check": "fpr LD/AE/0.05/mean",
+      "published": 9.11,
+      "expected": 9.11,
+      "pass": true
+    },
+    {
+      "check": "fpr LD/AE/0.05/std",
+      "published": 0.39,
+      "expected": 0.39,
+      "pass": true
+    },
+    {
+      "check": "fpr LD/IF/0.01/mean",
+      "published": 0.84,
+      "expected": 0.84,
+      "pass": true
+    },
+    {
+      "check": "fpr LD/IF/0.01/std",
+      "published": 0.25,
+      "expected": 0.25,
+      "pass": true
+    },
+    {
+      "check": "fpr LD/IF/0.05/mean",
+      "published": 6.11,
+      "expected": 6.11,
+      "pass": true
+    },
+    {
+      "check": "fpr LD/IF/0.05/std",
+      "published": 0.23,
+      "expected": 0.23,
+      "pass": true
+    },
+    {
+      "check": "fpr LD/RF/0.01/mean",
+      "published": 3.82,
+      "expected": 3.82,
+      "pass": true
+    },
+    {
+      "check": "fpr LD/RF/0.01/std",
+      "published": 0.23,
+      "expected": 0.23,
+      "pass": true
+    },
+    {
+      "check": "fpr LD/RF/0.05/mean",
+      "published": 18.75,
+      "expected": 18.75,
+      "pass": true
+    },
+    {
+      "check": "fpr LD/RF/0.05/std",
+      "published": 0.35,
+      "expected": 0.35,
+      "pass": true
+    },
+    {
+      "check": "fpr LD/XGB/0.01/mean",
+      "published": 4.74,
+      "expected": 4.74,
+      "pass": true
+    },
+    {
+      "check": "fpr LD/XGB/0.01/std",
+      "published": 0.17,
+      "expected": 0.17,
+      "pass": true
+    },
+    {
+      "check": "fpr LD/XGB/0.05/mean",
+      "published": 18.41,
+      "expected": 18.41,
+      "pass": true
+    },
+    {
+      "check": "fpr LD/XGB/0.05/std",
+      "published": 0.55,
+      "expected": 0.55,
+      "pass": true
+    },
+    {
+      "check": "fpr LE/AE/0.01/mean",
+      "published": 2.49,
+      "expected": 2.49,
+      "pass": true
+    },
+    {
+      "check": "fpr LE/AE/0.01/std",
+      "published": 0.2,
+      "expected": 0.2,
+      "pass": true
+    },
+    {
+      "check": "fpr LE/AE/0.05/mean",
+      "published": 9.01,
+      "expected": 9.01,
+      "pass": true
+    },
+    {
+      "check": "fpr LE/AE/0.05/std",
+      "published": 0.38,
+      "expected": 0.38,
+      "pass": true
+    },
+    {
+      "check": "fpr LE/IF/0.01/mean",
+      "published": 0.89,
+      "expected": 0.89,
+      "pass": true
+    },
+    {
+      "check": "fpr LE/IF/0.01/std",
+      "published": 0.15,
+      "expected": 0.15,
+      "pass": true
+    },
+    {
+      "check": "fpr LE/IF/0.05/mean",
+      "published": 6.26,
+      "expected": 6.26,
+      "pass": true
+    },
+    {
+      "check": "fpr LE/IF/0.05/std",
+      "published": 0.29,
+      "expected": 0.29,
+      "pass": true
+    },
+    {
+      "check": "fpr LE/RF/0.01/mean",
+      "published": 4.15,
+      "expected": 4.15,
+      "pass": true
+    },
+    {
+      "check": "fpr LE/RF/0.01/std",
+      "published": 0.28,
+      "expected": 0.28,
+      "pass": true
+    },
+    {
+      "check": "fpr LE/RF/0.05/mean",
+      "published": 18.32,
+      "expected": 18.32,
+      "pass": true
+    },
+    {
+      "check": "fpr LE/RF/0.05/std",
+      "published": 0.82,
+      "expected": 0.82,
+      "pass": true
+    },
+    {
+      "check": "fpr LE/XGB/0.01/mean",
+      "published": 4.79,
+      "expected": 4.79,
+      "pass": true
+    },
+    {
+      "check": "fpr LE/XGB/0.01/std",
+      "published": 0.77,
+      "expected": 0.77,
+      "pass": true
+    },
+    {
+      "check": "fpr LE/XGB/0.05/mean",
+      "published": 18.7,
+      "expected": 18.7,
+      "pass": true
+    },
+    {
+      "check": "fpr LE/XGB/0.05/std",
+      "published": 0.55,
+      "expected": 0.55,
+      "pass": true
+    },
+    {
+      "check": "fpr LR/AE/0.01/mean",
+      "published": 2.51,
+      "expected": 2.51,
+      "pass": true
+    },
+    {
+      "check": "fpr LR/AE/0.01/std",
+      "published": 0.37,
+      "expected": 0.37,
+      "pass": true
+    },
+    {
+      "check": "fpr LR/AE/0.05/mean",
+      "published": 9.07,
+      "expected": 9.07,
+      "pass": true
+    },
+    {
+      "check": "fpr LR/AE/0.05/std",
+      "published": 0.44,
+      "expected": 0.44,
+      "pass": true
+    },
+    {
+      "check": "fpr LR/IF/0.01/mean",
+      "published": 0.87,
+      "expected": 0.87,
+      "pass": true
+    },
+    {
+      "check": "fpr LR/IF/0.01/std",
+      "published": 0.24,
+      "expected": 0.24,
+      "pass": true
+    },
+    {
+      "check": "fpr LR/IF/0.05/mean",
+      "published": 6.2,
+      "expected": 6.2,
+      "pass": true
+    },
+    {
+      "check": "fpr LR/IF/0.05/std",
+      "published": 0.43,
+      "expected": 0.43,
+      "pass": true
+    },
+    {
+      "check": "fpr LR/RF/0.01/mean",
+      "published": 4.27,
+      "expected": 4.27,
+      "pass": true
+    },
+    {
+      "check": "fpr LR/RF/0.01/std",
+      "published": 0.18,
+      "expected": 0.18,
+      "pass": true
+    },
+    {
+      "check": "fpr LR/RF/0.05/mean",
+      "published": 18.58,
+      "expected": 18.58,
+      "pass": true
+    },
+    {
+      "check": "fpr LR/RF/0.05/std",
+      "published": 0.24,
+      "expected": 0.24,
+      "pass": true
+    },
+    {
+      "check": "fpr LR/XGB/0.01/mean",
+      "published": 5.06,
+      "expected": 5.06,
+      "pass": true
+    },
+    {
+      "check": "fpr LR/XGB/0.01/std",
+      "published": 0.5,
+      "expected": 0.5,
+      "pass": true
+    },
+    {
+      "check": "fpr LR/XGB/0.05/mean",
+      "published": 18.76,
+      "expected": 18.76,
+      "pass": true
+    },
+    {
+      "check": "fpr LR/XGB/0.05/std",
+      "published": 0.47,
+      "expected": 0.47,
+      "pass": true
+    },
+    {
+      "check": "category Analysis/RF/mean",
+      "published": 0.89,
+      "expected": 0.89,
+      "pass": true
+    },
+    {
+      "check": "category Analysis/RF/std",
+      "published": 0.42,
+      "expected": 0.42,
+      "pass": true
+    },
+    {
+      "check": "category Analysis/XGB/mean",
+      "published": 5.67,
+      "expected": 5.67,
+      "pass": true
+    },
+    {
+      "check": "category Analysis/XGB/std",
+      "published": 1.11,
+      "expected": 1.11,
+      "pass": true
+    },
+    {
+      "check": "category Analysis/IF/mean",
+      "published": 95.18,
+      "expected": 95.18,
+      "pass": true
+    },
+    {
+      "check": "category Analysis/IF/std",
+      "published": 3.45,
+      "expected": 3.45,
+      "pass": true
+    },
+    {
+      "check": "category Analysis/AE/mean",
+      "published": 0.44,
+      "expected": 0.44,
+      "pass": true
+    },
+    {
+      "check": "category Analysis/AE/std",
+      "published": 0.91,
+      "expected": 0.91,
+      "pass": true
+    },
+    {
+      "check": "category Backdoor/RF/mean",
+      "published": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "category Backdoor/RF/std",
+      "published": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "category Backdoor/XGB/mean",
+      "published": 0.1,
+      "expected": 0.1,
+      "pass": true
+    },
+    {
+      "check": "category Backdoor/XGB/std",
+      "published": 0.09,
+      "expected": 0.09,
+      "pass": true
+    },
+    {
+      "check": "category Backdoor/IF/mean",
+      "published": 93.62,
+      "expected": 93.62,
+      "pass": true
+    },
+    {
+      "check": "category Backdoor/IF/std",
+      "published": 4.31,
+      "expected": 4.31,
+      "pass": true
+    },
+    {
+      "check": "category Backdoor/AE/mean",
+      "published": 6.59,
+      "expected": 6.59,
+      "pass": true
+    },
+    {
+      "check": "category Backdoor/AE/std",
+      "published": 0.31,
+      "expected": 0.31,
+      "pass": true
+    },
+    {
+      "check": "category DoS/RF/mean",
+      "published": 0.15,
+      "expected": 0.15,
+      "pass": true
+    },
+    {
+      "check": "category DoS/RF/std",
+      "published": 0.02,
+      "expected": 0.02,
+      "pass": true
+    },
+    {
+      "check": "category DoS/XGB/mean",
+      "published": 0.45,
+      "expected": 0.45,
+      "pass": true
+    },
+    {
+      "check": "category DoS/XGB/std",
+      "published": 0.22,
+      "expected": 0.22,
+      "pass": true
+    },
+    {
+      "check": "category DoS/IF/mean",
+      "published": 94.87,
+      "expected": 94.87,
+      "pass": true
+    },
+    {
+      "check": "category DoS/IF/std",
+      "published": 2.03,
+      "expected": 2.03,
+      "pass": true
+    },
+    {
+      "check": "category DoS/AE/mean",
+      "published": 13.2,
+      "expected": 13.2,
+      "pass": true
+    },
+    {
+      "check": "category DoS/AE/std",
+      "published": 2.11,
+      "expected": 2.11,
+      "pass": true
+    },
+    {
+      "check": "category Exploits/RF/mean",
+      "published": 0.73,
+      "expected": 0.73,
+      "pass": true
+    },
+    {
+      "check": "category Exploits/RF/std",
+      "published": 0.04,
+      "expected": 0.04,
+      "pass": true
+    },
+    {
+      "check": "category Exploits/XGB/mean",
+      "published": 0.89,
+      "expected": 0.89,
+      "pass": true
+    },
+    {
+      "check": "category Exploits/XGB/std",
+      "published": 0.04,
+      "expected": 0.04,
+      "pass": true
+    },
+    {
+      "check": "category Exploits/IF/mean",
+      "published": 94.16,
+      "expected": 94.16,
+      "pass": true
+    },
+    {
+      "check": "category Exploits/IF/std",
+      "published": 1.21,
+      "expected": 1.21,
+      "pass": true
+    },
+    {
+      "check": "category Exploits/AE/mean",
+      "published": 18.12,
+      "expected": 18.12,
+      "pass": true
+    },
+    {
+      "check": "category Exploits/AE/std",
+      "published": 2.89,
+      "expected": 2.89,
+      "pass": true
+    },
+    {
+      "check": "category Fuzzers/RF/mean",
+      "published": 19.65,
+      "expected": 19.65,
+      "pass": true
+    },
+    {
+      "check": "category Fuzzers/RF/std",
+      "published": 0.41,
+      "expected": 0.41,
+      "pass": true
+    },
+    {
+      "check": "category Fuzzers/XGB/mean",
+      "published": 20.23,
+      "expected": 20.23,
+      "pass": true
+    },
+    {
+      "check": "category Fuzzers/XGB/std",
+      "published": 0.81,
+      "expected": 0.81,
+      "pass": true
+    },
+    {
+      "check": "category Fuzzers/IF/mean",
+      "published": 90.98,
+      "expected": 90.98,
+      "pass": true
+    },
+    {
+      "check": "category Fuzzers/IF/std",
+      "published": 0.7,
+      "expected": 0.7,
+      "pass": true
+    },
+    {
+      "check": "category Fuzzers/AE/mean",
+      "published": 55.94,
+      "expected": 55.94,
+      "pass": true
+    },
+    {
+      "check": "category Fuzzers/AE/std",
+      "published": 2.77,
+      "expected": 2.77,
+      "pass": true
+    },
+    {
+      "check": "category Generic/RF/mean",
+      "published": 0.01,
+      "expected": 0.01,
+      "pass": true
+    },
+    {
+      "check": "category Generic/RF/std",
+      "published": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "category Generic/XGB/mean",
+      "published": 0.01,
+      "expected": 0.01,
+      "pass": true
+    },
+    {
+      "check": "category Generic/XGB/std",
+      "published": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "category Generic/IF/mean",
+      "published": 32.43,
+      "expected": 32.43,
+      "pass": true
+    },
+    {
+      "check": "category Generic/IF/std",
+      "published": 5.64,
+      "expected": 5.64,
+      "pass": true
+    },
+    {
+      "check": "category Generic/AE/mean",
+      "published": 1.38,
+      "expected": 1.38,
+      "pass": true
+    },
+    {
+      "check": "category Generic/AE/std",
+      "published": 0.12,
+      "expected": 0.12,
+      "pass": true
+    },
+    {
+      "check": "category Reconnaissance/RF/mean",
+      "published": 0.13,
+      "expected": 0.13,
+      "pass": true
+    },
+    {
+      "check": "category Reconnaissance/RF/std",
+      "published": 0.02,
+      "expected": 0.02,
+      "pass": true
+    },
+    {
+      "check": "category Reconnaissance/XGB/mean",
+      "published": 0.21,
+      "expected": 0.21,
+      "pass": true
+    },
+    {
+      "check": "category Reconnaissance/XGB/std",
+      "published": 0.04,
+      "expected": 0.04,
+      "pass": true
+    },
+    {
+      "check": "category Reconnaissance/IF/mean",
+      "published": 99.41,
+      "expected": 99.41,
+      "pass": true
+    },
+    {
+      "check": "category Reconnaissance/IF/std",
+      "published": 0.27,
+      "expected": 0.27,
+      "pass": true
+    },
+    {
+      "check": "category Reconnaissance/AE/mean",
+      "published": 77.56,
+      "expected": 77.56,
+      "pass": true
+    },
+    {
+      "check": "category Reconnaissance/AE/std",
+      "published": 3.01,
+      "expected": 3.01,
+      "pass": true
+    },
+    {
+      "check": "category Shellcode/RF/mean",
+      "published": 1.43,
+      "expected": 1.43,
+      "pass": true
+    },
+    {
+      "check": "category Shellcode/RF/std",
+      "published": 0.14,
+      "expected": 0.14,
+      "pass": true
+    },
+    {
+      "check": "category Shellcode/XGB/mean",
+      "published": 1.59,
+      "expected": 1.59,
+      "pass": true
+    },
+    {
+      "check": "category Shellcode/XGB/std",
+      "published": 0.32,
+      "expected": 0.32,
+      "pass": true
+    },
+    {
+      "check": "category Shellcode/IF/mean",
+      "published": 100.0,
+      "expected": 100.0,
+      "pass": true
+    },
+    {
+      "check": "category Shellcode/IF/std",
+      "published": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "category Shellcode/AE/mean",
+      "published": 95.24,
+      "expected": 95.24,
+      "pass": true
+    },
+    {
+      "check": "category Shellcode/AE/std",
+      "published": 1.39,
+      "expected": 1.39,
+      "pass": true
+    },
+    {
+      "check": "category Worms/RF/mean",
+      "published": 0.45,
+      "expected": 0.45,
+      "pass": true
+    },
+    {
+      "check": "category Worms/RF/std",
+      "published": 1.02,
+      "expected": 1.02,
+      "pass": true
+    },
+    {
+      "check": "category Worms/XGB/mean",
+      "published": 0.91,
+      "expected": 0.91,
+      "pass": true
+    },
+    {
+      "check": "category Worms/XGB/std",
+      "published": 1.24,
+      "expected": 1.24,
+      "pass": true
+    },
+    {
+      "check": "category Worms/IF/mean",
+      "published": 88.18,
+      "expected": 88.18,
+      "pass": true
+    },
+    {
+      "check": "category Worms/IF/std",
+      "published": 2.49,
+      "expected": 2.49,
+      "pass": true
+    },
+    {
+      "check": "category Worms/AE/mean",
+      "published": 42.27,
+      "expected": 42.27,
+      "pass": true
+    },
+    {
+      "check": "category Worms/AE/std",
+      "published": 16.04,
+      "expected": 16.04,
+      "pass": true
+    },
+    {
+      "check": "detection CS/RF/0.01/mean",
+      "published": 90.27,
+      "expected": 90.27,
+      "pass": true
+    },
+    {
+      "check": "detection CS/RF/0.01/std",
+      "published": 0.25,
+      "expected": 0.25,
+      "pass": true
+    },
+    {
+      "check": "detection CS/RF/0.05/mean",
+      "published": 97.14,
+      "expected": 97.14,
+      "pass": true
+    },
+    {
+      "check": "detection CS/RF/0.05/std",
+      "published": 0.07,
+      "expected": 0.07,
+      "pass": true
+    },
+    {
+      "check": "detection CS/XGB/0.01/mean",
+      "published": 91.23,
+      "expected": 91.23,
+      "pass": true
+    },
+    {
+      "check": "detection CS/XGB/0.01/std",
+      "published": 0.31,
+      "expected": 0.31,
+      "pass": true
+    },
+    {
+      "check": "detection CS/XGB/0.05/mean",
+      "published": 96.91,
+      "expected": 96.91,
+      "pass": true
+    },
+    {
+      "check": "detection CS/XGB/0.05/std",
+      "published": 0.12,
+      "expected": 0.12,
+      "pass": true
+    },
+    {
+      "check": "detection CS/IF/0.01/mean",
+      "published": 19.97,
+      "expected": 19.97,
+      "pass": true
+    },
+    {
+      "check": "detection CS/IF/0.01/std",
+      "published": 1.63,
+      "expected": 1.63,
+      "pass": true
+    },
+    {
+      "check": "detection CS/IF/0.05/mean",
+      "published": 31.44,
+      "expected": 31.44,
+      "pass": true
+    },
+    {
+      "check": "detection CS/IF/0.05/std",
+      "published": 2.92,
+      "expected": 2.92,
+      "pass": true
+    },
+    {
+      "check": "detection CS/AE/0.01/mean",
+      "published": 57.28,
+      "expected": 57.28,
+      "pass": true
+    },
+    {
+      "check": "detection CS/AE/0.01/std",
+      "published": 7.95,
+      "expected": 7.95,
+      "pass": true
+    },
+    {
+      "check": "detection CS/AE/0.05/mean",
+      "published": 79.4,
+      "expected": 79.4,
+      "pass": true
+    },
+    {
+      "check": "detection CS/AE/0.05/std",
+      "published": 1.36,
+      "expected": 1.36,
+      "pass": true
+    },
+    {
+      "check": "detection LR/RF/0.01/mean",
+      "published": 60.9,
+      "expected": 60.9,
+      "pass": true
+    },
+    {
+      "check": "detection LR/RF/0.01/std",
+      "published": 2.3,
+      "expected": 2.3,
+      "pass": true
+    },
+    {
+      "check": "detection LR/RF/0.05/mean",
+      "published": 97.73,
+      "expected": 97.73,
+      "pass": true
+    },
+    {
+      "check": "detection LR/RF/0.05/std",
+      "published": 0.3,
+      "expected": 0.3,
+      "pass": true
+    },
+    {
+      "check": "detection LR/XGB/0.01/mean",
+      "published": 65.76,
+      "expected": 65.76,
+      "pass": true
+    },
+    {
+      "check": "detection LR/XGB/0.01/std",
+      "published": 6.19,
+      "expected": 6.19,
+      "pass": true
+    },
+    {
+      "check": "detection LR/XGB/0.05/mean",
+      "published": 98.06,
+      "expected": 98.06,
+      "pass": true
+    },
+    {
+      "check": "detection LR/XGB/0.05/std",
+      "published": 0.85,
+      "expected": 0.85,
+      "pass": true
+    },
+    {
+      "check": "detection LR/IF/0.01/mean",
+      "published": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "detection LR/IF/0.01/std",
+      "published": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    {
+      "check": "detection LR/IF/0.05/mean",
+      "published": 0.66,
+      "expected": 0.66,
+      "pass": true
+    },
+    {
+      "check": "detection LR/IF/0.05/std",
+      "published": 0.26,
+      "expected": 0.26,
+      "pass": true
+    },
+    {
+      "check": "detection LR/AE/0.01/mean",
+      "published": 6.37,
+      "expected": 6.37,
+      "pass": true
+    },
+    {
+      "check": "detection LR/AE/0.01/std",
+      "published": 2.3,
+      "expected": 2.3,
+      "pass": true
+    },
+    {
+      "check": "detection LR/AE/0.05/mean",
+      "published": 23.82,
+      "expected": 23.82,
+      "pass": true
+    },
+    {
+      "check": "detection LR/AE/0.05/std",
+      "published": 3.75,
+      "expected": 3.75,
+      "pass": true
+    },
+    {
+      "check": "detection LD/RF/0.01/mean",
+      "published": 95.35,
+      "expected": 95.35,
+      "pass": true
+    },
+    {
+      "check": "detection LD/RF/0.01/std",
+      "published": 0.33,
+      "expected": 0.33,
+      "pass": true
+    },
+    {
+      "check": "detection LD/RF/0.05/mean",
+      "published": 99.81,
+      "expected": 99.81,
+      "pass": true
+    },
+    {
+      "check": "detection LD/RF/0.05/std",
+      "published": 0.03,
+      "expected": 0.03,
+      "pass": true
+    },
+    {
+      "check": "detection LD/XGB/0.01/mean",
+      "published": 96.98,
+      "expected": 96.98,
+      "pass": true
+    },
+    {
+      "check": "detection LD/XGB/0.01/std",
+      "published": 0.12,
+      "expected": 0.12,
+      "pass": true
+    },
+    {
+      "check": "detection LD/XGB/0.05/mean",
+      "published": 99.33,
+      "expected": 99.33,
+      "pass": true
+    },
+    {
+      "check": "detection LD/XGB/0.05/std",
+      "published": 0.18,
+      "expected": 0.18,
+      "pass": true
+    },
+    {
+      "check": "detection LD/IF/0.01/mean",
+      "published": 0.72,
+      "expected": 0.72,
+      "pass": true
+    },
+    {
+      "check": "detection LD/IF/0.01/std",
+      "published": 0.26,
+      "expected": 0.26,
+      "pass": true
+    },
+    {
+      "check": "detection LD/IF/0.05/mean",
+      "published": 4.21,
+      "expected": 4.21,
+      "pass": true
+    },
+    {
+      "check": "detection LD/IF/0.05/std",
+      "published": 0.99,
+      "expected": 0.99,
+      "pass": true
+    },
+    {
+      "check": "detection LD/AE/0.01/mean",
+      "published": 47.99,
+      "expected": 47.99,
+      "pass": true
+    },
+    {
+      "check": "detection LD/AE/0.01/std",
+      "published": 11.35,
+      "expected": 11.35,
+      "pass": true
+    },
+    {
+      "check": "detection LD/AE/0.05/mean",
+      "published": 88.38,
+      "expected": 88.38,
+      "pass": true
+    },
+    {
+      "check": "detection LD/AE/0.05/std",
+      "published": 1.12,
+      "expected": 1.12,
+      "pass": true
+    },
+    {
+      "check": "detection LE/RF/0.01/mean",
+      "published": 81.06,
+      "expected": 81.06,
+      "pass": true
+    },
+    {
+      "check": "detection LE/RF/0.01/std",
+      "published": 1.27,
+      "expected": 1.27,
+      "pass": true
+    },
+    {
+      "check": "detection LE/RF/0.05/mean",
+      "published": 97.06,
+      "expected": 97.06,
+      "pass": true
+    },
+    {
+      "check": "detection LE/RF/0.05/std",
+      "published": 0.57,
+      "expected": 0.57,
+      "pass": true
+    },
+    {
+      "check": "detection LE/XGB/0.01/mean",
+      "published": 87.25,
+      "expected": 87.25,
+      "pass": true
+    },
+    {
+      "check": "detection LE/XGB/0.01/std",
+      "published": 1.17,
+      "expected": 1.17,
+      "pass": true
+    },
+    {
+      "check": "detection LE/XGB/0.05/mean",
+      "published": 97.07,
+      "expected": 97.07,
+      "pass": true
+    },
+    {
+      "check": "detection LE/XGB/0.05/std",
+      "published": 0.27,
+      "expected": 0.27,
+      "pass": true
+    },
+    {
+      "check": "detection LE/IF/0.01/mean",
+      "published": 0.35,
+      "expected": 0.35,
+      "pass": true
+    },
+    {
+      "check": "detection LE/IF/0.01/std",
+      "published": 0.02,
+      "expected": 0.02,
+      "pass": true
+    },
+    {
+      "check": "detection LE/IF/0.05/mean",
+      "published": 5.29,
+      "expected": 5.29,
+      "pass": true
+    },
+    {
+      "check": "detection LE/IF/0.05/std",
+      "published": 0.96,
+      "expected": 0.96,
+      "pass": true
+    },
+    {
+      "check": "detection LE/AE/0.01/mean",
+      "published": 44.73,
+      "expected": 44.73,
+      "pass": true
+    },
+    {
+      "check": "detection LE/AE/0.01/std",
+      "published": 3.9,
+      "expected": 3.9,
+      "pass": true
+    },
+    {
+      "check": "detection LE/AE/0.05/mean",
+      "published": 80.69,
+      "expected": 80.69,
+      "pass": true
+    },
+    {
+      "check": "detection LE/AE/0.05/std",
+      "published": 2.9,
+      "expected": 2.9,
+      "pass": true
+    }
+  ],
+  "protected_files": 334,
+  "original_artifacts": 320,
+  "unchanged_experiment_files": true,
+  "source_archive_rebuild": {
+    "pages": 37,
+    "text_mismatches": [],
+    "render_mismatches": []
+  },
+  "drive_pdf": {
+    "id": "10BIGA6jecCcQnlGO2nK-M2QBm0Atj7fc",
+    "pages": 37,
+    "bytes": 419315,
+    "sha256": "edafd81b6d4373fdae40c3086569254130a3148840fd37e026acba93c8a7c0dd"
+  },
+  "drive_source_archive": {
+    "id": "1E2HQPDguwYxVARF26ilXHN1HWlvkefsU",
+    "bytes": 180159,
+    "sha256": "86832910a8010e0500276a4ac0f42719afebdd6381edd5c7ad1055700a1c054f",
+    "crc_ok": true
+  },
+  "unit_tests": {
+    "rerun_in_document_revision": false,
+    "last_log_date": "2026-10-13",
+    "passed": 17
+  },
+  "training_rerun": false,
+  "human_content_review_complete": false,
+  "teacher_approved": false,
+  "email_state": "draft only"
+}

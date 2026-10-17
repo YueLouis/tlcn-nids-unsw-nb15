@@ -1,4 +1,5 @@
 \documentclass[12pt,a4paper,oneside]{report}
+\usepackage{fix-cm}
 \usepackage{fontspec}
 \setmainfont{Times New Roman}
 \setsansfont{Arial}
@@ -11,7 +12,7 @@
 \setlength{\parskip}{0.12em}
 \setlength{\emergencystretch}{3em}
 \usepackage{xcolor,graphicx,booktabs,tabularx,longtable,array,makecell,enumitem,amsmath,amssymb,float,caption,tikz,titlesec,tocloft,fancyhdr,url,hyperref,bookmark,microtype}
-\usepackage{pgfgantt}
+\usepackage{needspace}
 \usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc}
 \definecolor{HCMUTEBlue}{HTML}{005A9C}
 \definecolor{HCMUTEDark}{HTML}{163A5F}
@@ -26,12 +27,14 @@
 \renewcommand{\tablename}{Bảng}
 \renewcommand{\contentsname}{MỤC LỤC}
 \renewcommand{\listtablename}{DANH MỤC BẢNG}
+\renewcommand{\listfigurename}{DANH MỤC HÌNH}
 \renewcommand{\bibname}{TÀI LIỆU THAM KHẢO}
 \renewcommand{\chaptername}{Chương}
 \titleformat{\chapter}[hang]{\normalfont\bfseries\fontsize{15pt}{19pt}\selectfont\color{HCMUTEDark}}{CHƯƠNG \thechapter.}{0.55em}{\MakeUppercase}
 \titlespacing*{\chapter}{0pt}{-0.55cm}{0.5cm}
 \titleformat{\section}{\normalfont\bfseries\fontsize{14pt}{18pt}\selectfont\color{HCMUTEDark}}{\thesection}{0.5em}{}
 \titlespacing*{\section}{0pt}{0.65em}{0.25em}
+\AddToHook{cmd/section/before}{\Needspace{6\baselineskip}}
 \titleformat{\subsection}{\normalfont\bfseries\fontsize{13pt}{17pt}\selectfont}{\thesubsection}{0.5em}{}
 \titlespacing*{\subsection}{0pt}{0.45em}{0.15em}
 \setlength{\cftbeforechapskip}{0.2em}
@@ -76,7 +79,7 @@
   {\bfseries\fontsize{18pt}{22pt}\selectfont\color{HCMUTEDark}
   BÁO CÁO TIỂU LUẬN CHUYÊN NGÀNH}\par
   \vspace{0.1cm}
-  {\bfseries\fontsize{14pt}{18pt}\selectfont BẢN TÍCH LŨY - ĐỢT 2/4}\par
+  {\bfseries\fontsize{14pt}{18pt}\selectfont BẢN TÍCH LŨY - ĐỢT 2}\par
   \vspace{0.45cm}
   {\bfseries\fontsize{14pt}{18pt}\selectfont ĐỀ TÀI}\par
   \vspace{0.12cm}
@@ -111,9 +114,9 @@
 \begin{tabularx}{\textwidth}{L{4.2cm}Y}\toprule
 \textbf{Hạng mục} & \textbf{Thông tin}\\\midrule
 Loại tài liệu & Báo cáo tích lũy đợt 2: giữ nền tảng đợt 1 (17/08--13/09) và bổ sung kết quả đợt 2 (14/09--11/10/2026).\\
-Đợt báo cáo & Đợt 2 trong bốn đợt cập nhật của đề tài.\\
+Đợt báo cáo & Đợt 2; các kỳ cập nhật tiếp nối theo chu kỳ bốn tuần, bản cuối theo lịch được giảng viên xác nhận.\\
 Nội dung chốt tiến độ & Audit dữ liệu, data contract, pipeline, test, đủ 80 run và tổng hợp mean/std qua 5 seed.\\
-Trạng thái thực nghiệm & Đủ 80/80 run và 320/320 artifact bắt buộc; dữ liệu kết quả từ 26/09/2026. Kiểm tra số liệu ngày 13/10, rà soát phương pháp và mốc Gantt ngày 14/10/2026; không huấn luyện lại.\\
+Trạng thái thực nghiệm & Đủ 80/80 run và 320/320 artifact bắt buộc; dữ liệu kết quả từ 26/09/2026. Kiểm tra số liệu ngày 13/10 và đối chiếu lại ngày 17/10/2026; các bảng bổ sung lấy từ kết quả đã lưu, không huấn luyện lại.\\
 Trạng thái kiểm duyệt nội bộ & Cập nhật 17/10/2026: bản đang chờ nhóm rà soát; mức hiểu từng thành viên chưa được kiểm chứng, dự kiến họp ngày 18/10. Kiểm tra kỹ thuật được ghi riêng.\\
 \bottomrule\end{tabularx}\endgroup
 \vspace{0.35cm}
@@ -129,11 +132,38 @@ Trạng thái kiểm duyệt nội bộ & Cập nhật 17/10/2026: bản đang c
 \noindent{\bfseries\fontsize{16pt}{20pt}\selectfont DANH MỤC BẢNG}\par\vspace{0.45cm}
 \makeatletter\@starttoc{lot}\makeatother
 \endgroup\clearpage
+\phantomsection\addcontentsline{toc}{chapter}{DANH MỤC HÌNH}
+\begingroup\fontsize{10pt}{12pt}\selectfont\setstretch{1.05}
+\noindent{\bfseries\fontsize{16pt}{20pt}\selectfont DANH MỤC HÌNH}\par\vspace{0.45cm}
+\makeatletter\@starttoc{lof}\makeatother
+\endgroup\clearpage
+\chapter*{DANH MỤC VIẾT TẮT VÀ QUY ƯỚC}
+\addcontentsline{toc}{chapter}{DANH MỤC VIẾT TẮT VÀ QUY ƯỚC}
+\begingroup\small\renewcommand{\arraystretch}{1.2}
+\noindent\begin{tabularx}{\textwidth}{L{2.8cm}Y}\toprule
+Ký hiệu & Ý nghĩa dùng trong báo cáo\\\midrule
+NIDS / IDPS & Hệ thống phát hiện xâm nhập mạng / phát hiện và ngăn chặn xâm nhập.\\
+RF / XGB & Random Forest / XGBoost; hai mô hình học có giám sát.\\
+IF / AE & Isolation Forest / Autoencoder; hai mô hình phát hiện bất thường.\\
+CS & Closed-set: các nhóm Attack trong test đều có đại diện trong vùng phát triển.\\
+LOACO & Leave-one-attack-class-out: loại một lớp Attack khỏi vùng phát triển.\\
+LR / LD / LE & LOACO giữ lại Reconnaissance / DoS / Exploits, chỉ đánh giá lớp đó ở test.\\
+FPR / UADR & Tỷ lệ cảnh báo nhầm trên Normal / recall của lớp Attack bị giữ lại.\\
+AP / MSE & Average precision / sai số bình phương tái tạo trung bình.\\
+TP / FP / TN / FN & Dương đúng / dương sai / âm đúng / âm sai, với Attack là lớp dương.\\
+\bottomrule\end{tabularx}\endgroup
+
+\textbf{Thuật ngữ:} development là tập phát triển lấy từ official train; validation là phần phát triển dùng chọn ngưỡng; score là điểm do mô hình trả về; threshold là ngưỡng dự đoán; artifact là tệp kết quả để truy vết. Support chỉ số mẫu của tập con đang được xét. Seed là giá trị khởi tạo phép chia và ngẫu nhiên mô hình.
+
+\textbf{Quy ước số:} trong lời văn dùng dấu chấm phân nhóm hàng nghìn và dấu phẩy thập phân. Trong công thức, bảng kỹ thuật, trục hình và giá trị trích từ CSV/mã dùng dấu chấm thập phân; đơn vị tỷ lệ hoặc \% được ghi ở từng bảng. CSV giữ định dạng máy, không đổi dấu phân cách.
+\clearpage
 \chapter*{TÓM TẮT TIẾN ĐỘ}
 \addcontentsline{toc}{chapter}{TÓM TẮT TIẾN ĐỘ}
 Sau đợt 1, nhóm đã chuyển từ khung protocol sang kiểm chứng pipeline trên hai official split của UNSW-NB15. Đến mốc báo cáo này, dữ liệu đã được fingerprint và audit; pipeline đã loại cột metadata, kiểm soát LOACO leakage, chọn threshold chỉ từ Normal validation và chạy đủ bốn baseline. Nhóm đã hoàn thành 80/80 run theo ma trận 4 scenario $\times$ 4 model $\times$ 5 seed, mỗi run có bốn artifact chính và đã tổng hợp mean/std. Kết quả vẫn được trình bày như kết quả benchmark của protocol này, không suy diễn thành khẳng định zero-day thực tế.
 
-\textbf{Thông điệp chính:} báo cáo này chỉ trình bày những gì có artifact truy vết. Các số liệu đều gắn với run ID, seed, support, threshold và fingerprint dữ liệu; không dùng một run để khẳng định tính ưu việt tổng quát.
+\textbf{Kết quả chính:} ở closed-set với FPR mục tiêu trên Normal validation là 5\%, RF đạt recall Attack trung bình 97,14\% nhưng FPR test là 18,57\%; IF đạt recall 31,44\% với FPR test 6,15\%. Khi giảm mục tiêu validation xuống 1\%, recall của RF còn 90,27\% và FPR test còn 4,21\%. Khả năng phát hiện lớp held-out phụ thuộc lớp tấn công và mô hình; cùng FPR mục tiêu trên validation không tạo cùng FPR trên test.
+
+Kết quả được truy vết bằng mã lượt chạy, seed, support, ngưỡng và tệp dự đoán. Phạm vi suy luận giới hạn ở official split này, có feature overlap và chưa chứng minh hiệu năng trên lưu lượng vận hành hoặc mọi zero-day. Nội dung và đóng góp của từng thành viên còn chờ nhóm rà soát.
 
 \clearpage\pagenumbering{arabic}
 \chapter{ĐẶT VẤN ĐỀ VÀ PHẠM VI NGHIÊN CỨU}
@@ -148,7 +178,7 @@ UNSW-NB15 cung cấp dữ liệu lưu lượng bình thường và nhiều nhóm
 
 \section{Vấn đề cần giải quyết}
 
-Nhiều nghiên cứu phân loại xâm nhập được đánh giá theo closed-set: các loại tấn công trong test đã có đại diện trong train. Cách đánh giá này cần thiết nhưng chưa trả lời trực tiếp việc mô hình phản ứng như thế nào khi gặp một nhóm tấn công không xuất hiện trong giai đoạn phát triển. Ngoài ra, Accuracy tổng thể có thể che khuất việc bỏ sót lớp hiếm và chi phí cảnh báo nhầm trên lưu lượng bình thường, đặc biệt trong dữ liệu mất cân bằng \cite{saito2015}.
+Trong thiết kế closed-set của báo cáo này, các nhóm tấn công trong official test đều có đại diện trong vùng phát triển. Nghiên cứu đánh giá bộ UNSW-NB15 của Moustafa và Slay so sánh các bộ phân loại trên các tập dữ liệu đã gán nhãn, nhưng không thiết lập ba kịch bản LOACO như nhóm đang xét \cite{moustafa2016}. Cách đánh giá này cần thiết nhưng chưa trả lời trực tiếp việc mô hình phản ứng như thế nào khi gặp một nhóm tấn công không xuất hiện trong giai đoạn phát triển. Ngoài ra, Accuracy tổng thể có thể che khuất việc bỏ sót lớp hiếm và chi phí cảnh báo nhầm trên lưu lượng bình thường, đặc biệt trong dữ liệu mất cân bằng \cite{saito2015}.
 
 Đề tài vì vậy bổ sung đánh giá \methodname{} (LOACO). Trong mỗi vòng, một lớp tấn công được loại khỏi toàn bộ vùng phát triển trước khi chia validation, fit preprocessing, huấn luyện và chọn threshold. Lớp đó chỉ được dùng khi đánh giá trên tập test chính thức. Đây là thí nghiệm held-out-class trong phạm vi benchmark, không phải bằng chứng cho khả năng phát hiện mọi zero-day ngoài thực tế.
 
@@ -165,7 +195,7 @@ Xây dựng quy trình thực nghiệm có thể tái lập để so sánh mô h
   \item Cài đặt bốn mô hình: Random Forest, XGBoost, Isolation Forest và Autoencoder.
   \item Thiết lập baseline closed-set trên tập train/test chính thức.
   \item Thực hiện LOACO với Reconnaissance, DoS và Exploits sau khi kiểm tra support.
-  \item So sánh các mô hình tại cùng ngân sách FPR trên lưu lượng bình thường.
+  \item So sánh các mô hình khi chọn ngưỡng với cùng mức FPR mục tiêu trên Normal validation (1\% và 5\%); báo cáo riêng FPR và khả năng phát hiện trên official test.
   \item Phân tích lỗi, độ ổn định qua nhiều seed và giới hạn khái quát hóa.
   \item Xây dựng prototype dự đoán trên network-flow record đúng schema.
 \end{enumerate}
@@ -180,9 +210,9 @@ Xây dựng quy trình thực nghiệm có thể tái lập để so sánh mô h
 \toprule
 \textbf{Mã} & \textbf{Câu hỏi} & \textbf{Bằng chứng dự kiến} \\
 \midrule
-RQ1 & Trong closed-set, bốn mô hình phát hiện Attack như thế nào? & Precision, Recall, F1, PR-AUC, FPR, confusion matrix và support qua năm seed. \\
+RQ1 & Trong closed-set, bốn mô hình phát hiện Attack như thế nào? & Precision, Recall, F1, AP, FPR và support qua năm seed; ma trận nhầm lẫn minh họa có mã lượt chạy và mức FPR mục tiêu. \\
 RQ2 & Khi một attack class bị loại khỏi phát triển mô hình, mỗi mô hình còn phát hiện được bao nhiêu mẫu của lớp đó? & Held-out Attack Recall/UADR, Known Attack Recall và FPR trên Normal. \\
-RQ3 & Khả năng phát hiện thay đổi như thế nào tại cùng ngân sách cảnh báo nhầm? & Recall tại threshold chọn trên Normal validation với FPR mục tiêu 1\% và 5\%. \\
+RQ3 & Khả năng phát hiện và FPR test thay đổi thế nào khi mục tiêu FPR validation tăng từ 1\% lên 5\%? & Recall Attack (CS), UADR (LOACO) và FPR test ở hai ngưỡng chọn riêng trên Normal validation. \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -195,21 +225,14 @@ RQ3 & Khả năng phát hiện thay đổi như thế nào tại cùng ngân sá
 
 
 \section{Tính liên tục giữa hai đợt}
-Đợt 1 chốt phạm vi, ba câu hỏi nghiên cứu, ma trận 80 cấu hình và khung kiểm tra trên dữ liệu tổng hợp. Đợt 2 hiện thực hóa các cấu hình đó trên dữ liệu thật và bổ sung kết quả định lượng. Không quy các lượt chạy tháng 9 về mốc 13/09 của đợt 1.
-\begin{table}[H]\centering\small
-\caption{Các mốc của báo cáo tích lũy}
-\begin{tabularx}{\textwidth}{L{3.6cm}Y}\toprule
-Mốc & Nội dung đã ghi nhận\\\midrule
-17/08--13/09/2026 & Đề cương, phạm vi, phân công, protocol nháp, ma trận cấu hình và test contract.\\
-14/09--11/10/2026 & Audit dữ liệu thật, pipeline, bốn baseline, 80 run, bảng mean/std và kiểm thử bổ sung.\\
-13/10/2026 & Kiểm tra lại kết quả lưu, biên tập bản tích lũy, kiểm tra PDF và ghi nhận xác nhận của nhóm.\\
-\bottomrule\end{tabularx}\end{table}
+Đợt 1 chốt phạm vi, ba câu hỏi nghiên cứu, ma trận 80 cấu hình và khung kiểm tra trên dữ liệu tổng hợp. Đợt 2 hiện thực hóa các cấu hình đó trên dữ liệu thật và bổ sung kết quả định lượng. Các lượt chạy ngày 26/09 thuộc kỳ đợt 2; biên tập và kiểm tra tiếp sau kỳ được ghi theo ngày cập nhật, không quy về đợt 1.
+\noindent\textbf{Các mốc:} 17/08--13/09 là kỳ đợt 1; 14/09--11/10 là kỳ đợt 2; 13/10 kiểm lại kết quả và biên tập; 14/10 bổ sung phân tích lỗi/đối chiếu nguồn; 17/10 rà soát toàn văn và trình bày.
 
 \chapter{CƠ SỞ LÝ THUYẾT VÀ NGHIÊN CỨU LIÊN QUAN}
 
 \section{Hệ thống phát hiện xâm nhập mạng}
 
-IDS là hệ thống giám sát sự kiện trên máy chủ hoặc mạng nhằm tìm dấu hiệu vi phạm chính sách và hành vi tấn công \cite{nist80094}. NIDS tập trung vào dữ liệu mạng. Trong đề tài này, mỗi mẫu là một network-flow record đã được tổng hợp, không phải toàn bộ payload của từng packet.
+IDS là hệ thống giám sát sự kiện trên máy chủ hoặc mạng nhằm tìm dấu hiệu vi phạm chính sách và hành vi tấn công \cite{nist80094}. NIDS tập trung vào dữ liệu mạng. Một cảm biến có thể nhận bản sao lưu lượng tại điểm giám sát, trích đặc trưng, tính điểm và chuyển cảnh báo cho người vận hành. Cảnh báo cần được đối chiếu với ngữ cảnh và chi phí xử lý; một dự đoán Attack chưa phải kết luận có sự cố \cite{nist80094,sommer2010}. Trong đề tài, đầu vào là bản ghi flow đã được tổng hợp, không phải payload; phần thu thập gói và xử lý cảnh báo vận hành chưa được triển khai.\input{figures/nids_concept.tex}
 
 \subsection{Phát hiện dựa trên chữ ký và phát hiện bất thường}
 
@@ -219,35 +242,20 @@ Phát hiện dựa trên chữ ký so khớp hành vi với mẫu đã biết, t
 
 Mô hình học có giám sát nhận các cặp $(\mathbf{x},y)$ có nhãn và học hàm phân loại Normal/Attack. Trong closed-set, train và test chia sẻ các nhóm tấn công theo thiết kế. Trong LOACO, mô hình supervised chỉ học Normal và các known attacks; held-out class bị loại khỏi development.
 
-Mô hình anomaly detection trong phạm vi đề tài chủ yếu được fit bằng Normal training data. Mô hình trả về score bất thường; threshold được chọn trên Normal validation theo ngân sách FPR đã khóa. Việc dùng cùng định nghĩa score và cùng điểm vận hành giúp hạn chế so sánh thiên lệch giữa các mô hình.
+Trong triển khai này, cả bộ tiền xử lý và IF/AE chỉ được fit trên Normal development-train. Ngưỡng được chọn trên Normal validation theo FPR mục tiêu đã khóa. Các mô hình dùng chung quy ước score cao hơn biểu thị giống Attack hoặc bất thường hơn, nhưng cách tính và thang đo score khác nhau. Mỗi lượt chạy có ngưỡng riêng; FPR test phải được đo riêng, không được coi bằng mục tiêu validation.
 
 \section{Bốn mô hình được lựa chọn}
-
-\subsection{Random Forest}
-
-Random Forest kết hợp nhiều cây quyết định được huấn luyện trên các mẫu bootstrap và tập con đặc trưng. Dự đoán cuối được tổng hợp từ các cây, giúp giảm phương sai so với một cây đơn lẻ. Mô hình phù hợp làm baseline cho dữ liệu dạng bảng và hỗ trợ phân tích feature importance \cite{breiman2001}.
-
-\subsection{XGBoost}
-
-XGBoost xây dựng các cây theo chuỗi; mỗi cây mới tập trung sửa sai số của tổ hợp trước đó. Thuật toán có cơ chế regularization và tối ưu hiệu quả trên dữ liệu dạng bảng \cite{chen2016}. Trong đề tài, XGBoost đại diện cho nhóm supervised boosting.
-
-\subsection{Isolation Forest}
-
-Isolation Forest cô lập mẫu bằng các phép chia ngẫu nhiên. Mẫu khác biệt thường bị cô lập với ít bước hơn và nhận score bất thường cao hơn sau khi quy đổi về chiều score chung \cite{liu2008}. Mô hình được fit chủ yếu trên Normal training data.
-
-\subsection{Autoencoder}
-
-Autoencoder học hàm mã hóa và giải mã để tái tạo đầu vào. Khi được huấn luyện trên Normal, mẫu có sai số tái tạo lớn có thể được xem là bất thường \cite{sakurada2014}. Việc chuẩn hóa dữ liệu, kiến trúc mạng và threshold ảnh hưởng trực tiếp đến kết quả.
+\input{model_mechanisms.tex}
 
 \section{Bộ dữ liệu UNSW-NB15}
 
-UNSW-NB15 được xây dựng từ lưu lượng bình thường và tấn công, cung cấp đặc trưng flow, nhãn nhị phân và attack category. Nguồn chính thức công bố tập training 175.341 bản ghi và tập testing 82.332 bản ghi \cite{unswsite,moustafa2015}. Các nhóm tấn công gồm Fuzzers, Analysis, Backdoors, DoS, Exploits, Generic, Reconnaissance, Shellcode và Worms.
+UNSW-NB15 được xây dựng từ lưu lượng bình thường và tấn công, cung cấp đặc trưng flow, nhãn nhị phân và attack category. Nguồn chính thức công bố tập training 175.341 bản ghi và tập testing 82.332 bản ghi \cite{unswsite,moustafa2015}. Các nhóm tấn công gồm Fuzzers, Analysis, Backdoors, DoS, Exploits, Generic, Reconnaissance, Shellcode và Worms. Tài liệu mô tả bộ gốc dùng tên Backdoors; hai CSV đang dùng ghi Backdoor. Báo cáo giữ nguyên nhãn CSV khi thống kê và không đổi dữ liệu.
 
 Đề tài giữ nguyên official train/test. Validation được tạo từ official training set. Các cột \texttt{id}, \texttt{label} và \texttt{attack\_cat} không được dùng làm feature. Trước khi huấn luyện, nhóm phải kiểm tra kiểu dữ liệu, missing, infinity, duplicate, support lớp và category mới ở test.
 
 \section{Chỉ số đánh giá}
 
-Với $TP$, $FP$, $TN$ và $FN$ theo bài toán nhị phân, các chỉ số cơ bản được tính như sau:
+Quy ước Attack là lớp dương: $TP$ là Attack được dự đoán Attack, $FN$ là Attack bị dự đoán Normal, $FP$ là Normal bị dự đoán Attack và $TN$ là Normal được dự đoán Normal. Các chỉ số cơ bản được tính như sau:
 \begin{align}
 \mathrm{Precision} &= \frac{TP}{TP+FP}, &
 \mathrm{Recall} &= \frac{TP}{TP+FN},\\
@@ -256,13 +264,13 @@ Với $TP$, $FP$, $TN$ và $FN$ theo bài toán nhị phân, các chỉ số cơ
 \mathrm{FPR} &= \frac{FP}{FP+TN}.
 \end{align}
 
-Cột \texttt{pr\_auc} trong mã hiện tại được tính bằng \texttt{average\_precision\_score}, tức average precision (AP), không phải tích phân hình thang của đường PR. Bản nộp dùng nhãn AP và giữ tên cột gốc khi truy vết \cite{saito2015,davis2006}. Khi sắp xếp score giảm dần, $AP=\sum_n(R_n-R_{n-1})P_n$.
+Cột \texttt{pr\_auc} trong mã hiện tại được tính bằng \texttt{average\_precision\_score}, tức average precision (AP), không phải tích phân hình thang của đường PR. Bản nộp dùng nhãn AP và giữ tên cột gốc khi truy vết \cite{saito2015,davis2006}. Khi sắp xếp score giảm dần, $AP=\sum_n(R_n-R_{n-1})P_n$, trong đó $P_n$ và $R_n$ là precision/recall tại ngưỡng thứ $n$, $R_0=0$. Precision/recall/F1 trong mã dùng 0 khi mẫu số tương ứng bằng 0; FPR, known recall và UADR dùng null nếu tập con rỗng. Trong các official test hiện có, Normal và Attack đều có mẫu; UADR CS để null vì không có held-out class.
 
 Trong LOACO, UADR là recall trên held-out attack; Known Attack Recall chỉ tính các attack class không bị giữ lại. Mọi metric phải đi kèm support, scenario, seed và threshold policy. Accuracy có thể được ghi nhận nhưng không dùng làm bằng chứng chính vì dữ liệu mất cân bằng.
 
-\section{Khoảng trống và định vị đề tài}
+\section{Phạm vi so sánh và định vị đề tài}
 
-Các thuật toán RF, XGBoost, IF và AE đều đã được nghiên cứu rộng rãi. Đóng góp của nhóm không phải phát minh mô hình mới mà là xây dựng một phép so sánh có kiểm soát: giữ official split, chống leakage, loại held-out class trước mọi bước phát triển, chọn threshold ngoài test, lặp qua nhiều seed và truy vết được artifact. Kết luận chỉ giới hạn trong benchmark và protocol được công bố.
+Các thuật toán RF, XGBoost, IF và AE đều đã được nghiên cứu rộng rãi. Đóng góp của nhóm không phải phát minh mô hình mới mà là xây dựng một phép so sánh có kiểm soát: giữ official split, kiểm soát phạm vi fit và metadata, loại held-out class trước mọi bước phát triển, chọn threshold ngoài test, lặp qua nhiều seed và truy vết được artifact. Kết luận chỉ giới hạn trong benchmark và protocol được công bố.
 
 
 Nghiên cứu dữ liệu UNSW-NB15 cung cấp nền tảng về lưu lượng, nhãn và các nhóm tấn công \cite{moustafa2015,moustafa2016}. RF/XGBoost đại diện cho hai phương pháp học có giám sát \cite{breiman2001,chen2016}; IF/AE cung cấp hai cách tạo score bất thường \cite{liu2008,sakurada2014}. Tổng quan anomaly detection làm rõ sự phụ thuộc vào giả định về dữ liệu Normal \cite{chandola2009}. Sommer và Paxson thảo luận các khó khăn khi đưa học máy ra bối cảnh NIDS thực tế \cite{sommer2010}; vì vậy nghiên cứu này giới hạn kết luận trong tập dữ liệu và protocol đã công bố.
@@ -278,7 +286,7 @@ Phát hiện bất thường \cite{liu2008,sakurada2014,chandola2009} & Cơ sở
 Đánh giá \cite{saito2015,davis2006,fawcett2006} & Diễn giải PR/ROC, cảnh báo nhầm và dữ liệu mất cân bằng.\\
 \bottomrule\end{tabularx}\end{table}
 
-Bản nộp chỉ sử dụng các tài liệu nền có thông tin thư mục đối chiếu được; ma trận cũ chưa được nghiệm thu toàn văn không được dùng làm bằng chứng về hiệu năng nghiên cứu khác. Bản ma trận hiện hành là \path{docs/references/RELATED_WORK_MATRIX_DOT_02.csv}. Báo cáo không công bố số đo hiệu năng của nghiên cứu khác khi chưa kiểm chứng điều kiện thí nghiệm. Rà soát bổ sung ngày 14/10 đã ghi đoạn nội dung và vị trí nguồn cho 11 bài/tài liệu cùng trang chính thức UNSW (12/13 nguồn); S07 mới đối chiếu abstract, chưa lấy được toàn văn. Việc kiểm đoạn nguồn không thay nghiệm thu toàn bài của thành viên. Bảng truy vết tại Phụ lục~\ref{app:sources} phân biệt tài liệu phương pháp, dữ liệu và đánh giá.
+Bảng trên phân nhóm tài liệu nền; không phải một tổng quan có hệ thống về mọi nghiên cứu NIDS ứng dụng. Hai nguồn gần với phạm vi đánh giá được đối chiếu cụ thể ở bảng sau.\input{related_work_comparison.tex} Bản ma trận hiện hành là \path{docs/references/RELATED_WORK_MATRIX_DOT_02.csv}. Báo cáo không công bố số đo hiệu năng của nghiên cứu khác khi chưa kiểm chứng điều kiện thí nghiệm. Rà soát bổ sung ngày 14/10 đã ghi đoạn nội dung và vị trí nguồn cho 11 bài/tài liệu cùng trang chính thức UNSW (12/13 nguồn); S07 mới đối chiếu abstract, chưa lấy được toàn văn. Phạm vi kiểm là các đoạn được dẫn; rà soát toàn văn của thành viên còn mở. Bảng truy vết tại Phụ lục~\ref{app:sources} phân biệt tài liệu phương pháp, dữ liệu và đánh giá.
 
 
 % ============================================================
@@ -287,19 +295,20 @@ Bản nộp chỉ sử dụng các tài liệu nền có thông tin thư mục �
 
 \chapter{ĐỐI CHIẾU GÓP Ý ĐỢT 1 VÀ TIẾN ĐỘ ĐỢT 2}
 
-\section{Các góp ý đợt 1 đã khắc phục trong bản này}
-Nhóm đối chiếu trực tiếp thư phản hồi ngày 19/09/2026 và bản PDF có comment \path{NhomTLCN_TramAnh_VuongThu_TrongTin_dot1-cmts.pdf}. Số trang nguồn ở bảng sau là trang vật lý của tệp 20 trang; vị trí sửa là mục và trang của bản đợt 2 hiện tại. Các nội dung chưa hoàn thành vẫn được ghi riêng, không xem việc sửa cách trình bày là hoàn thành toàn đề tài.
+\section{Đối chiếu góp ý đợt 1 và kết quả khắc phục}
+Nhóm đối chiếu trực tiếp thư phản hồi ngày 19/09/2026 và bản PDF có comment \path{NhomTLCN_TramAnh_VuongThu_TrongTin_dot1-cmts.pdf}. Số trang nguồn ở bảng sau là trang vật lý của tệp 20 trang; vị trí sửa là mục và số trang in dưới chân trang của bản đợt 2 hiện tại. Các nội dung chưa hoàn thành vẫn được ghi riêng, không xem việc sửa cách trình bày là hoàn thành toàn đề tài.
 \begingroup\fontsize{9.5pt}{12pt}\selectfont\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.2}
 \begin{longtable}{L{3.4cm}L{8.2cm}L{4.1cm}}
 \caption{Đối chiếu từng góp ý gốc với nội dung đã sửa trong đợt 2}\\
 \toprule Góp ý / vị trí nguồn & Cách khắc phục và bằng chứng & Vị trí bản hiện tại\\\midrule
 \endfirsthead
+\multicolumn{3}{l}{\small Bảng \thetable\ (tiếp)}\\
 \toprule Góp ý / vị trí nguồn & Cách khắc phục và bằng chứng & Vị trí bản hiện tại\\\midrule
 \endhead
-``Cụ thể những gì đã xong, những gì chưa đạt''; trang 7, thư 19/09 & Tách NIDS, UNSW-NB15, bốn mô hình, mẫu ma trận, kiểm chứng metadata và so sánh toàn văn. Mỗi dòng có đầu ra, phần còn thiếu, tiêu chí đếm và tỷ lệ riêng; bảng kỹ thuật có bằng chứng và người review. & Mục~\ref{sec:progress}, trang~\pageref{sec:progress}; bảng tiến độ trong Chương 3.\\
+``Cụ thể những gì đã xong, những gì chưa đạt''; trang 7, thư 19/09 & Tách NIDS, UNSW-NB15, bốn mô hình, mẫu ma trận, kiểm chứng metadata và so sánh toàn văn. Mỗi dòng có đầu ra, phần còn thiếu, tiêu chí đếm và tỷ lệ riêng; bảng kỹ thuật có bằng chứng và phân công rà soát dự kiến. & Mục~\ref{sec:progress}, trang~\pageref{sec:progress}; bảng tiến độ trong Chương 3.\\
 ``Nghĩa là gì?'' tại ``metric dạng long''; trang 16 & Giải thích artifact/data contract và CSV dạng long: một dòng là một metric tại subset và operating point. Có dòng FPR thật, support, target và threshold để đọc đúng. & Mục~\ref{sec:schemas}, trang~\pageref{sec:schemas}.\\
 ``Cần trình bày cụ thể từng loại cấu trúc dữ liệu''; trang 17 & Bốn file bắt buộc; key/cột, kiểu dữ liệu, ý nghĩa và ví dụ thật của run.json, metrics.csv, predictions.csv. Sửa số prediction thành 164.664 dòng, gồm 82.332 record ở hai target. & Mục~\ref{sec:schemas}, các bảng schema.\\
-``Cụ thể là gì? Thế nào là PASS?''; trang 17 & Liệt kê đúng 17 tên test trong mã, input, expected và kết quả ngày 13/10. Phân biệt assertion đạt với accuracy/hiệu quả mô hình. Lưu log thật, không dùng thẻ minh họa dựng lại. & Mục~\ref{sec:tests}, trang~\pageref{sec:tests}; Phụ lục~\ref{app:evidence}.\\
+``Cụ thể là gì? Thế nào là PASS?''; trang 17 & Liệt kê đúng 17 tên test trong mã, input, expected và kết quả ngày 13/10. Phân biệt assertion đạt với accuracy/hiệu quả mô hình. Kèm đường dẫn log để kiểm lại. & Mục~\ref{sec:tests}, trang~\pageref{sec:tests}; Phụ lục~\ref{app:evidence}.\\
 ``Các scenario được mô tả thế nào?''; trang 17 & Mô tả closed-set và từng LOACO; development, held-out, vai trò official test và support. Held-out bị loại trước split/fit; threshold lấy từ Normal validation. & Mục~\ref{sec:scenarios}, trang~\pageref{sec:scenarios}.\\
 ``Cần có số liệu hoặc mô tả cụ thể, không viết chung chung''; trang 17 & Audit 2 split, 80 lượt chạy/320 artifact, 17 test; bảng mean/std 16 nhóm qua 5 seed, FPR 1\%/5\%, UADR kèm support và audit độc lập từ prediction. & Mục~\ref{sec:metrics}, trang~\pageref{sec:metrics}; Phụ lục~\ref{app:evidence}.\\
 Ghi âm 17/09: báo cáo tích lũy và kế hoạch đầy đủ & Giữ nền đặt vấn đề/RQ/lý thuyết từ đợt 1; bổ sung phương pháp, kết quả và giới hạn. Có kế hoạch toàn đề tài, công việc song song và người biên tập xuyên suốt. & Chương 1--3 và 4--8; không phải bản nhật ký tuần.\\
@@ -308,77 +317,71 @@ Ghi âm 17/09: báo cáo tích lũy và kế hoạch đầy đủ & Giữ nền 
 \section{Kế hoạch toàn đề tài và cách đọc tiến độ}\label{sec:progress}
 Kế hoạch gốc trải từ 17/08 đến 23/12/2026, gồm tám nội dung ND1--ND8. Hình~\ref{fig:fullplan} giữ cửa sổ thời gian dự kiến để thấy công việc song song; trạng thái hiện tại được tách ở bảng ngay sau hình. Một số baseline và lượt chạy đã có artifact ngày 26/09, sớm hơn cửa sổ dự kiến trong kế hoạch gốc. Báo cáo ghi nhận thực tế này, không sửa ngày dữ liệu hay coi thanh Gantt là nhật ký đã thực hiện.
 
-\begin{figure}[H]\centering
-\resizebox{\linewidth}{!}{%
-\begin{ganttchart}[hgrid,vgrid,x unit=0.62cm,y unit title=1.05cm,y unit chart=0.66cm,title label font=\scriptsize\bfseries,bar label font=\scriptsize,milestone label font=\scriptsize,bar height=0.55,bar/.append style={fill=HCMUTEBlue!45,draw=HCMUTEDark},milestone/.append style={fill=WarnOrange,draw=WarnOrange}]{1}{19}
-\gantttitle{Mốc ngày bắt đầu mỗi khoảng dự kiến năm 2026}{19}\\
-\gantttitle{\rotatebox{90}{17/08}}{1}\gantttitle{\rotatebox{90}{24/08}}{1}\gantttitle{\rotatebox{90}{31/08}}{1}\gantttitle{\rotatebox{90}{07/09}}{1}\gantttitle{\rotatebox{90}{14/09}}{1}\gantttitle{\rotatebox{90}{21/09}}{1}\gantttitle{\rotatebox{90}{28/09}}{1}\gantttitle{\rotatebox{90}{05/10}}{1}\gantttitle{\rotatebox{90}{12/10}}{1}\gantttitle{\rotatebox{90}{19/10}}{1}\gantttitle{\rotatebox{90}{26/10}}{1}\gantttitle{\rotatebox{90}{02/11}}{1}\gantttitle{\rotatebox{90}{09/11}}{1}\gantttitle{\rotatebox{90}{16/11}}{1}\gantttitle{\rotatebox{90}{23/11}}{1}\gantttitle{\rotatebox{90}{30/11}}{1}\gantttitle{\rotatebox{90}{07/12}}{1}\gantttitle{\rotatebox{90}{14/12}}{1}\gantttitle{\rotatebox{90}{21/12}}{1}\\
-\ganttbar{ND1. Bài toán và phạm vi}{1}{4}\\
-\ganttbar{ND2. Lý thuyết và tài liệu}{2}{8}\\
-\ganttbar{ND3. Protocol}{3}{6}\\
-\ganttbar{ND4. Audit và preprocessing}{5}{8}\\
-\ganttbar{ND5. Bốn baseline}{8}{10}\\
-\ganttbar{ND6. Thí nghiệm và đánh giá}{10}{15}\\
-\ganttbar{ND7. Phân tích lỗi, prototype}{15}{17}\\
-\ganttbar{ND8. Viết và bàn giao}{1}{19}\\
-\ganttmilestone{Đợt 1: 13/09}{4}\\
-\ganttmilestone{Đợt 2: 11/10}{8}\\
-\ganttmilestone{Đợt 3: 08/11}{12}\\
-\ganttmilestone{Bản cuối: 23/12}{19}
-\end{ganttchart}}
-\caption{Kế hoạch toàn đề tài với mốc ngày dạng dd/mm theo thư ngày 08/09; mỗi cột là bảy ngày, riêng cột cuối kết thúc 23/12. Màu thanh thể hiện khoảng dự kiến, không mã hóa phần trăm hoàn thành. Mốc báo cáo theo chu kỳ bốn tuần.}\label{fig:fullplan}
-\end{figure}
+\input{figures/gantt_plan.tex}
 
-Các tỷ lệ dưới đây đo mức có đầu ra theo checklist được nêu rõ, không đo mức hiểu của thành viên, chất lượng khoa học hay tỷ lệ thời gian đã dùng. Không tính trung bình các tỷ lệ thành một tỷ lệ toàn đề tài vì khối lượng khác nhau. Trạng thái ghi theo hồ sơ kiểm tra ngày 13/10 và bổ sung ngày 14/10/2026; các mục chưa có đủ bằng chứng vẫn để chưa hoàn thành.
+\begin{table}[H]\centering\small
+\caption{Phân biệt kỳ tổng hợp, hạn nội bộ và bản cuối dự kiến}
+\begin{tabularx}{\textwidth}{L{2.0cm}L{3.8cm}Y}\toprule
+Kỳ / mốc & Kết thúc kỳ & Hạn nội bộ / trạng thái\\\midrule
+Đợt 1 & 13/09/2026 & 14/09, gửi bù theo kế hoạch nhóm.\\
+Đợt 2 & 11/10/2026 & 12/10 là mốc nội bộ trong kế hoạch; không phải chứng cứ hạn thầy ấn định.\\
+Đợt 3 & 08/11/2026 & 09/11 là mốc nội bộ dự kiến.\\
+Kỳ tiếp nối & 06/12/2026 & Mốc tính theo chu kỳ 28 ngày; chờ xác nhận lịch nộp, không tự coi là hạn mới.\\
+Bản cuối & 23/12/2026 & Mốc dự kiến của nhóm, xác nhận theo thông báo môn.\\
+\bottomrule\end{tabularx}\end{table}
+Thư ngày 08/09 yêu cầu thể hiện ngày dạng dd/mm và báo cáo bốn tuần/lần; không ấn định riêng các ngày ở bảng. Ngày kết thúc kỳ, ngày biên tập và hạn nộp thực tế là ba loại mốc khác nhau.
+
+Các tỷ lệ dưới đây đo mức có đầu ra theo checklist được nêu rõ, không đo mức hiểu của thành viên, chất lượng khoa học hay tỷ lệ thời gian đã dùng. Không tính trung bình các tỷ lệ thành một tỷ lệ toàn đề tài vì khối lượng khác nhau. Trạng thái kỹ thuật đối chiếu ngày 17/10/2026; các mục chưa có đủ bằng chứng vẫn để chưa hoàn thành.
 \begingroup\fontsize{9.5pt}{12pt}\selectfont\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.2}
 \begin{longtable}{L{1.1cm}L{3.0cm}L{6.2cm}L{3.2cm}L{2.1cm}}
 \caption{Tiến độ từng hạng mục, tách lý thuyết, dữ liệu và ma trận tài liệu}\\
-\toprule Mã & Đầu việc riêng & Đã có / còn thiếu & Tiêu chí / tỷ lệ & Phụ trách\\\midrule
+\toprule Mã & Đầu việc riêng & Đã có / còn thiếu & Tiêu chí / tỷ lệ & Phụ trách dự kiến\\\midrule
 \endfirsthead
-\toprule Mã & Đầu việc riêng & Đã có / còn thiếu & Tiêu chí / tỷ lệ & Phụ trách\\\midrule
+\multicolumn{5}{l}{\small Bảng \thetable\ (tiếp)}\\
+\toprule Mã & Đầu việc riêng & Đã có / còn thiếu & Tiêu chí / tỷ lệ & Phụ trách dự kiến\\\midrule
 \endhead
-ND1 & Bài toán, phạm vi và RQ & Có bối cảnh, mục tiêu, ba RQ và giới hạn benchmark ở Chương 1. & 4/4 mục trình bày: 100\%. & Cả nhóm; Tín\\
-ND2.1 & Lý thuyết NIDS & Có định nghĩa/flow, chữ ký so với bất thường, supervised so với anomaly. Còn thiếu mô tả sâu vị trí triển khai và xử lý cảnh báo. & 3/4 mục của bản tổng quan: 75\%. & Trâm Anh\\
+ND1 & Bài toán, phạm vi và RQ & Có bối cảnh, mục tiêu, ba RQ và giới hạn (Chương 1). & 4/4 mục trình bày: 100\%. & Cả nhóm; Tín\\
+ND2.1 & Lý thuyết NIDS & Có bốn mục: định nghĩa, phân biệt phương pháp, vị trí và luồng cảnh báo khái niệm. Chưa triển khai cảm biến. & 4/4 mục mô tả đã có: 100\% phạm vi trình bày. & Trâm Anh\\
 ND2.2 & Tìm hiểu UNSW-NB15 & Có nguồn, official split, feature/nhãn, mất cân bằng và giới hạn overlap; xem Chương 2 và 4. & 4/4 mục mô tả bộ dữ liệu: 100\%. & Trâm Anh; Tín\\
-ND2.3 & Lý thuyết bốn baseline & Có nguyên lý và vai trò RF/XGB/IF/AE ở Chương 2; cấu hình thật ở Chương 6. Chưa phải tổng quan đầy đủ mọi biến thể. & 4/4 mô hình có mô tả cơ sở: 100\%. & Trâm Anh; Thu\\
+ND2.3 & Lý thuyết bốn baseline & Mỗi mô hình có cơ chế, dữ liệu fit, score và giới hạn ở Chương 2; cấu hình ở Chương 6. Nhóm còn tự kiểm phần giải thích. & 4/4 có mục mô tả; rà soát mức hiểu còn mở. & Trâm Anh; Thu\\
 ND2.4 & Mẫu ma trận tài liệu & Có schema thư mục, vai trò, split/model/metric, hạn chế và trạng thái kiểm chứng; bản hiện tại có 13 dòng. & 1/1 mẫu cấu trúc: 100\%. & Trâm Anh\\
 ND2.5 & Kiểm tra thư mục nguồn & 12 DOI đối chiếu metadata; thêm trang dữ liệu chính thức UNSW. Không đồng nghĩa đã đọc đủ toàn văn. & 13/13 nguồn nền có định danh: 100\%. & Trâm Anh; Tín\\
-ND2.6 & Ma trận so sánh nghiên cứu & Đã bổ sung đoạn nguồn, trang/section và điều kiện cho 12/13 nguồn; S07 chỉ có abstract. Chưa nghiệm thu toàn bài; không mượn số đo khác điều kiện. & 12/13 nguồn có đối chiếu nội dung: 92,3\%; nghiệm thu toàn bài còn mở. & Trâm Anh; Thu\\
+ND2.6 & Đối chiếu nguồn nền & Có đoạn/vị trí/điều kiện cho 12/13 nguồn; S07 chỉ abstract; toàn bài còn mở. & 12/13 đối chiếu đoạn (92,3\%); không phải tỷ lệ nghiên cứu ứng dụng đã nghiệm thu. & Trâm Anh; Thu\\
 ND3 & Thiết kế protocol & Có 4 scenario, 4 model, 5 seed, schema/metric/threshold và validator. Bằng chứng D2.1, D2.4--D2.6. & 80/80 ID đúng ma trận: 100\%. & Tín; Thu\\
 ND4 & Audit và preprocessing & Có manifest, schema, overlap, data contract và pipeline; còn thí nghiệm định lượng ảnh hưởng overlap, tách riêng ở ND7. & Hai split đã audit: 2/2; 100\% phạm vi audit. & Trâm Anh; Tín\\
 ND5 & Cài đặt baseline & Bốn adapter có artifact thật; test và schema trình bày ở Chương 6--7. & 4/4 baseline: 100\%. & Tín; Thu\\
 ND6 & Thí nghiệm và tổng hợp & Có 80 run, 320 artifact, 16 nhóm mean/std; đủ hai target FPR. Đây là kết quả benchmark, chưa phải mọi phân tích khoa học. & 80/80 lượt chạy: 100\%. & Tín; Thu\\
-ND7.1 & Phân tích lỗi sâu & Đã có bảng lỗi category và ví dụ ban đầu (Mục~\ref{sec:categoryerrors}); còn PR/score distribution, giải thích feature và độ nhạy overlap. & 0/3 bộ phân tích được nghiệm thu: 0\%. & Thu; Trâm Anh\\
+ND7.1 & Phân tích lỗi sâu & Đã có bảng lỗi category và ví dụ ban đầu (Mục~\ref{sec:categoryerrors}); còn PR/score distribution, giải thích feature và độ nhạy overlap. & 0/3 bộ: PR/score, giải thích feature, độ nhạy overlap. & Thu; Trâm Anh\\
 ND7.2 & Prototype hoàn chỉnh & Đã có mã CLI predict\_csv.py; chưa nghiệm thu demo hoàn chỉnh và bộ tình huống giải thích. & 0/1 bộ demo hoàn chỉnh: 0\%. & Tín; cả nhóm\\
-ND8 & Viết và bàn giao & Có bản tích lũy đến đợt 2. Còn bản cuối, slide/bảo vệ và đóng gói nghiệm thu cuối. & 1/4 đầu ra viết/bàn giao: 25\%. & Trâm Anh biên tập; cả nhóm\\
+ND8 & Viết và bàn giao & Có bản tích lũy đến đợt 2. Còn bản cuối, slide/bảo vệ và đóng gói nghiệm thu cuối. & 1/4 (25\%): báo cáo đợt 2; còn bản cuối, slide, gói nghiệm thu. & Trâm Anh biên tập; cả nhóm\\
 \bottomrule\end{longtable}\endgroup
 
 Phân công theo kế hoạch: Trâm Anh cập nhật bản tích lũy; Tín tích hợp bằng chứng/mã nguồn và kiểm tra PDF; Thu đối chiếu mô hình, metric và phần phân tích. Cột phụ trách không chứng nhận đóng góp đã được nghiệm thu; nhóm cần đối chiếu thực tế khi họp. Các đợt báo cáo tiếp tục cùng mạch nội dung từ đầu đến mốc hiện tại.
 
 \section{Đối chiếu góp ý và cách tính tiến độ}
-Các đầu việc được tách riêng thay cho tỷ lệ gộp ND2/ND3. Mỗi tỷ lệ dưới đây chỉ phản ánh phạm vi đầu ra của đợt 2, không phải tỷ lệ hoàn thành toàn đề tài. Tỷ lệ 100\% tại bảng đầu ra kỹ thuật là có sản phẩm và kiểm tra được bằng chứng trong phạm vi đã nêu. Xác nhận nội dung của nhóm trưởng được ghi riêng ở cuối chương. Phân tích lỗi chuyên sâu, kiểm chứng ngoài UNSW-NB15 và sản phẩm cuối toàn đề tài không nằm trong tỷ lệ này.
+Các đầu việc được tách riêng thay cho tỷ lệ gộp ND2/ND3. Mỗi tỷ lệ dưới đây chỉ phản ánh phạm vi đầu ra của đợt 2, không phải tỷ lệ hoàn thành toàn đề tài. Tỷ lệ 100\% tại bảng đầu ra kỹ thuật là có sản phẩm và kiểm tra được bằng chứng trong phạm vi đã nêu. Trạng thái rà soát nội dung được ghi riêng tại Mục~\ref{sec:teamreview}. Phân tích lỗi chuyên sâu, kiểm chứng ngoài UNSW-NB15 và sản phẩm cuối toàn đề tài không nằm trong tỷ lệ này.
 \begingroup\fontsize{9.5pt}{12pt}\selectfont\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.2}
 \begin{longtable}{L{1cm}L{2.5cm}L{7.2cm}L{2.3cm}L{2.6cm}}
 \caption{Tiến độ riêng từng đầu ra đợt 2}\\
-\toprule Mã & Sản phẩm & Đã có / chưa có / tỷ lệ & Bằng chứng & Owner / review\\\midrule
+\toprule Mã & Sản phẩm & Đã có / chưa có / tỷ lệ & Bằng chứng & Soạn / rà soát dự kiến\\\midrule
 \endfirsthead
-\toprule Mã & Sản phẩm & Đã có / chưa có / tỷ lệ & Bằng chứng & Owner / review\\\midrule
+\multicolumn{5}{l}{\small Bảng \thetable\ (tiếp)}\\
+\toprule Mã & Sản phẩm & Đã có / chưa có / tỷ lệ & Bằng chứng & Soạn / rà soát dự kiến\\\midrule
 \endhead
-D2.1 & Khóa protocol & 80 ID hợp lệ; ba thành viên đã xác nhận theo thông tin nhóm trưởng cung cấp 13/10.\par\textit{Còn thiếu trong phạm vi đầu ra: không.}\par\textbf{100\%} & Gate 1; ma trận cấu hình & Cả nhóm / Tín\\
+D2.1 & Khóa protocol & Kỹ thuật: 80/80 ID đúng ma trận (100\% phạm vi ID).\par\textit{Còn thiếu: nghiệm thu nội dung Gate 1 của nhóm; không gộp thành tỷ lệ đã khóa hoàn toàn.} & Ma trận; Mục~\ref{sec:teamreview} & Cả nhóm / Tín\\
 D2.2 & Manifest / fingerprint & Hai CSV đúng tên, kích thước, số dòng/cột và SHA-256 khớp bản lưu.\par\textit{Còn thiếu trong phạm vi đầu ra: không.}\par\textbf{100\%} & \path{data_manifest.json} & Trâm Anh / Tín\\
 D2.3 & Audit dữ liệu & Đã kiểm schema, missing, infinity, label/category; phân biệt ba cách đếm duplicate và overlap.\par\textit{Còn thiếu trong phạm vi đầu ra: không.}\par\textbf{100\%} & Manifest; audit overlap & Trâm Anh / Tín, Thu\\
-D2.4 & Data contract & Chốt 42 feature, ba cột metadata, ba cột categorical và quy tắc Normal=0.\par\textit{Còn thiếu trong phạm vi đầu ra: không.}\par\textbf{100\%} & \path{DATA_CONTRACT.md} / Gate 2 & Trâm Anh, Tín / Thu\\
+D2.4 & Data contract & Chốt 42 feature, ba cột metadata, ba cột categorical và quy tắc Normal=0.\par\textit{Còn thiếu trong phạm vi đầu ra: không.}\par\textbf{100\%} & \path{DATA_CONTRACT.md}; Gate 2 nội dung còn mở & Trâm Anh, Tín / Thu\\
 D2.5 & Chống leakage & Held-out bị loại trước split/fit; transformer và anomaly fit đúng vùng; test đạt.\par\textit{Còn thiếu trong phạm vi đầu ra: không.}\par\textbf{100\%} & Source; tests & Tín / Trâm Anh\\
 D2.6 & Bốn scenario & Có development/test role, held-out class và support cho từng scenario.\par\textit{Còn thiếu trong phạm vi đầu ra: không.}\par\textbf{100\%} & Bảng scenario & Tín / cả nhóm\\
 D2.7 & Bốn baseline & 80/80 run completed, đủ 320/320 file bắt buộc; mỗi run đánh giá 82.332 record.\par\textit{Còn thiếu trong phạm vi đầu ra: không.}\par\textbf{100\%} & results/runs/ & Tín, Thu / Trâm Anh\\
 D2.8 & Kiểm thử & 17/17 test đạt; có input, expected, kết quả và log kiểm tra ngày 13/10.\par\textit{Còn thiếu trong phạm vi đầu ra: không.}\par\textbf{100\%} & \path{tests/} / log & Tín, Thu / Trâm Anh\\
 D2.9 & Kết quả benchmark & Bảng 80 run, mean/std 16 nhóm, hai mức FPR; số liệu đối chiếu lại từ predictions.\par\textit{Còn thiếu trong phạm vi đầu ra: không.}\par\textbf{100\%} & CSV/JSON; hình kết quả & Tín, Thu / cả nhóm\\
-D2.10 & Tiến độ chi tiết và bản tích lũy & Bảng tách đầu ra, đã/chưa có, tiêu chí, tỷ lệ, bằng chứng và review; bản tích lũy có đối chiếu comment gốc.\par\textit{Còn thiếu trong phạm vi đầu ra: không.}\par\textbf{100\%} & Nguồn/PDF 13/10 & Trâm Anh, Tín / cả nhóm\\
+D2.10 & Tiến độ chi tiết và bản tích lũy & Bảng tách đầu ra, đã/chưa có, tiêu chí, tỷ lệ, bằng chứng và review; bản tích lũy có đối chiếu comment gốc.\par\textit{Còn thiếu trong phạm vi đầu ra: không.}\par\textbf{100\%} & Nguồn/PDF 17/10 & Trâm Anh, Tín / cả nhóm\\
 \bottomrule\end{longtable}\endgroup
 
-\section{Xác nhận của nhóm}
-Ngày 13/10/2026, nhóm trưởng báo cả ba thành viên đồng ý nội dung khi đó. Ngày 17/10, nhóm trưởng làm rõ rằng mức hiểu từng thành viên chưa được kiểm chứng; bản hiện tại chờ nhóm rà soát, dự kiến họp ngày 18/10. Nghiệm thu nội dung Gate 1/Gate 2 còn mở; kiểm tra kỹ thuật không thay thế việc tự đọc, giải thích và đối chiếu đóng góp. Không tạo chữ ký thay thành viên hoặc suy diễn thành phê duyệt của giảng viên.
-
+\section{Trạng thái rà soát của nhóm}\label{sec:teamreview}
+Tại ngày 17/10/2026, bản hiện tại đang chờ nhóm rà soát; mức hiểu và đóng góp của từng thành viên chưa được kiểm chứng. Thông tin đồng ý do nhóm trưởng báo ngày 13/10 được giữ là lịch sử. Nghiệm thu nội dung Gate 1/Gate 2 còn mở; kết quả kiểm kỹ thuật và phân công dự kiến ở các bảng trên không xác nhận thay việc tự đọc, giải thích và đối chiếu đóng góp.
 
 \chapter{DỮ LIỆU VÀ DATA CONTRACT}
 \section{Nguồn và fingerprint}
@@ -388,20 +391,22 @@ Nhóm giữ nguyên hai official split UNSW-NB15 \cite{moustafa2015,moustafa2016
 \caption{Kích thước, chất lượng và nhãn hai official split}\\
 \toprule Split & Dòng & Cột & Missing & Infinity & Normal & Attack\\\midrule
 \endfirsthead
+\multicolumn{7}{l}{\small Bảng \thetable\ (tiếp)}\\
 \toprule Split & Dòng & Cột & Missing & Infinity & Normal & Attack\\\midrule
 \endhead
-Train & 175,341 & 45 & 0 & 0 & 56,000 & 119,341\\
-Test & 82,332 & 45 & 0 & 0 & 37,000 & 45,332\\
+Train & 175.341 & 45 & 0 & 0 & 56.000 & 119.341\\
+Test & 82.332 & 45 & 0 & 0 & 37.000 & 45.332\\
 \bottomrule\end{longtable}\endgroup
 
-\noindent\textbf{Training}: \path{UNSW_NB15_training-set.csv}; 32,293,018 byte.\par SHA-256 (nhóm 16 ký tự, bỏ khoảng trắng khi đối chiếu):\par {\small\ttfamily bec7dd5ec88dc2a0 ccc7a07879d33839 5ed7421750f675fd 0339e07dfe0648fa}\par
+\noindent\textbf{Training}: \path{UNSW_NB15_training-set.csv}; 32.293.018 byte.\par SHA-256 (nhóm 16 ký tự, bỏ khoảng trắng khi đối chiếu):\par {\small\ttfamily bec7dd5ec88dc2a0 ccc7a07879d33839 5ed7421750f675fd 0339e07dfe0648fa}\par
 
-\noindent\textbf{Testing}: \path{UNSW_NB15_testing-set.csv}; 15,380,800 byte.\par SHA-256 (nhóm 16 ký tự, bỏ khoảng trắng khi đối chiếu):\par {\small\ttfamily 734fe6642edf758f 7c94d7d9149426b4 9d202fe8e7bf0bef 47392489c3c0a559}\par
+\noindent\textbf{Testing}: \path{UNSW_NB15_testing-set.csv}; 15.380.800 byte.\par SHA-256 (nhóm 16 ký tự, bỏ khoảng trắng khi đối chiếu):\par {\small\ttfamily 734fe6642edf758f 7c94d7d9149426b4 9d202fe8e7bf0bef 47392489c3c0a559}\par
 \begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.2}
 \begin{longtable}{L{6.5cm}r r}
 \caption{Support của từng category trong hai official split}\\
 \toprule Category & Train & Official test\\\midrule
 \endfirsthead
+\multicolumn{3}{l}{\small Bảng \thetable\ (tiếp)}\\
 \toprule Category & Train & Official test\\\midrule
 \endhead
 Normal & 56000 & 37000\\
@@ -424,7 +429,7 @@ So khớp 42 feature cho thấy 8.541/82.332 dòng test (10,4\%) có vector xu�
 Các số đếm cho thấy overlap trong biểu diễn feature của official split. Chúng chưa chứng minh nguyên nhân tạo bản ghi trùng, chưa xác định mức overlap trong tập fit thực tế theo từng seed và chưa định lượng ảnh hưởng đến UADR. Nhóm giữ nguyên split theo protocol, coi overlap là giới hạn tính độc lập/khái quát hóa của benchmark; không dùng phát biểu ``không có leakage'' để loại bỏ rủi ro này. Các test chỉ xác nhận việc loại metadata, held-out class và phạm vi fit trong pipeline.
 
 \section{Contract feature và nhãn}
-45 cột gồm 42 feature và ba metadata: \texttt{id} để truy vết, \texttt{label} là target và \texttt{attack\_cat} cho scenario/phân tích. Ba metadata bị loại khỏi feature. Trong 42 feature, \texttt{proto}, \texttt{service}, \texttt{state} là categorical; 39 cột còn lại là numeric theo schema raw. Pipeline dùng imputation, scaling và one-hot encoding; encoder xử lý category chưa gặp mà không fit lại trên test. Normal=0, Attack=1. Dtype chi tiết 45 cột được lưu trong manifest.
+45 cột gồm 42 feature và ba metadata: \texttt{id} để truy vết, \texttt{label} là target và \texttt{attack\_cat} cho scenario/phân tích. Ba metadata bị loại khỏi feature. Trong 42 feature, \texttt{proto}, \texttt{service}, \texttt{state} là categorical; 39 cột còn lại là numeric theo schema raw. Numeric được điền giá trị thiếu bằng median rồi chuẩn hóa bằng StandardScaler; categorical được điền bằng giá trị thường gặp nhất rồi one-hot encode với \texttt{handle\_unknown=ignore}. Category chưa gặp tạo toàn 0 trong block one-hot tương ứng, không fit lại encoder trên test. 42 feature gốc không phải số chiều sau encoding: ví dụ CS-AE-S42 có 65 chiều, CS-RF-S42 có 194; số chiều phụ thuộc vùng fit và các category đã gặp. Normal=0, Attack=1. Dtype chi tiết 45 cột được lưu trong manifest.
 
 Supervised fit trên Normal và known attacks của development-train. Với IF/AE, cả preprocessor và model chỉ fit Normal development-train; threshold lấy từ Normal validation. Official test không được dùng fit/tuning/threshold.
 
@@ -437,6 +442,7 @@ Development được chia train/validation 80/20 theo từng seed, phân tầng 
 \caption{Development và vai trò official test theo scenario}\\
 \toprule Scenario & Development / held-out & Known support & Held-out support\\\midrule
 \endfirsthead
+\multicolumn{4}{l}{\small Bảng \thetable\ (tiếp)}\\
 \toprule Scenario & Development / held-out & Known support & Held-out support\\\midrule
 \endhead
 CS & Giữ mọi category; không held-out & 45.332 & 0\\
@@ -445,25 +451,29 @@ LD & Loại DoS trước split/fit & 41.243 & 4.089\\
 LE & Loại Exploits trước split/fit & 34.200 & 11.132\\
 \bottomrule\end{longtable}\endgroup
 
-\begin{figure}[H]\centering
-\begin{tikzpicture}[node distance=0.55cm and 0.5cm,every node/.style={font=\small},box/.style={draw=HCMUTEBlue,rounded corners,align=center,text width=4.2cm,minimum height=1.25cm,fill=HCMUTELight}]
-\node[box] (raw) {Official training set\\175.341 record};
-\node[box,right=of raw] (dev) {LOACO: loại held-out\\Chia development 80/20};
-\node[box,right=of dev] (fit) {Fit trên train hợp lệ\\IF/AE: chỉ Normal};
-\node[box,below=of fit] (th) {Chọn threshold\\Normal validation};
-\node[box,left=of th] (test) {Official test giữ nguyên\\82.332 record};
-\node[box,left=of test] (metric) {Known recall, UADR, FPR\\AP và artifact truy vết};
-\draw[-{Latex}] (raw)--(dev);\draw[-{Latex}] (dev)--(fit);
-\draw[-{Latex}] (fit)--(th);\draw[-{Latex}] (th)--(test);\draw[-{Latex}] (test)--(metric);
-\end{tikzpicture}
-\caption{Luồng benchmark đã thực hiện; test chỉ tham gia sau khi model và threshold được khóa.}
-\end{figure}
+Ba lớp held-out nằm trong ma trận đã khóa của đợt 1 và có support test khác nhau: Reconnaissance 3.496, DoS 4.089, Exploits 11.132. Báo cáo xem đây là phạm vi thí nghiệm hữu hạn, không khẳng định ba lớp đại diện cho cả chín nhóm. Hồ sơ hiện có chưa chứng minh một tiêu chí chọn tối ưu ba lớp; vì vậy không suy lựa chọn từ bảng hiệu năng test hoặc gọi đây là đánh giá mọi kiểu tấn công chưa biết.
+
+\input{figures/benchmark_split.tex}
 
 \section{Threshold và metric}
-Score cao hơn có nghĩa giống Attack/anomaly hơn. Với target FPR 1\% hoặc 5\%, code xét các threshold từ score Normal validation theo thứ tự tăng dần, chọn threshold thấp nhất thỏa tỷ lệ $\#(score\geq threshold)/N_{Normal,val}\leq target$. Cách chọn xử lý cả score trùng, không mặc định dùng một phân vị nội suy. Dự đoán Attack khi $score\geq threshold$.
+Score cao hơn có nghĩa giống Attack/anomaly hơn. Với target FPR 1\% hoặc 5\%, code xét các score Normal validation phân biệt cùng ứng viên \texttt{nextafter(max\_score, +inf)} ngay trên score lớn nhất, theo thứ tự tăng dần, chọn threshold thấp nhất thỏa tỷ lệ $\#(score\geq threshold)/N_{Normal,val}\leq target$. Cách chọn xử lý cả score trùng, không mặc định dùng một phân vị nội suy. Dự đoán Attack khi $score\geq threshold$.
 
 FPR có mẫu số Normal test; Known Attack Recall có mẫu số known attacks; UADR có mẫu số held-out attacks. UADR ở closed-set là null vì support=0. AP dùng toàn bộ score test và không phụ thuộc threshold. Trong các dòng precision/recall/F1 của file metric, \texttt{support}=82.332 là số record đánh giá, không phải mẫu số riêng của precision hay recall. Mẫu số đúng được xác định bởi TP/FP/FN/TN theo công thức ở chương cơ sở lý thuyết. Chính sách này bảo đảm threshold không được chọn từ test; nó không bảo đảm FPR trên test bằng target validation.
 
+
+
+\subsection{Ví dụ cách chọn ngưỡng và xử lý score trùng}
+Với bốn score Normal validation minh họa $[0.1,0.2,0.2,0.9]$, tập ứng viên có bốn giá trị như bảng. Hai mẫu cùng score 0.2 phải được xử lý cùng phía ngưỡng; không được tách một mẫu để đạt một tỷ lệ mong muốn.
+\begin{table}[H]\centering\small
+\caption{Ví dụ minh họa trên bốn score, không phải kết quả official test}
+\begin{tabular}{lrr}\toprule
+Ngưỡng ứng viên & Số Normal bị báo Attack & FPR validation\\\midrule
+0.1 & 4/4 & 100\%\\
+0.2 & 3/4 & 75\%\\
+0.9 & 1/4 & 25\%\\
+\texttt{nextafter(0.9, +inf)} & 0/4 & 0\%\\\bottomrule
+\end{tabular}\end{table}
+Tại target 25\%, ngưỡng thấp nhất hợp lệ là 0.9. Nếu target bằng 0\%, ứng viên ngay trên 0.9 cho phép không báo động trên bốn mẫu validation. Cả hai trường hợp vẫn phải đánh giá FPR test riêng; ví dụ này không dùng test để chọn ngưỡng.
 
 \chapter{PIPELINE VÀ ARTIFACT}
 \section{Pipeline và cấu hình bốn baseline}
@@ -473,13 +483,17 @@ Luồng tái lập gồm raw CSV, audit/manifest, loại metadata/held-out, chia
 \caption{Cấu hình full run trong mã nguồn hiện tại}\\
 \toprule Model & Cấu hình & Dữ liệu fit và score\\\midrule
 \endfirsthead
+\multicolumn{3}{l}{\small Bảng \thetable\ (tiếp)}\\
 \toprule Model & Cấu hình & Dữ liệu fit và score\\\midrule
 \endhead
 RF & 300 cây; min\_samples\_leaf=2; class\_weight=balanced\_subsample. & Normal + known train; score = xác suất lớp Attack.\\
 XGB & 350 cây; max\_depth=6; learning\_rate=0,08; subsample=0,85; colsample\_bytree=0,85; tree\_method=hist. & Normal + known train; score = xác suất lớp Attack.\\
 IF & 300 cây; max\_samples=auto; contamination=auto. & Normal train; score = âm decision\_function.\\
-AE & MLPRegressor tái tạo đầu vào; hidden layers (64,16,64); ReLU/Adam; batch=256; learning rate=0,001; tối đa 80 vòng; early stopping, validation\_fraction=0,1 và n\_iter\_no\_change=6. & Normal train; score = MSE tái tạo. Internal early-stopping split nằm trong Normal train, tách biệt validation chọn threshold.\\
+AE & MLPRegressor tái tạo đầu vào; hidden layers (64,16,64); ReLU/Adam; batch=256; learning rate=0,001; tối đa 80 vòng; early stopping, validation\_fraction=0,1 và n\_iter\_no\_change=6. & Normal train; score = MSE tái tạo. Phần dữ liệu early stopping nằm trong Normal train, tách biệt validation chọn threshold.\\
 \bottomrule\end{longtable}\endgroup
+
+Bốn mô hình được dùng như cấu hình baseline cố định: RF/XGB đại diện tổ hợp cây có giám sát; IF đại diện cô lập ngẫu nhiên; AE đại diện tái tạo đầu vào. Các tham số trong bảng là cấu hình đã dùng cho toàn bộ ma trận, không phải kết quả tìm kiếm siêu tham số. Chưa có thí nghiệm độ nhạy hoặc bằng chứng cấu hình tối ưu; mọi so sánh chỉ áp dụng cho các cấu hình đã công bố.
+
 
 Mọi model dùng năm seed 42, 52, 62, 72, 82. Cấu hình smoke nhỏ hơn chỉ phục vụ kiểm thử; 80 run trong bảng kết quả đều có status \texttt{completed} và đánh giá đầy đủ official test.
 
@@ -490,6 +504,7 @@ Artifact là file đầu ra lưu bằng chứng của một lượt chạy. Mỗ
 \caption{Bốn file bắt buộc và kích thước logic}\\
 \toprule File & Dạng & Vai trò\\\midrule
 \endfirsthead
+\multicolumn{3}{l}{\small Bảng \thetable\ (tiếp)}\\
 \toprule File & Dạng & Vai trò\\\midrule
 \endhead
 \path{run.json} & JSON object & Metadata và provenance: run ID, seed, scenario, fingerprint, row counts, threshold, môi trường, thời gian và đường dẫn.\\
@@ -502,6 +517,7 @@ Artifact là file đầu ra lưu bằng chứng của một lượt chạy. Mỗ
 \caption{Các key trong run.json và ví dụ thật CS-RF-S42}\\
 \toprule Key & Kiểu & Ví dụ & Ý nghĩa\\\midrule
 \endfirsthead
+\multicolumn{4}{l}{\small Bảng \thetable\ (tiếp)}\\
 \toprule Key & Kiểu & Ví dụ & Ý nghĩa\\\midrule
 \endhead
 \path{run_id} & string & CS-RF-S42 & Khóa duy nhất liên kết các artifact.\\
@@ -511,7 +527,7 @@ Artifact là file đầu ra lưu bằng chứng của một lượt chạy. Mỗ
 \path{model / model_family} & string & \path{random_forest / supervised} & Model và họ phương pháp.\\
 \path{seed} & integer & 42 & Seed của lượt chạy.\\
 \path{status} & string & completed & Full run hoàn tất.\\
-\path{data_fingerprint / config_fingerprint} & SHA-256 string & 64 ký tự hex & Dấu vết hai CSV raw và request cấu hình; giá trị đầy đủ nằm trong file gốc.\\
+\path{data_fingerprint / config_fingerprint} & SHA-256 string & 64 ký tự hex & Hash hai CSV raw / hash RunRequest. Config hash không bao gồm mọi tham số estimator hoặc commit mã; giá trị đầy đủ trong file gốc.\\
 \path{threshold_policy.source_split} & string & \path{normal_validation} & Nguồn chọn threshold.\\
 \path{threshold_policy.target_fpr} & float array & [0.01, 0.05] & Hai operating point.\\
 \path{threshold_policy.score_direction} & string & \path{higher_means_more_attack_like} & Quy ước chiều score.\\
@@ -528,6 +544,7 @@ Artifact là file đầu ra lưu bằng chứng của một lượt chạy. Mỗ
 \caption{Schema metrics.csv và một dòng FPR thật}\\
 \toprule Cột & Kiểu & Ví dụ & Ý nghĩa\\\midrule
 \endfirsthead
+\multicolumn{4}{l}{\small Bảng \thetable\ (tiếp)}\\
 \toprule Cột & Kiểu & Ví dụ & Ý nghĩa\\\midrule
 \endhead
 \path{run_id} & string & CS-RF-S42 & Liên kết run.json\\
@@ -544,6 +561,7 @@ Artifact là file đầu ra lưu bằng chứng của một lượt chạy. Mỗ
 \caption{Schema predictions.csv và record 1 của CS-RF-S42}\\
 \toprule Cột & Kiểu & Ví dụ & Ý nghĩa\\\midrule
 \endfirsthead
+\multicolumn{4}{l}{\small Bảng \thetable\ (tiếp)}\\
 \toprule Cột & Kiểu & Ví dụ & Ý nghĩa\\\midrule
 \endhead
 \path{record_id} & integer & 1 & ID record official test; không dùng làm feature\\
@@ -558,23 +576,23 @@ Artifact là file đầu ra lưu bằng chứng của một lượt chạy. Mỗ
 \path{y_pred} & integer & 0 & score < threshold nên dự đoán Normal\\
 \bottomrule\end{longtable}\endgroup
 
-Ví dụ threshold: tại target 1\%, CS-RF-S42 có Normal validation support=11.200, validation FPR=0,01 và threshold=0,8053672551154485; trên 37.000 Normal test, FPR=0,04218918918918919. Một target validation không phải cam kết FPR test. Các ví dụ trên lấy trực tiếp từ \path{results/runs/CS-RF-S42/}, không phải placeholder.
-
+Ví dụ CS-RF-S42 tại target 1\%: validation có 11.200 Normal và FPR 1\%; FPR trên 37.000 Normal test là 4,22\%. Ngưỡng và record minh họa trong hai bảng trên được lấy từ \path{results/runs/CS-RF-S42/}.
 
 \chapter{KIỂM THỬ VÀ KẾT QUẢ BAN ĐẦU}
 \section{Danh sách test, input và expected}\label{sec:tests}
-Chạy lại ngày 13/10/2026 bằng \path{python -m unittest discover -s tests -v}: 17/17 PASS. Kết quả từng test dưới đây là \textbf{PASS} trong cùng lần chạy; log gốc lưu tại \path{docs/evidence/dot_02/final_20261013/unit_tests.log}. Đây là kiểm tra hành vi trên dữ liệu tổng hợp, không phải đo accuracy trên official test.
-\begingroup\fontsize{9pt}{11pt}\selectfont\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.2}
-\begin{longtable}{L{5.1cm}L{3.6cm}L{6.1cm}L{.9cm}}
+Trong thư mục gốc repo, với môi trường đã cài dự án hoặc \texttt{PYTHONPATH=src}, chạy \texttt{python -m unittest discover -s tests -v}. Log ngày 13/10/2026 ghi 17/17 PASS. Kết quả từng test dưới đây là \textbf{PASS} trong cùng lần chạy; log gốc lưu tại \path{docs/evidence/dot_02/final_20261013/unit_tests.log}. Đây là kiểm tra hành vi trên dữ liệu tổng hợp, không phải đo accuracy trên official test.
+\begingroup\setstretch{1.0}\fontsize{9.5pt}{11pt}\selectfont\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.08}
+\begin{longtable}{L{5.1cm}L{3.6cm}L{5.8cm}L{1.2cm}}
 \caption{Input, expected và kết quả 17 bài kiểm thử}\\
 \toprule Tên test & Input & Expected & Result\\\midrule
 \endfirsthead
+\multicolumn{4}{l}{\small Bảng \thetable\ (tiếp)}\\
 \toprule Tên test & Input & Expected & Result\\\midrule
 \endhead
 \path{test_binary_label_normalization} & Normal, Attack, unknown & Normal=0; Attack=1; unknown gây ContractError. & PASS\\
 \path{test_feature_columns_remove_metadata} & id, label, attack\_cat, proto & Feature cuối chỉ còn proto. & PASS\\
 \path{test_forbidden_feature_is_rejected} & Feature list có proto và label & Phát sinh ContractError do chứa label. & PASS\\
-\path{test_loaco_removes_heldout_before_development} & 3 record Normal/DoS/Reconnaissance & Loại Reconnaissance, còn ID [1,2]; assert held-out absent. & PASS\\
+\path{test_loaco_removes_heldout_before_development} & 3 record: Normal, DoS, Reconnaissance & Loại Reconnaissance, còn ID [1,2]; assert held-out absent. & PASS\\
 \path{test_loaco_validator_catches_leakage} & Giữ Reconnaissance trong 3 record & assert\_heldout\_absent phát sinh ContractError. & PASS\\
 \path{test_evaluation_roles} & Normal, DoS, Reconnaissance; held-out Reconnaissance & Role lần lượt normal, known\_attack, heldout\_attack. & PASS\\
 \path{test_heldout_is_removed_before_split} & 40 record: 20 Normal, 10 DoS, 10 Exploits; held-out DoS & Không có DoS trong cả development-train lẫn validation. & PASS\\
@@ -592,40 +610,52 @@ Chạy lại ngày 13/10/2026 bằng \path{python -m unittest discover -s tests 
 
 Validator xác nhận đúng 80 run ID theo ma trận. Bộ kiểm tra cuối xác nhận đủ run completed, 320 file bắt buộc, manifest, test, validator, bảng tổng hợp và PDF. Ngoài ra, audit độc lập ngày 13/10 đọc 80 prediction CSV (13.173.120 dòng), đối chiếu ID/nhãn/category/role, score/threshold/prediction, tính lại 1.040 dòng metric và so với 80 dòng tổng hợp cùng 16 nhóm mean/std: không phát hiện sai lệch. Audit dùng đọc float round-trip để giữ đúng score/threshold đã serialize.
 
-\section{Kết quả tổng hợp qua năm seed}\label{sec:metrics}
-Mỗi dòng dưới đây gồm năm seed (42,52,62,72,82), ghi mean $\pm$ sample std (ddof=1). Bảng chọn threshold ở target FPR validation 5\%; AP là metric không phụ thuộc threshold. Support: FPR=37.000 Normal; known/held-out theo bảng scenario. Precision/recall/F1 toàn tập đánh giá 82.332 record. Không dùng một metric đơn lẻ để kết luận model tốt nhất tổng quát.
+\clearpage\section{Kết quả tổng hợp qua năm seed}\label{sec:metrics}
+Mỗi dòng gồm năm seed (42,52,62,72,82), ghi mean $\pm$ sample std (ddof=1). Seed chi phối cả phép chia development và ngẫu nhiên mô hình; năm lượt dùng cùng official test. Std mô tả biến thiên giữa các lượt này, không phải khoảng tin cậy hay năm tập test độc lập. Bảng chọn threshold ở target FPR validation 5\%; AP là metric không phụ thuộc threshold. Support: FPR=37.000 Normal; known/held-out theo bảng scenario. Precision và F1 dùng toàn bộ 82.332 record; recall Attack ở CS bằng known recall vì không có held-out class. Không dùng một metric đơn lẻ để kết luận model tốt nhất tổng quát.
 \begingroup\fontsize{9pt}{11pt}\selectfont\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.2}
-\begin{longtable}{L{.8cm}L{1cm}*{5}{>{\centering\arraybackslash}p{2.45cm}}}
+\begin{longtable}{L{.8cm}L{1cm}*{6}{>{\centering\arraybackslash}p{2.12cm}}}
 \caption{Mean và sample std tại target FPR validation 5\% (n=5)}\label{tab:results}\\
-\toprule Scen. & Model & AP & FPR test & Known recall & UADR & F1\\\midrule
+\toprule Scen. & Model & Precision & AP & FPR test & Known recall & UADR & F1\\\midrule
 \endfirsthead
-\toprule Scen. & Model & AP & FPR test & Known recall & UADR & F1\\\midrule
+\multicolumn{8}{l}{\small Bảng \thetable\ (tiếp)}\\
+\toprule Scen. & Model & Precision & AP & FPR test & Known recall & UADR & F1\\\midrule
 \endhead
-CS & AE & $0.9254\pm0.0085$ & $0.0916\pm0.0039$ & $0.7940\pm0.0136$ & -- & $0.8497\pm0.0080$\\
-CS & IF & $0.8184\pm0.0120$ & $0.0615\pm0.0040$ & $0.3144\pm0.0292$ & -- & $0.4603\pm0.0328$\\
-CS & RF & $0.9879\pm0.0001$ & $0.1857\pm0.0034$ & $0.9714\pm0.0007$ & -- & $0.9151\pm0.0009$\\
-CS & XGB & $0.9883\pm0.0003$ & $0.1871\pm0.0043$ & $0.9691\pm0.0012$ & -- & $0.9135\pm0.0018$\\
-LD & AE & $0.9293\pm0.0037$ & $0.0911\pm0.0039$ & $0.7891\pm0.0070$ & $0.8838\pm0.0112$ & $0.8522\pm0.0054$\\
-LD & IF & $0.8183\pm0.0059$ & $0.0611\pm0.0023$ & $0.3305\pm0.0248$ & $0.0421\pm0.0099$ & $0.4492\pm0.0269$\\
-LD & RF & $0.9876\pm0.0001$ & $0.1875\pm0.0035$ & $0.9682\pm0.0018$ & $0.9981\pm0.0003$ & $0.9143\pm0.0006$\\
-LD & XGB & $0.9881\pm0.0003$ & $0.1841\pm0.0055$ & $0.9656\pm0.0017$ & $0.9933\pm0.0018$ & $0.9140\pm0.0014$\\
-LE & AE & $0.9294\pm0.0044$ & $0.0901\pm0.0038$ & $0.7883\pm0.0070$ & $0.8069\pm0.0290$ & $0.8496\pm0.0068$\\
-LE & IF & $0.8172\pm0.0037$ & $0.0626\pm0.0029$ & $0.3807\pm0.0082$ & $0.0529\pm0.0096$ & $0.4443\pm0.0068$\\
-LE & RF & $0.9831\pm0.0004$ & $0.1832\pm0.0082$ & $0.9602\pm0.0039$ & $0.9706\pm0.0057$ & $0.9116\pm0.0016$\\
-LE & XGB & $0.9840\pm0.0005$ & $0.1870\pm0.0055$ & $0.9575\pm0.0033$ & $0.9707\pm0.0027$ & $0.9092\pm0.0014$\\
-LR & AE & $0.9237\pm0.0096$ & $0.0907\pm0.0044$ & $0.8427\pm0.0125$ & $0.2382\pm0.0375$ & $0.8513\pm0.0074$\\
-LR & IF & $0.8214\pm0.0102$ & $0.0620\pm0.0043$ & $0.3454\pm0.0327$ & $0.0066\pm0.0026$ & $0.4655\pm0.0344$\\
-LR & RF & $0.9852\pm0.0003$ & $0.1858\pm0.0024$ & $0.9694\pm0.0013$ & $0.9773\pm0.0030$ & $0.9144\pm0.0008$\\
-LR & XGB & $0.9852\pm0.0004$ & $0.1876\pm0.0047$ & $0.9653\pm0.0012$ & $0.9806\pm0.0085$ & $0.9119\pm0.0011$\\
+CS & AE & $0.9139\pm0.0031$ & $0.9254\pm0.0085$ & $0.0916\pm0.0039$ & $0.7940\pm0.0136$ & -- & $0.8497\pm0.0080$\\
+CS & IF & $0.8617\pm0.0140$ & $0.8184\pm0.0120$ & $0.0615\pm0.0040$ & $0.3144\pm0.0292$ & -- & $0.4603\pm0.0328$\\
+CS & RF & $0.8650\pm0.0021$ & $0.9879\pm0.0001$ & $0.1857\pm0.0034$ & $0.9714\pm0.0007$ & -- & $0.9151\pm0.0009$\\
+CS & XGB & $0.8639\pm0.0028$ & $0.9883\pm0.0003$ & $0.1871\pm0.0043$ & $0.9691\pm0.0012$ & -- & $0.9135\pm0.0018$\\
+LD & AE & $0.9148\pm0.0038$ & $0.9293\pm0.0037$ & $0.0911\pm0.0039$ & $0.7891\pm0.0070$ & $0.8838\pm0.0112$ & $0.8522\pm0.0054$\\
+LD & IF & $0.8587\pm0.0094$ & $0.8183\pm0.0059$ & $0.0611\pm0.0023$ & $0.3305\pm0.0248$ & $0.0421\pm0.0099$ & $0.4492\pm0.0269$\\
+LD & RF & $0.8639\pm0.0020$ & $0.9876\pm0.0001$ & $0.1875\pm0.0035$ & $0.9682\pm0.0018$ & $0.9981\pm0.0003$ & $0.9143\pm0.0006$\\
+LD & XGB & $0.8657\pm0.0033$ & $0.9881\pm0.0003$ & $0.1841\pm0.0055$ & $0.9656\pm0.0017$ & $0.9933\pm0.0018$ & $0.9140\pm0.0014$\\
+LE & AE & $0.9152\pm0.0030$ & $0.9294\pm0.0044$ & $0.0901\pm0.0038$ & $0.7883\pm0.0070$ & $0.8069\pm0.0290$ & $0.8496\pm0.0068$\\
+LE & IF & $0.8546\pm0.0047$ & $0.8172\pm0.0037$ & $0.0626\pm0.0029$ & $0.3807\pm0.0082$ & $0.0529\pm0.0096$ & $0.4443\pm0.0068$\\
+LE & RF & $0.8656\pm0.0049$ & $0.9831\pm0.0004$ & $0.1832\pm0.0082$ & $0.9602\pm0.0039$ & $0.9706\pm0.0057$ & $0.9116\pm0.0016$\\
+LE & XGB & $0.8629\pm0.0033$ & $0.9840\pm0.0005$ & $0.1870\pm0.0055$ & $0.9575\pm0.0033$ & $0.9707\pm0.0027$ & $0.9092\pm0.0014$\\
+LR & AE & $0.9149\pm0.0027$ & $0.9237\pm0.0096$ & $0.0907\pm0.0044$ & $0.8427\pm0.0125$ & $0.2382\pm0.0375$ & $0.8513\pm0.0074$\\
+LR & IF & $0.8624\pm0.0160$ & $0.8214\pm0.0102$ & $0.0620\pm0.0043$ & $0.3454\pm0.0327$ & $0.0066\pm0.0026$ & $0.4655\pm0.0344$\\
+LR & RF & $0.8648\pm0.0014$ & $0.9852\pm0.0003$ & $0.1858\pm0.0024$ & $0.9694\pm0.0013$ & $0.9773\pm0.0030$ & $0.9144\pm0.0008$\\
+LR & XGB & $0.8632\pm0.0028$ & $0.9852\pm0.0004$ & $0.1876\pm0.0047$ & $0.9653\pm0.0012$ & $0.9806\pm0.0085$ & $0.9119\pm0.0011$\\
 \bottomrule\end{longtable}\endgroup
 Bảng 80 run: \path{docs/reports/DOT_02_METRICS_ALL_RUNS.csv}. Bảng mean/std: \path{docs/reports/DOT_02_METRICS_MEAN_STD.csv}. CS=closed-set; LR/LD/LE=LOACO Reconnaissance/DoS/Exploits. Dấu -- ở UADR closed-set biểu thị metric không có nghĩa (support=0).
 
-\section{Hai ngân sách FPR và kết quả held-out}
+\subsection{Ma trận nhầm lẫn minh họa}
+\begin{table}[H]\centering\small
+\caption{CS-RF-S42 tại target validation 5\%; threshold = 0.557282}\label{tab:confusion}
+\begin{tabular}{lrr}\toprule
+Nhãn thật / dự đoán & Normal & Attack\\\midrule
+Normal & TN = 30.198 & FP = 6.802\\
+Attack & FN = 1.284 & TP = 44.048\\\bottomrule
+\end{tabular}\end{table}
+Tổng 82.332 record gồm 37.000 Normal và 45.332 Attack. Đây là một lượt minh họa cố định theo seed 42, không phải lựa chọn lượt tốt nhất và không thay bảng mean/std. Ví dụ record 1 được giải thích ở Mục~\ref{sec:categoryerrors}.
+
+\clearpage\section{Hai ngân sách FPR và kết quả held-out}
 \begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.2}
 \begin{longtable}{L{2cm}L{2cm}L{5cm}L{5cm}}
 \caption{FPR official test theo target validation (mean \% và std theo điểm phần trăm, n=5)}\\
 \toprule Scenario & Model & Target 1\% & Target 5\%\\\midrule
 \endfirsthead
+\multicolumn{4}{l}{\small Bảng \thetable\ (tiếp)}\\
 \toprule Scenario & Model & Target 1\% & Target 5\%\\\midrule
 \endhead
 CS & AE & $2.72\%\pm0.32$ & $9.16\%\pm0.39$\\
@@ -646,17 +676,20 @@ LR & RF & $4.27\%\pm0.18$ & $18.58\%\pm0.24$\\
 LR & XGB & $5.06\%\pm0.50$ & $18.76\%\pm0.47$\\
 \bottomrule\end{longtable}\endgroup
 
-Tại target validation 1\%, IF có mean FPR test khoảng 0,78--0,89\%, thấp hơn target; RF/XGB và AE vượt target. Tại target 5\%, cả bốn model có mean FPR test lớn hơn 5\%. Ví dụ closed-set: RF 18,57\%, XGB 18,71\%, IF 6,15\%, AE 9,16\%. Vì vậy câu ``FPR thực tế luôn cao hơn target ở cả hai mức'' là không đúng với IF tại 1\%.
+Tại target validation 1\%, IF có mean FPR test khoảng 0,78--0,89\%, thấp hơn target; RF/XGB và AE vượt target. Tại target 5\%, cả bốn model có mean FPR test lớn hơn 5\%. Ví dụ closed-set: RF 18,57\%, XGB 18,71\%, IF 6,15\%, AE 9,16\%. Như vậy, mục tiêu FPR validation không quyết định một FPR test chung; riêng IF có mean FPR test thấp hơn target tại mức 1\%.
 
 Chênh lệch FPR validation/test phù hợp với khả năng khác biệt phân bố hoặc cách biểu diễn giữa hai split, nhưng riêng bảng metric chưa xác lập nguyên nhân. Kết luận chắc chắn là threshold thỏa ngân sách trên validation không bảo đảm cùng FPR trên test. Đây là quan sát phục vụ RQ3, không phải một chứng minh nhân quả về distribution shift.
 
+\clearpage\input{rq3_two_targets.tex}
+
+\clearpage
 \begin{figure}[H]\centering
-\includegraphics[width=.94\textwidth]{assets/final_20261013/closed_set_fpr.png}
+\includegraphics[width=.82\textwidth]{assets/final_20261013/closed_set_fpr.png}
 \caption{Closed-set: FPR trên official test tại hai target validation; thanh sai số là sample std qua năm seed. Hình sinh từ metrics.csv của 20 run CS.}
 \end{figure}
 
 \begin{figure}[H]\centering
-\includegraphics[width=.94\textwidth]{assets/final_20261013/loaco_uadr.png}
+\includegraphics[width=.82\textwidth]{assets/final_20261013/loaco_uadr.png}
 \caption{UADR tại target validation 5\%, mean và sample std qua năm seed. Support Reconnaissance=3.496, DoS=4.089, Exploits=11.132.}
 \end{figure}
 
@@ -672,17 +705,18 @@ Bổ sung từ prediction đã lưu, không chạy huấn luyện lại hoặc c
 \caption{Tỷ lệ bỏ sót FN (mean \% và std theo điểm phần trăm), closed-set, target validation 5\%}\\
 \toprule Category & Support & RF & XGB & IF & AE\\\midrule
 \endfirsthead
+\multicolumn{6}{l}{\small Bảng \thetable\ (tiếp)}\\
 \toprule Category & Support & RF & XGB & IF & AE\\\midrule
 \endhead
-Analysis & 677 & $0,89\pm0,42$ & $5,67\pm1,11$ & $95,18\pm3,45$ & $0,44\pm0,91$\\
-Backdoor & 583 & $0,00\pm0,00$ & $0,10\pm0,09$ & $93,62\pm4,31$ & $6,59\pm0,31$\\
-DoS & 4.089 & $0,15\pm0,02$ & $0,45\pm0,22$ & $94,87\pm2,03$ & $13,20\pm2,11$\\
-Exploits & 11.132 & $0,73\pm0,04$ & $0,89\pm0,04$ & $94,16\pm1,21$ & $18,12\pm2,89$\\
-Fuzzers & 6.062 & $19,65\pm0,41$ & $20,23\pm0,81$ & $90,98\pm0,70$ & $55,94\pm2,77$\\
-Generic & 18.871 & $0,01\pm0,00$ & $0,01\pm0,00$ & $32,43\pm5,64$ & $1,38\pm0,12$\\
-Reconnaissance & 3.496 & $0,13\pm0,02$ & $0,21\pm0,04$ & $99,41\pm0,27$ & $77,56\pm3,01$\\
-Shellcode & 378 & $1,43\pm0,14$ & $1,59\pm0,32$ & $100,00\pm0,00$ & $95,24\pm1,39$\\
-Worms & 44 & $0,45\pm1,02$ & $0,91\pm1,24$ & $88,18\pm2,49$ & $42,27\pm16,04$\\
+Analysis & 677 & $0.89\pm0.42$ & $5.67\pm1.11$ & $95.18\pm3.45$ & $0.44\pm0.91$\\
+Backdoor & 583 & $0.00\pm0.00$ & $0.10\pm0.09$ & $93.62\pm4.31$ & $6.59\pm0.31$\\
+DoS & 4.089 & $0.15\pm0.02$ & $0.45\pm0.22$ & $94.87\pm2.03$ & $13.20\pm2.11$\\
+Exploits & 11.132 & $0.73\pm0.04$ & $0.89\pm0.04$ & $94.16\pm1.21$ & $18.12\pm2.89$\\
+Fuzzers & 6.062 & $19.65\pm0.41$ & $20.23\pm0.81$ & $90.98\pm0.70$ & $55.94\pm2.77$\\
+Generic & 18.871 & $0.01\pm0.00$ & $0.01\pm0.00$ & $32.43\pm5.64$ & $1.38\pm0.12$\\
+Reconnaissance & 3.496 & $0.13\pm0.02$ & $0.21\pm0.04$ & $99.41\pm0.27$ & $77.56\pm3.01$\\
+Shellcode & 378 & $1.43\pm0.14$ & $1.59\pm0.32$ & $100.00\pm0.00$ & $95.24\pm1.39$\\
+Worms & 44 & $0.45\pm1.02$ & $0.91\pm1.24$ & $88.18\pm2.49$ & $42.27\pm16.04$\\
 \bottomrule\end{longtable}\endgroup
 
 IF có FPR test thấp hơn RF/XGB nhưng bỏ sót Reconnaissance 99,41\% và Shellcode 100\%; AE bỏ sót Shellcode 95,24\%. RF/XGB có FN thấp hơn trên nhiều category, đồng thời FPR test khoảng 18,57\%/18,71\%; Fuzzers vẫn bị bỏ sót 19,65\%/20,23\%. Không gọi model tốt nhất từ một chỉ số. Worms chỉ có 44 mẫu; kết quả không chứng minh khả năng khái quát ngoài split hiện tại.
@@ -694,7 +728,13 @@ Bằng chứng: \path{docs/evidence/dot_02/category_errors_20261014/}, gồm b�
 \chapter{KẾT LUẬN VÀ GIỚI HẠN CỦA ĐỢT 2}
 Đợt 2 đã hiện thực hóa nền protocol của đợt 1 thành pipeline trên dữ liệu thật: audit/manifest, feature contract, preprocessing kiểm soát leakage, bốn baseline, 80 lượt chạy completed và 320 artifact bắt buộc. Kết quả được tổng hợp qua năm seed và đối chiếu lại từ prediction; 17 test cùng validator đạt trong lần kiểm tra ngày 13/10/2026. Bản tích lũy giữ các chương nền và tách tiến độ từng đầu ra theo góp ý.
 
-Trạng thái nhóm ngày 17/10/2026: bản hiện tại đang chờ nhóm rà soát; chưa kiểm chứng mức hiểu từng thành viên. Nhóm dự kiến họp ngày 18/10 để đọc lại hai đợt, các phần bổ sung ngày 14/10 và đối chiếu đóng góp thực tế. Lời đồng ý trước đó không thay thế nghiệm thu nội dung Gate 1/Gate 2 hoặc phê duyệt của giảng viên.
+\textbf{Trả lời RQ1:} trong closed-set, RF/XGB đạt AP khoảng 0,988 và recall Attack khoảng 97\% tại target validation 5\%, song FPR test khoảng 18,6--18,7\%. IF có FPR thấp hơn (6,15\%) nhưng recall chỉ 31,44\%; vì vậy không chọn mô hình tốt nhất chỉ từ AP hoặc recall.
+
+\textbf{Trả lời RQ2:} khả năng phát hiện held-out phụ thuộc lớp. Ở Reconnaissance tại target 5\%, UADR của RF/XGB là 97,73\%/98,06\%, của IF/AE là 0,66\%/23,82\%. Ở DoS và Exploits, UADR của các mô hình thay đổi theo bảng kết quả. Held-out category chưa đồng nghĩa zero-day thực tế.
+
+\textbf{Trả lời RQ3:} khi mục tiêu validation tăng từ 1\% lên 5\%, RF ở CS tăng recall từ 90,27\% lên 97,14\%, đồng thời FPR test tăng từ 4,21\% lên 18,57\%. Bảng~\ref{tab:rq3recall} cho các lớp/mô hình còn lại. Chọn ngưỡng trên validation không bảo đảm FPR test bằng target và không tạo một điểm vận hành test chung.
+
+Trạng thái rà soát của nhóm được ghi tại Mục~\ref{sec:teamreview}; kết quả kỹ thuật không thay xác nhận mức hiểu và đóng góp.
 
 \textbf{Giới hạn còn hiện hữu:} (1) chỉ đánh giá trên UNSW-NB15 official split; (2) feature trùng và cross-split overlap có thể hạn chế tính độc lập/khái quát hóa, chưa có thí nghiệm loại trùng để định lượng ảnh hưởng; (3) LOACO chỉ mô phỏng unseen attack category trong benchmark; (4) cùng FPR target validation không bảo đảm cùng FPR test; (5) mới có phân tích lỗi category ban đầu; PR curve/score distribution, giải thích feature và kiểm chứng ngoài dữ liệu này còn trong kế hoạch tiếp nối; (6) S07 chưa đối chiếu toàn văn, các đoạn nguồn mới bổ sung chưa thay nghiệm thu toàn bài. Các giới hạn trên không được tính là kết quả đã hoàn thành của toàn đề tài.
 \clearpage
@@ -740,8 +780,9 @@ V. Chandola, A. Banerjee, and V. Kumar, ``Anomaly detection: A survey,'' \textit
 
 
 \appendix
+\titleformat{\chapter}[hang]{\normalfont\bfseries\fontsize{15pt}{19pt}\selectfont\color{HCMUTEDark}}{PHỤ LỤC \thechapter.}{0.55em}{\MakeUppercase}
 \chapter{BẰNG CHỨNG KIỂM TRA VÀ TRUY VẾT}\label{app:evidence}
-Các log sau là trích đoạn đầu ra thật của lệnh ngày 13/10/2026, không phải ảnh terminal hoặc thẻ PASS dựng lại. File đầy đủ và audit JSON lưu trong \path{docs/evidence/dot_02/final_20261013/}.
+Các log sau trích đầu ra lệnh đã lưu ngày 13/10/2026. File đầy đủ và audit JSON lưu trong \path{docs/evidence/dot_02/final_20261013/}.
 \begingroup\small
 \begin{verbatim}
 python -m unittest discover -s tests -v
@@ -752,7 +793,7 @@ python scripts/validate_protocol.py
 Protocol validation passed:
 4 scenarios x 4 models x 5 seeds = 80 unique runs
 \end{verbatim}\endgroup
-Thời lượng test được giữ nguyên trong log gốc. Test AE có thể sinh ConvergenceWarning trong một số lần chạy; tiêu chí pass là các assertion, không phải huấn luyện hội tụ trên dữ liệu tổng hợp. Validator không tự thay thế xác nhận người; xác nhận nhóm trong bản nộp do nhóm trưởng cung cấp riêng.
+Thời lượng test được giữ nguyên trong log gốc. Test AE có thể sinh ConvergenceWarning trong một số lần chạy; tiêu chí pass là các assertion, không phải huấn luyện hội tụ trên dữ liệu tổng hợp. Validator kiểm cấu hình kỹ thuật; trạng thái rà soát nội dung của nhóm ghi tại Mục~\ref{sec:teamreview}.
 
 \begin{table}[H]\centering\small
 \caption{Audit độc lập từ prediction ngày 13/10/2026}
@@ -766,11 +807,13 @@ Metric tính lại, summary và mean/std & Không phát hiện sai lệch\\
 \bottomrule\end{tabularx}\end{table}
 
 \chapter{DANH MỤC FILE BÀN GIAO}
+Đường dẫn tính từ repo. Mã, cấu hình và tài liệu nhẹ được quản lý trên GitHub; raw, model bundle và prediction nặng lưu tại máy/Drive. Sự tồn tại trong danh mục không có nghĩa mọi tệp nặng nằm trong lịch sử Git. Config fingerprint chỉ định danh RunRequest, chưa chứng thực toàn bộ tham số estimator hoặc commit mã lịch sử; không sửa hồi tố metadata các run ngày 26/09.
 \begingroup\fontsize{9.5pt}{12pt}\selectfont\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.2}
 \begin{longtable}{L{9.0cm}L{6.3cm}}
 \caption{Đường dẫn và vai trò của các file bàn giao}\\
 \toprule Đường dẫn từ thư mục repo & Vai trò\\\midrule
 \endfirsthead
+\multicolumn{2}{l}{\small Bảng \thetable\ (tiếp)}\\
 \toprule Đường dẫn từ thư mục repo & Vai trò\\\midrule
 \endhead
 \path{output/pdf/NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf} & PDF đợt 2 dùng nộp; bản chính theo tên nhóm.\\
@@ -781,18 +824,23 @@ Metric tính lại, summary và mean/std & Không phát hiện sai lệch\\
 \path{artifacts/data/duplicate_overlap_audit.json} & Ba cách đếm duplicate và overlap.\\
 \path{results/runs/<run-id>/} & run.json, metrics.csv, predictions.csv, model\_bundle.joblib.\\
 \path{docs/evidence/dot_02/final_20261013/} & Log test, validator, audit số liệu, metadata tài liệu tham khảo và bản ghi xác nhận.\\
+\path{docs/reports/DOT_02_TWO_TARGETS.csv} & FPR, recall Attack và UADR hai target, 32 dòng mean/std.\\
+\path{docs/evidence/dot_02/category_errors_20261014/} & Chi tiết lỗi category và ví dụ truy vết.\\
+\path{docs/references/RELATED_WORK_MATRIX_DOT_02.csv} & Định danh, vị trí đoạn và trạng thái nguồn.\\
+\path{docs/references/SOURCE_PASSAGE_EVIDENCE_20261014.json} & Bằng chứng đoạn nguồn và giới hạn kiểm.\\
 \path{scripts/check_dot2_final.py} & Kiểm tra run, artifact, test, validator, bảng tổng hợp và PDF.\\
-\path{docs/protocol/GATE_1_CHECKLIST.md} & Protocol và bản ghi xác nhận nhóm.\\
-\path{docs/protocol/GATE_2_CHECKLIST.md} & Data contract và bản ghi xác nhận nhóm.\\
+\path{docs/protocol/GATE_1_CHECKLIST.md} & Protocol; nghiệm thu nội dung của nhóm còn mở.\\
+\path{docs/protocol/GATE_2_CHECKLIST.md} & Data contract; nghiệm thu nội dung của nhóm còn mở.\\
 \bottomrule\end{longtable}\endgroup
 
 \chapter{TRUY VẾT NỘI DUNG TÀI LIỆU}\label{app:sources}
-Danh sách sau ghi vị trí đoạn đã dùng trong 13 nguồn nền, không xếp hạng các nghiên cứu khác giao thức. Ma trận đầy đủ chứa DOI/URL, phạm vi dữ liệu, kết quả diễn giải, giới hạn và citation key tại \path{docs/references/RELATED_WORK_MATRIX_DOT_02.csv}. Bản tác giả/arXiv được nhận diện riêng vì số trang có thể khác bản xuất bản. Không thay chữ ký nghiệm thu toàn bài bằng việc kiểm một đoạn nguồn.
+Danh sách sau ghi vị trí đoạn đã dùng trong 13 nguồn nền, không xếp hạng các nghiên cứu khác giao thức. Ma trận đầy đủ chứa DOI/URL, phạm vi dữ liệu, kết quả diễn giải, giới hạn và citation key tại \path{docs/references/RELATED_WORK_MATRIX_DOT_02.csv}. Bản tác giả/arXiv được nhận diện riêng vì số trang có thể khác bản xuất bản. Phạm vi đối chiếu là các đoạn được dẫn, chưa phải nghiệm thu toàn văn từng tài liệu; S07 mới kiểm ở mức abstract.
 \begingroup\fontsize{9.5pt}{12pt}\selectfont\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.2}
 \begin{longtable}{L{1.0cm}L{3.4cm}L{6.6cm}L{4.6cm}}
 \caption{Nguồn, vị trí nội dung và giới hạn sử dụng (bổ sung 14/10/2026)}\\
 \toprule ID & Nguồn & Đoạn đã đối chiếu & Giới hạn\\\midrule
 \endfirsthead
+\multicolumn{4}{l}{\small Bảng \thetable\ (tiếp)}\\
 \toprule ID & Nguồn & Đoạn đã đối chiếu & Giới hạn\\\midrule
 \endhead
 S01 & NIST SP800-94 \cite{nist80094} & Mục 2.3.1--2.3.3, trang 2-4--2-6: chữ ký, bất thường, phân tích protocol; Chương 4: network IDPS. & Hướng dẫn vận hành, không benchmark UNSW.\\
