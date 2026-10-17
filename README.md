@@ -32,10 +32,10 @@ Ba câu hỏi nghiên cứu chính và bằng chứng cần thu thập được 
   `run.json`, `metrics.csv`, `predictions.csv` và `model_bundle.joblib`. Bản tổng hợp
   mean/std đợt 2 nằm tại
   `docs/reports/BAO_CAO_TIEN_DO_DOT_02.md`.
-- Ngày 17/10/2026, nhóm trưởng báo cả ba thành viên đã xác nhận bản đợt 2 hiện tại, gồm phần bổ sung ngày 14/10. Bản ghi và xác nhận cũ tại `docs/evidence/dot_02/final_20261013/XAC_NHAN_NHOM_20261013.md`; không tạo chữ ký thay thành viên.
+- Cập nhật 17/10/2026: nhóm trưởng cho biết chưa chắc mức hiểu từng thành viên; cả nhóm dự kiến tự rà soát hai đợt ngày 18/10. Lời báo đồng ý trước đó được giữ làm lịch sử tại `docs/evidence/dot_02/final_20261013/XAC_NHAN_NHOM_20261013.md`, không chứng minh đã nghiệm thu nội dung. Xem [hướng dẫn rà soát](docs/management/HUONG_DAN_RA_SOAT_HAI_DOT_20261018.md).
 - Bản hiện tại: `output/pdf/NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf` (32 trang). Kiểm tra lại: 80 run, 320 artifact, 17 test; audit prediction khớp.
 - Kiểm trước gửi ngày 17/10: [phiếu kiểm cuối](docs/evidence/dot_02/final_20261013/KIEM_TRA_CUOI_DOT_2_20261017.md), [email nháp](docs/reports/EMAIL_GUI_THAY_DOT_2_20261017.md). Chưa gửi email nộp giảng viên.
-- Đã đối chiếu đoạn nội dung của 12/13 nguồn (92,3%); S07 mới kiểm abstract, toàn văn và nghiệm thu toàn bài còn mở. Phân tích lỗi category ban đầu đã có cho 80 run; PR/score distribution, giải thích feature, độ nhạy overlap, demo và bộ cuối đề tài thuộc bước tiếp nối. Ngày 17/10/2026, nhóm trưởng báo cả ba thành viên đã xác nhận bản đợt 2 hiện tại, gồm phần bổ sung ngày 14/10; xem bản ghi xác nhận nhóm. Xác nhận bản nộp không đồng nghĩa đã đọc toàn văn S07 hoặc hoàn thành toàn đề tài. Nhóm tự đọc, hiểu và chịu trách nhiệm nội dung. Xem `docs/management/TIEN_DO_HIEN_TAI_20261013.md`.
+- Đã đối chiếu đoạn nội dung của 12/13 nguồn (92,3%); S07 mới kiểm abstract, toàn văn và nghiệm thu toàn bài còn mở. Phân tích lỗi category ban đầu đã có cho 80 run; PR/score distribution, giải thích feature, độ nhạy overlap, demo và bộ cuối đề tài thuộc bước tiếp nối. Nhóm còn phải tự đọc, giải thích phương pháp/kết quả và kiểm lại mô tả đóng góp trước khi chốt nộp. Kiểm kỹ thuật không xác nhận mức hiểu của thành viên. Xem `docs/management/TIEN_DO_HIEN_TAI_20261013.md`.
 - Kiểm bàn giao 14/10: Drive đủ 80 thư mục run duy nhất/320 artifact, SHA-256 khớp local; hai CSV raw, hai PDF và hồ sơ học tập đã đối chiếu. Các bản trùng đã chuyển vào thùng rác có thể khôi phục. Xem [trạng thái bàn giao](docs/evidence/dot_02/final_20261013/REMOTE_DELIVERY.md).
 
 ## Cấu trúc repository

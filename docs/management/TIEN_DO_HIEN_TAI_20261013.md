@@ -31,6 +31,6 @@ Tính từ repo `tlcn-nids-unsw-nb15/`:
 
 ## Xác nhận và phân công tiếp tục
 
-Nhóm trưởng cho biết cả ba thành viên đã xác nhận nội dung ngày 13/10; ngày 17/10/2026 nhóm trưởng báo cả ba thành viên đã xác nhận bản hiện tại, gồm phần bổ sung ngày 14/10; bản ghi ở `../evidence/dot_02/final_20261013/XAC_NHAN_NHOM_20261013.md`. Không tạo chữ ký hoặc ngày review thay thành viên; đây không phải phê duyệt của giảng viên.
+Cập nhật 17/10/2026: sau lời báo đồng ý trước đó, nhóm trưởng làm rõ rằng chưa chắc mức hiểu từng thành viên và cả nhóm dự kiến tự rà soát hai đợt ngày 18/10. Xác nhận lịch sử ngày 13/10 và lời báo đồng ý ngày 17/10 được giữ ở `../evidence/dot_02/final_20261013/XAC_NHAN_NHOM_20261013.md`; không dùng làm bằng chứng đã nghiệm thu nội dung. Mô tả phân công dưới đây là kế hoạch, cần đối chiếu đóng góp thực tế. Không tạo chữ ký hoặc ngày review thay thành viên; đây không phải phê duyệt của giảng viên.
 
 Trâm Anh tiếp tục related-work matrix và lý thuyết NIDS; Thu phụ trách phân tích lỗi/điều kiện so sánh; Tín tích hợp tái lập và prototype. Mỗi mục chỉ chuyển hoàn thành khi có sản phẩm và review thật. Đọc kế hoạch gốc tại `GANTT_CHART.md`; baseline thời gian và thực tế chạy sớm được phân biệt trong Chương 3 PDF.

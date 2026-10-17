@@ -4,7 +4,7 @@
 
 Kiểm kỹ thuật ngày 17/10: 17 test và validator đạt; 80 run/320 artifact đủ. Tính lại 13.173.120 dòng prediction, 1.040 dòng metric, 80 dòng tổng hợp và 16 nhóm mean/std không phát hiện sai lệch. Tái tạo ba bảng phân tích lỗi khớp bản lưu. Không huấn luyện lại hoặc sửa dữ liệu/kết quả gốc.
 
-PDF đợt 2 giữ bản kỹ thuật ngày 14/10, 32 trang, SHA-256 `22b68ec396c88845879d8e33f7433a6ea047a5da5668d3a2462d7ad34c365d0c`; root/repo/Drive khớp. Đợt 1 là bản lịch sử 20 trang. Kết luận trong PDF mô tả trạng thái ngày 14/10; sau khi nhóm đọc thực tế cần rà lại câu xác nhận, phân công và đóng góp trước nộp. Không suy diễn kiểm kỹ thuật thành phê duyệt nội dung hoặc hiểu bài.
+PDF đợt 2 cập nhật ngày 17/10, 32 trang, 385,448 byte, SHA-256 `043cbf400bfd729ef53f13775250b71900663ef042e1eae6459f81fc98b9487b`. Chỉ năm trang bìa/trạng thái/phân công được cập nhật; văn bản 27 trang còn lại và số liệu giữ nguyên. Gate 1/Gate 2 ghi rõ chưa nghiệm thu nội dung; phân công là kế hoạch, chưa chứng nhận đóng góp thực tế. Email được giữ nháp theo yêu cầu mới nhất, chờ nhóm xem và quyết định. Đợt 1 lịch sử không thay đổi.
 
 Nguồn vẫn có giới hạn: 12/13 có đối chiếu đoạn nguồn; S07 chỉ abstract, chưa toàn văn; chưa nghiệm thu toàn bài của từng thành viên. Phân tích sâu, độ nhạy overlap và demo chưa hoàn tất. Những mục này phải giữ đúng trạng thái khi trình bày với giảng viên.
 

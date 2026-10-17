@@ -1,10 +1,10 @@
 # Kiểm tra trước khi gửi đợt 2 - cập nhật 17/10/2026
 
-**Hiện tại: đã kiểm kỹ thuật; nhóm chưa hoàn tất tự rà soát/giải thích; email chưa gửi.** Nhóm trưởng cho biết chưa chắc mức hiểu từng người và dự kiến cả nhóm đọc lại hai đợt ngày 18/10 sau khi nghỉ ngơi. Lời báo đồng ý trước đó được giữ làm lịch sử, không dùng làm bằng chứng đã nghiệm thu nội dung.
+**Hiện tại: đã kiểm kỹ thuật; nhóm chưa hoàn tất tự rà soát/giải thích; email chỉ giữ nháp theo yêu cầu mới nhất.** Nhóm trưởng cho biết chưa chắc mức hiểu từng người và dự kiến cả nhóm đọc lại hai đợt ngày 18/10 sau khi nghỉ ngơi. Lời báo đồng ý trước đó được giữ làm lịch sử, không dùng làm bằng chứng đã nghiệm thu nội dung.
 
 ## Kết quả kiểm kỹ thuật ngày 17/10
 
-- PDF đợt 2: 32 trang, 385.265 byte, SHA-256 `22b68ec396c88845879d8e33f7433a6ea047a5da5668d3a2462d7ad34c365d0c`. Bản root/repo và PDF tải từ Drive khớp. Giữ nguyên bản ngày 14/10 để nhóm kiểm lại.
+- PDF đợt 2: 32 trang, 385,448 byte, SHA-256 `043cbf400bfd729ef53f13775250b71900663ef042e1eae6459f81fc98b9487b`. Cập nhật 17/10 chỉ làm rõ trạng thái rà soát/phân công; biên dịch bốn lượt đạt, năm trang thay đổi đã render và kiểm; 27 trang còn lại khớp văn bản bản trước. Root/repo khớp; Drive đã cập nhật cùng file ID, tải trực tiếp từ máy chủ được 385.448 byte/32 trang và SHA-256 khớp. Gmail đã lưu nháp; mở lại từ danh sách Thư nháp vẫn đúng nội dung cập nhật 17/10, địa chỉ người nhận và một tệp PDF đợt 2 đính kèm. Chưa gửi hoặc hẹn giờ.
 - PDF đợt 1: bản lịch sử 20 trang; root/repo khớp. Không dùng đợt 1 làm bản nộp hiện tại.
 - Đọc comment thật trong PDF gốc: tiến độ đã/chưa có; metric dạng long; schema; thế nào là PASS; scenario; số liệu cụ thể. Mục 3.1 đợt 2 đã có đối chiếu và các phần giải thích tương ứng. Điều này không phải kết luận giảng viên đã chấp thuận sửa đổi.
 - Đã đọc lại phương pháp cùng mã data/preprocessing/runner/models/evaluation: loại metadata; held-out trước split; stratify=attack_cat; IF/AE và preprocessor fit Normal train; ngưỡng trên Normal validation. Giới hạn cross-split overlap vẫn giữ rõ.
@@ -17,13 +17,17 @@
 
 ## Đồng bộ và thư nháp
 
-Drive đủ bộ 80 thư mục/320 artifact và toàn bộ hash được kiểm ngày 14/10. Lượt 17/10 kiểm lại PDF; không tải lại toàn bộ bộ run từ xa. GitHub local/remote khớp trước cập nhật ghi chú, mã thực nghiệm không đổi.
+Drive đủ bộ 80 thư mục/320 artifact và toàn bộ hash được kiểm ngày 14/10. Lượt 17/10 kiểm lại PDF; không tải lại toàn bộ bộ run từ xa. GitHub chứa nguồn báo cáo và ghi chú chờ nhóm rà soát; đối chiếu HEAD local/remote được lưu cùng biên bản kiểm cuối ngoài workspace. Mã thực nghiệm không đổi.
 
-Gmail: gửi từ `23162102@student.hcmute.edu.vn` tới `quangnd@hcmute.edu.vn`, tiêu đề `[TLCN] Báo cáo tiến độ đợt 2 - Nhóm Nguyễn Trọng Tín`; có PDF đợt 2 hiển thị 377K. Đã bỏ câu cả ba thành viên đã rà soát và không thêm lời xác nhận hiểu bài. Thư giữ nháp, chưa bấm Gửi.
+Gmail: gửi từ `23162102@student.hcmute.edu.vn` tới `quangnd@hcmute.edu.vn`. Kiểm thư gốc 16/09 phát hiện yêu cầu trả lời trong chuỗi cũ; đã chuẩn bị lại nháp `Re: [TLCN] Báo cáo tiến độ 4 tuần lần 1 - Nhóm Nguyễn Trọng Tín`, nội dung nộp đợt 2 và PDF đợt 2 hiển thị 377K. Bản thư riêng trước đó được ghi rõ là bản lưu nội dung, không dùng gửi. Đã bỏ câu cả ba thành viên đã rà soát và không thêm lời xác nhận hiểu bài. Thư giữ nháp, chưa bấm Gửi.
+
+Quyết định mới nhất: người dùng yêu cầu chỉ giữ nháp để gửi nhóm xem trước, chờ quyết định gửi. Không bấm Gửi hoặc hẹn giờ.
+
+Thông tin lịch nộp: thư 08/09 quy định bốn tuần/lần, chưa tìm thấy thư gia hạn đến 18/10 trong hộp thư đã kiểm. Nhóm trưởng từng báo hạn 13/10; chưa tìm thấy nguồn ấn định chính xác ngày đó. Việc gửi chưa được chốt; không tự gửi thư thông báo hoặc hẹn giờ.
 
 ## Việc còn trước khi nộp
 
 1. Nhóm tự đọc đợt 1, comment gốc và đợt 2; giải thích phần mình phụ trách theo `HUONG_DAN_RA_SOAT_HAI_DOT_20261018.md`.
 2. Kiểm mô tả đóng góp/phân công và các câu xác nhận có đúng thực tế. Ghi nhận điểm chưa hiểu/chưa làm; không xác nhận thay nhau.
-3. Khi có rà soát thực tế, xử lý đoạn kết luận PDF còn ghi trạng thái ngày 14/10 và cập nhật bản nộp nếu cần; kiểm lại các bản sao/tệp đính kèm nếu PDF đổi.
+3. PDF đã ghi trạng thái chờ rà soát ngày 17/10. Sau khi có rà soát thực tế mới cập nhật xác nhận/đóng góp tương ứng; kiểm lại bản sao/tệp đính kèm nếu PDF đổi.
 4. Giữ rõ S07 chưa toàn văn; phân tích chuyên sâu, độ nhạy overlap và demo chưa hoàn tất. Kiểm kỹ thuật không chứng minh mức hiểu hoặc khả năng được giảng viên chấp nhận.
