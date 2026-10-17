@@ -17,4 +17,4 @@ Bản đợt 2: `NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf`, 37 trang. Bảng 
 | Yêu cầu báo cáo tích lũy và kế hoạch toàn đề tài | Giữ đặt vấn đề/RQ/lý thuyết từ nền đợt 1; bổ sung phương pháp/kết quả/giới hạn; Gantt baseline 19 tuần; không sửa ngày artifact cho khớp kế hoạch | Chương 1-3 và 4-8 |
 
 
-Kiểm toàn văn 17/10: 384 giá trị in khớp mức làm tròn; thêm bảng Precision, confusion matrix và Recall/UADR hai target. Bộ 80 run/320 artifact, raw, code/test và đợt 1 không đổi. Log 17 test đạt giữ mốc 13/10. Nhóm còn tự đọc/giải thích và đối chiếu đóng góp; không coi kỹ thuật đạt là nghiệm thu nội dung. S07 chỉ abstract; toàn văn còn mở. Email chỉ nháp.
+Kiểm toàn văn 17/10: 384 giá trị in khớp mức làm tròn; thêm bảng Precision, confusion matrix và Recall/UADR hai target. Bộ 80 run/320 artifact, raw, code/test và đợt 1 không đổi. Log 17 test đạt giữ mốc 13/10. Nhóm còn tự đọc/giải thích và đối chiếu đóng góp; không coi kỹ thuật đạt là nghiệm thu nội dung. S07 chỉ abstract; toàn văn còn mở. Email đã gửi lúc 23:38 ngày 17/10/2026, kèm PDF 37 trang.

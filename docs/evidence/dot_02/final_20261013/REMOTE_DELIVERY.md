@@ -4,7 +4,7 @@ PDF hiện hành: `NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf`, 37 trang, 419,3
 
 ## Phiên bản hiện hành
 
-Drive: PDF 37 trang và gói nguồn đã cập nhật, tải lại từ máy chủ và SHA-256 khớp local. Gmail: mở lại từ Thư nháp xác nhận nội dung 37 trang và một PDF đợt 2 mới (410K); chưa gửi, chưa hẹn giờ. Nguồn và bảng nhẹ thuộc bản cập nhật GitHub này; commit/đối chiếu HEAD sau push ghi tại phiếu bàn giao trên máy/Drive.
+Drive: PDF 37 trang và gói nguồn đã cập nhật, tải lại từ máy chủ và SHA-256 khớp local. Gmail: thư trong chuỗi cũ đã gửi lúc 23:38 ngày 17/10/2026, kèm PDF đợt 2 37 trang; chưa có phản hồi hoặc phê duyệt của giảng viên. Nguồn và bảng nhẹ thuộc bản cập nhật GitHub này; commit/đối chiếu HEAD sau push ghi tại phiếu bàn giao trên máy/Drive.
 
 ## Tính toàn vẹn và phạm vi kiểm
 
@@ -14,4 +14,4 @@ Nhóm chưa hoàn tất tự rà soát/giải thích và đối chiếu đóng g
 
 Đợt 1 giữ 20 trang, SHA-256 `8a9b77a5cc9c120f6a0d3c603ad69d6eb75a53ef8281ef21f58a754f24739ae6`. Mốc 14/10: Drive đủ 80 thư mục run chuẩn/320 artifact, tất cả hash khớp local; bản thừa đã chuyển vào thùng rác khôi phục được. Lượt cập nhật báo cáo không tải lại toàn bộ run. Manifest phát hành ghi snapshot mã/cấu hình hiện tại; commit lịch sử chạy 26/09 chưa được chứng nhận.
 
-Email chỉ nháp, nhóm còn xem lại. Không có xác nhận giảng viên đã duyệt. [Drive nhóm](https://drive.google.com/drive/folders/13KGqMT4NUr8JfvTpF0IEKfUDT0Dlvq5S) · [GitHub](https://github.com/YueLouis/tlcn-nids-unsw-nb15)
+Email đã gửi lúc 23:38 ngày 17/10/2026; nhóm còn xem lại nội dung. Không có xác nhận giảng viên đã duyệt. [Drive nhóm](https://drive.google.com/drive/folders/13KGqMT4NUr8JfvTpF0IEKfUDT0Dlvq5S) · [GitHub](https://github.com/YueLouis/tlcn-nids-unsw-nb15)

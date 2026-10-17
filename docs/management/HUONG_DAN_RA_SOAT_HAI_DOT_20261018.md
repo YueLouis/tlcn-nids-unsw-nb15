@@ -1,4 +1,4 @@
-# Rà soát hai đợt trước khi nộp - dự kiến 18/10/2026
+# Rà soát hai đợt sau khi gửi báo cáo - dự kiến 18/10/2026
 
 Trạng thái ngày 17/10: nhóm chưa hoàn tất tự kiểm mức hiểu. Đây là hướng dẫn đọc và kiểm lại, không phải biên bản đã nghiệm thu. Bắt đầu sau khi nghỉ ngơi; có thể chia thành các lượt ngắn và dành thêm thời gian ở phần chưa hiểu.
 
@@ -32,8 +32,8 @@ Mỗi người giải thích bằng lời của mình, mở đúng bằng chứn
 9. Một citation hỗ trợ câu nào, ở trang nào, có gì chưa đọc? Tự mở nguồn phần mình phụ trách bằng ma trận. Hiện 12/13 nguồn có đối chiếu đoạn nội dung; S07 chỉ abstract, chưa toàn văn. Không gọi kiểm metadata/đoạn nguồn là đã đọc và nghiệm thu toàn bài.
 10. 17 test PASS chứng minh gì? Các assertion trên dữ liệu tổng hợp về contract, split, threshold, support, chiều score và phạm vi fit; không chứng minh accuracy cao, không thay nghiệm thu nhóm. Mở một test và đổi một input để tự dự đoán kết quả trước khi chạy.
 
-## Trước khi bấm gửi
+## Rà soát sau khi đã gửi
 
-Ghi lại phần đã thực sự đọc, câu chưa giải thích được và chỗ cần sửa; kiểm cả tên/MSSV/phân công có phản ánh đúng công việc thực tế. Nếu mô tả đóng góp chưa đúng, sửa theo thực tế trước khi nộp. Sau rà soát, đối chiếu trạng thái xác nhận trong PDF, ghi chú và mail; nếu cần sửa PDF thì thay đúng cả local/repo/Drive/tệp đính kèm. Không đổi dữ liệu hoặc kết quả gốc để làm đẹp báo cáo.
+Ghi lại phần đã thực sự đọc, câu chưa giải thích được và chỗ cần sửa; kiểm cả tên/MSSV/phân công có phản ánh đúng công việc thực tế. Nếu mô tả đóng góp chưa đúng, ghi lại và sửa theo thực tế; nếu cần sửa bản đã nộp thì trao đổi rõ phiên bản với giảng viên. Sau rà soát, đối chiếu trạng thái xác nhận trong PDF, ghi chú và mail; nếu phát hiện sai sót trong PDF đã gửi thì ghi rõ vị trí, thống nhất bản sửa và xin ý kiến giảng viên về việc nộp bổ sung. Không đổi dữ liệu hoặc kết quả gốc để làm đẹp báo cáo.
 
-Mail đang nháp; chưa gửi. Các giới hạn nghiên cứu phải được giữ rõ. Nhóm trả lời trung thực khi giảng viên hỏi về cách thực hiện và phần hỗ trợ; không dùng tài liệu này để học thuộc lời xác nhận thay cho hiểu bài.
+Mail đã gửi lúc 23:38 ngày 17/10/2026, kèm PDF 37 trang. Nhóm vẫn tiếp tục rà soát và ghi nhận điểm cần sửa. Các giới hạn nghiên cứu phải được giữ rõ. Nhóm trả lời trung thực khi giảng viên hỏi về cách thực hiện và phần hỗ trợ; không dùng tài liệu này để học thuộc lời xác nhận thay cho hiểu bài.

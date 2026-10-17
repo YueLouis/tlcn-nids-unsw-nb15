@@ -1,6 +1,6 @@
 # Xác nhận nội dung đợt 2
 
-**Hiện tại 17/10:** bản 37 trang mới hiệu chỉnh đang chờ nhóm đọc lại; mức hiểu/đóng góp chưa xác minh. Email chỉ nháp. Các lời báo đồng ý bên dưới thuộc bản trước, không áp sang bản mới.
+**Hiện tại 17/10:** bản 37 trang mới hiệu chỉnh đang chờ nhóm đọc lại; mức hiểu/đóng góp chưa xác minh. Email đã gửi lúc 23:38 ngày 17/10/2026, kèm PDF 37 trang. Các lời báo đồng ý bên dưới thuộc bản trước, không áp sang bản mới.
 
 ## Ghi nhận lịch sử
 
@@ -20,4 +20,4 @@ Nguồn: nhóm trưởng Nguyễn Trọng Tín báo trực tiếp ngày 17/10/20
 
 Bản được xác nhận: `NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf`, 32 trang, SHA-256 `22b68ec396c88845879d8e33f7433a6ea047a5da5668d3a2462d7ad34c365d0c`. Giữ nguyên PDF đã thống nhất; không thêm chữ ký cá nhân hoặc suy diễn ngày đọc của từng người.
 
-Xác nhận bản nộp đợt 2 không đóng hạng mục đọc toàn văn S07, nghiệm thu toàn bài, phân tích chuyên sâu hoặc demo cuối đề tài. Chưa có xác nhận giảng viên đã duyệt; email đang ở trạng thái nháp, chưa gửi.
+Xác nhận bản nộp đợt 2 không đóng hạng mục đọc toàn văn S07, nghiệm thu toàn bài, phân tích chuyên sâu hoặc demo cuối đề tài. Chưa có xác nhận giảng viên đã duyệt; email đợt 2 đã gửi lúc 23:38 ngày 17/10/2026, kèm PDF 37 trang.

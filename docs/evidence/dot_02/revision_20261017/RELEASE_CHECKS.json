@@ -2377,5 +2377,8 @@
   "training_rerun": false,
   "human_content_review_complete": false,
   "teacher_approved": false,
-  "email_state": "draft only"
+  "email_state": "sent",
+  "email_sent_at": "2026-10-17T23:38:00+07:00",
+  "email_recipient": "quangnd@hcmute.edu.vn",
+  "email_attachment_sha256": "edafd81b6d4373fdae40c3086569254130a3148840fd37e026acba93c8a7c0dd"
 }

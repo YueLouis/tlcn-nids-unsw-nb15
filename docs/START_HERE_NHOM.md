@@ -1,6 +1,6 @@
 # Bắt đầu làm việc cùng nhóm
 
-**17/10/2026: email chưa gửi; nhóm dự kiến tự rà soát hai đợt ngày 18/10.** Đọc [hướng dẫn rà soát](management/HUONG_DAN_RA_SOAT_HAI_DOT_20261018.md). Chưa xác minh mức hiểu từng thành viên; không xem lời báo đồng ý trước đó là hoàn tất nghiệm thu nội dung.
+**17/10/2026: email đã gửi lúc 23:38, kèm PDF 37 trang; nhóm dự kiến tự rà soát hai đợt ngày 18/10.** Đọc [hướng dẫn rà soát](management/HUONG_DAN_RA_SOAT_HAI_DOT_20261018.md). Chưa xác minh mức hiểu từng thành viên; không xem lời báo đồng ý trước đó là hoàn tất nghiệm thu nội dung.
 
 **Cập nhật:** 13/10/2026
 

@@ -1,24 +1,22 @@
-# Nháp email gửi báo cáo đợt 2 - 17/10/2026
+# Email báo cáo đợt 2 đã gửi - 17/10/2026
 
-**Trạng thái mới nhất:** Chỉ giữ nháp để nhóm xem trước; chưa gửi, chưa hẹn giờ. Người dùng đã rút quyết định gửi tối nay và yêu cầu chờ quyết định mới sau khi nhóm xem.
+**Trạng thái:** Đã gửi lúc 23:38 ngày 17/10/2026 (giờ Việt Nam) theo quyết định cuối của nhóm trưởng. Đã đối chiếu trong Thư đã gửi; chưa có phê duyệt của giảng viên.
 
 **Từ:** `23162102@student.hcmute.edu.vn`
 
 **Đến:** `quangnd@hcmute.edu.vn`
 
-**Chuỗi trả lời:** `Re: [TLCN] Báo cáo tiến độ 4 tuần lần 1 - Nhóm Nguyễn Trọng Tín`. Giữ chuỗi gốc theo yêu cầu của Thầy ngày 16/09; nội dung và tệp đính kèm ghi rõ đợt 2. Bản nháp thư riêng trước đó được đổi tên thành bản lưu nội dung, không dùng để gửi.
+**Chuỗi trả lời:** `Re: [TLCN] Báo cáo tiến độ 4 tuần lần 1 - Nhóm Nguyễn Trọng Tín`.
 
-**Đính kèm:** `NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf` (37 trang, lấy từ `02_Bao_cao`).
+**Đính kèm:** `NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf`, 37 trang, 419,315 byte; SHA-256 `edafd81b6d4373fdae40c3086569254130a3148840fd37e026acba93c8a7c0dd`.
 
-## Cách gửi và quyết định hiện tại
+Giữ chuỗi gốc theo yêu cầu của Thầy ngày 16/09. Việc gửi báo cáo không xác nhận mức hiểu hay đóng góp của từng thành viên. Nhóm tiếp tục đọc lại và đối chiếu ngày 18/10; nếu phát hiện sai sót thì ghi rõ và thống nhất cách nộp bổ sung. Không gửi lại chỉ để đổi văn phong.
 
-Thư 16/09 yêu cầu trả lời chuỗi cũ; nháp Gmail đã đặt đúng chuỗi này. Người dùng yêu cầu giữ nháp để gửi nhóm xem rồi mới quyết định. Không tự gửi thư báo tiến độ riêng, gửi PDF hoặc đặt lịch gửi. Thư 08/09 quy định bốn tuần/lần; chưa thấy thư gia hạn đến 18/10.
-
-## Nội dung đang lưu trong nháp, chờ nhóm xem
+## Nội dung đã gửi
 
 Kính gửi Thầy Nguyễn Đăng Quang,
 
-Em xin lỗi Thầy vì gửi báo cáo đợt 2 chậm so với kế hoạch.
+Em thay mặt nhóm xin lỗi Thầy vì gửi báo cáo tiến độ đợt 2 trễ so với kế hoạch. Trong tuần này, các thành viên có lịch báo cáo kết thúc học phần nên việc hoàn thiện và gửi báo cáo bị chậm. Nhóm chưa sắp xếp công việc hợp lý, em xin nhận thiếu sót và kính mong Thầy thông cảm. Nhóm xin rút kinh nghiệm trong việc sắp xếp thời gian và theo dõi tiến độ các đợt tiếp theo.
 
 Em là Nguyễn Trọng Tín (MSSV 23162102), đại diện nhóm cùng Trịnh Trâm Anh (23162005) và Hoàng Văn Vương Thu (23162099). Em gửi Thầy báo cáo tiến độ đợt 2, tổng hợp giai đoạn 14/09-11/10/2026 của đề tài so sánh mô hình học có giám sát và phát hiện bất thường cho hệ thống phát hiện xâm nhập mạng trên UNSW-NB15.
 
