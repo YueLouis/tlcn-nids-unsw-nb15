@@ -1,6 +1,6 @@
 # Nháp email gửi báo cáo đợt 2 - 17/10/2026
 
-**Trạng thái:** Đã soạn, chưa gửi.
+**Trạng thái:** Đã soạn, chưa gửi; chờ nhóm tự rà soát hai đợt dự kiến 18/10/2026.
 
 **Từ:** `23162102@student.hcmute.edu.vn`
 
@@ -16,13 +16,13 @@ Kính gửi Thầy Nguyễn Đăng Quang,
 
 Em là Nguyễn Trọng Tín (MSSV 23162102), đại diện nhóm cùng Trịnh Trâm Anh (23162005) và Hoàng Văn Vương Thu (23162099). Em gửi Thầy báo cáo tiến độ đợt 2, tổng hợp giai đoạn 14/09-11/10/2026 của đề tài so sánh mô hình học có giám sát và phát hiện bất thường cho hệ thống phát hiện xâm nhập mạng trên UNSW-NB15.
 
-Báo cáo được trình bày tích lũy từ đợt 1. Nhóm đã rà soát các góp ý của Thầy trong thư ngày 19/09 và bản PDF có nhận xét, đồng thời cập nhật:
+Báo cáo được trình bày tích lũy từ đợt 1 và cập nhật theo các góp ý của Thầy trong thư ngày 19/09 và bản PDF có nhận xét, gồm:
 
 - Bảng đối chiếu góp ý và vị trí chỉnh sửa tại Mục 3.1; tiến độ từng nội dung được tách rõ đầu ra đã có, phần còn thiếu và tỷ lệ hoàn thành.
 - Mô tả cụ thể các kịch bản thực nghiệm, cấu trúc JSON/CSV lưu kết quả và tiêu chí kiểm thử.
 - Kết quả 80 lượt chạy, phân tích lỗi ban đầu theo nhóm tấn công, dẫn nguồn và các giới hạn còn tồn tại.
 
-Cả ba thành viên đã rà soát và thống nhất bản báo cáo đính kèm. Các nội dung chưa hoàn thành và kế hoạch tiếp theo được ghi riêng trong báo cáo.
+Bản PDF được hoàn thiện ngày 14/10/2026. Các nội dung chưa hoàn thành và kế hoạch tiếp theo được ghi riêng trong báo cáo.
 
 Em gửi kèm bản PDF đợt 2. Hồ sơ và mã nguồn của nhóm được lưu tại:
 
