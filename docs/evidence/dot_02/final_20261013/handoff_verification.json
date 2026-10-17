@@ -34,7 +34,6 @@
   "technical_check": "PASS: 80 runs, 320 required artifacts, unique IDs, manifest, 17 tests, validator, aggregate table and PDF",
   "open_items": [
     "S07 fulltext and whole-article/group review",
-    "group review of additions dated 2026-10-14",
     "deep error/overlap sensitivity analysis",
     "complete prototype/demo and final deliverables"
   ],
@@ -58,7 +57,7 @@
     "abstract_only": [
       "S07"
     ],
-    "new_group_review": "pending"
+    "new_group_review": "confirmed_via_group_leader_2026-10-17"
   },
   "initial_category_analysis": {
     "runs": 80,
@@ -81,5 +80,13 @@
     "matches_local": true,
     "pages": 32,
     "checked_on": "2026-10-14"
+  },
+  "group_confirmation": {
+    "recorded_on": "2026-10-17",
+    "source": "direct report from group leader Nguyen Trong Tin",
+    "scope": "current 32-page round-2 PDF including 2026-10-14 additions",
+    "pdf_sha256": "22b68ec396c88845879d8e33f7433a6ea047a5da5668d3a2462d7ad34c365d0c",
+    "individual_signatures_added": false,
+    "lecturer_approval_claimed": false
   }
 }

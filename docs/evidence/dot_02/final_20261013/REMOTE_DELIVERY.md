@@ -1,5 +1,7 @@
 # Trạng thái đồng bộ hồ sơ đợt 2
 
+Cập nhật trước gửi 17/10/2026: PDF Drive tải lại đủ 32 trang, SHA-256 khớp local/repo; local đủ 80 run/320 artifact và toàn bộ hash khớp manifest bàn giao. Hai CSV raw khớp manifest. Nhóm trưởng báo cả ba thành viên đã xác nhận bản hiện tại. Kiểm tra chi tiết tại `KIEM_TRA_CUOI_DOT_2_20261017.md`; Gmail đã lưu bản nháp kèm PDF đợt 2, chưa gửi. Các kết quả kiểm toàn bộ Drive bên dưới là mốc 14/10; lượt 17/10 không tải lại bộ run từ xa.
+
 Rà soát nội dung ngày 14/10/2026. **Drive đã kiểm đủ bộ bàn giao, các bản trùng đã dọn vào thùng rác khôi phục được.**
 
 ## Drive
@@ -22,7 +24,7 @@ Rà soát nội dung ngày 14/10/2026. **Drive đã kiểm đủ bộ bàn giao,
 
 [Drive nhóm](https://drive.google.com/drive/folders/13KGqMT4NUr8JfvTpF0IEKfUDT0Dlvq5S) · [GitHub](https://github.com/YueLouis/tlcn-nids-unsw-nb15)
 
-Đã đối chiếu đoạn nội dung của 12/13 nguồn (92,3%); S07 mới kiểm abstract, toàn văn và nghiệm thu toàn bài còn mở. Phân tích lỗi category ban đầu đã có cho 80 run; PR/score distribution, giải thích feature, độ nhạy overlap, demo và bộ cuối đề tài thuộc bước tiếp nối. Các phần bổ sung ngày 14/10 cần nhóm đọc lại; chưa ghi nhận xác nhận mới. Nhóm tự đọc, hiểu và chịu trách nhiệm nội dung.
+Đã đối chiếu đoạn nội dung của 12/13 nguồn (92,3%); S07 mới kiểm abstract, toàn văn và nghiệm thu toàn bài còn mở. Phân tích lỗi category ban đầu đã có cho 80 run; PR/score distribution, giải thích feature, độ nhạy overlap, demo và bộ cuối đề tài thuộc bước tiếp nối. Ngày 17/10/2026, nhóm trưởng báo cả ba thành viên đã xác nhận bản đợt 2 hiện tại, gồm phần bổ sung ngày 14/10; xem bản ghi xác nhận nhóm. Xác nhận bản nộp không đồng nghĩa đã đọc toàn văn S07 hoặc hoàn thành toàn đề tài. Nhóm tự đọc, hiểu và chịu trách nhiệm nội dung.
 
 Chưa gửi email hoặc nộp thay nhóm; không có xác nhận giảng viên duyệt. Nhật ký đối chiếu đầy đủ và lịch sử thao tác được lưu ngoài thư mục làm việc.
 
