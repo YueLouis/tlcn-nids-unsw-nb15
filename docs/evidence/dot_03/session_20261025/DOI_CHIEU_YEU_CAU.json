@@ -1,0 +1,416 @@
+{
+  "checked_at_utc": "2026-10-26T11:28:24.125967+00:00",
+  "requirements": [
+    {
+      "code": "SP1",
+      "requirement": "Báo cáo đợt 3, đợt 4 và báo cáo tổng",
+      "status": "Đã chuẩn bị / kiểm kỹ thuật",
+      "evidence": [
+        "docs/report_dot3_20261025/build/main.pdf",
+        "docs/report_dot4_20261025/build/main.pdf",
+        "docs/report_tong_20261025/build/main.pdf"
+      ],
+      "note": "Chưa thay duyệt nội dung, tự chạy và nộp bài của nhóm."
+    },
+    {
+      "code": "SP2",
+      "requirement": "Code có cấu trúc và hướng dẫn chạy",
+      "status": "Đã chuẩn bị / kiểm kỹ thuật",
+      "evidence": [
+        "src/nids_benchmark",
+        "scripts",
+        "tests",
+        "README.md",
+        "requirements-analysis.txt"
+      ],
+      "note": "Chưa thay duyệt nội dung, tự chạy và nộp bài của nhóm."
+    },
+    {
+      "code": "SP3",
+      "requirement": "Data inventory và audit dữ liệu",
+      "status": "Đã chuẩn bị / kiểm kỹ thuật",
+      "evidence": [
+        "artifacts/data/data_manifest.json",
+        "docs/evidence/dot_02/DATA_CONTRACT.md"
+      ],
+      "note": "Chưa thay duyệt nội dung, tự chạy và nộp bài của nhóm."
+    },
+    {
+      "code": "SP4",
+      "requirement": "Preprocessor đã lưu",
+      "status": "Đã chuẩn bị / kiểm kỹ thuật",
+      "evidence": [
+        "results/runs/CS-RF-S42/model_bundle.joblib"
+      ],
+      "note": "Chưa thay duyệt nội dung, tự chạy và nộp bài của nhóm."
+    },
+    {
+      "code": "SP5",
+      "requirement": "Bốn model/cấu hình, đủ 80 run",
+      "status": "Đã chuẩn bị / kiểm kỹ thuật",
+      "evidence": [
+        "configs/experiment_matrix.yaml",
+        "docs/protocol/RUN_MATRIX.csv",
+        "results/runs"
+      ],
+      "note": "Chưa thay duyệt nội dung, tự chạy và nộp bài của nhóm."
+    },
+    {
+      "code": "SP6",
+      "requirement": "Closed-set và ba LOACO, năm seed",
+      "status": "Đã chuẩn bị / kiểm kỹ thuật",
+      "evidence": [
+        "docs/evidence/dot_03/pr_scores_20261022/OPERATING_POINTS_ALL_RUNS.csv",
+        "docs/evidence/dot_03/pr_scores_20261022/AP_MEAN_STD.csv"
+      ],
+      "note": "Chưa thay duyệt nội dung, tự chạy và nộp bài của nhóm."
+    },
+    {
+      "code": "SP7",
+      "requirement": "Bảng/hình sinh từ artifact khóa",
+      "status": "Đã chuẩn bị / kiểm kỹ thuật",
+      "evidence": [
+        "docs/evidence/dot_03/final_diagnostics_20261025/FINAL_DIAGNOSTICS_AUDIT.json",
+        "scripts/prepare_final_diagnostic_chapter.py"
+      ],
+      "note": "Chưa thay duyệt nội dung, tự chạy và nộp bài của nhóm."
+    },
+    {
+      "code": "SP8",
+      "requirement": "Prototype có so sánh và giải thích",
+      "status": "Đã chuẩn bị / kiểm kỹ thuật",
+      "evidence": [
+        "demo/index.html",
+        "src/nids_benchmark/demo.py",
+        "docs/evidence/dot_04/demo_20261025/DEMO_UI_AUDIT.json"
+      ],
+      "note": "Chưa thay duyệt nội dung, tự chạy và nộp bài của nhóm."
+    },
+    {
+      "code": "SP9",
+      "requirement": "Slide và câu hỏi phản biện",
+      "status": "Đã chuẩn bị / kiểm kỹ thuật",
+      "evidence": [
+        "docs/presentation_20261025/presentation.pdf",
+        "docs/team_guide_20261025/guide.pdf"
+      ],
+      "note": "Chưa thay duyệt nội dung, tự chạy và nộp bài của nhóm."
+    },
+    {
+      "code": "SP10",
+      "requirement": "Demo kịch bản, nguồn dữ liệu, bản đồ code và phiếu tự nhận xét",
+      "status": "Đã chuẩn bị / kiểm kỹ thuật",
+      "evidence": [
+        "demo/lab.html",
+        "demo/cases/catalog.json",
+        "src/nids_benchmark/application.py",
+        "docs/application_20261026/report.pdf",
+        "docs/evidence/dot_04/application_20261026/APPLICATION_AUDIT.json",
+        "docs/evidence/dot_04/application_20261026/APPLICATION_UI_AUDIT.json"
+      ],
+      "note": "Chưa thay duyệt nội dung, tự chạy và nộp bài của nhóm."
+    },
+    {
+      "code": "T1",
+      "requirement": "Support Normal và 9 category",
+      "status": "Có bằng chứng",
+      "evidence": [
+        "artifacts/data/data_manifest.json"
+      ],
+      "note": "Bảng Chương 3 báo cáo tổng."
+    },
+    {
+      "code": "T2",
+      "requirement": "Phần cứng, thư viện, seed, feature version",
+      "status": "MỘT PHẦN",
+      "evidence": [
+        "results/runs/CS-RF-S42/run.json",
+        "docs/evidence/dot_03/final_diagnostics_20261025/HARDWARE_CURRENT.json"
+      ],
+      "note": "Có phiên bản/seed/config; không có phần cứng train lịch sử. Máy đo suy luận hiện tại được ghi riêng."
+    },
+    {
+      "code": "T3",
+      "requirement": "Cấu hình bốn mô hình",
+      "status": "Có bằng chứng",
+      "evidence": [
+        "configs/experiment_matrix.yaml",
+        "src/nids_benchmark/models.py"
+      ],
+      "note": "Cấu hình/bundle giữ nguyên."
+    },
+    {
+      "code": "T4",
+      "requirement": "Closed-set P/R/F1/FPR/AP",
+      "status": "Có bằng chứng",
+      "evidence": [
+        "docs/report_tong_20261025/main.tex",
+        "docs/evidence/dot_03/pr_scores_20261022/AP_MEAN_STD.csv"
+      ],
+      "note": "Bảng tổng hợp trong Chương 6; hai target trong CSV."
+    },
+    {
+      "code": "T5",
+      "requirement": "LOACO Reconnaissance, hai target",
+      "status": "Có bằng chứng",
+      "evidence": [
+        "docs/evidence/dot_03/pr_scores_20261022/OPERATING_POINTS_MEAN_STD.csv"
+      ],
+      "note": "Known Recall/UADR/FPR, mean/sample std n=5."
+    },
+    {
+      "code": "T6",
+      "requirement": "LOACO DoS, hai target",
+      "status": "Có bằng chứng",
+      "evidence": [
+        "docs/evidence/dot_03/pr_scores_20261022/OPERATING_POINTS_MEAN_STD.csv"
+      ],
+      "note": "Cùng định nghĩa metric và scope."
+    },
+    {
+      "code": "T7",
+      "requirement": "LOACO Exploits, hai target",
+      "status": "Có bằng chứng",
+      "evidence": [
+        "docs/evidence/dot_03/pr_scores_20261022/OPERATING_POINTS_MEAN_STD.csv"
+      ],
+      "note": "Cùng định nghĩa metric và scope."
+    },
+    {
+      "code": "T8",
+      "requirement": "Detection theo attack category",
+      "status": "Có bằng chứng",
+      "evidence": [
+        "docs/evidence/dot_02/category_errors_20261014/CATEGORY_ERRORS_MEAN_STD.csv",
+        "docs/evidence/dot_03/final_diagnostics_20261025/CATEGORY_DETECTION_HEATMAP.png"
+      ],
+      "note": "Detection=1-FN/support Attack."
+    },
+    {
+      "code": "T9",
+      "requirement": "Train/inference time và kích thước",
+      "status": "MỘT PHẦN",
+      "evidence": [
+        "docs/evidence/dot_03/final_diagnostics_20261025/RUNTIME_SIZE_ALL_RUNS.csv",
+        "docs/evidence/dot_03/final_diagnostics_20261025/RUNTIME_SIZE_MEAN_STD.csv"
+      ],
+      "note": "Không có train-only/inference cũ. Có duration toàn run, bundle bytes và phép đo mới 80 bundle (warm-up1/repeat3). Không gọi tổng run là train time."
+    },
+    {
+      "code": "T10",
+      "requirement": "Lỗi role/category/proto/service/state",
+      "status": "Có bằng chứng",
+      "evidence": [
+        "docs/evidence/dot_02/category_errors_20261014/CATEGORY_ERRORS_ALL_RUNS.csv",
+        "docs/evidence/dot_03/final_diagnostics_20261025/GROUP_ERRORS_ALL_RUNS.csv",
+        "docs/evidence/dot_03/final_diagnostics_20261025/NEAR_THRESHOLD_EXAMPLES_S42.csv"
+      ],
+      "note": "Mẫu số từng role/nhóm; không suy diễn nhân quả."
+    },
+    {
+      "code": "H1",
+      "requirement": "UADR hai target và sai số",
+      "status": "Có bằng chứng",
+      "evidence": [
+        "docs/evidence/dot_03/final_diagnostics_20261025/UADR_BOTH_TARGETS.png"
+      ],
+      "note": "Script/CSV nguồn giữ cùng evidence; hình chính có trong PDF."
+    },
+    {
+      "code": "H2",
+      "requirement": "Known Recall và UADR theo FPR quan sát",
+      "status": "Có bằng chứng",
+      "evidence": [
+        "docs/evidence/dot_03/final_diagnostics_20261025/TRADEOFF_KNOWN_RECALL.png",
+        "docs/evidence/dot_03/final_diagnostics_20261025/TRADEOFF_UADR.png"
+      ],
+      "note": "Script/CSV nguồn giữ cùng evidence; hình chính có trong PDF."
+    },
+    {
+      "code": "H3",
+      "requirement": "PR closed-set bốn model",
+      "status": "Có bằng chứng",
+      "evidence": [
+        "docs/evidence/dot_03/pr_scores_20261022/PR_CS_all_S42.png"
+      ],
+      "note": "Script/CSV nguồn giữ cùng evidence; hình chính có trong PDF."
+    },
+    {
+      "code": "H4",
+      "requirement": "Score theo role và threshold, đủ ba LOACO",
+      "status": "Có bằng chứng",
+      "evidence": [
+        "docs/evidence/dot_03/pr_scores_20261022/SCORE_ECDF_LR_S42.png",
+        "docs/evidence/dot_03/pr_scores_20261022/SCORE_ECDF_LD_S42.png",
+        "docs/evidence/dot_03/pr_scores_20261022/SCORE_ECDF_LE_S42.png"
+      ],
+      "note": "Script/CSV nguồn giữ cùng evidence; hình chính có trong PDF."
+    },
+    {
+      "code": "H5",
+      "requirement": "Confusion CS và ba LOACO",
+      "status": "Có bằng chứng",
+      "evidence": [
+        "docs/evidence/dot_03/final_diagnostics_20261025/CONFUSION_ALL_SCENARIOS_S42.png"
+      ],
+      "note": "Script/CSV nguồn giữ cùng evidence; hình chính có trong PDF."
+    },
+    {
+      "code": "H6",
+      "requirement": "Category detection heatmap",
+      "status": "Có bằng chứng",
+      "evidence": [
+        "docs/evidence/dot_03/final_diagnostics_20261025/CATEGORY_DETECTION_HEATMAP.png"
+      ],
+      "note": "Script/CSV nguồn giữ cùng evidence; hình chính có trong PDF."
+    },
+    {
+      "code": "H7",
+      "requirement": "Metric theo seed",
+      "status": "Có bằng chứng",
+      "evidence": [
+        "docs/evidence/dot_03/final_diagnostics_20261025/SEED_STABILITY.png"
+      ],
+      "note": "Script/CSV nguồn giữ cùng evidence; hình chính có trong PDF."
+    },
+    {
+      "code": "H8",
+      "requirement": "RF/XGB feature importance",
+      "status": "Có bằng chứng",
+      "evidence": [
+        "docs/evidence/dot_03/features_20261025/FEATURES_CS.png",
+        "docs/evidence/dot_03/features_20261025/FEATURE_IMPORTANCE_MEAN_STD.csv"
+      ],
+      "note": "Script/CSV nguồn giữ cùng evidence; hình chính có trong PDF."
+    },
+    {
+      "code": "P1",
+      "requirement": "Normal/Attack",
+      "status": "Đã kiểm tự động",
+      "evidence": [
+        "docs/evidence/dot_04/demo_20261025/DEMO_UI_AUDIT.json",
+        "tests/test_demo_inference.py"
+      ],
+      "note": "Importance RF/XGB là toàn model, không giải thích nhân quả từng record."
+    },
+    {
+      "code": "P2",
+      "requirement": "Score và threshold",
+      "status": "Đã kiểm tự động",
+      "evidence": [
+        "docs/evidence/dot_04/demo_20261025/DEMO_UI_AUDIT.json",
+        "tests/test_demo_inference.py"
+      ],
+      "note": "Importance RF/XGB là toàn model, không giải thích nhân quả từng record."
+    },
+    {
+      "code": "P3",
+      "requirement": "Model/run/seed",
+      "status": "Đã kiểm tự động",
+      "evidence": [
+        "docs/evidence/dot_04/demo_20261025/DEMO_UI_AUDIT.json",
+        "tests/test_demo_inference.py"
+      ],
+      "note": "Importance RF/XGB là toàn model, không giải thích nhân quả từng record."
+    },
+    {
+      "code": "P4",
+      "requirement": "Feature hoặc giải thích score phù hợp",
+      "status": "Đã kiểm tự động",
+      "evidence": [
+        "docs/evidence/dot_04/demo_20261025/DEMO_UI_AUDIT.json",
+        "tests/test_demo_inference.py"
+      ],
+      "note": "Importance RF/XGB là toàn model, không giải thích nhân quả từng record."
+    },
+    {
+      "code": "P5",
+      "requirement": "So sánh bốn model cùng CSV",
+      "status": "Đã kiểm tự động",
+      "evidence": [
+        "docs/evidence/dot_04/demo_20261025/DEMO_UI_AUDIT.json",
+        "tests/test_demo_inference.py"
+      ],
+      "note": "Importance RF/XGB là toàn model, không giải thích nhân quả từng record."
+    },
+    {
+      "code": "G1",
+      "requirement": "Protocol",
+      "status": "Có kiểm kỹ thuật; CHƯA ký duyệt thay người",
+      "evidence": [
+        "docs/protocol/GATE_1_CHECKLIST.md",
+        "docs/protocol/RUN_MATRIX.csv"
+      ],
+      "note": "Ma trận/RQ/split có kiểm kỹ thuật. Không tạo phê duyệt giảng viên hoặc ký thay nhóm."
+    },
+    {
+      "code": "G2",
+      "requirement": "Data",
+      "status": "Có kiểm kỹ thuật; CHƯA ký duyệt thay người",
+      "evidence": [
+        "docs/protocol/GATE_2_CHECKLIST.md",
+        "artifacts/data/data_manifest.json"
+      ],
+      "note": "Hash/schema/support đã kiểm; xem lại nội dung và giới hạn theo phần Anh."
+    },
+    {
+      "code": "G3",
+      "requirement": "Pipeline",
+      "status": "Có kiểm kỹ thuật; CHƯA ký duyệt thay người",
+      "evidence": [
+        "tests"
+      ],
+      "note": "46 test hiện tại đạt trong venv mới ngày 26/10. Chưa thay tự chạy của thành viên."
+    },
+    {
+      "code": "G4",
+      "requirement": "Baselines",
+      "status": "Có kiểm kỹ thuật; CHƯA ký duyệt thay người",
+      "evidence": [
+        "docs/evidence/dot_03/overlap_20261025/OVERLAP_AUDIT.json"
+      ],
+      "note": "Đủ 80 run/320 artifact; không huấn luyện lại."
+    },
+    {
+      "code": "G5",
+      "requirement": "LOACO",
+      "status": "Có kiểm kỹ thuật; CHƯA ký duyệt thay người",
+      "evidence": [
+        "docs/evidence/dot_03/final_diagnostics_20261025/FINAL_DIAGNOSTICS_AUDIT.json",
+        "docs/evidence/dot_03/pr_scores_20261022/PR_SCORE_AUDIT.json"
+      ],
+      "note": "Ba held-out, mean/std, error analysis. T2/T9 còn thiếu log lịch sử như nêu trên."
+    },
+    {
+      "code": "G6",
+      "requirement": "Prototype",
+      "status": "Có kiểm kỹ thuật; CHƯA ký duyệt thay người",
+      "evidence": [
+        "docs/evidence/dot_04/demo_20261025/DEMO_AUDIT.json",
+        "docs/evidence/dot_03/session_20261025/CLEAN_ENV_HANDOFF_AUDIT.json"
+      ],
+      "note": "16 bundle/32 case/3.200 dự đoán, thêm so sánh/explanation UI. ZIP giải nén đã kiểm lại trong venv mới không dùng user-site trên cùng máy Windows; chưa thử máy vật lý khác."
+    },
+    {
+      "code": "G7",
+      "requirement": "Report",
+      "status": "Có kiểm kỹ thuật; CHƯA ký duyệt thay người",
+      "evidence": [
+        "docs/report_tong_20261025/build/main.pdf"
+      ],
+      "note": "Đã compile/render và truy vết bảng; cả nhóm cần đọc, sửa và chọn bản nộp."
+    }
+  ],
+  "unfilled_historical_evidence": [
+    "T2: original training hardware",
+    "T9: isolated original train/inference durations"
+  ],
+  "human_pending": [
+    "Cả ba đọc/sửa, tự giải thích và tự chạy phần của mình",
+    "Ghi đóng góp thật và review thật",
+    "Nhóm duyệt bản nộp",
+    "Nộp đúng thông báo môn"
+  ],
+  "source_limit": "S07 chỉ đọc/đối chiếu abstract; không viện dẫn toàn văn chưa có",
+  "external_delivery": "NOT SENT / NOT SUBMITTED by this preparation"
+}

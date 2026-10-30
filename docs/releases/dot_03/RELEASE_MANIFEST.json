@@ -1,0 +1,71 @@
+{
+  "created_at_utc": "2026-10-30T16:04:51.353502+00:00",
+  "status": "Technical release; group review unconfirmed; NOT SUBMITTED",
+  "files": [
+    {
+      "path": "HUONG_DAN_GUI.md",
+      "bytes": 2567,
+      "sha256": "c888c25ad4328ccf2c7b5b4afaf20639893c81fdcefa981d66936669bbd32648"
+    },
+    {
+      "path": "KET_QUA_KIEM_TRA.md",
+      "bytes": 4092,
+      "sha256": "a3a41537f9d0d39ca6eed18d7a9c99481a1b7a39039bcf71e01685a991b8b34f"
+    },
+    {
+      "path": "KIEM_CHUNG/FINAL_DIAGNOSTIC_TABLE_CHECK.json",
+      "bytes": 509,
+      "sha256": "4b0a758453374dec9b6d2b27370b7d1a80e22bed5ec820a945b657887bdc37f0"
+    },
+    {
+      "path": "KIEM_CHUNG/FRESH_AUDIT.json",
+      "bytes": 1639,
+      "sha256": "527ed1d3bf42b6c6b23af201f3e7c36059d15f740da09a6f250346d66173c96a"
+    },
+    {
+      "path": "KIEM_CHUNG/PROTECTED_HANDOFF_CHECK.json",
+      "bytes": 1086,
+      "sha256": "12fb82dbd7e0bb6c97741c120ac7a8d984fa9124ad98544a13efeeff0ba34016"
+    },
+    {
+      "path": "KIEM_CHUNG/protocol.log",
+      "bytes": 161,
+      "sha256": "82f9e5c5ad186087cb8ad02ccb9cbd4aa9a576de3e4648c9792a4dffc8bebed5"
+    },
+    {
+      "path": "KIEM_CHUNG/RELEASE_CHECK.json",
+      "bytes": 578,
+      "sha256": "51d3fe4e8403a9ee0d21b413ec67b29b171905b2d9b3fb690f6944799f580bcb"
+    },
+    {
+      "path": "KIEM_CHUNG/REPORT_TABLE_CHECK.json",
+      "bytes": 5289,
+      "sha256": "bcb4ffaa3848a59c479b13a3c02b7f2c90cd3df8fdd5f0f72d8b3bbeb915c01b"
+    },
+    {
+      "path": "KIEM_CHUNG/SOURCE_ZIP_REBUILD.json",
+      "bytes": 318,
+      "sha256": "3d7fa908d8211a15160d662b141eb0b1c44554b7e015703030478bb6818d5bf0"
+    },
+    {
+      "path": "KIEM_CHUNG/tests.log",
+      "bytes": 7184,
+      "sha256": "d0f46a234d97c56be405e5b398669e84ef9b4b6652f3c318bc98c078de6a060d"
+    },
+    {
+      "path": "Nguon_Bao_Cao_Dot3_20261030.zip",
+      "bytes": 7346334,
+      "sha256": "3d6cd9985aa42f7b06e87e9da3af3309ff1ea0c9650ee0b22b2959b6129fe98b"
+    },
+    {
+      "path": "NhomTLCN_TramAnh_VuongThu_TrongTin_dot3.pdf",
+      "bytes": 2272993,
+      "sha256": "b241f781a4a8c88b3ab63ae34f69d2fbdeedd82f802ffb0c7c3e61358e5f8ce7"
+    },
+    {
+      "path": "NOI_DUNG_THU.txt",
+      "bytes": 931,
+      "sha256": "d52367dff8be12a8c83b7fab5218c7b8343ce9ffaed38fd1f03c8c2bb4a98888"
+    }
+  ]
+}

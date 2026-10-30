@@ -1,0 +1,21 @@
+\section{Sản phẩm và bằng chứng tại mốc chốt kỹ thuật}
+Bảng này cập nhật các mục còn ghi ``chưa có'' trong tiến độ lịch sử Chương 3. Tỷ lệ đo mức có đầu ra theo tiêu chí đếm, không đo mức hiểu, công sức hay phê duyệt học thuật. Các sản phẩm có hỗ trợ công cụ chưa được ghi thành đóng góp độc lập của một thành viên.
+\begingroup\small\renewcommand{\arraystretch}{1.18}
+\begin{longtable}{L{2.1cm}L{7.2cm}L{6.1cm}}
+\caption{Đầu ra đợt 3 tính đến 30/10/2026}\\
+\toprule Hạng mục & Đầu ra đã kiểm & Phần còn mở / tiêu chí đếm\\\midrule
+\endfirsthead
+\multicolumn{3}{l}{\small Bảng \thetable\ (tiếp)}\\
+\toprule Hạng mục & Đầu ra đã kiểm & Phần còn mở / tiêu chí đếm\\\midrule
+\endhead
+ND7.1: PR/score & Đủ 80 run; 140 dòng AP, 28 nhóm AP; 11 hình; đối chiếu 1.040 metric. & 80/80 run: 100\% phạm vi tính toán; nhóm chưa nghiệm thu diễn giải.\\
+ND7.1: overlap & Tái dựng tập fit từng model/seed; 480 dòng và 96 nhóm; kiểm support và metric hai target. & 80/80 run: 100\% lát cắt mô tả; chưa retrain loại trùng.\\
+ND7.1: importance & 40 bundle RF/XGB, 1.680 dòng feature, 336 nhóm; gom one-hot về 42 feature raw. & 40/40 bundle: 100\%; chưa giải thích nhân quả từng lỗi.\\
+ND7.1: lỗi & 43.840 dòng proto/service/state; 8.768 nhóm, 264 ví dụ sát ngưỡng, 48 cặp model. & 80/80 run: 100\% phạm vi bảng; review và bàn luận của thành viên chưa xác nhận.\\
+ND7.2: prototype & CSV qua 16 bundle seed42, 32 trường hợp ngưỡng; 3.200 dự đoán kiểm lại ngày 30/10. & 16/16 bundle: 100\% replay đã định; chưa nghiệm thu demo bởi nhóm, chưa live capture.\\
+ND8: báo cáo & Bản tích lũy, nguồn và bằng chứng đi kèm; slide/bộ hướng dẫn đã chuẩn bị riêng. & 1/1 bản kỹ thuật; review toàn văn, đóng góp và buổi bảo vệ còn mở.\\
+\bottomrule\end{longtable}\endgroup
+
+Kế hoạch đến 23/12 tiếp tục theo Chương 3. Từ 31/10 đến 08/11, các việc còn cần người thực hiện là tự đọc, tự chạy, ghi góp ý và sửa nội dung; không tự tính các việc đó là đã xong vào ngày 30/10.
+
+\textbf{Kiểm mới ngày 30/10:} 46 test đạt và validator đủ ma trận 4 scenario $\times$ 4 model $\times$ 5 seed. PR/score và overlap được tính lại từ 13.173.120 dòng prediction; tám CSV kết quả khớp chính xác bản trước. Audit kiểm lại importance 40 bundle, bảng chẩn đoán và 333 hash đầu vào. Đây là kiểm hậu nghiệm, giữ nguyên model và threshold, không phải kết quả huấn luyện mới. Log ở \path{docs/evidence/dot_03/final_20261030/}.

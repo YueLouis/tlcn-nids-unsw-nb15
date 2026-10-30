@@ -1,0 +1,17 @@
+{
+  "checked_at_utc": "2026-10-25T09:57:38.815761+00:00",
+  "source_id": "S07",
+  "doi": "10.1145/2689746.2689747",
+  "checks": [
+    {
+      "url": "https://dl.acm.org/doi/10.1145/2689746.2689747",
+      "result": "Web tool returned HTTP 403"
+    },
+    {
+      "url": "https://dl.acm.org/doi/pdf/10.1145/2689746.2689747",
+      "result": "Web tool could not access PDF"
+    }
+  ],
+  "full_text_obtained": false,
+  "scope": "Limited legitimate web lookup; these retrieval failures do not prove that no authorized copy exists. Keep abstract-only attribution; no author message sent."
+}

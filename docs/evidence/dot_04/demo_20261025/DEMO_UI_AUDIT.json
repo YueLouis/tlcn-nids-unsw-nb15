@@ -1,0 +1,37 @@
+{
+  "checked_on": "2026-10-25",
+  "port": 4399,
+  "native_pointer_clicks": true,
+  "frame_stability_wait_skipped": true,
+  "models_compared": 4,
+  "comparison_rows": 100,
+  "global_explanation": true,
+  "score_explanation": true,
+  "download": true,
+  "unlabeled_without_fake_fp_fn": true,
+  "invalid_csv_rejected": true,
+  "stale_results_cleared": true,
+  "checks": [
+    {
+      "width": 1440,
+      "horizontal_overflow": false
+    },
+    {
+      "width": 1024,
+      "horizontal_overflow": false
+    },
+    {
+      "width": 768,
+      "horizontal_overflow": false
+    },
+    {
+      "width": 390,
+      "horizontal_overflow": false
+    },
+    {
+      "width": 375,
+      "horizontal_overflow": false
+    }
+  ],
+  "page_errors": []
+}

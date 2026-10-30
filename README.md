@@ -1,5 +1,9 @@
 # TLCN NIDS - UNSW-NB15
 
+**30/10/2026 — Đợt 3:** [PDF 60 trang, nguồn và bằng chứng kiểm](docs/releases/dot_03/README.md). Bản chốt kỹ thuật đến 30/10; 46 test đạt, đủ 80 run, 174 dòng bảng đối chiếu khớp CSV; ZIP nguồn dựng lại khớp cả 60 trang. [Drive bản chốt](https://drive.google.com/drive/folders/1AyxVWgeJj9mZ0L_d0AVosxKS6IUpghbe) đã tải lại, đủ 14 tệp khớp SHA-256. Chưa gửi email/nộp, chưa xác nhận cả ba duyệt nội dung. Mốc 09/11; Tín tự gửi theo lời nhắc đã đặt.
+
+**Bộ nháp ngày 25–26/10:** báo cáo đợt 4/tổng, slide và tài liệu đọc là tài liệu chuẩn bị cho bước sau. [Hướng dẫn nhóm](docs/management/BO_HO_SO_NHOM_20261025.md) và [trang tự đọc](docs/reading_20261026/BAT_DAU.html) giữ đúng mốc; bản đợt 3 hiện hành mở ở liên kết trên. Phần đợt 2 bên dưới là lịch sử.
+
 **Kho GitHub hiện tại:** `https://github.com/YueLouis/tlcn-nids-unsw-nb15`  
 **Nhánh làm việc chuẩn:** `main`  
 **Thư mục Drive của nhóm:** `https://drive.google.com/drive/folders/13KGqMT4NUr8JfvTpF0IEKfUDT0Dlvq5S?hl=vi`  
@@ -7,6 +11,8 @@
 
 So sánh mô hình học có giám sát và phát hiện bất thường cho hệ thống phát hiện
 xâm nhập mạng trên UNSW-NB15 bằng đánh giá leave-one-attack-class-out (LOACO).
+
+**26/10/2026 — Phần ứng dụng:** mở `http://127.0.0.1:4397/lab` sau khi chạy `python scripts/demo_server.py`. Giao diện chia sáu mục bằng nút, bảng/tài liệu có Trước–Tiếp để xem trong một màn hình. Có tám kịch bản phát lại flow, nguồn dữ liệu, bản đồ hàm code, tạm dừng/xem tiếp, đối chiếu lỗi và xuất phiên JSON/CSV. [Tài liệu bổ sung ứng dụng](docs/application_20261026/report.html) có phần nhóm tự ghi nhận xét. Mã mới có 46 unit test và 1.600 dự đoán demo được đối chiếu; đây là sản phẩm hỗ trợ chuẩn bị, chưa thay xác nhận tự làm/review của thành viên, chưa có điểm bonus được duyệt.
 
 ## Phạm vi nghiên cứu
 
@@ -20,7 +26,7 @@ xâm nhập mạng trên UNSW-NB15 bằng đánh giá leave-one-attack-class-out
 Ba câu hỏi nghiên cứu chính và bằng chứng cần thu thập được mô tả tại
 [`docs/protocol/RQ_TO_EVIDENCE.md`](docs/protocol/RQ_TO_EVIDENCE.md).
 
-## Trạng thái
+## Lịch sử trạng thái đợt 2 (17/10/2026)
 
 - Đã có hai tập train/test UNSW-NB15 thật, data manifest, checksum SHA-256 và
   báo cáo audit schema/nhãn.
@@ -53,7 +59,7 @@ tests/                  Kiểm thử chống sai protocol và data leakage
 
 ## Bắt đầu cho thành viên mới
 
-Đọc [`docs/START_HERE_NHOM.md`](docs/START_HERE_NHOM.md) để lấy code, nhận dữ liệu và chọn nhánh riêng. Phân công chi tiết nằm ở [`docs/management/PHAN_CONG_DOT_02_HIEN_TAI_20260929.md`](docs/management/PHAN_CONG_DOT_02_HIEN_TAI_20260929.md).
+Đọc [`docs/START_HERE_NHOM.md`](docs/START_HERE_NHOM.md) để lấy code, nhận dữ liệu và chọn nhánh riêng. Phân công đợt 3 nằm ở [bảng chia việc](docs/management/phan_cong_dot_03_20261022/00_PHAN_CONG_DOT_03.md); các mốc giao cũ là lịch sử, kết quả tự review chưa xác nhận.
 
 ## Quy tắc dữ liệu và bảo mật
 

@@ -1,0 +1,312 @@
+{
+  "created_on": "2026-10-25",
+  "slides": 20,
+  "guide_pages": 9,
+  "sources": [
+    {
+      "path": "docs/evidence/dot_03/pr_scores_20261022/OPERATING_POINTS_MEAN_STD.csv",
+      "sha256": "c7376a6862bcac80fa20229db743942c8954b84a003cc33737663538c22594e7"
+    },
+    {
+      "path": "docs/evidence/dot_03/pr_scores_20261022/AP_MEAN_STD.csv",
+      "sha256": "f67222984617b8a72ac08da9a65fc59ab6dcb9c8c0c8a676722dd4332f88c855"
+    },
+    {
+      "path": "docs/evidence/dot_03/overlap_20261025/OVERLAP_MEAN_STD.csv",
+      "sha256": "bb13e3efca351eee93a176b9d207979dd33c82abc97cb76b97b2a8520af58331"
+    },
+    {
+      "path": "docs/evidence/dot_03/features_20261025/FEATURE_IMPORTANCE_MEAN_STD.csv",
+      "sha256": "137dced3df99493c4b63f12965cc11ac3ae18fff83a0947d5cc3c145d42a6c9c"
+    },
+    {
+      "path": "artifacts/data/data_manifest.json",
+      "sha256": "a5f1ebed2dd39e472fdb072cd6277fbcb2de0c1a602cce6338de9a33953c8e7f"
+    }
+  ],
+  "metric_cells": [
+    {
+      "scenario": "CS",
+      "model": "RF",
+      "target": 0.05,
+      "metric": "recall",
+      "text": "97.14 ± 0.07"
+    },
+    {
+      "scenario": "CS",
+      "model": "RF",
+      "target": 0.05,
+      "metric": "fpr",
+      "text": "18.57 ± 0.34"
+    },
+    {
+      "scenario": "CS",
+      "model": "XGB",
+      "target": 0.05,
+      "metric": "recall",
+      "text": "96.91 ± 0.12"
+    },
+    {
+      "scenario": "CS",
+      "model": "XGB",
+      "target": 0.05,
+      "metric": "fpr",
+      "text": "18.71 ± 0.43"
+    },
+    {
+      "scenario": "CS",
+      "model": "IF",
+      "target": 0.05,
+      "metric": "recall",
+      "text": "31.44 ± 2.92"
+    },
+    {
+      "scenario": "CS",
+      "model": "IF",
+      "target": 0.05,
+      "metric": "fpr",
+      "text": "6.15 ± 0.40"
+    },
+    {
+      "scenario": "CS",
+      "model": "AE",
+      "target": 0.05,
+      "metric": "recall",
+      "text": "79.40 ± 1.36"
+    },
+    {
+      "scenario": "CS",
+      "model": "AE",
+      "target": 0.05,
+      "metric": "fpr",
+      "text": "9.16 ± 0.39"
+    },
+    {
+      "scenario": "LR",
+      "model": "RF",
+      "target": 0.05,
+      "metric": "uadr",
+      "text": "97.73 ± 0.30"
+    },
+    {
+      "scenario": "LR",
+      "model": "RF",
+      "target": 0.05,
+      "metric": "fpr",
+      "text": "18.58 ± 0.24"
+    },
+    {
+      "scenario": "LR",
+      "model": "XGB",
+      "target": 0.05,
+      "metric": "uadr",
+      "text": "98.06 ± 0.85"
+    },
+    {
+      "scenario": "LR",
+      "model": "XGB",
+      "target": 0.05,
+      "metric": "fpr",
+      "text": "18.76 ± 0.47"
+    },
+    {
+      "scenario": "LR",
+      "model": "IF",
+      "target": 0.05,
+      "metric": "uadr",
+      "text": "0.66 ± 0.26"
+    },
+    {
+      "scenario": "LR",
+      "model": "IF",
+      "target": 0.05,
+      "metric": "fpr",
+      "text": "6.20 ± 0.43"
+    },
+    {
+      "scenario": "LR",
+      "model": "AE",
+      "target": 0.05,
+      "metric": "uadr",
+      "text": "23.82 ± 3.75"
+    },
+    {
+      "scenario": "LR",
+      "model": "AE",
+      "target": 0.05,
+      "metric": "fpr",
+      "text": "9.07 ± 0.44"
+    },
+    {
+      "scenario": "LD",
+      "model": "RF",
+      "target": 0.05,
+      "metric": "uadr",
+      "text": "99.81 ± 0.03"
+    },
+    {
+      "scenario": "LD",
+      "model": "RF",
+      "target": 0.05,
+      "metric": "fpr",
+      "text": "18.75 ± 0.35"
+    },
+    {
+      "scenario": "LD",
+      "model": "XGB",
+      "target": 0.05,
+      "metric": "uadr",
+      "text": "99.33 ± 0.18"
+    },
+    {
+      "scenario": "LD",
+      "model": "XGB",
+      "target": 0.05,
+      "metric": "fpr",
+      "text": "18.41 ± 0.55"
+    },
+    {
+      "scenario": "LD",
+      "model": "IF",
+      "target": 0.05,
+      "metric": "uadr",
+      "text": "4.21 ± 0.99"
+    },
+    {
+      "scenario": "LD",
+      "model": "IF",
+      "target": 0.05,
+      "metric": "fpr",
+      "text": "6.11 ± 0.23"
+    },
+    {
+      "scenario": "LD",
+      "model": "AE",
+      "target": 0.05,
+      "metric": "uadr",
+      "text": "88.38 ± 1.12"
+    },
+    {
+      "scenario": "LD",
+      "model": "AE",
+      "target": 0.05,
+      "metric": "fpr",
+      "text": "9.11 ± 0.39"
+    },
+    {
+      "scenario": "LE",
+      "model": "RF",
+      "target": 0.05,
+      "metric": "uadr",
+      "text": "97.06 ± 0.57"
+    },
+    {
+      "scenario": "LE",
+      "model": "RF",
+      "target": 0.05,
+      "metric": "fpr",
+      "text": "18.32 ± 0.82"
+    },
+    {
+      "scenario": "LE",
+      "model": "XGB",
+      "target": 0.05,
+      "metric": "uadr",
+      "text": "97.07 ± 0.27"
+    },
+    {
+      "scenario": "LE",
+      "model": "XGB",
+      "target": 0.05,
+      "metric": "fpr",
+      "text": "18.70 ± 0.55"
+    },
+    {
+      "scenario": "LE",
+      "model": "IF",
+      "target": 0.05,
+      "metric": "uadr",
+      "text": "5.29 ± 0.96"
+    },
+    {
+      "scenario": "LE",
+      "model": "IF",
+      "target": 0.05,
+      "metric": "fpr",
+      "text": "6.26 ± 0.29"
+    },
+    {
+      "scenario": "LE",
+      "model": "AE",
+      "target": 0.05,
+      "metric": "uadr",
+      "text": "80.69 ± 2.90"
+    },
+    {
+      "scenario": "LE",
+      "model": "AE",
+      "target": 0.05,
+      "metric": "fpr",
+      "text": "9.01 ± 0.38"
+    },
+    {
+      "scenario": "CS",
+      "model": "RF",
+      "target": 0.01,
+      "metric": "recall",
+      "text": "90.27 ± 0.25"
+    },
+    {
+      "scenario": "CS",
+      "model": "RF",
+      "target": 0.01,
+      "metric": "fpr",
+      "text": "4.21 ± 0.36"
+    },
+    {
+      "scenario": "CS",
+      "model": "RF",
+      "target": 0.05,
+      "metric": "recall",
+      "text": "97.14 ± 0.07"
+    },
+    {
+      "scenario": "CS",
+      "model": "RF",
+      "target": 0.05,
+      "metric": "fpr",
+      "text": "18.57 ± 0.34"
+    },
+    {
+      "scenario": "CS",
+      "model": "IF",
+      "target": 0.01,
+      "metric": "recall",
+      "text": "19.97 ± 1.63"
+    },
+    {
+      "scenario": "CS",
+      "model": "IF",
+      "target": 0.01,
+      "metric": "fpr",
+      "text": "0.78 ± 0.15"
+    },
+    {
+      "scenario": "CS",
+      "model": "IF",
+      "target": 0.05,
+      "metric": "recall",
+      "text": "31.44 ± 2.92"
+    },
+    {
+      "scenario": "CS",
+      "model": "IF",
+      "target": 0.05,
+      "metric": "fpr",
+      "text": "6.15 ± 0.40"
+    }
+  ],
+  "values_derived_from_csv": true,
+  "manual_review": "Awaiting group review; draft only",
+  "updated_on": "2026-10-26"
+}

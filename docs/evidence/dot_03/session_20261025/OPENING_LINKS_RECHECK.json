@@ -1,0 +1,81 @@
+{
+  "checked_on": "2026-10-25",
+  "links": [
+    {
+      "href": "01_Bao_cao/05_Bao_cao_TONG_NHAP.pdf",
+      "status": 200
+    },
+    {
+      "href": "01_Bao_cao/03_Bao_cao_dot_3_NHAP.pdf",
+      "status": 200
+    },
+    {
+      "href": "01_Bao_cao/04_Bao_cao_dot_4_NHAP.pdf",
+      "status": 200
+    },
+    {
+      "href": "01_Bao_cao/01_Bao_cao_dot_1_DA_CHOT.pdf",
+      "status": 200
+    },
+    {
+      "href": "01_Bao_cao/02_Bao_cao_dot_2_DA_CHOT.pdf",
+      "status": 200
+    },
+    {
+      "href": "http://127.0.0.1:4397",
+      "status": 200
+    },
+    {
+      "href": "03_Demo/MO_DEMO.ps1",
+      "status": 200
+    },
+    {
+      "href": "02_Anh_huong_dan/01_Nhom_minh_mo_gi_truoc.png",
+      "status": 200
+    },
+    {
+      "href": "02_Anh_huong_dan/02_Anh_doc_phan_nao.png",
+      "status": 200
+    },
+    {
+      "href": "02_Anh_huong_dan/03_Thu_doc_phan_nao.png",
+      "status": 200
+    },
+    {
+      "href": "02_Anh_huong_dan/04_Tin_thu_demo_nha.png",
+      "status": 200
+    },
+    {
+      "href": "02_Anh_huong_dan/05_Nhom_doc_tu_tu.png",
+      "status": 200
+    },
+    {
+      "href": "02_Anh_huong_dan/Huong_dan_nhom_5_trang.pdf",
+      "status": 200
+    },
+    {
+      "href": "06_Trinh_bay/presentation.html",
+      "status": 200
+    },
+    {
+      "href": "06_Trinh_bay/presentation.pdf",
+      "status": 200
+    },
+    {
+      "href": "06_Trinh_bay/huong_dan_tap_noi/guide.html",
+      "status": 200
+    },
+    {
+      "href": "06_Trinh_bay/huong_dan_tap_noi/guide.pdf",
+      "status": 200
+    },
+    {
+      "href": "07_Ma_nguon/DOC_TRUOC.txt",
+      "status": 200
+    },
+    {
+      "href": "07_Ma_nguon/README.txt",
+      "status": 200
+    }
+  ]
+}

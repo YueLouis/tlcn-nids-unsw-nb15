@@ -1,0 +1,305 @@
+{
+  "case": {
+    "id": "heldout-d",
+    "title": "Giấu DoS khi học",
+    "filename": "heldout-d.csv",
+    "rows": 20,
+    "recommended_scenario": "LD",
+    "purpose": "Dùng bundle LD đã loại DoS khỏi development; chưa phải phát hiện mọi zero-day.",
+    "labels_present": true,
+    "expected_schema_valid": true,
+    "source_record_ids": [
+      247,
+      288,
+      337,
+      339,
+      360,
+      361,
+      362,
+      377,
+      378,
+      416,
+      423,
+      428,
+      430,
+      447,
+      466,
+      467,
+      470,
+      471,
+      476,
+      477
+    ],
+    "sha256": "f53f5aeece3ae0d19396888d9c5ded316ad24dbb73429481cfc992fa80c4dff8",
+    "selection": "Smallest 20 numeric IDs per declared category; mixed uses first 10 of each. Unlabeled removes labels; invalid removes dur. No selection by scores/predictions."
+  },
+  "provenance": {
+    "dataset": "UNSW-NB15",
+    "authors": "Nour Moustafa; Jill Slay",
+    "official_source": "https://research.unsw.edu.au/projects/unsw-nb15-dataset",
+    "declared_mirror": "https://huggingface.co/datasets/Mireu-Lab/UNSW-NB15",
+    "paper_doi": "https://doi.org/10.1109/MilCIS.2015.7348942",
+    "official_page_checked_on": "2026-10-26",
+    "official_download_byte_match": "NOT VERIFIED",
+    "acquisition_limit": "Registry records an official source and a Hugging Face mirror. Exact original download route and byte identity to a newly downloaded UNSW copy have not been established.",
+    "source_file": "UNSW_NB15_testing-set.csv",
+    "source_sha256": "734fe6642edf758f7c94d7d9149426b49d202fe8e7bf0bef47392489c3c0a559",
+    "official_train_rows": 175341,
+    "official_test_rows": 82332,
+    "raw_columns": 45,
+    "input_features": 42,
+    "excluded_metadata": [
+      "id",
+      "label",
+      "attack_cat"
+    ],
+    "local_test_rows_matching_official_train_features": 8541,
+    "limitation": "Lab-generated network traffic, finite historical categories, imbalance and exact feature overlap. This replay is not a live attack, an independent dataset, a prevention system or online learning."
+  },
+  "prediction": {
+    "run_id": "LD-RF-S42",
+    "seed": 42,
+    "target_fpr": 0.05,
+    "threshold": 0.5692461654942863,
+    "rows": 20,
+    "attack_predictions": 20,
+    "normal_predictions": 0,
+    "labeled_rows": 20,
+    "confusion": {
+      "TP": 20,
+      "FP": 0,
+      "TN": 0,
+      "FN": 0
+    },
+    "explanation": {
+      "method": "RF impurity",
+      "description": "Feature có trọng số cao trong mô hình đã học; gộp one-hot về feature gốc.",
+      "limitation": "Importance toàn mô hình, không phải nguyên nhân dự đoán của từng dòng. Không so trực tiếp trọng số RF với XGB.",
+      "features": [
+        {
+          "feature": "sttl",
+          "importance": 0.09649622137004232
+        },
+        {
+          "feature": "ct_state_ttl",
+          "importance": 0.07281297295455269
+        },
+        {
+          "feature": "dload",
+          "importance": 0.05318853248428567
+        },
+        {
+          "feature": "sload",
+          "importance": 0.049535617225539175
+        },
+        {
+          "feature": "rate",
+          "importance": 0.04930829142151882
+        }
+      ]
+    },
+    "note": "Ngưỡng lấy từ Normal validation; kết quả minh họa CSV UNSW-NB15, chưa phải cảm biến mạng trực tiếp.",
+    "results": [
+      {
+        "record_id": "247",
+        "score": 0.9904264324934229,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      },
+      {
+        "record_id": "288",
+        "score": 0.9303112045031713,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      },
+      {
+        "record_id": "337",
+        "score": 0.9819109655105563,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      },
+      {
+        "record_id": "339",
+        "score": 0.8584322560197809,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      },
+      {
+        "record_id": "360",
+        "score": 0.9945882705435334,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      },
+      {
+        "record_id": "361",
+        "score": 0.9945882705435334,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      },
+      {
+        "record_id": "362",
+        "score": 0.9945882705435334,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      },
+      {
+        "record_id": "377",
+        "score": 0.97816889882668,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      },
+      {
+        "record_id": "378",
+        "score": 0.97816889882668,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      },
+      {
+        "record_id": "416",
+        "score": 0.9614914325020476,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      },
+      {
+        "record_id": "423",
+        "score": 0.963823253572184,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      },
+      {
+        "record_id": "428",
+        "score": 0.9926567980595516,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      },
+      {
+        "record_id": "430",
+        "score": 0.9906683266858516,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      },
+      {
+        "record_id": "447",
+        "score": 0.9579732359991662,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      },
+      {
+        "record_id": "466",
+        "score": 0.9999739946456505,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      },
+      {
+        "record_id": "467",
+        "score": 0.9999739946456505,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      },
+      {
+        "record_id": "470",
+        "score": 0.9999739946456505,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      },
+      {
+        "record_id": "471",
+        "score": 0.9999739946456505,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      },
+      {
+        "record_id": "476",
+        "score": 0.9865826501666155,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      },
+      {
+        "record_id": "477",
+        "score": 0.9865826501666155,
+        "threshold": 0.5692461654942863,
+        "prediction": "Attack",
+        "truth": "Attack",
+        "outcome": "TP",
+        "attack_cat": "DoS"
+      }
+    ]
+  },
+  "summary": {
+    "confusion": {
+      "TP": 20,
+      "FP": 0,
+      "TN": 0,
+      "FN": 0
+    },
+    "labeled_rows": 20,
+    "normal_support": 0,
+    "attack_support": 20,
+    "fpr": null,
+    "recall": 1.0,
+    "precision": 1.0,
+    "heldout_class": "DoS",
+    "heldout_support": 20,
+    "uadr": 1.0
+  },
+  "replay_method": "Batch predictions are computed first, then revealed in order for presentation. Replay speed is not model latency or network throughput.",
+  "assessment_scope": "Descriptive results on a preselected demonstration subset, not a new benchmark or independent generalization estimate.",
+  "model_output": "Normal/Attack only; attack_cat is supplied ground truth, never a predicted attack type."
+}

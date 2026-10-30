@@ -1,0 +1,182 @@
+[
+  {
+    "title": "So sánh bốn mô hình phát hiện xâm nhập mạng",
+    "body": "<p class=\"subtitle\">UNSW-NB15 · Closed-set và ba kịch bản LOACO</p>",
+    "note": "Trịnh Trâm Anh · Hoàng Văn Vương Thu · Nguyễn Trọng Tín",
+    "source": "Bản chuẩn bị 25/10/2026 · chờ cả nhóm đọc, sửa và duyệt",
+    "speaker": "Cả nhóm",
+    "say": "Nhóm so sánh hai mô hình học từ Normal và Attack với hai mô hình chỉ học Normal. Bài tập trung vào khả năng phát hiện và số lần báo nhầm trên một benchmark cụ thể.",
+    "cover": true
+  },
+  {
+    "title": "Mình muốn trả lời ba câu hỏi",
+    "body": "<div class=\"grid\"><div class=\"card\"><h3>RQ1 · Nhận ra Attack?</h3><p>Khi các lớp tấn công đều có trong phát triển mô hình, kết quả ra sao?</p></div><div class=\"card\"><h3>RQ2 · Giấu một lớp?</h3><p>Bỏ một attack class khỏi phát triển, rồi đo recall riêng lớp đó (UADR).</p></div><div class=\"card\"><h3>RQ3 · Đổi ngưỡng?</h3><p>Đổi target FPR validation 1% → 5%; xem mức phát hiện và FPR test đổi thế nào.</p></div></div>",
+    "note": "Mỗi câu hỏi gắn với bảng/run cụ thể.",
+    "source": "docs/protocol/RQ_TO_EVIDENCE.md · cách diễn đạt RQ3 theo operating points thực tế",
+    "speaker": "Trâm Anh",
+    "say": "RQ2 giống một bài kiểm tra có một dạng chưa xuất hiện lúc học. Đây là held-out class trong dữ liệu, chưa phải chứng minh phát hiện mọi zero-day ngoài đời.",
+    "cover": false
+  },
+  {
+    "title": "Dữ liệu mình đang dùng",
+    "body": "<div class=\"grid\"><div class=\"card\"><h3>Train · 175,341 dòng</h3><p>Official training subset; chia development train/validation theo từng seed.</p></div><div class=\"card\"><h3>Test · 82,332 dòng</h3><p>37.000 Normal và 45.332 Attack; giữ nguyên để đánh giá.</p></div><div class=\"card\"><h3>42 feature gốc</h3><p>39 numeric; proto, service, state là categorical.</p></div><div class=\"card\"><h3>3 cột chỉ để đối chiếu</h3><p>id, label, attack_cat không đưa vào mô hình.</p></div></div>",
+    "note": "Dữ liệu trùng feature là một giới hạn cần đọc cùng kết quả.",
+    "source": "artifacts/data/data_manifest.json · S03/S13 trong ma trận nguồn",
+    "speaker": "Trâm Anh",
+    "say": "Một dòng là bản ghi flow đã được tổng hợp. Mình không đưa nhãn hay mã ID vào cho mô hình đoán; ba cột đó chỉ dùng truy vết và đánh giá.",
+    "cover": false
+  },
+  {
+    "title": "Từ một dòng CSV đến cảnh báo",
+    "body": "<p class=\"formula\">Feature → tiền xử lý → score → ngưỡng → Normal / Attack</p><ul><li>Fit imputer, scaler và one-hot trên đúng vùng train của mô hình.</li><li>Dùng preprocessor đã lưu cho validation, test và demo.</li><li>Score cao hơn nghĩa là giống Attack/anomaly hơn.</li></ul>",
+    "note": "Cảnh báo cần người kiểm tra tiếp; chưa phải xác nhận đã có sự cố.",
+    "source": "src/nids_benchmark/ · báo cáo tổng Chương 4–5",
+    "speaker": "Trọng Tín",
+    "say": "Tiền xử lý phải học từ train trước rồi dùng lại nguyên trạng. Demo cũng dùng bundle cũ, vì fit lại lúc chạy demo sẽ đổi bài toán mình đã đo.",
+    "cover": false
+  },
+  {
+    "title": "Hai cách học, bốn baseline",
+    "body": "<div class=\"grid\"><div class=\"card\"><h3>RF · Random Forest</h3><p>Nhiều cây bỏ phiếu; fit Normal và Attack đã biết.</p></div><div class=\"card\"><h3>XGB · XGBoost</h3><p>Cây học nối tiếp để giảm lỗi; fit Normal và Attack đã biết.</p></div><div class=\"card\"><h3>IF · Isolation Forest</h3><p>Fit chỉ Normal; dễ bị cô lập hơn thì bất thường hơn.</p></div><div class=\"card\"><h3>AE · Autoencoder</h3><p>Fit chỉ Normal; lỗi tái tạo lớn hơn thì bất thường hơn.</p></div></div>",
+    "note": "Score khác thang giữa các model; không so trực tiếp hai giá trị score.",
+    "source": "Báo cáo tổng Chương 2, 5 · src/nids_benchmark/models.py",
+    "speaker": "Vương Thu",
+    "say": "Học chỉ Normal không tự bảo đảm phát hiện tấn công tốt hơn. Mình phải đọc recall và FPR thực tế, đồng thời nhớ hai họ dùng dữ liệu fit khác nhau.",
+    "cover": false
+  },
+  {
+    "title": "Target 5% đặt ở validation",
+    "body": "<p class=\"formula\">score ≥ ngưỡng ⇒ báo Attack</p><ul><li>Chọn ngưỡng thấp nhất vẫn thỏa ngân sách trên Normal validation.</li><li>Giữ nguyên ngưỡng khi đo test; không chọn lại từ đường PR test.</li><li>Test có thể báo nhầm cao hơn hoặc thấp hơn target.</li></ul>",
+    "note": "Tăng target cho phép nhiều cảnh báo hơn; cần xem cả phần bắt được và báo nhầm.",
+    "source": "src/nids_benchmark/evaluation.py · run.json: threshold_policy",
+    "speaker": "Trọng Tín",
+    "say": "Ví dụ target 5% chỉ nói ngân sách đặt trên validation. Mình không thể nói mô hình sẽ báo nhầm đúng 5% khi đem sang tập test hoặc mạng thực tế.",
+    "cover": false
+  },
+  {
+    "title": "80 lượt chạy, cùng một protocol",
+    "body": "<table><thead><tr><th>Kịch bản</th><th>Lớp bị giữ lại khỏi phát triển</th></tr></thead><tbody><tr><td>CS</td><td>Không giữ lại</td></tr><tr><td>LR</td><td>Reconnaissance</td></tr><tr><td>LD</td><td>DoS</td></tr><tr><td>LE</td><td>Exploits</td></tr></tbody></table><p>4 kịch bản × 4 model × 5 seed = 80 run</p>",
+    "note": "Seed: 42, 52, 62, 72, 82. Mỗi run có hai operating points 1% / 5%.",
+    "source": "docs/protocol/RUN_MATRIX.csv · configs/experiment_matrix.yaml",
+    "speaker": "Trọng Tín",
+    "say": "Bỏ lớp held-out trước khi chia development. Năm seed vẫn dùng cùng official test, nên mean và sample std không phải năm lần kiểm trên năm dữ liệu độc lập.",
+    "cover": false
+  },
+  {
+    "title": "Closed-set: bắt được và báo nhầm",
+    "body": "<table><thead><tr><th>Model</th><th>Recall Attack (%)</th><th>FPR test (%)</th></tr></thead><tbody><tr><td>RF</td><td>97.14 ± 0.07</td><td>18.57 ± 0.34</td></tr><tr><td>XGB</td><td>96.91 ± 0.12</td><td>18.71 ± 0.43</td></tr><tr><td>IF</td><td>31.44 ± 2.92</td><td>6.15 ± 0.40</td></tr><tr><td>AE</td><td>79.40 ± 1.36</td><td>9.16 ± 0.39</td></tr></tbody></table>",
+    "note": "Target validation 5% · mean ± sample std, 5 seed. Support: 45.332 Attack / 37.000 Normal.",
+    "source": "PR_SCORE/OPERATING_POINTS_MEAN_STD.csv · scenario=CS, target_fpr=0.05",
+    "speaker": "Vương Thu",
+    "say": "RF và XGB bắt được nhiều Attack hơn trong phép đo này, đồng thời báo nhầm Normal nhiều hơn. Mình không kết luận thắng tuyệt đối từ một cột recall.",
+    "cover": false
+  },
+  {
+    "title": "LOACO · giấu Reconnaissance",
+    "body": "<table><thead><tr><th>Model</th><th>UADR (%)</th><th>FPR test (%)</th></tr></thead><tbody><tr><td>RF</td><td>97.73 ± 0.30</td><td>18.58 ± 0.24</td></tr><tr><td>XGB</td><td>98.06 ± 0.85</td><td>18.76 ± 0.47</td></tr><tr><td>IF</td><td>0.66 ± 0.26</td><td>6.20 ± 0.43</td></tr><tr><td>AE</td><td>23.82 ± 3.75</td><td>9.07 ± 0.44</td></tr></tbody></table>",
+    "note": "Target validation 5% · mean ± sample std, 5 seed. Held-out: 3,496 mẫu; Normal: 37.000.",
+    "source": "PR_SCORE/OPERATING_POINTS_MEAN_STD.csv · scenario=LR, target_fpr=0.05",
+    "speaker": "Vương Thu",
+    "say": "UADR chỉ đếm Reconnaissance đã bị giấu khỏi phát triển. Khi so hai mô hình, mình đọc kèm FPR test vì chúng không có cùng mức báo nhầm trên test dù target validation giống nhau.",
+    "cover": false
+  },
+  {
+    "title": "LOACO · giấu DoS",
+    "body": "<table><thead><tr><th>Model</th><th>UADR (%)</th><th>FPR test (%)</th></tr></thead><tbody><tr><td>RF</td><td>99.81 ± 0.03</td><td>18.75 ± 0.35</td></tr><tr><td>XGB</td><td>99.33 ± 0.18</td><td>18.41 ± 0.55</td></tr><tr><td>IF</td><td>4.21 ± 0.99</td><td>6.11 ± 0.23</td></tr><tr><td>AE</td><td>88.38 ± 1.12</td><td>9.11 ± 0.39</td></tr></tbody></table>",
+    "note": "Target validation 5% · mean ± sample std, 5 seed. Held-out: 4,089 mẫu; Normal: 37.000.",
+    "source": "PR_SCORE/OPERATING_POINTS_MEAN_STD.csv · scenario=LD, target_fpr=0.05",
+    "speaker": "Vương Thu",
+    "say": "UADR chỉ đếm DoS đã bị giấu khỏi phát triển. Khi so hai mô hình, mình đọc kèm FPR test vì chúng không có cùng mức báo nhầm trên test dù target validation giống nhau.",
+    "cover": false
+  },
+  {
+    "title": "LOACO · giấu Exploits",
+    "body": "<table><thead><tr><th>Model</th><th>UADR (%)</th><th>FPR test (%)</th></tr></thead><tbody><tr><td>RF</td><td>97.06 ± 0.57</td><td>18.32 ± 0.82</td></tr><tr><td>XGB</td><td>97.07 ± 0.27</td><td>18.70 ± 0.55</td></tr><tr><td>IF</td><td>5.29 ± 0.96</td><td>6.26 ± 0.29</td></tr><tr><td>AE</td><td>80.69 ± 2.90</td><td>9.01 ± 0.38</td></tr></tbody></table>",
+    "note": "Target validation 5% · mean ± sample std, 5 seed. Held-out: 11,132 mẫu; Normal: 37.000.",
+    "source": "PR_SCORE/OPERATING_POINTS_MEAN_STD.csv · scenario=LE, target_fpr=0.05",
+    "speaker": "Vương Thu",
+    "say": "UADR chỉ đếm Exploits đã bị giấu khỏi phát triển. Khi so hai mô hình, mình đọc kèm FPR test vì chúng không có cùng mức báo nhầm trên test dù target validation giống nhau.",
+    "cover": false
+  },
+  {
+    "title": "Đổi target: được gì, đổi lại gì?",
+    "body": "<table><thead><tr><th>Model · target val.</th><th>Recall (%)</th><th>FPR test (%)</th></tr></thead><tbody><tr><td>RF · 1%</td><td>90.27 ± 0.25</td><td>4.21 ± 0.36</td></tr><tr><td>RF · 5%</td><td>97.14 ± 0.07</td><td>18.57 ± 0.34</td></tr><tr><td>IF · 1%</td><td>19.97 ± 1.63</td><td>0.78 ± 0.15</td></tr><tr><td>IF · 5%</td><td>31.44 ± 2.92</td><td>6.15 ± 0.40</td></tr></tbody></table>",
+    "note": "CS · mean ± sample std, 5 seed; support như slide closed-set. Cùng target chưa phải cùng FPR test.",
+    "source": "PR_SCORE/OPERATING_POINTS_MEAN_STD.csv · CS, RF/IF, target=0.01/0.05",
+    "speaker": "Vương Thu",
+    "say": "Khi cho ngân sách lớn hơn, ngưỡng giảm nên recall và FPR đều có thể tăng. Đây là trade-off; kết quả không xác định model thắng ở một FPR test đã được ghép bằng nhau.",
+    "cover": false
+  },
+  {
+    "title": "AP cao toàn test vẫn có chỗ khó",
+    "body": "<table><thead><tr><th>Model</th><th>AP toàn test</th><th>AP Normal/held-out</th></tr></thead><tbody><tr><td>RF</td><td>0.9852 ± 0.0003</td><td>0.7077 ± 0.0173</td></tr><tr><td>XGB</td><td>0.9852 ± 0.0004</td><td>0.6623 ± 0.0357</td></tr></tbody></table>",
+    "note": "LR · 5 seed. Toàn test: 82.332 mẫu; Normal/held-out: 40.496 mẫu (3.496 held-out). Khác prevalence.",
+    "source": "PR_SCORE/AP_MEAN_STD.csv · LR. AP=average_precision_score; khử bản sao hai target.",
+    "speaker": "Vương Thu",
+    "say": "Toàn test có cả attack đã biết. Khi chỉ giữ Normal và Reconnaissance, AP thấp hơn; điều này giúp thấy phép đo tổng có thể che phần khó. AP không phụ thuộc một threshold cụ thể.",
+    "cover": false
+  },
+  {
+    "title": "Đọc kết quả cùng giới hạn overlap",
+    "body": "<div class=\"grid\"><div class=\"card\"><h3>Matched là gì?</h3><p>42 feature raw trùng chính xác một vector trong tập fit thực tế của model.</p></div><div class=\"card\"><h3>LR / RF · held-out unmatched</h3><p>UADR 97.56 ± 0.32% · 3,249–3,266 mẫu qua 5 seed; target validation 5%.</p></div></div>",
+    "note": "Phân tích hậu nghiệm. Không xóa overlap, không retrain; chưa chứng minh quan hệ nhân quả.",
+    "source": "OVERLAP/OVERLAP_MEAN_STD.csv · fit theo model/seed; IF/AE không có held-out matched.",
+    "speaker": "Trâm Anh",
+    "say": "RF vẫn bắt được nhiều held-out ở nhóm không exact match. Tuy vậy unmatched chưa bảo đảm dữ liệu độc lập hoàn toàn; các tương đồng khác vẫn có thể tồn tại. UADR matched IF/AE thiếu mẫu nên không xác định, không phải bằng 0.",
+    "cover": false
+  },
+  {
+    "title": "Feature nào được model sử dụng nhiều?",
+    "body": "<table><thead><tr><th>Model · CS</th><th>Ba feature đứng đầu theo mean importance</th></tr></thead><tbody><tr><td>RF</td><td>sttl, ct_state_ttl, sload</td></tr><tr><td>XGB</td><td>sttl, proto, ct_state_ttl</td></tr></tbody></table>",
+    "note": "5 seed. RF: giảm impurity; XGB: gain; gộp one-hot về feature gốc.",
+    "source": "FEATURES/FEATURE_IMPORTANCE_MEAN_STD.csv · importance mô tả, không là nguyên nhân.",
+    "speaker": "Trâm Anh",
+    "say": "Hai model có hai định nghĩa importance khác nhau. Bảng cho biết vai trò tương đối trong model đã học, chưa giải thích nguyên nhân một dòng bị dự đoán sai và chưa chứng minh quan hệ nhân quả.",
+    "cover": false
+  },
+  {
+    "title": "Một FP và một FN để tự giải thích",
+    "body": "<table><thead><tr><th>Model</th><th>ID</th><th>Lỗi</th><th>Score</th><th>Ngưỡng</th></tr></thead><tbody><tr><td>RF</td><td>1</td><td>FP</td><td>0.705741</td><td>0.557282</td></tr><tr><td>IF</td><td>38</td><td>FP</td><td>0.018721</td><td>0.007771</td></tr><tr><td>IF</td><td>244</td><td>FN</td><td>-0.059887</td><td>0.007771</td></tr><tr><td>RF</td><td>278</td><td>FN</td><td>0.429308</td><td>0.557282</td></tr></tbody></table>",
+    "note": "CS · seed 42 · target validation 5%. FP: Normal báo Attack; FN: Attack báo Normal.",
+    "source": "ERROR_EXAMPLES_CS_S42.csv · ID nhỏ nhất mỗi nhóm RF/IF FP/FN; ví dụ không đại diện mọi lỗi.",
+    "speaker": "Vương Thu",
+    "say": "Đọc nhãn thật trước, rồi so score với ngưỡng. RF ID 1 là Normal nhưng vượt ngưỡng nên FP; IF ID 244 là Reconnaissance nhưng dưới ngưỡng nên FN. Không so score của RF với score của IF.",
+    "cover": false
+  },
+  {
+    "title": "Demo: dùng lại mô hình đã lưu",
+    "body": "<ul><li>Dùng 100 dòng mẫu → chọn CS / RF / 5% → chạy.</li><li>Xem score, ngưỡng, FP/FN; đổi một lựa chọn mỗi lần.</li><li>Tải CSV để đối chiếu; mẫu giúp giải thích luồng suy luận.</li></ul>",
+    "note": "16 bundle seed 42 · kiểm 32 trường hợp, 3.200 nhãn dự đoán. CSV, chưa bắt gói mạng trực tiếp.",
+    "source": "DEMO/DEMO_AUDIT.json · max lệch score 2,20e−7 < 1e−6; nhãn/ngưỡng khớp baseline.",
+    "speaker": "Trọng Tín",
+    "say": "Mẫu chọn 10 ID nhỏ nhất mỗi category, không lấy tỷ lệ đúng của mẫu làm thành tích nghiên cứu. Máy khác cần cài đúng môi trường; số kiểm kỹ thuật không chứng minh model hiệu quả ngoài thực tế.",
+    "cover": false
+  },
+  {
+    "title": "Kết luận cần giữ đúng phạm vi",
+    "body": "<ul><li>Một official split UNSW-NB15; ba lớp held-out hữu hạn.</li><li>FPR validation và FPR test khác nhau; năm seed dùng cùng test.</li><li>Overlap, prevalence và vùng fit ảnh hưởng cách so sánh.</li><li>Chưa đo live traffic, độ trễ hoặc dataset ngoài; S07 mới dùng abstract.</li></ul>",
+    "note": "Không khẳng định phát hiện mọi zero-day hoặc sẵn sàng triển khai vận hành.",
+    "source": "Báo cáo tổng Chương 3, 7–9 · ma trận nguồn S07 và S12",
+    "speaker": "Trâm Anh",
+    "say": "Điểm mạnh của bài là protocol chung, trace được số liệu và giải thích giới hạn. Muốn kết luận rộng hơn cần thiết kế đánh giá độc lập, chứ chưa thể suy ra từ bộ test hiện tại.",
+    "cover": false
+  },
+  {
+    "title": "Điều bài nghiên cứu cho thấy",
+    "body": "<div class=\"grid\"><div class=\"card\"><h3>RQ1</h3><p>Trong CS, RF/XGB có recall cao hơn và FPR test cũng cao hơn trong cấu hình đã đo.</p></div><div class=\"card\"><h3>RQ2</h3><p>UADR thay đổi theo lớp held-out; anomaly detection không luôn tốt hơn supervised.</p></div><div class=\"card\"><h3>RQ3</h3><p>Tăng target validation làm đổi trade-off; không giữ cố định được FPR test.</p></div></div>",
+    "note": "Báo cáo, CSV và demo cùng dùng 80 run đã khóa; không chọn lại ngưỡng từ test.",
+    "source": "Bảng điểm vận hành/AP/overlap và các run ID đã chỉ ở từng slide",
+    "speaker": "Cả nhóm",
+    "say": "Nhóm không chỉ chọn một model thắng. Nhóm chỉ ra điều kiện so sánh và trade-off, có artifact để kiểm lại, cùng những điều kết quả chưa chứng minh được.",
+    "cover": false
+  },
+  {
+    "title": "Cả nhóm đọc dần theo phần này",
+    "body": "<div class=\"grid\"><div class=\"card\"><h3>Anh · dữ liệu / nguồn</h3><p>Báo cáo tổng Chương 3, overlap Chương 7, nguồn. Kiểm một bảng và nguồn đi kèm.</p></div><div class=\"card\"><h3>Thu · kết quả / lỗi</h3><p>Chương 6–7 và ví dụ Chương 8. Giải thích một FP, một FN và trade-off.</p></div><div class=\"card\"><h3>Tín · protocol / demo</h3><p>Chương 4–5 và 8. Tự chạy demo, gom góp ý để sửa một bản chung.</p></div></div>",
+    "note": "Nhắn: “Mình xem trang…, hiểu là…, muốn sửa / hỏi…”. Online trước, rảnh thì cùng ra quán.",
+    "source": "Phần nói là gợi ý để tập; chưa ghi nhận đã đọc, đã làm hoặc đã review thay ai.",
+    "speaker": "Cả nhóm",
+    "say": "Mỗi bạn không cần đọc cả bộ trong một buổi. Bắt đầu đúng phần rồi giải thích lại bằng lời mình; phần nào chưa hiểu thì ghi lại để cùng xử lý.",
+    "cover": false
+  }
+]

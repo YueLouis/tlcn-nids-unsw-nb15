@@ -1,0 +1,10 @@
+{
+  "checked_on": "2026-10-25",
+  "portable_directory_inference": true,
+  "comparison_models": 4,
+  "scenarios": 4,
+  "targets": 2,
+  "rows_checked": 3200,
+  "passed": true,
+  "scope": "Existing machine libraries, not a clean-machine install"
+}

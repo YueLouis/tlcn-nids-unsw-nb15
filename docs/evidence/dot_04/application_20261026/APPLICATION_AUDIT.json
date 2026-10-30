@@ -1,0 +1,1474 @@
+{
+  "checked_on": "2026-10-26",
+  "cases": 8,
+  "fixture_rows_checked": 202,
+  "fixture_values_match_raw": true,
+  "successful_cases": 56,
+  "predictions_checked": 1600,
+  "invalid_schema_rejections": 8,
+  "max_abs_score_diff": 0.00021581001237791497,
+  "max_relative_score_diff": 1.429567869125725e-05,
+  "atol": 1e-06,
+  "rtol": 1e-06,
+  "numerical_limit": "Float32 AE scores can differ with batch size, especially large reconstruction MSE; labels must match exactly and scores satisfy abs_diff <= atol + rtol*abs(reference). This is a different expanded-sample check from the earlier absolute-only 100-row demo audit.",
+  "no_training_or_threshold_selection": true,
+  "scope": "Replay subsets of existing official test; not independent test data or live traffic",
+  "checks": [
+    {
+      "case": "normal",
+      "model": "RF",
+      "scenario": "CS",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 3.3306690738754696e-16,
+      "max_relative_score_diff": 4.935358096192159e-16,
+      "summary": {
+        "confusion": {
+          "TP": 0,
+          "FP": 1,
+          "TN": 19,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 20,
+        "attack_support": 0,
+        "fpr": 0.05,
+        "recall": null,
+        "precision": 0.0,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "normal",
+      "model": "RF",
+      "scenario": "CS",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 4.440892098500626e-16,
+      "max_relative_score_diff": 7.494100148950345e-16,
+      "summary": {
+        "confusion": {
+          "TP": 0,
+          "FP": 16,
+          "TN": 4,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 20,
+        "attack_support": 0,
+        "fpr": 0.8,
+        "recall": null,
+        "precision": 0.0,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "normal",
+      "model": "XGB",
+      "scenario": "CS",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 0,
+          "FP": 3,
+          "TN": 17,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 20,
+        "attack_support": 0,
+        "fpr": 0.15,
+        "recall": null,
+        "precision": 0.0,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "normal",
+      "model": "XGB",
+      "scenario": "CS",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 0,
+          "FP": 16,
+          "TN": 4,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 20,
+        "attack_support": 0,
+        "fpr": 0.8,
+        "recall": null,
+        "precision": 0.0,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "normal",
+      "model": "IF",
+      "scenario": "CS",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 20,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 20,
+        "attack_support": 0,
+        "fpr": 0.0,
+        "recall": null,
+        "precision": null,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "normal",
+      "model": "IF",
+      "scenario": "CS",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 20,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 20,
+        "attack_support": 0,
+        "fpr": 0.0,
+        "recall": null,
+        "precision": null,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "normal",
+      "model": "AE",
+      "scenario": "CS",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 2.964297013928474e-08,
+      "max_relative_score_diff": 3.753280024901288e-06,
+      "summary": {
+        "confusion": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 20,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 20,
+        "attack_support": 0,
+        "fpr": 0.0,
+        "recall": null,
+        "precision": null,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "normal",
+      "model": "AE",
+      "scenario": "CS",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 2.964297013928474e-08,
+      "max_relative_score_diff": 3.753280024901288e-06,
+      "summary": {
+        "confusion": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 20,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 20,
+        "attack_support": 0,
+        "fpr": 0.0,
+        "recall": null,
+        "precision": null,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "known",
+      "model": "RF",
+      "scenario": "CS",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 2.220446049250313e-16,
+      "max_relative_score_diff": 2.3716745364603196e-16,
+      "summary": {
+        "confusion": {
+          "TP": 20,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 1.0,
+        "precision": 1.0,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "known",
+      "model": "RF",
+      "scenario": "CS",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 1.1102230246251565e-16,
+      "max_relative_score_diff": 1.1858372682301598e-16,
+      "summary": {
+        "confusion": {
+          "TP": 20,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 1.0,
+        "precision": 1.0,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "known",
+      "model": "XGB",
+      "scenario": "CS",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 20,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 1.0,
+        "precision": 1.0,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "known",
+      "model": "XGB",
+      "scenario": "CS",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 20,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 1.0,
+        "precision": 1.0,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "known",
+      "model": "IF",
+      "scenario": "CS",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 10,
+          "FP": 0,
+          "TN": 0,
+          "FN": 10
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.5,
+        "precision": 1.0,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "known",
+      "model": "IF",
+      "scenario": "CS",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 18,
+          "FP": 0,
+          "TN": 0,
+          "FN": 2
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.9,
+        "precision": 1.0,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "known",
+      "model": "AE",
+      "scenario": "CS",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 2.7507885186350833e-07,
+      "max_relative_score_diff": 9.327515610397301e-07,
+      "summary": {
+        "confusion": {
+          "TP": 20,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 1.0,
+        "precision": 1.0,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "known",
+      "model": "AE",
+      "scenario": "CS",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 2.7507885186350833e-07,
+      "max_relative_score_diff": 9.327515610397301e-07,
+      "summary": {
+        "confusion": {
+          "TP": 20,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 1.0,
+        "precision": 1.0,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "mixed",
+      "model": "RF",
+      "scenario": "CS",
+      "target_fpr": 0.01,
+      "rows": 50,
+      "max_abs_score_diff": 2.220446049250313e-16,
+      "max_relative_score_diff": 2.2474026313536344e-16,
+      "summary": {
+        "confusion": {
+          "TP": 39,
+          "FP": 0,
+          "TN": 10,
+          "FN": 1
+        },
+        "labeled_rows": 50,
+        "normal_support": 10,
+        "attack_support": 40,
+        "fpr": 0.0,
+        "recall": 0.975,
+        "precision": 1.0,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "mixed",
+      "model": "RF",
+      "scenario": "CS",
+      "target_fpr": 0.05,
+      "rows": 50,
+      "max_abs_score_diff": 2.220446049250313e-16,
+      "max_relative_score_diff": 2.4145035578121896e-16,
+      "summary": {
+        "confusion": {
+          "TP": 40,
+          "FP": 8,
+          "TN": 2,
+          "FN": 0
+        },
+        "labeled_rows": 50,
+        "normal_support": 10,
+        "attack_support": 40,
+        "fpr": 0.8,
+        "recall": 1.0,
+        "precision": 0.8333333333333334,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "mixed",
+      "model": "XGB",
+      "scenario": "CS",
+      "target_fpr": 0.01,
+      "rows": 50,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 39,
+          "FP": 1,
+          "TN": 9,
+          "FN": 1
+        },
+        "labeled_rows": 50,
+        "normal_support": 10,
+        "attack_support": 40,
+        "fpr": 0.1,
+        "recall": 0.975,
+        "precision": 0.975,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "mixed",
+      "model": "XGB",
+      "scenario": "CS",
+      "target_fpr": 0.05,
+      "rows": 50,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 39,
+          "FP": 8,
+          "TN": 2,
+          "FN": 1
+        },
+        "labeled_rows": 50,
+        "normal_support": 10,
+        "attack_support": 40,
+        "fpr": 0.8,
+        "recall": 0.975,
+        "precision": 0.8297872340425532,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "mixed",
+      "model": "IF",
+      "scenario": "CS",
+      "target_fpr": 0.01,
+      "rows": 50,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 6,
+          "FP": 0,
+          "TN": 10,
+          "FN": 34
+        },
+        "labeled_rows": 50,
+        "normal_support": 10,
+        "attack_support": 40,
+        "fpr": 0.0,
+        "recall": 0.15,
+        "precision": 1.0,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "mixed",
+      "model": "IF",
+      "scenario": "CS",
+      "target_fpr": 0.05,
+      "rows": 50,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 9,
+          "FP": 0,
+          "TN": 10,
+          "FN": 31
+        },
+        "labeled_rows": 50,
+        "normal_support": 10,
+        "attack_support": 40,
+        "fpr": 0.0,
+        "recall": 0.225,
+        "precision": 1.0,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "mixed",
+      "model": "AE",
+      "scenario": "CS",
+      "target_fpr": 0.01,
+      "rows": 50,
+      "max_abs_score_diff": 2.7507885186350833e-07,
+      "max_relative_score_diff": 8.868605451375494e-06,
+      "summary": {
+        "confusion": {
+          "TP": 22,
+          "FP": 0,
+          "TN": 10,
+          "FN": 18
+        },
+        "labeled_rows": 50,
+        "normal_support": 10,
+        "attack_support": 40,
+        "fpr": 0.0,
+        "recall": 0.55,
+        "precision": 1.0,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "mixed",
+      "model": "AE",
+      "scenario": "CS",
+      "target_fpr": 0.05,
+      "rows": 50,
+      "max_abs_score_diff": 2.7507885186350833e-07,
+      "max_relative_score_diff": 8.868605451375494e-06,
+      "summary": {
+        "confusion": {
+          "TP": 25,
+          "FP": 0,
+          "TN": 10,
+          "FN": 15
+        },
+        "labeled_rows": 50,
+        "normal_support": 10,
+        "attack_support": 40,
+        "fpr": 0.0,
+        "recall": 0.625,
+        "precision": 1.0,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "heldout-r",
+      "model": "RF",
+      "scenario": "LR",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 3.3306690738754696e-16,
+      "max_relative_score_diff": 4.1005532130274926e-16,
+      "summary": {
+        "confusion": {
+          "TP": 14,
+          "FP": 0,
+          "TN": 0,
+          "FN": 6
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.7,
+        "precision": 1.0,
+        "heldout_class": "Reconnaissance",
+        "heldout_support": 20,
+        "uadr": 0.7
+      }
+    },
+    {
+      "case": "heldout-r",
+      "model": "RF",
+      "scenario": "LR",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 2.220446049250313e-16,
+      "max_relative_score_diff": 2.973295387977965e-16,
+      "summary": {
+        "confusion": {
+          "TP": 20,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 1.0,
+        "precision": 1.0,
+        "heldout_class": "Reconnaissance",
+        "heldout_support": 20,
+        "uadr": 1.0
+      }
+    },
+    {
+      "case": "heldout-r",
+      "model": "XGB",
+      "scenario": "LR",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 12,
+          "FP": 0,
+          "TN": 0,
+          "FN": 8
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.6,
+        "precision": 1.0,
+        "heldout_class": "Reconnaissance",
+        "heldout_support": 20,
+        "uadr": 0.6
+      }
+    },
+    {
+      "case": "heldout-r",
+      "model": "XGB",
+      "scenario": "LR",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 20,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 1.0,
+        "precision": 1.0,
+        "heldout_class": "Reconnaissance",
+        "heldout_support": 20,
+        "uadr": 1.0
+      }
+    },
+    {
+      "case": "heldout-r",
+      "model": "IF",
+      "scenario": "LR",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 0,
+          "FN": 20
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.0,
+        "precision": null,
+        "heldout_class": "Reconnaissance",
+        "heldout_support": 20,
+        "uadr": 0.0
+      }
+    },
+    {
+      "case": "heldout-r",
+      "model": "IF",
+      "scenario": "LR",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 0,
+          "FN": 20
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.0,
+        "precision": null,
+        "heldout_class": "Reconnaissance",
+        "heldout_support": 20,
+        "uadr": 0.0
+      }
+    },
+    {
+      "case": "heldout-r",
+      "model": "AE",
+      "scenario": "LR",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 1.9866531777296137e-08,
+      "max_relative_score_diff": 1.429567869125725e-05,
+      "summary": {
+        "confusion": {
+          "TP": 2,
+          "FP": 0,
+          "TN": 0,
+          "FN": 18
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.1,
+        "precision": 1.0,
+        "heldout_class": "Reconnaissance",
+        "heldout_support": 20,
+        "uadr": 0.1
+      }
+    },
+    {
+      "case": "heldout-r",
+      "model": "AE",
+      "scenario": "LR",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 1.9866531777296137e-08,
+      "max_relative_score_diff": 1.429567869125725e-05,
+      "summary": {
+        "confusion": {
+          "TP": 6,
+          "FP": 0,
+          "TN": 0,
+          "FN": 14
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.3,
+        "precision": 1.0,
+        "heldout_class": "Reconnaissance",
+        "heldout_support": 20,
+        "uadr": 0.3
+      }
+    },
+    {
+      "case": "heldout-d",
+      "model": "RF",
+      "scenario": "LD",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 2.220446049250313e-16,
+      "max_relative_score_diff": 2.2325278861743056e-16,
+      "summary": {
+        "confusion": {
+          "TP": 20,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 1.0,
+        "precision": 1.0,
+        "heldout_class": "DoS",
+        "heldout_support": 20,
+        "uadr": 1.0
+      }
+    },
+    {
+      "case": "heldout-d",
+      "model": "RF",
+      "scenario": "LD",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 2.220446049250313e-16,
+      "max_relative_score_diff": 2.386777713202038e-16,
+      "summary": {
+        "confusion": {
+          "TP": 20,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 1.0,
+        "precision": 1.0,
+        "heldout_class": "DoS",
+        "heldout_support": 20,
+        "uadr": 1.0
+      }
+    },
+    {
+      "case": "heldout-d",
+      "model": "XGB",
+      "scenario": "LD",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 20,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 1.0,
+        "precision": 1.0,
+        "heldout_class": "DoS",
+        "heldout_support": 20,
+        "uadr": 1.0
+      }
+    },
+    {
+      "case": "heldout-d",
+      "model": "XGB",
+      "scenario": "LD",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 20,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 1.0,
+        "precision": 1.0,
+        "heldout_class": "DoS",
+        "heldout_support": 20,
+        "uadr": 1.0
+      }
+    },
+    {
+      "case": "heldout-d",
+      "model": "IF",
+      "scenario": "LD",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 1,
+          "FP": 0,
+          "TN": 0,
+          "FN": 19
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.05,
+        "precision": 1.0,
+        "heldout_class": "DoS",
+        "heldout_support": 20,
+        "uadr": 0.05
+      }
+    },
+    {
+      "case": "heldout-d",
+      "model": "IF",
+      "scenario": "LD",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 1,
+          "FP": 0,
+          "TN": 0,
+          "FN": 19
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.05,
+        "precision": 1.0,
+        "heldout_class": "DoS",
+        "heldout_support": 20,
+        "uadr": 0.05
+      }
+    },
+    {
+      "case": "heldout-d",
+      "model": "AE",
+      "scenario": "LD",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 0.00021581001237791497,
+      "max_relative_score_diff": 1.0433799101214935e-06,
+      "summary": {
+        "confusion": {
+          "TP": 11,
+          "FP": 0,
+          "TN": 0,
+          "FN": 9
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.55,
+        "precision": 1.0,
+        "heldout_class": "DoS",
+        "heldout_support": 20,
+        "uadr": 0.55
+      }
+    },
+    {
+      "case": "heldout-d",
+      "model": "AE",
+      "scenario": "LD",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 0.00021581001237791497,
+      "max_relative_score_diff": 1.0433799101214935e-06,
+      "summary": {
+        "confusion": {
+          "TP": 15,
+          "FP": 0,
+          "TN": 0,
+          "FN": 5
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.75,
+        "precision": 1.0,
+        "heldout_class": "DoS",
+        "heldout_support": 20,
+        "uadr": 0.75
+      }
+    },
+    {
+      "case": "heldout-e",
+      "model": "RF",
+      "scenario": "LE",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 3.3306690738754696e-16,
+      "max_relative_score_diff": 3.6148702840909285e-16,
+      "summary": {
+        "confusion": {
+          "TP": 16,
+          "FP": 0,
+          "TN": 0,
+          "FN": 4
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.8,
+        "precision": 1.0,
+        "heldout_class": "Exploits",
+        "heldout_support": 20,
+        "uadr": 0.8
+      }
+    },
+    {
+      "case": "heldout-e",
+      "model": "RF",
+      "scenario": "LE",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 2.220446049250313e-16,
+      "max_relative_score_diff": 2.4099135227272853e-16,
+      "summary": {
+        "confusion": {
+          "TP": 19,
+          "FP": 0,
+          "TN": 0,
+          "FN": 1
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.95,
+        "precision": 1.0,
+        "heldout_class": "Exploits",
+        "heldout_support": 20,
+        "uadr": 0.95
+      }
+    },
+    {
+      "case": "heldout-e",
+      "model": "XGB",
+      "scenario": "LE",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 18,
+          "FP": 0,
+          "TN": 0,
+          "FN": 2
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.9,
+        "precision": 1.0,
+        "heldout_class": "Exploits",
+        "heldout_support": 20,
+        "uadr": 0.9
+      }
+    },
+    {
+      "case": "heldout-e",
+      "model": "XGB",
+      "scenario": "LE",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 19,
+          "FP": 0,
+          "TN": 0,
+          "FN": 1
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.95,
+        "precision": 1.0,
+        "heldout_class": "Exploits",
+        "heldout_support": 20,
+        "uadr": 0.95
+      }
+    },
+    {
+      "case": "heldout-e",
+      "model": "IF",
+      "scenario": "LE",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 1,
+          "FP": 0,
+          "TN": 0,
+          "FN": 19
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.05,
+        "precision": 1.0,
+        "heldout_class": "Exploits",
+        "heldout_support": 20,
+        "uadr": 0.05
+      }
+    },
+    {
+      "case": "heldout-e",
+      "model": "IF",
+      "scenario": "LE",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 1,
+          "FP": 0,
+          "TN": 0,
+          "FN": 19
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.05,
+        "precision": 1.0,
+        "heldout_class": "Exploits",
+        "heldout_support": 20,
+        "uadr": 0.05
+      }
+    },
+    {
+      "case": "heldout-e",
+      "model": "AE",
+      "scenario": "LE",
+      "target_fpr": 0.01,
+      "rows": 20,
+      "max_abs_score_diff": 7.592608186612892e-08,
+      "max_relative_score_diff": 6.212854519833135e-07,
+      "summary": {
+        "confusion": {
+          "TP": 11,
+          "FP": 0,
+          "TN": 0,
+          "FN": 9
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.55,
+        "precision": 1.0,
+        "heldout_class": "Exploits",
+        "heldout_support": 20,
+        "uadr": 0.55
+      }
+    },
+    {
+      "case": "heldout-e",
+      "model": "AE",
+      "scenario": "LE",
+      "target_fpr": 0.05,
+      "rows": 20,
+      "max_abs_score_diff": 7.592608186612892e-08,
+      "max_relative_score_diff": 6.212854519833135e-07,
+      "summary": {
+        "confusion": {
+          "TP": 14,
+          "FP": 0,
+          "TN": 0,
+          "FN": 6
+        },
+        "labeled_rows": 20,
+        "normal_support": 0,
+        "attack_support": 20,
+        "fpr": null,
+        "recall": 0.7,
+        "precision": 1.0,
+        "heldout_class": "Exploits",
+        "heldout_support": 20,
+        "uadr": 0.7
+      }
+    },
+    {
+      "case": "unlabeled",
+      "model": "RF",
+      "scenario": "CS",
+      "target_fpr": 0.01,
+      "rows": 50,
+      "max_abs_score_diff": 4.440892098500626e-16,
+      "max_relative_score_diff": 4.494805262707269e-16,
+      "summary": {
+        "confusion": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 0,
+        "normal_support": 0,
+        "attack_support": 0,
+        "fpr": null,
+        "recall": null,
+        "precision": null,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "unlabeled",
+      "model": "RF",
+      "scenario": "CS",
+      "target_fpr": 0.05,
+      "rows": 50,
+      "max_abs_score_diff": 2.220446049250313e-16,
+      "max_relative_score_diff": 3.3616579183816613e-16,
+      "summary": {
+        "confusion": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 0,
+        "normal_support": 0,
+        "attack_support": 0,
+        "fpr": null,
+        "recall": null,
+        "precision": null,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "unlabeled",
+      "model": "XGB",
+      "scenario": "CS",
+      "target_fpr": 0.01,
+      "rows": 50,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 0,
+        "normal_support": 0,
+        "attack_support": 0,
+        "fpr": null,
+        "recall": null,
+        "precision": null,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "unlabeled",
+      "model": "XGB",
+      "scenario": "CS",
+      "target_fpr": 0.05,
+      "rows": 50,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 0,
+        "normal_support": 0,
+        "attack_support": 0,
+        "fpr": null,
+        "recall": null,
+        "precision": null,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "unlabeled",
+      "model": "IF",
+      "scenario": "CS",
+      "target_fpr": 0.01,
+      "rows": 50,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 0,
+        "normal_support": 0,
+        "attack_support": 0,
+        "fpr": null,
+        "recall": null,
+        "precision": null,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "unlabeled",
+      "model": "IF",
+      "scenario": "CS",
+      "target_fpr": 0.05,
+      "rows": 50,
+      "max_abs_score_diff": 0.0,
+      "max_relative_score_diff": 0.0,
+      "summary": {
+        "confusion": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 0,
+        "normal_support": 0,
+        "attack_support": 0,
+        "fpr": null,
+        "recall": null,
+        "precision": null,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "unlabeled",
+      "model": "AE",
+      "scenario": "CS",
+      "target_fpr": 0.01,
+      "rows": 50,
+      "max_abs_score_diff": 2.7507885186350833e-07,
+      "max_relative_score_diff": 8.868605451375494e-06,
+      "summary": {
+        "confusion": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 0,
+        "normal_support": 0,
+        "attack_support": 0,
+        "fpr": null,
+        "recall": null,
+        "precision": null,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    },
+    {
+      "case": "unlabeled",
+      "model": "AE",
+      "scenario": "CS",
+      "target_fpr": 0.05,
+      "rows": 50,
+      "max_abs_score_diff": 2.7507885186350833e-07,
+      "max_relative_score_diff": 8.868605451375494e-06,
+      "summary": {
+        "confusion": {
+          "TP": 0,
+          "FP": 0,
+          "TN": 0,
+          "FN": 0
+        },
+        "labeled_rows": 0,
+        "normal_support": 0,
+        "attack_support": 0,
+        "fpr": null,
+        "recall": null,
+        "precision": null,
+        "heldout_class": null,
+        "heldout_support": 0,
+        "uadr": null
+      }
+    }
+  ]
+}

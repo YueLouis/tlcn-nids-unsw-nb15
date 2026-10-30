@@ -1,0 +1,71 @@
+{
+  "checked_on": "2026-10-27",
+  "scope": "Preparation complete, drafts awaiting group reading/revision; not submitted or academically approved",
+  "reports": [
+    {
+      "kind": "dot1",
+      "pages": 20,
+      "sha256": "8a9b77a5cc9c120f6a0d3c603ad69d6eb75a53ef8281ef21f58a754f24739ae6"
+    },
+    {
+      "kind": "dot2",
+      "pages": 37,
+      "sha256": "edafd81b6d4373fdae40c3086569254130a3148840fd37e026acba93c8a7c0dd"
+    },
+    {
+      "kind": "dot3",
+      "pages": 59,
+      "sha256": "42be0710249f41f54cfd3def9eaf3c81fe967d4a7b2206b0c418553049d8b972"
+    },
+    {
+      "kind": "dot4",
+      "pages": 63,
+      "sha256": "46b16ae5b87e7040e3be7c5b65eccc64cc162b1511e260826389d44ac3b48511"
+    },
+    {
+      "kind": "tong",
+      "pages": 57,
+      "sha256": "ec1db87d6265293a697a8254dc43ecb9c81a56b44c4068d6d21c1bd216eb9ccc"
+    }
+  ],
+  "slides": 20,
+  "guide_pages": 9,
+  "guidance_images": 5,
+  "light_code_snapshot_runs": 80,
+  "snapshot_tests": 46,
+  "protocol_validator": "passed separately from snapshot",
+  "frozen_input_hashes": 333,
+  "final_diagnostic_runs": 80,
+  "final_diagnostic_figures": 8,
+  "current_inference_parity_rows": 8000,
+  "additional_group_metric_checks": 1920,
+  "near_threshold_examples_rechecked": 264,
+  "prototype_models_compared": 4,
+  "prototype_explanation": true,
+  "application_replay_cases": 8,
+  "application_prediction_checks": 1600,
+  "application_appendix_pages": 5,
+  "historical_fresh_venv_zip_test": true,
+  "current_presentation_revision_audited": true,
+  "fresh_venv_prediction_rows": 3200,
+  "fresh_venv_covered_files": 83,
+  "original_reports_and_sources_unchanged": true,
+  "opening_links": 23,
+  "viewports": 5,
+  "package_files_verified": 688,
+  "zip_crc_and_contents": true,
+  "zip_bytes": 21977126,
+  "remaining_human_steps": [
+    "Read and explain own part",
+    "Record actual contributions and review",
+    "Revise and approve the submission",
+    "Submit at the agreed deadline"
+  ],
+  "limitations": [
+    "One UNSW-NB15 split; three finite held-out classes",
+    "S07 abstract only",
+    "Historical isolated train time and hardware were not recorded; T2/T9 remain partially evidenced",
+    "No causal overlap-removal retraining, external dataset, or live traffic",
+    "Fresh virtual environment verified on the same Windows host; other physical machines and OS remain unverified"
+  ]
+}

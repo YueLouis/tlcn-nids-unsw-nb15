@@ -1,0 +1,305 @@
+{
+  "case": {
+    "id": "normal",
+    "title": "Lưu lượng Normal",
+    "filename": "normal.csv",
+    "rows": 20,
+    "recommended_scenario": "CS",
+    "purpose": "Đo cảnh báo nhầm trên 20 bản ghi có nhãn Normal.",
+    "labels_present": true,
+    "expected_schema_valid": true,
+    "source_record_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "sha256": "c223a8914c63a9dd8301c98981edf7c345a5ca2463cdd16e65d188300997e0fc",
+    "selection": "Smallest 20 numeric IDs per declared category; mixed uses first 10 of each. Unlabeled removes labels; invalid removes dur. No selection by scores/predictions."
+  },
+  "provenance": {
+    "dataset": "UNSW-NB15",
+    "authors": "Nour Moustafa; Jill Slay",
+    "official_source": "https://research.unsw.edu.au/projects/unsw-nb15-dataset",
+    "declared_mirror": "https://huggingface.co/datasets/Mireu-Lab/UNSW-NB15",
+    "paper_doi": "https://doi.org/10.1109/MilCIS.2015.7348942",
+    "official_page_checked_on": "2026-10-26",
+    "official_download_byte_match": "NOT VERIFIED",
+    "acquisition_limit": "Registry records an official source and a Hugging Face mirror. Exact original download route and byte identity to a newly downloaded UNSW copy have not been established.",
+    "source_file": "UNSW_NB15_testing-set.csv",
+    "source_sha256": "734fe6642edf758f7c94d7d9149426b49d202fe8e7bf0bef47392489c3c0a559",
+    "official_train_rows": 175341,
+    "official_test_rows": 82332,
+    "raw_columns": 45,
+    "input_features": 42,
+    "excluded_metadata": [
+      "id",
+      "label",
+      "attack_cat"
+    ],
+    "local_test_rows_matching_official_train_features": 8541,
+    "limitation": "Lab-generated network traffic, finite historical categories, imbalance and exact feature overlap. This replay is not a live attack, an independent dataset, a prevention system or online learning."
+  },
+  "prediction": {
+    "run_id": "CS-XGB-S42",
+    "seed": 42,
+    "target_fpr": 0.01,
+    "threshold": 0.8941675424575806,
+    "rows": 20,
+    "attack_predictions": 3,
+    "normal_predictions": 17,
+    "labeled_rows": 20,
+    "confusion": {
+      "TP": 0,
+      "FP": 3,
+      "TN": 17,
+      "FN": 0
+    },
+    "explanation": {
+      "method": "XGB gain",
+      "description": "Feature có trọng số cao trong mô hình đã học; gộp one-hot về feature gốc.",
+      "limitation": "Importance toàn mô hình, không phải nguyên nhân dự đoán của từng dòng. Không so trực tiếp trọng số RF với XGB.",
+      "features": [
+        {
+          "feature": "sttl",
+          "importance": 0.47907423973083496
+        },
+        {
+          "feature": "ct_state_ttl",
+          "importance": 0.18346630036830902
+        },
+        {
+          "feature": "proto",
+          "importance": 0.15882963227340952
+        },
+        {
+          "feature": "service",
+          "importance": 0.0293391250888817
+        },
+        {
+          "feature": "dttl",
+          "importance": 0.025594275444746017
+        }
+      ]
+    },
+    "note": "Ngưỡng lấy từ Normal validation; kết quả minh họa CSV UNSW-NB15, chưa phải cảm biến mạng trực tiếp.",
+    "results": [
+      {
+        "record_id": "1",
+        "score": 0.8953522443771362,
+        "threshold": 0.8941675424575806,
+        "prediction": "Attack",
+        "truth": "Normal",
+        "outcome": "FP",
+        "attack_cat": "Normal"
+      },
+      {
+        "record_id": "2",
+        "score": 0.838028609752655,
+        "threshold": 0.8941675424575806,
+        "prediction": "Normal",
+        "truth": "Normal",
+        "outcome": "TN",
+        "attack_cat": "Normal"
+      },
+      {
+        "record_id": "3",
+        "score": 0.7461107969284058,
+        "threshold": 0.8941675424575806,
+        "prediction": "Normal",
+        "truth": "Normal",
+        "outcome": "TN",
+        "attack_cat": "Normal"
+      },
+      {
+        "record_id": "4",
+        "score": 0.6694542765617371,
+        "threshold": 0.8941675424575806,
+        "prediction": "Normal",
+        "truth": "Normal",
+        "outcome": "TN",
+        "attack_cat": "Normal"
+      },
+      {
+        "record_id": "5",
+        "score": 0.733988344669342,
+        "threshold": 0.8941675424575806,
+        "prediction": "Normal",
+        "truth": "Normal",
+        "outcome": "TN",
+        "attack_cat": "Normal"
+      },
+      {
+        "record_id": "6",
+        "score": 0.8654484748840332,
+        "threshold": 0.8941675424575806,
+        "prediction": "Normal",
+        "truth": "Normal",
+        "outcome": "TN",
+        "attack_cat": "Normal"
+      },
+      {
+        "record_id": "7",
+        "score": 0.8089407682418823,
+        "threshold": 0.8941675424575806,
+        "prediction": "Normal",
+        "truth": "Normal",
+        "outcome": "TN",
+        "attack_cat": "Normal"
+      },
+      {
+        "record_id": "8",
+        "score": 0.6633730530738831,
+        "threshold": 0.8941675424575806,
+        "prediction": "Normal",
+        "truth": "Normal",
+        "outcome": "TN",
+        "attack_cat": "Normal"
+      },
+      {
+        "record_id": "9",
+        "score": 0.00015753868501633406,
+        "threshold": 0.8941675424575806,
+        "prediction": "Normal",
+        "truth": "Normal",
+        "outcome": "TN",
+        "attack_cat": "Normal"
+      },
+      {
+        "record_id": "10",
+        "score": 0.00015753868501633406,
+        "threshold": 0.8941675424575806,
+        "prediction": "Normal",
+        "truth": "Normal",
+        "outcome": "TN",
+        "attack_cat": "Normal"
+      },
+      {
+        "record_id": "11",
+        "score": 0.00015753868501633406,
+        "threshold": 0.8941675424575806,
+        "prediction": "Normal",
+        "truth": "Normal",
+        "outcome": "TN",
+        "attack_cat": "Normal"
+      },
+      {
+        "record_id": "12",
+        "score": 0.00015753868501633406,
+        "threshold": 0.8941675424575806,
+        "prediction": "Normal",
+        "truth": "Normal",
+        "outcome": "TN",
+        "attack_cat": "Normal"
+      },
+      {
+        "record_id": "13",
+        "score": 0.7188024520874023,
+        "threshold": 0.8941675424575806,
+        "prediction": "Normal",
+        "truth": "Normal",
+        "outcome": "TN",
+        "attack_cat": "Normal"
+      },
+      {
+        "record_id": "14",
+        "score": 0.7357954978942871,
+        "threshold": 0.8941675424575806,
+        "prediction": "Normal",
+        "truth": "Normal",
+        "outcome": "TN",
+        "attack_cat": "Normal"
+      },
+      {
+        "record_id": "15",
+        "score": 0.9002538919448853,
+        "threshold": 0.8941675424575806,
+        "prediction": "Attack",
+        "truth": "Normal",
+        "outcome": "FP",
+        "attack_cat": "Normal"
+      },
+      {
+        "record_id": "16",
+        "score": 0.7300731539726257,
+        "threshold": 0.8941675424575806,
+        "prediction": "Normal",
+        "truth": "Normal",
+        "outcome": "TN",
+        "attack_cat": "Normal"
+      },
+      {
+        "record_id": "17",
+        "score": 0.9066609144210815,
+        "threshold": 0.8941675424575806,
+        "prediction": "Attack",
+        "truth": "Normal",
+        "outcome": "FP",
+        "attack_cat": "Normal"
+      },
+      {
+        "record_id": "18",
+        "score": 0.7505832314491272,
+        "threshold": 0.8941675424575806,
+        "prediction": "Normal",
+        "truth": "Normal",
+        "outcome": "TN",
+        "attack_cat": "Normal"
+      },
+      {
+        "record_id": "19",
+        "score": 0.8329740762710571,
+        "threshold": 0.8941675424575806,
+        "prediction": "Normal",
+        "truth": "Normal",
+        "outcome": "TN",
+        "attack_cat": "Normal"
+      },
+      {
+        "record_id": "20",
+        "score": 0.8421446681022644,
+        "threshold": 0.8941675424575806,
+        "prediction": "Normal",
+        "truth": "Normal",
+        "outcome": "TN",
+        "attack_cat": "Normal"
+      }
+    ]
+  },
+  "summary": {
+    "confusion": {
+      "TP": 0,
+      "FP": 3,
+      "TN": 17,
+      "FN": 0
+    },
+    "labeled_rows": 20,
+    "normal_support": 20,
+    "attack_support": 0,
+    "fpr": 0.15,
+    "recall": null,
+    "precision": 0.0,
+    "heldout_class": null,
+    "heldout_support": 0,
+    "uadr": null
+  },
+  "replay_method": "Batch predictions are computed first, then revealed in order for presentation. Replay speed is not model latency or network throughput.",
+  "assessment_scope": "Descriptive results on a preselected demonstration subset, not a new benchmark or independent generalization estimate.",
+  "model_output": "Normal/Attack only; attack_cat is supplied ground truth, never a predicted attack type."
+}

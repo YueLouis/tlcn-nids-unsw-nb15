@@ -1,0 +1,36 @@
+{
+  "checked_on": "2026-10-26",
+  "checks": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "issues": []
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "issues": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "issues": []
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "issues": []
+    }
+  ],
+  "next": 1,
+  "prev": 0,
+  "keyboard_pass": true,
+  "guide_issues": [],
+  "page_errors": [],
+  "recheck_scope": "Current deck and nine-page guide after demo navigation instructions changed; no academic/member approval"
+}

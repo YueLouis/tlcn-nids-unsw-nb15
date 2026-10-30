@@ -1,0 +1,9 @@
+{
+  "measured_on": "2026-10-25",
+  "scope": "Current inference measurement only; historical training hardware not recorded",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "processor": "Intel64 Family 6 Model 151 Stepping 2, GenuineIntel",
+  "logical_cpus": 12,
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "cpu_name": "12th Gen Intel(R) Core(TM) i5-12450HX"
+}

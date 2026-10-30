@@ -1,0 +1,28 @@
+\subsection{Khả năng phát hiện tại hai ngưỡng}
+Bảng~\ref{tab:rq3recall} trả lời phần phát hiện của RQ3, đọc cùng FPR test ở bảng trước. Mỗi ô là mean \% $\pm$ sample std theo điểm phần trăm, $n=5$. CS dùng recall trên toàn bộ 45.332 Attack; LR/LD/LE dùng UADR trên lớp held-out. Đây là so sánh tại cùng mục tiêu validation, không phải cùng FPR test.
+\begingroup\small\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{L{1.2cm}L{1.3cm}L{3.7cm}L{3.7cm}L{4.2cm}}
+\caption{Khả năng phát hiện ở hai mức FPR mục tiêu validation}\label{tab:rq3recall}\\
+\toprule Kịch bản & Model & Target 1\% & Target 5\% & Mẫu số\\\midrule
+\endfirsthead
+\multicolumn{5}{l}{\small Bảng \thetable\ (tiếp)}\\
+\toprule Kịch bản & Model & Target 1\% & Target 5\% & Mẫu số\\\midrule
+\endhead
+CS & RF & $90.27\pm0.25$ & $97.14\pm0.07$ & Recall Attack: 45.332\\
+CS & XGB & $91.23\pm0.31$ & $96.91\pm0.12$ & Recall Attack: 45.332\\
+CS & IF & $19.97\pm1.63$ & $31.44\pm2.92$ & Recall Attack: 45.332\\
+CS & AE & $57.28\pm7.95$ & $79.40\pm1.36$ & Recall Attack: 45.332\\
+LR & RF & $60.90\pm2.30$ & $97.73\pm0.30$ & UADR: 3.496\\
+LR & XGB & $65.76\pm6.19$ & $98.06\pm0.85$ & UADR: 3.496\\
+LR & IF & $0.00\pm0.00$ & $0.66\pm0.26$ & UADR: 3.496\\
+LR & AE & $6.37\pm2.30$ & $23.82\pm3.75$ & UADR: 3.496\\
+LD & RF & $95.35\pm0.33$ & $99.81\pm0.03$ & UADR: 4.089\\
+LD & XGB & $96.98\pm0.12$ & $99.33\pm0.18$ & UADR: 4.089\\
+LD & IF & $0.72\pm0.26$ & $4.21\pm0.99$ & UADR: 4.089\\
+LD & AE & $47.99\pm11.35$ & $88.38\pm1.12$ & UADR: 4.089\\
+LE & RF & $81.06\pm1.27$ & $97.06\pm0.57$ & UADR: 11.132\\
+LE & XGB & $87.25\pm1.17$ & $97.07\pm0.27$ & UADR: 11.132\\
+LE & IF & $0.35\pm0.02$ & $5.29\pm0.96$ & UADR: 11.132\\
+LE & AE & $44.73\pm3.90$ & $80.69\pm2.90$ & UADR: 11.132\\
+\bottomrule\end{longtable}\endgroup
+Ở CS, RF tăng recall từ 90,27\% lên 97,14\%, đồng thời FPR test tăng từ 4,21\% lên 18,57\%; IF tăng recall từ 19,97\% lên 31,44\% với FPR từ 0,78\% lên 6,15\%. Trong LR, UADR của IF đi từ 0,00\% lên 0,66\%, còn AE từ 6,37\% lên 23,82\%. Nới ngưỡng mục tiêu làm thay đổi cả chi phí cảnh báo và phát hiện; mức thay đổi phụ thuộc mô hình và lớp. Bảng đủ FPR, recall toàn bộ Attack và UADR cho cả hai target: \path{docs/reports/DOT_02_TWO_TARGETS.csv}.

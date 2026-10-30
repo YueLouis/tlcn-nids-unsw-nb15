@@ -1,0 +1,20 @@
+\begin{figure}[H]\centering
+\begin{tikzpicture}[>=Latex,node distance=.55cm,box/.style={draw=HCMUTEDark,rounded corners,fill=HCMUTELight,text width=4.0cm,minimum height=1.2cm,align=center,font=\small},arr/.style={->,thick}]
+\node[box,fill=DoneGreen!15,very thick] (raw) {1. Official train\\175.341 record};
+\node[box,right=of raw] (filter) {2. Loại metadata\\LOACO: bỏ held-out};
+\node[box,right=of filter] (split) {3. Chia development 80/20\\Phân tầng attack\_cat};
+\node[box,below=of raw] (fit) {4. Train 80\%: fit bộ biến đổi\\và model; IF/AE chỉ Normal};
+\node[box,below=of filter] (val) {5. Validation 20\%\\Transform; lấy score Normal};
+\node[box,below=of split] (th) {6. Khóa ngưỡng\\FPR mục tiêu 1\% / 5\%};
+\node[box,below=1.0cm of fit,fill=SoftGray] (test) {Official test giữ nguyên\\82.332 record, không fit};
+\node[box,below=1.0cm of val] (eval) {7. Transform và chấm test\\Dùng model/ngưỡng đã khóa};
+\node[box,below=1.0cm of th] (metrics) {8. Metric và tệp kết quả\\FPR, recall, UADR, AP};
+\draw[arr] (raw)--(filter);\draw[arr] (filter)--(split);
+\draw[arr] (split.south)--++(0,-.25)-| (fit.north);
+\draw[arr] (split.south)--++(0,-.25)-| (val.north);
+\draw[arr] (fit)--(val);
+\draw[arr] (val)--(th);\draw[arr] (test)--(eval);\draw[arr] (eval)--(metrics);
+\draw[arr] (th.south)--++(0,-.4)-| (eval.north);
+\end{tikzpicture}
+\caption{Luồng benchmark đã thực hiện. Official test là đầu vào độc lập; validation chỉ chọn ngưỡng, không sinh test. Bộ biến đổi dùng ở validation/test là bản đã fit ở bước 4; không có nhánh fit từ test.}\label{fig:benchmark}
+\end{figure}

@@ -1,0 +1,284 @@
+{
+  "case": {
+    "id": "heldout-r",
+    "title": "Giấu Reconnaissance khi học",
+    "filename": "heldout-r.csv",
+    "rows": 20,
+    "recommended_scenario": "LR",
+    "purpose": "Dùng bundle LR đã loại Reconnaissance khỏi development; xem vẫn phát hiện được bao nhiêu.",
+    "labels_present": true,
+    "expected_schema_valid": true,
+    "source_record_ids": [
+      244,
+      245,
+      257,
+      260,
+      261,
+      262,
+      266,
+      273,
+      276,
+      281,
+      290,
+      299,
+      300,
+      312,
+      313,
+      320,
+      323,
+      367,
+      369,
+      370
+    ],
+    "sha256": "ba895b0c76cc8e77d975f5b66347d7857777be46b859e9f01be6d8932209ec8e",
+    "selection": "Smallest 20 numeric IDs per declared category; mixed uses first 10 of each. Unlabeled removes labels; invalid removes dur. No selection by scores/predictions."
+  },
+  "provenance": {
+    "dataset": "UNSW-NB15",
+    "authors": "Nour Moustafa; Jill Slay",
+    "official_source": "https://research.unsw.edu.au/projects/unsw-nb15-dataset",
+    "declared_mirror": "https://huggingface.co/datasets/Mireu-Lab/UNSW-NB15",
+    "paper_doi": "https://doi.org/10.1109/MilCIS.2015.7348942",
+    "official_page_checked_on": "2026-10-26",
+    "official_download_byte_match": "NOT VERIFIED",
+    "acquisition_limit": "Registry records an official source and a Hugging Face mirror. Exact original download route and byte identity to a newly downloaded UNSW copy have not been established.",
+    "source_file": "UNSW_NB15_testing-set.csv",
+    "source_sha256": "734fe6642edf758f7c94d7d9149426b49d202fe8e7bf0bef47392489c3c0a559",
+    "official_train_rows": 175341,
+    "official_test_rows": 82332,
+    "raw_columns": 45,
+    "input_features": 42,
+    "excluded_metadata": [
+      "id",
+      "label",
+      "attack_cat"
+    ],
+    "local_test_rows_matching_official_train_features": 8541,
+    "limitation": "Lab-generated network traffic, finite historical categories, imbalance and exact feature overlap. This replay is not a live attack, an independent dataset, a prevention system or online learning."
+  },
+  "prediction": {
+    "run_id": "LR-IF-S42",
+    "seed": 42,
+    "target_fpr": 0.05,
+    "threshold": 0.007059280168501103,
+    "rows": 20,
+    "attack_predictions": 0,
+    "normal_predictions": 20,
+    "labeled_rows": 20,
+    "confusion": {
+      "TP": 0,
+      "FP": 0,
+      "TN": 0,
+      "FN": 20
+    },
+    "explanation": {
+      "method": "Cách đọc score",
+      "description": "Score = âm decision_function của Isolation Forest. Điểm cao hơn là bất thường hơn so với Normal đã học.",
+      "limitation": "Thông tin cách tính score, chưa giải thích nhân quả từng dòng; score khác thang giữa các model.",
+      "features": []
+    },
+    "note": "Ngưỡng lấy từ Normal validation; kết quả minh họa CSV UNSW-NB15, chưa phải cảm biến mạng trực tiếp.",
+    "results": [
+      {
+        "record_id": "244",
+        "score": -0.050075499469601936,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      },
+      {
+        "record_id": "245",
+        "score": -0.050075499469601936,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      },
+      {
+        "record_id": "257",
+        "score": -0.12112491815193427,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      },
+      {
+        "record_id": "260",
+        "score": -0.04640557249942401,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      },
+      {
+        "record_id": "261",
+        "score": -0.11702822925130302,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      },
+      {
+        "record_id": "262",
+        "score": -0.05937545285455165,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      },
+      {
+        "record_id": "266",
+        "score": -0.06682430417117252,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      },
+      {
+        "record_id": "273",
+        "score": -0.11812902199218239,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      },
+      {
+        "record_id": "276",
+        "score": -0.06698316765813411,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      },
+      {
+        "record_id": "281",
+        "score": -0.0687448820161729,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      },
+      {
+        "record_id": "290",
+        "score": -0.11837469533551537,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      },
+      {
+        "record_id": "299",
+        "score": -0.11859258438190184,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      },
+      {
+        "record_id": "300",
+        "score": -0.0546179437124219,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      },
+      {
+        "record_id": "312",
+        "score": -0.06855031726543398,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      },
+      {
+        "record_id": "313",
+        "score": -0.050225002052883216,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      },
+      {
+        "record_id": "320",
+        "score": -0.056385021224347964,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      },
+      {
+        "record_id": "323",
+        "score": -0.10701189208085926,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      },
+      {
+        "record_id": "367",
+        "score": -0.12052366427290867,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      },
+      {
+        "record_id": "369",
+        "score": -0.06755645354782491,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      },
+      {
+        "record_id": "370",
+        "score": -0.12509334920444887,
+        "threshold": 0.007059280168501103,
+        "prediction": "Normal",
+        "truth": "Attack",
+        "outcome": "FN",
+        "attack_cat": "Reconnaissance"
+      }
+    ]
+  },
+  "summary": {
+    "confusion": {
+      "TP": 0,
+      "FP": 0,
+      "TN": 0,
+      "FN": 20
+    },
+    "labeled_rows": 20,
+    "normal_support": 0,
+    "attack_support": 20,
+    "fpr": null,
+    "recall": 0.0,
+    "precision": null,
+    "heldout_class": "Reconnaissance",
+    "heldout_support": 20,
+    "uadr": 0.0
+  },
+  "replay_method": "Batch predictions are computed first, then revealed in order for presentation. Replay speed is not model latency or network throughput.",
+  "assessment_scope": "Descriptive results on a preselected demonstration subset, not a new benchmark or independent generalization estimate.",
+  "model_output": "Normal/Attack only; attack_cat is supplied ground truth, never a predicted attack type."
+}

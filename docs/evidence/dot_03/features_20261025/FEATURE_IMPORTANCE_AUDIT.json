@@ -1,0 +1,173 @@
+{
+  "created_at_utc": "2026-10-25T08:06:27.320687+00:00",
+  "run_count": 40,
+  "rows": 1680,
+  "groups": 336,
+  "inputs_unchanged": true,
+  "training_performed": false,
+  "threshold_tuning_performed": false,
+  "inputs": [
+    {
+      "path": "results\\runs\\CS-RF-S42\\model_bundle.joblib",
+      "sha256": "9db2b746a4898ad040742c64a6f8ddd184c4ed5c79c73f53cc04a3fde00a4e50"
+    },
+    {
+      "path": "results\\runs\\CS-RF-S52\\model_bundle.joblib",
+      "sha256": "9bf23de7ca084db332d129d3a3bcf73295f9eabc4b578dedca66d0823fce00cf"
+    },
+    {
+      "path": "results\\runs\\CS-RF-S62\\model_bundle.joblib",
+      "sha256": "c94aee162e7ad12dad9ee31ba1f7a265561d3cb4ff33e82fd439beb03f999067"
+    },
+    {
+      "path": "results\\runs\\CS-RF-S72\\model_bundle.joblib",
+      "sha256": "ab677c08f70b04c8c2fc9b9b46eaa4a5d6dd1fa0c5a541437efaead8a6721dda"
+    },
+    {
+      "path": "results\\runs\\CS-RF-S82\\model_bundle.joblib",
+      "sha256": "57a4434efd3c4d6a0dc05b4225001e0ce109590152cd1ce5dda91cef80dd69a4"
+    },
+    {
+      "path": "results\\runs\\CS-XGB-S42\\model_bundle.joblib",
+      "sha256": "10eefb60dbd76c82fe02164f2e53e8dae46179e56239b28120911258d0da0faa"
+    },
+    {
+      "path": "results\\runs\\CS-XGB-S52\\model_bundle.joblib",
+      "sha256": "cd07dd165121eb3be676aec501c307055e9e881dcd9fd35a18f481c35dd10a16"
+    },
+    {
+      "path": "results\\runs\\CS-XGB-S62\\model_bundle.joblib",
+      "sha256": "7d7a483d6fb18117a4d3f9471f904556d473e4433a8cc4ee64b86a6833fc7246"
+    },
+    {
+      "path": "results\\runs\\CS-XGB-S72\\model_bundle.joblib",
+      "sha256": "3dd9cd34f6225823c399df3e87725de33fdb821b6eda54613bee2f978cd72c7e"
+    },
+    {
+      "path": "results\\runs\\CS-XGB-S82\\model_bundle.joblib",
+      "sha256": "4c07027112b698fa3385e5090fd90ada76a4a9bf7437fa8426274722536e65ea"
+    },
+    {
+      "path": "results\\runs\\LR-RF-S42\\model_bundle.joblib",
+      "sha256": "eb09efb629373d45ba273f677fc45cd218c6a3a80896c4badb4d88ce917b89b9"
+    },
+    {
+      "path": "results\\runs\\LR-RF-S52\\model_bundle.joblib",
+      "sha256": "9c7c7446db41469229c5759a32c07be844b1ee1e6788a62c1a62693c9d7a6a44"
+    },
+    {
+      "path": "results\\runs\\LR-RF-S62\\model_bundle.joblib",
+      "sha256": "df9d63ea80f5869800bb51535ac066ee782aacedd44535288fa41b4395db618f"
+    },
+    {
+      "path": "results\\runs\\LR-RF-S72\\model_bundle.joblib",
+      "sha256": "df2e77fc76c1014fe7dbadafb25e88fa3c154b68034a555ee71bfba619dbe947"
+    },
+    {
+      "path": "results\\runs\\LR-RF-S82\\model_bundle.joblib",
+      "sha256": "97e03c90b803310f28de98ef85f0d9f9d6d4e4f1113775b861d7c73dafcc23c6"
+    },
+    {
+      "path": "results\\runs\\LR-XGB-S42\\model_bundle.joblib",
+      "sha256": "c2b7eceb11700fed047bb44bdab00f06031132ad0b4183f16b3469ba7704c33c"
+    },
+    {
+      "path": "results\\runs\\LR-XGB-S52\\model_bundle.joblib",
+      "sha256": "d0cf7c0ab4b9cb92c6ba77e0357e041560cde0be798a5bfb7f9707167865e18a"
+    },
+    {
+      "path": "results\\runs\\LR-XGB-S62\\model_bundle.joblib",
+      "sha256": "68f7eb34cf02b2e72cf6b3b03413b14de88cbe21c209e7a5a8020cd20c2907f2"
+    },
+    {
+      "path": "results\\runs\\LR-XGB-S72\\model_bundle.joblib",
+      "sha256": "1930a7c94ecb458bdbfc596829b2a0988144c4494c470a4401436fc73f312446"
+    },
+    {
+      "path": "results\\runs\\LR-XGB-S82\\model_bundle.joblib",
+      "sha256": "7b7c3eaf704e39311e7b9294274d91dd71ee30d1a5b376958346abc8082840fb"
+    },
+    {
+      "path": "results\\runs\\LD-RF-S42\\model_bundle.joblib",
+      "sha256": "1b3370e5270686c74b724f73895e4784a9d74f23d801b673c45f4cac3592e840"
+    },
+    {
+      "path": "results\\runs\\LD-RF-S52\\model_bundle.joblib",
+      "sha256": "34d6da6065458cec7c180c69b766a29baea71eb11cc825956113328f55c9676a"
+    },
+    {
+      "path": "results\\runs\\LD-RF-S62\\model_bundle.joblib",
+      "sha256": "cde8ddcb86819c1c6673d69c1fc40b9134e169b130e7e39d9cfd1c17e82a6187"
+    },
+    {
+      "path": "results\\runs\\LD-RF-S72\\model_bundle.joblib",
+      "sha256": "e459e8d7ead4472b7da12d76a0ad1d7cc62593645a16d366495bc50e078389dd"
+    },
+    {
+      "path": "results\\runs\\LD-RF-S82\\model_bundle.joblib",
+      "sha256": "281bfae6eb9e49fc3d4686b878ce1a7f61b2d569e1aca820e5919ecdc1463d45"
+    },
+    {
+      "path": "results\\runs\\LD-XGB-S42\\model_bundle.joblib",
+      "sha256": "1b1a52800b8c883a3ad954b334099b302acb236582b6bf0db8cb4ece209933a7"
+    },
+    {
+      "path": "results\\runs\\LD-XGB-S52\\model_bundle.joblib",
+      "sha256": "49996d5cc84152160c31ca98dfcc5432e36fa409f7baf246e5d6805ab3fbb320"
+    },
+    {
+      "path": "results\\runs\\LD-XGB-S62\\model_bundle.joblib",
+      "sha256": "4f25d2d13e26df24ac58384b9762d8edcbb23013975d2315e53c018806af3cb7"
+    },
+    {
+      "path": "results\\runs\\LD-XGB-S72\\model_bundle.joblib",
+      "sha256": "0ff192b175e3f8868aaa111f295316b4b7656b11afa4a382d181b68ce6a5093d"
+    },
+    {
+      "path": "results\\runs\\LD-XGB-S82\\model_bundle.joblib",
+      "sha256": "43b1dec4eadb86d61c7778f3ec84f0eaefa01ba31a2a9678f7a03ba9ae85aabf"
+    },
+    {
+      "path": "results\\runs\\LE-RF-S42\\model_bundle.joblib",
+      "sha256": "51fa4a59b8c32d1774b62c7df3068cf23c3c3507d935876b82a7ca3719ca7b5e"
+    },
+    {
+      "path": "results\\runs\\LE-RF-S52\\model_bundle.joblib",
+      "sha256": "3b1223153bd1fe996d6fa629d8112d6a7dc098a2119fc741447b91a70c47ac6f"
+    },
+    {
+      "path": "results\\runs\\LE-RF-S62\\model_bundle.joblib",
+      "sha256": "95f0c1ea9c67025d85d0ad2f3a16b13754efc78fecc5685e1841fcf78d1f87c7"
+    },
+    {
+      "path": "results\\runs\\LE-RF-S72\\model_bundle.joblib",
+      "sha256": "4aed8268740504a7166f07551be0ff14ccc0e0c1481a2fdf0d6881f63ee73c63"
+    },
+    {
+      "path": "results\\runs\\LE-RF-S82\\model_bundle.joblib",
+      "sha256": "30453b27dfb6332d02e5f2ba718016aeae0eb4a1b90a9ca89613bb78a1ffe819"
+    },
+    {
+      "path": "results\\runs\\LE-XGB-S42\\model_bundle.joblib",
+      "sha256": "7e8d087d98cfd2ca605618c2ea621f0c175b8167b4011e63cad91f893ac9b7b2"
+    },
+    {
+      "path": "results\\runs\\LE-XGB-S52\\model_bundle.joblib",
+      "sha256": "0d323d9679219dac75cb384e58d14bc3742271166cd4ea3149776e2ffdce7e22"
+    },
+    {
+      "path": "results\\runs\\LE-XGB-S62\\model_bundle.joblib",
+      "sha256": "8d5b09eb040562868395d1a294044359bc85a44dfb611da13502229d672daa42"
+    },
+    {
+      "path": "results\\runs\\LE-XGB-S72\\model_bundle.joblib",
+      "sha256": "90a0f304bb67541f6826a2318d150e15865bf51e1578b77758bee4c828c8aa18"
+    },
+    {
+      "path": "results\\runs\\LE-XGB-S82\\model_bundle.joblib",
+      "sha256": "eedde3b4a424557440b7f5728cace5c7278ab73c71eab378ad32ff2933a5ca0a"
+    }
+  ],
+  "source_sha256": "c3d5dedb350f4b76b15dd5801c3ff2e2647f801750aa7a44daf4501013070489",
+  "limitations": "Built-in training importance, not held-out permutation importance or per-record causal explanation; categorical columns sum one-hot contributions and may have cardinality bias"
+}

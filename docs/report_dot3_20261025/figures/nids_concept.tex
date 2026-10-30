@@ -1,0 +1,12 @@
+\begin{figure}[H]\centering
+\begin{tikzpicture}[>=Latex,node distance=.55cm,box/.style={draw=HCMUTEDark,rounded corners,fill=HCMUTELight,text width=3.35cm,minimum height=1.35cm,align=center,font=\small}]
+\node[box,fill=DoneGreen!15,very thick] (net) {1. Bắt đầu\\Lưu lượng mạng};
+\node[box,right=of net] (sensor) {2. Điểm giám sát\\Sao lưu lượng / cảm biến};
+\node[box,right=of sensor] (flow) {3. Đặc trưng flow\\Tiền xử lý và mô hình};
+\node[box,below=of flow] (alert) {4. Điểm và ngưỡng\\Sinh cảnh báo nghi vấn};
+\node[box,left=of alert] (human) {5. Người vận hành\\Đối chiếu và phản ứng};
+\draw[->,thick] (net)--(sensor);\draw[->,thick] (sensor)--(flow);
+\draw[->,thick] (flow)--(alert);\draw[->,thick] (alert)--(human);
+\end{tikzpicture}
+\caption{Vị trí khái niệm của mô hình trong NIDS, tổng hợp từ NIST và giới hạn đánh giá của Sommer/Paxson. Benchmark này bắt đầu từ CSV flow; chưa triển khai cảm biến hoặc chu trình phản ứng sự cố.}\label{fig:nidsconcept}
+\end{figure}

@@ -1,0 +1,6 @@
+C:\Users\TrongTin\AppData\Roaming\Python\Python314\site-packages\sklearn\neural_network\_multilayer_perceptron.py:785: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (100) reached and the optimization hasn't converged yet.
+  warnings.warn(
+----------------------------------------------------------------------
+Ran 46 tests in 1.037s
+
+OK

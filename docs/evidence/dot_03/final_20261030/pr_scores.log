@@ -1,0 +1,31 @@
+Validated 20/80 runs
+Validated 40/80 runs
+Validated 60/80 runs
+Validated 80/80 runs
+{
+  "created_at_utc": "2026-10-30T15:46:26.198105+00:00",
+  "base_commit": "60933c6dc4b5e9a8601834893d4151840d552261",
+  "run_count": 80,
+  "prediction_rows_checked": 13173120,
+  "unique_record_run_pairs": 6586560,
+  "saved_metric_checks": 1040,
+  "ap_rows": 140,
+  "ap_groups": 28,
+  "operating_point_groups": 32,
+  "figure_count": 11,
+  "inputs_unchanged": true,
+  "training_performed": false,
+  "threshold_tuning_performed": false,
+  "plot_seed": 42,
+  "plot_policy": "seed42 declared before analysis; other seeds summarized numerically",
+  "ap_definition": "average_precision_score; not trapezoidal PR-AUC; one copy per record/run",
+  "std_definition": "sample std across five seeds on the same official test; not a confidence interval",
+  "normal_vs_heldout_scope": "Excludes known attacks; prevalence differs by scenario; AP not directly comparable across scopes",
+  "versions": {
+    "python": "3.14.4",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "sklearn": "1.9.0",
+    "matplotlib": "3.10.9"
+  }
+}

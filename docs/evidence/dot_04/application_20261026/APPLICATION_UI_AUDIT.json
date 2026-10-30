@@ -1,0 +1,1420 @@
+{
+  "checked_on": "2026-10-26",
+  "page_sha256": "be464254ae273c75f3dccdaade1fbcdfed0cf5b29d5a377eda13f1775355dd5e",
+  "partial_export": true,
+  "pause_resume": true,
+  "complete_export": true,
+  "review_queue_and_notes": true,
+  "csv_export": true,
+  "config_clears_stale_result": true,
+  "heldout_scenario_auto_select": true,
+  "unlabeled_without_fake_metrics": true,
+  "invalid_schema_no_results": true,
+  "result_pagination_all_ids": true,
+  "notes_survive_navigation": true,
+  "six_in_page_sections": true,
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "demo",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "demo",
+      "section": 0,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "results",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "notes",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "data",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "data",
+      "section": 2,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "data",
+      "section": 3,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "data",
+      "section": 4,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "data",
+      "section": 5,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "data",
+      "section": 6,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "code",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "code",
+      "section": 2,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "code",
+      "section": 3,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "code",
+      "section": 4,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "code",
+      "section": 5,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "code",
+      "section": 6,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "code",
+      "section": 7,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "code",
+      "section": 8,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "code",
+      "section": 9,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "script",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "script",
+      "section": 2,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "script",
+      "section": 3,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "script",
+      "section": 4,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "script",
+      "section": 5,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "script",
+      "section": 6,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "script",
+      "section": 7,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "script",
+      "section": 8,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "tab": "script",
+      "section": 9,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "demo",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "demo",
+      "section": 0,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "results",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "notes",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "data",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "data",
+      "section": 2,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "data",
+      "section": 3,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "data",
+      "section": 4,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "data",
+      "section": 5,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "data",
+      "section": 6,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "code",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "code",
+      "section": 2,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "code",
+      "section": 3,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "code",
+      "section": 4,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "code",
+      "section": 5,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "code",
+      "section": 6,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "code",
+      "section": 7,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "code",
+      "section": 8,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "code",
+      "section": 9,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "script",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "script",
+      "section": 2,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "script",
+      "section": 3,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "script",
+      "section": 4,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "script",
+      "section": 5,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "script",
+      "section": 6,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "script",
+      "section": 7,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "script",
+      "section": 8,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "tab": "script",
+      "section": 9,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "demo",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "demo",
+      "section": 0,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "results",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "notes",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "data",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "data",
+      "section": 2,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "data",
+      "section": 3,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "data",
+      "section": 4,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "data",
+      "section": 5,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "data",
+      "section": 6,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "code",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "code",
+      "section": 2,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "code",
+      "section": 3,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "code",
+      "section": 4,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "code",
+      "section": 5,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "code",
+      "section": 6,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "code",
+      "section": 7,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "code",
+      "section": 8,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "code",
+      "section": 9,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "script",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "script",
+      "section": 2,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "script",
+      "section": 3,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "script",
+      "section": 4,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "script",
+      "section": 5,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "script",
+      "section": 6,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "script",
+      "section": 7,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "script",
+      "section": 8,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 700,
+      "height": 650,
+      "tab": "script",
+      "section": 9,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "demo",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "demo",
+      "section": 0,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "results",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "notes",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "data",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "data",
+      "section": 2,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "data",
+      "section": 3,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "data",
+      "section": 4,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "data",
+      "section": 5,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "data",
+      "section": 6,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "code",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "code",
+      "section": 2,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "code",
+      "section": 3,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "code",
+      "section": 4,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "code",
+      "section": 5,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "code",
+      "section": 6,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "code",
+      "section": 7,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "code",
+      "section": 8,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "code",
+      "section": 9,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "script",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "script",
+      "section": 2,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "script",
+      "section": 3,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "script",
+      "section": 4,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "script",
+      "section": 5,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "script",
+      "section": 6,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "script",
+      "section": 7,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "script",
+      "section": 8,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "script",
+      "section": 9,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "demo",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "demo",
+      "section": 0,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "results",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "notes",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "data",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "data",
+      "section": 2,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "data",
+      "section": 3,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "data",
+      "section": 4,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "data",
+      "section": 5,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "data",
+      "section": 6,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "code",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "code",
+      "section": 2,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "code",
+      "section": 3,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "code",
+      "section": 4,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "code",
+      "section": 5,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "code",
+      "section": 6,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "code",
+      "section": 7,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "code",
+      "section": 8,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "code",
+      "section": 9,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "script",
+      "section": 1,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "script",
+      "section": 2,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "script",
+      "section": 3,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "script",
+      "section": 4,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "script",
+      "section": 5,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "script",
+      "section": 6,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "script",
+      "section": 7,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "script",
+      "section": 8,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "tab": "script",
+      "section": 9,
+      "overflow": false,
+      "vertical_scroll": false,
+      "content_clipped": false,
+      "table_clipped": false
+    }
+  ],
+  "page_errors": [],
+  "scope": "Browser regression; no student participation or academic approval inferred"
+}

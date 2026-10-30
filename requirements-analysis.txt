@@ -1,0 +1,3 @@
+# Offline round-3 plots on top of the frozen benchmark dependencies.
+-r requirements-repro.txt
+matplotlib==3.10.9

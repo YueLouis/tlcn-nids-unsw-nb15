@@ -1,0 +1,12 @@
+{
+  "checked_at_utc": "2026-10-30T16:03:10.483250+00:00",
+  "pdf_pages": 60,
+  "pdf_sha256": "b241f781a4a8c88b3ab63ae34f69d2fbdeedd82f802ffb0c7c3e61358e5f8ce7",
+  "source_zip_sha256": "3d6cd9985aa42f7b06e87e9da3af3309ff1ea0c9650ee0b22b2959b6129fe98b",
+  "source_files_verified": 386,
+  "zip_crc_and_member_hashes": true,
+  "latex_undefined_overfull_missing_glyphs": false,
+  "all_page_images_reviewed": true,
+  "selected_tables_and_figures_reviewed_at_page_size": true,
+  "status": "Technical release; group review unconfirmed; not submitted; cloud sync unverified"
+}

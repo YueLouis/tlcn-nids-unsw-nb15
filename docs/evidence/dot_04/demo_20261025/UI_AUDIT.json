@@ -1,0 +1,12 @@
+{
+  "checked_on": "2026-10-25",
+  "browser": "Edge headless",
+  "sample_loaded": true,
+  "rf_cs_5_percent": true,
+  "if_lr_1_percent": true,
+  "result_rows": 100,
+  "csv_download": "CS-RF-S42_du_doan.csv",
+  "invalid_csv_http_status": 400,
+  "mobile_horizontal_overflow": false,
+  "page_errors": []
+}

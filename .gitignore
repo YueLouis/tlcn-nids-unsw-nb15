@@ -266,3 +266,7 @@ artifacts/data/*
 .vscode/
 .idea/
 .kilo/
+
+# Page rasterizations remain local; selected contact sheets and audits are versioned.
+docs/**/render/
+docs/**/render_*/

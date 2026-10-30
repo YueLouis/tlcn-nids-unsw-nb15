@@ -1,0 +1,455 @@
+{
+  "case": {
+    "id": "unlabeled",
+    "title": "Dữ liệu đầu vào chưa có nhãn",
+    "filename": "unlabeled.csv",
+    "rows": 50,
+    "recommended_scenario": "CS",
+    "purpose": "Chỉ xem dự đoán; không có nhãn thật để kết luận FP/FN hoặc tính độ đúng.",
+    "labels_present": false,
+    "expected_schema_valid": true,
+    "source_record_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11930,
+      11931,
+      11933,
+      11934,
+      11935,
+      11936,
+      11938,
+      11939,
+      11940,
+      11941,
+      244,
+      245,
+      257,
+      260,
+      261,
+      262,
+      266,
+      273,
+      276,
+      281,
+      247,
+      288,
+      337,
+      339,
+      360,
+      361,
+      362,
+      377,
+      378,
+      416,
+      248,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      258,
+      259
+    ],
+    "sha256": "8bead15abde18d20c9e5a1b6d414992c3acc2b60e7b1b52b13d10ceae2ca5c1b",
+    "selection": "Smallest 20 numeric IDs per declared category; mixed uses first 10 of each. Unlabeled removes labels; invalid removes dur. No selection by scores/predictions."
+  },
+  "provenance": {
+    "dataset": "UNSW-NB15",
+    "authors": "Nour Moustafa; Jill Slay",
+    "official_source": "https://research.unsw.edu.au/projects/unsw-nb15-dataset",
+    "declared_mirror": "https://huggingface.co/datasets/Mireu-Lab/UNSW-NB15",
+    "paper_doi": "https://doi.org/10.1109/MilCIS.2015.7348942",
+    "official_page_checked_on": "2026-10-26",
+    "official_download_byte_match": "NOT VERIFIED",
+    "acquisition_limit": "Registry records an official source and a Hugging Face mirror. Exact original download route and byte identity to a newly downloaded UNSW copy have not been established.",
+    "source_file": "UNSW_NB15_testing-set.csv",
+    "source_sha256": "734fe6642edf758f7c94d7d9149426b49d202fe8e7bf0bef47392489c3c0a559",
+    "official_train_rows": 175341,
+    "official_test_rows": 82332,
+    "raw_columns": 45,
+    "input_features": 42,
+    "excluded_metadata": [
+      "id",
+      "label",
+      "attack_cat"
+    ],
+    "local_test_rows_matching_official_train_features": 8541,
+    "limitation": "Lab-generated network traffic, finite historical categories, imbalance and exact feature overlap. This replay is not a live attack, an independent dataset, a prevention system or online learning."
+  },
+  "prediction": {
+    "run_id": "CS-RF-S42",
+    "seed": 42,
+    "target_fpr": 0.01,
+    "threshold": 0.8053672551154485,
+    "rows": 50,
+    "attack_predictions": 39,
+    "normal_predictions": 11,
+    "labeled_rows": 0,
+    "confusion": {
+      "TP": 0,
+      "FP": 0,
+      "TN": 0,
+      "FN": 0
+    },
+    "explanation": {
+      "method": "RF impurity",
+      "description": "Feature có trọng số cao trong mô hình đã học; gộp one-hot về feature gốc.",
+      "limitation": "Importance toàn mô hình, không phải nguyên nhân dự đoán của từng dòng. Không so trực tiếp trọng số RF với XGB.",
+      "features": [
+        {
+          "feature": "sttl",
+          "importance": 0.09900009638509966
+        },
+        {
+          "feature": "ct_state_ttl",
+          "importance": 0.06426645398245087
+        },
+        {
+          "feature": "dload",
+          "importance": 0.05787759810994594
+        },
+        {
+          "feature": "rate",
+          "importance": 0.05286879368415557
+        },
+        {
+          "feature": "sload",
+          "importance": 0.050088378327176095
+        }
+      ]
+    },
+    "note": "Ngưỡng lấy từ Normal validation; kết quả minh họa CSV UNSW-NB15, chưa phải cảm biến mạng trực tiếp.",
+    "results": [
+      {
+        "record_id": "1",
+        "score": 0.7057412707296608,
+        "threshold": 0.8053672551154485,
+        "prediction": "Normal"
+      },
+      {
+        "record_id": "2",
+        "score": 0.8041556327696189,
+        "threshold": 0.8053672551154485,
+        "prediction": "Normal"
+      },
+      {
+        "record_id": "3",
+        "score": 0.7130080965270604,
+        "threshold": 0.8053672551154485,
+        "prediction": "Normal"
+      },
+      {
+        "record_id": "4",
+        "score": 0.7453470167563829,
+        "threshold": 0.8053672551154485,
+        "prediction": "Normal"
+      },
+      {
+        "record_id": "5",
+        "score": 0.6979734616666311,
+        "threshold": 0.8053672551154485,
+        "prediction": "Normal"
+      },
+      {
+        "record_id": "6",
+        "score": 0.7058690822773175,
+        "threshold": 0.8053672551154485,
+        "prediction": "Normal"
+      },
+      {
+        "record_id": "7",
+        "score": 0.6880532392502777,
+        "threshold": 0.8053672551154485,
+        "prediction": "Normal"
+      },
+      {
+        "record_id": "8",
+        "score": 0.6605211187934493,
+        "threshold": 0.8053672551154485,
+        "prediction": "Normal"
+      },
+      {
+        "record_id": "9",
+        "score": 0.0007711098076375861,
+        "threshold": 0.8053672551154485,
+        "prediction": "Normal"
+      },
+      {
+        "record_id": "10",
+        "score": 0.0007711098076375861,
+        "threshold": 0.8053672551154485,
+        "prediction": "Normal"
+      },
+      {
+        "record_id": "11930",
+        "score": 0.9997043202388753,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "11931",
+        "score": 0.8568160517998145,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "11933",
+        "score": 0.9996956967398811,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "11934",
+        "score": 0.9934172655232697,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "11935",
+        "score": 0.8568160517998145,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "11936",
+        "score": 0.9996956967398811,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "11938",
+        "score": 0.8601678769111284,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "11939",
+        "score": 0.9997384060593629,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "11940",
+        "score": 0.9975705847424232,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "11941",
+        "score": 0.9362355648360958,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "244",
+        "score": 0.993939246521719,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "245",
+        "score": 0.993939246521719,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "257",
+        "score": 0.9818374980153798,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "260",
+        "score": 0.9928618212725872,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "261",
+        "score": 0.9827783204597248,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "262",
+        "score": 0.988005450502171,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "266",
+        "score": 0.9911060437241834,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "273",
+        "score": 0.9808609336038329,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "276",
+        "score": 0.9776129836120729,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "281",
+        "score": 0.9880688941873104,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "247",
+        "score": 0.993939246521719,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "288",
+        "score": 0.9336752322619079,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "337",
+        "score": 0.9773462289594681,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "339",
+        "score": 0.9196284023131801,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "360",
+        "score": 0.9962019214147155,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "361",
+        "score": 0.9962019214147155,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "362",
+        "score": 0.9962019214147155,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "377",
+        "score": 0.973405955903228,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "378",
+        "score": 0.973405955903228,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "416",
+        "score": 0.9839770746751955,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "248",
+        "score": 0.9529119258339239,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "250",
+        "score": 0.9076613157078525,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "251",
+        "score": 0.9076613157078525,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "252",
+        "score": 0.9076613157078525,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "253",
+        "score": 0.9749605730667024,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "254",
+        "score": 0.9672518958949216,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "255",
+        "score": 0.6121228202015048,
+        "threshold": 0.8053672551154485,
+        "prediction": "Normal"
+      },
+      {
+        "record_id": "256",
+        "score": 0.9129969140308365,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "258",
+        "score": 0.9578018144651408,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      },
+      {
+        "record_id": "259",
+        "score": 0.992639938695401,
+        "threshold": 0.8053672551154485,
+        "prediction": "Attack"
+      }
+    ]
+  },
+  "summary": {
+    "confusion": {
+      "TP": 0,
+      "FP": 0,
+      "TN": 0,
+      "FN": 0
+    },
+    "labeled_rows": 0,
+    "normal_support": 0,
+    "attack_support": 0,
+    "fpr": null,
+    "recall": null,
+    "precision": null,
+    "heldout_class": null,
+    "heldout_support": 0,
+    "uadr": null
+  },
+  "replay_method": "Batch predictions are computed first, then revealed in order for presentation. Replay speed is not model latency or network throughput.",
+  "assessment_scope": "Descriptive results on a preselected demonstration subset, not a new benchmark or independent generalization estimate.",
+  "model_output": "Normal/Attack only; attack_cat is supplied ground truth, never a predicted attack type."
+}

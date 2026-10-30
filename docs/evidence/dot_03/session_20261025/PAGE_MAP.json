@@ -1,0 +1,890 @@
+[
+  {
+    "kind": "dot3",
+    "pages": 59,
+    "toc": [
+      [
+        1,
+        "DANH MỤC BẢNG",
+        5
+      ],
+      [
+        1,
+        "DANH MỤC HÌNH",
+        7
+      ],
+      [
+        1,
+        "DANH MỤC VIẾT TẮT VÀ QUY ƯỚC",
+        9
+      ],
+      [
+        1,
+        "TÓM TẮT TIẾN ĐỘ",
+        10
+      ],
+      [
+        1,
+        "ĐẶT VẤN ĐỀ VÀ PHẠM VI NGHIÊN CỨU",
+        11
+      ],
+      [
+        2,
+        "Bối cảnh nghiên cứu",
+        11
+      ],
+      [
+        2,
+        "Vấn đề cần giải quyết",
+        11
+      ],
+      [
+        2,
+        "Mục tiêu nghiên cứu",
+        11
+      ],
+      [
+        2,
+        "Câu hỏi nghiên cứu",
+        12
+      ],
+      [
+        2,
+        "Đối tượng và phạm vi",
+        12
+      ],
+      [
+        2,
+        "Tính liên tục giữa hai đợt",
+        12
+      ],
+      [
+        1,
+        "CƠ SỞ LÝ THUYẾT VÀ NGHIÊN CỨU LIÊN QUAN",
+        13
+      ],
+      [
+        2,
+        "Hệ thống phát hiện xâm nhập mạng",
+        13
+      ],
+      [
+        2,
+        "Bốn mô hình được lựa chọn",
+        14
+      ],
+      [
+        2,
+        "Bộ dữ liệu UNSW-NB15",
+        15
+      ],
+      [
+        2,
+        "Chỉ số đánh giá",
+        15
+      ],
+      [
+        2,
+        "Phạm vi so sánh và định vị đề tài",
+        16
+      ],
+      [
+        1,
+        "ĐỐI CHIẾU GÓP Ý ĐỢT 1 VÀ TIẾN ĐỘ ĐỢT 2",
+        18
+      ],
+      [
+        2,
+        "Đối chiếu góp ý đợt 1 và kết quả khắc phục",
+        18
+      ],
+      [
+        2,
+        "Kế hoạch toàn đề tài và cách đọc tiến độ",
+        18
+      ],
+      [
+        2,
+        "Đối chiếu góp ý và cách tính tiến độ",
+        21
+      ],
+      [
+        2,
+        "Trạng thái rà soát của nhóm",
+        22
+      ],
+      [
+        1,
+        "DỮ LIỆU VÀ DATA CONTRACT",
+        23
+      ],
+      [
+        2,
+        "Nguồn và fingerprint",
+        23
+      ],
+      [
+        2,
+        "Duplicate, overlap và giới hạn bằng chứng",
+        24
+      ],
+      [
+        2,
+        "Contract feature và nhãn",
+        24
+      ],
+      [
+        1,
+        "PROTOCOL, SCENARIO VÀ CHỐNG LEAKAGE",
+        25
+      ],
+      [
+        2,
+        "Bốn scenario và support",
+        25
+      ],
+      [
+        2,
+        "Threshold và metric",
+        26
+      ],
+      [
+        1,
+        "PIPELINE VÀ ARTIFACT",
+        27
+      ],
+      [
+        2,
+        "Pipeline và cấu hình bốn baseline",
+        27
+      ],
+      [
+        2,
+        "Cấu trúc artifact một run",
+        27
+      ],
+      [
+        1,
+        "KIỂM THỬ VÀ KẾT QUẢ BAN ĐẦU",
+        30
+      ],
+      [
+        2,
+        "Danh sách test, input và expected",
+        30
+      ],
+      [
+        2,
+        "Kết quả tổng hợp qua năm seed",
+        31
+      ],
+      [
+        2,
+        "Hai ngân sách FPR và kết quả held-out",
+        32
+      ],
+      [
+        2,
+        "Phân tích lỗi ban đầu theo nhóm tấn công",
+        35
+      ],
+      [
+        1,
+        "KẾT LUẬN VÀ GIỚI HẠN CỦA ĐỢT 2",
+        36
+      ],
+      [
+        1,
+        "PHÂN TÍCH BỔ SUNG ĐỢT 3 – BẢN NHÁP",
+        37
+      ],
+      [
+        2,
+        "Phạm vi và trạng thái ngày 25/10/2026",
+        37
+      ],
+      [
+        2,
+        "Precision–Recall và phân bố score",
+        37
+      ],
+      [
+        2,
+        "Độ nhạy mô tả theo feature overlap",
+        39
+      ],
+      [
+        2,
+        "Importance của feature: gợi ý đọc, chưa phải nguyên nhân lỗi",
+        42
+      ],
+      [
+        2,
+        "Đọc trade-off, ma trận lỗi và độ ổn định",
+        43
+      ],
+      [
+        2,
+        "Lỗi theo protocol, service và state",
+        49
+      ],
+      [
+        2,
+        "Ví dụ sát ngưỡng, lỗi lặp và bất đồng model",
+        51
+      ],
+      [
+        2,
+        "Thời gian, kích thước artifact và phần chưa có bằng chứng lịch sử",
+        53
+      ],
+      [
+        2,
+        "Đối chiếu phạm vi hoàn tất kỹ thuật",
+        54
+      ],
+      [
+        2,
+        "Phần nhóm cần đọc và kiểm tiếp",
+        54
+      ],
+      [
+        2,
+        "Bằng chứng và kiểm kỹ thuật",
+        55
+      ],
+      [
+        1,
+        "TÀI LIỆU THAM KHẢO",
+        56
+      ],
+      [
+        1,
+        "BẰNG CHỨNG KIỂM TRA VÀ TRUY VẾT",
+        57
+      ],
+      [
+        1,
+        "DANH MỤC FILE BÀN GIAO",
+        58
+      ],
+      [
+        1,
+        "TRUY VẾT NỘI DUNG TÀI LIỆU",
+        59
+      ]
+    ]
+  },
+  {
+    "kind": "dot4",
+    "pages": 63,
+    "toc": [
+      [
+        1,
+        "DANH MỤC BẢNG",
+        5
+      ],
+      [
+        1,
+        "DANH MỤC HÌNH",
+        7
+      ],
+      [
+        1,
+        "DANH MỤC VIẾT TẮT VÀ QUY ƯỚC",
+        9
+      ],
+      [
+        1,
+        "TÓM TẮT TIẾN ĐỘ",
+        10
+      ],
+      [
+        1,
+        "ĐẶT VẤN ĐỀ VÀ PHẠM VI NGHIÊN CỨU",
+        11
+      ],
+      [
+        2,
+        "Bối cảnh nghiên cứu",
+        11
+      ],
+      [
+        2,
+        "Vấn đề cần giải quyết",
+        11
+      ],
+      [
+        2,
+        "Mục tiêu nghiên cứu",
+        11
+      ],
+      [
+        2,
+        "Câu hỏi nghiên cứu",
+        12
+      ],
+      [
+        2,
+        "Đối tượng và phạm vi",
+        12
+      ],
+      [
+        2,
+        "Tính liên tục giữa hai đợt",
+        12
+      ],
+      [
+        1,
+        "CƠ SỞ LÝ THUYẾT VÀ NGHIÊN CỨU LIÊN QUAN",
+        13
+      ],
+      [
+        2,
+        "Hệ thống phát hiện xâm nhập mạng",
+        13
+      ],
+      [
+        2,
+        "Bốn mô hình được lựa chọn",
+        14
+      ],
+      [
+        2,
+        "Bộ dữ liệu UNSW-NB15",
+        15
+      ],
+      [
+        2,
+        "Chỉ số đánh giá",
+        15
+      ],
+      [
+        2,
+        "Phạm vi so sánh và định vị đề tài",
+        16
+      ],
+      [
+        1,
+        "ĐỐI CHIẾU GÓP Ý ĐỢT 1 VÀ TIẾN ĐỘ ĐỢT 2",
+        18
+      ],
+      [
+        2,
+        "Đối chiếu góp ý đợt 1 và kết quả khắc phục",
+        18
+      ],
+      [
+        2,
+        "Kế hoạch toàn đề tài và cách đọc tiến độ",
+        18
+      ],
+      [
+        2,
+        "Đối chiếu góp ý và cách tính tiến độ",
+        21
+      ],
+      [
+        2,
+        "Trạng thái rà soát của nhóm",
+        22
+      ],
+      [
+        1,
+        "DỮ LIỆU VÀ DATA CONTRACT",
+        23
+      ],
+      [
+        2,
+        "Nguồn và fingerprint",
+        23
+      ],
+      [
+        2,
+        "Duplicate, overlap và giới hạn bằng chứng",
+        24
+      ],
+      [
+        2,
+        "Contract feature và nhãn",
+        24
+      ],
+      [
+        1,
+        "PROTOCOL, SCENARIO VÀ CHỐNG LEAKAGE",
+        25
+      ],
+      [
+        2,
+        "Bốn scenario và support",
+        25
+      ],
+      [
+        2,
+        "Threshold và metric",
+        26
+      ],
+      [
+        1,
+        "PIPELINE VÀ ARTIFACT",
+        27
+      ],
+      [
+        2,
+        "Pipeline và cấu hình bốn baseline",
+        27
+      ],
+      [
+        2,
+        "Cấu trúc artifact một run",
+        27
+      ],
+      [
+        1,
+        "KIỂM THỬ VÀ KẾT QUẢ BAN ĐẦU",
+        30
+      ],
+      [
+        2,
+        "Danh sách test, input và expected",
+        30
+      ],
+      [
+        2,
+        "Kết quả tổng hợp qua năm seed",
+        31
+      ],
+      [
+        2,
+        "Hai ngân sách FPR và kết quả held-out",
+        32
+      ],
+      [
+        2,
+        "Phân tích lỗi ban đầu theo nhóm tấn công",
+        35
+      ],
+      [
+        1,
+        "PHÂN TÍCH PR, SCORE, OVERLAP VÀ FEATURE",
+        36
+      ],
+      [
+        2,
+        "Phạm vi và trạng thái ngày 25/10/2026",
+        36
+      ],
+      [
+        2,
+        "Precision–Recall và phân bố score",
+        36
+      ],
+      [
+        2,
+        "Độ nhạy mô tả theo feature overlap",
+        38
+      ],
+      [
+        2,
+        "Importance của feature: gợi ý đọc, chưa phải nguyên nhân lỗi",
+        41
+      ],
+      [
+        2,
+        "Đọc trade-off, ma trận lỗi và độ ổn định",
+        42
+      ],
+      [
+        2,
+        "Lỗi theo protocol, service và state",
+        48
+      ],
+      [
+        2,
+        "Ví dụ sát ngưỡng, lỗi lặp và bất đồng model",
+        50
+      ],
+      [
+        2,
+        "Thời gian, kích thước artifact và phần chưa có bằng chứng lịch sử",
+        52
+      ],
+      [
+        2,
+        "Đối chiếu phạm vi hoàn tất kỹ thuật",
+        53
+      ],
+      [
+        2,
+        "Phần nhóm cần đọc và kiểm tiếp",
+        53
+      ],
+      [
+        2,
+        "Bằng chứng và kiểm kỹ thuật",
+        54
+      ],
+      [
+        1,
+        "PROTOTYPE CSV VÀ KIỂM CHỨNG SUY LUẬN",
+        55
+      ],
+      [
+        2,
+        "Mục tiêu, đầu vào và luồng sử dụng",
+        55
+      ],
+      [
+        2,
+        "Luồng xử lý và các tình huống",
+        55
+      ],
+      [
+        2,
+        "Kiểm chứng bằng bundle thật",
+        57
+      ],
+      [
+        2,
+        "Bốn ví dụ để cả nhóm tập giải thích",
+        58
+      ],
+      [
+        2,
+        "Khả năng tái lập và phạm vi còn mở",
+        58
+      ],
+      [
+        1,
+        "KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN",
+        59
+      ],
+      [
+        2,
+        "Trả lời ba câu hỏi nghiên cứu",
+        59
+      ],
+      [
+        2,
+        "Sản phẩm hiện có và giới hạn",
+        59
+      ],
+      [
+        1,
+        "TÀI LIỆU THAM KHẢO",
+        60
+      ],
+      [
+        1,
+        "BẰNG CHỨNG KIỂM TRA VÀ TRUY VẾT",
+        61
+      ],
+      [
+        1,
+        "DANH MỤC FILE BÀN GIAO",
+        62
+      ],
+      [
+        1,
+        "TRUY VẾT NỘI DUNG TÀI LIỆU",
+        63
+      ]
+    ]
+  },
+  {
+    "kind": "tong",
+    "pages": 57,
+    "toc": [
+      [
+        1,
+        "DANH MỤC BẢNG",
+        5
+      ],
+      [
+        1,
+        "DANH MỤC HÌNH",
+        6
+      ],
+      [
+        1,
+        "DANH MỤC VIẾT TẮT VÀ QUY ƯỚC",
+        8
+      ],
+      [
+        1,
+        "TÓM TẮT NGHIÊN CỨU",
+        9
+      ],
+      [
+        1,
+        "ĐẶT VẤN ĐỀ VÀ PHẠM VI NGHIÊN CỨU",
+        10
+      ],
+      [
+        2,
+        "Bối cảnh nghiên cứu",
+        10
+      ],
+      [
+        2,
+        "Vấn đề cần giải quyết",
+        10
+      ],
+      [
+        2,
+        "Mục tiêu nghiên cứu",
+        10
+      ],
+      [
+        2,
+        "Câu hỏi nghiên cứu",
+        11
+      ],
+      [
+        2,
+        "Đối tượng và phạm vi",
+        11
+      ],
+      [
+        2,
+        "Bố cục báo cáo",
+        11
+      ],
+      [
+        1,
+        "CƠ SỞ LÝ THUYẾT VÀ NGHIÊN CỨU LIÊN QUAN",
+        12
+      ],
+      [
+        2,
+        "Hệ thống phát hiện xâm nhập mạng",
+        12
+      ],
+      [
+        2,
+        "Bốn mô hình được lựa chọn",
+        13
+      ],
+      [
+        2,
+        "Bộ dữ liệu UNSW-NB15",
+        14
+      ],
+      [
+        2,
+        "Chỉ số đánh giá",
+        14
+      ],
+      [
+        2,
+        "Phạm vi so sánh và định vị đề tài",
+        15
+      ],
+      [
+        2,
+        "Trạng thái kiểm và đọc chéo",
+        16
+      ],
+      [
+        1,
+        "DỮ LIỆU VÀ DATA CONTRACT",
+        17
+      ],
+      [
+        2,
+        "Nguồn và fingerprint",
+        17
+      ],
+      [
+        2,
+        "Duplicate, overlap và giới hạn bằng chứng",
+        18
+      ],
+      [
+        2,
+        "Contract feature và nhãn",
+        18
+      ],
+      [
+        1,
+        "PROTOCOL, SCENARIO VÀ CHỐNG LEAKAGE",
+        19
+      ],
+      [
+        2,
+        "Bốn scenario và support",
+        19
+      ],
+      [
+        2,
+        "Threshold và metric",
+        20
+      ],
+      [
+        1,
+        "PIPELINE VÀ ARTIFACT",
+        21
+      ],
+      [
+        2,
+        "Pipeline và cấu hình bốn baseline",
+        21
+      ],
+      [
+        2,
+        "Cấu trúc artifact một run",
+        21
+      ],
+      [
+        1,
+        "KIỂM THỬ VÀ KẾT QUẢ BAN ĐẦU",
+        24
+      ],
+      [
+        2,
+        "Danh sách test, input và expected",
+        24
+      ],
+      [
+        2,
+        "Kết quả tổng hợp qua năm seed",
+        25
+      ],
+      [
+        2,
+        "Hai ngân sách FPR và kết quả held-out",
+        26
+      ],
+      [
+        2,
+        "Phân tích lỗi ban đầu theo nhóm tấn công",
+        29
+      ],
+      [
+        1,
+        "PHÂN TÍCH PR, SCORE, OVERLAP VÀ FEATURE",
+        30
+      ],
+      [
+        2,
+        "Phạm vi và trạng thái ngày 25/10/2026",
+        30
+      ],
+      [
+        2,
+        "Precision–Recall và phân bố score",
+        30
+      ],
+      [
+        2,
+        "Độ nhạy mô tả theo feature overlap",
+        32
+      ],
+      [
+        2,
+        "Importance của feature: gợi ý đọc, chưa phải nguyên nhân lỗi",
+        35
+      ],
+      [
+        2,
+        "Đọc trade-off, ma trận lỗi và độ ổn định",
+        36
+      ],
+      [
+        2,
+        "Lỗi theo protocol, service và state",
+        42
+      ],
+      [
+        2,
+        "Ví dụ sát ngưỡng, lỗi lặp và bất đồng model",
+        44
+      ],
+      [
+        2,
+        "Thời gian, kích thước artifact và phần chưa có bằng chứng lịch sử",
+        46
+      ],
+      [
+        2,
+        "Đối chiếu phạm vi hoàn tất kỹ thuật",
+        47
+      ],
+      [
+        2,
+        "Phần nhóm cần đọc và kiểm tiếp",
+        47
+      ],
+      [
+        2,
+        "Bằng chứng và kiểm kỹ thuật",
+        48
+      ],
+      [
+        1,
+        "PROTOTYPE CSV VÀ KIỂM CHỨNG SUY LUẬN",
+        49
+      ],
+      [
+        2,
+        "Mục tiêu, đầu vào và luồng sử dụng",
+        49
+      ],
+      [
+        2,
+        "Luồng xử lý và các tình huống",
+        49
+      ],
+      [
+        2,
+        "Kiểm chứng bằng bundle thật",
+        51
+      ],
+      [
+        2,
+        "Bốn ví dụ để cả nhóm tập giải thích",
+        52
+      ],
+      [
+        2,
+        "Khả năng tái lập và phạm vi còn mở",
+        52
+      ],
+      [
+        1,
+        "KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN",
+        53
+      ],
+      [
+        2,
+        "Trả lời ba câu hỏi nghiên cứu",
+        53
+      ],
+      [
+        2,
+        "Sản phẩm hiện có và giới hạn",
+        53
+      ],
+      [
+        1,
+        "TÀI LIỆU THAM KHẢO",
+        54
+      ],
+      [
+        1,
+        "BẰNG CHỨNG KIỂM TRA VÀ TRUY VẾT",
+        55
+      ],
+      [
+        1,
+        "DANH MỤC FILE BÀN GIAO",
+        56
+      ],
+      [
+        1,
+        "TRUY VẾT NỘI DUNG TÀI LIỆU",
+        57
+      ]
+    ]
+  }
+]

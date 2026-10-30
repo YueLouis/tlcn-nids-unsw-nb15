@@ -1,0 +1,56 @@
+{
+  "checked_on": "2026-10-26",
+  "scope": "Frontend styling, wording and in-page navigation/pagination changed after the earlier isolated-environment check. Backend, models, data, thresholds and Python tests unchanged; current UI regression is separate evidence.",
+  "presentation_files": [
+    {
+      "path": "demo/index.html",
+      "clean_environment_sha256": "bc1c69d1144fcc472d41632fd360b3611d24d485e626fb2cf17a0c630ec41e1b",
+      "current_sha256": "5a18007473d54b57cc1db12e73b0665577c530976bc9f66289404e3080a1b647",
+      "dom_structure_unchanged": true,
+      "javascript_unchanged_except_status_text": true
+    },
+    {
+      "path": "demo/lab.html",
+      "clean_environment_sha256": "56626595031c657e5238416318f55331f0b54c538128d745fd32842f66448372",
+      "current_sha256": "be464254ae273c75f3dccdaade1fbcdfed0cf5b29d5a377eda13f1775355dd5e",
+      "dom_structure_unchanged": false,
+      "javascript_unchanged_except_status_text": false,
+      "change": "Six visible panes, two setup steps, paged documents and results, row detail dialog, filters. Existing backend unchanged; interaction/export regression checked."
+    },
+    {
+      "path": "demo/MO_DEMO.ps1",
+      "clean_environment_sha256": "5b7bc35313afd527c6fc57da0ebbb37f57ea053b4456630e70c10f96c9fce69c",
+      "current_sha256": "0823b07b5bf43abf5f48a2fb6a1d0947d4d9bd1b2005762e9bfd24d56683c89a",
+      "change": "Default browser destination now /lab; server startup and health check unchanged."
+    }
+  ],
+  "csv_browser_checks": {
+    "method": "CUA browser in-app tab",
+    "rows_rendered": 100,
+    "viewports": [
+      {
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "width": 1024,
+        "overflow": false
+      },
+      {
+        "width": 768,
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "overflow": false
+      },
+      {
+        "width": 375,
+        "overflow": false
+      }
+    ],
+    "console_page_errors": [],
+    "scope": "No student contribution or academic approval inferred"
+  },
+  "application_browser_audit": "docs/evidence/dot_04/application_20261026/APPLICATION_UI_AUDIT.json"
+}

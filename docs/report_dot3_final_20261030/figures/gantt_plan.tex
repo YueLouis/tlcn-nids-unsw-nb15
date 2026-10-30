@@ -1,0 +1,20 @@
+\begin{figure}[H]\centering
+\begin{tikzpicture}[x=.61cm,y=.61cm]
+\fill[HCMUTELight] (0,0) rectangle (19,1.65);
+\draw[HCMUTEDark] (0,-13) rectangle (19,1.65);
+\foreach \x in {1,...,18}{\draw[gray!35] (\x,-13)--(\x,0);}
+\foreach \y in {0,...,12}{\draw[gray!35] (0,-\y)--(19,-\y);}
+\foreach \date [count=\i from 0] in {17/08,24/08,31/08,07/09,14/09,21/09,28/09,05/10,12/10,19/10,26/10,02/11,09/11,16/11,23/11,30/11,07/12,14/12,21/12}{
+  \node[rotate=60,font=\fontsize{8}{10}\selectfont] at (\i+.5,.82) {\date};
+}
+\foreach \label/\a/\b/\row in {ND1. Bài toán và phạm vi/0/4/1,ND2. Lý thuyết và tài liệu/1/8/2,ND3. Protocol/2/6/3,ND4. Audit và tiền xử lý/4/8/4,ND5. Bốn baseline/7/10/5,ND6. Thí nghiệm và đánh giá/9/15/6,ND7. Phân tích lỗi và demo/14/17/7,ND8. Viết và bàn giao/0/19/8}{
+  \node[anchor=east,font=\fontsize{8.5}{11}\selectfont] at (-.2,-\row+.5) {\label};
+  \filldraw[fill=HCMUTEBlue!45,draw=HCMUTEDark] (\a+.12,-\row+.25) rectangle (\b-.12,-\row+.75);
+}
+\foreach \label/\x/\row in {{Đợt 1: 13/09}/3.75/9,{Đợt 2: 11/10}/7.75/10,{Đợt 3: 08/11}/11.75/11,{Kỳ tiếp: 06/12}/15.75/12,{Bản cuối: 23/12}/18.7/13}{
+  \node[anchor=east,font=\fontsize{8.5}{11}\selectfont] at (-.2,-\row+.5) {\label};
+  \node[diamond,fill=WarnOrange,draw=WarnOrange,inner sep=2.4pt] at (\x,-\row+.5) {};
+}
+\end{tikzpicture}
+\caption{Kế hoạch dự kiến năm 2026, nhãn dd/mm là ngày bắt đầu mỗi khoảng; cột cuối chỉ đến 23/12. Thanh biểu thị cửa sổ kế hoạch, không biểu thị phần trăm hoặc nhật ký thực hiện. Các mốc kỳ và mốc bản cuối được phân biệt ở bảng sau.}\label{fig:fullplan}
+\end{figure}

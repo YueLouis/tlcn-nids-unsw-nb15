@@ -1,0 +1,132 @@
+{
+  "checked_on": "2026-10-26",
+  "scope": "Tool-only QA in isolated browser; not member reading or review",
+  "page_sha256": "2bdcc82a25799213609fb458dc76988580ae8ff1f5900f2c3dc3322f725e8b39",
+  "role_switching": true,
+  "notes_persist": true,
+  "notes_are_separate": true,
+  "export_matches_input": true,
+  "blank_export_is_unfilled": true,
+  "offline_export": true,
+  "local_test_notes_cleared": true,
+  "viewports": [
+    {
+      "person": "tin",
+      "width": 1280,
+      "height": 900,
+      "overflow": false
+    },
+    {
+      "person": "anh",
+      "width": 1280,
+      "height": 900,
+      "overflow": false
+    },
+    {
+      "person": "thu",
+      "width": 1280,
+      "height": 900,
+      "overflow": false
+    },
+    {
+      "person": "tin",
+      "width": 768,
+      "height": 1024,
+      "overflow": false
+    },
+    {
+      "person": "anh",
+      "width": 768,
+      "height": 1024,
+      "overflow": false
+    },
+    {
+      "person": "thu",
+      "width": 768,
+      "height": 1024,
+      "overflow": false
+    },
+    {
+      "person": "tin",
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "person": "anh",
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "person": "thu",
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "person": "tin",
+      "width": 375,
+      "height": 667,
+      "overflow": false
+    },
+    {
+      "person": "anh",
+      "width": 375,
+      "height": 667,
+      "overflow": false
+    },
+    {
+      "person": "thu",
+      "width": 375,
+      "height": 667,
+      "overflow": false
+    },
+    {
+      "person": "tin",
+      "width": 667,
+      "height": 375,
+      "overflow": false
+    },
+    {
+      "person": "anh",
+      "width": 667,
+      "height": 375,
+      "overflow": false
+    },
+    {
+      "person": "thu",
+      "width": 667,
+      "height": 375,
+      "overflow": false
+    }
+  ],
+  "page_errors": [],
+  "guide_links_checked": 15,
+  "live_demo_examples": [
+    {
+      "target": 0.05,
+      "row": {
+        "record_id": "1",
+        "score": 0.7057412707296608,
+        "threshold": 0.5572816867482743,
+        "prediction": "Attack",
+        "truth": "Normal",
+        "outcome": "FP",
+        "attack_cat": "Normal"
+      }
+    },
+    {
+      "target": 0.01,
+      "row": {
+        "record_id": "1",
+        "score": 0.705741270729661,
+        "threshold": 0.8053672551154485,
+        "prediction": "Normal",
+        "truth": "Normal",
+        "outcome": "TN",
+        "attack_cat": "Normal"
+      }
+    }
+  ]
+}

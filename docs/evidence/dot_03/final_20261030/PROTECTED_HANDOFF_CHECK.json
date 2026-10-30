@@ -1,0 +1,43 @@
+{
+  "old_reports_unchanged": [
+    {
+      "kind": "dot1",
+      "sha256": "8a9b77a5cc9c120f6a0d3c603ad69d6eb75a53ef8281ef21f58a754f24739ae6"
+    },
+    {
+      "kind": "dot2",
+      "sha256": "edafd81b6d4373fdae40c3086569254130a3148840fd37e026acba93c8a7c0dd"
+    },
+    {
+      "kind": "dot3",
+      "sha256": "42be0710249f41f54cfd3def9eaf3c81fe967d4a7b2206b0c418553049d8b972"
+    },
+    {
+      "kind": "dot4",
+      "sha256": "46b16ae5b87e7040e3be7c5b65eccc64cc162b1511e260826389d44ac3b48511"
+    },
+    {
+      "kind": "tong",
+      "sha256": "ec1db87d6265293a697a8254dc43ecb9c81a56b44c4068d6d21c1bd216eb9ccc"
+    }
+  ],
+  "old_package_manifest_files_matched": 688,
+  "archives": [
+    {
+      "path": "BO_BAO_CAO_VA_HUONG_DAN_GUI_NHOM_20261025.zip",
+      "zip_crc": "PASS"
+    },
+    {
+      "path": "DEMO_NIDS_NHOM_20261025.zip",
+      "zip_crc": "PASS"
+    },
+    {
+      "path": "Nguon_Bao_Cao_Dot1_20261018.zip",
+      "zip_crc": "PASS"
+    },
+    {
+      "path": "Nguon_Bao_Cao_Dot2_20261017.zip",
+      "zip_crc": "PASS"
+    }
+  ]
+}

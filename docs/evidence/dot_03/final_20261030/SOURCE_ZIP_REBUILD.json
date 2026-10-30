@@ -1,0 +1,9 @@
+{
+  "checked_at_utc": "2026-10-30T16:04:51.348384+00:00",
+  "extracted_source_zip_rebuild": true,
+  "pages": 60,
+  "page_text_equal": true,
+  "page_pixels_equal": true,
+  "xelatex_warnings_or_overfull": false,
+  "note": "PDF bytes may differ due to build metadata; all 60 page text and rendered pixels match"
+}

@@ -1,0 +1,163 @@
+
+\chapter{PHÂN TÍCH BỔ SUNG ĐỢT 3 -- BẢN NHÁP}
+\label{chap:dot3}
+\section{Phạm vi và trạng thái ngày 25/10/2026}
+Chương này bổ sung phân tích hậu nghiệm trên 80 run đã hoàn thành ở đợt 2. Không huấn luyện lại baseline, không chọn lại ngưỡng trên test và không thay official split. Bảng, hình và bản thảo do công cụ hỗ trợ chuẩn bị để nhóm kiểm lại; chưa tính là bài bàn giao hay xác nhận đóng góp của từng thành viên. Theo thống nhất mới qua nhóm trưởng ngày 25/10, công cụ hỗ trợ chuẩn bị đầy đủ nội dung và báo cáo trước, sau đó cả ba đọc, kiểm và sửa từng phần. Chưa có bài bàn giao độc lập của Anh và Thu; bản chuẩn bị chung không xác nhận đóng góp hay mức hiểu của từng người. Hạn báo cáo 09/11 đã thống nhất với giảng viên theo xác nhận của nhóm trưởng.
+
+\section{Precision--Recall và phân bố score}
+Mỗi record có hai dòng prediction cho target validation 1\% và 5\%, nhưng score giống nhau. AP chỉ dùng một bản sao mỗi record/run: tổng 13.173.120 dòng đã đọc tương ứng 6.586.560 cặp record/run. Hàm \texttt{average\_precision\_score} được dùng, khác diện tích hình thang của đường PR. Có 1.040 metric gốc được đối chiếu; hash đầu vào không đổi. Dữ liệu số thực CSV được đọc theo round-trip để giữ thứ tự score gần bằng nhau.
+
+Các đường minh họa dùng seed 42 đã định trước; các bảng dùng đủ năm seed. AP toàn test có support 82.332 và tỷ lệ Attack 55,06\%. Scope Normal/held-out loại known Attack; tỷ lệ dương lần lượt 8,63\% ở LR, 9,95\% ở LD và 23,13\% ở LE. Vì support, prevalence và thành phần Attack khác nhau, không so AP trực tiếp giữa các scope/scenario để kết luận mô hình tốt hơn.
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.18}
+\begin{longtable}{L{1.25cm}L{1.05cm}L{3.0cm}L{3.0cm}L{2.2cm}L{2.3cm}}
+\caption{AP toàn test và Normal/held-out: mean và sample std, năm seed}\\
+\toprule Sc. & Model & AP toàn test & AP Normal/held-out & Support slice & Tỷ lệ held-out\\\midrule
+\endfirsthead
+\multicolumn{6}{l}{\small Bảng \thetable\ (tiếp)}\\
+\toprule Sc. & Model & AP toàn test & AP Normal/held-out & Support slice & Tỷ lệ held-out\\\midrule
+\endhead
+CS & RF & $0.9879\pm0.0001$ & -- & -- & --\\
+CS & XGB & $0.9883\pm0.0003$ & -- & -- & --\\
+CS & IF & $0.8184\pm0.0120$ & -- & -- & --\\
+CS & AE & $0.9254\pm0.0085$ & -- & -- & --\\
+LR & RF & $0.9852\pm0.0003$ & $0.7077\pm0.0173$ & 40,496 & 8.63\%\\
+LR & XGB & $0.9852\pm0.0004$ & $0.6623\pm0.0357$ & 40,496 & 8.63\%\\
+LR & IF & $0.8214\pm0.0102$ & $0.0905\pm0.0017$ & 40,496 & 8.63\%\\
+LR & AE & $0.9237\pm0.0096$ & $0.1376\pm0.0050$ & 40,496 & 8.63\%\\
+LD & RF & $0.9876\pm0.0001$ & $0.9652\pm0.0007$ & 41,089 & 9.95\%\\
+LD & XGB & $0.9881\pm0.0003$ & $0.9738\pm0.0006$ & 41,089 & 9.95\%\\
+LD & IF & $0.8183\pm0.0059$ & $0.1751\pm0.0031$ & 41,089 & 9.95\%\\
+LD & AE & $0.9293\pm0.0037$ & $0.6001\pm0.0223$ & 41,089 & 9.95\%\\
+LE & RF & $0.9831\pm0.0004$ & $0.9258\pm0.0046$ & 48,132 & 23.13\%\\
+LE & XGB & $0.9840\pm0.0005$ & $0.9408\pm0.0057$ & 48,132 & 23.13\%\\
+LE & IF & $0.8172\pm0.0037$ & $0.3206\pm0.0054$ & 48,132 & 23.13\%\\
+LE & AE & $0.9294\pm0.0044$ & $0.7701\pm0.0113$ & 48,132 & 23.13\%\\
+\bottomrule\end{longtable}\endgroup
+
+
+Ở LR, AP toàn test của RF/XGB xấp xỉ 0,9852, trong khi AP Normal/held-out là 0,7077/0,6623. IF có AP toàn test 0,8214 nhưng AP Normal/held-out 0,0905, gần tỷ lệ dương 0,0863; đây là mô tả khả năng xếp hạng trong slice, không thay UADR tại ngưỡng đã khóa. Known Attack có thể che mức khó của lớp held-out khi chỉ đọc AP toàn test.
+
+\begin{figure}[H]\centering
+\includegraphics[width=.90\textwidth]{assets/dot3_20261025/PR_LR_normal_vs_heldout_S42.png}
+\caption{PR ở LOACO Reconnaissance, chỉ Normal và held-out; seed 42 minh họa. Chấm/trục dùng ngưỡng validation có sẵn, không dùng đường test chọn lại ngưỡng.}
+\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=.95\textwidth]{assets/dot3_20261025/SCORE_ECDF_LR_S42.png}
+\caption{ECDF score theo Normal/known/held-out và hai threshold, LR seed 42. Score khác thang giữa các mô hình; hình mô tả mức chồng lấn, chưa chứng minh nguyên nhân lỗi.}
+\end{figure}
+
+\section{Độ nhạy mô tả theo feature overlap}
+Đặc tả đã ghi trước khi chạy ở \path{docs/management/DAC_TA_OVERLAP_DOT_03_20261025.md}. Mẫu test thuộc nhóm \textit{matched} khi 42 feature raw bằng một vector trong tập model thực sự được fit, không dùng id/label/attack\_cat làm key. Khử key trùng phía fit để mỗi record test chỉ đếm một lần. Nhóm còn lại là \textit{unmatched}. Match không phải cùng sự kiện mạng hoặc cùng nhãn.
+
+Với từng seed/scenario, pipeline tái dựng chia development bằng stratify attack\_cat, loại held-out trước chia. RF/XGB fit toàn development train; IF/AE chỉ fit Normal. Phạm vi fit được kiểm bằng fingerprint cấu hình/dữ liệu, ID partition trong audit lịch sử, số dòng và mean/variance scaler trong bundle đã lưu. Đây là tái dựng có kiểm chứng, không phải nhật ký từng row fit được ghi trực tiếp khi huấn luyện.
+
+Hai nhóm giữ nguyên score, threshold và prediction. Tổng support và TP/FP/TN/FN hai nhóm bằng toàn test ở mỗi run/target; 1.040 metric gốc tiếp tục khớp. Khi không có mẫu số, bảng ghi --; CSV giữ NaN và số seed hợp lệ. AP của nhóm chỉ có một nhãn cũng ghi thiếu, không diễn giải là AP=0. RF/XGB dùng cùng phạm vi fit, IF/AE cùng Normal-only; nhóm matched khác nhau giữa hai họ và có thể khác theo seed.
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.18}
+\begin{longtable}{L{1.3cm}L{2.1cm}L{3.4cm}L{3.4cm}L{3.4cm}}
+\caption{Support nhóm matched theo vai trò; min--max qua năm seed}\\
+\toprule Sc. & Phạm vi fit & Normal & Known Attack & Held-out Attack\\\midrule
+\endfirsthead
+\multicolumn{5}{l}{\small Bảng \thetable\ (tiếp)}\\
+\toprule Sc. & Phạm vi fit & Normal & Known Attack & Held-out Attack\\\midrule
+\endhead
+CS & RF/XGB & 1,386--1,403 & 6,454--6,768 & 0\\
+CS & IF/AE & 1,095--1,146 & 15--22 & 0\\
+LR & RF/XGB & 1,386--1,403 & 5,358--5,661 & 230--247\\
+LR & IF/AE & 1,095--1,146 & 15--22 & 0\\
+LD & RF/XGB & 1,383--1,413 & 4,734--4,852 & 1,751--1,882\\
+LD & IF/AE & 1,105--1,141 & 16--21 & 0\\
+LE & RF/XGB & 1,385--1,411 & 4,857--5,055 & 1,583--1,700\\
+LE & IF/AE & 1,107--1,146 & 16--21 & 0\\
+\bottomrule\end{longtable}\endgroup
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.18}
+\begin{longtable}{L{0.65cm}L{1.25cm}L{1.45cm}L{2.35cm}L{2.4cm}L{2.45cm}L{2.45cm}}
+\caption{Nhóm trùng/không trùng với tập fit; target validation 5\%; chỉ số theo \%, std theo điểm phần trăm}\\
+\toprule Sc. & Model & Nhóm & Support min--max & FPR & Recall Attack & UADR\\\midrule
+\endfirsthead
+\multicolumn{7}{l}{\small Bảng \thetable\ (tiếp)}\\
+\toprule Sc. & Model & Nhóm & Support min--max & FPR & Recall Attack & UADR\\\midrule
+\endhead
+CS & RF & Trùng & 7,843--8,154 & $22.55\pm0.72$ & $99.77\pm0.02$ & --\\
+CS & RF & Không trùng & 74,178--74,489 & $18.41\pm0.35$ & $96.69\pm0.08$ & --\\
+CS & XGB & Trùng & 7,843--8,154 & $29.41\pm0.98$ & $99.83\pm0.02$ & --\\
+CS & XGB & Không trùng & 74,178--74,489 & $18.29\pm0.44$ & $96.41\pm0.15$ & --\\
+CS & IF & Trùng & 1,117--1,167 & $1.92\pm1.64$ & $41.89\pm5.57$ & --\\
+CS & IF & Không trùng & 81,165--81,215 & $6.28\pm0.41$ & $31.44\pm2.92$ & --\\
+CS & AE & Trùng & 1,117--1,167 & $1.19\pm0.07$ & $0.00\pm0.00$ & --\\
+CS & AE & Không trùng & 81,165--81,215 & $9.41\pm0.41$ & $79.43\pm1.36$ & --\\
+LR & RF & Trùng & 6,978--7,294 & $23.72\pm1.18$ & $99.73\pm0.03$ & $100.00\pm0.00$\\
+LR & RF & Không trùng & 75,038--75,354 & $18.38\pm0.26$ & $96.60\pm0.14$ & $97.56\pm0.32$\\
+LR & XGB & Trùng & 6,978--7,294 & $29.47\pm0.73$ & $99.81\pm0.02$ & $99.84\pm0.23$\\
+LR & XGB & Không trùng & 75,038--75,354 & $18.34\pm0.51$ & $96.18\pm0.20$ & $97.93\pm0.92$\\
+LR & IF & Trùng & 1,117--1,167 & $4.00\pm6.94$ & $38.56\pm4.83$ & --\\
+LR & IF & Không trùng & 81,165--81,215 & $6.27\pm0.42$ & $31.92\pm3.03$ & $0.66\pm0.26$\\
+LR & AE & Trùng & 1,117--1,167 & $1.19\pm0.07$ & $0.00\pm0.00$ & --\\
+LR & AE & Không trùng & 81,165--81,215 & $9.32\pm0.45$ & $79.65\pm1.42$ & $23.82\pm3.75$\\
+LD & RF & Trùng & 7,898--8,126 & $24.05\pm0.46$ & $99.78\pm0.02$ & $100.00\pm0.00$\\
+LD & RF & Không trùng & 74,206--74,434 & $18.54\pm0.35$ & $96.63\pm0.20$ & $99.66\pm0.06$\\
+LD & XGB & Trùng & 7,898--8,126 & $29.20\pm0.60$ & $99.85\pm0.02$ & $100.00\pm0.00$\\
+LD & XGB & Không trùng & 74,206--74,434 & $17.98\pm0.58$ & $96.28\pm0.19$ & $98.78\pm0.33$\\
+LD & IF & Trùng & 1,121--1,158 & $5.38\pm7.01$ & $41.59\pm5.28$ & --\\
+LD & IF & Không trùng & 81,174--81,211 & $6.13\pm0.33$ & $30.44\pm2.33$ & $4.21\pm0.99$\\
+LD & AE & Trùng & 1,121--1,158 & $1.17\pm0.09$ & $0.00\pm0.00$ & --\\
+LD & AE & Không trùng & 81,174--81,211 & $9.35\pm0.40$ & $79.80\pm0.72$ & $88.38\pm1.12$\\
+LE & RF & Trùng & 7,829--8,163 & $25.89\pm1.56$ & $99.78\pm0.01$ & $100.00\pm0.00$\\
+LE & RF & Không trùng & 74,169--74,503 & $18.02\pm0.81$ & $95.67\pm0.42$ & $96.54\pm0.67$\\
+LE & XGB & Trùng & 7,829--8,163 & $29.61\pm1.38$ & $99.85\pm0.02$ & $100.00\pm0.00$\\
+LE & XGB & Không trùng & 74,169--74,503 & $18.28\pm0.58$ & $95.43\pm0.27$ & $96.56\pm0.32$\\
+LE & IF & Trùng & 1,123--1,166 & $3.93\pm6.74$ & $37.54\pm10.97$ & --\\
+LE & IF & Không trùng & 81,166--81,209 & $6.33\pm0.48$ & $30.02\pm0.63$ & $5.29\pm0.96$\\
+LE & AE & Trùng & 1,123--1,166 & $1.18\pm0.10$ & $0.00\pm0.00$ & --\\
+LE & AE & Không trùng & 81,166--81,209 & $9.25\pm0.39$ & $79.32\pm1.19$ & $80.69\pm2.90$\\
+\bottomrule\end{longtable}\endgroup
+
+
+\begin{figure}[H]\centering
+\includegraphics[width=\textwidth]{assets/dot3_20261025/OVERLAP_SLICES.png}
+\caption{Ba lát cắt tại target validation 5\%; mean/sample std qua năm seed. IF/AE không có held-out matched nên UADR matched không xác định, không phải 0. Nhóm thay đổi theo model/seed; xem support trước khi so sánh.}
+\end{figure}
+
+
+Ví dụ LR/RF, target validation 5\%: nhóm held-out unmatched có 3.249--3.266 mẫu qua năm seed, UADR $97.56\%\pm0.32$ điểm phần trăm. Nhóm matched có 230--247 held-out. Kết quả cao còn hiện diện ngoài exact feature match; tuy nhiên không loại trừ các tương đồng khác của official split hoặc chứng minh tác động nhân quả. IF/AE không có held-out matched trong ba LOACO, nên UADR ở nhóm này không xác định.
+
+\textbf{Giới hạn diễn giải:} đây là liên hệ mô tả giữa hai nhóm của test đang có, không phải thí nghiệm huấn luyện loại overlap. Nhãn, loại tấn công và độ khó có thể khác; chênh lệch metric không chứng minh overlap gây tăng/giảm hiệu quả. Không xem nhóm unmatched là test mới độc lập hoặc so trực tiếp các nhóm khác nhau để xếp hạng mô hình. Năm seed cùng dùng official test; sample std không phải khoảng tin cậy. Chưa thực hiện retrain loại trùng hay kiểm trên dữ liệu vận hành.
+
+\section{Importance của feature: gợi ý đọc, chưa phải nguyên nhân lỗi}
+Đã trích importance trong bundle RF/XGB cho 40 run (4 scenario, 2 model, 5 seed), gom contribution của one-hot về 42 feature raw. RF dùng mean decrease in impurity; XGB dùng normalized gain. Đây là mô tả mô hình đã fit, không phải permutation importance trên test và không cho biết feature gây ra từng FP/FN. Categorical feature có thể chịu thiên lệch do số mức.
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.18}
+\begin{longtable}{L{1.3cm}L{1.2cm}L{11.3cm}}
+\caption{Ba feature có importance trung bình cao nhất; mô tả theo 5 seed}\\
+\toprule Sc. & Model & Ba feature đứng đầu (importance mean)\\\midrule
+\endfirsthead
+\multicolumn{3}{l}{\small Bảng \thetable\ (tiếp)}\\
+\toprule Sc. & Model & Ba feature đứng đầu (importance mean)\\\midrule
+\endhead
+CS & RF & sttl (0.097); ct\_state\_ttl (0.076); sload (0.052)\\
+CS & XGB & sttl (0.603); proto (0.094); ct\_state\_ttl (0.090)\\
+LR & RF & sttl (0.096); ct\_state\_ttl (0.075); sload (0.052)\\
+LR & XGB & sttl (0.564); proto (0.102); ct\_state\_ttl (0.090)\\
+\bottomrule\end{longtable}\endgroup
+
+
+\begin{figure}[H]\centering
+\includegraphics[width=.92\textwidth]{assets/dot3_20261025/FEATURES_CS.png}
+\caption{Mười feature đứng đầu ở closed-set; mean/sample std qua năm seed. RF và XGB dùng định nghĩa importance khác nhau.}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=.92\textwidth]{assets/dot3_20261025/FEATURES_LR.png}
+\caption{Mười feature đứng đầu ở LOACO Reconnaissance; mô tả feature quan trọng trong mô hình, chưa là giải thích nhân quả.}
+\end{figure}
+
+\input{final_diagnostics.tex}
+
+\section{Phần nhóm cần đọc và kiểm tiếp}
+Anh đối chiếu bảng dữ liệu/support với nguồn và viết giới hạn bằng lời của mình. Thu tự truy vết RF và IF, closed-set seed 42, target validation 5\%: một FP và một FN mỗi model; sau đó nhận xét bảng/hình có support, threshold và nguồn. Tín tự chạy/kiểm một run, ghi phần được công cụ hỗ trợ và ghép nội dung đã nhận. Importance RF/XGB và lát cắt proto/service/state đã có ở mức mô tả; từng bạn cần tự kiểm và giải thích. Nguồn S07 toàn văn chưa có; chỉ dùng phạm vi abstract đã đối chiếu.
+
+Nhóm làm online trước, trao đổi file/bản đang làm qua Zalo; buổi ra quán hẹn khi cả ba rảnh, chưa ấn định ngày. Trước khi nộp, cả ba cần đọc PDF và ghi góp ý, đóng góp, mức hiểu thực tế. Các mốc nhỏ là lịch đề xuất; việc biên dịch PDF không thay việc review nhóm.
+
+\section{Bằng chứng và kiểm kỹ thuật}
+CSV gốc của chương: \path{docs/evidence/dot_03/pr_scores_20261022/} và \path{docs/evidence/dot_03/overlap_20261025/}; audit kèm hash, phiên bản, 80 run và kiểm đầu vào. Bảng overlap đủ 480 dòng run/target/cohort, 96 nhóm tổng hợp; mỗi nhóm có năm seed. CSV đầy đủ giữ cả target 1\% và 5\%, AP và support các vai trò.
+
+Bộ kiểm ngày 25/10 có 42 test đạt: 17 test nền, 9 test PR/score, 7 test overlap, 8 test demo và 1 test mẫu số lát cắt lỗi. Test mới kiểm khác biệt Normal-only/toàn train, key validation không thuộc fit, key feature không dùng nhãn, không nhân support do duplicate, không làm tròn khi match, mẫu số rỗng và đối chiếu ID/vai trò. Log tại \path{docs/evidence/dot_03/session_20261025/tests_completion.log}. Kiểm thử không xác nhận thay việc hiểu bài hay phê duyệt của giảng viên.

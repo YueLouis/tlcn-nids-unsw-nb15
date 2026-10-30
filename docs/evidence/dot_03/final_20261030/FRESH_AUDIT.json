@@ -1,0 +1,70 @@
+{
+  "checked_at_utc": "2026-10-30T15:50:34.433349+00:00",
+  "training_performed": false,
+  "threshold_tuning_performed": false,
+  "frozen_input_hashes_matched": 333,
+  "fresh_csv_comparisons": [
+    {
+      "file": "AP_ALL_RUNS.csv",
+      "rows": 140,
+      "exact_match": true
+    },
+    {
+      "file": "AP_MEAN_STD.csv",
+      "rows": 28,
+      "exact_match": true
+    },
+    {
+      "file": "OPERATING_POINTS_ALL_RUNS.csv",
+      "rows": 160,
+      "exact_match": true
+    },
+    {
+      "file": "OPERATING_POINTS_MEAN_STD.csv",
+      "rows": 32,
+      "exact_match": true
+    },
+    {
+      "file": "SCORE_QUANTILES_ALL_RUNS.csv",
+      "rows": 220,
+      "exact_match": true
+    },
+    {
+      "file": "FIT_SET_CHECKS.csv",
+      "rows": 80,
+      "exact_match": true
+    },
+    {
+      "file": "OVERLAP_ALL_RUNS.csv",
+      "rows": 480,
+      "exact_match": true
+    },
+    {
+      "file": "OVERLAP_MEAN_STD.csv",
+      "rows": 96,
+      "exact_match": true
+    }
+  ],
+  "importance": {
+    "runs": 40,
+    "raw_feature_rows": 1680,
+    "summary_rows": 336,
+    "matched": true
+  },
+  "fresh_demo": {
+    "bundles": 16,
+    "operating_cases": 32,
+    "prediction_rows": 3200,
+    "max_abs_score_difference": 2.196694097733598e-07,
+    "score_atol": 1e-06,
+    "labels_and_thresholds_exact": true,
+    "invalid_inputs_rejected": [
+      "missing_feature",
+      "empty",
+      "nonnumeric",
+      "infinite"
+    ],
+    "scope": "Replay of existing official-test sample, not live traffic or independent validation"
+  },
+  "inputs_unchanged_after_inference": true
+}

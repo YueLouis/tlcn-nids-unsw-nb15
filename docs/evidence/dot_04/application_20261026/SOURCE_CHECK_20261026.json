@@ -1,0 +1,27 @@
+{
+  "checked_on": "2026-10-26",
+  "official_page": "https://research.unsw.edu.au/projects/unsw-nb15-dataset",
+  "official_page_read": true,
+  "verified_on_page": [
+    "UNSW Canberra Cyber Range Lab and IXIA PerfectStorm",
+    "Authors Nour Moustafa and Jill Slay; MilCIS 2015 paper link",
+    "Training/testing subset filenames and 175341/82332 records",
+    "SharePoint source download link and citation/use instructions"
+  ],
+  "doi": "https://doi.org/10.1109/MilCIS.2015.7348942",
+  "doi_open_result": "Redirected to IEEE browser verification page; no new full-text read claimed",
+  "official_file_download_result": "SharePoint fetch timed out via browsing tool",
+  "official_download_byte_identity": "NOT VERIFIED",
+  "manifest_declared_mirror": "https://huggingface.co/datasets/Mireu-Lab/UNSW-NB15",
+  "original_acquisition_route": "Not independently established from current local registry",
+  "attribution": "Dataset and ML algorithms inherited; no new algorithmic performance improvement claimed; individual student contributions still await actual reading/running/revision",
+  "scope": "Primary web page and local registry evidence; not lecturer acceptance",
+  "official_file_download_recheck_20261026": {
+    "method": "Anonymous GET of public folder linked by official UNSW page",
+    "result": "Redirected to Microsoft sign-in page",
+    "final_host": "login.microsoftonline.com",
+    "csv_downloaded": false,
+    "byte_comparison_performed": false,
+    "next_action": "Seek an alternate publisher/author-hosted public distribution; otherwise keep official byte identity unverified."
+  }
+}

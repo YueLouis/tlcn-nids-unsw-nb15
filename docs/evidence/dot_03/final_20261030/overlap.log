@@ -1,0 +1,42 @@
+Validated CS/seed 42: 4/80
+Validated CS/seed 52: 8/80
+Validated CS/seed 62: 12/80
+Validated CS/seed 72: 16/80
+Validated CS/seed 82: 20/80
+Validated LR/seed 42: 24/80
+Validated LR/seed 52: 28/80
+Validated LR/seed 62: 32/80
+Validated LR/seed 72: 36/80
+Validated LR/seed 82: 40/80
+Validated LD/seed 42: 44/80
+Validated LD/seed 52: 48/80
+Validated LD/seed 62: 52/80
+Validated LD/seed 72: 56/80
+Validated LD/seed 82: 60/80
+Validated LE/seed 42: 64/80
+Validated LE/seed 52: 68/80
+Validated LE/seed 62: 72/80
+Validated LE/seed 72: 76/80
+Validated LE/seed 82: 80/80
+{
+  "created_at_utc": "2026-10-30T15:48:07.399515+00:00",
+  "base_commit": "60933c6dc4b5e9a8601834893d4151840d552261",
+  "run_count": 80,
+  "prediction_rows_checked": 13173120,
+  "saved_metric_checks": 1040,
+  "cohort_rows": 480,
+  "cohort_groups": 96,
+  "feature_count": 42,
+  "inputs_unchanged": true,
+  "training_performed": false,
+  "threshold_tuning_performed": false,
+  "method": "Exact raw 42-feature match against reconstructed model fit set; verified stored scaler, counts and prior partition ID hash",
+  "limitations": "Post-hoc slice association, not causal overlap removal; cohorts differ by model/seed; same test over seeds, no independent confidence interval",
+  "missing_metric_policy": "NaN for absent denominator; AP requires both labels; valid seed count recorded",
+  "versions": {
+    "python": "3.14.4",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "sklearn": "1.9.0"
+  }
+}

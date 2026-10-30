@@ -1,0 +1,8 @@
+\begin{table}[H]\centering\small\renewcommand{\arraystretch}{1.2}
+\caption{Đối chiếu hai nguồn đánh giá NIDS với phạm vi thí nghiệm của nhóm}
+\begin{tabularx}{\textwidth}{L{3.0cm}Y Y}\toprule
+Nguồn / phạm vi & Nội dung đã đối chiếu & Liên hệ và giới hạn so sánh\\\midrule
+Moustafa/Slay (2016) \cite{moustafa2016} & Phân tích UNSW-NB15 và KDD99; so NB, DT, ANN, LR và EM. Bảng 6/7 định danh split và feature; Eq.(19--22) nêu chỉ số. & Cung cấp nền dữ liệu/đánh giá; FAR của bài bằng $(FPR+FNR)/2$, khác FPR nhóm. Không xếp hạng trực tiếp với RF/XGB/IF/AE LOACO.\\
+Sommer/Paxson (2010) \cite{sommer2010} & Phân tích chi phí lỗi, khoảng cách giữa điểm số và ý nghĩa vận hành, giới hạn chuyển từ đánh giá offline sang NIDS thực tế (mục III/IV). & Dùng để giới hạn diễn giải benchmark; không cung cấp kết quả cùng split/LOACO hoặc chứng thực mô hình của nhóm.\\
+Thí nghiệm nhóm & Official split UNSW-NB15; CS và ba LOACO; RF/XGB/IF/AE; ngưỡng Normal validation 1\%/5\%; năm seed. & Báo cáo AP, FPR, recall và UADR có support; còn giới hạn overlap, một bộ dữ liệu và các cấu hình cố định.\\
+\bottomrule\end{tabularx}\end{table}

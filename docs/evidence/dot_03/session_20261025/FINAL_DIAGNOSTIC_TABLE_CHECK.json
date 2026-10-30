@@ -1,0 +1,16 @@
+{
+  "checked_at_utc": "2026-10-25T09:59:03.998433+00:00",
+  "group_rows": 43840,
+  "group_summaries": 8768,
+  "source_metric_partition_checks": 1920,
+  "role_denominators": true,
+  "stability_rows": 528,
+  "stability_error_totals": true,
+  "model_pairs": 48,
+  "pair_error_identities": true,
+  "near_threshold_rows": 264,
+  "near_threshold_raw_prediction_and_selection": true,
+  "runtime_runs": 80,
+  "historical_train_only_missing_preserved": true,
+  "bundle_sizes_and_old_total_times": true
+}
