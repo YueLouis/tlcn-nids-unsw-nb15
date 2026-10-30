@@ -1,0 +1,23 @@
+[
+  {
+    "path": "00_MO_DAU.md",
+    "drive_id": "1VvpDEWlswDi_kR844niAytQziqCvpsKM",
+    "version": 8,
+    "sha256": "0dd0016e28e3e5653c28d54db5be6305c6c2af87796cfd65a69c1070fcae1856",
+    "readback_matches": true
+  },
+  {
+    "path": "02_Bao_cao/00_DOC_BAN_BAO_CAO.md",
+    "drive_id": "1lGvOCFOdOjJlVU31GyV22By7SZN_1EJN",
+    "version": 2,
+    "sha256": "12112ee7b9afa20dc3afb85dcc62b6fa6d6b53785cc2d1fec8c9aff8585e0211",
+    "readback_matches": true
+  },
+  {
+    "path": "05_Ket_qua_Thi_nghiem/VI_TRI_ARTIFACT.md",
+    "drive_id": "1Ym6MN0TI5t1Iw4khdrdwk2IYkcqoVlzA",
+    "version": 4,
+    "sha256": "2fd35af94b62be6252be1ca8776da73417d3247f91a34787b963ff4350318749",
+    "readback_matches": true
+  }
+]

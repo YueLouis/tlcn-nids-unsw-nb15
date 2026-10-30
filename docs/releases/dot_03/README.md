@@ -4,6 +4,8 @@
 
 Mốc báo cáo 09/11/2026 theo nhóm trưởng xác nhận đã thống nhất với thầy. Phạm vi kết quả chốt đến 30/10; phần 31/10–08/11 là kế hoạch tiếp theo. Đây là bản đã kiểm kỹ thuật, chưa có xác nhận cả ba duyệt nội dung; chưa gửi email/nộp và chưa được giảng viên phê duyệt. Tín tự gửi; lời nhắc tối 08/11 và sáng 09/11 giữ nguyên.
 
+[Trạng thái đồng bộ sau đóng gói](../../evidence/dot_03/sync_20261030/DONG_BO_DOT3_20261030.md). Dòng trạng thái trong PDF/ZIP nguồn là snapshot trước khi tải lên.
+
 ## Bằng chứng kiểm
 
 - 46 unit test đạt; protocol đủ 4 kịch bản × 4 model × 5 seed = 80 run.

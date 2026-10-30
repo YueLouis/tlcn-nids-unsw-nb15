@@ -1,0 +1,54 @@
+{
+  "commit": "0856152af5bb37c0a06eb398f92d595ab9a1d400",
+  "remote_main_matches": true,
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "bc4991a38de6a98048d94435c9d55eaff7c1637b3efacaa7555bffdc080987d0",
+      "bytes": 10401,
+      "matches_git_blob": true
+    },
+    {
+      "path": "docs/START_HERE_NHOM.md",
+      "sha256": "647c9f62e5d9c626bf1637d11796457b2ca07b0dcae9047ce0df6f7982ae486d",
+      "bytes": 5561,
+      "matches_git_blob": true
+    },
+    {
+      "path": "docs/releases/dot_03/README.md",
+      "sha256": "01a08d05c586d63e6edbfbbb74625cb3457feff77dfff3b0ca914351cbead3f1",
+      "bytes": 3323,
+      "matches_git_blob": true
+    },
+    {
+      "path": "docs/releases/dot_03/NhomTLCN_TramAnh_VuongThu_TrongTin_dot3.pdf",
+      "sha256": "b241f781a4a8c88b3ab63ae34f69d2fbdeedd82f802ffb0c7c3e61358e5f8ce7",
+      "bytes": 2272993,
+      "matches_git_blob": true
+    },
+    {
+      "path": "docs/report_dot3_final_20261030/main.tex",
+      "sha256": "1df79186890b631e9cd90afb4cd422fa8dcd28b2957ecbaa2a52eb1dcbd2f998",
+      "bytes": 87779,
+      "matches_git_blob": true
+    },
+    {
+      "path": "src/nids_benchmark/demo.py",
+      "sha256": "ed60ec8d61a092309df0c960129bbb8e338141feda62ee41a2e0eec0d90c0043",
+      "bytes": 6773,
+      "matches_git_blob": true
+    },
+    {
+      "path": "src/nids_benchmark/application.py",
+      "sha256": "e288a4fcdc68b9bbb810c29b8fd36f418a369e0c50f563375ca31cdca15db9b2",
+      "bytes": 2572,
+      "matches_git_blob": true
+    },
+    {
+      "path": "docs/evidence/dot_03/final_20261030/FRESH_AUDIT.json",
+      "sha256": "30517b43a27e06a498391d1520ddbdb19718c77d1c03bf8ba2d917820d882de9",
+      "bytes": 1570,
+      "matches_git_blob": true
+    }
+  ]
+}
