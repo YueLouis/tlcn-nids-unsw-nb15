@@ -12,17 +12,28 @@ Bao cao dot 1 va dot 2 da gui truoc do duoc giu nguyen trong ho so lich su. Khon
 
 ## Ba phan ca nhan
 
-- `TramAnh/`: phan duoc phan cong ve du lieu, nguon va gioi han benchmark. Cho Trinh Tram Anh tu bo sung bai giai thich, nguon va commit bang tai khoan cua ban.
-- `VuongThu/`: phan duoc phan cong ve ket qua, loi FP/FN va trade-off. Cho Hoang Van Vuong Thu tu bo sung phan tich va commit bang tai khoan cua ban.
-- `TrongTin/`: phan duoc phan cong ve protocol, tai lap, demo va tich hop. Cho Nguyen Trong Tin bo sung ghi chu kiem chung va commit bang tai khoan cua minh.
+- Nhanh `tramanh` / thu muc `TramAnh/`: du lieu, nguon va gioi han benchmark. Trinh Tram Anh tu viet phan giai thich, nguon va commit bang tai khoan cua minh.
+- Nhanh `vuongthu` / thu muc `VuongThu/`: ket qua, loi FP/FN va trade-off. Hoang Van Vuong Thu tu viet phan tich va commit bang tai khoan cua minh.
+- Nhanh `trongtin` / thu muc `TrongTin/`: protocol, tai lap, demo va tich hop. Nguyen Trong Tin cap nhat ghi nhan kiem chung tren nhanh cua minh.
 
-README va cac PDF trong `Tong_ca_nhom/` la goi tai lieu chung do Tín sap xep. Chung khong phai commit ca nhan cua Anh/Thu. Moi dong gop ca nhan chi duoc ghi nhan khi co noi dung do chinh thanh vien viet/kiem va commit tu tai khoan cua ban.
+README va cac PDF trong `Tong_ca_nhom/` la goi tai lieu chung do Tín sap xep. Chung khong phai commit ca nhan cua Anh/Thu. Bốn nhánh hiện cùng trỏ tới một commit chung; lịch sử nộp riêng của ba bạn chưa được xác nhận. Mỗi phần cá nhân chỉ được ghi nhận sau khi chính thành viên viết/kiểm và commit bằng tài khoản của mình.
+
+## Huong dan nop tren GitHub
+
+Moi ban dung nhanh cua minh (`tramanh`, `vuongthu`, `trongtin`), khong sua truc tiep `main` khi chua thong nhat. Dang nhap dung tai khoan GitHub, mo trang repo, chon dung nhanh trong branch selector, vao `docs/evidence/dot_03/member_work/<thu_muc_cua_minh>/`, chon **Add file > Create new file**, dat dung ten file trong README thu muc ca nhan, dan phan minh da doc va tu viet, roi bam **Commit changes**. Giu commit message mo ta dung viec vua lam. Truoc khi roi trang, mo commit moi va kiem tra branch, tai khoan tac gia, ten file va noi dung.
+
+Neu khong thay **Commit changes**, GitHub bao khong co quyen ghi, hoac commit that bai, dung lai va gui anh loi cho Tin; khong tao commit duoi tai khoan cua nguoi khac. Trang Settings khong cho sua khong dong nghia chac chan la khong co push access. Nguoc lai, mo duoc trang tao file moi cung chua chung minh commit thanh cong.
+
+## Huong dan doi chieu Drive
+
+Sau khi commit thanh cong, mo thu muc Drive `Bai_ca_nhan/<thu_muc_cua_minh>/` bang dung tai khoan ca nhan, upload cung file va tep minh tu tao (neu co), mo lai tep de kiem noi dung, roi gui link Drive va link commit vao nhom. Neu tai khoan chua co quyen Drive, gui yeu cau access va cho cap quyen; khong danh dau da upload khi moi co file local.
 
 ## Cach chot
 
 1. Moi ban doc dung file trong phan minh, tu ghi ket qua kiem va nguon.
-2. Commit phan do bang tai khoan GitHub cua minh; khong dung chung tai khoan de tao lich su thay.
-3. Doc cheo va sua report chung sau khi co bang chung ca nhan.
-4. Chuyen trang thai sang `DA_DUYET` hoac `DA_NOP` chi khi co bang chung tuong ung.
+2. Commit phan do tren nhanh dung bang tai khoan GitHub cua minh; xac nhan commit link hien ten tai khoan va file.
+3. Upload cung phan len thu muc Drive ca nhan va kiem tra lai link.
+4. Nguoi doc cheo ghi nhan xet cu the; tac gia sua va sau do Tin moi tich hop vao `main`.
+5. Chuyen trang thai sang `DA_NOP` chi khi co link commit va link Drive that. Chuyen sang `DA_DUYET` chi khi co xac nhan review noi dung cua nguoi co trach nhiem.
 
 Trang thai hien tai: `DANG_CHO_THANH_VIEN_TU_NOP`; chua the coi dot 3, dot 4 hoac bao cao tong la ho so nhom da duyet day du.
