@@ -1,8 +1,20 @@
 # Bắt đầu làm việc cùng nhóm
 
-**30/10/2026 — Đợt 3 chốt kỹ thuật:** [PDF, nguồn và bằng chứng](releases/dot_03/README.md) · [Drive bản chốt](https://drive.google.com/drive/folders/1AyxVWgeJj9mZ0L_d0AVosxKS6IUpghbe). Đã kiểm 46 test, 80 run và số liệu; bản Drive tải lại đủ 14 tệp khớp hash. Chờ cả ba tự review; chưa gửi email/nộp. Tín tự gửi ngày 09/11, có lời nhắc tối 08/11 và sáng 09/11.
+**Bản đọc đợt 3 cập nhật 10/11/2026:** mở [PDF 62 trang và hướng dẫn đọc](releases/review_dot3_20261110/README.md). `main` giữ bản chung; ba nhánh `tramanh`, `vuongthu`, `trongtin` giữ các bản nháp theo [phân công](group_delivery_20261110/README.md). Đây là lượt đọc duyệt hiện tại, chưa gửi mail trong công việc này. Đợt 1/2 và bản kỹ thuật đợt 3 ngày 30/10 giữ nguyên làm lịch sử. Thầy phản hồi ngày 31/10 về báo cáo đợt 2; không dùng thư đó làm xác nhận duyệt bản đợt 3.
+
+**Mốc 25/11:** Tín xác nhận hiện chỉ nghe một bạn khác truyền lại; chưa tìm thấy ngày này trong email thầy hoặc hồ sơ lớp đang có. Email hướng dẫn 08/09 yêu cầu báo cáo bốn tuần/lần theo kế hoạch; Gantt của nhóm ghi hồ sơ cuối 23/12. Hãy dùng 25/11 làm mốc luyện tập tạm thời, không gọi đó là hạn nộp chính thức cho tới khi có thông báo.
+
+**Luyện trước mốc dự kiến:** [Lịch ôn 09–24/11](management/KE_HOACH_ON_NHOM_BAO_CAO_NIDS_20261109.md). Mỗi bạn tự trả lời và truy nguồn; lịch này không ghi nhận thay phần đã học hay đóng góp.
+
+**Kiểm kỹ thuật local 09/11:** 46/46 unit test đạt; protocol validator xác nhận 80 run duy nhất; audit báo cáo rà soát đợt 3 xác nhận PDF 62 trang, 29 hash đầu vào hình, 200 liên kết nội bộ và không có lỗi/tham chiếu thiếu chặn phát hành. Demo local đã chạy ma trận bốn mô hình × bốn kịch bản, so sánh đủ bốn mô hình, mẫu chưa nhãn không tính FP/FN/FPR/Recall, CSV thiếu cột bị từ chối HTTP 400 và hiện thông báo lỗi có hướng xử lý. Kiểm 375/390/768/1366 px và 1920×1080 không tràn ngang; không có lỗi JavaScript chưa xử lý. Lượt thử CSV sai schema cố ý tạo một dòng 400 trong console trình duyệt. Các kiểm tra này không thay review nhóm, xác nhận giảng viên hoặc bằng chứng đã nộp.
+
+**GitHub:** `origin/main` hiện ở `37c159b5c863bd7ffd421fc5c3839497120200a0`, trùng HEAD local. Các thay đổi sau commit này còn ở máy; GitHub CLI chưa đăng nhập nên chưa xác nhận bản mới đã được đẩy lên.
+
+**30/10/2026 — Đợt 3 chốt kỹ thuật:** [PDF, nguồn và bằng chứng](releases/dot_03/README.md) · [Drive bản chốt](https://drive.google.com/drive/folders/1AyxVWgeJj9mZ0L_d0AVosxKS6IUpghbe). Bản chốt Drive ngày 30/10 tải lại đủ 14 tệp khớp hash. Lịch sử có mốc dự kiến gửi 09/11; hiện không dùng mốc dự kiến đó làm bằng chứng đã gửi.
 
 **26/10/2026 — Demo ứng dụng:** chạy server và mở `http://127.0.0.1:4397/lab`. Trong một tab có sáu nút: Thiết lập, Kết quả, Ghi chú, Dữ liệu, Mã xử lý và Hướng dẫn; bảng/tài liệu có Trước–Tiếp nên không phải cuộn trang dài. [Báo cáo bổ sung năm trang](application_20261026/report.html). Đây là phát lại flow trên bundle đã lưu; nhận xét, tự chạy và đóng góp cá nhân chưa được xác nhận thay nhóm.
+
+Trước khi lên bục, làm theo [checklist HDMI và trình chiếu](management/CHECKLIST_TRINH_CHIEU_HDMI_20261109.md) trên đúng laptop/cáp/TV sẽ dùng. Kiểm viewport mô phỏng không xác nhận thiết bị phòng học.
 
 **25/10/2026 — Mở một chỗ:** [Bộ bài để Anh–Thu–Tín đọc và sửa dần](management/BO_HO_SO_NHOM_20261025.md). Theo yêu cầu mới, đã chuẩn bị PDF nháp đợt 3–4, báo cáo tổng, hướng dẫn từng người và demo CSV kiểm bằng mô hình thật. Không còn yêu cầu hai bạn viết từ đầu trước khi có bản chung; mỗi bạn kiểm, góp ý và giải thích phần mình. Bản nháp chưa duyệt nộp, không tính thay đóng góp thành viên. Hồ sơ đợt 2 bên dưới giữ mốc lịch sử.
 
@@ -48,8 +60,8 @@ Xem [tiến độ hiện tại](management/TIEN_DO_HIEN_TAI_20261013.md) để b
 
 ## 4. Gửi thay đổi
 
-Mỗi bạn làm trên nhánh riêng, ví dụ `work/tram-anh-data` hoặc
-`work/vuong-thu-eval`. Commit đúng file đã làm, push nhánh và tạo Pull Request.
+Mỗi bạn làm trên nhánh được nhóm chốt: `tramanh`, `vuongthu` hoặc
+`trongtin`. Commit đúng file đã sửa, push nhánh và gửi link để đọc chéo.
 Ghi việc đã đổi, lệnh kiểm tra, kết quả và người review; tránh commit dataset
 hoặc model nặng.
 

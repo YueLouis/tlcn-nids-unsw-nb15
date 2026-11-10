@@ -3,12 +3,14 @@ from pathlib import Path
 from datetime import datetime, timezone
 import re
 import json
+import argparse
 import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / 'docs/report_dot3_final_20261030'
 OUT = ROOT / 'docs/evidence/dot_03/final_20261030'
+REPORT_OUT = OUT
 OLD = ROOT / 'docs/evidence/dot_03/final_diagnostics_20261025'
 checks = []
 
@@ -18,7 +20,9 @@ def read(path):
 
 
 def lines(file, start, end=None):
-    text = (SRC / file).read_text(encoding='utf-8').split(start, 1)[1]
+    source = (SRC / file).read_text(encoding='utf-8')
+    source = re.sub(r'\\caption\[[^\]]*\]', lambda _: r'\caption', source)
+    text = source.split(start, 1)[1]
     if end:
         text = text.split(end, 1)[0]
     return [line.strip().removesuffix('\\\\').split(' & ') for line in text.splitlines()
@@ -29,6 +33,7 @@ def pair(cell, mean, std, digits, scale=1):
     if pd.isna(mean):
         assert cell == '--', cell
         return
+    cell = cell.replace(r'\makecell{', '').replace('}', '').replace(r'\\', '')
     actual = cell.replace('$', '').replace('\\%', '').split('\\pm')
     expected = [f'{mean * scale:.{digits}f}', f'{std * scale:.{digits}f}']
     assert actual == expected, (cell, expected)
@@ -134,7 +139,9 @@ def main():
             pair(cell, r[name + '_mean'], r[name + '_std'], 4)
         checks.append('runtime ' + sc + '/' + model)
     category = read(ROOT / 'docs/evidence/dot_02/category_errors_20261014/CATEGORY_ERRORS_MEAN_STD.csv')
-    text = (SRC / 'main.tex').read_text(encoding='utf-8').split(r'\caption{Tỷ lệ bỏ sót FN', 1)[1].split(r'\bottomrule', 1)[0]
+    source = (SRC / 'main.tex').read_text(encoding='utf-8')
+    source = re.sub(r'\\caption\[[^\]]*\]', lambda _: r'\caption', source)
+    text = source.split(r'\caption{Tỷ lệ bỏ sót FN', 1)[1].split(r'\bottomrule', 1)[0]
     for line in text.splitlines():
         if not re.match(r'^(Analysis|Backdoor|DoS|Exploits|Fuzzers|Generic|Reconnaissance|Shellcode|Worms) & ', line):
             continue
@@ -155,9 +162,17 @@ def main():
     result = {'checked_at_utc': datetime.now(timezone.utc).isoformat(), 'table_rows_checked': len(checks),
               'all_displayed_cells_match_rounding': True, 'checks': checks,
               'scope': 'Main results, both targets, AP, overlap metrics, importance, group errors, stability, disagreement, costs'}
-    (OUT / 'REPORT_TABLE_CHECK.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
+    result['source'] = SRC.relative_to(ROOT).as_posix()
+    REPORT_OUT.mkdir(parents=True, exist_ok=True)
+    (REPORT_OUT / 'REPORT_TABLE_CHECK.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
     print('Typeset numeric rows matched:', len(checks))
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--source', type=Path, default=SRC)
+    parser.add_argument('--evidence-output', type=Path, default=OUT)
+    args = parser.parse_args()
+    SRC = args.source.resolve()
+    REPORT_OUT = args.evidence_output.resolve()
     main()

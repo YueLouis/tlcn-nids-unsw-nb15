@@ -1,39 +1,23 @@
-# Ho so nhom de doc va chot
+# Hồ sơ chung và ba phần phân công
 
-Cap nhat 10/11/2026. Thu muc nay giup giang vien va cac thanh vien thay ro mot ho so chung va ba phan ca nhan.
+Bản để đọc đợt 3 hiện tại: [mở hướng dẫn và PDF 62 trang](../releases/review_dot3_20261110/README.md). Bản này đã sửa cách dẫn nguồn ngày 09/11 và kiểm lại ngày 10/11. `main` là hồ sơ chung của nhóm.
 
-## Tong ca nhom
+| Nhánh | Phần | Người phụ trách |
+|---|---|---|
+| `tramanh` | [Dữ liệu, chia tập và giới hạn](https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/tramanh/docs/group_delivery_20261110/TramAnh) | Trịnh Trâm Anh |
+| `vuongthu` | [Metric, hai ví dụ FP/FN, ngưỡng](https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/vuongthu/docs/group_delivery_20261110/VuongThu) | Hoàng Văn Vương Thu |
+| `trongtin` | [Protocol, demo và tích hợp](https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/trongtin/docs/group_delivery_20261110/TrongTin) | Nguyễn Trọng Tín |
 
-- `Tong_ca_nhom/BAO_CAO_DOT3_BAN_RA_SOAT_20261107.pdf`: ban 62 trang de nhom doc va xin gop y; chua co xac nhan ca nhom duyet.
-- `Tong_ca_nhom/BAO_CAO_DOT4_NHAP_20261109.pdf`: ban nhap 63 trang; chua duoc ca nhom duyet.
-- `Tong_ca_nhom/BAO_CAO_TONG_NHAP_20261109.pdf`: ban nhap 57 trang; chua duoc ca nhom duyet.
+Bản nháp phân công đã được trợ lý chuẩn bị/tải theo ủy quyền qua các tài khoản được cho phép. Lịch sử tải hồ sơ và nhận xét nội dung là hai việc riêng: sau khi đọc, mỗi bạn bổ sung trang/file đã mở, câu cần sửa, ví dụ tự giải thích và nhận xét đọc chéo. Chưa ghi cả nhóm đã duyệt trước khi có xác nhận thực tế.
 
-Bao cao dot 1 va dot 2 da gui truoc do duoc giu nguyen trong ho so lich su. Khong dung cac ban nhap dot 4/tong de noi la da nop hoac da duoc thay duyet.
+Đọc chéo: Thu đọc phần Anh; Tín đọc phần Thu; Anh đọc phần Tín. Người viết cập nhật bản nháp trên nhánh của mình; Tín tổng hợp góp ý đã thống nhất vào `main`. Commit mô tả việc thực tế vừa đổi. Có thể tự thao tác hoặc ủy quyền thao tác tải; ghi đúng người đã chuẩn bị và người đã đọc/sửa.
 
-## Ba phan ca nhan
+## Khi muốn sửa trên GitHub
 
-- Nhanh `tramanh` / thu muc `TramAnh/`: du lieu, nguon va gioi han benchmark. Trinh Tram Anh tu viet phan giai thich, nguon va commit bang tai khoan cua minh.
-- Nhanh `vuongthu` / thu muc `VuongThu/`: ket qua, loi FP/FN va trade-off. Hoang Van Vuong Thu tu viet phan tich va commit bang tai khoan cua minh.
-- Nhanh `trongtin` / thu muc `TrongTin/`: protocol, tai lap, demo va tich hop. Nguyen Trong Tin cap nhat ghi nhan kiem chung tren nhanh cua minh.
+Đăng nhập đúng tài khoản → chọn đúng nhánh → mở tệp trong thư mục của mình → bấm biểu tượng bút chì → sửa nội dung → **Commit changes**. Mở commit mới để kiểm tên tài khoản, nhánh, tệp và nội dung. Nếu chỉ đọc và chưa sửa, ghi nhận xét đọc trong `docs/evidence/dot_03/member_work/`; không tạo sửa đổi rỗng để làm lịch sử.
 
-README va cac PDF trong `Tong_ca_nhom/` la goi tai lieu chung do Tín sap xep. Chung khong phai commit ca nhan cua Anh/Thu. Bốn nhánh hiện cùng trỏ tới một commit chung; lịch sử nộp riêng của ba bạn chưa được xác nhận. Mỗi phần cá nhân chỉ được ghi nhận sau khi chính thành viên viết/kiểm và commit bằng tài khoản của mình.
+## Drive và bản gửi
 
-## Huong dan nop tren GitHub
+Drive chung có một phần `main` và ba phần `TramAnh`, `VuongThu`, `TrongTin` trong thư mục rà soát đợt 3. Các tệp đồng bộ cần khớp nội dung với GitHub, dùng đúng tài khoản đã được cho phép. Gói đọc hiện tại chứa PDF, nguồn và tài liệu đối chiếu; các PDF đợt 4/tổng ở `Tong_ca_nhom` vẫn là bản nháp riêng.
 
-Moi ban dung nhanh cua minh (`tramanh`, `vuongthu`, `trongtin`), khong sua truc tiep `main` khi chua thong nhat. Dang nhap dung tai khoan GitHub, mo trang repo, chon dung nhanh trong branch selector, vao `docs/evidence/dot_03/member_work/<thu_muc_cua_minh>/`, chon **Add file > Create new file**, dat dung ten file trong README thu muc ca nhan, dan phan minh da doc va tu viet, roi bam **Commit changes**. Giu commit message mo ta dung viec vua lam. Truoc khi roi trang, mo commit moi va kiem tra branch, tai khoan tac gia, ten file va noi dung.
-
-Neu khong thay **Commit changes**, GitHub bao khong co quyen ghi, hoac commit that bai, dung lai va gui anh loi cho Tin; khong tao commit duoi tai khoan cua nguoi khac. Trang Settings khong cho sua khong dong nghia chac chan la khong co push access. Nguoc lai, mo duoc trang tao file moi cung chua chung minh commit thanh cong.
-
-## Huong dan doi chieu Drive
-
-Sau khi commit thanh cong, mo thu muc Drive `Bai_ca_nhan/<thu_muc_cua_minh>/` bang dung tai khoan ca nhan, upload cung file va tep minh tu tao (neu co), mo lai tep de kiem noi dung, roi gui link Drive va link commit vao nhom. Neu tai khoan chua co quyen Drive, gui yeu cau access va cho cap quyen; khong danh dau da upload khi moi co file local.
-
-## Cach chot
-
-1. Moi ban doc dung file trong phan minh, tu ghi ket qua kiem va nguon.
-2. Commit phan do tren nhanh dung bang tai khoan GitHub cua minh; xac nhan commit link hien ten tai khoan va file.
-3. Upload cung phan len thu muc Drive ca nhan va kiem tra lai link.
-4. Nguoi doc cheo ghi nhan xet cu the; tac gia sua va sau do Tin moi tich hop vao `main`.
-5. Chuyen trang thai sang `DA_NOP` chi khi co link commit va link Drive that. Chuyen sang `DA_DUYET` chi khi co xac nhan review noi dung cua nguoi co trach nhiem.
-
-Trang thai hien tai: `DANG_CHO_THANH_VIEN_TU_NOP`; chua the coi dot 3, dot 4 hoac bao cao tong la ho so nhom da duyet day du.
+Đợt 1/2 giữ nguyên hồ sơ lịch sử. Đợt 3 đang chuẩn bị cho nhóm đọc duyệt; chưa gửi mail trong lượt này. Chỉ gửi email sau khi ba bạn đọc, sửa, thống nhất đúng phiên bản và nhóm trưởng yêu cầu gửi.

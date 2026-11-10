@@ -1,6 +1,8 @@
 # TLCN NIDS - UNSW-NB15
 
-**30/10/2026 — Đợt 3:** [PDF 60 trang, nguồn và bằng chứng kiểm](docs/releases/dot_03/README.md). Bản chốt kỹ thuật đến 30/10; 46 test đạt, đủ 80 run, 174 dòng bảng đối chiếu khớp CSV; ZIP nguồn dựng lại khớp cả 60 trang. [Drive bản chốt](https://drive.google.com/drive/folders/1AyxVWgeJj9mZ0L_d0AVosxKS6IUpghbe) đã tải lại, đủ 14 tệp khớp SHA-256. Chưa gửi email/nộp, chưa xác nhận cả ba duyệt nội dung. Mốc 09/11; Tín tự gửi theo lời nhắc đã đặt.
+**Bản đọc đợt 3 cập nhật 10/11/2026:** [PDF 62 trang, nguồn và hướng dẫn nhóm đọc duyệt](docs/releases/review_dot3_20261110/README.md). Đã kiểm 174 dòng bảng, 200 liên kết nội bộ, 56 bookmark và các trang vừa sửa. Kết quả vẫn giữ mốc 30/10; phần ngày gửi đã phân biệt mốc nhóm cung cấp với thông báo gốc của giảng viên. [Drive đọc duyệt](https://drive.google.com/drive/folders/1ISRWybXz0efLyH4i4XsPZTvkQhQ48meA). Chờ cả ba đọc, sửa và chốt; chưa gửi mail trong lượt chuẩn bị này.
+
+**Bản lịch sử 30/10:** [PDF 60 trang và bằng chứng kiểm](docs/releases/dot_03/README.md), [Drive bản lịch sử](https://drive.google.com/drive/folders/1AyxVWgeJj9mZ0L_d0AVosxKS6IUpghbe). Giữ nguyên để đối chiếu; dùng bản 62 trang ở trên cho lượt đọc hiện tại. `main` là hồ sơ chung; [ba phần phân công](docs/group_delivery_20261110/README.md) ở `tramanh`, `vuongthu`, `trongtin`.
 
 **Bộ nháp ngày 25–26/10:** báo cáo đợt 4/tổng, slide và tài liệu đọc là tài liệu chuẩn bị cho bước sau. [Hướng dẫn nhóm](docs/management/BO_HO_SO_NHOM_20261025.md) và [trang tự đọc](docs/reading_20261026/BAT_DAU.html) giữ đúng mốc; bản đợt 3 hiện hành mở ở liên kết trên. Phần đợt 2 bên dưới là lịch sử.
 

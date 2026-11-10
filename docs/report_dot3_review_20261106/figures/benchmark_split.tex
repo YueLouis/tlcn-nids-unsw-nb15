@@ -1,0 +1,26 @@
+\begin{figure}[H]\centering
+\begin{tikzpicture}[>=Latex,
+  box/.style={draw=HCMUTEDark,rounded corners,fill=HCMUTELight,
+    text width=3.9cm,minimum height=1.3cm,align=center,
+    font=\fontsize{10.5pt}{13pt}\selectfont,inner sep=4pt},
+  arr/.style={->,thick},frozen/.style={->,thick,dashed,HCMUTEBlue}]
+\node[box,fill=DoneGreen!12] (raw) at (0,0) {1. Official train\\175.341 record};
+\node[box] (filter) at (5.25,0) {2. LOACO: loại held-out\\Không dùng metadata\\làm feature};
+\node[box] (split) at (10.5,0) {3. Chia 80/20\\Phân tầng theo\\\texttt{attack\_cat}};
+\node[box] (fit) at (0,-2.35) {4. Train 80\%\\Fit bộ biến đổi + model\\IF/AE: chỉ Normal};
+\node[box,fill=SoftGray] (model) at (5.25,-2.35) {Bộ biến đổi + model\\đã fit ở bước 4\\Giữ cố định};
+\node[box] (val) at (10.5,-2.35) {5. Validation 20\%\\Transform, score Normal\\6. Khóa ngưỡng 1\% / 5\%};
+\node[box,fill=DoneGreen!12] (test) at (0,-5.0) {Official test độc lập\\82.332 record\\Không fit, không chọn ngưỡng};
+\node[box] (eval) at (5.25,-5.0) {7. Transform, chấm test\\Dùng bộ biến đổi, model\\và ngưỡng đã cố định};
+\node[box] (metrics) at (10.5,-5.0) {8. Metric + tệp kết quả\\FPR, recall, UADR, AP};
+\draw[arr] (raw)--(filter);\draw[arr] (filter)--(split);
+\draw[arr] (split.south)--++(0,-.16)-| (fit.north);
+\draw[arr] ([xshift=12pt]split.south)--([xshift=12pt]val.north);
+\draw[frozen] (fit)--(model);\draw[frozen] (model)--(val);
+\draw[frozen] (model)--(eval);
+\draw[arr] (val.south)--++(0,-.52)-| ([xshift=33pt]eval.north);
+\node[font=\fontsize{9pt}{11pt}\selectfont,fill=white,inner sep=1pt] at (9.0,-3.67) {Ngưỡng đã khóa};
+\draw[arr] (test)--(eval);\draw[arr] (eval)--(metrics);
+\end{tikzpicture}
+\caption[Luồng benchmark và ranh giới dữ liệu]{Luồng benchmark và ranh giới dữ liệu. Nét liền là luồng dữ liệu/ngưỡng; nét đứt là bộ biến đổi và model đã fit. Validation chỉ chọn ngưỡng; official test đi vào độc lập, không có nhánh fit từ test.}\label{fig:benchmark}
+\end{figure}

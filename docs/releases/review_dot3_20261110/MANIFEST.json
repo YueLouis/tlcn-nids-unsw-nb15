@@ -1,0 +1,63 @@
+{
+  "prepared_at_utc": "2026-11-10T17:05:13.376959+00:00",
+  "status": "READY_FOR_GROUP_REVIEW",
+  "group_approval": "pending",
+  "email_sent_by_this_script": false,
+  "pdf_sha256": "a3a2cf6bc9a3345978db3b997a561c1015b1d2bcba4e695f27b7c0021ac37d90",
+  "pdf_pages": 62,
+  "zip_checks": {
+    "DOT3_NGUON_LATEX_20261110.zip": {
+      "crc_ok": true,
+      "pdf_parity": true,
+      "entries": 48
+    },
+    "DOT3_GOI_DOC_DUYET_20261110.zip": {
+      "crc_ok": true,
+      "pdf_parity": true,
+      "entries": 17
+    }
+  },
+  "source_files": 45,
+  "files": [
+    {
+      "name": "BAO_CAO_DOT3_CHO_NHOM_DUYET_20261110.pdf",
+      "bytes": 1751547,
+      "sha256": "a3a2cf6bc9a3345978db3b997a561c1015b1d2bcba4e695f27b7c0021ac37d90"
+    },
+    {
+      "name": "BAT_DAU.html",
+      "bytes": 4353,
+      "sha256": "43f80eb8fe4ec9fc92997f41e95b35ccd201dd107df94371c053e44c975473ad"
+    },
+    {
+      "name": "DELIVERY_TECHNICAL_CHECK.json",
+      "bytes": 16484,
+      "sha256": "3404be66cd6fdebb21f61bedcd3eb293b31cf4d22b2e5e4a55ae07903a011b28"
+    },
+    {
+      "name": "DOT3_GOI_DOC_DUYET_20261110.zip",
+      "bytes": 6605636,
+      "sha256": "1596fdfb3958cc7323b7f223956eee2551d7479a58be3cb840422e7da9b6931f"
+    },
+    {
+      "name": "DOT3_NGUON_LATEX_20261110.zip",
+      "bytes": 4970653,
+      "sha256": "47787eebcdd8a5cd2f8d87695337c951758fc2dc2e9be8f631fe48872c28c2bd"
+    },
+    {
+      "name": "README.md",
+      "bytes": 3867,
+      "sha256": "0ddd7011ea904da5292c1b47a067eef165b03e773dc9dfe86cd78970a8d19378"
+    },
+    {
+      "name": "REPORT_TABLE_CHECK.json",
+      "bytes": 5338,
+      "sha256": "d1dcba2c29e586a600321f28b59c0b718e4f988cd6b93e83869f0909c04f88a6"
+    },
+    {
+      "name": "VISUAL_REVIEW_20261110.json",
+      "bytes": 2056,
+      "sha256": "ac7f4cf86bbdc8f32ab21e57e6b4ade167af83ad741bc4eca0f53ef1deda1c11"
+    }
+  ]
+}

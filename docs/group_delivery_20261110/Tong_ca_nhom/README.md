@@ -1,11 +1,13 @@
-# Tong ca nhom
+# Tài liệu chung của nhóm
 
-Day la muc tai lieu chung. Ba bao cao ben duoi la ban de doc/ra soat, khong phai ba ban da duoc ca nhom duyet.
+Bản đọc đợt 3 hiện tại nằm tại [review_dot3_20261110](../../releases/review_dot3_20261110/README.md), PDF 62 trang, SHA-256 `a3a2cf6bc9a3345978db3b997a561c1015b1d2bcba4e695f27b7c0021ac37d90`.
 
-| Bao cao | Trang | Trang thai | SHA-256 |
-|---|---:|---|---|
-| Dot 3, ban ra soat 07/11 | 62 | Chua xac nhan nhom duyet; chua xac minh da gui email | `762C9F3E0DB3D73C8A6D2A9764E5D70694C74EB23CAD0E0971D60D3CF1EABEAE` |
-| Dot 4, ban nhap build 09/11 | 63 | Nhap local, chua nhom duyet, chua nop | `2418A29771E701F1FD3D39ADF8F4688D1609DD35C7F85E4BCCAB72B2511275BC` |
-| Tong, ban nhap build 09/11 | 57 | Nhap local, chua nhom duyet, chua nop | `3269509F6D6277ADF8ED605FC1C1A935D9F7C447E2F64DBF0C790F16D98D1BA0` |
+Các PDF giữ tại đây là bản lịch sử để đối chiếu:
 
-Nguoi tong hop va sap xep goi nay: Nguyen Trong Tin. Thay doi nay khong xac nhan Anh/Thu da tu viet, tu review hoac da commit.
+| Tệp | Trang | Ghi chú |
+|---|---:|---|
+| `BAO_CAO_DOT3_BAN_RA_SOAT_20261107.pdf` | 62 | Bản trước sửa cách dẫn nguồn ngày 09/11; dùng bản 10/11 cho lượt đọc mới |
+| `BAO_CAO_DOT4_NHAP_20261109.pdf` | 63 | Bản nháp riêng, chưa nhóm duyệt |
+| `BAO_CAO_TONG_NHAP_20261109.pdf` | 57 | Bản nháp riêng, chưa nhóm duyệt |
+
+`main` là nhánh chung. Chưa gửi mail trong lượt chuẩn bị này; chờ nhóm đọc, sửa và xác nhận phiên bản.
