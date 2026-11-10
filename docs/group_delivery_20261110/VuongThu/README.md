@@ -1,19 +1,17 @@
-# Phần phân công — Hoàng Văn Vương Thu
+# Phần Vương Thu — kết quả và phân tích lỗi
 
-Nhánh `vuongthu` lưu phần kết quả, FP/FN và đánh đổi khi thay ngưỡng của đợt 3. Hồ sơ chung của nhóm nằm trên nhánh `main`.
+Nhánh `vuongthu` lưu phần kết quả, FP/FN và đánh đổi khi thay ngưỡng của đợt 3. Hồ sơ chung nằm trên `main`.
 
-## Mở theo thứ tự
+## Tài liệu
 
 1. [Bản nháp kết quả và giải thích](DOT3_KET_QUA_BAN_NHAP.md).
-2. [CSV hai ví dụ LR-RF-S42](NGUON_VI_DU_THU.csv): so nhãn thật, score, threshold và dự đoán của ID 68699 cùng 975.
-3. [Metric trong mã nguồn](../../../src/nids_benchmark/evaluation.py) và [bảng hai target](../../reports/DOT_02_TWO_TARGETS.csv).
+2. [Hai ví dụ LR-RF-S42](NGUON_VI_DU_THU.csv): ID 68699 là FP, ID 975 là FN ở target validation 5%.
+3. [Hàm tính metric](../../../src/nids_benchmark/evaluation.py) và [bảng hai target](../../reports/DOT_02_TWO_TARGETS.csv).
 
 ## Trạng thái
 
-Trợ lý chuẩn bị và tải hồ sơ theo ủy quyền của nhóm bằng tài khoản được chủ tài khoản cho phép. Đây là bản nháp để Thu đọc và chỉnh; commit tải lên không chứng minh Thu đã tự viết, tự kiểm hoặc duyệt nội dung. Chưa có nhận xét đọc chéo của Tín; chưa phải bản nộp giảng viên.
+Bản nháp, chờ Thu đọc và chỉnh trước khi nhóm chốt nội dung. Hồ sơ được tải theo ủy quyền của nhóm. [Drive phần Thu](https://drive.google.com/drive/u/6/folders/1P7w0gHoP2ONR5SiHyxDc5lCzthSVadTV) đã có bản nháp và CSV; nội dung đã tải lại đối chiếu khớp bản GitHub ngày 10/11.
 
-## Thu bổ sung sau khi đọc
+## Khi đọc
 
-Ghi cụ thể file/dòng hoặc trang đã mở, giải thích một FP và một FN bằng lời mình, câu muốn sửa và điều chưa hiểu. Sửa ngay bản nháp trên nhánh `vuongthu`, dùng commit mô tả việc thực tế vừa làm. Tín đọc chéo, phản hồi cụ thể rồi mới tích hợp nội dung đã chốt vào `main`.
-
-Nếu tải cùng tệp lên Drive, dùng thư mục phần Thu trong hồ sơ chung; mở lại kiểm nội dung và ghi link thật. Hiện tệp này không xác nhận việc tải Drive đã hoàn tất.
+Ghi trang hoặc dòng nguồn đã đối chiếu, câu cần sửa và điều chưa hiểu. Giải thích hai ví dụ FP/FN bằng lời mình. Tín đọc chéo phần này; nhận xét và phiên bản chốt sẽ cập nhật sau khi nhóm thực hiện.
