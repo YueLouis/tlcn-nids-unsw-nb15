@@ -1,0 +1,19 @@
+{
+  "pdf_sha256": "0895c68f2642440f72d593fa66bd9d863f9e38be67c362ec8d377387741b7832",
+  "pages": 62,
+  "changed_pages_visually_inspected": [
+    1,
+    2,
+    4,
+    8,
+    17,
+    36,
+    37,
+    38,
+    58,
+    61
+  ],
+  "unchanged_pages_raster_equal": 52,
+  "reference": "docs/evidence/dot_03/recheck_20261110/release_review/VISUAL_REVIEW_20261110.json",
+  "observations": "Changed pages viewed in two contact sheets; cover, version table, text, PR figure and appendix fit within margins. Numeric tables unchanged. Geometry has no spans outside pages. Human member review remains separate."
+}

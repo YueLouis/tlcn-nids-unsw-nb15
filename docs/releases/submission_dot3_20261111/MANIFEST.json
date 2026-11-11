@@ -1,0 +1,40 @@
+{
+  "prepared_at_utc": "2026-11-11T07:17:47.299371+00:00",
+  "status": "TECHNICALLY_CHECKED_PROGRESS_REPORT",
+  "group_leader_authorized_email": true,
+  "full_member_review_verified": false,
+  "email_status": "NOT_SENT_IN_THIS_PACKAGING_STEP",
+  "pdf_pages": 62,
+  "files": [
+    {
+      "name": "DELIVERY_TECHNICAL_CHECK.json",
+      "bytes": 16488,
+      "sha256": "3e9e9ae6d548f61c0d5ed053d4be3f3dc4a163dd0cda592496a338bd94679f92"
+    },
+    {
+      "name": "Nguon_Bao_cao_dot3_20261111.zip",
+      "bytes": 3361600,
+      "sha256": "f738be222ed94cbeeb63463121a19b931a1143786a8354260c5faaf14dc6fcc4"
+    },
+    {
+      "name": "NhomTLCN_TramAnh_VuongThu_TrongTin_dot3_20261111.pdf",
+      "bytes": 1750496,
+      "sha256": "0895c68f2642440f72d593fa66bd9d863f9e38be67c362ec8d377387741b7832"
+    },
+    {
+      "name": "README.md",
+      "bytes": 1462,
+      "sha256": "17759452f97b5d8e48758d7e12e1129117d42a55c4f38e0141d6598d52c9d1a1"
+    },
+    {
+      "name": "REPORT_TABLE_CHECK.json",
+      "bytes": 5342,
+      "sha256": "ed6d2e9943440a90e434f65d5444e59023642211e92a780d8f79b8ce37c33ae7"
+    },
+    {
+      "name": "SOURCE_REBUILD.json",
+      "bytes": 466,
+      "sha256": "6acde0f3655717cd608a2fed223600cdd9f6c7d360a0045a12107257c7622c52"
+    }
+  ]
+}

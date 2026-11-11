@@ -1,0 +1,13 @@
+{
+  "verified_at_utc": "2026-11-11T07:17:47.264672+00:00",
+  "source_entries": 45,
+  "zip_crc_ok": true,
+  "source_hashes_match": true,
+  "rebuild_passes": 3,
+  "pages": 62,
+  "text_equal_all_pages": true,
+  "raster_equal_pages_at_96_dpi": 62,
+  "binary_equal": false,
+  "original_pdf_sha256": "0895c68f2642440f72d593fa66bd9d863f9e38be67c362ec8d377387741b7832",
+  "rebuilt_pdf_sha256": "c3091e1d0873fd429bce57ab2d952e478cdf747f41b774e3873c815fd877c21a"
+}

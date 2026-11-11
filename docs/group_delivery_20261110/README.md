@@ -1,23 +1,18 @@
-# Hồ sơ chung và ba phần phân công
+# Hồ sơ tổng hợp và ba phần phụ trách
 
-Bản để đọc đợt 3 hiện tại: [mở hướng dẫn và PDF 62 trang](../releases/review_dot3_20261110/README.md). Bản này đã sửa cách dẫn nguồn ngày 09/11 và kiểm lại ngày 10/11. `main` là hồ sơ chung của nhóm.
+`main` là phần tổng của nhóm. Ba nhánh còn lại lưu hồ sơ theo phân công; mỗi nhánh có trang mở đầu riêng, phần chuyên môn, bảng/ảnh và gói mã kèm nguồn truy vết.
 
-| Nhánh | Phần | Người phụ trách |
-|---|---|---|
-| `tramanh` | [Dữ liệu, chia tập và giới hạn](https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/tramanh/docs/group_delivery_20261110/TramAnh) | Trịnh Trâm Anh |
-| `vuongthu` | [Metric, hai ví dụ FP/FN, ngưỡng](https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/vuongthu/docs/group_delivery_20261110/VuongThu) | Hoàng Văn Vương Thu |
-| `trongtin` | [Protocol, demo và tích hợp](https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/trongtin/docs/group_delivery_20261110/TrongTin) | Nguyễn Trọng Tín |
+| Phần | Tài khoản nộp | Nội dung | Drive |
+|---|---|---|---|
+| [Tổng nhóm](https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/main) | YueLouis, đại diện nhóm | Báo cáo tích lũy, protocol, mã tích hợp và bộ phát hành | [main](https://drive.google.com/drive/folders/1Qwx3tQCd5kPXtYwP_0sc2_hluz6Erj2R) |
+| [Trâm Anh](https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/tramanh) | tta2405 | Dữ liệu, nguồn học thuật, chia tập và giới hạn benchmark | [TramAnh](https://drive.google.com/drive/folders/1irSmdeRNb9CpduOqoDrgvhfj87vkgQQ_) |
+| [Vương Thu](https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/vuongthu) | hoangvvthu | IF/AE, metric, ngưỡng, kết quả và phân tích lỗi | [VuongThu](https://drive.google.com/drive/folders/1P7w0gHoP2ONR5SiHyxDc5lCzthSVadTV) |
+| [Trọng Tín](https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/trongtin) | YueLouis | Pipeline, RF/XGB, tái lập, demo và tích hợp | [TrongTin](https://drive.google.com/drive/folders/1DjfTb9KOFXn4lqTEsGIJkMF9adWMGoLL) |
 
-Bản nháp phân công đã được trợ lý chuẩn bị/tải theo ủy quyền qua các tài khoản được cho phép. Lịch sử tải hồ sơ và nhận xét nội dung là hai việc riêng: sau khi đọc, mỗi bạn bổ sung trang/file đã mở, câu cần sửa, ví dụ tự giải thích và nhận xét đọc chéo. Chưa ghi cả nhóm đã duyệt trước khi có xác nhận thực tế.
+[Báo cáo tiến độ đợt 3 ngày 11/11/2026](../releases/submission_dot3_20261111/README.md) giữ kết quả chốt 30/10. Các bản đọc trước và hồ sơ đã gửi đợt 1–2 được giữ nguyên để đối chiếu.
 
-Đọc chéo: Thu đọc phần Anh; Tín đọc phần Thu; Anh đọc phần Tín. Người viết cập nhật bản nháp trên nhánh của mình; Tín tổng hợp góp ý đã thống nhất vào `main`. Commit mô tả việc thực tế vừa đổi. Có thể tự thao tác hoặc ủy quyền thao tác tải; ghi đúng người đã chuẩn bị và người đã đọc/sửa.
+Trong từng phần, `QUA_TRINH_CAC_DOT.md` nối phân công với tài liệu đợt 1, 2, 3 và phần tiếp nối. `CHI_MUC_NGUON.csv` ghi đường dẫn gốc và SHA-256. ZIP có mã, kiểm thử và cấu hình theo đường dẫn gốc, không tách một tệp Python khỏi phụ thuộc. Raw, model và prediction nặng lưu ở Drive dùng chung.
 
-## Khi muốn sửa trên GitHub
+Hồ sơ cá nhân bổ sung ngày 11/11 không chứng minh đã có commit cá nhân ở đợt 1–2. Phản hồi của thầy ngày 31/10 và lịch sử tác giả được giữ nguyên. Phân công là phạm vi chịu trách nhiệm; tài liệu/mã dùng chung có công cụ hỗ trợ không tự thành sản phẩm độc lập do một thành viên viết. Thao tác tải theo ủy quyền và việc thành viên tự đọc, sửa, nhận xét được phân biệt rõ.
 
-Đăng nhập đúng tài khoản → chọn đúng nhánh → mở tệp trong thư mục của mình → bấm biểu tượng bút chì → sửa nội dung → **Commit changes**. Mở commit mới để kiểm tên tài khoản, nhánh, tệp và nội dung. Nếu chỉ đọc và chưa sửa, ghi nhận xét đọc trong `docs/evidence/dot_03/member_work/`; không tạo sửa đổi rỗng để làm lịch sử.
-
-## Drive và bản gửi
-
-Drive chung có một phần `main` và ba phần `TramAnh`, `VuongThu`, `TrongTin` trong thư mục rà soát đợt 3. Các tệp đồng bộ cần khớp nội dung với GitHub, dùng đúng tài khoản đã được cho phép. Gói đọc hiện tại chứa PDF, nguồn và tài liệu đối chiếu; các PDF đợt 4/tổng ở `Tong_ca_nhom` vẫn là bản nháp riêng.
-
-Đợt 1/2 giữ nguyên hồ sơ lịch sử. Đợt 3 đang chuẩn bị cho nhóm đọc duyệt; chưa gửi mail trong lượt này. Chỉ gửi email sau khi ba bạn đọc, sửa, thống nhất đúng phiên bản và nhóm trưởng yêu cầu gửi.
+Đợt 4, báo cáo tổng và bộ bảo vệ đang được hoàn thiện. Bản nháp không được tính là bản đã nộp hoặc nghiệm thu. Trạng thái gửi thư đợt 3 được lưu riêng theo biên nhận thực tế.

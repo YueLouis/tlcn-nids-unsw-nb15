@@ -158,10 +158,12 @@ def main():
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--source', type=Path, default=SRC)
     parser.add_argument('--build', type=Path, default=BUILD)
     parser.add_argument('--output', type=Path, default=OUT)
     parser.add_argument('--plot-inputs', type=Path, default=PLOT_INPUTS)
     args = parser.parse_args()
+    SRC = args.source.resolve()
     BUILD = args.build.resolve()
     OUT = args.output.resolve()
     PLOT_INPUTS = args.plot_inputs.resolve()
