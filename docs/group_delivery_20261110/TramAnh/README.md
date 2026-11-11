@@ -1,9 +1,10 @@
-# Phan ca nhan: Trinh Tram Anh
+# Trịnh Trâm Anh — hồ sơ chuyên môn
 
-Phan duoc phan cong: du lieu, nguon hoc thuat va gioi han benchmark.
+**Phụ trách:** dữ liệu, nguồn học thuật và giới hạn benchmark. Nhánh `tramanh`, tài khoản `tta2405`. Bản tổng hợp của nhóm ở [main](https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/main).
 
-Nop tren nhanh `tramanh`, tai duong dan `docs/evidence/dot_03/member_work/tram_anh/ANH_DU_LIEU_VA_GIOI_HAN.md`. Mo PDF dot 3 trang 21–22 va manifest; tu giai thich 45 cot/42 feature, cach chia train-validation-test va mot gioi han overlap. Ghi file/trang da tu mo, dieu chua chac va phan em muon sua. Sau do tu commit bang tai khoan GitHub cua minh.
+- [Phần chuyên môn và kết luận](PHAN_CHUYEN_MON.md)
+- [Phạm vi xuyên suốt các đợt](QUA_TRINH_CAC_DOT.md)
+- [Chỉ mục nguồn và SHA-256](CHI_MUC_NGUON.csv)
+- [Gói mã, kiểm thử và bằng chứng theo đường dẫn gốc](HO_SO_TRAMANH_20261111.zip)
 
-De commit: vao repo, chon nhanh `tramanh`, chon **Add file > Create new file**, nhap duong dan tren, dan bai em tu viet, bam **Commit changes**. Mo commit vua tao de kiem nhanh, ten tai khoan, ten file va noi dung. Sau do upload cung file vao Drive `Bai_ca_nhan/tram_anh/`, mo lai kiem va gui ca hai link vao nhom.
-
-Trang thai: `CHO_ANH_TU_DOC_VA_NOP`; hien chua co bai ca nhan hoac commit rieng cua Anh. README nay chi la huong dan do Tin chuan bi, khong phai dong gop cua Anh.
+Các CSV/ảnh trong thư mục mở trực tiếp được; ZIP giữ thêm mã và phụ thuộc dùng chung. Kết quả thực nghiệm giữ mốc 30/10, hồ sơ được bổ sung ngày 11/11/2026. Mã/tài liệu lịch sử giữ nguồn; việc tải theo ủy quyền không thay xác nhận phần tự đọc, sửa hay đóng góp của thành viên.

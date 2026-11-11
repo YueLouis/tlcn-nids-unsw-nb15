@@ -1,6 +1,8 @@
 # TLCN NIDS - UNSW-NB15
 
-**Bản đọc đợt 3 cập nhật 10/11/2026:** [PDF 62 trang, nguồn và hướng dẫn nhóm đọc duyệt](docs/releases/review_dot3_20261110/README.md). Đã kiểm 174 dòng bảng, 200 liên kết nội bộ, 56 bookmark và các trang vừa sửa. Kết quả vẫn giữ mốc 30/10; phần ngày gửi đã phân biệt mốc nhóm cung cấp với thông báo gốc của giảng viên. [Drive đọc duyệt](https://drive.google.com/drive/folders/1ISRWybXz0efLyH4i4XsPZTvkQhQ48meA). Chờ cả ba đọc, sửa và chốt; chưa gửi mail trong lượt chuẩn bị này.
+**Báo cáo tiến độ đợt 3 ngày 11/11/2026:** [PDF 62 trang, nguồn XeLaTeX và bằng chứng kiểm](docs/releases/submission_dot3_20261111/README.md). Giữ kết quả chốt 30/10; đã kiểm 46 test, 174 dòng bảng và biên dịch lại ZIP nguồn trong thư mục mới. `main` là tổng nhóm; [bảng bốn phần và tài khoản phụ trách](docs/group_delivery_20261110/README.md) dẫn sang `tramanh`, `vuongthu`, `trongtin`, có phần chuyên môn, CSV/ảnh và mã kèm nguồn. Trạng thái gửi email được lưu riêng khi có biên nhận; kiểm kỹ thuật không thay lượt đọc chéo hoặc nghiệm thu của thành viên.
+
+**Bản đọc ngày 10/11:** [giữ riêng trong lịch sử](docs/releases/review_dot3_20261110/README.md).
 
 **Bản lịch sử 30/10:** [PDF 60 trang và bằng chứng kiểm](docs/releases/dot_03/README.md), [Drive bản lịch sử](https://drive.google.com/drive/folders/1AyxVWgeJj9mZ0L_d0AVosxKS6IUpghbe). Giữ nguyên để đối chiếu; dùng bản 62 trang ở trên cho lượt đọc hiện tại. `main` là hồ sơ chung; [ba phần phân công](docs/group_delivery_20261110/README.md) ở `tramanh`, `vuongthu`, `trongtin`.
 
