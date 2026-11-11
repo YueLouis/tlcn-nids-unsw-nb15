@@ -1,0 +1,3 @@
+record_id,run_id,split,attack_cat,evaluation_role,y_true,score,target_fpr,threshold,y_pred
+1,CS-RF-S42,official_test,Normal,normal,0,0.70574127072966075,0.01,0.80536725511544849,0
+1,CS-RF-S42,official_test,Normal,normal,0,0.70574127072966075,0.050000000000000003,0.55728168674827427,1

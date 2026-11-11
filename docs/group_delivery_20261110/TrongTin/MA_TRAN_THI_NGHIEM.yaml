@@ -1,0 +1,39 @@
+protocol_version: "1.0-draft"
+dataset: "UNSW-NB15"
+
+official_splits:
+  train: "UNSW_NB15_training-set.csv"
+  test: "UNSW_NB15_testing-set.csv"
+
+scenarios:
+  - id: "closed_set"
+    code: "CS"
+    heldout_class: null
+  - id: "loaco_reconnaissance"
+    code: "LR"
+    heldout_class: "Reconnaissance"
+  - id: "loaco_dos"
+    code: "LD"
+    heldout_class: "DoS"
+  - id: "loaco_exploits"
+    code: "LE"
+    heldout_class: "Exploits"
+
+models:
+  - id: "random_forest"
+    code: "RF"
+    family: "supervised"
+  - id: "xgboost"
+    code: "XGB"
+    family: "supervised"
+  - id: "isolation_forest"
+    code: "IF"
+    family: "anomaly"
+  - id: "autoencoder"
+    code: "AE"
+    family: "anomaly"
+
+seeds: [42, 52, 62, 72, 82]
+threshold_fpr_targets: [0.01, 0.05]
+score_direction: "higher_means_more_attack_like"
+forbidden_features: ["id", "label", "attack_cat"]

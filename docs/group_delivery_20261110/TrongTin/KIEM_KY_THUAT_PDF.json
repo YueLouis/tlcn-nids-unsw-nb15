@@ -1,0 +1,611 @@
+{
+  "checked_at_utc": "2026-11-11T07:11:30.766350+00:00",
+  "pdf_sha256": "0895c68f2642440f72d593fa66bd9d863f9e38be67c362ec8d377387741b7832",
+  "pdf_pages": 62,
+  "tex_resources_checked": [
+    {
+      "source": "dot3_analysis_20261025.tex",
+      "resource": "status_20261030.tex",
+      "sha256": "e078ab0f68c578a92aa87af71802692406ec16dfbf69bd23071982614e362e64"
+    },
+    {
+      "source": "dot3_analysis_20261025.tex",
+      "resource": "assets/dot3_20261025/PR_LR_normal_vs_heldout_S42.png",
+      "sha256": "d8b65f9db99116b0b36ed7515e18924302e01fc2af0ae0edf7d9eb15a9637573"
+    },
+    {
+      "source": "dot3_analysis_20261025.tex",
+      "resource": "assets/dot3_20261025/SCORE_ECDF_LR_S42.pdf",
+      "sha256": "b34f99e974c1798030caaf4fe5cad2d10161af286431a7a6764d26548656d6c4"
+    },
+    {
+      "source": "dot3_analysis_20261025.tex",
+      "resource": "assets/dot3_20261025/OVERLAP_SLICES.png",
+      "sha256": "183630c0698a28b408f5eae6c6487dde9f455558799c32b4b2157461b2f5f498"
+    },
+    {
+      "source": "dot3_analysis_20261025.tex",
+      "resource": "assets/dot3_20261025/FEATURES_CS.png",
+      "sha256": "3b7bf90edec4bc71deea9d37a4408ec69fa0233f064089f72c113b1f84423ab8"
+    },
+    {
+      "source": "dot3_analysis_20261025.tex",
+      "resource": "assets/dot3_20261025/FEATURES_LR.png",
+      "sha256": "2029ecbaf124e183e5329fb97cf2d54e83ad4d118f219d264ca4543b0ed9e5c2"
+    },
+    {
+      "source": "dot3_analysis_20261025.tex",
+      "resource": "final_diagnostics.tex",
+      "sha256": "b1715b84dd71c7d635007cb79da6cbd8e0fa44a270c6cd7d82efe399f9611010"
+    },
+    {
+      "source": "dot3_analysis_20261025.tex",
+      "resource": "conclusion_20261030.tex",
+      "sha256": "f3b3eac58cb731b829e69fb8e0961c6bbc3dd6c8b01eaa74cb72640662a8b5fe"
+    },
+    {
+      "source": "final_diagnostics.tex",
+      "resource": "assets/final_diagnostics/UADR_BOTH_TARGETS.png",
+      "sha256": "964cf4bdc8a054a25a7ff3021f9c47d9c0b504e744aedd2ef44db3517dc4adb9"
+    },
+    {
+      "source": "final_diagnostics.tex",
+      "resource": "assets/final_diagnostics/TRADEOFF_KNOWN_RECALL.pdf",
+      "sha256": "c1f9efe06ec199ddb19bdc28201c31332b63a6ca606698df81e54501c2876ae6"
+    },
+    {
+      "source": "final_diagnostics.tex",
+      "resource": "assets/final_diagnostics/TRADEOFF_UADR.pdf",
+      "sha256": "759400dabc984923fac9eb40cd1563b2d482691334cb4c830b41d9d16ab1c075"
+    },
+    {
+      "source": "final_diagnostics.tex",
+      "resource": "assets/final_diagnostics/CONFUSION_CS_LR_S42.pdf",
+      "sha256": "e2a8db0980b64bcbbc2f3084fd5c491c5630cb3a83af11ca6f5441e7a96e9b5a"
+    },
+    {
+      "source": "final_diagnostics.tex",
+      "resource": "assets/final_diagnostics/CONFUSION_LD_LE_S42.pdf",
+      "sha256": "6e44e7cd29a21d7e813d02b6f250392a93374f01e93fc56976558ab81f8d237a"
+    },
+    {
+      "source": "final_diagnostics.tex",
+      "resource": "assets/final_diagnostics/CATEGORY_DETECTION_HEATMAP.png",
+      "sha256": "8bfc1fd45ef3485b03a3ba5f12903acfa37266ee1a569fb89a778082af80e032"
+    },
+    {
+      "source": "final_diagnostics.tex",
+      "resource": "assets/final_diagnostics/SEED_STABILITY.png",
+      "sha256": "7afed1d068493534d0051637f97044202d5508a156174f0debe054136f447ebd"
+    },
+    {
+      "source": "final_diagnostics.tex",
+      "resource": "assets/dot3_20261025/PR_CS_all_S42.png",
+      "sha256": "7757de9aaa4059911d89e5329905eca479151a1565483b4da76b5fef82886457"
+    },
+    {
+      "source": "final_diagnostics.tex",
+      "resource": "assets/dot3_20261025/SCORE_ECDF_LD_S42.pdf",
+      "sha256": "14fde22ea334d7c7db997318240211f2f63508e52477c03ec9eb88d306770bb3"
+    },
+    {
+      "source": "final_diagnostics.tex",
+      "resource": "assets/dot3_20261025/SCORE_ECDF_LE_S42.pdf",
+      "sha256": "1993554a97ff920f2e0490daeda8b44b6e4f21886bcf649b2f03e045735c0cd1"
+    },
+    {
+      "source": "final_diagnostics.tex",
+      "resource": "assets/final_diagnostics/FP_GROUPS_CS.png",
+      "sha256": "76f82e949e78643887d0cf740e3fa6c6e87df95411f78ed63134ae4e4d778098"
+    },
+    {
+      "source": "final_diagnostics.tex",
+      "resource": "assets/final_diagnostics/FN_GROUPS_LR.png",
+      "sha256": "ab5b694226dd7a7fd35dbb7f637a21c8412afbb595e77f2d204c94948490db99"
+    },
+    {
+      "source": "main.tex",
+      "resource": "assets/logo_fithcmute.png",
+      "sha256": "5358a6fa38328929ef57c9286ff31fdc6e3f946a7532d236f26e6f9739caca12"
+    },
+    {
+      "source": "main.tex",
+      "resource": "figures/nids_concept.tex",
+      "sha256": "00b3b2d0d16ebff731c4da8ed0952d3d080ba1e8c7f446cc1579b27ff1f92396"
+    },
+    {
+      "source": "main.tex",
+      "resource": "model_mechanisms.tex",
+      "sha256": "415f304eff33ca9fd9226363ee6cd6646072b1a8c59be343b748ea06841f5b13"
+    },
+    {
+      "source": "main.tex",
+      "resource": "related_work_comparison.tex",
+      "sha256": "da4676f64aa9fb895f55315ad9ce56bf52de3b722117f33fb9ee5928b20285d5"
+    },
+    {
+      "source": "main.tex",
+      "resource": "figures/gantt_plan.tex",
+      "sha256": "8034ac76189937b200d5a3aa08f2c5f2decb99bfc11c91e1d781477f23d5a88b"
+    },
+    {
+      "source": "main.tex",
+      "resource": "figures/benchmark_split.tex",
+      "sha256": "6b4b6641a4a110b4f18b64b05b2971a9c456fd5b70093584023d2137c6133a90"
+    },
+    {
+      "source": "main.tex",
+      "resource": "rq3_two_targets.tex",
+      "sha256": "6374b56668fa3236d169e44a4f7370a8fe37b0e65266db66da1c0a7c19e6570b"
+    },
+    {
+      "source": "main.tex",
+      "resource": "assets/final_20261013/closed_set_fpr.png",
+      "sha256": "85b56de6b861ff1993e718e7c6bb7a8921cde531c58e5352e8b71ab2e0f0e2a1"
+    },
+    {
+      "source": "main.tex",
+      "resource": "assets/final_20261013/loaco_uadr.png",
+      "sha256": "5b6f3e22b9b417f3d00cff881a7732737925f64a9dbdae56dfc779c2dd12a755"
+    },
+    {
+      "source": "main.tex",
+      "resource": "dot3_analysis_20261025.tex",
+      "sha256": "b97a23f1236f4266caf5d49d5ffb21f29c8ca2c17c87f28088b117ed1fead5df"
+    }
+  ],
+  "appendix_paths_checked": [
+    {
+      "path": "docs/report_dot3_submission_20261111/main.tex",
+      "exists": true
+    },
+    {
+      "path": "docs/evidence/dot_03/final_20261030/",
+      "exists": true
+    },
+    {
+      "path": "docs/evidence/dot_03/features_20261025/",
+      "exists": true
+    },
+    {
+      "path": "docs/evidence/dot_03/final_diagnostics_20261025/",
+      "exists": true
+    },
+    {
+      "path": "demo/",
+      "exists": true
+    },
+    {
+      "path": "output/pdf/NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf",
+      "exists": true
+    },
+    {
+      "path": "docs/report_cumulative/BAO_CAO_TLCN_TICH_LUY_DOT_02.tex",
+      "exists": true
+    },
+    {
+      "path": "docs/reports/DOT_02_METRICS_ALL_RUNS.csv",
+      "exists": true
+    },
+    {
+      "path": "docs/reports/DOT_02_METRICS_MEAN_STD.csv",
+      "exists": true
+    },
+    {
+      "path": "artifacts/data/data_manifest.json",
+      "exists": true
+    },
+    {
+      "path": "artifacts/data/duplicate_overlap_audit.json",
+      "exists": true
+    },
+    {
+      "path": "results/runs/<run-id>/",
+      "run_directories": 80
+    },
+    {
+      "path": "docs/evidence/dot_02/final_20261013/",
+      "exists": true
+    },
+    {
+      "path": "docs/reports/DOT_02_TWO_TARGETS.csv",
+      "exists": true
+    },
+    {
+      "path": "docs/evidence/dot_02/category_errors_20261014/",
+      "exists": true
+    },
+    {
+      "path": "docs/references/RELATED_WORK_MATRIX_DOT_02.csv",
+      "exists": true
+    },
+    {
+      "path": "docs/references/SOURCE_PASSAGE_EVIDENCE_20261014.json",
+      "exists": true
+    },
+    {
+      "path": "scripts/check_dot2_final.py",
+      "exists": true
+    },
+    {
+      "path": "docs/protocol/GATE_1_CHECKLIST.md",
+      "exists": true
+    },
+    {
+      "path": "docs/protocol/GATE_2_CHECKLIST.md",
+      "exists": true
+    }
+  ],
+  "plot_inputs_hashes_checked": 29,
+  "internal_links_checked": 200,
+  "bookmark_destinations_checked": 56,
+  "index_internal_links_checked": 58,
+  "index_entries_match_caption_destination": [
+    {
+      "caption": "Bảng 1.1",
+      "pdf_page": 10,
+      "destination": "table.caption.5"
+    },
+    {
+      "caption": "Bảng 2.1",
+      "pdf_page": 14,
+      "destination": "table.caption.8"
+    },
+    {
+      "caption": "Bảng 2.2",
+      "pdf_page": 15,
+      "destination": "table.caption.9"
+    },
+    {
+      "caption": "Bảng 3.1",
+      "pdf_page": 16,
+      "destination": "table.3.1"
+    },
+    {
+      "caption": "Bảng 3.2",
+      "pdf_page": 17,
+      "destination": "table.caption.11"
+    },
+    {
+      "caption": "Bảng 3.3",
+      "pdf_page": 18,
+      "destination": "table.3.3"
+    },
+    {
+      "caption": "Bảng 3.4",
+      "pdf_page": 19,
+      "destination": "table.3.4"
+    },
+    {
+      "caption": "Bảng 4.1",
+      "pdf_page": 21,
+      "destination": "table.4.1"
+    },
+    {
+      "caption": "Bảng 4.2",
+      "pdf_page": 21,
+      "destination": "table.4.2"
+    },
+    {
+      "caption": "Bảng 5.1",
+      "pdf_page": 23,
+      "destination": "table.5.1"
+    },
+    {
+      "caption": "Bảng 5.2",
+      "pdf_page": 24,
+      "destination": "table.caption.13"
+    },
+    {
+      "caption": "Bảng 6.1",
+      "pdf_page": 25,
+      "destination": "table.6.1"
+    },
+    {
+      "caption": "Bảng 6.2",
+      "pdf_page": 26,
+      "destination": "table.6.2"
+    },
+    {
+      "caption": "Bảng 6.3",
+      "pdf_page": 26,
+      "destination": "table.6.3"
+    },
+    {
+      "caption": "Bảng 6.4",
+      "pdf_page": 27,
+      "destination": "table.6.4"
+    },
+    {
+      "caption": "Bảng 6.5",
+      "pdf_page": 27,
+      "destination": "table.6.5"
+    },
+    {
+      "caption": "Bảng 7.1",
+      "pdf_page": 28,
+      "destination": "table.7.1"
+    },
+    {
+      "caption": "Bảng 7.2",
+      "pdf_page": 29,
+      "destination": "table.7.2"
+    },
+    {
+      "caption": "Bảng 7.3",
+      "pdf_page": 30,
+      "destination": "table.caption.14"
+    },
+    {
+      "caption": "Bảng 7.4",
+      "pdf_page": 31,
+      "destination": "table.7.4"
+    },
+    {
+      "caption": "Bảng 7.5",
+      "pdf_page": 32,
+      "destination": "table.7.5"
+    },
+    {
+      "caption": "Bảng 7.6",
+      "pdf_page": 34,
+      "destination": "table.7.6"
+    },
+    {
+      "caption": "Bảng 9.1",
+      "pdf_page": 36,
+      "destination": "table.9.1"
+    },
+    {
+      "caption": "Bảng 9.2",
+      "pdf_page": 37,
+      "destination": "table.9.2"
+    },
+    {
+      "caption": "Bảng 9.3",
+      "pdf_page": 40,
+      "destination": "table.9.3"
+    },
+    {
+      "caption": "Bảng 9.4",
+      "pdf_page": 40,
+      "destination": "table.9.4"
+    },
+    {
+      "caption": "Bảng 9.5",
+      "pdf_page": 42,
+      "destination": "table.9.5"
+    },
+    {
+      "caption": "Bảng 9.6",
+      "pdf_page": 52,
+      "destination": "table.9.6"
+    },
+    {
+      "caption": "Bảng 9.7",
+      "pdf_page": 55,
+      "destination": "table.9.7"
+    },
+    {
+      "caption": "Bảng 9.8",
+      "pdf_page": 55,
+      "destination": "table.9.8"
+    },
+    {
+      "caption": "Bảng 9.9",
+      "pdf_page": 56,
+      "destination": "table.9.9"
+    },
+    {
+      "caption": "Bảng 9.10",
+      "pdf_page": 56,
+      "destination": "table.9.10"
+    },
+    {
+      "caption": "Bảng A.1",
+      "pdf_page": 60,
+      "destination": "table.caption.36"
+    },
+    {
+      "caption": "Bảng B.1",
+      "pdf_page": 61,
+      "destination": "table.B.1"
+    },
+    {
+      "caption": "Bảng C.1",
+      "pdf_page": 62,
+      "destination": "table.C.1"
+    },
+    {
+      "caption": "Hình 2.1",
+      "pdf_page": 11,
+      "destination": "figure.caption.6"
+    },
+    {
+      "caption": "Hình 2.2",
+      "pdf_page": 13,
+      "destination": "figure.caption.7"
+    },
+    {
+      "caption": "Hình 3.1",
+      "pdf_page": 17,
+      "destination": "figure.caption.10"
+    },
+    {
+      "caption": "Hình 5.1",
+      "pdf_page": 23,
+      "destination": "figure.caption.12"
+    },
+    {
+      "caption": "Hình 7.1",
+      "pdf_page": 33,
+      "destination": "figure.caption.15"
+    },
+    {
+      "caption": "Hình 7.2",
+      "pdf_page": 33,
+      "destination": "figure.caption.16"
+    },
+    {
+      "caption": "Hình 9.1",
+      "pdf_page": 38,
+      "destination": "figure.caption.17"
+    },
+    {
+      "caption": "Hình 9.2",
+      "pdf_page": 39,
+      "destination": "figure.caption.18"
+    },
+    {
+      "caption": "Hình 9.3",
+      "pdf_page": 42,
+      "destination": "figure.caption.19"
+    },
+    {
+      "caption": "Hình 9.4",
+      "pdf_page": 43,
+      "destination": "figure.caption.20"
+    },
+    {
+      "caption": "Hình 9.5",
+      "pdf_page": 43,
+      "destination": "figure.caption.21"
+    },
+    {
+      "caption": "Hình 9.6",
+      "pdf_page": 44,
+      "destination": "figure.caption.22"
+    },
+    {
+      "caption": "Hình 9.7",
+      "pdf_page": 44,
+      "destination": "figure.caption.23"
+    },
+    {
+      "caption": "Hình 9.8",
+      "pdf_page": 45,
+      "destination": "figure.caption.24"
+    },
+    {
+      "caption": "Hình 9.9",
+      "pdf_page": 46,
+      "destination": "figure.caption.25"
+    },
+    {
+      "caption": "Hình 9.10",
+      "pdf_page": 47,
+      "destination": "figure.caption.26"
+    },
+    {
+      "caption": "Hình 9.11",
+      "pdf_page": 48,
+      "destination": "figure.caption.27"
+    },
+    {
+      "caption": "Hình 9.12",
+      "pdf_page": 49,
+      "destination": "figure.caption.28"
+    },
+    {
+      "caption": "Hình 9.13",
+      "pdf_page": 50,
+      "destination": "figure.caption.29"
+    },
+    {
+      "caption": "Hình 9.14",
+      "pdf_page": 51,
+      "destination": "figure.caption.30"
+    },
+    {
+      "caption": "Hình 9.15",
+      "pdf_page": 52,
+      "destination": "figure.caption.31"
+    },
+    {
+      "caption": "Hình 9.16",
+      "pdf_page": 53,
+      "destination": "figure.caption.32"
+    },
+    {
+      "caption": "Hình 9.17",
+      "pdf_page": 54,
+      "destination": "figure.caption.33"
+    }
+  ],
+  "compile_errors_or_blocking_warnings": [],
+  "underfull_hboxes": 9,
+  "raw_test_support_checked": true,
+  "near_threshold_raw_traces": [
+    {
+      "run_id": "LR-IF-S42",
+      "record_id": 6577,
+      "target_fpr": 0.05,
+      "y_true": 1,
+      "score": 0.006745878043920128,
+      "threshold": 0.007059280168501103,
+      "y_pred": 0,
+      "outcome": "FN",
+      "closest_in_role": true
+    },
+    {
+      "run_id": "LR-IF-S42",
+      "record_id": 75704,
+      "target_fpr": 0.05,
+      "y_true": 0,
+      "score": 0.007066575964380761,
+      "threshold": 0.007059280168501103,
+      "y_pred": 1,
+      "outcome": "FP",
+      "closest_in_role": true
+    },
+    {
+      "run_id": "LR-RF-S42",
+      "record_id": 975,
+      "target_fpr": 0.05,
+      "y_true": 1,
+      "score": 0.5564913190799305,
+      "threshold": 0.5568126657452455,
+      "y_pred": 0,
+      "outcome": "FN",
+      "closest_in_role": true
+    },
+    {
+      "run_id": "LR-RF-S42",
+      "record_id": 68699,
+      "target_fpr": 0.05,
+      "y_true": 0,
+      "score": 0.5568311122449866,
+      "threshold": 0.5568126657452455,
+      "y_pred": 1,
+      "outcome": "FP",
+      "closest_in_role": true
+    }
+  ],
+  "teaching_example": [
+    {
+      "record_id": 1,
+      "run_id": "CS-RF-S42",
+      "split": "official_test",
+      "attack_cat": "Normal",
+      "evaluation_role": "normal",
+      "y_true": 0,
+      "score": 0.7057412707296608,
+      "target_fpr": 0.01,
+      "threshold": 0.8053672551154485,
+      "y_pred": 0
+    },
+    {
+      "record_id": 1,
+      "run_id": "CS-RF-S42",
+      "split": "official_test",
+      "attack_cat": "Normal",
+      "evaluation_role": "normal",
+      "y_true": 0,
+      "score": 0.7057412707296608,
+      "target_fpr": 0.05,
+      "threshold": 0.5572816867482743,
+      "y_pred": 1
+    }
+  ],
+  "scope_limit": "Technical and presentation checks only; member work, group approval and submission remain unverified."
+}
