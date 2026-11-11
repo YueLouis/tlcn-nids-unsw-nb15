@@ -1,7 +1,10 @@
-# Phan ca nhan: Trinh Tram Anh
+# Trịnh Trâm Anh — hồ sơ chuyên môn
 
-Phan duoc phan cong: du lieu, nguon hoc thuat va gioi han benchmark.
+**Phụ trách:** dữ liệu, nguồn học thuật và giới hạn benchmark. Nhánh `tramanh`, tài khoản `tta2405`. Bản tổng hợp của nhóm ở [main](https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/main).
 
-Can ban tu bo sung bang loi cua minh: noi dung da doc/kiem, trang hoac file nguon, mot ket qua co the truy vet, dieu chua chac va dieu can sua. Sau do ban commit tu tai khoan GitHub cua ban.
+- [Phần chuyên môn và kết luận](PHAN_CHUYEN_MON.md)
+- [Phạm vi xuyên suốt các đợt](QUA_TRINH_CAC_DOT.md)
+- [Chỉ mục nguồn và SHA-256](CHI_MUC_NGUON.csv)
+- [Gói mã, kiểm thử và bằng chứng theo đường dẫn gốc](HO_SO_TRAMANH_20261111.zip)
 
-Trang thai: `CHO_BAN_TU_NOP`; chua co bai ca nhan hoac commit nao duoc ghi nhan tai nhanh nay. README nay chi la khung do Tín tao.
+Các CSV/ảnh trong thư mục mở trực tiếp được; ZIP giữ thêm mã và phụ thuộc dùng chung. Kết quả thực nghiệm giữ mốc 30/10, hồ sơ được bổ sung ngày 11/11/2026. Mã/tài liệu lịch sử giữ nguồn; việc tải theo ủy quyền không thay xác nhận phần tự đọc, sửa hay đóng góp của thành viên.

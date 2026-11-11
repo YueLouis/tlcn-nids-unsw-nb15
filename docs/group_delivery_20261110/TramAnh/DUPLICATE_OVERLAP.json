@@ -1,0 +1,34 @@
+{
+  "feature_columns": 42,
+  "duplicate_full_row_including_id": {
+    "train": 0,
+    "test": 0
+  },
+  "duplicate_excluding_id_keeping_label": {
+    "train": 67601,
+    "test": 26387
+  },
+  "duplicate_feature_only": {
+    "train": 74301,
+    "test": 28386
+  },
+  "cross_split_overlap_all_categories": {
+    "train_features_only": 101040,
+    "overlap_test_rows": 8541,
+    "test_rows": 82332
+  },
+  "loaco_overlap_after_heldout_removal": {
+    "Reconnaissance": {
+      "overlap": 262,
+      "test_rows": 3496
+    },
+    "DoS": {
+      "overlap": 2000,
+      "test_rows": 4089
+    },
+    "Exploits": {
+      "overlap": 1800,
+      "test_rows": 11132
+    }
+  }
+}
