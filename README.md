@@ -1,152 +1,16 @@
-# TLCN NIDS - UNSW-NB15
+# Trịnh Trâm Anh — dữ liệu, nguồn học thuật và giới hạn benchmark
 
-**30/10/2026 — Đợt 3:** [PDF 60 trang, nguồn và bằng chứng kiểm](docs/releases/dot_03/README.md). Bản chốt kỹ thuật đến 30/10; 46 test đạt, đủ 80 run, 174 dòng bảng đối chiếu khớp CSV; ZIP nguồn dựng lại khớp cả 60 trang. [Drive bản chốt](https://drive.google.com/drive/folders/1AyxVWgeJj9mZ0L_d0AVosxKS6IUpghbe) đã tải lại, đủ 14 tệp khớp SHA-256. Chưa gửi email/nộp, chưa xác nhận cả ba duyệt nội dung. Mốc 09/11; Tín tự gửi theo lời nhắc đã đặt.
+Nhánh `tramanh` lưu phần phụ trách của Trịnh Trâm Anh, tài khoản `tta2405`. Báo cáo tổng hợp nằm trên [main](https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/main).
 
-**Bộ nháp ngày 25–26/10:** báo cáo đợt 4/tổng, slide và tài liệu đọc là tài liệu chuẩn bị cho bước sau. [Hướng dẫn nhóm](docs/management/BO_HO_SO_NHOM_20261025.md) và [trang tự đọc](docs/reading_20261026/BAT_DAU.html) giữ đúng mốc; bản đợt 3 hiện hành mở ở liên kết trên. Phần đợt 2 bên dưới là lịch sử.
+[Mở phần chuyên môn, bảng số và mã liên quan](docs/group_delivery_20261110/TramAnh/README.md) · [Phạm vi qua các đợt](docs/group_delivery_20261110/TramAnh/QUA_TRINH_CAC_DOT.md)
 
-**Kho GitHub hiện tại:** `https://github.com/YueLouis/tlcn-nids-unsw-nb15`  
-**Nhánh làm việc chuẩn:** `main`  
-**Thư mục Drive của nhóm:** `https://drive.google.com/drive/folders/13KGqMT4NUr8JfvTpF0IEKfUDT0Dlvq5S?hl=vi`  
-**Lưu ý lưu trữ:** GitHub giữ code, config và tài liệu nguồn; dataset, model, prediction và artifact nặng được giữ ở Drive dùng chung.
+Hồ sơ ngày 11/11/2026 có phần giải thích, CSV/ảnh và ZIP giữ đường dẫn mã nguồn, kiểm thử, cấu hình và bằng chứng. Các tệp lịch sử được phân theo trách nhiệm để đối chiếu; không coi lần bổ sung này là commit đã có ở đợt 1 hoặc 2. Nội dung được chuẩn bị có công cụ hỗ trợ và tải theo ủy quyền; việc đọc, sửa và nhận xét thực tế của thành viên được ghi riêng khi thực hiện.
 
-So sánh mô hình học có giám sát và phát hiện bất thường cho hệ thống phát hiện
-xâm nhập mạng trên UNSW-NB15 bằng đánh giá leave-one-attack-class-out (LOACO).
+| Đợt | Tình trạng |
+|---|---|
+| 1 | Báo cáo tổng hợp đã gửi 14/09, giữ lịch sử gốc |
+| 2 | Báo cáo tổng hợp đã gửi 17/10; phản hồi thầy 31/10 được đối chiếu trong báo cáo |
+| 3 | Bổ sung hồ sơ chuyên môn ngày 11/11, giữ kết quả chốt 30/10 |
+| 4 và tổng | Đang hoàn thiện; chưa ghi đã nộp hoặc nghiệm thu |
 
-**26/10/2026 — Phần ứng dụng:** mở `http://127.0.0.1:4397/lab` sau khi chạy `python scripts/demo_server.py`. Giao diện chia sáu mục bằng nút, bảng/tài liệu có Trước–Tiếp để xem trong một màn hình. Có tám kịch bản phát lại flow, nguồn dữ liệu, bản đồ hàm code, tạm dừng/xem tiếp, đối chiếu lỗi và xuất phiên JSON/CSV. [Tài liệu bổ sung ứng dụng](docs/application_20261026/report.html) có phần nhóm tự ghi nhận xét. Mã mới có 46 unit test và 1.600 dự đoán demo được đối chiếu; đây là sản phẩm hỗ trợ chuẩn bị, chưa thay xác nhận tự làm/review của thành viên, chưa có điểm bonus được duyệt.
-
-## Phạm vi nghiên cứu
-
-- Mô hình học có giám sát: Random Forest và XGBoost.
-- Mô hình phát hiện bất thường: Isolation Forest và Autoencoder.
-- Kịch bản: closed-set và ba vòng LOACO giữ lại lần lượt Reconnaissance, DoS,
-  Exploits.
-- Seed cố định: 42, 52, 62, 72, 82.
-- Tổng ma trận chính: 4 kịch bản x 4 mô hình x 5 seed = 80 run.
-
-Ba câu hỏi nghiên cứu chính và bằng chứng cần thu thập được mô tả tại
-[`docs/protocol/RQ_TO_EVIDENCE.md`](docs/protocol/RQ_TO_EVIDENCE.md).
-
-## Lịch sử trạng thái đợt 2 (17/10/2026)
-
-- Đã có hai tập train/test UNSW-NB15 thật, data manifest, checksum SHA-256 và
-  báo cáo audit schema/nhãn.
-- Pipeline end-to-end đã chạy được Random Forest, XGBoost, Isolation Forest và
-  Autoencoder trên closed-set và cả ba kịch bản LOACO.
-- Mỗi run sinh `run.json`, `metrics.csv`, `predictions.csv` và
-  `model_bundle.joblib`; prototype local đã đọc CSV và trả về Normal/Attack kèm score.
-- Đã có đủ 80 full run theo ma trận 4 scenario x 4 model x 5 seed, mỗi run có
-  `run.json`, `metrics.csv`, `predictions.csv` và `model_bundle.joblib`. Bản tổng hợp
-  mean/std đợt 2 nằm tại
-  `docs/reports/BAO_CAO_TIEN_DO_DOT_02.md`.
-- Cập nhật 17/10/2026: nhóm trưởng cho biết chưa chắc mức hiểu từng thành viên; cả nhóm dự kiến tự rà soát hai đợt ngày 18/10. Lời báo đồng ý trước đó được giữ làm lịch sử tại `docs/evidence/dot_02/final_20261013/XAC_NHAN_NHOM_20261013.md`, không chứng minh đã nghiệm thu nội dung. Xem [hướng dẫn rà soát](docs/management/HUONG_DAN_RA_SOAT_HAI_DOT_20261018.md).
-- Bản hiện tại: `output/pdf/NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf` (37 trang, hiệu chỉnh toàn văn 17/10). Đã xem đủ trang và đối chiếu 384 số in; dữ liệu/80 run/320 artifact không đổi. Log 17 test đạt giữ mốc 13/10; không huấn luyện lại. [Nội dung thay đổi](docs/reports/DOT_02_CAP_NHAT_20261017.md) và [bảng hai target](docs/reports/DOT_02_TWO_TARGETS.csv).
-- Kiểm và gửi ngày 17/10: [phiếu kiểm cuối](docs/evidence/dot_02/final_20261013/KIEM_TRA_CUOI_DOT_2_20261017.md), [biên bản email đã gửi](docs/reports/EMAIL_GUI_THAY_DOT_2_20261017.md). Thư đã gửi kèm PDF đợt 2; chưa có phê duyệt của giảng viên.
-- Đã đối chiếu đoạn nội dung của 12/13 nguồn (92,3%); S07 mới kiểm abstract, toàn văn và nghiệm thu toàn bài còn mở. Phân tích lỗi category ban đầu đã có cho 80 run; PR/score distribution, giải thích feature, độ nhạy overlap, demo và bộ cuối đề tài thuộc bước tiếp nối. Nhóm còn phải tự đọc, giải thích phương pháp/kết quả và kiểm lại mô tả đóng góp trước khi chốt nộp. Kiểm kỹ thuật không xác nhận mức hiểu của thành viên. Xem `docs/management/TIEN_DO_HIEN_TAI_20261013.md`.
-- Kiểm bàn giao 14/10: Drive đủ 80 thư mục run duy nhất/320 artifact, SHA-256 khớp local; hai CSV raw, hai PDF và hồ sơ học tập đã đối chiếu. Các bản trùng đã chuyển vào thùng rác có thể khôi phục. Xem [trạng thái bàn giao](docs/evidence/dot_02/final_20261013/REMOTE_DELIVERY.md).
-
-## Cấu trúc repository
-
-```text
-configs/                Cấu hình nghiên cứu đã version hóa
-docs/management/        Phân công và tiến độ
-docs/meetings/          Biên bản họp nhóm
-docs/protocol/          Giao thức, schema và checklist các gate
-docs/week_01/           Kế hoạch và đầu ra tuần 1
-scripts/                Công cụ tạo/kiểm tra artifact
-src/nids_benchmark/     Data, preprocessing, model adapters, evaluator và runner
-tests/                  Kiểm thử chống sai protocol và data leakage
-```
-
-## Bắt đầu cho thành viên mới
-
-Đọc [`docs/START_HERE_NHOM.md`](docs/START_HERE_NHOM.md) để lấy code, nhận dữ liệu và chọn nhánh riêng. Phân công đợt 3 nằm ở [bảng chia việc](docs/management/phan_cong_dot_03_20261022/00_PHAN_CONG_DOT_03.md); các mốc giao cũ là lịch sử, kết quả tự review chưa xác nhận.
-
-## Quy tắc dữ liệu và bảo mật
-
-- Không đưa dataset UNSW-NB15, model nặng, prediction theo từng record hoặc file
-  chứa thông tin nhạy cảm lên GitHub.
-- Không commit mật khẩu, token, API key, file `.env` hoặc thông tin đăng nhập.
-- `label`, `attack_cat` và `id` không được dùng làm feature của mô hình.
-- Official test chỉ dùng để đánh giá cuối; không dùng để fit preprocessing,
-  chọn hyperparameter hoặc chọn threshold.
-
-## Cài đặt và kiểm tra code
-
-Môi trường thực nghiệm đã kiểm chứng: Python 3.14.4. Các phiên bản thư viện
-được ghi trong `requirements-repro.txt`; `requirements.txt` giữ khoảng phiên bản
-cho phát triển. Lệnh dưới đây dùng PowerShell trên Windows, không cần kích hoạt
-môi trường bằng `Activate.ps1`.
-
-```powershell
-git clone https://github.com/YueLouis/tlcn-nids-unsw-nb15.git
-cd tlcn-nids-unsw-nb15
-git switch -c work/ten-cua-ban
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements-repro.txt
-$env:PYTHONPATH = "src"
-.\.venv\Scripts\python.exe -m unittest discover -s tests -v
-.\.venv\Scripts\python.exe scripts/validate_protocol.py
-```
-
-Unit test và validator chạy được ngay sau cài đặt, không cần dataset. Trên
-Linux/macOS, dùng `.venv/bin/python` và `export PYTHONPATH=src` tương ứng.
-
-## Chạy thí nghiệm
-
-Nhận hai file từ Drive dùng chung, đối chiếu SHA-256 trong
-[`artifacts/data/data_manifest.json`](artifacts/data/data_manifest.json), rồi đặt vào:
-
-```text
-data/raw/UNSW_NB15_training-set.csv
-data/raw/UNSW_NB15_testing-set.csv
-```
-
-Chạy trong PowerShell tại thư mục repo:
-
-```powershell
-$env:PYTHONPATH = "src"
-
-# Audit dữ liệu thật và ghi manifest/checksum.
-.\.venv\Scripts\python.exe scripts/audit_data.py
-
-# Chạy thử trong thư mục riêng, bảo toàn kết quả gốc.
-.\.venv\Scripts\python.exe scripts/run_experiment.py `
-  --scenario closed_set --model random_forest --seed 42 `
-  --max-development-rows 20000 --max-test-rows 10000 `
-  --output-dir results/member_checks/local
-
-# Run đầy đủ: không dùng hai tham số --max-... .
-.\.venv\Scripts\python.exe scripts/run_experiment.py `
-  --scenario loaco_reconnaissance --model xgboost --seed 42 `
-  --output-dir results/member_checks/local
-
-# Prototype dự đoán CSV bằng model vừa chạy hoặc nhận từ Drive.
-.\.venv\Scripts\python.exe scripts/predict_csv.py `
-  --bundle results/member_checks/local/CS-RF-S42/model_bundle.joblib `
-  --input duong_dan_flow.csv --output predictions_demo.csv
-```
-
-Các lần chạy cùng scenario/model/seed dùng chung mã run và sẽ ghi cùng thư mục.
-Mỗi thành viên thay `local` bằng tên mình; dùng thư mục mới khi muốn giữ nhiều lần
-thử. Không chạy smoke vào `results/runs/` chứa 80 run chuẩn.
-
-## Đối chiếu toàn bộ hồ sơ đợt 2
-
-Chỉ chạy bước này sau khi đã nhận đủ `results/runs/` và bản PDF từ Drive,
-hoặc tự tái tạo chúng. Bản PDF đặt tại
-`output/pdf/NhomTLCN_TramAnh_VuongThu_TrongTin_dot2.pdf`.
-
-```powershell
-$env:PYTHONPATH = "src"
-.\.venv\Scripts\python.exe scripts/check_dot2_final.py
-```
-
-Các test kiểm tra cột cấm, chuẩn hóa nhãn, LOACO leakage, threshold theo
-FPR, UADR và vai trò đánh giá. Validator protocol kiểm tra ma trận 80 run.
-Gate 1 vẫn là bước review của cả nhóm, không được tự động đánh dấu PASS.
-
-## Thành viên
-
-- Nguyễn Trọng Tín - nhóm trưởng, repository, preprocessing, RF/XGBoost và tích hợp.
-- Trịnh Trâm Anh - dữ liệu, tổng quan NIDS, related work và biên tập báo cáo.
-- Hoàng Văn Vương Thu - Isolation Forest, Autoencoder, threshold, metric và error analysis.
+Phạm vi đề tài là so sánh RF/XGB/IF/AE trên UNSW-NB15, gồm CS và LOACO, năm seed, ngưỡng Normal validation 1%/5%. Raw, prediction và model nặng giữ trên [Drive dùng chung](https://drive.google.com/drive/folders/13KGqMT4NUr8JfvTpF0IEKfUDT0Dlvq5S). Bộ mã đầy đủ, hướng dẫn chạy và báo cáo hiện hành mở từ main.
