@@ -1,7 +1,10 @@
-# Phần Trọng Tín — protocol, demo và tích hợp
+# Nguyễn Trọng Tín — hồ sơ chuyên môn
 
-Mở [bản nháp giải thích](DOT3_PROTOCOL_DEMO_BAN_NHAP.md), rồi [hướng dẫn đọc PDF chung](../../releases/review_dot3_20261110/README.md).
+**Phụ trách:** protocol, pipeline, tái lập và tích hợp demo. Nhánh `trongtin`, tài khoản `YueLouis`. Bản tổng hợp của nhóm ở [main](https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/main).
 
-Bản nháp do trợ lý chuẩn bị và tải theo ủy quyền của Tín. Tín cần đọc, kiểm ví dụ hai ngưỡng và tổng hợp góp ý; chưa xác nhận Tín đã tự chạy mới hoặc cả nhóm đã duyệt.
+- [Phần chuyên môn và kết luận](PHAN_CHUYEN_MON.md)
+- [Phạm vi xuyên suốt các đợt](QUA_TRINH_CAC_DOT.md)
+- [Chỉ mục nguồn và SHA-256](CHI_MUC_NGUON.csv)
+- [Gói mã, kiểm thử và bằng chứng theo đường dẫn gốc](HO_SO_TRONGTIN_20261111.zip)
 
-Người đọc chéo: Trâm Anh. Ghi run/ID/trang hoặc dòng mã đã mở và câu cần sửa sau khi đọc. Hồ sơ kiểm kỹ thuật cũ vẫn được giữ đúng ngày/hash, không coi là xác nhận bản PDF mới hoặc việc Tín tự thực hiện.
+Các CSV/ảnh trong thư mục mở trực tiếp được; ZIP giữ thêm mã và phụ thuộc dùng chung. Kết quả thực nghiệm giữ mốc 30/10, hồ sơ được bổ sung ngày 11/11/2026. Mã/tài liệu lịch sử giữ nguồn; việc tải theo ủy quyền không thay xác nhận phần tự đọc, sửa hay đóng góp của thành viên.
