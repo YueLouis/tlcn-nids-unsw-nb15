@@ -1,0 +1,366 @@
+{
+  "kind": "dot4",
+  "checked_at_utc": "2026-11-12T21:03:37.376875+00:00",
+  "pages": 68,
+  "pdf_sha256": "d163bfd63b78d7cd06ccacd7450d03180a22195fe2623606b15b52890497f6df",
+  "internal_links": 215,
+  "bookmark_destinations": 67,
+  "table_rows_checked": 174,
+  "tex_resource_references": 33,
+  "source_files": 51,
+  "zip_crc_and_source_hashes_match": true,
+  "compile_blocking_warnings": [],
+  "geometry": [
+    {
+      "page": 1,
+      "text_characters": 788,
+      "outside": []
+    },
+    {
+      "page": 2,
+      "text_characters": 967,
+      "outside": []
+    },
+    {
+      "page": 3,
+      "text_characters": 3288,
+      "outside": []
+    },
+    {
+      "page": 4,
+      "text_characters": 1954,
+      "outside": []
+    },
+    {
+      "page": 5,
+      "text_characters": 3420,
+      "outside": []
+    },
+    {
+      "page": 6,
+      "text_characters": 2381,
+      "outside": []
+    },
+    {
+      "page": 7,
+      "text_characters": 1352,
+      "outside": []
+    },
+    {
+      "page": 8,
+      "text_characters": 1062,
+      "outside": []
+    },
+    {
+      "page": 9,
+      "text_characters": 2637,
+      "outside": []
+    },
+    {
+      "page": 10,
+      "text_characters": 2249,
+      "outside": []
+    },
+    {
+      "page": 11,
+      "text_characters": 2163,
+      "outside": []
+    },
+    {
+      "page": 12,
+      "text_characters": 2370,
+      "outside": []
+    },
+    {
+      "page": 13,
+      "text_characters": 2283,
+      "outside": []
+    },
+    {
+      "page": 14,
+      "text_characters": 2314,
+      "outside": []
+    },
+    {
+      "page": 15,
+      "text_characters": 1431,
+      "outside": []
+    },
+    {
+      "page": 16,
+      "text_characters": 2933,
+      "outside": []
+    },
+    {
+      "page": 17,
+      "text_characters": 1671,
+      "outside": []
+    },
+    {
+      "page": 18,
+      "text_characters": 2600,
+      "outside": []
+    },
+    {
+      "page": 19,
+      "text_characters": 2179,
+      "outside": []
+    },
+    {
+      "page": 20,
+      "text_characters": 1721,
+      "outside": []
+    },
+    {
+      "page": 21,
+      "text_characters": 1116,
+      "outside": []
+    },
+    {
+      "page": 22,
+      "text_characters": 2248,
+      "outside": []
+    },
+    {
+      "page": 23,
+      "text_characters": 1877,
+      "outside": []
+    },
+    {
+      "page": 24,
+      "text_characters": 1651,
+      "outside": []
+    },
+    {
+      "page": 25,
+      "text_characters": 1985,
+      "outside": []
+    },
+    {
+      "page": 26,
+      "text_characters": 2029,
+      "outside": []
+    },
+    {
+      "page": 27,
+      "text_characters": 1708,
+      "outside": []
+    },
+    {
+      "page": 28,
+      "text_characters": 2933,
+      "outside": []
+    },
+    {
+      "page": 29,
+      "text_characters": 1782,
+      "outside": []
+    },
+    {
+      "page": 30,
+      "text_characters": 1512,
+      "outside": []
+    },
+    {
+      "page": 31,
+      "text_characters": 1411,
+      "outside": []
+    },
+    {
+      "page": 32,
+      "text_characters": 1621,
+      "outside": []
+    },
+    {
+      "page": 33,
+      "text_characters": 736,
+      "outside": []
+    },
+    {
+      "page": 34,
+      "text_characters": 2401,
+      "outside": []
+    },
+    {
+      "page": 35,
+      "text_characters": 2118,
+      "outside": []
+    },
+    {
+      "page": 36,
+      "text_characters": 2579,
+      "outside": []
+    },
+    {
+      "page": 37,
+      "text_characters": 2059,
+      "outside": []
+    },
+    {
+      "page": 38,
+      "text_characters": 193,
+      "outside": []
+    },
+    {
+      "page": 39,
+      "text_characters": 2123,
+      "outside": []
+    },
+    {
+      "page": 40,
+      "text_characters": 1485,
+      "outside": []
+    },
+    {
+      "page": 41,
+      "text_characters": 1201,
+      "outside": []
+    },
+    {
+      "page": 42,
+      "text_characters": 1885,
+      "outside": []
+    },
+    {
+      "page": 43,
+      "text_characters": 717,
+      "outside": []
+    },
+    {
+      "page": 44,
+      "text_characters": 613,
+      "outside": []
+    },
+    {
+      "page": 45,
+      "text_characters": 394,
+      "outside": []
+    },
+    {
+      "page": 46,
+      "text_characters": 757,
+      "outside": []
+    },
+    {
+      "page": 47,
+      "text_characters": 753,
+      "outside": []
+    },
+    {
+      "page": 48,
+      "text_characters": 155,
+      "outside": []
+    },
+    {
+      "page": 49,
+      "text_characters": 148,
+      "outside": []
+    },
+    {
+      "page": 50,
+      "text_characters": 153,
+      "outside": []
+    },
+    {
+      "page": 51,
+      "text_characters": 864,
+      "outside": []
+    },
+    {
+      "page": 52,
+      "text_characters": 2011,
+      "outside": []
+    },
+    {
+      "page": 53,
+      "text_characters": 592,
+      "outside": []
+    },
+    {
+      "page": 54,
+      "text_characters": 1028,
+      "outside": []
+    },
+    {
+      "page": 55,
+      "text_characters": 1462,
+      "outside": []
+    },
+    {
+      "page": 56,
+      "text_characters": 1963,
+      "outside": []
+    },
+    {
+      "page": 57,
+      "text_characters": 2339,
+      "outside": []
+    },
+    {
+      "page": 58,
+      "text_characters": 845,
+      "outside": []
+    },
+    {
+      "page": 59,
+      "text_characters": 2052,
+      "outside": []
+    },
+    {
+      "page": 60,
+      "text_characters": 1141,
+      "outside": []
+    },
+    {
+      "page": 61,
+      "text_characters": 3052,
+      "outside": []
+    },
+    {
+      "page": 62,
+      "text_characters": 1131,
+      "outside": []
+    },
+    {
+      "page": 63,
+      "text_characters": 1727,
+      "outside": []
+    },
+    {
+      "page": 64,
+      "text_characters": 2287,
+      "outside": []
+    },
+    {
+      "page": 65,
+      "text_characters": 2630,
+      "outside": []
+    },
+    {
+      "page": 66,
+      "text_characters": 1006,
+      "outside": []
+    },
+    {
+      "page": 67,
+      "text_characters": 2299,
+      "outside": []
+    },
+    {
+      "page": 68,
+      "text_characters": 2602,
+      "outside": []
+    }
+  ],
+  "all_fonts_embedded": true,
+  "presentation_updated_20261113": true,
+  "status": "REVIEW_READY_NOT_APPROVED_OR_SUBMITTED",
+  "group_approval": false,
+  "submitted": false,
+  "remaining": [
+    "group content review",
+    "group presentation rehearsal",
+    "physical HDMI/projector test",
+    "cloud synchronization managed separately; public deployment verified by root"
+  ]
+}

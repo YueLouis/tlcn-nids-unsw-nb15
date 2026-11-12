@@ -1,0 +1,189 @@
+\documentclass[17pt,aspectratio=169]{beamer}
+\geometry{paperwidth=320mm,paperheight=180mm}
+\setlength{\textheight}{160mm}
+\usepackage{fontspec}
+\setsansfont{Arial}
+\setmainfont{Arial}
+\usepackage{tikz,booktabs}
+\definecolor{ink}{HTML}{153E38}
+\definecolor{muted}{HTML}{4F625F}
+\definecolor{paper}{HTML}{F8FAF6}
+\definecolor{green}{HTML}{287B63}
+\definecolor{pale}{HTML}{E6EFE8}
+\definecolor{rust}{HTML}{A54F2A}
+\setbeamercolor{normal text}{fg=ink,bg=paper}
+\setbeamercolor{structure}{fg=green}
+\setbeamercolor{frametitle}{fg=ink}
+\setbeamercolor{block title}{fg=ink,bg=pale}
+\setbeamercolor{block body}{fg=ink,bg=pale}
+\setbeamerfont{frametitle}{size=\Large,series=\bfseries}
+\setbeamerfont{block title}{size=\normalsize,series=\bfseries}
+\setbeamersize{text margin left=9mm,text margin right=9mm}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize item}{\color{green}\rule{1.5mm}{1.5mm}}
+\setbeamertemplate{footline}{\hspace{9mm}\scriptsize\color{muted}TLCN · TRÂM ANH — VƯƠNG THU — TRỌNG TÍN\hfill\insertframenumber\,/\,9\hspace{9mm}\vspace{4mm}}
+\newcommand{\eyebrow}[1]{{\small\color{green}\bfseries #1}\par\vspace{2mm}}
+\newcommand{\takeaway}[1]{\vfill{\color{green}\rule{\linewidth}{.5pt}}\par\vspace{1mm}{\small #1}}
+\begin{document}
+\begin{frame}
+\eyebrow{TIỂU LUẬN CHUYÊN NGÀNH · AN TOÀN THÔNG TIN}
+{\LARGE\bfseries Đã học tấn công cũ.\par\vspace{2mm}\color{green}Còn tấn công chưa từng thấy?\par}
+\vspace{5mm}
+{\large So sánh học có giám sát và phát hiện bất thường\par cho NIDS trên UNSW-NB15\par}
+\vspace{3mm}
+{\normalsize Đánh giá theo leave-one-attack-class-out\par}
+\vfill
+{\small Trịnh Trâm Anh · Hoàng Văn Vương Thu · Nguyễn Trọng Tín\par GVHD: ThS. Nguyễn Đăng Quang}
+\end{frame}
+
+\begin{frame}{Dữ liệu cho biết điều gì?}
+\eyebrow{01 / DỮ LIỆU}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{.47\textwidth}
+{\Huge\bfseries 175.341}\par{\small dòng tập phát triển}\par\vspace{4mm}
+{\Huge\bfseries 82.332}\par{\small dòng test cố định}\par
+\end{column}
+\begin{column}{.49\textwidth}
+\begin{block}{42 feature vào mô hình}
+Từ 45 cột CSV gốc, bỏ \texttt{id}, \texttt{label}, \texttt{attack\_cat}.
+\end{block}
+{\small Test: 37.000 Normal\par và 45.332 Attack.\par\vspace{2mm}Một dòng mô tả một flow mạng. Dữ liệu lịch sử sinh trong lab.}
+\end{column}
+\end{columns}
+\takeaway{UNSW-NB15 là bộ dữ liệu công bố; nhóm chưa có bộ dữ liệu mạng độc lập tự thu thập.}
+\end{frame}
+
+\begin{frame}{Giấu một lớp. Giữ nguyên phép thử.}
+\eyebrow{02 / THỰC NGHIỆM}
+{\small CS: không giấu lớp · LR: giấu Reconnaissance\par LD: giấu DoS · LE: giấu Exploits}\par\vspace{3mm}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{.31\textwidth}\begin{block}{1. Học}
+LOACO bỏ lớp bị giấu trước khi chia train/validation.
+\end{block}\end{column}
+\begin{column}{.31\textwidth}\begin{block}{2. Chọn ngưỡng}
+Từ Normal validation, target FPR 1\% và 5\%.
+\end{block}\end{column}
+\begin{column}{.31\textwidth}\begin{block}{3. Kiểm tra}
+Test vẫn có lớp bị giấu; đo khả năng phát hiện.
+\end{block}\end{column}
+\end{columns}
+\vspace{3mm}
+{\Large\bfseries 4 kịch bản × 4 mô hình × 5 seed = 80 run}
+\takeaway{RF/XGB học có giám sát; IF/AE học trên Normal. Test không dùng để fit hoặc chọn ngưỡng.}
+\end{frame}
+
+\begin{frame}{Một chỉ số chưa kể hết câu chuyện.}
+\eyebrow{03 / KẾT QUẢ · LR–RF}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{.48\textwidth}
+{\small AP toàn test}\par
+{\Huge\bfseries 0,9852}\par\vspace{5mm}
+{\small AP trên Normal + Reconnaissance}\par
+{\Huge\bfseries\color{rust}0,7077}
+\end{column}
+\begin{column}{.48\textwidth}
+\begin{block}{Cùng mô hình, khác phạm vi}
+Toàn test có 82.332 dòng.\par\vspace{2mm}
+Normal + lớp bị giấu có 40.496 dòng.
+\end{block}
+{\small Trung bình 5 seed.\par AP đo khả năng xếp hạng;\par không phải tỷ lệ dự đoán đúng.}
+\end{column}
+\end{columns}
+\takeaway{Đọc AP cùng UADR, FPR, ngưỡng và số mẫu; khác phạm vi/prevalence làm thay đổi cách hiểu.}
+\end{frame}
+
+\begin{frame}{Muốn bắt nhiều hơn, phải chịu gì?}
+\eyebrow{03 / KẾT QUẢ · RF CLOSED-SET}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{.46\textwidth}
+\begin{block}{Target validation 1\%}
+Recall Attack: \textbf{90,27\%}\par
+FPR trên test: \textbf{4,21\%}
+\end{block}
+\end{column}
+\begin{column}{.46\textwidth}
+\begin{block}{Target validation 5\%}
+Recall Attack: \textbf{97,14\%}\par
+FPR trên test: \textbf{18,57\%}
+\end{block}
+\end{column}
+\end{columns}
+\vspace{4mm}
+{\large Bắt được nhiều Attack hơn,\par nhưng cảnh báo nhầm Normal cũng tăng.}
+\takeaway{Trung bình 5 seed. Target trên validation không bảo đảm FPR bằng target trên test hay dữ liệu mới.}
+\end{frame}
+
+\begin{frame}{Demo: đọc một cảnh báo cho đúng}
+\eyebrow{04 / SUY LUẬN CSV · CS–RF–S42 · BẢN GHI 1}
+{\large Nhãn thật: \textbf{Normal} \hfill Score: \textbf{0,705741}}\par\vspace{4mm}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{.46\textwidth}
+\begin{block}{Target validation 5\%}
+Ngưỡng: 0,557282\par
+Score $\geq$ ngưỡng\par
+\textbf{\color{rust}Attack → FP}
+\end{block}
+\end{column}
+\begin{column}{.46\textwidth}
+\begin{block}{Target validation 1\%}
+Ngưỡng: 0,805367\par
+Score $<$ ngưỡng\par
+\textbf{Normal → TN}
+\end{block}
+\end{column}
+\end{columns}
+\takeaway{Chỉ đổi ngưỡng, không học lại. FP là cảnh báo nhầm; TN là nhận đúng Normal. Không có nhãn thì chưa kết luận đúng/sai.}
+\end{frame}
+
+\begin{frame}{Chuyển sang demo khi kết nối sẵn sàng}
+\eyebrow{04 / QUY TRÌNH THAO TÁC}
+\begin{enumerate}
+\item Chọn CS · RF · target 5\% · mẫu hỗn hợp
+\item Chạy suy luận và mở bản ghi 1
+\item Đổi target 1\%, chạy lại và giải thích FP → TN
+\end{enumerate}
+\vspace{3mm}
+{\small Local: \texttt{http://127.0.0.1:4397/presentation/}\par
+Cần server Python, dữ liệu và bundle trên máy.\par\vspace{2mm}
+Public: \url{https://nids-unsw-nb15-tlcn.nttin181.chatgpt.site}\par
+Suy luận trong trình duyệt bằng tham số đã xuất; cần tải lần đầu.\par
+PDF này giữ nội dung tĩnh; không chạy CSV và không thay live demo.}
+\takeaway{Khi mất mạng, dùng local đã mở sẵn hoặc ví dụ PDF. Kết nối HDMI vẫn cần thử trực tiếp tại phòng báo cáo.}
+\end{frame}
+
+\begin{frame}{Ba câu giám khảo có thể hỏi}
+\eyebrow{05 / HỎI ĐÁP}
+\begin{block}{“Nhóm chứng minh phát hiện mọi zero-day chưa?”}
+Chưa. Nhóm thử giấu 3 lớp trên một official split.
+\end{block}
+\begin{block}{“CSV mới có phải dataset riêng không?”}
+Chưa đủ. Cần nguồn độc lập, cách trích feature và nhãn.
+\end{block}
+\begin{block}{“Mô hình có đang tự học khi chạy demo không?”}
+Không. Demo dùng mô hình và ngưỡng đã lưu, không fit lại.
+\end{block}
+\end{frame}
+
+\begin{frame}{Đã làm được gì, còn thiếu gì?}
+\eyebrow{06 / TỰ ĐÁNH GIÁ VÀ KẾT LUẬN}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{.47\textwidth}
+\begin{block}{Phần đã có}
+80 run, truy vết kết quả.\par
+Phân tích AP, FPR, lỗi.\par
+Demo suy luận CSV.
+\end{block}
+{\small Giá trị: biết cách kiểm một cảnh báo và giới hạn của phép thử.}
+\end{column}
+\begin{column}{.49\textwidth}
+\begin{block}{Phần còn mở}
+Một bộ dữ liệu, còn overlap.\par
+Chưa thử lưu lượng thực tế.\par
+Chưa tự học hoặc ngăn chặn.
+\end{block}
+{\small Tiếp theo: dữ liệu ngoài, thử loại overlap, đo chi phí vận hành.}
+\end{column}
+\end{columns}
+\takeaway{Kết luận: kết quả tốt trên benchmark cần đọc cùng phạm vi và chi phí cảnh báo nhầm trước khi triển khai thực tế.}
+\end{frame}
+\end{document}

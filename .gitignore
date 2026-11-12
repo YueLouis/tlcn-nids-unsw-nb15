@@ -270,3 +270,6 @@ artifacts/data/*
 # Page rasterizations remain local; selected contact sheets and audits are versioned.
 docs/**/render/
 docs/**/render_*/
+
+# Hosting checkout and exported parameters are delivered separately.
+/sites/

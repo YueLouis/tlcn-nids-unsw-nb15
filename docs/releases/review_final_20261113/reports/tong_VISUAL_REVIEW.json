@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-13",
+  "kind": "tong",
+  "pdf": "NhomTLCN_tong_BAN_NHAP_20261113.pdf",
+  "sha256": "4268e8506db1b87dc18a00e785af1ed198d59674a1fd4a3bdbba1cd0210e5445",
+  "pages": 62,
+  "visual_scope": "All final pages inspected in 12-page contact sheets; cover, lists and current demo page also enlarged",
+  "findings_fixed": [
+    "Table list single-item spill fixed",
+    "Long figure-list captions shortened",
+    "Current demo screenshot replaced by complete capture in actual 714px panel"
+  ],
+  "open_visual_defects_observed": [],
+  "limitations": [
+    "Contact-sheet scan is not line-by-line proofreading of every sentence",
+    "Not lecturer approval or group content review",
+    "No physical printing, projector or HDMI test"
+  ],
+  "final_public_update_review": "Final updated demo/public sections and table of contents rechecked after public URL/parity insertion; no visual defects observed"
+}

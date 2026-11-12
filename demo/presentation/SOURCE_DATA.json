@@ -1,0 +1,44 @@
+{
+  "purpose": "Trình bày số liệu thực nghiệm và suy luận từ model đã lưu",
+  "source_files": [
+    {
+      "path": "docs/evidence/dot_03/final_20261030/pr_scores/AP_MEAN_STD.csv",
+      "sha256": "f67222984617b8a72ac08da9a65fc59ab6dcb9c8c0c8a676722dd4332f88c855"
+    },
+    {
+      "path": "docs/evidence/dot_03/final_20261030/pr_scores/OPERATING_POINTS_MEAN_STD.csv",
+      "sha256": "c7376a6862bcac80fa20229db743942c8954b84a003cc33737663538c22594e7"
+    },
+    {
+      "path": "artifacts/data/data_manifest.json",
+      "sha256": "a5f1ebed2dd39e472fdb072cd6277fbcb2de0c1a602cce6338de9a33953c8e7f"
+    },
+    {
+      "path": "configs/experiment_matrix.yaml",
+      "sha256": "87e087c9e21faa8defd62e7ae1cb7495d6c68014ef5e1f4a0388f4516a7df1e2"
+    },
+    {
+      "path": "docs/releases/submission_dot3_20261111/NhomTLCN_TramAnh_VuongThu_TrongTin_dot3_20261111.pdf",
+      "sha256": "0895c68f2642440f72d593fa66bd9d863f9e38be67c362ec8d377387741b7832"
+    }
+  ],
+  "inference": {
+    "routes": [
+      "/api/lab/run",
+      "/api/predict"
+    ],
+    "seed": 42,
+    "models": [
+      "RF",
+      "XGB",
+      "IF",
+      "AE"
+    ],
+    "thresholds": "Normal validation 1% / 5%"
+  },
+  "limits": [
+    "Không thu gói mạng trực tiếp, không tự học hay chặn tấn công",
+    "Dữ liệu mẫu là tập con UNSW-NB15, không phải dataset độc lập",
+    "Nhãn attack_cat chỉ đối chiếu; mô hình dự đoán Normal/Attack"
+  ]
+}

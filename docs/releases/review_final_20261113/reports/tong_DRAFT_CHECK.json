@@ -1,0 +1,336 @@
+{
+  "kind": "tong",
+  "checked_at_utc": "2026-11-12T21:03:38.720828+00:00",
+  "pages": 62,
+  "pdf_sha256": "4268e8506db1b87dc18a00e785af1ed198d59674a1fd4a3bdbba1cd0210e5445",
+  "internal_links": 182,
+  "bookmark_destinations": 61,
+  "table_rows_checked": 174,
+  "tex_resource_references": 32,
+  "source_files": 51,
+  "zip_crc_and_source_hashes_match": true,
+  "compile_blocking_warnings": [],
+  "geometry": [
+    {
+      "page": 1,
+      "text_characters": 780,
+      "outside": []
+    },
+    {
+      "page": 2,
+      "text_characters": 974,
+      "outside": []
+    },
+    {
+      "page": 3,
+      "text_characters": 3406,
+      "outside": []
+    },
+    {
+      "page": 4,
+      "text_characters": 1381,
+      "outside": []
+    },
+    {
+      "page": 5,
+      "text_characters": 3050,
+      "outside": []
+    },
+    {
+      "page": 6,
+      "text_characters": 2295,
+      "outside": []
+    },
+    {
+      "page": 7,
+      "text_characters": 1359,
+      "outside": []
+    },
+    {
+      "page": 8,
+      "text_characters": 1072,
+      "outside": []
+    },
+    {
+      "page": 9,
+      "text_characters": 2644,
+      "outside": []
+    },
+    {
+      "page": 10,
+      "text_characters": 2000,
+      "outside": []
+    },
+    {
+      "page": 11,
+      "text_characters": 2170,
+      "outside": []
+    },
+    {
+      "page": 12,
+      "text_characters": 2377,
+      "outside": []
+    },
+    {
+      "page": 13,
+      "text_characters": 2290,
+      "outside": []
+    },
+    {
+      "page": 14,
+      "text_characters": 2321,
+      "outside": []
+    },
+    {
+      "page": 15,
+      "text_characters": 1438,
+      "outside": []
+    },
+    {
+      "page": 16,
+      "text_characters": 1122,
+      "outside": []
+    },
+    {
+      "page": 17,
+      "text_characters": 2254,
+      "outside": []
+    },
+    {
+      "page": 18,
+      "text_characters": 1884,
+      "outside": []
+    },
+    {
+      "page": 19,
+      "text_characters": 1658,
+      "outside": []
+    },
+    {
+      "page": 20,
+      "text_characters": 1992,
+      "outside": []
+    },
+    {
+      "page": 21,
+      "text_characters": 2036,
+      "outside": []
+    },
+    {
+      "page": 22,
+      "text_characters": 1715,
+      "outside": []
+    },
+    {
+      "page": 23,
+      "text_characters": 2940,
+      "outside": []
+    },
+    {
+      "page": 24,
+      "text_characters": 1789,
+      "outside": []
+    },
+    {
+      "page": 25,
+      "text_characters": 1519,
+      "outside": []
+    },
+    {
+      "page": 26,
+      "text_characters": 1418,
+      "outside": []
+    },
+    {
+      "page": 27,
+      "text_characters": 1628,
+      "outside": []
+    },
+    {
+      "page": 28,
+      "text_characters": 743,
+      "outside": []
+    },
+    {
+      "page": 29,
+      "text_characters": 2408,
+      "outside": []
+    },
+    {
+      "page": 30,
+      "text_characters": 2586,
+      "outside": []
+    },
+    {
+      "page": 31,
+      "text_characters": 2066,
+      "outside": []
+    },
+    {
+      "page": 32,
+      "text_characters": 200,
+      "outside": []
+    },
+    {
+      "page": 33,
+      "text_characters": 2130,
+      "outside": []
+    },
+    {
+      "page": 34,
+      "text_characters": 1492,
+      "outside": []
+    },
+    {
+      "page": 35,
+      "text_characters": 1208,
+      "outside": []
+    },
+    {
+      "page": 36,
+      "text_characters": 1892,
+      "outside": []
+    },
+    {
+      "page": 37,
+      "text_characters": 724,
+      "outside": []
+    },
+    {
+      "page": 38,
+      "text_characters": 620,
+      "outside": []
+    },
+    {
+      "page": 39,
+      "text_characters": 401,
+      "outside": []
+    },
+    {
+      "page": 40,
+      "text_characters": 764,
+      "outside": []
+    },
+    {
+      "page": 41,
+      "text_characters": 760,
+      "outside": []
+    },
+    {
+      "page": 42,
+      "text_characters": 162,
+      "outside": []
+    },
+    {
+      "page": 43,
+      "text_characters": 155,
+      "outside": []
+    },
+    {
+      "page": 44,
+      "text_characters": 160,
+      "outside": []
+    },
+    {
+      "page": 45,
+      "text_characters": 871,
+      "outside": []
+    },
+    {
+      "page": 46,
+      "text_characters": 2018,
+      "outside": []
+    },
+    {
+      "page": 47,
+      "text_characters": 599,
+      "outside": []
+    },
+    {
+      "page": 48,
+      "text_characters": 1035,
+      "outside": []
+    },
+    {
+      "page": 49,
+      "text_characters": 1469,
+      "outside": []
+    },
+    {
+      "page": 50,
+      "text_characters": 1970,
+      "outside": []
+    },
+    {
+      "page": 51,
+      "text_characters": 2346,
+      "outside": []
+    },
+    {
+      "page": 52,
+      "text_characters": 852,
+      "outside": []
+    },
+    {
+      "page": 53,
+      "text_characters": 2055,
+      "outside": []
+    },
+    {
+      "page": 54,
+      "text_characters": 1146,
+      "outside": []
+    },
+    {
+      "page": 55,
+      "text_characters": 3057,
+      "outside": []
+    },
+    {
+      "page": 56,
+      "text_characters": 1136,
+      "outside": []
+    },
+    {
+      "page": 57,
+      "text_characters": 1731,
+      "outside": []
+    },
+    {
+      "page": 58,
+      "text_characters": 2291,
+      "outside": []
+    },
+    {
+      "page": 59,
+      "text_characters": 2637,
+      "outside": []
+    },
+    {
+      "page": 60,
+      "text_characters": 1050,
+      "outside": []
+    },
+    {
+      "page": 61,
+      "text_characters": 2306,
+      "outside": []
+    },
+    {
+      "page": 62,
+      "text_characters": 2609,
+      "outside": []
+    }
+  ],
+  "all_fonts_embedded": true,
+  "presentation_updated_20261113": true,
+  "status": "REVIEW_READY_NOT_APPROVED_OR_SUBMITTED",
+  "group_approval": false,
+  "submitted": false,
+  "remaining": [
+    "group content review",
+    "group presentation rehearsal",
+    "physical HDMI/projector test",
+    "cloud synchronization managed separately; public deployment verified by root"
+  ]
+}

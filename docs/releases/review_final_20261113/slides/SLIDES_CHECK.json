@@ -1,0 +1,81 @@
+{
+  "status": "CHECKED_PENDING_GROUP_REVIEW_AND_REHEARSAL",
+  "records": [
+    {
+      "pdf": "NhomTLCN_slide_du_phong_20261113.pdf",
+      "pages": 9,
+      "sha256": "6eb75200459ec1fcbbb16093e2eaf919deaa7a969c77ffc3e2b29702e532aac8",
+      "fonts_embedded": true,
+      "page_geometry": [
+        {
+          "page": 1,
+          "outside": [],
+          "characters": 332
+        },
+        {
+          "page": 2,
+          "outside": [],
+          "characters": 375
+        },
+        {
+          "page": 3,
+          "outside": [],
+          "characters": 475
+        },
+        {
+          "page": 4,
+          "outside": [],
+          "characters": 403
+        },
+        {
+          "page": 5,
+          "outside": [],
+          "characters": 398
+        },
+        {
+          "page": 6,
+          "outside": [],
+          "characters": 395
+        },
+        {
+          "page": 7,
+          "outside": [],
+          "characters": 606
+        },
+        {
+          "page": 8,
+          "outside": [],
+          "characters": 380
+        },
+        {
+          "page": 9,
+          "outside": [],
+          "characters": 514
+        }
+      ]
+    },
+    {
+      "pdf": "NhomTLCN_phan_viec_on_nhom_20261113.pdf",
+      "pages": 2,
+      "sha256": "860cef94df5973d986df60a4ea925333b7df14242a7d8308c87b2f97fa2d86b7",
+      "fonts_embedded": true,
+      "page_geometry": [
+        {
+          "page": 1,
+          "outside": [],
+          "characters": 1416
+        },
+        {
+          "page": 2,
+          "outside": [],
+          "characters": 1211
+        }
+      ]
+    }
+  ],
+  "source_zip": "Nguon_slide_va_phan_viec_20261113.zip",
+  "source_zip_sha256": "a8981eac7cd2092f3589e418052ca7870a834e0cc1ab1dd003c0e086f45f5b03",
+  "physical_hdmi_checked": false,
+  "group_approved": false,
+  "note": "Static PDF cannot run inference. No member understanding or authorship is certified."
+}

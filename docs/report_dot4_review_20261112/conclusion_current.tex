@@ -1,0 +1,15 @@
+
+\chapter{KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN}\label{chap:conclusion}
+\section{Trả lời ba câu hỏi nghiên cứu}
+Với RQ1, trên closed-set official split, RF/XGB đạt AP xấp xỉ 0,988; tại target validation 5\%, recall Attack khoảng 97\% nhưng FPR test khoảng 18,6--18,7\%. IF có FPR test 6,15\% nhưng recall 31,44\%. Kết quả thể hiện trade-off và không so được tại cùng FPR test thực tế để tuyên bố mô hình tốt nhất.
+
+Với RQ2, khả năng phát hiện held-out tùy category/model. LR tại target 5\% có UADR RF/XGB 97,73\%/98,06\%, IF/AE 0,66\%/23,82\%. AP Normal/held-out của RF/XGB 0,7077/0,6623 thấp hơn AP toàn test 0,9852. Overlap hậu nghiệm cho thấy RF vẫn có UADR 97,56\% ở held-out unmatched, song đó không chứng minh hiệu quả trên mọi zero-day hoặc loại trừ các phụ thuộc khác của official split.
+
+Với RQ3, RF closed-set chuyển target validation 1\% lên 5\% tăng recall từ 90,27\% lên 97,14\% và FPR test từ 4,21\% lên 18,57\%. Ngưỡng validation không bảo đảm ngân sách test. Precision/recall/AP phải được đọc cùng support, prevalence, threshold, scope và giới hạn.
+
+\section{Sản phẩm hiện có và giới hạn}
+Sản phẩm kỹ thuật gồm pipeline bốn model, 80 run đã khóa, kiểm metadata/held-out/phạm vi fit, PR/score, phân tích lỗi, matched/unmatched theo tập fit có kiểm chứng, importance mô tả RF/XGB và prototype CSV có kiểm suy luận thật. 46 test đạt và 3.200 dự đoán qua HTTP trong lần kiểm ngày 12/11 khớp nhãn và ngưỡng, score nằm trong dung sai; giao diện trình bày bảy màn được kiểm bổ sung ngày 13/11; các con số kỹ thuật không thay nghiệm thu nội dung.
+
+Giới hạn chính: một official split UNSW-NB15; ba lớp held-out hữu hạn; overlap và tương đồng dữ liệu còn hiện hữu; năm seed dùng cùng test; importance không là nguyên nhân; khác prevalence/scope và khác FPR test; chưa có thử nghiệm lưu lượng vận hành hay retrain loại overlap. Nguồn S07 chưa có toàn văn. Nhóm cần tự đọc, góp ý và giải thích từng phần trước khi duyệt nộp.
+
+Hướng tiếp theo có thể kiểm trên bộ dữ liệu ngoài, thiết kế thí nghiệm loại overlap riêng, đánh giá độ ổn định theo thời gian và chi phí vận hành. Đây là đề xuất, chưa ghi thành kết quả đã chạy. Bản nháp cập nhật ngày 13/11 từ nội dung đã có, bổ sung giao diện trình bày và bằng chứng kiểm suy luận. Đợt 3 đã gửi sau khi nhóm trưởng báo cả ba đồng ý; bản đợt 4 và bản tổng cần được đọc và duyệt riêng trước khi nộp.

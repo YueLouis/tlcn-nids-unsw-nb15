@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-13",
+  "kind": "dot4",
+  "pdf": "NhomTLCN_dot4_BAN_NHAP_20261113.pdf",
+  "sha256": "d163bfd63b78d7cd06ccacd7450d03180a22195fe2623606b15b52890497f6df",
+  "pages": 68,
+  "visual_scope": "All final pages inspected in 12-page contact sheets; cover, lists and current demo page also enlarged",
+  "findings_fixed": [
+    "Table list single-item spill fixed",
+    "Long figure-list captions shortened",
+    "Current demo screenshot replaced by complete capture in actual 714px panel"
+  ],
+  "open_visual_defects_observed": [],
+  "limitations": [
+    "Contact-sheet scan is not line-by-line proofreading of every sentence",
+    "Not lecturer approval or group content review",
+    "No physical printing, projector or HDMI test"
+  ],
+  "final_public_update_review": "Final updated demo/public sections and table of contents rechecked after public URL/parity insertion; no visual defects observed"
+}

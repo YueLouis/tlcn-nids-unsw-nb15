@@ -1,0 +1,80 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec,geometry,array,tabularx,xcolor,enumitem,hyperref}
+\setmainfont{Arial}
+\geometry{margin=18mm}
+\definecolor{ink}{HTML}{153E38}
+\definecolor{green}{HTML}{287B63}
+\color{ink}
+\hypersetup{colorlinks=true,urlcolor=green}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlist[itemize]{leftmargin=5mm,itemsep=2pt,topsep=2pt}
+\newcommand{\person}[2]{\vspace{3mm}{\large\bfseries\color{green}#1}\par{\small #2}\par}
+\newcommand{\feedback}{\textbf{Góp ý / chỗ chưa hiểu:}\par\rule{\linewidth}{.3pt}\vspace{5mm}\par\rule{\linewidth}{.3pt}}
+\begin{document}
+{\LARGE\bfseries Mỗi bạn đọc gì, tập nói gì?}\par
+{\small TLCN NIDS trên UNSW-NB15 · Phiếu ôn nhóm ngày 13/11/2026}
+
+Mở báo cáo tổng để đọc liền mạch, báo cáo đợt 4 để đối chiếu phần cập nhật. Đây là phân phần đọc và tập giải thích; không tự xác nhận thành viên đã hiểu hoặc đã hoàn thành phần việc.
+
+\person{Trịnh Trâm Anh}{Dữ liệu · Chia tập · Rò rỉ dữ liệu}
+\begin{itemize}
+\item Đọc Chương 3: dữ liệu và data contract; Chương 4: protocol, scenario và chống leakage.
+\item Kiểm: số dòng train/test, 42 feature, ba cột bị loại; lớp bị giấu có bị bỏ trước khi chia train/validation không.
+\item Tập nói: ``Vì sao không dùng test để học tiền xử lý hay chọn ngưỡng?'' và ``CSV mới có phải dataset riêng không?''
+\end{itemize}
+\feedback
+
+\person{Hoàng Văn Vương Thu}{IF / AE · Chỉ số · Ngưỡng · Đọc kết quả}
+\begin{itemize}
+\item Đọc Chương 2: IF/AE và chỉ số; Chương 4.2: threshold; Chương 6--7: kết quả, AP, lỗi và giới hạn.
+\item Kiểm: IF/AE học từ Normal; score lớn hơn nghĩa là đáng ngờ hơn; AP khác tỷ lệ đúng, UADR cần đúng mẫu số.
+\item Tập nói: ``Target FPR 5\% sao FPR test có thể lớn hơn?''; ``Vì sao AP toàn test cao mà AP Normal/lớp bị giấu thấp?''
+\end{itemize}
+\feedback
+
+\person{Nguyễn Trọng Tín}{RF / XGB · Demo · Kiểm thử · Tích hợp}
+\begin{itemize}
+\item Đọc Chương 2: RF/XGB; Chương 5--6: pipeline và kiểm thử; Chương 8--9: prototype, kết luận và giới hạn.
+\item Kiểm: mở public và local, chạy CSV có nhãn/không nhãn, đổi ngưỡng, dữ liệu lỗi; phân biệt score với ngưỡng và nhãn thật.
+\item Tập nói: bản ghi 1 CS--RF target 5\% là FP, chuyển 1\% thành TN; mô hình không học lại.
+\end{itemize}
+\feedback
+
+\newpage
+{\LARGE\bfseries Ôn chung trước khi chốt}\par
+{\small Dùng cho cả ba thành viên · Chưa đánh dấu thay người đọc}
+
+\textbf{1. Mở đúng bản}\par
+Báo cáo: \texttt{NhomTLCN\_tong\_BAN\_NHAP\_20261113.pdf}\par
+Trình bày: \url{https://nids-unsw-nb15-tlcn.nttin181.chatgpt.site}\par
+Dự phòng: \texttt{NhomTLCN\_slide\_du\_phong\_20261113.pdf}
+
+\textbf{2. Mỗi bạn tập giải thích trong 2 phút}
+\begin{itemize}
+\item Đề tài hỏi mô hình có nhận ra lớp tấn công bị giấu khi học không.
+\item 4 kịch bản × 4 mô hình × 5 seed là 80 run; demo dùng seed 42.
+\item Test không dùng để fit hoặc chọn ngưỡng. Ngưỡng lấy từ Normal validation.
+\item Chưa có dữ liệu mạng độc lập tự thu; chưa thu live traffic, tự học hay chặn tấn công.
+\end{itemize}
+
+\textbf{3. Thử demo cùng nhau}
+\begin{itemize}
+\item Chọn CS, RF, target 5\%, mẫu hỗn hợp; tìm bản ghi 1 và đọc score/ngưỡng.
+\item Chuyển target 1\%, chạy lại, giải thích vì sao FP thành TN.
+\item Mở CSV không nhãn: suy luận được, nhưng chưa kết luận dự đoán đúng hay sai.
+\item Mất mạng: dùng local đã chuẩn bị hoặc PDF ví dụ tĩnh. Thử HDMI và màn hình trường trước buổi báo cáo.
+\end{itemize}
+
+\textbf{4. Góp ý để sửa}\par
+Ghi tên tệp, số trang hoặc tên màn, câu/giá trị chưa ổn, và cách sửa nếu biết. Nếu chưa hiểu, ghi nguyên câu hỏi; không cần đoán cho đủ.
+
+\textbf{Ghi chú chung của nhóm:}\par
+\rule{\linewidth}{.3pt}\vspace{8mm}\par
+\rule{\linewidth}{.3pt}\vspace{8mm}\par
+\rule{\linewidth}{.3pt}\vspace{8mm}\par
+\rule{\linewidth}{.3pt}
+
+\vfill
+{\small Chỉ chốt bản đợt 4 và bản tổng sau khi cả ba đọc, góp ý và đồng ý. Phiếu này hỗ trợ ôn và rà nội dung, không phải xác nhận đã duyệt.}
+\end{document}

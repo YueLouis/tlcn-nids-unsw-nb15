@@ -1,5 +1,9 @@
 # TLCN NIDS - UNSW-NB15
 
+**Bộ chuẩn bị bảo vệ ngày 13/11/2026:** [web trình bày và demo public](https://nids-unsw-nb15-tlcn.nttin181.chatgpt.site), [báo cáo đợt 4/tổng và slide](docs/releases/review_final_20261113/README.md), [hướng dẫn ba thành viên đọc, chạy demo và tập báo cáo](docs/management/BAN_GIAO_BAO_VE_20261113.md). Web có bảy mục bằng nút, nền sáng và demo tính thật từ tham số 16 model seed 42 tại trình duyệt. Bản local dùng `python scripts/demo_server.py` rồi mở `http://127.0.0.1:4397/presentation/`. Đợt 4 và tổng là bản chờ nhóm duyệt, chưa nộp; bộ này không thay bản đợt 3 đã gửi.
+
+**Đợt 3 đã gửi:** lúc 23:16 ngày 12/11/2026 trong chuỗi thư cũ, kèm [PDF 62 trang ngày 11/11](docs/releases/submission_dot3_20261111/README.md). Chưa có bằng chứng giảng viên đã đọc hoặc duyệt. Bản đọc ngày 10/11 bên dưới được giữ để đối chiếu lịch sử.
+
 **Báo cáo tiến độ đợt 3 ngày 11/11/2026:** [PDF 62 trang, nguồn XeLaTeX và bằng chứng kiểm](docs/releases/submission_dot3_20261111/README.md). Giữ kết quả chốt 30/10; đã kiểm 46 test, 174 dòng bảng và biên dịch lại ZIP nguồn trong thư mục mới. `main` là tổng nhóm; [bảng bốn phần và tài khoản phụ trách](docs/group_delivery_20261110/README.md) dẫn sang `tramanh`, `vuongthu`, `trongtin`, có phần chuyên môn, CSV/ảnh và mã kèm nguồn. Trạng thái gửi email được lưu riêng khi có biên nhận; kiểm kỹ thuật không thay lượt đọc chéo hoặc nghiệm thu của thành viên.
 
 **Bản đọc ngày 10/11:** [giữ riêng trong lịch sử](docs/releases/review_dot3_20261110/README.md).

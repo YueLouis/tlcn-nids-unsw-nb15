@@ -1,0 +1,10 @@
+\section{Kết luận đợt 3 và giới hạn còn lại}
+\textbf{RQ1:} kết quả closed-set vẫn cho thấy RF/XGB có AP khoảng 0,988 và recall khoảng 97\% tại target validation 5\%, đồng thời FPR test khoảng 18,6--18,7\%. PR/score bổ sung cách đọc khả năng xếp hạng, không làm mất chi phí cảnh báo nhầm tại điểm vận hành. IF có FPR thấp hơn nhưng recall thấp; cần đọc đồng thời hai phía.
+
+\textbf{RQ2:} lớp held-out quyết định mức khó. Với Reconnaissance, AP Normal/held-out RF/XGB là 0,7077/0,6623, thấp hơn AP toàn test khoảng 0,9852. Known Attack có thể che mức khó của held-out nếu chỉ đọc metric toàn test. RF ở nhóm held-out unmatched của LR vẫn có UADR $97.56\%\pm0.32$ điểm phần trăm tại target 5\%; đây là quan sát trong cùng benchmark, không chứng minh overlap vô hại hoặc khả năng phát hiện zero-day thực tế.
+
+\textbf{RQ3:} nâng target validation từ 1\% lên 5\% làm đổi threshold đã lưu, tăng phát hiện đồng thời tăng báo nhầm. Ví dụ RF closed-set: recall 90,27\% lên 97,14\%, FPR test 4,21\% lên 18,57\%. Đồ thị trade-off dùng FPR test quan sát; không chọn lại threshold bằng test và không coi hai model có cùng target là cùng FPR test.
+
+Đợt 3 bổ sung bằng chứng về score, overlap theo tập fit, importance, nhóm lỗi và độ lặp của lỗi qua seed. Importance là mô tả mô hình; proto/service/state là lát cắt thăm dò; không suy nguyên nhân từng lỗi. Năm seed cùng dùng official test nên std không là khoảng tin cậy trên nhiều dataset độc lập. Prototype chỉ suy luận trên CSV đúng schema; các tình huống replay và phụ lục ứng dụng riêng không phải nguồn test mới.
+
+Giới hạn còn lại gồm một dataset/official split, chưa retrain loại trùng, chưa kiểm dữ liệu vận hành, chưa có bằng chứng phần cứng huấn luyện lịch sử hoặc thời gian train-only, và S07 mới đối chiếu abstract. Phép đo suy luận ngày 25/10 không đại diện độ trễ live. Phần tiếp nối gồm hoàn thiện giải thích cá nhân, đọc chéo, kiểm thử demo và chuẩn bị bảo vệ. Các kiểm kỹ thuật không thay nghiệm thu nội dung hoặc ý kiến của giảng viên.

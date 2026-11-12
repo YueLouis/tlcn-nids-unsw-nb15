@@ -26,6 +26,19 @@ class Handler(BaseHTTPRequestHandler):
             self.reply(200,(ROOT/'demo/index.html').read_bytes(),'text/html; charset=utf-8')
         elif path in ('/lab','/lab/'):
             self.reply(200,(ROOT/'demo/lab.html').read_bytes(),'text/html; charset=utf-8')
+        elif path=='/presentation':
+            self.send_response(302);self.send_header('Location','/presentation/');self.end_headers()
+        elif path.startswith('/presentation/'):
+            # Serve only this self-contained presentation, never the repository root.
+            relative=unquote(path[len('/presentation'):]).lstrip('/') or 'index.html'
+            allowed={'index.html','data.js','presentation.js','presentation.css','SOURCE_DATA.json',
+                     'assets/AP_MEAN_STD.csv','assets/OPERATING_POINTS_MEAN_STD.csv','assets/BAO_CAO_DOT3.pdf'}
+            if relative in allowed:
+                target=ROOT/'demo/presentation'/relative
+                if target.is_file():
+                    self.reply(200,target.read_bytes(),mimetypes.guess_type(target.name)[0] or 'application/octet-stream')
+                else:self.reply(404,{'error':'Tệp trình bày chưa có trên máy.'})
+            else:self.reply(404,{'error':'Không có tệp trình bày này.'})
         elif path=='/api/lab/catalog':self.reply(200,catalog())
         elif path=='/health': self.reply(200,{'status':'ok','app':'nids-demo','seed':42})
         elif path=='/sample.csv': self.reply(200,(ROOT/'demo/sample.csv').read_bytes(),'text/csv; charset=utf-8')
@@ -46,7 +59,14 @@ class Handler(BaseHTTPRequestHandler):
                 return self.reply(403,{'error':'Chỉ dùng từ trang demo trên máy này.'})
             length=int(self.headers.get('Content-Length','0'))
             if length<1 or length>2_000_000: raise ValueError('CSV quá lớn hoặc chưa có nội dung.')
-            payload=json.loads(self.rfile.read(length).decode('utf-8'))
+            try:
+                payload=json.loads(self.rfile.read(length).decode('utf-8'))
+            except json.JSONDecodeError as exc:
+                raise ValueError('Nội dung yêu cầu không phải JSON hợp lệ.') from exc
+            if not isinstance(payload,dict):
+                raise ValueError('Nội dung yêu cầu phải là một đối tượng JSON.')
+            if route in ('/api/predict','/api/compare') and not isinstance(payload.get('csv',''),str):
+                raise ValueError('Nội dung CSV phải là văn bản.')
             if route=='/api/lab/run':
                 result=run_case(payload.get('case','mixed'),payload.get('scenario','CS'),payload.get('model','RF'),float(payload.get('target',.05)))
             elif route=='/api/compare':

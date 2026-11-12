@@ -1,0 +1,118 @@
+{
+  "format": "nids-browser-parameters-v1",
+  "models": [
+    {
+      "run_id": "CS-RF-S42",
+      "file": "CS-RF-S42.bin.gz",
+      "bytes": 17329143,
+      "sha256": "2d49f8945b75c5e038b64f5ce77da36971a2aa49eae1d381e72befb74834faa8",
+      "source_sha256": "9db2b746a4898ad040742c64a6f8ddd184c4ed5c79c73f53cc04a3fde00a4e50"
+    },
+    {
+      "run_id": "CS-XGB-S42",
+      "file": "CS-XGB-S42.bin.gz",
+      "bytes": 247083,
+      "sha256": "a8a265b49706401b53652b348e16d6485d74dfb649222015fc0a1506c422f29e",
+      "source_sha256": "10eefb60dbd76c82fe02164f2e53e8dae46179e56239b28120911258d0da0faa"
+    },
+    {
+      "run_id": "CS-IF-S42",
+      "file": "CS-IF-S42.bin.gz",
+      "bytes": 232203,
+      "sha256": "c7351b9900c1fb79dc396ed88dcad2162aaa429b1162ff033ec510bbe9641f53",
+      "source_sha256": "a71a4521f5e87f34597dd6f2adbfef92c5afc5dbe1d64cd9552283542617a06a"
+    },
+    {
+      "run_id": "CS-AE-S42",
+      "file": "CS-AE-S42.bin.gz",
+      "bytes": 41656,
+      "sha256": "65dc8e13ce82dca368b026339321d5ea2d62e062f2e6b63d841e6d8cb1343f5a",
+      "source_sha256": "ad0f6dc7629f02d6c019fe03f7dc837458aa758950e19388b16f894684bf02fe"
+    },
+    {
+      "run_id": "LR-RF-S42",
+      "file": "LR-RF-S42.bin.gz",
+      "bytes": 16746121,
+      "sha256": "4faad76281919b5dc6f08c3858fd7e2908003c89d7529228a4d00eb964d5d1f9",
+      "source_sha256": "eb09efb629373d45ba273f677fc45cd218c6a3a80896c4badb4d88ce917b89b9"
+    },
+    {
+      "run_id": "LR-XGB-S42",
+      "file": "LR-XGB-S42.bin.gz",
+      "bytes": 248676,
+      "sha256": "e58a8fa29a85745657a41d284352d0a776821f20586a67727b90b5e67dd4d883",
+      "source_sha256": "c2b7eceb11700fed047bb44bdab00f06031132ad0b4183f16b3469ba7704c33c"
+    },
+    {
+      "run_id": "LR-IF-S42",
+      "file": "LR-IF-S42.bin.gz",
+      "bytes": 236837,
+      "sha256": "f02878a8c7345d40fb280936231c297b7158c324abd214b84a8043dcccb0e9a6",
+      "source_sha256": "fc468c8ec2025b58ad604f3ae29e0f4b78b8e035573224debb5f71341936b911"
+    },
+    {
+      "run_id": "LR-AE-S42",
+      "file": "LR-AE-S42.bin.gz",
+      "bytes": 41610,
+      "sha256": "fd6971a1f06422fc2dbc7495adad1c48e8d6722d9c101c3f47c53da2d6ed798c",
+      "source_sha256": "6b23caa5e33c3295b4a00a261b76380abbe5667512210a4e5a8cf682b65c1183"
+    },
+    {
+      "run_id": "LD-RF-S42",
+      "file": "LD-RF-S42.bin.gz",
+      "bytes": 17000098,
+      "sha256": "879e4ca96c90656ead50bbbac5847014ca0407660b0237f9d0366d273c0cc2c3",
+      "source_sha256": "1b3370e5270686c74b724f73895e4784a9d74f23d801b673c45f4cac3592e840"
+    },
+    {
+      "run_id": "LD-XGB-S42",
+      "file": "LD-XGB-S42.bin.gz",
+      "bytes": 245354,
+      "sha256": "105d5d73b71e600e8fd8fcf2f372d553c79f71097573b5c9816ae854a27e0c0b",
+      "source_sha256": "1b1a52800b8c883a3ad954b334099b302acb236582b6bf0db8cb4ece209933a7"
+    },
+    {
+      "run_id": "LD-IF-S42",
+      "file": "LD-IF-S42.bin.gz",
+      "bytes": 238159,
+      "sha256": "2888b61d4165b388fbc7ebdf10f073d704ec8451bc4a2f83a54fbd8c2c9d4dcb",
+      "source_sha256": "0a5366d84c2f85be802961bf932d0a7be68d0d47eb891a84ceae1fd2934bbfd9"
+    },
+    {
+      "run_id": "LD-AE-S42",
+      "file": "LD-AE-S42.bin.gz",
+      "bytes": 41177,
+      "sha256": "31e555812ca87f4cf862d76bdf8e55cd5e148052cd03de6697d31c002f6e432d",
+      "source_sha256": "6981fc9e393ccc43eb4aa1264352e0d0295c6bf9207e97e0de09dfe72f85c48c"
+    },
+    {
+      "run_id": "LE-RF-S42",
+      "file": "LE-RF-S42.bin.gz",
+      "bytes": 15975933,
+      "sha256": "e4c7909035bacfee26329b5f106c98aadbe1b49e63a45f654ca6dba187f331a8",
+      "source_sha256": "51fa4a59b8c32d1774b62c7df3068cf23c3c3507d935876b82a7ca3719ca7b5e"
+    },
+    {
+      "run_id": "LE-XGB-S42",
+      "file": "LE-XGB-S42.bin.gz",
+      "bytes": 247451,
+      "sha256": "a5d58d75fc239538474c6576eaece81bb535d8ca42057fb520b9558d2eccdceb",
+      "source_sha256": "7e8d087d98cfd2ca605618c2ea621f0c175b8167b4011e63cad91f893ac9b7b2"
+    },
+    {
+      "run_id": "LE-IF-S42",
+      "file": "LE-IF-S42.bin.gz",
+      "bytes": 238593,
+      "sha256": "ac2940a90354e50d45fcac1b02c8ddb37eafa644c4d333a05fc0aa07c5fd353f",
+      "source_sha256": "67e5db962a3354b08c6e12348f16c5b7aa621331b798e8c55019c2d63bd069a6"
+    },
+    {
+      "run_id": "LE-AE-S42",
+      "file": "LE-AE-S42.bin.gz",
+      "bytes": 41072,
+      "sha256": "3b67a21c97ac8bb1305b9d5ce0baf1a1401c779d200e55de7e2c4e2c86b2503d",
+      "source_sha256": "d205a237f96ccc65b4d39bd7973ee60117a28b63db3e93c0266b97f6ea8d64b9"
+    }
+  ],
+  "scope": "Frozen seed42 only; browser floating-point parity audited separately"
+}
