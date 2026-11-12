@@ -1,0 +1,41 @@
+{
+  "checked_at_utc": "2026-11-12T21:31:18.994633+00:00",
+  "status": "PASS_FRESH_ZIP_THREE_XELATEX_PASSES",
+  "records": [
+    {
+      "kind": "dot4",
+      "zip": "E:\\Học kì 7 2026-2027\\Tiểu luận chuyên ngành\\tlcn-nids-unsw-nb15\\output\\followup_reports_review_20261113\\dot4\\Nguon_dot4_BAN_NHAP_20261113.zip",
+      "zip_sha256": "5a8f70dbcf77f829f0dfa82e7d62b841f35ddad307b48cab422f0e5b42d0cc68",
+      "extracted_source_files": 51,
+      "compile_passes": 3,
+      "compiled_pdf": "E:\\CodexData\\nids-report-cleancheck-20261113\\dot4\\build\\main.pdf",
+      "compiled_pdf_sha256": "8389751fa14c9038a072116672f26be1c3132a973e8f04d31be13ccec3cc5b29",
+      "pages": 68,
+      "blocking_warnings": [],
+      "text_matches_delivered_pdf": true,
+      "raster_matches_delivered_pdf_at_half_scale": true,
+      "source_manifest_unchanged": true,
+      "all_fonts_embedded": true,
+      "internal_links": 215,
+      "delivered_pdf_sha256": "d163bfd63b78d7cd06ccacd7450d03180a22195fe2623606b15b52890497f6df"
+    },
+    {
+      "kind": "tong",
+      "zip": "E:\\Học kì 7 2026-2027\\Tiểu luận chuyên ngành\\tlcn-nids-unsw-nb15\\output\\followup_reports_review_20261113\\tong\\Nguon_tong_BAN_NHAP_20261113.zip",
+      "zip_sha256": "f503750b9766f67a617251c37a769f3515e0ab5cb1096280e0f734277180a1ef",
+      "extracted_source_files": 51,
+      "compile_passes": 3,
+      "compiled_pdf": "E:\\CodexData\\nids-report-cleancheck-20261113\\tong\\build\\main.pdf",
+      "compiled_pdf_sha256": "9a70f112026f57c93694895fcdf883c9dc18d675e0bd3177bf98fd5e7842e680",
+      "pages": 62,
+      "blocking_warnings": [],
+      "text_matches_delivered_pdf": true,
+      "raster_matches_delivered_pdf_at_half_scale": true,
+      "source_manifest_unchanged": true,
+      "all_fonts_embedded": true,
+      "internal_links": 182,
+      "delivered_pdf_sha256": "4268e8506db1b87dc18a00e785af1ed198d59674a1fd4a3bdbba1cd0210e5445"
+    }
+  ],
+  "note": "Two passes compile with no blocking warnings but TOC roman page entries settle on third pass. Independent extraction of final ZIP. Delivery sources and PDFs unchanged. Fonts/packages from current machine; another OS font installation still required."
+}

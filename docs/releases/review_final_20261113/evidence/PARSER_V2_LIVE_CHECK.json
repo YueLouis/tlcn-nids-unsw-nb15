@@ -1,0 +1,22 @@
+{
+  "public_url": "https://nids-unsw-nb15-tlcn.nttin181.chatgpt.site",
+  "site_version": 2,
+  "hosting_source_commit": "d6701741101f4a7ee2368cf02014a7249be00fec",
+  "live_checks": {
+    "decimal_labels_with_whitespace": "4/4 rows recognized for truth comparison",
+    "character_after_closing_quote": "Rejected with CSV có ký tự sau dấu nháy đóng; previous result disabled",
+    "browser_parity": "32000 predictions, zero label mismatches after parser changes"
+  },
+  "offline": {
+    "zip_extracted_and_served_on_loopback": true,
+    "rf_50_rows_observed": {"TP": 40, "FP": 8, "TN": 2, "FN": 0},
+    "port_conflict_fallback_tested": true,
+    "final_engine_and_launcher_byte_exact_with_source": true,
+    "internet_adapter_disabled_during_test": false
+  },
+  "drive": {
+    "folder": "https://drive.google.com/drive/folders/1d-m5b35FVvGU3AEuA8vx1c9btG5xznUl",
+    "total_report_downloaded_sha256_match": "4268e8506db1b87dc18a00e785af1ed198d59674a1fd4a3bdbba1cd0210e5445"
+  },
+  "limits": ["No physical HDMI/projector check", "Group review and rehearsal pending", "No independent traffic dataset"]
+}

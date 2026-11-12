@@ -1,0 +1,18 @@
+{
+  "checked_at_utc": "2026-11-12T21:33:18.716708+00:00",
+  "folder_url": "https://drive.google.com/drive/folders/1d-m5b35FVvGU3AEuA8vx1c9btG5xznUl",
+  "file_id": "16lUuwKPyfRQo9xgmjge49Fr0lmXGG4M3",
+  "file_name": "NIDS_BAN_GIAO_20261113.zip",
+  "drive_revision_observed": 2,
+  "bytes": 81086239,
+  "sha256": "3c7f05bb677090c5f94167bb118f20e2a0bf0532e4fd2e1de5b2db6f2336870d",
+  "download_matches_final_local_package": true,
+  "outer_zip_crc_ok": true,
+  "manifest_files_checked": 30,
+  "all_manifest_bytes_and_sha256_match": true,
+  "offline_zip_crc_ok": true,
+  "offline_zip_entries": 41,
+  "status": "DOWNLOADED_AND_VERIFIED_PENDING_GROUP_REVIEW",
+  "lecturer_mail_dot4_and_total_sent": false,
+  "scope_note": "The uploaded folder inherits the existing group sharing. This receipt verifies the downloaded contents, not approval by the three members or the lecturer."
+}

@@ -21,6 +21,14 @@ Bằng chứng trong `evidence/`: triển khai public thành công; 32.000 dự 
 
 SHA-256 của từng PDF nằm trong `reports/*_DRAFT_CHECK.json` và `slides/SLIDES_CHECK.json`. Đã kiểm font nhúng, liên kết/mục lục, hình/bảng và xem tất cả trang; các kiểm kỹ thuật không thay lượt nhóm đọc chéo. Chưa thử cáp HDMI/máy chiếu thật, chưa có dữ liệu mạng độc lập hoặc chấp thuận mới của giảng viên.
 
+Gói đầy đủ đã được tải lại từ Drive: 30 tệp trong manifest khớp kích thước và SHA-256, ZIP chính và ZIP offline không lỗi CRC. Biên bản ở [DRIVE_DOWNLOAD_CHECK.json](evidence/DRIVE_DOWNLOAD_CHECK.json). Các biên bản kiểm bổ sung trên GitHub không làm thay đổi PDF và gói ZIP đã bàn giao.
+
+## Biên dịch lại báo cáo
+
+Giải nén ZIP nguồn đợt 4 hoặc tổng vào một thư mục riêng, mở terminal tại nơi có `main.tex`. Máy cần bản TeX hỗ trợ XeLaTeX và các font Times New Roman, Arial, Consolas. Chạy `latexmk -xelatex -interaction=nonstopmode -halt-on-error main.tex`; nếu chạy XeLaTeX trực tiếp, chạy `xelatex -interaction=nonstopmode -halt-on-error main.tex` **ba lượt** từ nguồn sạch để số trang trong mục lục ổn định.
+
+Cả hai ZIP đã được giải nén và biên dịch độc lập. Sau ba lượt, chữ và ảnh từng trang ở độ phân giải kiểm tra khớp bản PDF bàn giao; không có cảnh báo chặn. Xem [CLEAN_COMPILE_CHECK.json](evidence/CLEAN_COMPILE_CHECK.json). PDF biên dịch lại có thể khác SHA do thông tin thời gian và đường dẫn, nên không dùng SHA của bản tái tạo để thay lịch sử bản đã bàn giao.
+
 ## Tái tạo bản trình bày
 
 Nguồn giao diện nằm ở `demo/presentation/`. `scripts/prepare_presentation_20261112.py` tái tạo HTML từ `template.html` được version hóa; không cần chạy khi chỉ mở demo. `scripts/export_browser_models.py` cần các bundle gốc trong `results/runs/` để xuất 16 model; `scripts/build_public_presentation.py` ghép code/assets/cases vào checkout hosting riêng. Không đưa tham số nặng hoặc Git hosting lồng nhau vào kho mã học thuật.
