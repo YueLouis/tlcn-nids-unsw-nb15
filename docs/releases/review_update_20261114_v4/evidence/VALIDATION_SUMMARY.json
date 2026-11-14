@@ -1,0 +1,42 @@
+{
+  "checked_date": "2026-11-14",
+  "site_version": 4,
+  "python": {
+    "command": "PYTHONPATH=src python -X utf8 -m unittest discover -s tests -q",
+    "tests": 51,
+    "result": "PASS",
+    "observed_output": "Ran 51 tests in 1.932s\nOK",
+    "warning": "Small test Autoencoder reaches 100-iteration limit (ConvergenceWarning); no change to frozen benchmark models."
+  },
+  "javascript": [
+    {
+      "command": "node tests/test_hub_feedback.mjs",
+      "result": "PASS",
+      "scope": "Executes actual hub JS in node:vm with minimal DOM mocks; three actual HTML member options, clipboard success for all three names, blocked/unavailable clipboard fallback, UTF-8/BOM TXT, blank validation"
+    },
+    {
+      "command": "node tests/test_browser_engine.mjs",
+      "result": "PASS",
+      "scope": "CSV schema, quoting, numeric/category validation, metadata isolation, no-label metrics and threshold contract"
+    }
+  ],
+  "local_http": "LOCAL_HTTP_CHECK.json",
+  "production_http": "AUTHORIZED_HTTP_CHECK.json",
+  "production_html": "HTML_RESPONSE_CHECK.json",
+  "browser": {
+    "status": "NOT_RETESTED",
+    "reason": "Chrome DevTools MCP could not connect: profile already running; Codex computer-use tool not available in current session",
+    "clipboard_download_e2e_verified": false,
+    "new_layout_no_scroll_verified": false,
+    "previous_v3_evidence": "../../review_update_20261114/evidence/LIVE_BROWSER_CHECK.json"
+  },
+  "drive": {
+    "v4_uploaded": false,
+    "reason": "Installed Google Drive connector returned Unknown tool for get_profile; no current supported in-app browser control available",
+    "previous_v3_package_kept": true
+  },
+  "group_approval": false,
+  "dot4_and_total_submitted": false,
+  "physical_hdmi_test": false,
+  "independent_traffic_dataset": false
+}

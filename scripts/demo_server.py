@@ -9,6 +9,8 @@ from urllib.parse import urlparse, unquote
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'))
+sys.path.insert(0,str(ROOT/'scripts'))
+from portable_markdown import render_portable_markdown
 from nids_benchmark.demo import predict_csv,compare_csv
 from nids_benchmark.application import catalog,run_case
 
@@ -48,7 +50,9 @@ class Handler(BaseHTTPRequestHandler):
             elif relative in downloads:
                 target=downloads[relative]
                 if target.is_file():
-                    self.reply(200,target.read_bytes(),mimetypes.guess_type(target.name)[0] or 'application/octet-stream')
+                    payload=(render_portable_markdown(target.read_text(encoding='utf-8'),target,ROOT).encode('utf-8')
+                             if target.suffix=='.md' else target.read_bytes())
+                    self.reply(200,payload,mimetypes.guess_type(target.name)[0] or 'application/octet-stream')
                 else:self.reply(404,{'error':'Tệp hồ sơ chưa có trên máy.'})
             else:self.reply(404,{'error':'Không có tệp trình bày này.'})
         elif path=='/api/lab/catalog':self.reply(200,catalog())

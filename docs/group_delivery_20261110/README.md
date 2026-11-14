@@ -15,4 +15,4 @@ Trong từng phần, `QUA_TRINH_CAC_DOT.md` nối phân công với tài liệu 
 
 Hồ sơ cá nhân bổ sung ngày 11/11 không chứng minh đã có commit cá nhân ở đợt 1–2. Phản hồi của thầy ngày 31/10 và lịch sử tác giả được giữ nguyên. Phân công là phạm vi chịu trách nhiệm; tài liệu/mã dùng chung có công cụ hỗ trợ không tự thành sản phẩm độc lập do một thành viên viết. Thao tác tải theo ủy quyền và việc thành viên tự đọc, sửa, nhận xét được phân biệt rõ.
 
-Đợt 4, báo cáo tổng và bộ bảo vệ đang được hoàn thiện. Bản nháp không được tính là bản đã nộp hoặc nghiệm thu. Trạng thái gửi thư đợt 3 được lưu riêng theo biên nhận thực tế.
+Đợt 4, báo cáo tổng và bộ bảo vệ đã có [bản đọc duyệt ngày 13/11](../releases/review_final_20261113/README.md), kèm [hồ sơ online cập nhật 14/11](../releases/review_update_20261114_v4/README.md). Cả ba cần đọc và góp ý trước khi chốt nộp. Bản nháp không được tính là bản đã nộp hoặc nghiệm thu. Trạng thái gửi thư đợt 3 được lưu riêng theo biên nhận thực tế.

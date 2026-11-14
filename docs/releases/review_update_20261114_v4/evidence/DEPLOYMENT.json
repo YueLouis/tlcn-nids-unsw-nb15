@@ -1,0 +1,27 @@
+{
+  "checked_at_utc": "2026-11-14T15:54:14.803853+00:00",
+  "id": "appgdep_6af8841af75081918af2234e190e1723",
+  "project_id": "appgprj_6af5f8d15e0c819197d0e219798276bd",
+  "title": "NIDS · Trâm Anh – Vương Thu – Trọng Tín",
+  "version_id": "appgprj_6af5f8d15e0c819197d0e219798276bd~appgver_a57dc8b668a48191990b1515d5f255b4",
+  "type": "publish",
+  "status": "succeeded",
+  "url": "https://nids-unsw-nb15-tlcn.nttin181.chatgpt.site",
+  "has_mcp": false,
+  "screenshot_asset_pointer": null,
+  "provider_deployment_id": "site---6af5f8d15e0c819197d0e219798276bd",
+  "failure_message": null,
+  "env_set_revision": 0,
+  "updated_at": "2026-11-14T15:54:14.803853+00:00",
+  "version_number": 4,
+  "source": {
+    "commit_sha": "570a1230d5bdf987bf3472c89f249fa4eac8e0c7"
+  },
+  "archive_storage": {
+    "archive_format": "tar",
+    "sediment_file_id": "file_0000000028f88209ae84eadd59d17da6",
+    "content_hash": "sha256:5abe026139f56aca331834c64616b39d5c6704177df34b9e88f634cfccb9a26e",
+    "size_bytes": 82606080,
+    "file_count": 52
+  }
+}

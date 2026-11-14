@@ -1,5 +1,7 @@
 # Bắt đầu từ đây — bộ chuẩn bị bảo vệ ngày 13/11/2026
 
+**Chỉ dẫn cập nhật 14/11:** mở [hồ sơ online và cách góp ý hiện hành](../releases/review_update_20261114_v4/README.md). Gói 13/11 bên dưới vẫn là phương án dự phòng tại thời điểm bàn giao; bản cập nhật 14/11 có thêm hồ sơ nhóm. PDF/ZIP nguồn 13/11 giữ nguyên.
+
 Web trình bày: https://nids-unsw-nb15-tlcn.nttin181.chatgpt.site
 
 Ba bạn đọc tài liệu này cùng phiếu phân việc PDF. Bộ này phục vụ đọc duyệt và tập báo cáo; đợt 4 và báo cáo tổng chưa được nhóm duyệt, chưa gửi giảng viên. Đợt 3 đã gửi trong chuỗi thư cũ lúc 23:16 ngày 12/11, kèm đúng PDF 62 trang; chưa có bằng chứng thầy đã đọc hoặc duyệt.

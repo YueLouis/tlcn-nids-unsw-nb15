@@ -1,0 +1,18 @@
+{
+  "checked_at_utc": "2026-11-14T15:51:28.883994+00:00",
+  "package": "E:\\Học kì 7 2026-2027\\Tiểu luận chuyên ngành\\tlcn-nids-unsw-nb15\\output\\review_update_20261114_v4\\NIDS_CAP_NHAT_20261114_v4.zip",
+  "source_dist": "E:\\Học kì 7 2026-2027\\Tiểu luận chuyên ngành\\tlcn-nids-unsw-nb15\\sites\\nids-presentation\\dist",
+  "bytes": 80827443,
+  "sha256": "edfedefdd208f9ebf27f890fae25c9129897d054c05b229414d4c34421e11e25",
+  "manifest_files": 54,
+  "zip_entries": 55,
+  "crc_and_manifest_hashes_match": true,
+  "model_count": 16,
+  "frozen_20261113_pdfs_and_source_zips_unchanged": true,
+  "status": "PACKAGED_PENDING_GROUP_REVIEW",
+  "revision": "v4",
+  "group_approval": false,
+  "dot4_and_total_submitted": false,
+  "public_deployment_confirmed_by_packaging": false,
+  "physical_hdmi_test_confirmed_by_packaging": false
+}

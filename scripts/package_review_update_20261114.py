@@ -4,8 +4,10 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 from pathlib import Path
+import argparse
 import hashlib
 import json
+import re
 import sys
 import uuid
 import zipfile
@@ -177,10 +179,24 @@ def collect_sources() -> list[tuple[str, Path]]:
 
 
 def main() -> None:
+    global OUT, PACKAGE
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--revision', help='Phiên bản riêng, ví dụ v4; không ghi đè gói cũ')
+    args = parser.parse_args()
+    if args.revision:
+        require(re.fullmatch(r'v[1-9][0-9]*', args.revision) is not None, 'Revision cần dạng v4, v5…')
+        OUT = ROOT / f'output/review_update_20261114_{args.revision}'
+        PACKAGE = OUT / f'NIDS_CAP_NHAT_20261114_{args.revision}.zip'
     require(sys.version_info >= (3, 9), "Script đóng gói cần Python 3.9 trở lên")
     require(not PACKAGE.exists(), f"Gói đã tồn tại; giữ nguyên, không ghi đè: {PACKAGE}")
     sources = collect_sources()
-    generated = {"CHAY_DEMO.cmd": LAUNCHER, "README.md": README}
+    readme = README
+    if args.revision:
+        readme += (f'\nPhiên bản gói: {args.revision} · ngày 14/11/2026.\n'
+                   'Trang góp ý có nút sao chép kèm tên người ghi; nếu trình duyệt chặn,\n'
+                   'dùng khung sao chép thủ công. Tải TXT cần kiểm tệp trong Downloads.\n'
+                   'Bảng đối chiếu tải xuống dùng liên kết GitHub; các liên kết đó cần mạng.\n').encode('utf-8')
+    generated = {"CHAY_DEMO.cmd": LAUNCHER, "README.md": readme}
     rows = [dict(path=name, bytes=path.stat().st_size, sha256=sha(path)) for name, path in sources]
     rows.extend(dict(path=name, bytes=len(data), sha256=hashlib.sha256(data).hexdigest()) for name, data in generated.items())
     rows.sort(key=lambda row: row["path"])
@@ -212,7 +228,7 @@ def main() -> None:
 
     # Sidecars describe this new package only. No release_20261113 files are written.
     (OUT / "MANIFEST.json").write_bytes(manifest_bytes)
-    (OUT / "README.md").write_bytes(README)
+    (OUT / "README.md").write_bytes(readme)
     receipt = {
         "checked_at_utc": datetime.now(timezone.utc).isoformat(),
         "package": str(PACKAGE), "source_dist": str(DIST),
@@ -221,6 +237,7 @@ def main() -> None:
         "crc_and_manifest_hashes_match": True, "model_count": 16,
         "frozen_20261113_pdfs_and_source_zips_unchanged": True,
         "status": "PACKAGED_PENDING_GROUP_REVIEW",
+        "revision": args.revision,
         "group_approval": False, "dot4_and_total_submitted": False,
         "public_deployment_confirmed_by_packaging": False,
         "physical_hdmi_test_confirmed_by_packaging": False,

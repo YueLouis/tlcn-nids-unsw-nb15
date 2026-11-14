@@ -1,0 +1,26 @@
+{
+  "checked_at_utc": "2026-11-14T16:08:40.890570+00:00",
+  "http_status": 200,
+  "verification": "Authorized HTTP, not browser or anonymous access test",
+  "exact_byte_match": false,
+  "source_preserved_with_insertions_only": true,
+  "differences": [
+    {
+      "operation": "insert",
+      "source_chars": 0,
+      "response_chars": 1114,
+      "html_tags": [
+        "script"
+      ]
+    }
+  ],
+  "controls_present": {
+    "anh_option": true,
+    "copy_button": true,
+    "download_button": true,
+    "manual_copy_dialog": true,
+    "manual_copy_plain_text": true,
+    "script_reference": true
+  },
+  "expected_controls_present": true
+}

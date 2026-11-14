@@ -1,6 +1,7 @@
 """Build only public presentation assets, parameter exports and demo subsets."""
 from pathlib import Path
 import json,shutil
+from portable_markdown import render_portable_markdown
 ROOT=Path(__file__).resolve().parents[1]
 SOURCE=ROOT/'demo/presentation';DEST=ROOT/'sites/nids-presentation/dist'
 DEST.mkdir(parents=True,exist_ok=True)
@@ -26,7 +27,8 @@ for folder in ('reports','slides'):
         if path.is_file() and path.suffix in ('.pdf','.zip'):
             shutil.copy2(path,downloads/path.name)
 for name in ('BAN_GIAO_BAO_VE_20261113.md','DOI_CHIEU_YEU_CAU_20261114.md'):
-    shutil.copy2(ROOT/'docs/management'/name,downloads/name)
+    source=ROOT/'docs/management'/name
+    (downloads/name).write_text(render_portable_markdown(source.read_text(encoding='utf-8'),source,ROOT),encoding='utf-8')
 download_manifest=[]
 import hashlib
 for path in sorted(downloads.iterdir()):

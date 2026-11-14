@@ -1,0 +1,22 @@
+{
+  "checked_at_utc": "2026-11-14T15:55:44.633851+00:00",
+  "checks": [
+    {
+      "file": "DOI_CHIEU_YEU_CAU_20261114.md",
+      "http_status": 200,
+      "links": 63,
+      "matches_generated": true,
+      "bytes": 16987,
+      "sha256": "501592760f2eb332ad1d3453d3520cb240af97003c5ff6a9193889df63469e15"
+    },
+    {
+      "file": "BAN_GIAO_BAO_VE_20261113.md",
+      "http_status": 200,
+      "links": 1,
+      "matches_generated": true,
+      "bytes": 11484,
+      "sha256": "eb67cfc8b91c2705663f02be0ce603f110eefa93d3daa015a018e98f0ecf93e1"
+    }
+  ],
+  "server_stopped": true
+}

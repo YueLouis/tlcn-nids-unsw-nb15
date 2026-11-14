@@ -1,5 +1,7 @@
 # Cửa vào hồ sơ nhóm — cập nhật ngày 14/11/2026
 
+**Bản tiếp nối:** web hiện đã có [v4 sửa lựa chọn thành viên, sao chép góp ý và liên kết Markdown](../review_update_20261114_v4/README.md). Các biên bản v3 và gói trên Drive dưới đây giữ nguyên theo thời điểm kiểm.
+
 Trang hồ sơ nằm tại [ho-so.html](../../../demo/presentation/ho-so.html), bên cạnh giao diện trình bày. Mở public: [nids-unsw-nb15-tlcn.nttin181.chatgpt.site/ho-so.html](https://nids-unsw-nb15-tlcn.nttin181.chatgpt.site/ho-so.html); dịch vụ có thể chuyển địa chỉ sang `/ho-so`.
 
 **Trạng thái phát hành:** bản web cập nhật **v3 đã triển khai thành công ngày 14/11/2026**, theo [biên bản triển khai](evidence/DEPLOYMENT.json). Trang hồ sơ đã mở thực tế trên public; PDF tổng mở đủ 62 trang và tệp PDF đợt 4 tải về khớp SHA của bản 13/11. Bản public đã chạy mẫu CSV bằng RF tại hai ngưỡng 1% và 5%. Chưa xác nhận tải thành công mọi liên kết public hoặc luồng tải góp ý TXT public. [Bộ bàn giao 13/11](../review_final_20261113/README.md) giữ nguyên để đối chiếu.

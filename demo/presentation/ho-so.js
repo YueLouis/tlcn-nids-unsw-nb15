@@ -94,19 +94,38 @@ function showPerson(key) {
 document.querySelectorAll('[data-person]').forEach((button) => button.addEventListener('click', () => showPerson(button.dataset.person)));
 showPerson('anh');
 
-document.getElementById('feedback-form').addEventListener('submit', (event) => {
+document.getElementById('feedback-form').addEventListener('submit', async (event) => {
   event.preventDefault();
   const name = document.getElementById('feedback-name').value;
   const note = document.getElementById('feedback-text').value.trim();
   const status = document.getElementById('feedback-status');
-  if (!name || !note) { status.textContent = 'Chọn tên và ghi góp ý trước khi tải'; return; }
+  if (!name || !note) { status.textContent = 'Chọn tên và ghi góp ý trước khi chia sẻ'; return; }
   const now = new Date();
   const writtenAt = now.toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh', hour12: false });
-  const text = `GÓP Ý HỒ SƠ NIDS\nBộ tài liệu 13/11/2026 · bảng đối chiếu 14/11/2026\nNgười ghi: ${name}\nThời điểm tải: ${writtenAt} (Việt Nam)\n\n${note}\n\nĐây là góp ý do người ghi tự gửi; tệp này không xác nhận đã duyệt hoặc đã nộp.\n`;
+  const text = `GÓP Ý HỒ SƠ NIDS\nBộ tài liệu 13/11/2026 · bảng đối chiếu 14/11/2026\nNgười ghi: ${name}\nThời điểm tạo: ${writtenAt} (Việt Nam)\n\n${note}\n\nĐây là góp ý do người ghi tự gửi; nội dung này không xác nhận đã duyệt hoặc đã nộp.\n`;
+  if (event.submitter?.value === 'copy') {
+    try {
+      await navigator.clipboard.writeText(text);
+      status.textContent = 'Đã sao chép góp ý · tự dán vào Zalo nhóm';
+    } catch {
+      const dialog = document.getElementById('feedback-copy-dialog');
+      const preview = document.getElementById('feedback-copy-preview');
+      preview.value = text;
+      dialog.showModal();
+      preview.focus();
+      preview.select();
+      status.textContent = 'Trình duyệt chặn sao chép · dùng khung sao chép thủ công';
+    }
+    return;
+  }
   const url = URL.createObjectURL(new Blob(['\uFEFF', text], { type: 'text/plain;charset=utf-8' }));
   const link = document.createElement('a');
   const stamp = new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Ho_Chi_Minh', year: 'numeric', month: '2-digit', day: '2-digit' }).format(now);
   link.href = url; link.download = `gop-y-nids-${stamp}.txt`; document.body.append(link); link.click(); link.remove();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
-  status.textContent = 'Đã tạo tệp TXT · tự gửi vào Zalo nhóm';
+  status.textContent = 'Đã yêu cầu tải TXT · kiểm tệp trong Downloads rồi gửi vào Zalo';
+});
+
+document.getElementById('feedback-copy-close').addEventListener('click', () => {
+  document.getElementById('feedback-copy-dialog').close();
 });
