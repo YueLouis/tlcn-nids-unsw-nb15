@@ -15,6 +15,24 @@ html=html.replace('<a href="/lab">Mở phòng thử nghiệm đầy đủ ↗</a
 html=html.replace('Demo suy luận từ CSV qua mô hình đã lưu ở seed 42.','Bản online suy luận ngay trong trình duyệt từ tham số mô hình seed 42 đã xuất. CSV bạn mở được xử lý tại máy, không tải lên máy chủ. Bản local dùng API Python.')
 html=html.replace('Demo suy luận từ CSV qua model đã lưu;','Demo suy luận từ CSV qua tham số model đã lưu;')
 (DEST/'index.html').write_text(html,encoding='utf-8')
+# Group review uses the same hosted origin and frozen report files.
+for name in ('ho-so.html','ho-so.css','ho-so.js'):
+    shutil.copy2(SOURCE/name,DEST/name)
+downloads=DEST/'downloads'
+downloads.mkdir(exist_ok=True)
+release=ROOT/'docs/releases/review_final_20261113'
+for folder in ('reports','slides'):
+    for path in (release/folder).iterdir():
+        if path.is_file() and path.suffix in ('.pdf','.zip'):
+            shutil.copy2(path,downloads/path.name)
+for name in ('BAN_GIAO_BAO_VE_20261113.md','DOI_CHIEU_YEU_CAU_20261114.md'):
+    shutil.copy2(ROOT/'docs/management'/name,downloads/name)
+download_manifest=[]
+import hashlib
+for path in sorted(downloads.iterdir()):
+    if path.is_file() and path.name != 'MANIFEST.json':
+        download_manifest.append(dict(file=path.name,bytes=path.stat().st_size,sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
+(downloads/'MANIFEST.json').write_text(json.dumps(download_manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 provenance=json.loads((SOURCE/'SOURCE_DATA.json').read_text(encoding='utf-8'))
 provenance['inference']['public_engine']='browser-parameters-v1: Web Worker, no CSV upload'
 provenance['inference']['export_manifest']='models/manifest.json'

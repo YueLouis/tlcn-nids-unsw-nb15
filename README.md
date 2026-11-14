@@ -1,5 +1,7 @@
 # TLCN NIDS - UNSW-NB15
 
+**Đọc và góp ý cùng nhóm — cập nhật 14/11/2026:** mở [hồ sơ online](https://nids-unsw-nb15-tlcn.nttin181.chatgpt.site/ho-so.html), chọn **Tài liệu → Phần từng người → Cần chốt**. Có PDF báo cáo, slide, trang đọc và câu hỏi theo từng bạn; góp ý tự gửi vào Zalo nhóm. [Gói offline cập nhật trên Drive](https://drive.google.com/file/d/1SZlzTmU8x6I-h0NVQ2pZ_DvAreVQHdyK/view) đã tải lại đối chiếu đủ 54 tệp. [Hướng dẫn và phạm vi kiểm](docs/releases/review_update_20261114/README.md) ghi rõ kết quả mới và giới hạn tải TXT trên trình duyệt Codex. Đợt 4 và tổng còn chờ nhóm đọc duyệt, chưa gửi giảng viên.
+
 **Bộ chuẩn bị bảo vệ ngày 13/11/2026:** [web trình bày và demo public](https://nids-unsw-nb15-tlcn.nttin181.chatgpt.site), [báo cáo đợt 4/tổng và slide](docs/releases/review_final_20261113/README.md), [hướng dẫn ba thành viên đọc, chạy demo và tập báo cáo](docs/management/BAN_GIAO_BAO_VE_20261113.md). Web có bảy mục bằng nút, nền sáng và demo tính thật từ tham số 16 model seed 42 tại trình duyệt. Bản local dùng `python scripts/demo_server.py` rồi mở `http://127.0.0.1:4397/presentation/`. Đợt 4 và tổng là bản chờ nhóm duyệt, chưa nộp; bộ này không thay bản đợt 3 đã gửi.
 
 **Đợt 3 đã gửi:** lúc 23:16 ngày 12/11/2026 trong chuỗi thư cũ, kèm [PDF 62 trang ngày 11/11](docs/releases/submission_dot3_20261111/README.md). Chưa có bằng chứng giảng viên đã đọc hoặc duyệt. Bản đọc ngày 10/11 bên dưới được giữ để đối chiếu lịch sử.

@@ -1,0 +1,365 @@
+{
+  "checked_at_utc": "2026-11-14T08:25:15.093768+00:00",
+  "http_operating_cases": 32,
+  "prediction_rows_checked": 3200,
+  "exact_labels_and_thresholds": true,
+  "score_absolute_tolerance": 1e-06,
+  "max_abs_score_difference": 2.196694097733598e-07,
+  "model_comparisons_scenarios": 4,
+  "catalog_cases": [
+    {
+      "case": "normal",
+      "status": 200
+    },
+    {
+      "case": "known",
+      "status": 200
+    },
+    {
+      "case": "mixed",
+      "status": 200
+    },
+    {
+      "case": "heldout-r",
+      "status": 200
+    },
+    {
+      "case": "heldout-d",
+      "status": 200
+    },
+    {
+      "case": "heldout-e",
+      "status": 200
+    },
+    {
+      "case": "unlabeled",
+      "status": 200
+    },
+    {
+      "case": "invalid",
+      "status": 400
+    }
+  ],
+  "unlabeled_input_does_not_create_truth": true,
+  "invalid_requests": [
+    {
+      "case": "missing_feature",
+      "status": 400,
+      "error": "CSV thiếu cột: dur"
+    },
+    {
+      "case": "empty_csv",
+      "status": 400,
+      "error": "CSV trống hoặc thiếu tên cột."
+    },
+    {
+      "case": "not_a_number",
+      "status": 400,
+      "error": "Cột số có ô trống hoặc dữ liệu không hợp lệ."
+    },
+    {
+      "case": "infinity",
+      "status": 400,
+      "error": "Cột số có ô trống hoặc dữ liệu không hợp lệ."
+    },
+    {
+      "case": "invalid_model",
+      "status": 400,
+      "error": "Chọn kịch bản và mô hình trong danh sách."
+    },
+    {
+      "case": "invalid_scenario",
+      "status": 400,
+      "error": "Chọn kịch bản và mô hình trong danh sách."
+    },
+    {
+      "case": "invalid_target",
+      "status": 400,
+      "error": "Chỉ hỗ trợ target validation 1% hoặc 5%."
+    },
+    {
+      "case": "null_csv",
+      "status": 400,
+      "error": "Nội dung CSV phải là văn bản."
+    },
+    {
+      "case": "json_list",
+      "status": 400,
+      "error": "Nội dung yêu cầu phải là một đối tượng JSON."
+    },
+    {
+      "case": "json_null",
+      "status": 400,
+      "error": "Nội dung yêu cầu phải là một đối tượng JSON."
+    },
+    {
+      "case": "broken_json",
+      "status": 400,
+      "error": "Nội dung yêu cầu không phải JSON hợp lệ."
+    }
+  ],
+  "cross_origin_rejected": true,
+  "unknown_routes_404": true,
+  "failures": [],
+  "comparisons": [
+    {
+      "run_id": "CS-RF-S42",
+      "target": 0.01,
+      "rows": 100,
+      "max_abs_score_difference": 4.440892098500626e-16
+    },
+    {
+      "run_id": "CS-RF-S42",
+      "target": 0.05,
+      "rows": 100,
+      "max_abs_score_difference": 4.440892098500626e-16
+    },
+    {
+      "run_id": "CS-XGB-S42",
+      "target": 0.01,
+      "rows": 100,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "run_id": "CS-XGB-S42",
+      "target": 0.05,
+      "rows": 100,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "run_id": "CS-IF-S42",
+      "target": 0.01,
+      "rows": 100,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "run_id": "CS-IF-S42",
+      "target": 0.05,
+      "rows": 100,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "run_id": "CS-AE-S42",
+      "target": 0.01,
+      "rows": 100,
+      "max_abs_score_difference": 1.0430547503492704e-07
+    },
+    {
+      "run_id": "CS-AE-S42",
+      "target": 0.05,
+      "rows": 100,
+      "max_abs_score_difference": 1.0430547503492704e-07
+    },
+    {
+      "run_id": "LR-RF-S42",
+      "target": 0.01,
+      "rows": 100,
+      "max_abs_score_difference": 4.440892098500626e-16
+    },
+    {
+      "run_id": "LR-RF-S42",
+      "target": 0.05,
+      "rows": 100,
+      "max_abs_score_difference": 3.3306690738754696e-16
+    },
+    {
+      "run_id": "LR-XGB-S42",
+      "target": 0.01,
+      "rows": 100,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "run_id": "LR-XGB-S42",
+      "target": 0.05,
+      "rows": 100,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "run_id": "LR-IF-S42",
+      "target": 0.01,
+      "rows": 100,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "run_id": "LR-IF-S42",
+      "target": 0.05,
+      "rows": 100,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "run_id": "LR-AE-S42",
+      "target": 0.01,
+      "rows": 100,
+      "max_abs_score_difference": 1.7887560685436732e-07
+    },
+    {
+      "run_id": "LR-AE-S42",
+      "target": 0.05,
+      "rows": 100,
+      "max_abs_score_difference": 1.7887560685436732e-07
+    },
+    {
+      "run_id": "LD-RF-S42",
+      "target": 0.01,
+      "rows": 100,
+      "max_abs_score_difference": 2.220446049250313e-16
+    },
+    {
+      "run_id": "LD-RF-S42",
+      "target": 0.05,
+      "rows": 100,
+      "max_abs_score_difference": 2.220446049250313e-16
+    },
+    {
+      "run_id": "LD-XGB-S42",
+      "target": 0.01,
+      "rows": 100,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "run_id": "LD-XGB-S42",
+      "target": 0.05,
+      "rows": 100,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "run_id": "LD-IF-S42",
+      "target": 0.01,
+      "rows": 100,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "run_id": "LD-IF-S42",
+      "target": 0.05,
+      "rows": 100,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "run_id": "LD-AE-S42",
+      "target": 0.01,
+      "rows": 100,
+      "max_abs_score_difference": 1.9494936509545369e-07
+    },
+    {
+      "run_id": "LD-AE-S42",
+      "target": 0.05,
+      "rows": 100,
+      "max_abs_score_difference": 1.9494936509545369e-07
+    },
+    {
+      "run_id": "LE-RF-S42",
+      "target": 0.01,
+      "rows": 100,
+      "max_abs_score_difference": 2.7755575615628914e-16
+    },
+    {
+      "run_id": "LE-RF-S42",
+      "target": 0.05,
+      "rows": 100,
+      "max_abs_score_difference": 4.440892098500626e-16
+    },
+    {
+      "run_id": "LE-XGB-S42",
+      "target": 0.01,
+      "rows": 100,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "run_id": "LE-XGB-S42",
+      "target": 0.05,
+      "rows": 100,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "run_id": "LE-IF-S42",
+      "target": 0.01,
+      "rows": 100,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "run_id": "LE-IF-S42",
+      "target": 0.05,
+      "rows": 100,
+      "max_abs_score_difference": 0.0
+    },
+    {
+      "run_id": "LE-AE-S42",
+      "target": 0.01,
+      "rows": 100,
+      "max_abs_score_difference": 2.196694097733598e-07
+    },
+    {
+      "run_id": "LE-AE-S42",
+      "target": 0.05,
+      "rows": 100,
+      "max_abs_score_difference": 2.196694097733598e-07
+    }
+  ],
+  "inputs_unchanged": [
+    {
+      "path": "results/runs/CS-RF-S42/predictions.csv",
+      "sha256": "accebef931f682b203c9cbf145af0a1f4f466113d54a808bec342dd0d79a09cc"
+    },
+    {
+      "path": "results/runs/CS-XGB-S42/predictions.csv",
+      "sha256": "f18dcf2694c10b6ef004a20cd1049e3ebd4185de294f8fec92803a3cfa3a923a"
+    },
+    {
+      "path": "results/runs/CS-IF-S42/predictions.csv",
+      "sha256": "5787c44262cbf9e69b7699fb915fefb043bce7351987b62693573e17e38f6e23"
+    },
+    {
+      "path": "results/runs/CS-AE-S42/predictions.csv",
+      "sha256": "8adc37b5f692498292c3ff64f10fa474d2470af828a59c5abf331367ce8e3554"
+    },
+    {
+      "path": "results/runs/LR-RF-S42/predictions.csv",
+      "sha256": "19def4540004699c4271b55008f7a793e149360dd6fb1aba9381b634b1026bcc"
+    },
+    {
+      "path": "results/runs/LR-XGB-S42/predictions.csv",
+      "sha256": "a8fb4bda2330147689fe3dbcfc4f3c2c48a25d345906963a699ac288ccf086b3"
+    },
+    {
+      "path": "results/runs/LR-IF-S42/predictions.csv",
+      "sha256": "ee87570dc1324818fa474cba50998182608316f0ac3f94ec4a44d6c38d0a5378"
+    },
+    {
+      "path": "results/runs/LR-AE-S42/predictions.csv",
+      "sha256": "0e475fee73df04b47e9c0d95d364ab1fcd753922783f98faf14f15a0c4ddad45"
+    },
+    {
+      "path": "results/runs/LD-RF-S42/predictions.csv",
+      "sha256": "c008c2edc0be8e265d9748ae0c2dde7429532e274d1ca3c0c7e8e6918c995f8f"
+    },
+    {
+      "path": "results/runs/LD-XGB-S42/predictions.csv",
+      "sha256": "c8c831c0e19525980514cdbc8426f23a40fd050c6c3e7c58a8f1bf786abe90f8"
+    },
+    {
+      "path": "results/runs/LD-IF-S42/predictions.csv",
+      "sha256": "d26632cf6c7cd846776b5b9e62e3dad11424b98f656224ba9ef7dc8830f40901"
+    },
+    {
+      "path": "results/runs/LD-AE-S42/predictions.csv",
+      "sha256": "a73e230c7b3859359bfc8d5eb3b0030094f0de23c565a174804d5ccd6f5873c7"
+    },
+    {
+      "path": "results/runs/LE-RF-S42/predictions.csv",
+      "sha256": "f3a45f51f935d5537b430ae91d4d8a9692f8741478368ce2477711e484412ac0"
+    },
+    {
+      "path": "results/runs/LE-XGB-S42/predictions.csv",
+      "sha256": "36bf4e8a044c341726dd03affd1317dd89bcf403fd54c357580956a58677a353"
+    },
+    {
+      "path": "results/runs/LE-IF-S42/predictions.csv",
+      "sha256": "ab584f04fa62b7920d18dc7783bc8be5eedb881e38c229d44a03ce614c1603eb"
+    },
+    {
+      "path": "results/runs/LE-AE-S42/predictions.csv",
+      "sha256": "cd55c391386c656dda558955f49d8015908c85a15125a01d346de5b825d4b75c"
+    }
+  ],
+  "scope": "Loopback HTTP API with frozen seed-42 bundles; selected official-test examples, not independent traffic or public hosting"
+}

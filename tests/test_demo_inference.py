@@ -3,7 +3,7 @@ import unittest
 from unittest.mock import patch
 import numpy as np
 import pandas as pd
-from nids_benchmark.demo import predict_frame, load_bundle, compare_csv, model_explanation
+from nids_benchmark.demo import predict_frame, predict_csv, load_bundle, compare_csv, model_explanation, read_demo_csv
 
 
 class Preprocessor:
@@ -45,6 +45,29 @@ class DemoInferenceTests(unittest.TestCase):
 
     def test_invalid_bundle_selection_rejected_before_loading(self):
         with self.assertRaises(ValueError): load_bundle('../../data','RF')
+
+    def test_csv_rejects_ambiguous_header_quotes_and_row_width(self):
+        for text in ('x,x\n1,2', 'x,\n1,2', 'x,proto\n1,"tcp"x', 'x,proto\n1,tc"p', 'x,proto\n1',
+                     'x,proto\n1,tcp,extra', 'x\n"unfinished'):
+            with self.subTest(csv=text), self.assertRaises(ValueError): read_demo_csv(text)
+        frame=read_demo_csv('\ufeffx,proto,note\r\n1,tcp,"a,b"\r\n2,udp,"a""b\nc"\r\n')
+        self.assertEqual(frame['note'].tolist(), ['a,b', 'a"b\nc'])
+
+    def test_mixed_label_formats_preserve_valid_truth_and_record_ids(self):
+        text='x,proto,service,state,id,label\n0.5,tcp,-,FIN,001,0.00\n0.7,tcp,-,FIN,002,bad\n0.2,tcp,-,FIN,003, 1e0 \n'
+        with patch('nids_benchmark.demo.load_bundle',return_value=self.bundle):
+            result=predict_csv('CS','RF',.05,text)
+        self.assertEqual(result['labeled_rows'],2)
+        self.assertEqual(result['confusion'],dict(TP=0,FP=1,TN=0,FN=1))
+        self.assertEqual([row['record_id'] for row in result['results']],['001','002','003'])
+        self.assertNotIn('truth',result['results'][1])
+
+    def test_decimal_features_only_and_blank_category_rejected(self):
+        for raw in ('0x10','0b10','0o10','True'):
+            bad=self.frame.copy(); bad['x']=[raw,'1']
+            with self.subTest(raw=raw), self.assertRaises(ValueError): predict_frame(self.bundle,bad,.05)
+        bad=self.frame.copy();bad.loc[0,'proto']='   '
+        with self.assertRaises(ValueError): predict_frame(self.bundle,bad,.05)
 
     def test_compare_uses_same_records_target_and_does_not_invent_missing_labels(self):
         with patch('nids_benchmark.demo.load_bundle',side_effect=lambda scenario,model:self.bundle) as loader:

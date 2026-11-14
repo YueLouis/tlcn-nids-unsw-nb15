@@ -1,0 +1,42 @@
+{
+  "csv_http_checks": [
+    {
+      "case": "duplicate_header",
+      "status": 400
+    },
+    {
+      "case": "empty_category",
+      "status": 400
+    },
+    {
+      "case": "hex_feature",
+      "status": 400
+    },
+    {
+      "case": "mixed_labels_leading_zero_id",
+      "status": 200,
+      "labeled_rows": 2
+    }
+  ],
+  "local_get_checks": [
+    {
+      "path": "/presentation/ho-so.html",
+      "status": 200,
+      "bytes": 9827,
+      "sha256": "ef457cd2cc001eb0197ac9d2ee3d290c89a0c3291b6ebd0e8d46fd636491cf74"
+    },
+    {
+      "path": "/presentation/downloads/NhomTLCN_tong_BAN_NHAP_20261113.pdf",
+      "status": 200,
+      "bytes": 1897289,
+      "sha256": "4268e8506db1b87dc18a00e785af1ed198d59674a1fd4a3bdbba1cd0210e5445"
+    },
+    {
+      "path": "/presentation/%2e%2e/src/nids_benchmark/demo.py",
+      "status": 404,
+      "bytes": 47,
+      "sha256": "93e252a369de564fb1950859bc6e3df523c9a74b594ae2abc16bdda306d27e13"
+    }
+  ],
+  "pass_all": true
+}

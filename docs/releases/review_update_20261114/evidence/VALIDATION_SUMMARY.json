@@ -1,0 +1,51 @@
+{
+  "checked_date": "2026-11-14",
+  "scope": "Focused CSV validation fixes and group review hub; no retraining or frozen-report changes",
+  "python_unit_tests": {
+    "tests": 49,
+    "result": "PASS",
+    "evidence": "Console result from this task before hub deployment; expected small autoencoder ConvergenceWarning"
+  },
+  "node_browser_contract": {
+    "result": "PASS",
+    "evidence": "Console result from this task"
+  },
+  "protocol": {
+    "unique_runs": 80,
+    "result": "PASS",
+    "evidence": "scripts/validate_protocol.py console result from this task"
+  },
+  "api": {
+    "result": "PASS",
+    "receipt": "API_AUDIT.json",
+    "additional_csv_and_routes": "HUB_HTTP_CHECK.json"
+  },
+  "browser_prediction_parity": {
+    "result": "PASS",
+    "receipt": "BROWSER_PARITY.json"
+  },
+  "public_deployment": {
+    "result": "succeeded",
+    "receipt": "DEPLOYMENT.json"
+  },
+  "drive_update": {
+    "result": "download_hash_and_crc_match",
+    "receipt": "DRIVE_DOWNLOAD_CHECK.json"
+  },
+  "not_verified": [
+    "Group reading, understanding, approval and actual contributions",
+    "Physical classroom HDMI/projector",
+    "Physically disconnected network",
+    "All public file downloads or public TXT download in IAB"
+  ],
+  "unchanged": [
+    "Frozen 13/11 PDFs and source ZIPs",
+    "80-run benchmark results",
+    "Member branches"
+  ],
+  "email": {
+    "dot3": "SENT_20261112",
+    "dot4": "NOT_SUBMITTED",
+    "total": "NOT_SUBMITTED"
+  }
+}

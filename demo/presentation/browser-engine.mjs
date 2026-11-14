@@ -1,4 +1,5 @@
 /* Parameter-only inference. No training, remote CSV upload, or benchmark edits. */
+const decimalNumber=/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?$/;
 export function unpack(buffer){
  const view=new DataView(buffer),length=view.getUint32(0,true);
  const meta=JSON.parse(new TextDecoder().decode(new Uint8Array(buffer,4,length)));
@@ -22,7 +23,7 @@ export function parseCSV(text){
  }
  if(quoted)throw new Error('CSV có dấu nháy chưa đóng');
  row.push(cell);if(row.some(v=>v!==''))rows.push(row);
- const header=rows.shift();if(!header||new Set(header).size!==header.length)throw new Error('CSV trống hoặc trùng tên cột');
+ const header=rows.shift();if(!header||header.some(key=>!key.trim())||new Set(header).size!==header.length)throw new Error('CSV thiếu hoặc trùng tên cột');
  if(rows.length<1||rows.length>1000)throw new Error('Chọn từ 1 đến 1.000 dòng CSV mỗi lượt');
  return rows.map((cells,i)=>{if(cells.length!==header.length)throw new Error('CSV sai số cột ở dòng '+(i+2));return Object.fromEntries(header.map((key,j)=>[key,cells[j]]))});
 }
@@ -32,7 +33,7 @@ export function transform(model,rows){
  const width=model.numeric.length+model.categories.reduce((n,a)=>n+a.length,0);
  return rows.map(row=>{
   const x=new Float32Array(width);
-  model.numeric.forEach((key,j)=>{const raw=row[key];if(raw===undefined||!String(raw).trim()||!Number.isFinite(Number(raw)))throw new Error('Cột số có ô trống hoặc dữ liệu không hợp lệ: '+key);x[j]=(Number(raw)-model.means[j])/model.scales[j]});
+  model.numeric.forEach((key,j)=>{const raw=row[key];if(raw===undefined||!decimalNumber.test(String(raw).trim())||!Number.isFinite(Number(raw)))throw new Error('Cột số có ô trống hoặc dữ liệu không hợp lệ: '+key);x[j]=(Number(raw)-model.means[j])/model.scales[j]});
   let offset=model.numeric.length;
   model.categorical.forEach((key,j)=>{if(row[key]===undefined||!String(row[key]).trim())throw new Error('Cột '+key+' có ô trống');const index=model.categories[j].indexOf(row[key]);if(index>=0)x[offset+index]=1;offset+=model.categories[j].length});
   if(!x.every(Number.isFinite))throw new Error('Dữ liệu sau biến đổi không hữu hạn');return x;
@@ -68,7 +69,7 @@ export function predict(model,text,target){
   const attack=s>=threshold,out={record_id:row.id||String(i+1),score:s,threshold,prediction:attack?'Attack':'Normal'};
   const label=String(row.label??'').trim();
   // Decimal numeric labels match CSV/Python normalization without turning blanks into zero.
-  if(/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?$/.test(label)&&[0,1].includes(Number(label))){const truth=Number(label)===1;out.truth=truth?'Attack':'Normal';out.outcome=truth?(attack?'TP':'FN'):(attack?'FP':'TN');confusion[out.outcome]++}
+  if(decimalNumber.test(label)&&[0,1].includes(Number(label))){const truth=Number(label)===1;out.truth=truth?'Attack':'Normal';out.outcome=truth?(attack?'TP':'FN'):(attack?'FP':'TN');confusion[out.outcome]++}
   if(row.attack_cat)out.attack_cat=row.attack_cat;return out;
  });
  const attacks=results.filter(r=>r.prediction==='Attack').length;

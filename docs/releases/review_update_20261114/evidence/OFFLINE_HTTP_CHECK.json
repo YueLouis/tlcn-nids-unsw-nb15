@@ -1,0 +1,40 @@
+{
+  "files": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "hash_matches_extracted_zip": true
+    },
+    {
+      "file": "ho-so.html",
+      "status": 200,
+      "hash_matches_extracted_zip": true
+    },
+    {
+      "file": "ho-so.css",
+      "status": 200,
+      "hash_matches_extracted_zip": true
+    },
+    {
+      "file": "ho-so.js",
+      "status": 200,
+      "hash_matches_extracted_zip": true
+    },
+    {
+      "file": "downloads/NhomTLCN_dot4_BAN_NHAP_20261113.pdf",
+      "status": 200,
+      "hash_matches_extracted_zip": true
+    },
+    {
+      "file": "downloads/NhomTLCN_tong_BAN_NHAP_20261113.pdf",
+      "status": 200,
+      "hash_matches_extracted_zip": true
+    },
+    {
+      "file": "models/manifest.json",
+      "status": 200,
+      "hash_matches_extracted_zip": true
+    }
+  ],
+  "physical_network_disconnection_test": false
+}

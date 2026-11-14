@@ -242,3 +242,7 @@ input,code{font:inherit}select,input{max-width:100%}button:active:not(:disabled)
   .scene[aria-labelledby="s6-title"] .future { margin-top: 9px; padding-top: 9px; }
   .scene[aria-labelledby="s6-title"] .future p { font-size: 13px; }
 }
+
+.tools .records-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:7px 10px;font-size:14px;white-space:nowrap;text-decoration:none;border:1px solid var(--line);border-radius:3px;color:var(--ink)}
+.tools .records-link:hover{background:var(--pale)}
+@media(max-width:900px){.tools .records-link{font-size:12px;padding:5px 7px}}

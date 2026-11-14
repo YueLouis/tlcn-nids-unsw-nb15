@@ -32,12 +32,24 @@ class Handler(BaseHTTPRequestHandler):
             # Serve only this self-contained presentation, never the repository root.
             relative=unquote(path[len('/presentation'):]).lstrip('/') or 'index.html'
             allowed={'index.html','data.js','presentation.js','presentation.css','SOURCE_DATA.json',
-                     'assets/AP_MEAN_STD.csv','assets/OPERATING_POINTS_MEAN_STD.csv','assets/BAO_CAO_DOT3.pdf'}
+                     'assets/AP_MEAN_STD.csv','assets/OPERATING_POINTS_MEAN_STD.csv','assets/BAO_CAO_DOT3.pdf',
+                     'ho-so.html','ho-so.css','ho-so.js'}
+            release=ROOT/'docs/releases/review_final_20261113'
+            downloads={f'downloads/{item.name}':item for folder in ('reports','slides')
+                       for item in (release/folder).iterdir()
+                       if item.is_file() and item.suffix in ('.pdf','.zip')}
+            downloads.update({f'downloads/{name}':ROOT/'docs/management'/name
+                              for name in ('BAN_GIAO_BAO_VE_20261113.md','DOI_CHIEU_YEU_CAU_20261114.md')})
             if relative in allowed:
                 target=ROOT/'demo/presentation'/relative
                 if target.is_file():
                     self.reply(200,target.read_bytes(),mimetypes.guess_type(target.name)[0] or 'application/octet-stream')
                 else:self.reply(404,{'error':'Tệp trình bày chưa có trên máy.'})
+            elif relative in downloads:
+                target=downloads[relative]
+                if target.is_file():
+                    self.reply(200,target.read_bytes(),mimetypes.guess_type(target.name)[0] or 'application/octet-stream')
+                else:self.reply(404,{'error':'Tệp hồ sơ chưa có trên máy.'})
             else:self.reply(404,{'error':'Không có tệp trình bày này.'})
         elif path=='/api/lab/catalog':self.reply(200,catalog())
         elif path=='/health': self.reply(200,{'status':'ok','app':'nids-demo','seed':42})

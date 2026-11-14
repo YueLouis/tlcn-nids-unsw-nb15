@@ -2,6 +2,8 @@
 from functools import lru_cache
 from io import StringIO
 from pathlib import Path
+import csv
+import re
 
 import joblib
 import numpy as np
@@ -10,6 +12,58 @@ import pandas as pd
 ROOT=Path(__file__).resolve().parents[2]
 SCENARIOS=('CS','LR','LD','LE')
 MODELS=('RF','XGB','IF','AE')
+DECIMAL_NUMBER=re.compile(r'^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?$', re.ASCII)
+
+
+def read_demo_csv(text: str) -> pd.DataFrame:
+    """Read strict CSV without silently renaming duplicate columns or inferring labels."""
+    if not isinstance(text, str):
+        raise ValueError('Nội dung CSV phải là văn bản.')
+    text=text.removeprefix('\ufeff')
+    # csv.reader(strict=True) still accepts a quote in the middle of an unquoted field.
+    quoted=False
+    closed_quote=False
+    field_start=True
+    index=0
+    while index < len(text):
+        character=text[index]
+        if closed_quote and character not in ',\r\n':
+            raise ValueError('CSV có ký tự sau dấu nháy đóng.')
+        if character == '"':
+            if quoted and index+1 < len(text) and text[index+1] == '"':
+                index+=1
+            elif quoted:
+                quoted=False
+                closed_quote=True
+            elif field_start:
+                quoted=True
+                field_start=False
+            else:
+                raise ValueError('Dấu nháy CSV không hợp lệ.')
+        elif not quoted and character in ',\r\n':
+            field_start=True
+            closed_quote=False
+        else:
+            field_start=False
+        index+=1
+    if quoted:
+        raise ValueError('CSV có dấu nháy chưa đóng.')
+    try:
+        rows=[row for row in csv.reader(StringIO(text, newline=''), strict=True)
+              if any(cell != '' for cell in row)]
+    except csv.Error as exc:
+        raise ValueError('Không đọc được CSV: dấu nháy không hợp lệ.') from exc
+    if not rows:
+        raise ValueError('CSV trống hoặc thiếu tên cột.')
+    header=rows[0]
+    if any(not key.strip() for key in header) or len(set(header)) != len(header):
+        raise ValueError('CSV thiếu hoặc trùng tên cột.')
+    if not 1 <= len(rows)-1 <= 1000:
+        raise ValueError('Chọn từ 1 đến 1.000 dòng CSV mỗi lượt.')
+    for number, row in enumerate(rows[1:], 2):
+        if len(row) != len(header):
+            raise ValueError(f'CSV sai số cột ở dòng {number}.')
+    return pd.DataFrame(rows[1:], columns=header)
 
 
 def model_explanation(bundle: dict) -> dict:
@@ -56,13 +110,18 @@ def predict_frame(bundle: dict, frame: pd.DataFrame, target: float) -> dict:
         raise ValueError('CSV thiếu cột: '+', '.join(missing))
     features=frame[bundle['features']].copy()
     numeric=[c for c in bundle['features'] if c not in ('proto','service','state')]
+    if any(not DECIMAL_NUMBER.fullmatch(str(value).strip())
+           for value in features[numeric].to_numpy().flat):
+        raise ValueError('Cột số có ô trống hoặc dữ liệu không hợp lệ.')
     try:
         features[numeric]=features[numeric].apply(pd.to_numeric,errors='raise')
     except (TypeError,ValueError) as exc:
         raise ValueError('Cột số có dữ liệu không đọc được.') from exc
     if not np.isfinite(features[numeric].to_numpy(dtype=float)).all():
         raise ValueError('Cột số có ô trống, NaN hoặc vô cực.')
-    if features[['proto','service','state']].isna().any().any():
+    if features[['proto','service','state']].isna().any().any() or any(
+        not str(value).strip() for value in features[['proto','service','state']].to_numpy().flat
+    ):
         raise ValueError('Cột proto/service/state có ô trống.')
     choices={float(x['target_fpr']):float(x['threshold']) for x in bundle['thresholds']}
     if target not in choices: raise ValueError('Chỉ hỗ trợ target validation 1% hoặc 5%.')
@@ -76,8 +135,9 @@ def predict_frame(bundle: dict, frame: pd.DataFrame, target: float) -> dict:
     for i,(_,row) in enumerate(frame.iterrows()):
         result=dict(record_id=str(row['id']) if 'id' in frame else str(i+1),score=float(scores[i]),
                     threshold=threshold,prediction='Attack' if predicted[i] else 'Normal')
-        if 'label' in frame and str(row['label']) in ('0','1','0.0','1.0'):
-            label=int(float(row['label'])); result['truth']='Attack' if label else 'Normal'
+        raw_label=str(row.get('label','')).strip()
+        if DECIMAL_NUMBER.fullmatch(raw_label) and float(raw_label) in (0.,1.):
+            label=int(float(raw_label)); result['truth']='Attack' if label else 'Normal'
             result['outcome']=('TP' if predicted[i] else 'FN') if label else ('FP' if predicted[i] else 'TN')
         if 'attack_cat' in frame and pd.notna(row['attack_cat']): result['attack_cat']=str(row['attack_cat'])
         results.append(result)
@@ -89,15 +149,13 @@ def predict_frame(bundle: dict, frame: pd.DataFrame, target: float) -> dict:
 
 
 def predict_csv(scenario: str, model: str, target: float, text: str) -> dict:
-    try: frame=pd.read_csv(StringIO(text),low_memory=False)
-    except (pd.errors.ParserError,pd.errors.EmptyDataError) as exc: raise ValueError('Không đọc được CSV.') from exc
+    frame=read_demo_csv(text)
     return predict_frame(load_bundle(scenario,model),frame,target)
 
 
 def compare_csv(scenario: str, target: float, text: str) -> dict:
     """Evaluate all four frozen bundles on the same input and threshold policy."""
-    try: frame=pd.read_csv(StringIO(text),low_memory=False)
-    except (pd.errors.ParserError,pd.errors.EmptyDataError) as exc: raise ValueError('Không đọc được CSV.') from exc
+    frame=read_demo_csv(text)
     comparisons=[]
     for model in MODELS:
         result=predict_frame(load_bundle(scenario,model),frame,target)

@@ -22,8 +22,8 @@ const decimalLabels=predict(model,'duration,proto,label\n8,tcp,0.00\n12,udp, 1 \
 assert.equal(decimalLabels.labeled_rows,3);
 assert.deepEqual(decimalLabels.confusion,{TP:1,FP:0,TN:2,FN:0});
 for(const label of ['', ' ', 'abc', '2', 'NaN', 'Infinity', '0x0'])assert.equal(predict(model,'duration,proto,label\n8,tcp,'+label,.05).labeled_rows,0);
-for(const text of ['', 'a,a\n1,2', 'a,b\n1', 'a\n"unterminated', 'a\n'+Array(1001).fill('1').join('\n')])assert.throws(()=>parseCSV(text));
-for(const raw of ['', 'NaN', 'Infinity', '1e400', 'abc'])assert.throws(()=>transform(model,[{duration:raw,proto:'tcp'}]));
+for(const text of ['', 'a,a\n1,2', 'a,\n1,2', 'a,b\n1', 'a\n"unterminated', 'a\n'+Array(1001).fill('1').join('\n')])assert.throws(()=>parseCSV(text));
+for(const raw of ['', 'NaN', 'Infinity', '1e400', 'abc', '0x10', '0b10', '0o10'])assert.throws(()=>transform(model,[{duration:raw,proto:'tcp'}]));
 assert.throws(()=>transform(model,[{proto:'tcp'}]));
 assert.throws(()=>transform(model,[{duration:'8',proto:''}]));
 assert.throws(()=>predict(model,csv,.03));

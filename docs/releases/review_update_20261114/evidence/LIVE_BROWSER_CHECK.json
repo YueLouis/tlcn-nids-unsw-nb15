@@ -1,0 +1,149 @@
+{
+  "checked_date": "2026-11-14",
+  "browser": "Codex in-app browser",
+  "site_version": 3,
+  "canonical_hub": "https://nids-unsw-nb15-tlcn.nttin181.chatgpt.site/ho-so",
+  "checks": [
+    {
+      "name": "Hub three tabs and all three people",
+      "result": "PASS",
+      "details": "Correct name, branch, source paths, PDF page references, questions displayed"
+    },
+    {
+      "name": "Public total PDF",
+      "result": "OPENED",
+      "pages": 62,
+      "byte_hash_verified_by_browser_download": false
+    },
+    {
+      "name": "Public round-four PDF",
+      "result": "DOWNLOADED_HASH_MATCH",
+      "bytes": 1923435,
+      "sha256": "d163bfd63b78d7cd06ccacd7450d03180a22195fe2623606b15b52890497f6df"
+    },
+    {
+      "name": "Public slides",
+      "result": "OPENED",
+      "pages": 9,
+      "byte_hash_verified_by_browser_download": false
+    },
+    {
+      "name": "Public CS RF mixed50 target5%",
+      "result": "PASS",
+      "confusion": {
+        "TP": 40,
+        "FP": 8,
+        "TN": 2,
+        "FN": 0
+      },
+      "first_score": 0.705741,
+      "threshold": 0.557282
+    },
+    {
+      "name": "Public CS RF mixed50 target1%",
+      "result": "PASS",
+      "confusion": {
+        "TP": 39,
+        "FP": 0,
+        "TN": 10,
+        "FN": 1
+      },
+      "first_score": 0.705741,
+      "threshold": 0.805367
+    },
+    {
+      "name": "Local new hub TXT",
+      "result": "DOWNLOADED_UTF8_PASS",
+      "test_text_explicitly_marked_as_test": true,
+      "member_review_evidence": false
+    },
+    {
+      "name": "Public TXT",
+      "result": "UNVERIFIED_DOWNLOAD",
+      "details": "Button updates status but IAB download wait timed out; no new local file confirmed. Copy own feedback to Zalo as fallback."
+    },
+    {
+      "name": "Extracted update ZIP hub and AE inference",
+      "result": "PASS",
+      "scenario": "CS",
+      "model": "AE",
+      "rows": 50,
+      "confusion": {
+        "TP": 25,
+        "FP": 0,
+        "TN": 10,
+        "FN": 15
+      },
+      "physical_network_disconnection": false
+    },
+    {
+      "name": "Public uploaded invalid hexadecimal feature",
+      "result": "PASS_REJECTED",
+      "visible_error": "Cột số có ô trống hoặc dữ liệu không hợp lệ: dur",
+      "test_file": "INVALID_HEX_TEST.csv"
+    },
+    {
+      "name": "Public role PDF",
+      "result": "OPENED_AFTER_NEW_TAB",
+      "details": "A reused PDF viewer tab failed; opening the actual link in a fresh tab displayed the two-page file. Byte hash confirmed in Drive ZIP, not individual public PDF download.",
+      "pages": 2
+    }
+  ],
+  "layout": [
+    {
+      "surface": "Local presentation, all seven scenes",
+      "viewport": [
+        1280,
+        720
+      ],
+      "document_scroll": [
+        1280,
+        720
+      ],
+      "internal_auto_overflow": []
+    },
+    {
+      "surface": "Local hub three tabs/all people",
+      "viewport": [
+        1280,
+        720
+      ],
+      "document_scroll": [
+        1280,
+        720
+      ]
+    },
+    {
+      "surface": "Local hub documents",
+      "viewport": [
+        1366,
+        768
+      ],
+      "document_scroll": [
+        1366,
+        768
+      ]
+    },
+    {
+      "surface": "Public hub people",
+      "viewport": [
+        1280,
+        720
+      ],
+      "document_scroll": [
+        1280,
+        720
+      ]
+    }
+  ],
+  "scope_limits": [
+    "Cannot confirm every public asset's anonymous byte hash: shell HTTP requests return 403 though observed browser pages work",
+    "Individual group review, understanding and approval remain pending",
+    "No physical classroom HDMI or network disconnection test"
+  ],
+  "screenshots": [
+    "PUBLIC_HUB_FINAL.jpg",
+    "PUBLIC_PEOPLE_FINAL.jpg",
+    "DRIVE_UPDATE_FINAL.jpg"
+  ]
+}
