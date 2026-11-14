@@ -11,6 +11,7 @@ import re
 import sys
 import uuid
 import zipfile
+from public_release import report_downloads
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,7 +19,7 @@ DIST = ROOT / "sites/nids-presentation/dist"
 OUT = ROOT / "output/review_update_20261114"
 PACKAGE = OUT / "NIDS_CAP_NHAT_20261114.zip"
 RELEASE = ROOT / "docs/releases/review_final_20261113"
-PUBLIC_URL = "https://nids-unsw-nb15-tlcn.nttin181.chatgpt.site"
+PUBLIC_URL = 'https://attq-nids.phttrongtin-nguyen-a46.workers.dev'
 EXPECTED_RUNS = {
     f"{scenario}-{model}-S42"
     for scenario in ("CS", "LR", "LD", "LE")
@@ -94,7 +95,7 @@ không tự nhận thay đổi về sau.
 
 1. Ở Tài liệu, mở đúng PDF đợt 4/tổng và phiếu phân việc.
 2. Ở Phần từng người, chọn tên mình, đọc trang được chỉ và tự trả lời câu hỏi.
-3. Ở Cần chốt, chọn tên người ghi, ghi tệp/trang cùng góp ý rồi tải TXT.
+3. Ở Ôn và góp ý, chọn tên người ghi, ghi tệp/trang cùng góp ý rồi tải TXT.
    Tự gửi TXT vào Zalo nhóm; trang không tự gửi hoặc đánh dấu đã duyệt.
 
 Góp ý ở trong trang đang mở, chưa tự đồng bộ hoặc lưu sang máy người khác.
@@ -148,9 +149,14 @@ def collect_sources() -> list[tuple[str, Path]]:
     for name, (folder, expected_hash) in (FROZEN_PDFS | FROZEN_SOURCE_ZIPS).items():
         original = RELEASE / folder / name
         hosted = DIST / "downloads" / name
-        require(original.is_file() and hosted.is_file(), f"Thiếu bản nguồn/download: {name}")
+        require(original.is_file(), f"Thiếu bản nguồn: {name}")
         require(sha(original) == expected_hash, f"Bản 13/11 đã khác fingerprint đã khóa: {name}")
-        require(sha(hosted) == expected_hash, f"Download khác bản 13/11: {name}")
+        if hosted.is_file():
+            require(sha(hosted) == expected_hash, f"Download khác bản 13/11: {name}")
+
+    for name, source in report_downloads(ROOT).items():
+        require((DIST/'downloads'/name).is_file(), f'Thiếu tài liệu hiện hành: {name}')
+        require(sha(source)==sha(DIST/'downloads'/name), f'Tài liệu hiện hành khác bản nguồn: {name}')
 
     manifest = json.loads((DIST / "models/manifest.json").read_text(encoding="utf-8"))
     models = manifest.get("models", [])
@@ -168,7 +174,14 @@ def collect_sources() -> list[tuple[str, Path]]:
     require({p.name for p in (DIST / "models").glob("*.bin.gz")} == expected_files, "Dist thừa hoặc thiếu file model")
 
     sources = []
+    active_names = set(report_downloads(ROOT))
     for path in sorted(DIST.rglob("*")):
+        # Delivery chunks are transport for this ZIP, never part of the ZIP itself.
+        if 'package-parts' in path.relative_to(DIST).parts:
+            continue
+        if (path.parent == DIST/'downloads' and path.name in (FROZEN_PDFS | FROZEN_SOURCE_ZIPS)
+                and path.name not in active_names):
+            continue
         require(not path.is_symlink(), f"Không đóng gói symlink: {path}")
         if path.is_file():
             sources.append(("web/" + path.relative_to(DIST).as_posix(), path))
@@ -182,15 +195,28 @@ def main() -> None:
     global OUT, PACKAGE
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--revision', help='Phiên bản riêng, ví dụ v4; không ghi đè gói cũ')
+    parser.add_argument('--complete', action='store_true', help='Đóng bộ ATTQ hoàn chỉnh nội dung')
     args = parser.parse_args()
     if args.revision:
         require(re.fullmatch(r'v[1-9][0-9]*', args.revision) is not None, 'Revision cần dạng v4, v5…')
         OUT = ROOT / f'output/review_update_20261114_{args.revision}'
         PACKAGE = OUT / f'NIDS_CAP_NHAT_20261114_{args.revision}.zip'
+    if args.complete:
+        suffix = '_' + args.revision if args.revision else ''
+        OUT = ROOT / ('output/attq_handoff_20261114' + suffix)
+        PACKAGE = OUT / ('ATTQ_NIDS_BAN_GIAO_20261114' + suffix + '.zip')
+        require((ROOT/'docs/releases/final_handoff_20261114/reports/NhomTLCN_tong_20261114.pdf').is_file(), 'Chưa có báo cáo tổng hiện hành')
     require(sys.version_info >= (3, 9), "Script đóng gói cần Python 3.9 trở lên")
     require(not PACKAGE.exists(), f"Gói đã tồn tại; giữ nguyên, không ghi đè: {PACKAGE}")
     sources = collect_sources()
     readme = README
+    if args.complete:
+        readme = readme.decode('utf-8').replace('Bộ cập nhật hồ sơ NIDS', 'ATTQ NIDS — bộ bàn giao hoàn chỉnh')
+        readme = readme.replace('PDF/nguồn đọc duyệt', 'PDF/nguồn báo cáo hoàn chỉnh')
+        readme = readme.replace('báo cáo ngày 13/11 giữ nguyên byte', 'báo cáo ngày 13/11 giữ nguyên trong lịch sử')
+        readme = readme.replace('Đợt 4 và báo cáo tổng trong gói vẫn là bản chờ nhóm\nđọc duyệt, CHƯA GỬI GIẢNG VIÊN.', 'Đợt 4 và báo cáo tổng ngày 14/11 đã hoàn chỉnh nội dung, CHƯA GỬI GIẢNG VIÊN.')
+        readme += '\nATTQ = Anh · Thu · Tín · Quang. Ba thành viên thực hiện; ThS. Nguyễn Đăng Quang hướng dẫn.\nBáo cáo hiện hành là NhomTLCN_dot4_20261114.pdf và NhomTLCN_tong_20261114.pdf.\nCác tệp BAN_NHAP_20261113 giữ nguyên cho đối chiếu lịch sử.\nSao chép góp ý bằng nút trên trang; nếu bị chặn, dùng khung Ctrl+C.\n'
+        readme = readme.encode('utf-8')
     if args.revision:
         readme += (f'\nPhiên bản gói: {args.revision} · ngày 14/11/2026.\n'
                    'Trang góp ý có nút sao chép kèm tên người ghi; nếu trình duyệt chặn,\n'
@@ -236,7 +262,7 @@ def main() -> None:
         "manifest_files": len(rows), "zip_entries": len(rows) + 1,
         "crc_and_manifest_hashes_match": True, "model_count": 16,
         "frozen_20261113_pdfs_and_source_zips_unchanged": True,
-        "status": "PACKAGED_PENDING_GROUP_REVIEW",
+        "status": "COMPLETE_CONTENT_HANDOFF" if args.complete else "PACKAGED_PENDING_GROUP_REVIEW",
         "revision": args.revision,
         "group_approval": False, "dot4_and_total_submitted": False,
         "public_deployment_confirmed_by_packaging": False,

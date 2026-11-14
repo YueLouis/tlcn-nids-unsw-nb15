@@ -1,14 +1,14 @@
-# Đối chiếu yêu cầu với bộ bàn giao ngày 13/11
+# Đối chiếu yêu cầu với bộ bàn giao hoàn chỉnh ngày 14/11
 
 Ngày lập bảng: **14/11/2026**. Bảng này nối mã SP/T trong [bản đối chiếu ngày 25/10](../evidence/dot_03/session_20261025/DOI_CHIEU_YEU_CAU.json) sang tài liệu đang dùng. Đây là bảng theo dõi đầu ra của nhóm, không phải rubric mới hoặc xác nhận nghiệm thu của giảng viên. Không sửa bảng đối chiếu cũ, kết quả thực nghiệm hoặc lịch sử đã nộp.
 
-**Trạng thái nộp:** đợt 3 đã gửi ngày 12/11 theo [hồ sơ bản gửi](../releases/submission_dot3_20261111/README.md). Đợt 4 và tổng trong [bộ bàn giao 13/11](../releases/review_final_20261113/README.md) là bản chờ nhóm đọc duyệt, chưa gửi giảng viên. Chưa có xác nhận mới của ba thành viên trong bảng này.
+**Trạng thái nộp:** đợt 3 đã gửi ngày 12/11 theo [hồ sơ bản gửi](../releases/submission_dot3_20261111/README.md). Đợt 4 và tổng trong [bộ bàn giao 14/11](../releases/final_handoff_20261114/README.md) đã hoàn chỉnh nội dung; email nộp chưa gửi. Nhóm dùng bộ này để xem lại và ôn báo cáo.
 
 ## Cách đọc trạng thái
 
 - **Có đầu ra và biên bản kỹ thuật:** đã có tệp/nguồn cùng phép kiểm được ghi trong biên bản. Mốc kiểm đi theo biên bản; không tự xác nhận mã đã đổi sau đó.
 - **Một phần, thiếu bằng chứng:** phần có nguồn được nêu riêng với phần chưa có. Không dùng số đo mới để điền giả log lịch sử.
-- **Chờ nhóm đọc duyệt:** cần người được phân công thực sự mở, kiểm, giải thích và ghi góp ý. Trạng thái này áp dụng cho mọi SP/T bên dưới, kể cả khi kiểm kỹ thuật đạt.
+- **Hoàn chỉnh nội dung:** tài liệu và demo được đóng bộ để nhóm mở dùng, xem lại và ôn. Biên bản kỹ thuật ghi đúng phạm vi; không tự xác nhận một thành viên đã đọc hoặc đã hiểu.
 
 Đợt 4 có **68 trang**, tổng có **62 trang**, slide PDF có **9 trang**, phiếu phân việc có **2 trang**. Xem [biên bản biên dịch nguồn từ ZIP](../releases/review_final_20261113/evidence/CLEAN_COMPILE_CHECK.json), [kiểm bảng đợt 4](../releases/review_final_20261113/reports/dot4_REPORT_TABLE_CHECK.json), [kiểm bảng tổng](../releases/review_final_20261113/reports/tong_REPORT_TABLE_CHECK.json) và [kiểm slide/phiếu](../releases/review_final_20261113/slides/SLIDES_CHECK.json). Đây là kết quả kiểm của bản 13/11, không phải một lượt chạy kiểm mã mới ngày 14/11.
 
@@ -16,7 +16,7 @@ Ngày lập bảng: **14/11/2026**. Bảng này nối mã SP/T trong [bản đ�
 
 | Mã | Đầu ra cần có | Tệp hoặc bằng chứng đang dùng | Trạng thái kỹ thuật và phần cần làm tiếp |
 |---|---|---|---|
-| SP1 | Báo cáo đợt 3, đợt 4 và tổng | [Đợt 3 đã gửi](../releases/submission_dot3_20261111/README.md); [PDF đợt 4](../releases/review_final_20261113/reports/NhomTLCN_dot4_BAN_NHAP_20261113.pdf); [PDF tổng](../releases/review_final_20261113/reports/NhomTLCN_tong_BAN_NHAP_20261113.pdf) | Nguồn hai bản mới đã biên dịch độc lập và đối chiếu PDF. Cả ba đọc chéo đợt 4/tổng rồi chọn đúng phiên bản nộp; không thay PDF đợt 3 đã gửi |
+| SP1 | Báo cáo đợt 3, đợt 4 và tổng | [Đợt 3 đã gửi](../releases/submission_dot3_20261111/README.md); [PDF đợt 4](../releases/final_handoff_20261114/reports/NhomTLCN_dot4_20261114.pdf); [PDF tổng](../releases/final_handoff_20261114/reports/NhomTLCN_tong_20261114.pdf) | Nguồn hai bản mới đã biên dịch độc lập và đối chiếu PDF. Bản hiện hành mang ngày 14/11 để nhóm xem lại; không thay PDF đợt 3 đã gửi |
 | SP2 | Mã có cấu trúc và hướng dẫn chạy | [README](../../README.md); [mã thư viện](../../src/nids_benchmark/); [script](../../scripts/); [kiểm thử](../../tests/); [môi trường tái lập](../../requirements-repro.txt) | Có mã và hướng dẫn. Kiểm mã phải theo phiên bản thực sự đang dùng; không lấy số test cũ làm kết quả cho thay đổi mới |
 | SP3 | Inventory, fingerprint và audit dữ liệu | [Manifest](../../artifacts/data/data_manifest.json); [data contract](../evidence/dot_02/DATA_CONTRACT.md); Chương dữ liệu trong PDF mới | Có số dòng/cột, nhãn, checksum và giới hạn overlap. Anh tự mở nguồn, kiểm ý nghĩa 42 feature và phép chia tập |
 | SP4 | Preprocessor đã lưu cùng model | [Manifest 16 model cho trình duyệt](../releases/review_final_20261113/evidence/BROWSER_MODEL_MANIFEST.json); [hướng dẫn nhận dữ liệu/model gốc](../../README.md#chạy-thí-nghiệm) | Tham số phục vụ demo đã xuất; bundle Python gốc và dữ liệu nặng lấy từ Drive, không nằm trong bản clone này. Bản public seed 42 không thay toàn bộ 80 bundle nghiên cứu |
@@ -51,7 +51,7 @@ Các hình H1–H8 và chi tiết prototype P1–P5 vẫn truy vết theo bảng
 | Phần còn mở | Căn cứ và hành động tiếp theo |
 |---|---|
 | Đọc chéo, hiểu bài và đóng góp của từng người | [Guide phân việc](BAN_GIAO_BAO_VE_20261113.md#mỗi-người-phụ-trách-phần-nào) cùng mẫu góp ý; chỉ ghi người/ngày/nội dung thật sau khi thực hiện. Không ký hoặc viết nhận xét thay thành viên |
-| Duyệt nộp đợt 4/tổng | Chốt đúng phiên bản PDF sau khi cả ba đọc và góp ý. Chưa có duyệt mới hoặc email nộp trong bảng này; duyệt đợt 3 không tự áp dụng cho hai bản tiếp theo |
+| Nộp đợt 4/tổng | Nội dung đã đóng bộ ngày 14/11; email chưa gửi. Lượt xem lại của nhóm không phải bước chặn việc hoàn thiện tài liệu |
 | S07 toàn văn | [Tài liệu nền](../references/README.md) ghi chỉ đối chiếu abstract. Có thể tiếp tục tìm bản hợp pháp và kiểm đúng đoạn; chưa có thì giữ giới hạn, không tự thêm số đo/split/cấu hình từ toàn văn chưa đọc |
 | T2/T9 lịch sử | Giữ các ô thiếu bằng chứng. Nếu cần phép đo mới, lập mục thí nghiệm riêng và ghi đúng ngày/môi trường; không gán lại cho 80 run gốc |
 | Dữ liệu ngoài và đánh giá vận hành | Demo CSV không tự trở thành dataset độc lập. Thu traffic, trích feature tương thích, gán nhãn và đánh giá ngoài benchmark là hướng tiếp nối cần kế hoạch riêng |

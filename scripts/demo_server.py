@@ -11,6 +11,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'))
 sys.path.insert(0,str(ROOT/'scripts'))
 from portable_markdown import render_portable_markdown
+from public_release import report_downloads
 from nids_benchmark.demo import predict_csv,compare_csv
 from nids_benchmark.application import catalog,run_case
 
@@ -36,10 +37,7 @@ class Handler(BaseHTTPRequestHandler):
             allowed={'index.html','data.js','presentation.js','presentation.css','SOURCE_DATA.json',
                      'assets/AP_MEAN_STD.csv','assets/OPERATING_POINTS_MEAN_STD.csv','assets/BAO_CAO_DOT3.pdf',
                      'ho-so.html','ho-so.css','ho-so.js'}
-            release=ROOT/'docs/releases/review_final_20261113'
-            downloads={f'downloads/{item.name}':item for folder in ('reports','slides')
-                       for item in (release/folder).iterdir()
-                       if item.is_file() and item.suffix in ('.pdf','.zip')}
+            downloads={f'downloads/{name}':item for name,item in report_downloads(ROOT).items()}
             downloads.update({f'downloads/{name}':ROOT/'docs/management'/name
                               for name in ('BAN_GIAO_BAO_VE_20261113.md','DOI_CHIEU_YEU_CAU_20261114.md')})
             if relative in allowed:

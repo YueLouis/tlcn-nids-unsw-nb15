@@ -1,0 +1,56 @@
+{
+  "status": "COMPLETE_CONTENT_NOT_SUBMITTED",
+  "source_baseline": "review_final_20261113",
+  "generated_by": "scripts/prepare_complete_reports_20261114.py",
+  "visual_review": "Changed PDF pages inspected in contact sheets; no clipping or broken Vietnamese glyphs observed",
+  "table_check": "174 independently compared numeric rows per PDF; 187 source rows unchanged",
+  "group_approval": false,
+  "submitted": false,
+  "files": [
+    {
+      "file": "dot4_COMPLETE_CHECK.json",
+      "bytes": 12471,
+      "sha256": "db93e719032c1f76a25252522bb32bed0a1fee1df7381e831cb35f99a7fe26cc"
+    },
+    {
+      "file": "dot4_TABLE_CHECK.json",
+      "bytes": 5358,
+      "sha256": "3dcc1b10daee5a21276498abbf0a1bc06c17b52c230334b19e1bf8c8520bacc2"
+    },
+    {
+      "file": "Nguon_dot4_20261114.zip",
+      "bytes": 3735777,
+      "sha256": "349d8785f372aff7e8caa34f8b7255e2e3865b72570806ce9e5f50211c03a046"
+    },
+    {
+      "file": "Nguon_tong_20261114.zip",
+      "bytes": 3730337,
+      "sha256": "90fab0b204f0d2f31d1a4dc7ceafe022ff95c98d66ddfbdafcaf168bb36bb53c"
+    },
+    {
+      "file": "NhomTLCN_dot4_20261114.pdf",
+      "bytes": 1923587,
+      "sha256": "2bc1e300a1e1509e07e8a09478e8bf60373bbc709d58362b14143dafa68bbe30"
+    },
+    {
+      "file": "NhomTLCN_tong_20261114.pdf",
+      "bytes": 1897814,
+      "sha256": "6201061c6f83f432462606fc44d0901043dc3f1a3ad8e4bff416941b536e7d22"
+    },
+    {
+      "file": "SUMMARY.json",
+      "bytes": 3111,
+      "sha256": "9335ae068c09fc76950ef8ce9aa9b4e09a6c00f35f6835e90c5f170fdd10fbe0"
+    },
+    {
+      "file": "tong_COMPLETE_CHECK.json",
+      "bytes": 12479,
+      "sha256": "2ebaa9dab9f9fbd402d2c0f8724c352830cb7ec59f718c22c358f4b5ccb6da95"
+    },
+    {
+      "file": "tong_TABLE_CHECK.json",
+      "bytes": 5358,
+      "sha256": "939a7c3a2ef109fc83dbef7509a27e0762bffd007abd040319a8553e91d89c18"
+    }
+  ]
+}

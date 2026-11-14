@@ -1,0 +1,15 @@
+{
+  "name": "attq-nids",
+  "compatibility_date": "2026-11-14",
+  "workers_dev": true,
+  "assets": {
+    "directory": "../../sites/nids-presentation/dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/downloads/ATTQ_NIDS_BAN_GIAO_20261114.zip"
+    ]
+  },
+  "main": "download.mjs"
+}

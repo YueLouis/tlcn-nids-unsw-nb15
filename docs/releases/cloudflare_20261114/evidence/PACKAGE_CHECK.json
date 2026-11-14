@@ -1,0 +1,18 @@
+{
+  "checked_at_utc": "2026-11-14T16:53:41.565660+00:00",
+  "package": "E:\\Học kì 7 2026-2027\\Tiểu luận chuyên ngành\\tlcn-nids-unsw-nb15\\output\\attq_handoff_20261114_v3\\ATTQ_NIDS_BAN_GIAO_20261114_v3.zip",
+  "source_dist": "E:\\Học kì 7 2026-2027\\Tiểu luận chuyên ngành\\tlcn-nids-unsw-nb15\\sites\\nids-presentation\\dist",
+  "bytes": 80829331,
+  "sha256": "47e7679d6e22240d9d41615af46c854aa02a2ca8a6c140b1b746e221ffaa473c",
+  "manifest_files": 55,
+  "zip_entries": 56,
+  "crc_and_manifest_hashes_match": true,
+  "model_count": 16,
+  "frozen_20261113_pdfs_and_source_zips_unchanged": true,
+  "status": "COMPLETE_CONTENT_HANDOFF",
+  "revision": "v3",
+  "group_approval": false,
+  "dot4_and_total_submitted": false,
+  "public_deployment_confirmed_by_packaging": false,
+  "physical_hdmi_test_confirmed_by_packaging": false
+}

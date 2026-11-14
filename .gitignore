@@ -273,3 +273,4 @@ docs/**/render_*/
 
 # Hosting checkout and exported parameters are delivered separately.
 /sites/
+.wrangler/

@@ -1,0 +1,10 @@
+{
+  "provider": "Cloudflare Workers Static Assets",
+  "status": "succeeded",
+  "worker_name": "attq-nids",
+  "url": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev",
+  "version_id": "ee8d69f3-52db-4b6a-b335-fe10dff2f9c7",
+  "verified_by": "Wrangler deploy final exit 0, followed by anonymous HTTP audit",
+  "pages_deployed": false,
+  "sites_platform_used_for_this_deployment": false
+}

@@ -1,0 +1,14 @@
+{
+  "provider": "Cloudflare Workers Static Assets",
+  "worker_name": "attq-nids",
+  "public_url": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev",
+  "first_deployed_version": "a1002471-b51d-4c69-8efb-b06b29877101",
+  "initial_deployed_on": "2026-11-14",
+  "config": "deployment/cloudflare/wrangler.json",
+  "brand": "ATTQ NIDS",
+  "meaning": "Anh · Thu · Tín · Quang: Trịnh Trâm Anh, Hoàng Văn Vương Thu, Nguyễn Trọng Tín; GVHD ThS. Nguyễn Đăng Quang",
+  "previous_url": "https://nids-unsw-nb15-tlcn.phttrongtin-nguyen-a46.workers.dev",
+  "current_version": "dcb95f55-17cd-41c2-a30b-4cbdd51525f3",
+  "release_state": "COMPLETE_CONTENT_HANDOFF",
+  "download_manifest": "deployment/cloudflare/download-manifest.json"
+}

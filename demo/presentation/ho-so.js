@@ -2,8 +2,8 @@
 
 const repo = 'https://github.com/YueLouis/tlcn-nids-unsw-nb15';
 const files = {
-  total: 'downloads/NhomTLCN_tong_BAN_NHAP_20261113.pdf',
-  round4: 'downloads/NhomTLCN_dot4_BAN_NHAP_20261113.pdf',
+  total: 'downloads/NhomTLCN_tong_20261114.pdf',
+  round4: 'downloads/NhomTLCN_dot4_20261114.pdf',
 };
 const people = {
   anh: {
@@ -102,7 +102,7 @@ document.getElementById('feedback-form').addEventListener('submit', async (event
   if (!name || !note) { status.textContent = 'Chọn tên và ghi góp ý trước khi chia sẻ'; return; }
   const now = new Date();
   const writtenAt = now.toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh', hour12: false });
-  const text = `GÓP Ý HỒ SƠ NIDS\nBộ tài liệu 13/11/2026 · bảng đối chiếu 14/11/2026\nNgười ghi: ${name}\nThời điểm tạo: ${writtenAt} (Việt Nam)\n\n${note}\n\nĐây là góp ý do người ghi tự gửi; nội dung này không xác nhận đã duyệt hoặc đã nộp.\n`;
+  const text = `GÓP Ý HỒ SƠ NIDS\nBộ tài liệu hoàn chỉnh ngày 14/11/2026\nNgười ghi: ${name}\nThời điểm tạo: ${writtenAt} (Việt Nam)\n\n${note}\n\nĐây là góp ý do người ghi tự gửi; nội dung này không xác nhận đã duyệt hoặc đã nộp.\n`;
   if (event.submitter?.value === 'copy') {
     try {
       await navigator.clipboard.writeText(text);

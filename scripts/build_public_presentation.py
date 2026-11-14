@@ -2,6 +2,8 @@
 from pathlib import Path
 import json,shutil
 from portable_markdown import render_portable_markdown
+from static_host_files import write_static_host_files
+from public_release import report_downloads
 ROOT=Path(__file__).resolve().parents[1]
 SOURCE=ROOT/'demo/presentation';DEST=ROOT/'sites/nids-presentation/dist'
 DEST.mkdir(parents=True,exist_ok=True)
@@ -21,11 +23,13 @@ for name in ('ho-so.html','ho-so.css','ho-so.js'):
     shutil.copy2(SOURCE/name,DEST/name)
 downloads=DEST/'downloads'
 downloads.mkdir(exist_ok=True)
-release=ROOT/'docs/releases/review_final_20261113'
-for folder in ('reports','slides'):
-    for path in (release/folder).iterdir():
-        if path.is_file() and path.suffix in ('.pdf','.zip'):
-            shutil.copy2(path,downloads/path.name)
+active_reports=report_downloads(ROOT)
+if 'NhomTLCN_tong_20261114.pdf' in active_reports:
+    for old in ('NhomTLCN_dot4_BAN_NHAP_20261113.pdf','NhomTLCN_tong_BAN_NHAP_20261113.pdf',
+                'Nguon_dot4_BAN_NHAP_20261113.zip','Nguon_tong_BAN_NHAP_20261113.zip'):
+        (downloads/old).unlink(missing_ok=True)
+for path in active_reports.values():
+    shutil.copy2(path,downloads/path.name)
 for name in ('BAN_GIAO_BAO_VE_20261113.md','DOI_CHIEU_YEU_CAU_20261114.md'):
     source=ROOT/'docs/management'/name
     (downloads/name).write_text(render_portable_markdown(source.read_text(encoding='utf-8'),source,ROOT),encoding='utf-8')
@@ -40,5 +44,5 @@ provenance['inference']['public_engine']='browser-parameters-v1: Web Worker, no 
 provenance['inference']['export_manifest']='models/manifest.json'
 provenance['inference']['local_engine']='Python API: /api/lab/run and /api/predict'
 (DEST/'SOURCE_DATA.json').write_text(json.dumps(provenance,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-(DEST/'_headers').write_text('/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n',encoding='utf-8')
+write_static_host_files(DEST,SOURCE)
 print('Public assets prepared',DEST)

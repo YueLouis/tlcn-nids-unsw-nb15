@@ -1,0 +1,6 @@
+{
+  "name": "nids-unsw-nb15-tlcn",
+  "main": "redirect-old.mjs",
+  "compatibility_date": "2026-11-14",
+  "workers_dev": true
+}

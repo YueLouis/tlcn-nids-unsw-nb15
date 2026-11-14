@@ -1,0 +1,33 @@
+# ATTQ NIDS — bản công khai Cloudflare, 14/11/2026
+
+**ATTQ = Anh · Thu · Tín · Quang:** ba thành viên Trịnh Trâm Anh, Hoàng Văn Vương Thu, Nguyễn Trọng Tín thực hiện; ThS. Nguyễn Đăng Quang hướng dẫn. Tên web do nhóm chọn, không thay tên đề tài học thuật hoặc ghi thầy là người thực hiện mã nguồn.
+
+Trình bày và demo: https://attq-nids.phttrongtin-nguyen-a46.workers.dev/
+
+Hồ sơ nhóm: https://attq-nids.phttrongtin-nguyen-a46.workers.dev/ho-so
+
+Bản này dùng Cloudflare Workers Static Assets. Pages không nhận được quyền OAuth sau bước đăng nhập, nên dùng quyền Workers đã có để phục vụ cùng bộ web tĩnh. Không chạy API Python trên Cloudflare; suy luận nằm trong Web Worker tại trình duyệt. Trang không yêu cầu tài khoản ChatGPT.
+
+Các PDF/ZIP nguồn báo cáo 13/11 được giữ trong lịch sử; 16 model seed 42 và kết quả thực nghiệm giữ nguyên. Đợt 3 đã gửi ngày 12/11; đợt 4 và tổng đã có [bộ hoàn chỉnh nội dung ngày 14/11](../final_handoff_20261114/README.md) để nhóm sử dụng và xem lại; email chưa gửi. Trang không tự đồng bộ góp ý hoặc xác nhận đã duyệt.
+
+## Ba bước để nhóm tự đọc
+
+1. Ở **Tài liệu**, mở báo cáo đợt 4, tổng, slide hoặc phiếu phân việc.
+2. Ở **Phần từng người**, chọn đúng tên của mình, đọc trang PDF được chỉ, mã liên quan và ba câu hỏi.
+3. Ở **Ôn và góp ý**, chọn tên, ghi tệp/trang cùng nhận xét, bấm **Sao chép góp ý** rồi tự dán vào Zalo. Nếu sao chép bị chặn, dùng khung văn bản được chọn sẵn và nhấn Ctrl+C. Tải TXT cần kiểm tệp trong Downloads.
+
+## Tự cập nhật về sau
+
+Cấu hình duy nhất: [wrangler.json](../../../deployment/cloudflare/wrangler.json). Lưu tên Worker và URL trong [site.json](../../../deployment/cloudflare/site.json). Đọc [hướng dẫn triển khai](../../../deployment/cloudflare/README.md) trước khi cập nhật. Không chạy lệnh deploy từ dự án web khác và không đổi tên Worker cũ của dự án khác.
+
+Các biên bản ở thư mục evidence chỉ chứng minh phạm vi kiểm được ghi; không thay lượt đọc duyệt và tập báo cáo của thành viên.
+
+## Bộ hiện hành và kết quả kiểm
+
+- [Tải trọn bộ PDF, nguồn và demo offline](https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/ATTQ_NIDS_BAN_GIAO_20261114.zip). Gói 80.829.331 byte, 55 tệp theo manifest; đã tải lại qua URL công khai, kiểm đủ hash và CRC. Giải nén rồi chạy `CHAY_DEMO.cmd`; cần Python 3 và Chrome/Edge hiện hành.
+- [Báo cáo đợt 4, tổng và nguồn hiện hành](../final_handoff_20261114/README.md): đợt 4 có 68 trang, tổng có 62 trang. Mỗi PDF đã đối chiếu 174 dòng bảng, kiểm font nhúng, liên kết và trang thay đổi.
+- [Biên bản public](evidence/COMPLETE_PUBLIC_CHECK.json): 55 tài nguyên khớp bản build, đủ 16 model; thực thi worker được phát hành bằng Node và đối chiếu 1.600 dự đoán với Python, không lệch nhãn. Đây không phải kiểm thao tác trong trình duyệt.
+- [Biên bản tải gói](evidence/PUBLIC_PACKAGE_DOWNLOAD_CHECK.json), [phiên bản triển khai](evidence/COMPLETE_DEPLOYMENT.json), [tổng kiểm](evidence/FINAL_VALIDATION_SUMMARY.json).
+- [QR trang trình bày](ATTQ_NIDS_QR.png) và [QR hồ sơ nhóm](ATTQ_HO_SO_QR.png) đã giải mã lại đúng địa chỉ ATTQ.
+
+Bản Drive v3 cũ giữ làm lịch sử; connector Drive hiện báo `Unknown tool` nên chưa có bản 14/11 mới trên Drive. Lấy gói hiện hành bằng nút tải trên web. Thao tác clipboard, bố cục sau đổi tên và HDMI phòng học chưa được kiểm lại trong trình duyệt hoặc trên thiết bị thật. Các giới hạn dữ liệu và bằng chứng lịch sử đã ghi trong bảng đối chiếu; email đợt 4/tổng chưa gửi.

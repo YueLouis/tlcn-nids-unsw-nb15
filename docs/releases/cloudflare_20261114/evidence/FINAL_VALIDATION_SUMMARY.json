@@ -1,0 +1,41 @@
+{
+  "checked_at_utc": "2026-11-14T16:55:48.637552+00:00",
+  "status": "COMPLETE_CONTENT_HANDOFF",
+  "public_url": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev",
+  "python_tests": {
+    "tests": 52,
+    "result": "PASS",
+    "observed_console": "Ran 52 tests in 2.400s; OK",
+    "expected_warning": "Small Autoencoder unit fixture reaches iteration limit; frozen models unchanged"
+  },
+  "node_tests": [
+    "test_browser_engine.mjs PASS",
+    "test_hub_feedback.mjs PASS",
+    "test_cloudflare_download.mjs PASS"
+  ],
+  "report_checks": "../../final_handoff_20261114/reports/SUMMARY.json",
+  "public_checks": "COMPLETE_PUBLIC_CHECK.json",
+  "public_package": "PUBLIC_PACKAGE_DOWNLOAD_CHECK.json",
+  "qr_checks": "QR_CHECK.json",
+  "browser_ui": {
+    "clipboard_download_e2e": "NOT_RETESTED",
+    "layout_no_scroll_after_brand_and_hub_copy": "NOT_RETESTED",
+    "reason": "Current Chrome DevTools profile connection failed; no Codex computer-use tool available"
+  },
+  "physical_hdmi": "NOT_TESTED",
+  "drive": {
+    "current_release_uploaded": false,
+    "reason": "Connected Drive search still fails with Mcp error -32001 Unknown tool google_drive.search; historical Drive v3 unchanged",
+    "current_complete_download_available_on_website": true,
+    "last_rechecked_at_utc": "2026-11-14T16:55:48.637564+00:00"
+  },
+  "academic_limits": [
+    "S07 abstract-only evidence",
+    "Historical hardware/train/inference timing gaps remain disclosed",
+    "Demo subsets are UNSW-NB15, not independent traffic"
+  ],
+  "email_dot4_total_sent": false,
+  "group_signoff_asserted": false,
+  "deployment_version": "dcb95f55-17cd-41c2-a30b-4cbdd51525f3",
+  "public_package_revision": "v3"
+}

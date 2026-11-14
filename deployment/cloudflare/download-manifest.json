@@ -1,0 +1,28 @@
+{
+  "path": "/downloads/ATTQ_NIDS_BAN_GIAO_20261114.zip",
+  "filename": "ATTQ_NIDS_BAN_GIAO_20261114.zip",
+  "bytes": 80829331,
+  "sha256": "47e7679d6e22240d9d41615af46c854aa02a2ca8a6c140b1b746e221ffaa473c",
+  "parts": [
+    {
+      "path": "/package-parts/ATTQ_NIDS_20261114_00.part",
+      "bytes": 20971520,
+      "sha256": "5d1799b5424a20095a13e817543ae25663b7baf72c0310930cc932db73f9c7f3"
+    },
+    {
+      "path": "/package-parts/ATTQ_NIDS_20261114_01.part",
+      "bytes": 20971520,
+      "sha256": "2368ba5d5cc64faf267cbb52ff7a6f6bfd2a4ad5f1fc21851a821285199de407"
+    },
+    {
+      "path": "/package-parts/ATTQ_NIDS_20261114_02.part",
+      "bytes": 20971520,
+      "sha256": "774ea3f77eb3797be253091a11631db4d786c37b471b8f4c755ab82b69355b2e"
+    },
+    {
+      "path": "/package-parts/ATTQ_NIDS_20261114_03.part",
+      "bytes": 17914771,
+      "sha256": "0fa55f85f80360b927f765011a2d58a87e61f43dc635aab191c40b535ec9b51d"
+    }
+  ]
+}

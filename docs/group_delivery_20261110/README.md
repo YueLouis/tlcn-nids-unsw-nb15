@@ -1,5 +1,7 @@
 # Hồ sơ tổng hợp và ba phần phụ trách
 
+**Bộ hiện hành:** [bàn giao hoàn chỉnh ngày 14/11](../releases/final_handoff_20261114/README.md), [ATTQ NIDS](https://attq-nids.phttrongtin-nguyen-a46.workers.dev/ho-so). Nội dung đã đóng bộ cho nhóm mở dùng và xem lại; email chưa gửi. Các đoạn 10–13/11 bên dưới giữ để truy vết.
+
 `main` là phần tổng của nhóm. Ba nhánh còn lại lưu hồ sơ theo phân công; mỗi nhánh có trang mở đầu riêng, phần chuyên môn, bảng/ảnh và gói mã kèm nguồn truy vết.
 
 | Phần | Tài khoản nộp | Nội dung | Drive |

@@ -1,0 +1,17 @@
+{
+  "checked_at_utc": "2026-11-14T16:54:34.627608+00:00",
+  "url": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/ATTQ_NIDS_BAN_GIAO_20261114.zip",
+  "auth_used": false,
+  "status": 200,
+  "download": "E:\\Downloads\\ATTQ_NIDS_BAN_GIAO_20261114_v3.zip",
+  "bytes": 80829331,
+  "sha256": "47e7679d6e22240d9d41615af46c854aa02a2ca8a6c140b1b746e221ffaa473c",
+  "zip_crc_pass": true,
+  "manifest_hashes_pass": true,
+  "manifest_files": 55,
+  "has_current_reports": true,
+  "has_draft_reports": false,
+  "readme_tab_matches_ui": true,
+  "content_type": "application/zip",
+  "content_disposition": "attachment; filename=\"ATTQ_NIDS_BAN_GIAO_20261114.zip\""
+}

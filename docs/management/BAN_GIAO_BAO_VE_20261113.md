@@ -1,15 +1,15 @@
 # Bắt đầu từ đây — bộ chuẩn bị bảo vệ ngày 13/11/2026
 
-**Chỉ dẫn cập nhật 14/11:** mở [hồ sơ online và cách góp ý hiện hành](../releases/review_update_20261114_v4/README.md). Gói 13/11 bên dưới vẫn là phương án dự phòng tại thời điểm bàn giao; bản cập nhật 14/11 có thêm hồ sơ nhóm. PDF/ZIP nguồn 13/11 giữ nguyên.
+**Chỉ dẫn cập nhật 14/11:** mở [hồ sơ online và cách góp ý hiện hành](../releases/cloudflare_20261114/README.md). Gói 13/11 bên dưới vẫn là phương án dự phòng tại thời điểm bàn giao; bản cập nhật 14/11 có thêm hồ sơ nhóm. PDF/ZIP nguồn 13/11 giữ nguyên.
 
-Web trình bày: https://nids-unsw-nb15-tlcn.nttin181.chatgpt.site
+Web trình bày hiện hành (chuyển Cloudflare ngày 14/11): https://attq-nids.phttrongtin-nguyen-a46.workers.dev
 
-Ba bạn đọc tài liệu này cùng phiếu phân việc PDF. Bộ này phục vụ đọc duyệt và tập báo cáo; đợt 4 và báo cáo tổng chưa được nhóm duyệt, chưa gửi giảng viên. Đợt 3 đã gửi trong chuỗi thư cũ lúc 23:16 ngày 12/11, kèm đúng PDF 62 trang; chưa có bằng chứng thầy đã đọc hoặc duyệt.
+Ba bạn đọc tài liệu này cùng phiếu phân việc PDF. Bộ này phục vụ ôn và tập báo cáo; [bản hoàn chỉnh nội dung ngày 14/11](../releases/final_handoff_20261114/README.md) đã đóng để nhóm sử dụng, email chưa gửi. Đợt 3 đã gửi trong chuỗi thư cũ lúc 23:16 ngày 12/11, kèm đúng PDF 62 trang; chưa có bằng chứng thầy đã đọc hoặc duyệt.
 
 ## Mở gì trước
 
 1. Mở web trên laptop. Dùng bảy nút dưới cùng: Bài toán, Dữ liệu, Thực nghiệm, Kết quả, Demo, Hỏi đáp, Tự đánh giá. Không cần tìm nội dung bằng cuộn trang ở các khung đã kiểm.
-2. Đọc PDF đợt 4 và báo cáo tổng trong thư mục `reports` của gói bàn giao. Tên `BAN_NHAP` được giữ đến khi cả ba chốt nội dung.
+2. Đọc PDF đợt 4 và báo cáo tổng trong thư mục `reports` của gói bàn giao. Bản hiện hành mang ngày 14/11; tên `BAN_NHAP_20261113` chỉ thuộc bộ lịch sử.
 3. Mở `slides/NhomTLCN_slide_du_phong_20261113.pdf` khi cần trình chiếu dự phòng. Đây là slide tĩnh; muốn chạy CSV phải mở web.
 4. Ghi góp ý theo mẫu ở cuối. Đọc phần được phân công trước, rồi đọc chéo phần một bạn khác.
 
