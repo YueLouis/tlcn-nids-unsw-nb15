@@ -1,0 +1,99 @@
+{
+  "checked_at_utc": "2026-11-15T07:11:38.636421+00:00",
+  "scope": "Personal practice dialog and current standalone instructions only",
+  "local_ui": {
+    "members": [
+      "anh",
+      "thu",
+      "tin"
+    ],
+    "viewports": [
+      [
+        1366,
+        768
+      ],
+      [
+        1440,
+        900
+      ],
+      [
+        1920,
+        1080
+      ]
+    ],
+    "cases": 9,
+    "page_and_dialog_no_scroll_or_clipping": true,
+    "close_button_returns_focus_to_opener": true,
+    "method": "Actual in-app browser clicks plus DOM geometry reads"
+  },
+  "guide_relative_links_checked": 11,
+  "python_syntax": "PASS",
+  "hub_existing_feedback_test": "PASS",
+  "package_v4_unchanged": true,
+  "physical_hdmi_tested": false,
+  "member_work_completed": false,
+  "public_deployment": "VERIFIED",
+  "public_checked_at_utc": "2026-11-15T07:16:01.061Z",
+  "deployment_version": "144172b4-e394-40c6-bf68-1495e0cb8dbc",
+  "source_commit": "8fe1a7447643697919a2d71427fc3a9092ce80a5",
+  "public_files": [
+    {
+      "path": "/ho-so.html",
+      "status": 200,
+      "bytes": 12127,
+      "sha256": "ebf9b931f53923f81950946f0dabcdf80fbd3b3f7d6d10d63825aacb436332c2",
+      "matches_build": true
+    },
+    {
+      "path": "/ho-so.js",
+      "status": 200,
+      "bytes": 10609,
+      "sha256": "eba173c087c9e1ce009815cb2c07434b91a40dfd141a9f5c132f20edeac9e620",
+      "matches_build": true
+    },
+    {
+      "path": "/ho-so.css",
+      "status": 200,
+      "bytes": 14463,
+      "sha256": "25b579d898187144056838d6e234fcc5f1649b26886f7f57c4877536401e9eb0",
+      "matches_build": true
+    },
+    {
+      "path": "/downloads/TU_KIEM_CA_NHAN_20261115.md",
+      "status": 200,
+      "bytes": 7502,
+      "sha256": "1da27db4a86f5568790662eb31b599c948adfd60dec01499f05352d3ccfad769",
+      "matches_build": true
+    },
+    {
+      "path": "/downloads/BAN_GIAO_BAO_VE_20261113.md",
+      "status": 200,
+      "bytes": 12752,
+      "sha256": "20b68f6098d91269389707dda93fc845431e314b9812a070dacf707d18fdb943",
+      "matches_build": true
+    },
+    {
+      "path": "/downloads/DOI_CHIEU_YEU_CAU_20261114.md",
+      "status": 200,
+      "bytes": 17854,
+      "sha256": "cbf4b98ebb91e0f61fdaa77928e0523ca002f7f4d094c7e080fd862ae640ace2",
+      "matches_build": true
+    },
+    {
+      "path": "/downloads/MANIFEST.json",
+      "status": 200,
+      "bytes": 1614,
+      "sha256": "a9dae6fa1da35145a9455090f4042c50b79eec00099acd3afcd6e8013c2fba67",
+      "matches_build": true
+    }
+  ],
+  "public_ui": {
+    "members": 3,
+    "viewport": [
+      1366,
+      768
+    ],
+    "page_and_dialog_fit": true
+  },
+  "report_or_model_changes": false
+}
