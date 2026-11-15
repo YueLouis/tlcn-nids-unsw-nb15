@@ -5,6 +5,8 @@
 
 > **Bản đồ hiện tại:** đọc `docs/START_HERE_NHOM.md` trước. Bảng này giữ phân công nền; trạng thái và đầu việc đợt 2 được cập nhật trong bản đồ dự án.
 
+> **Đính chính ngày 15/11/2026:** repository hiện là **public**. Dòng “Tạo repository private” được đánh dấu trong bản nền bên dưới không xác nhận đúng trạng thái hiện tại; chưa có bằng chứng repo từng private. Phần “phụ trách” là phân công, không phải xác nhận ai đã viết mã hay hoàn tất review. Lịch sử mã nguồn hiện ghi tác giả Tín; các gói đã chia cho thành viên có tài liệu và công cụ chuẩn bị bằng trợ lý. Việc tải gói lên từ tài khoản cá nhân chưa chứng minh phần chuyên môn do người đó thực hiện. Từ lần cập nhật này, thay đổi đưa vào `main` qua pull request và ghi kết quả kiểm tra thực tế; không bổ sung xác nhận ngược ngày.
+
 **Đề tài:** So sánh supervised learning và anomaly detection cho NIDS trên
 UNSW-NB15 bằng LOACO  
 **Tuần hiện tại trong tài liệu nền:** 14/09/2026-20/09/2026 (Tuần 5)  
