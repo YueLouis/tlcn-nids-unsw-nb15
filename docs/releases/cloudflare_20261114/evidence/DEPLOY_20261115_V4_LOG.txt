@@ -1,0 +1,27 @@
+
+ ⛅️ wrangler 4.158.0 (update available 4.162.0)
+───────────────────────────────────────────────
+🌀 Building list of assets...
+✨ Read 61 files from the assets directory E:\Học kì 7 2026-2027\Tiểu luận chuyên ngành\tlcn-nids-unsw-nb15\sites\nids-presentation\dist
+🌀 Starting asset upload...
+🌀 Found 5 new or modified static assets to upload. Proceeding with upload...
++ /ho-so.css
++ /package-parts/ATTQ_NIDS_20261114_01.part
++ /package-parts/ATTQ_NIDS_20261114_03.part
++ /package-parts/ATTQ_NIDS_20261114_02.part
++ /package-parts/ATTQ_NIDS_20261114_00.part
+Uploaded 1 of 5 assets
+Uploaded 3 of 5 assets
+Uploaded 5 of 5 assets
+✨ Success! Uploaded 5 files (50 already uploaded) (12.23 sec)
+
+Total Upload: 3.18 KiB / gzip: 1.30 KiB
+Worker Startup Time: 1 ms
+Your Worker has access to the following bindings:
+Binding            Resource      
+env.ASSETS         Assets        
+
+Uploaded attq-nids (16.14 sec)
+Deployed attq-nids triggers (0.80 sec)
+  https://attq-nids.phttrongtin-nguyen-a46.workers.dev
+Current Version ID: 245b5fd6-bc91-4e4c-9f6d-f4ea383eb308

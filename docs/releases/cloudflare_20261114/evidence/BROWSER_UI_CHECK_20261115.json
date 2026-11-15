@@ -1,0 +1,1353 @@
+{
+  "checked_at_utc": "2026-11-14T17:27:07.356Z",
+  "url": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev",
+  "tool": "Chrome DevTools MCP, Chrome real desktop viewport emulation (isMobile false)",
+  "isolated_context": "nids-ui-audit-20261115",
+  "status": "BROWSER_UI_PASS_FIXED_CSS_DEPLOYED",
+  "records": {
+    "hub1366": [
+      {
+        "tab": "tab-docs",
+        "viewport": [
+          1366,
+          768
+        ],
+        "scrollHeight": 768,
+        "scrollYActual": 0,
+        "outside": []
+      },
+      {
+        "tab": "tab-people",
+        "person": "anh",
+        "viewport": [
+          1366,
+          768
+        ],
+        "scrollHeight": 772,
+        "scrollYActual": 4,
+        "outside": [],
+        "links": [
+          {
+            "text": "Mở nhánh ↗",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/tramanh"
+          },
+          {
+            "text": "Báo cáo tổng\n16–19 và 33–36",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_tong_20261114.pdf#page=16"
+          },
+          {
+            "text": "Báo cáo đợt 4\n21–24 và 39–42",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_dot4_20261114.pdf#page=21"
+          },
+          {
+            "text": "docs/group_delivery_20261110/TramAnh/PHAN_CHUYEN_MON.md\nPhần chuyên môn và nguồn cần đọc",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/docs/group_delivery_20261110/TramAnh/PHAN_CHUYEN_MON.md"
+          },
+          {
+            "text": "src/nids_benchmark/data.py\nChia dữ liệu và loại lớp held-out",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/src/nids_benchmark/data.py"
+          },
+          {
+            "text": "src/nids_benchmark/preprocessing.py\nVai trò feature và phạm vi fit",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/src/nids_benchmark/preprocessing.py"
+          }
+        ]
+      },
+      {
+        "tab": "tab-people",
+        "person": "thu",
+        "viewport": [
+          1366,
+          768
+        ],
+        "scrollHeight": 768,
+        "scrollYActual": 0,
+        "outside": [],
+        "links": [
+          {
+            "text": "Mở nhánh ↗",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/vuongthu"
+          },
+          {
+            "text": "Báo cáo tổng\n12–14, 19, 24–29 · đọc sâu 31–48",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_tong_20261114.pdf#page=12"
+          },
+          {
+            "text": "Báo cáo đợt 4\n12–14, 24, 29–34 · đọc sâu 37–54",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_dot4_20261114.pdf#page=12"
+          },
+          {
+            "text": "docs/group_delivery_20261110/VuongThu/PHAN_CHUYEN_MON.md\nPhần chuyên môn và nguồn cần đọc",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/docs/group_delivery_20261110/VuongThu/PHAN_CHUYEN_MON.md"
+          },
+          {
+            "text": "src/nids_benchmark/evaluation.py\nScore, ngưỡng và định nghĩa metric",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/src/nids_benchmark/evaluation.py"
+          }
+        ]
+      },
+      {
+        "tab": "tab-people",
+        "person": "tin",
+        "viewport": [
+          1366,
+          768
+        ],
+        "scrollHeight": 772,
+        "scrollYActual": 4,
+        "outside": [],
+        "links": [
+          {
+            "text": "Mở nhánh ↗",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/trongtin"
+          },
+          {
+            "text": "Báo cáo tổng\n12, 20–24 và 53–58",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_tong_20261114.pdf#page=12"
+          },
+          {
+            "text": "Báo cáo đợt 4\n12, 25–29 và 59–64",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_dot4_20261114.pdf#page=12"
+          },
+          {
+            "text": "docs/group_delivery_20261110/TrongTin/PHAN_CHUYEN_MON.md\nPhần chuyên môn và nguồn cần đọc",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/docs/group_delivery_20261110/TrongTin/PHAN_CHUYEN_MON.md"
+          },
+          {
+            "text": "scripts/demo_server.py\nServer và API local",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/scripts/demo_server.py"
+          },
+          {
+            "text": "demo/presentation/\nGiao diện, worker và suy luận trên trình duyệt",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/main/demo/presentation/"
+          }
+        ]
+      },
+      {
+        "tab": "tab-review",
+        "viewport": [
+          1366,
+          768
+        ],
+        "scrollHeight": 768,
+        "scrollYActual": 0,
+        "outside": []
+      }
+    ],
+    "hub1440": [
+      {
+        "tab": "tab-docs",
+        "viewport": [
+          1440,
+          900
+        ],
+        "scrollHeight": 900,
+        "scrollYActual": 0,
+        "outside": []
+      },
+      {
+        "tab": "tab-people",
+        "person": "anh",
+        "viewport": [
+          1440,
+          900
+        ],
+        "scrollHeight": 900,
+        "scrollYActual": 0,
+        "outside": [],
+        "links": [
+          {
+            "text": "Mở nhánh ↗",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/tramanh"
+          },
+          {
+            "text": "Báo cáo tổng\n16–19 và 33–36",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_tong_20261114.pdf#page=16"
+          },
+          {
+            "text": "Báo cáo đợt 4\n21–24 và 39–42",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_dot4_20261114.pdf#page=21"
+          },
+          {
+            "text": "docs/group_delivery_20261110/TramAnh/PHAN_CHUYEN_MON.md\nPhần chuyên môn và nguồn cần đọc",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/docs/group_delivery_20261110/TramAnh/PHAN_CHUYEN_MON.md"
+          },
+          {
+            "text": "src/nids_benchmark/data.py\nChia dữ liệu và loại lớp held-out",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/src/nids_benchmark/data.py"
+          },
+          {
+            "text": "src/nids_benchmark/preprocessing.py\nVai trò feature và phạm vi fit",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/src/nids_benchmark/preprocessing.py"
+          }
+        ]
+      },
+      {
+        "tab": "tab-people",
+        "person": "thu",
+        "viewport": [
+          1440,
+          900
+        ],
+        "scrollHeight": 900,
+        "scrollYActual": 0,
+        "outside": [],
+        "links": [
+          {
+            "text": "Mở nhánh ↗",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/vuongthu"
+          },
+          {
+            "text": "Báo cáo tổng\n12–14, 19, 24–29 · đọc sâu 31–48",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_tong_20261114.pdf#page=12"
+          },
+          {
+            "text": "Báo cáo đợt 4\n12–14, 24, 29–34 · đọc sâu 37–54",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_dot4_20261114.pdf#page=12"
+          },
+          {
+            "text": "docs/group_delivery_20261110/VuongThu/PHAN_CHUYEN_MON.md\nPhần chuyên môn và nguồn cần đọc",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/docs/group_delivery_20261110/VuongThu/PHAN_CHUYEN_MON.md"
+          },
+          {
+            "text": "src/nids_benchmark/evaluation.py\nScore, ngưỡng và định nghĩa metric",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/src/nids_benchmark/evaluation.py"
+          }
+        ]
+      },
+      {
+        "tab": "tab-people",
+        "person": "tin",
+        "viewport": [
+          1440,
+          900
+        ],
+        "scrollHeight": 900,
+        "scrollYActual": 0,
+        "outside": [],
+        "links": [
+          {
+            "text": "Mở nhánh ↗",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/trongtin"
+          },
+          {
+            "text": "Báo cáo tổng\n12, 20–24 và 53–58",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_tong_20261114.pdf#page=12"
+          },
+          {
+            "text": "Báo cáo đợt 4\n12, 25–29 và 59–64",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_dot4_20261114.pdf#page=12"
+          },
+          {
+            "text": "docs/group_delivery_20261110/TrongTin/PHAN_CHUYEN_MON.md\nPhần chuyên môn và nguồn cần đọc",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/docs/group_delivery_20261110/TrongTin/PHAN_CHUYEN_MON.md"
+          },
+          {
+            "text": "scripts/demo_server.py\nServer và API local",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/scripts/demo_server.py"
+          },
+          {
+            "text": "demo/presentation/\nGiao diện, worker và suy luận trên trình duyệt",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/main/demo/presentation/"
+          }
+        ]
+      },
+      {
+        "tab": "tab-review",
+        "viewport": [
+          1440,
+          900
+        ],
+        "scrollHeight": 900,
+        "scrollYActual": 0,
+        "outside": []
+      }
+    ],
+    "hub1920": [
+      {
+        "tab": "tab-docs",
+        "viewport": [
+          1920,
+          1080
+        ],
+        "scrollHeight": 1080,
+        "scrollYActual": 0,
+        "outside": []
+      },
+      {
+        "tab": "tab-people",
+        "person": "anh",
+        "viewport": [
+          1920,
+          1080
+        ],
+        "scrollHeight": 1080,
+        "scrollYActual": 0,
+        "outside": [],
+        "links": [
+          {
+            "text": "Mở nhánh ↗",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/tramanh"
+          },
+          {
+            "text": "Báo cáo tổng\n16–19 và 33–36",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_tong_20261114.pdf#page=16"
+          },
+          {
+            "text": "Báo cáo đợt 4\n21–24 và 39–42",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_dot4_20261114.pdf#page=21"
+          },
+          {
+            "text": "docs/group_delivery_20261110/TramAnh/PHAN_CHUYEN_MON.md\nPhần chuyên môn và nguồn cần đọc",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/docs/group_delivery_20261110/TramAnh/PHAN_CHUYEN_MON.md"
+          },
+          {
+            "text": "src/nids_benchmark/data.py\nChia dữ liệu và loại lớp held-out",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/src/nids_benchmark/data.py"
+          },
+          {
+            "text": "src/nids_benchmark/preprocessing.py\nVai trò feature và phạm vi fit",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/src/nids_benchmark/preprocessing.py"
+          }
+        ]
+      },
+      {
+        "tab": "tab-people",
+        "person": "thu",
+        "viewport": [
+          1920,
+          1080
+        ],
+        "scrollHeight": 1080,
+        "scrollYActual": 0,
+        "outside": [],
+        "links": [
+          {
+            "text": "Mở nhánh ↗",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/vuongthu"
+          },
+          {
+            "text": "Báo cáo tổng\n12–14, 19, 24–29 · đọc sâu 31–48",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_tong_20261114.pdf#page=12"
+          },
+          {
+            "text": "Báo cáo đợt 4\n12–14, 24, 29–34 · đọc sâu 37–54",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_dot4_20261114.pdf#page=12"
+          },
+          {
+            "text": "docs/group_delivery_20261110/VuongThu/PHAN_CHUYEN_MON.md\nPhần chuyên môn và nguồn cần đọc",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/docs/group_delivery_20261110/VuongThu/PHAN_CHUYEN_MON.md"
+          },
+          {
+            "text": "src/nids_benchmark/evaluation.py\nScore, ngưỡng và định nghĩa metric",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/src/nids_benchmark/evaluation.py"
+          }
+        ]
+      },
+      {
+        "tab": "tab-people",
+        "person": "tin",
+        "viewport": [
+          1920,
+          1080
+        ],
+        "scrollHeight": 1080,
+        "scrollYActual": 0,
+        "outside": [],
+        "links": [
+          {
+            "text": "Mở nhánh ↗",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/trongtin"
+          },
+          {
+            "text": "Báo cáo tổng\n12, 20–24 và 53–58",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_tong_20261114.pdf#page=12"
+          },
+          {
+            "text": "Báo cáo đợt 4\n12, 25–29 và 59–64",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_dot4_20261114.pdf#page=12"
+          },
+          {
+            "text": "docs/group_delivery_20261110/TrongTin/PHAN_CHUYEN_MON.md\nPhần chuyên môn và nguồn cần đọc",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/docs/group_delivery_20261110/TrongTin/PHAN_CHUYEN_MON.md"
+          },
+          {
+            "text": "scripts/demo_server.py\nServer và API local",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/scripts/demo_server.py"
+          },
+          {
+            "text": "demo/presentation/\nGiao diện, worker và suy luận trên trình duyệt",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/main/demo/presentation/"
+          }
+        ]
+      },
+      {
+        "tab": "tab-review",
+        "viewport": [
+          1920,
+          1080
+        ],
+        "scrollHeight": 1080,
+        "scrollYActual": 0,
+        "outside": []
+      }
+    ],
+    "scene1366": [
+      {
+        "index": 1,
+        "title": "Bài toán",
+        "viewport": [
+          1366,
+          768
+        ],
+        "bodyScrollHeight": 768,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 56.01250076293945,
+          "y": 122.2874984741211,
+          "width": 1254.375,
+          "height": 503.4250183105469,
+          "top": 122.2874984741211,
+          "right": 1310.3875007629395,
+          "bottom": 625.712516784668,
+          "left": 56.01250076293945
+        }
+      },
+      {
+        "index": 2,
+        "title": "Dữ liệu",
+        "viewport": [
+          1366,
+          768
+        ],
+        "bodyScrollHeight": 768,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 56.01250076293945,
+          "y": 127.67500305175781,
+          "width": 1254.375,
+          "height": 492.6499938964844,
+          "top": 127.67500305175781,
+          "right": 1310.3875007629395,
+          "bottom": 620.3249969482422,
+          "left": 56.01250076293945
+        }
+      },
+      {
+        "index": 3,
+        "title": "Thực nghiệm",
+        "viewport": [
+          1366,
+          768
+        ],
+        "bodyScrollHeight": 768,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 56.01250076293945,
+          "y": 116.5625,
+          "width": 1254.375,
+          "height": 514.875,
+          "top": 116.5625,
+          "right": 1310.3875007629395,
+          "bottom": 631.4375,
+          "left": 56.01250076293945
+        }
+      },
+      {
+        "index": 4,
+        "title": "Kết quả",
+        "viewport": [
+          1366,
+          768
+        ],
+        "bodyScrollHeight": 768,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 56.01250076293945,
+          "y": 119.0374984741211,
+          "width": 1254.375,
+          "height": 509.9250183105469,
+          "top": 119.0374984741211,
+          "right": 1310.3875007629395,
+          "bottom": 628.962516784668,
+          "left": 56.01250076293945
+        }
+      },
+      {
+        "index": 5,
+        "title": "Demo",
+        "viewport": [
+          1366,
+          768
+        ],
+        "bodyScrollHeight": 768,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 56.01250076293945,
+          "y": 170.66250610351562,
+          "width": 1254.375,
+          "height": 406.6750183105469,
+          "top": 170.66250610351562,
+          "right": 1310.3875007629395,
+          "bottom": 577.3375244140625,
+          "left": 56.01250076293945
+        }
+      },
+      {
+        "index": 6,
+        "title": "Hỏi đáp",
+        "viewport": [
+          1366,
+          768
+        ],
+        "bodyScrollHeight": 768,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 56.01250076293945,
+          "y": 152.9375,
+          "width": 1254.375,
+          "height": 442.125,
+          "top": 152.9375,
+          "right": 1310.3875007629395,
+          "bottom": 595.0625,
+          "left": 56.01250076293945
+        }
+      },
+      {
+        "index": 7,
+        "title": "Tự đánh giá",
+        "viewport": [
+          1366,
+          768
+        ],
+        "bodyScrollHeight": 768,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 56.01250076293945,
+          "y": 126.88750457763672,
+          "width": 1254.375,
+          "height": 494.2250061035156,
+          "top": 126.88750457763672,
+          "right": 1310.3875007629395,
+          "bottom": 621.1125106811523,
+          "left": 56.01250076293945
+        }
+      }
+    ],
+    "scene1440": [
+      {
+        "index": 1,
+        "title": "Bài toán",
+        "viewport": [
+          1440,
+          900
+        ],
+        "bodyScrollHeight": 900,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 59.03750228881836,
+          "y": 177.375,
+          "width": 1321.925048828125,
+          "height": 523.2374877929688,
+          "top": 177.375,
+          "right": 1380.9625511169434,
+          "bottom": 700.6124877929688,
+          "left": 59.03750228881836
+        }
+      },
+      {
+        "index": 2,
+        "title": "Dữ liệu",
+        "viewport": [
+          1440,
+          900
+        ],
+        "bodyScrollHeight": 900,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 59.03750228881836,
+          "y": 190.375,
+          "width": 1321.925048828125,
+          "height": 497.25,
+          "top": 190.375,
+          "right": 1380.9625511169434,
+          "bottom": 687.625,
+          "left": 59.03750228881836
+        }
+      },
+      {
+        "index": 3,
+        "title": "Thực nghiệm",
+        "viewport": [
+          1440,
+          900
+        ],
+        "bodyScrollHeight": 900,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 59.03750228881836,
+          "y": 180.41250610351562,
+          "width": 1321.925048828125,
+          "height": 517.1749877929688,
+          "top": 180.41250610351562,
+          "right": 1380.9625511169434,
+          "bottom": 697.5874938964844,
+          "left": 59.03750228881836
+        }
+      },
+      {
+        "index": 4,
+        "title": "Kết quả",
+        "viewport": [
+          1440,
+          900
+        ],
+        "bodyScrollHeight": 900,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 59.03750228881836,
+          "y": 163.8874969482422,
+          "width": 1321.925048828125,
+          "height": 550.2250366210938,
+          "top": 163.8874969482422,
+          "right": 1380.9625511169434,
+          "bottom": 714.1125335693359,
+          "left": 59.03750228881836
+        }
+      },
+      {
+        "index": 5,
+        "title": "Demo",
+        "viewport": [
+          1440,
+          900
+        ],
+        "bodyScrollHeight": 900,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 59.03750228881836,
+          "y": 235.5124969482422,
+          "width": 1321.925048828125,
+          "height": 406.9750061035156,
+          "top": 235.5124969482422,
+          "right": 1380.9625511169434,
+          "bottom": 642.4875030517578,
+          "left": 59.03750228881836
+        }
+      },
+      {
+        "index": 6,
+        "title": "Hỏi đáp",
+        "viewport": [
+          1440,
+          900
+        ],
+        "bodyScrollHeight": 900,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 59.03750228881836,
+          "y": 206.78750610351562,
+          "width": 1321.925048828125,
+          "height": 464.4250183105469,
+          "top": 206.78750610351562,
+          "right": 1380.9625511169434,
+          "bottom": 671.2125244140625,
+          "left": 59.03750228881836
+        }
+      },
+      {
+        "index": 7,
+        "title": "Tự đánh giá",
+        "viewport": [
+          1440,
+          900
+        ],
+        "bodyScrollHeight": 900,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 59.03750228881836,
+          "y": 173.2375030517578,
+          "width": 1321.925048828125,
+          "height": 531.5250244140625,
+          "top": 173.2375030517578,
+          "right": 1380.9625511169434,
+          "bottom": 704.7625274658203,
+          "left": 59.03750228881836
+        }
+      }
+    ],
+    "scene1920": [
+      {
+        "index": 1,
+        "title": "Bài toán",
+        "viewport": [
+          1920,
+          1080
+        ],
+        "bodyScrollHeight": 1080,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 78.7125015258789,
+          "y": 205.22500610351562,
+          "width": 1762.5750732421875,
+          "height": 647.5375366210938,
+          "top": 205.22500610351562,
+          "right": 1841.2875747680664,
+          "bottom": 852.7625427246094,
+          "left": 78.7125015258789
+        }
+      },
+      {
+        "index": 2,
+        "title": "Dữ liệu",
+        "viewport": [
+          1920,
+          1080
+        ],
+        "bodyScrollHeight": 1080,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 78.7125015258789,
+          "y": 246.65000915527344,
+          "width": 1762.5750732421875,
+          "height": 564.7000122070312,
+          "top": 246.65000915527344,
+          "right": 1841.2875747680664,
+          "bottom": 811.3500213623047,
+          "left": 78.7125015258789
+        }
+      },
+      {
+        "index": 3,
+        "title": "Thực nghiệm",
+        "viewport": [
+          1920,
+          1080
+        ],
+        "bodyScrollHeight": 1080,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 78.7125015258789,
+          "y": 241.375,
+          "width": 1762.5750732421875,
+          "height": 575.25,
+          "top": 241.375,
+          "right": 1841.2875747680664,
+          "bottom": 816.625,
+          "left": 78.7125015258789
+        }
+      },
+      {
+        "index": 4,
+        "title": "Kết quả",
+        "viewport": [
+          1920,
+          1080
+        ],
+        "bodyScrollHeight": 1080,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 78.7125015258789,
+          "y": 213.40000915527344,
+          "width": 1762.5750732421875,
+          "height": 631.2000122070312,
+          "top": 213.40000915527344,
+          "right": 1841.2875747680664,
+          "bottom": 844.6000213623047,
+          "left": 78.7125015258789
+        }
+      },
+      {
+        "index": 5,
+        "title": "Demo",
+        "viewport": [
+          1920,
+          1080
+        ],
+        "bodyScrollHeight": 1080,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 78.7125015258789,
+          "y": 308.25,
+          "width": 1762.5750732421875,
+          "height": 441.5,
+          "top": 308.25,
+          "right": 1841.2875747680664,
+          "bottom": 749.75,
+          "left": 78.7125015258789
+        }
+      },
+      {
+        "index": 6,
+        "title": "Hỏi đáp",
+        "viewport": [
+          1920,
+          1080
+        ],
+        "bodyScrollHeight": 1080,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 78.7125015258789,
+          "y": 289.3000183105469,
+          "width": 1762.5750732421875,
+          "height": 479.3999938964844,
+          "top": 289.3000183105469,
+          "right": 1841.2875747680664,
+          "bottom": 768.7000122070312,
+          "left": 78.7125015258789
+        }
+      },
+      {
+        "index": 7,
+        "title": "Tự đánh giá",
+        "viewport": [
+          1920,
+          1080
+        ],
+        "bodyScrollHeight": 1080,
+        "actualScrollY": 0,
+        "outside": [],
+        "clipped": [],
+        "scrollContainers": [],
+        "sceneRect": {
+          "x": 78.7125015258789,
+          "y": 229.60000610351562,
+          "width": 1762.5750732421875,
+          "height": 598.7999877929688,
+          "top": 229.60000610351562,
+          "right": 1841.2875747680664,
+          "bottom": 828.3999938964844,
+          "left": 78.7125015258789
+        }
+      }
+    ],
+    "hub1366_after_compact_rule_preview": [
+      {
+        "tab": "tab-docs",
+        "viewport": [
+          1366,
+          768
+        ],
+        "scrollHeight": 768,
+        "scrollYActual": 0,
+        "outside": []
+      },
+      {
+        "tab": "tab-people",
+        "person": "anh",
+        "viewport": [
+          1366,
+          768
+        ],
+        "scrollHeight": 768,
+        "scrollYActual": 0,
+        "outside": [],
+        "links": [
+          {
+            "text": "Mở nhánh ↗",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/tramanh"
+          },
+          {
+            "text": "Báo cáo tổng\n16–19 và 33–36",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_tong_20261114.pdf#page=16"
+          },
+          {
+            "text": "Báo cáo đợt 4\n21–24 và 39–42",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_dot4_20261114.pdf#page=21"
+          },
+          {
+            "text": "docs/group_delivery_20261110/TramAnh/PHAN_CHUYEN_MON.md\nPhần chuyên môn và nguồn cần đọc",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/docs/group_delivery_20261110/TramAnh/PHAN_CHUYEN_MON.md"
+          },
+          {
+            "text": "src/nids_benchmark/data.py\nChia dữ liệu và loại lớp held-out",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/src/nids_benchmark/data.py"
+          },
+          {
+            "text": "src/nids_benchmark/preprocessing.py\nVai trò feature và phạm vi fit",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/src/nids_benchmark/preprocessing.py"
+          }
+        ]
+      },
+      {
+        "tab": "tab-people",
+        "person": "thu",
+        "viewport": [
+          1366,
+          768
+        ],
+        "scrollHeight": 768,
+        "scrollYActual": 0,
+        "outside": [],
+        "links": [
+          {
+            "text": "Mở nhánh ↗",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/vuongthu"
+          },
+          {
+            "text": "Báo cáo tổng\n12–14, 19, 24–29 · đọc sâu 31–48",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_tong_20261114.pdf#page=12"
+          },
+          {
+            "text": "Báo cáo đợt 4\n12–14, 24, 29–34 · đọc sâu 37–54",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_dot4_20261114.pdf#page=12"
+          },
+          {
+            "text": "docs/group_delivery_20261110/VuongThu/PHAN_CHUYEN_MON.md\nPhần chuyên môn và nguồn cần đọc",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/docs/group_delivery_20261110/VuongThu/PHAN_CHUYEN_MON.md"
+          },
+          {
+            "text": "src/nids_benchmark/evaluation.py\nScore, ngưỡng và định nghĩa metric",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/src/nids_benchmark/evaluation.py"
+          }
+        ]
+      },
+      {
+        "tab": "tab-people",
+        "person": "tin",
+        "viewport": [
+          1366,
+          768
+        ],
+        "scrollHeight": 768,
+        "scrollYActual": 0,
+        "outside": [],
+        "links": [
+          {
+            "text": "Mở nhánh ↗",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/trongtin"
+          },
+          {
+            "text": "Báo cáo tổng\n12, 20–24 và 53–58",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_tong_20261114.pdf#page=12"
+          },
+          {
+            "text": "Báo cáo đợt 4\n12, 25–29 và 59–64",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_dot4_20261114.pdf#page=12"
+          },
+          {
+            "text": "docs/group_delivery_20261110/TrongTin/PHAN_CHUYEN_MON.md\nPhần chuyên môn và nguồn cần đọc",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/docs/group_delivery_20261110/TrongTin/PHAN_CHUYEN_MON.md"
+          },
+          {
+            "text": "scripts/demo_server.py\nServer và API local",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/scripts/demo_server.py"
+          },
+          {
+            "text": "demo/presentation/\nGiao diện, worker và suy luận trên trình duyệt",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/main/demo/presentation/"
+          }
+        ]
+      },
+      {
+        "tab": "tab-review",
+        "viewport": [
+          1366,
+          768
+        ],
+        "scrollHeight": 768,
+        "scrollYActual": 0,
+        "outside": []
+      }
+    ],
+    "hub1366_final_deployed": [
+      {
+        "tab": "tab-docs",
+        "viewport": [
+          1366,
+          768
+        ],
+        "scrollHeight": 768,
+        "scrollYActual": 0,
+        "outside": []
+      },
+      {
+        "tab": "tab-people",
+        "person": "anh",
+        "viewport": [
+          1366,
+          768
+        ],
+        "scrollHeight": 768,
+        "scrollYActual": 0,
+        "outside": [],
+        "links": [
+          {
+            "text": "Mở nhánh ↗",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/tramanh"
+          },
+          {
+            "text": "Báo cáo tổng\n16–19 và 33–36",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_tong_20261114.pdf#page=16"
+          },
+          {
+            "text": "Báo cáo đợt 4\n21–24 và 39–42",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_dot4_20261114.pdf#page=21"
+          },
+          {
+            "text": "docs/group_delivery_20261110/TramAnh/PHAN_CHUYEN_MON.md\nPhần chuyên môn và nguồn cần đọc",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/docs/group_delivery_20261110/TramAnh/PHAN_CHUYEN_MON.md"
+          },
+          {
+            "text": "src/nids_benchmark/data.py\nChia dữ liệu và loại lớp held-out",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/src/nids_benchmark/data.py"
+          },
+          {
+            "text": "src/nids_benchmark/preprocessing.py\nVai trò feature và phạm vi fit",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/src/nids_benchmark/preprocessing.py"
+          }
+        ]
+      },
+      {
+        "tab": "tab-people",
+        "person": "thu",
+        "viewport": [
+          1366,
+          768
+        ],
+        "scrollHeight": 768,
+        "scrollYActual": 0,
+        "outside": [],
+        "links": [
+          {
+            "text": "Mở nhánh ↗",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/vuongthu"
+          },
+          {
+            "text": "Báo cáo tổng\n12–14, 19, 24–29 · đọc sâu 31–48",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_tong_20261114.pdf#page=12"
+          },
+          {
+            "text": "Báo cáo đợt 4\n12–14, 24, 29–34 · đọc sâu 37–54",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_dot4_20261114.pdf#page=12"
+          },
+          {
+            "text": "docs/group_delivery_20261110/VuongThu/PHAN_CHUYEN_MON.md\nPhần chuyên môn và nguồn cần đọc",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/docs/group_delivery_20261110/VuongThu/PHAN_CHUYEN_MON.md"
+          },
+          {
+            "text": "src/nids_benchmark/evaluation.py\nScore, ngưỡng và định nghĩa metric",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/src/nids_benchmark/evaluation.py"
+          }
+        ]
+      },
+      {
+        "tab": "tab-people",
+        "person": "tin",
+        "viewport": [
+          1366,
+          768
+        ],
+        "scrollHeight": 768,
+        "scrollYActual": 0,
+        "outside": [],
+        "links": [
+          {
+            "text": "Mở nhánh ↗",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/trongtin"
+          },
+          {
+            "text": "Báo cáo tổng\n12, 20–24 và 53–58",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_tong_20261114.pdf#page=12"
+          },
+          {
+            "text": "Báo cáo đợt 4\n12, 25–29 và 59–64",
+            "href": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_dot4_20261114.pdf#page=12"
+          },
+          {
+            "text": "docs/group_delivery_20261110/TrongTin/PHAN_CHUYEN_MON.md\nPhần chuyên môn và nguồn cần đọc",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/docs/group_delivery_20261110/TrongTin/PHAN_CHUYEN_MON.md"
+          },
+          {
+            "text": "scripts/demo_server.py\nServer và API local",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/scripts/demo_server.py"
+          },
+          {
+            "text": "demo/presentation/\nGiao diện, worker và suy luận trên trình duyệt",
+            "href": "https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/main/demo/presentation/"
+          }
+        ]
+      },
+      {
+        "tab": "tab-review",
+        "viewport": [
+          1366,
+          768
+        ],
+        "scrollHeight": 768,
+        "scrollYActual": 0,
+        "outside": []
+      }
+    ]
+  },
+  "summary": {
+    "presentation_states_tested": 21,
+    "presentation_scrolling_or_clipping_failures": 0,
+    "hub_states_tested": 15,
+    "hub_scroll_failures_before_fix": [
+      {
+        "viewport": [
+          1366,
+          768
+        ],
+        "person": "anh",
+        "scroll_pixels": 4
+      },
+      {
+        "viewport": [
+          1366,
+          768
+        ],
+        "person": "tin",
+        "scroll_pixels": 4
+      }
+    ],
+    "hub_text_or_control_outside_viewport": 0,
+    "demo_result_states_tested": 3,
+    "hub_after_preview_scroll_failures": 0
+  },
+  "feedback": {
+    "name": "Nguyễn Trọng Tín",
+    "note": "kiểm tra kỹ thuật biểu mẫu, không phải góp ý hay xác nhận của thành viên",
+    "interaction": "fill_form tool then click Sao chép góp ý tool",
+    "ui_status": "Đã sao chép góp ý · tự dán vào Zalo nhóm",
+    "sent_to_zalo_or_server": false,
+    "group_review": false,
+    "limits": [
+      "Clipboard contents not read: readText pending permission stalled subsequent commands, then navigation recovered.",
+      "No TXT download verification in this run."
+    ]
+  },
+  "source_change": {
+    "file": "demo/presentation/ho-so.css",
+    "before": "@media(max-height:760px)",
+    "after": "@media(max-height:800px)",
+    "purpose": "Apply existing compact laptop spacing at 1366x768, removing 4px overflow in Anh/Tín hub panes.",
+    "rechecked_in_browser": true,
+    "deployed": true,
+    "recheck_method": "Injected the existing compact @media rule body for heights 761–800 into the public hub. Actual local source changes only the breakpoint to800. All5hub states then fit at1366x768.",
+    "deployed_version": "245b5fd6-bc91-4e4c-9f6d-f4ea383eb308",
+    "final_recheck": "Reloaded actual public hub after deployment, no injected CSS, all5states1366x768: actualScrollY0, outside[]"
+  },
+  "limits": [
+    "Screenshot file saving denied for both workspace paths; inline capture stalled temporarily. No screenshot evidence retained.",
+    "Clipboard contents not read; the actual copy button UI reported success. No Zalo/server send action was invoked.",
+    "No TXT download verification in this run.",
+    "Not a physical HDMI test or human understanding/authorship confirmation."
+  ],
+  "demo_runs": {
+    "rf_mixed_target5": {
+      "status": "Đã chạy 50 dòng · CS-RF-S42",
+      "state": "success",
+      "coverage": "50/50 dòng có nhãn hợp lệ · TP 40 · FP 8 · TN 2 · FN 0",
+      "rows": "50",
+      "attack": "48",
+      "normal": "2",
+      "score": "0,705741",
+      "threshold": "0,557282",
+      "reading": "Báo động nhầm (FP): dữ liệu có nhãn Normal, mô hình cảnh báo Attack."
+    },
+    "rf_mixed_target1": {
+      "config": {
+        "demo-target": "0.01"
+      },
+      "invalidated": {
+        "resultHidden": true,
+        "resultTabDisabled": true
+      },
+      "status": "Đã chạy 50 dòng · CS-RF-S42",
+      "state": "success",
+      "coverage": "50/50 dòng có nhãn hợp lệ · TP 39 · FP 0 · TN 10 · FN 1",
+      "rows": "50",
+      "attack": "39",
+      "normal": "11",
+      "score": "0,705741",
+      "threshold": "0,805367",
+      "reading": "Dự đoán đúng (TN): dữ liệu có nhãn Normal, mô hình trả Normal.",
+      "viewport": [
+        1366,
+        768
+      ],
+      "scrollHeight": 768,
+      "outside": []
+    },
+    "ae_mixed_target5": {
+      "config": {
+        "demo-model": "AE",
+        "demo-target": "0.05"
+      },
+      "invalidated": {
+        "resultHidden": true,
+        "resultTabDisabled": true
+      },
+      "status": "Đã chạy 50 dòng · CS-AE-S42",
+      "state": "success",
+      "coverage": "50/50 dòng có nhãn hợp lệ · TP 25 · FP 0 · TN 10 · FN 15",
+      "rows": "50",
+      "attack": "25",
+      "normal": "25",
+      "score": "0,000637",
+      "threshold": "0,011699",
+      "reading": "Dự đoán đúng (TN): dữ liệu có nhãn Normal, mô hình trả Normal.",
+      "viewport": [
+        1366,
+        768
+      ],
+      "scrollHeight": 768,
+      "outside": []
+    },
+    "rf_heldout_recon_target5": {
+      "config": {
+        "demo-source": "heldout-r",
+        "demo-model": "RF",
+        "demo-target": "0.05"
+      },
+      "invalidated": {
+        "resultHidden": true,
+        "resultTabDisabled": true
+      },
+      "status": "Đã chạy 20 dòng · LR-RF-S42",
+      "state": "success",
+      "coverage": "20/20 dòng có nhãn hợp lệ · TP 20 · FP 0 · TN 0 · FN 0",
+      "rows": "20",
+      "attack": "20",
+      "normal": "0",
+      "score": "0,997171",
+      "threshold": "0,556813",
+      "reading": "Phát hiện đúng (TP): dữ liệu có nhãn Attack, mô hình cảnh báo Attack.",
+      "viewport": [
+        1366,
+        768
+      ],
+      "scrollHeight": 768,
+      "outside": []
+    },
+    "invalid_schema": {
+      "config": {
+        "demo-source": "invalid"
+      },
+      "invalidated": {
+        "resultHidden": true,
+        "resultTabDisabled": true
+      },
+      "status": "CSV thiếu cột: dur",
+      "state": "error",
+      "coverage": "20/20 dòng có nhãn hợp lệ · TP 20 · FP 0 · TN 0 · FN 0",
+      "rows": "20",
+      "attack": "20",
+      "normal": "0",
+      "score": "0,997171",
+      "threshold": "0,556813",
+      "reading": "Phát hiện đúng (TP): dữ liệu có nhãn Attack, mô hình cảnh báo Attack.",
+      "viewport": [
+        1366,
+        768
+      ],
+      "scrollHeight": 768,
+      "outside": []
+    }
+  },
+  "demo_result_layouts": [
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "title": "Demo · NIDS",
+      "scrollHeight": 768,
+      "actualScrollY": 0,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "title": "Demo · NIDS",
+      "scrollHeight": 900,
+      "actualScrollY": 0,
+      "outside": [],
+      "clipped": []
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "title": "Demo · NIDS",
+      "scrollHeight": 1080,
+      "actualScrollY": 0,
+      "outside": [],
+      "clipped": []
+    }
+  ],
+  "console": {
+    "types": [
+      "error",
+      "warn"
+    ],
+    "messages": [],
+    "scope": "presentation after realRF/AE/heldout/invalid schema UI runs; final RF result across3viewports"
+  }
+}

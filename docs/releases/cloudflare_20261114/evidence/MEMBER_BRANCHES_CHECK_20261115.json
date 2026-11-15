@@ -1,0 +1,96 @@
+{
+  "checked_at_utc": "2026-11-14T17:36:11.433432+00:00",
+  "read_only": true,
+  "branches": [
+    {
+      "branch": "tramanh",
+      "commit": "074f80c1625d9a4fad4f421c1410bd5d759ad47e",
+      "author_login": "tta2405",
+      "committer_login": "web-flow",
+      "author": {
+        "name": "tta2405",
+        "date": "2026-11-14T17:32:19Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "date": "2026-11-14T17:32:19Z"
+      },
+      "verification_reason": "valid",
+      "files": [
+        {
+          "file": "README.md",
+          "bytes": 2226,
+          "remote_sha256": "3c8d819e199857b6d530d01b8c8562aa8b88a927391846d39a012fd90c9e4a97",
+          "matches_staging": true
+        },
+        {
+          "file": "BAN_GIAO_BAO_VE_20261115.md",
+          "bytes": 4067,
+          "remote_sha256": "1e872459b7e4a9389664f55950e062fd1b6e79a111c1e5d731ea5c2630c4e0ff",
+          "matches_staging": true
+        }
+      ]
+    },
+    {
+      "branch": "vuongthu",
+      "commit": "ae5f0a8d9cd854e4e717ee1b285d2b2db1c28173",
+      "author_login": "hoangvvthu",
+      "committer_login": "web-flow",
+      "author": {
+        "name": "Hoàng Văn Vương Thu",
+        "date": "2026-11-14T17:30:46Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "date": "2026-11-14T17:30:46Z"
+      },
+      "verification_reason": "valid",
+      "files": [
+        {
+          "file": "README.md",
+          "bytes": 2244,
+          "remote_sha256": "3b9e3cbc90ad90315fbba318b9bc025965954a31e85ad25fb2220128683c6255",
+          "matches_staging": true
+        },
+        {
+          "file": "BAN_GIAO_BAO_VE_20261115.md",
+          "bytes": 4237,
+          "remote_sha256": "7c9af52b750598879a0eaca8a4574726ee3dccfa46f3fe5e12d1ad1faf9d5157",
+          "matches_staging": true
+        }
+      ]
+    },
+    {
+      "branch": "trongtin",
+      "commit": "a0c62e5d0a131f7c6dc6cfdea819b33fc4c15aab",
+      "author_login": "YueLouis",
+      "committer_login": "YueLouis",
+      "author": {
+        "name": "Nguyễn Trọng Tín",
+        "date": "2026-11-14T17:35:41Z"
+      },
+      "committer": {
+        "name": "Nguyễn Trọng Tín",
+        "date": "2026-11-14T17:35:41Z"
+      },
+      "verification_reason": "unsigned",
+      "files": [
+        {
+          "file": "README.md",
+          "bytes": 2232,
+          "remote_sha256": "c8d7eda9228e1b0cb6eed554cbc48bf6c03f115b13422f2cd8d5a9f6d61f86d4",
+          "matches_staging": true
+        },
+        {
+          "file": "BAN_GIAO_BAO_VE_20261115.md",
+          "bytes": 3283,
+          "remote_sha256": "fbc213bc1fc139cec8fe6dc77c391d5a8d7148fb6fc80c0be72f2c62f43b3e99",
+          "matches_staging": true
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Author/account attribution and byte integrity are verified; no member review or independent authorship claim."
+  ]
+}

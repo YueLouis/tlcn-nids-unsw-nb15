@@ -1,4 +1,4 @@
-# ATTQ NIDS — bản công khai Cloudflare, 14/11/2026
+# ATTQ NIDS — bản công khai Cloudflare, cập nhật 15/11/2026
 
 **ATTQ = Anh · Thu · Tín · Quang:** ba thành viên Trịnh Trâm Anh, Hoàng Văn Vương Thu, Nguyễn Trọng Tín thực hiện; ThS. Nguyễn Đăng Quang hướng dẫn. Tên web do nhóm chọn, không thay tên đề tài học thuật hoặc ghi thầy là người thực hiện mã nguồn.
 
@@ -24,10 +24,10 @@ Các biên bản ở thư mục evidence chỉ chứng minh phạm vi kiểm đ�
 
 ## Bộ hiện hành và kết quả kiểm
 
-- [Tải trọn bộ PDF, nguồn và demo offline](https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/ATTQ_NIDS_BAN_GIAO_20261114.zip). Gói 80.829.331 byte, 55 tệp theo manifest; đã tải lại qua URL công khai, kiểm đủ hash và CRC. Giải nén rồi chạy `CHAY_DEMO.cmd`; cần Python 3 và Chrome/Edge hiện hành.
+- [Tải trọn bộ PDF, nguồn và demo offline](https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/ATTQ_NIDS_BAN_GIAO_20261114.zip). Gói v4 có 80.829.337 byte, 55 tệp theo manifest; đã tải lại qua URL công khai, kiểm đủ hash và CRC. Giải nén rồi chạy `CHAY_DEMO.cmd`; cần Python 3 và Chrome/Edge hiện hành.
 - [Báo cáo đợt 4, tổng và nguồn hiện hành](../final_handoff_20261114/README.md): đợt 4 có 68 trang, tổng có 62 trang. Mỗi PDF đã đối chiếu 174 dòng bảng, kiểm font nhúng, liên kết và trang thay đổi.
 - [Biên bản public](evidence/COMPLETE_PUBLIC_CHECK.json): 55 tài nguyên khớp bản build, đủ 16 model; thực thi worker được phát hành bằng Node và đối chiếu 1.600 dự đoán với Python, không lệch nhãn. Đây không phải kiểm thao tác trong trình duyệt.
-- [Biên bản tải gói](evidence/PUBLIC_PACKAGE_DOWNLOAD_CHECK.json), [phiên bản triển khai](evidence/COMPLETE_DEPLOYMENT.json), [tổng kiểm](evidence/FINAL_VALIDATION_SUMMARY.json).
+- [Biên bản tải gói v4](evidence/PUBLIC_CHECK_20261115_V4.json), [phiên bản triển khai v4](evidence/DEPLOYMENT_20261115_V4.json), [tổng kiểm](evidence/FINAL_VALIDATION_SUMMARY.json).
 - [QR trang trình bày](ATTQ_NIDS_QR.png) và [QR hồ sơ nhóm](ATTQ_HO_SO_QR.png) đã giải mã lại đúng địa chỉ ATTQ.
 
-Bản Drive v3 cũ giữ làm lịch sử; connector Drive hiện báo `Unknown tool` nên chưa có bản 14/11 mới trên Drive. Lấy gói hiện hành bằng nút tải trên web. Thao tác clipboard, bố cục sau đổi tên và HDMI phòng học chưa được kiểm lại trong trình duyệt hoặc trên thiết bị thật. Các giới hạn dữ liệu và bằng chứng lịch sử đã ghi trong bảng đối chiếu; email đợt 4/tổng chưa gửi.
+[Bộ Drive hiện hành](https://drive.google.com/drive/folders/1s5d-14RMFRqoWnEDMVtRtUSsrUeguP_z) đã tải lên 11 tệp; chưa đối chiếu hash tải lại toàn bộ. Các gói Drive cũ giữ riêng làm lịch sử. [Kiểm trình duyệt thực tế ngày 15/11](evidence/BROWSER_UI_CHECK_20261115.json) đã chạy bảy màn ở 1366×768, 1440×900 và 1920×1080; các màn và kết quả demo không cuộn hoặc cắt nội dung. Lỗi cuộn 4 px ở hai phần cá nhân đã sửa và kiểm lại trên public. Demo RF hai ngưỡng, AE, lớp bị giấu và CSV sai schema đã chạy qua giao diện. Nút sao chép góp ý đã trả thành công với nội dung kiểm kỹ thuật; đã tải TXT bằng trình duyệt và đọc lại tệp UTF-8 trong Downloads; chưa thử HDMI phòng học. Không gửi góp ý thử nghiệm vào Zalo. Các giới hạn dữ liệu và bằng chứng lịch sử vẫn giữ; email đợt 4/tổng chưa gửi.

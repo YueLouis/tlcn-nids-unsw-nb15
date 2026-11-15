@@ -1,0 +1,11 @@
+{
+  "local_date": "2026-11-15",
+  "check_period": "Early morning, before feedback received at 09:07 Asia/Saigon",
+  "source": "School Gmail, lecturer thread",
+  "recent_sender_matches": 0,
+  "latest_received_sender_message": "2026-10-31 11:17 Asia/Saigon",
+  "received_new_feedback_after_dot3": false,
+  "email_sent_this_check": false,
+  "historical_only": true,
+  "superseded_by": "MAIL_FEEDBACK_CHECK_20261115.json"
+}

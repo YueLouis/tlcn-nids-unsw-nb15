@@ -1,0 +1,11 @@
+{
+  "checked_at_utc": "2026-11-14T17:27:08.047449+00:00",
+  "version": "245b5fd6-bc91-4e4c-9f6d-f4ea383eb308",
+  "url": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev",
+  "package_revision": "v4",
+  "public_check": "PUBLIC_CHECK_20261115_V4.json",
+  "browser_check": "BROWSER_UI_CHECK_20261115.json",
+  "drive_uploaded": false,
+  "email_sent": false,
+  "note": "These flags describe this deployment operation only, not the historical round3 email."
+}
