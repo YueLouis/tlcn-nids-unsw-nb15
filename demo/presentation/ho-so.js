@@ -17,6 +17,11 @@ const people = {
     ],
     questions: ['Vì sao bỏ id, label và attack_cat khỏi feature?', 'Lớp bị giấu được loại ở bước nào?', 'Vì sao official test phải giữ độc lập?'],
     review: 'Đọc chéo: Thu kiểm phần Anh; Anh đọc phần Tín và ghi góp ý thật.',
+    practice: {
+      source: `${repo}/blob/main/docs/group_delivery_20261110/TramAnh/DU_LIEU_MANIFEST.json`,
+      steps: ['Mở manifest, tìm số dòng và danh sách cột của hai tập. Ghi đúng key và số nhìn thấy.', 'Đối chiếu id, label, attack_cat với FORBIDDEN_FEATURES trong contracts.py; giải thích vì sao giữ nhãn để chấm nhưng bỏ khỏi feature.', 'Mở DUPLICATE_OVERLAP.json, chọn một phép đếm và đối chiếu audit_duplicate_overlap.py: đang so cả hàng hay chỉ đặc trưng?'],
+      output: 'docs/evidence/dot_03/member_work/tram_anh/ANH_DU_LIEU_VA_GIOI_HAN.md',
+    },
   },
   thu: {
     name: 'Hoàng Văn Vương Thu', area: 'MÔ HÌNH · NGƯỠNG · PHÂN TÍCH LỖI', branch: 'vuongthu',
@@ -29,6 +34,11 @@ const people = {
     ],
     questions: ['Vì sao IF và AE chỉ học Normal?', 'Ngưỡng cho target FPR 1% và 5% lấy từ đâu?', 'Vì sao AP cao chưa đủ nói phát hiện lớp mới tốt?'],
     review: 'Đọc chéo: Tín kiểm phần Thu; Thu đọc phần Anh và ghi góp ý thật.',
+    practice: {
+      source: `${repo}/blob/main/docs/group_delivery_20261110/VuongThu/HAI_NGUONG_FPR.csv`,
+      steps: ['Mở HAI_NGUONG_FPR.csv, tìm hai dòng CS–RF ở target 1% và 5%; ghi recall_mean và fpr_mean, là trung bình 5 seed.', 'Mở NGUON_VI_DU_THU.csv, chọn ID 68699 hoặc 975 thuộc LR–RF–S42, target 5%; ghi nhãn, score, ngưỡng và dự đoán.', 'Giải thích đánh đổi báo nhầm/bỏ sót; phân biệt bảng CS nhiều seed với ví dụ LR seed 42. Hai ID dùng trong CSV nguồn, không có trong preset web.'],
+      output: 'docs/evidence/dot_03/member_work/vuong_thu/THU_PHAN_TICH_KET_QUA.md',
+    },
   },
   tin: {
     name: 'Nguyễn Trọng Tín', area: 'PIPELINE · TÁI LẬP · DEMO', branch: 'trongtin',
@@ -41,6 +51,11 @@ const people = {
     ],
     questions: ['Ma trận 80 run được tính thế nào?', 'Bản public thực hiện suy luận ở đâu?', 'CSV chưa có nhãn cho phép kết luận điều gì?'],
     review: 'Đọc chéo: Anh kiểm phần Tín; Tín đọc phần Thu và gom góp ý vào bản chung.',
+    practice: {
+      source: './',
+      steps: ['Mở Demo → 1 · Chọn dữ liệu: Chỉ Normal, CS, RF, target 5%. Chạy suy luận và xem bản ghi #1.', 'Tải CSV và giữ ảnh lượt vừa chạy. Giữ nguyên dữ liệu/CS/RF, đổi target 1%, chạy lại rồi tải CSV thứ hai.', 'Ghi giờ chạy thật, score, ngưỡng và dự đoán ở hai lượt; đối chiếu VI_DU_HAI_NGUONG.csv. Giải thích thứ gì đổi và vì sao đây chưa phải huấn luyện mới.'],
+      output: 'docs/evidence/dot_03/member_work/trong_tin/TIN_NHAT_KY_TAI_LAP.md',
+    },
   },
 };
 
@@ -66,9 +81,11 @@ tabs.forEach((tab, index) => {
   });
 });
 
+let activePerson = 'anh';
 function showPerson(key) {
   const person = people[key];
   if (!person) return;
+  activePerson = key;
   document.querySelectorAll('[data-person]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.person === key)));
   document.getElementById('person-name').textContent = person.name;
   document.getElementById('person-area').textContent = person.area;
@@ -93,6 +110,21 @@ function showPerson(key) {
 }
 document.querySelectorAll('[data-person]').forEach((button) => button.addEventListener('click', () => showPerson(button.dataset.person)));
 showPerson('anh');
+
+document.getElementById('practice-open').addEventListener('click', () => {
+  const person = people[activePerson];
+  document.getElementById('practice-title').textContent = person.name;
+  document.getElementById('practice-steps').replaceChildren(...person.practice.steps.map((step) => {
+    const item = document.createElement('li'); item.textContent = step; return item;
+  }));
+  document.getElementById('practice-output').textContent = person.practice.output;
+  document.getElementById('practice-source').href = person.practice.source;
+  document.getElementById('practice-review').textContent = person.review;
+  document.getElementById('practice-dialog').showModal();
+});
+document.getElementById('practice-close').addEventListener('click', () => {
+  document.getElementById('practice-dialog').close();
+});
 
 document.getElementById('feedback-form').addEventListener('submit', async (event) => {
   event.preventDefault();

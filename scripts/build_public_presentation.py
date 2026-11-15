@@ -30,7 +30,7 @@ if 'NhomTLCN_tong_20261114.pdf' in active_reports:
         (downloads/old).unlink(missing_ok=True)
 for path in active_reports.values():
     shutil.copy2(path,downloads/path.name)
-for name in ('BAN_GIAO_BAO_VE_20261113.md','DOI_CHIEU_YEU_CAU_20261114.md'):
+for name in ('BAN_GIAO_BAO_VE_20261113.md','DOI_CHIEU_YEU_CAU_20261114.md','TU_KIEM_CA_NHAN_20261115.md'):
     source=ROOT/'docs/management'/name
     (downloads/name).write_text(render_portable_markdown(source.read_text(encoding='utf-8'),source,ROOT),encoding='utf-8')
 download_manifest=[]

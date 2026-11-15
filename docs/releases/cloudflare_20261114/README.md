@@ -16,6 +16,8 @@ Các PDF/ZIP nguồn báo cáo 13/11 được giữ trong lịch sử; 16 model 
 2. Ở **Phần từng người**, chọn đúng tên của mình, đọc trang PDF được chỉ, mã liên quan và ba câu hỏi.
 3. Ở **Ôn và góp ý**, chọn tên, ghi tệp/trang cùng nhận xét, bấm **Sao chép góp ý** rồi tự dán vào Zalo. Nếu sao chép bị chặn, dùng khung văn bản được chọn sẵn và nhấn Ctrl+C. Tải TXT cần kiểm tệp trong Downloads.
 
+Ngày 15/11 bổ sung nút **Việc tự kiểm** trong phần từng người, dẫn tới đầu vào, ba bước và tệp cần tự viết. [Hướng dẫn tải xuống](../../management/TU_KIEM_CA_NHAN_20261115.md) có cách lưu bằng đúng tài khoản GitHub/Drive. Ba hướng dẫn đã kiểm trên 1366×768, 1440×900 và 1920×1080, không cần cuộn; không ghi nhận thay việc thành viên thực hiện. Bản online có hướng dẫn mới, ZIP v4 giữ nguyên snapshot đã đóng.
+
 ## Tự cập nhật về sau
 
 Cấu hình duy nhất: [wrangler.json](../../../deployment/cloudflare/wrangler.json). Lưu tên Worker và URL trong [site.json](../../../deployment/cloudflare/site.json). Đọc [hướng dẫn triển khai](../../../deployment/cloudflare/README.md) trước khi cập nhật. Không chạy lệnh deploy từ dự án web khác và không đổi tên Worker cũ của dự án khác.

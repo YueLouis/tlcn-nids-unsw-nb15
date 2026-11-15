@@ -84,7 +84,7 @@ Drive và website public vẫn cần Internet. Gói này không có backend đ�
 
 - Hồ sơ nhóm: {PUBLIC_URL}/ho-so.html
 - Trình bày và demo: {PUBLIC_URL}/
-- Drive bàn giao: https://drive.google.com/drive/folders/1d-m5b35FVvGU3AEuA8vx1c9btG5xznUl
+- Drive bàn giao: https://drive.google.com/drive/folders/1s5d-14RMFRqoWnEDMVtRtUSsrUeguP_z
 
 Các URL trên chỉ là địa chỉ dịch vụ; việc đóng gói không tự chứng minh một
 bản public đã triển khai. Theo biên bản triển khai/kiểm public đi cùng thông báo
