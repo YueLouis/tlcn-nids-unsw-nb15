@@ -1,6 +1,6 @@
 {
-  "checked_at_utc": "2026-11-15T05:45:25.182913+00:00",
-  "scope": "Authenticated Drive UI downloads of all 11 current main-delivery files, followed by SHA-256 and size checks against retained staging hashes. Member-delivery results below are retained from the earlier check; no new member upload, invitation or permission change in this check.",
+  "checked_at_utc": "2026-11-15T05:52:02.392331+00:00",
+  "scope": "All 11 main-delivery files were downloaded and verified at the initial readback time. Only the manifest metadata was then replaced as a new version of the same Drive file and downloaded again at the manifest readback time; nine payload files and the index stayed unchanged. Member-delivery results below are retained from the earlier check; no member upload, invitation or permission change in this check.",
   "main_delivery": {
     "folder_id": "1s5d-14RMFRqoWnEDMVtRtUSsrUeguP_z",
     "folder_name": "Ban_giao_hoan_chinh_20261115",
@@ -22,7 +22,8 @@
         "drive_download_sha256": "2bc1e300a1e1509e07e8a09478e8bf60373bbc709d58362b14143dafa68bbe30",
         "drive_hash_match": true,
         "drive_download_bytes": 1923587,
-        "drive_size_match": true
+        "drive_size_match": true,
+        "download_verified_at_utc": "2026-11-15T05:45:25.182913+00:00"
       },
       {
         "file": "NhomTLCN_tong_20261114.pdf",
@@ -32,7 +33,8 @@
         "drive_download_sha256": "6201061c6f83f432462606fc44d0901043dc3f1a3ad8e4bff416941b536e7d22",
         "drive_hash_match": true,
         "drive_download_bytes": 1897814,
-        "drive_size_match": true
+        "drive_size_match": true,
+        "download_verified_at_utc": "2026-11-15T05:45:25.182913+00:00"
       },
       {
         "file": "Nguon_dot4_20261114.zip",
@@ -44,7 +46,8 @@
         "drive_download_bytes": 3735777,
         "drive_size_match": true,
         "drive_zip_crc_pass": true,
-        "drive_zip_entries": 52
+        "drive_zip_entries": 52,
+        "download_verified_at_utc": "2026-11-15T05:45:25.182913+00:00"
       },
       {
         "file": "Nguon_tong_20261114.zip",
@@ -56,7 +59,8 @@
         "drive_download_bytes": 3730337,
         "drive_size_match": true,
         "drive_zip_crc_pass": true,
-        "drive_zip_entries": 52
+        "drive_zip_entries": 52,
+        "download_verified_at_utc": "2026-11-15T05:45:25.182913+00:00"
       },
       {
         "file": "NhomTLCN_slide_du_phong_20261113.pdf",
@@ -66,7 +70,8 @@
         "drive_download_sha256": "6eb75200459ec1fcbbb16093e2eaf919deaa7a969c77ffc3e2b29702e532aac8",
         "drive_hash_match": true,
         "drive_download_bytes": 85476,
-        "drive_size_match": true
+        "drive_size_match": true,
+        "download_verified_at_utc": "2026-11-15T05:45:25.182913+00:00"
       },
       {
         "file": "NhomTLCN_phan_viec_on_nhom_20261113.pdf",
@@ -76,7 +81,8 @@
         "drive_download_sha256": "860cef94df5973d986df60a4ea925333b7df14242a7d8308c87b2f97fa2d86b7",
         "drive_hash_match": true,
         "drive_download_bytes": 67435,
-        "drive_size_match": true
+        "drive_size_match": true,
+        "download_verified_at_utc": "2026-11-15T05:45:25.182913+00:00"
       },
       {
         "file": "ATTQ_NIDS_QR.png",
@@ -86,7 +92,8 @@
         "drive_download_sha256": "4e03b40d38d4af021013c24d2333aae6d859abdea306cab5303775cb7c0f7455",
         "drive_hash_match": true,
         "drive_download_bytes": 819,
-        "drive_size_match": true
+        "drive_size_match": true,
+        "download_verified_at_utc": "2026-11-15T05:45:25.182913+00:00"
       },
       {
         "file": "ATTQ_HO_SO_QR.png",
@@ -96,7 +103,8 @@
         "drive_download_sha256": "d93b7e6183c335b3fba59c107e7512ca9f152102e316d0a6cc32e40c8b3e33c2",
         "drive_hash_match": true,
         "drive_download_bytes": 854,
-        "drive_size_match": true
+        "drive_size_match": true,
+        "download_verified_at_utc": "2026-11-15T05:45:25.182913+00:00"
       },
       {
         "file": "ATTQ_NIDS_BAN_GIAO_20261114_v4.zip",
@@ -108,7 +116,8 @@
         "drive_download_bytes": 80829337,
         "drive_size_match": true,
         "drive_zip_crc_pass": true,
-        "drive_zip_entries": 56
+        "drive_zip_entries": 56,
+        "download_verified_at_utc": "2026-11-15T05:45:25.182913+00:00"
       },
       {
         "file": "00_MO_DAU_20261115.md",
@@ -118,24 +127,38 @@
         "drive_download_sha256": "b6994c1b1b94aaa9d24e5aa1e7ebed914c5158fdc4cc6f6cdee4d412782ede4d",
         "drive_hash_match": true,
         "drive_download_bytes": 6109,
-        "drive_size_match": true
+        "drive_size_match": true,
+        "download_verified_at_utc": "2026-11-15T05:45:25.182913+00:00"
       },
       {
         "file": "MANIFEST_20261115.json",
         "ui_listing_observed": true,
-        "staged_bytes": 4901,
-        "staged_sha256": "e384ae966be9d84a4eb22215ce28d9d36a9592048553035c2d844fd64004e7d1",
-        "drive_download_sha256": "e384ae966be9d84a4eb22215ce28d9d36a9592048553035c2d844fd64004e7d1",
+        "staged_bytes": 2831,
+        "staged_sha256": "b47bda198ef7e5727a258bfc24f34b3d1e1a57a75c77427e46b545e648141313",
+        "drive_download_sha256": "b47bda198ef7e5727a258bfc24f34b3d1e1a57a75c77427e46b545e648141313",
         "drive_hash_match": true,
-        "drive_download_bytes": 4901,
-        "drive_size_match": true
+        "drive_download_bytes": 2831,
+        "drive_size_match": true,
+        "historical_versions": [
+          {
+            "metadata_revision": 1,
+            "bytes": 4901,
+            "sha256": "e384ae966be9d84a4eb22215ce28d9d36a9592048553035c2d844fd64004e7d1",
+            "download_verified_at_utc": "2026-11-15T05:45:25.182913+00:00"
+          }
+        ],
+        "metadata_revision": 2,
+        "download_verified_at_utc": "2026-11-15T05:52:02.392331+00:00",
+        "update_scope": "Metadata only: removed local source/staging paths and obsolete staging fields; the nine payload entries and index hash are unchanged. Uploaded as a new version of the existing Drive file; older Drive versions remain in history."
       }
     ],
-    "readback_limit": "All 11 stored files matched the retained staging bytes at this check. This verifies delivery integrity, not lecturer access, approval or individual authorship.",
-    "readback_checked_at_utc": "2026-11-15T05:45:25.182913+00:00",
-    "readback_method": "Downloaded each file separately through the authenticated Drive UI; compared local SHA-256 and byte size with the retained staging receipt. Checked CRC for all three downloaded ZIPs.",
+    "readback_limit": "Current 11-file integrity uses the initial ten unchanged files and the follow-up manifest revision 2 readback. Manifest local paths were removed only from the current version; older Drive versions and other historical privacy concerns remain. This does not establish lecturer access, approval or individual authorship.",
+    "readback_checked_at_utc": "2026-11-15T05:52:02.392331+00:00",
+    "readback_method": "Initial readback: downloaded all 11 files separately through authenticated Drive UI; SHA-256 and size matched staging, all three ZIP CRC checks passed. Follow-up: downloaded manifest metadata revision 2 after updating the existing Drive file; its SHA-256 and size matched the cleaned staging version. The other ten files were unchanged and not downloaded again.",
     "verified_drive_download_sizes": 11,
-    "zip_crc_checks_passed": 3
+    "zip_crc_checks_passed": 3,
+    "initial_full_readback_checked_at_utc": "2026-11-15T05:45:25.182913+00:00",
+    "manifest_readback_checked_at_utc": "2026-11-15T05:52:02.392331+00:00"
   },
   "member_delivery": {
     "guides_rechecked": 3,
@@ -203,8 +226,9 @@
     "note": "Matching uploaded or downloaded bytes establishes delivery integrity only; it does not establish who wrote, ran, understood or reviewed the material."
   },
   "limits": [
-    "Main delivery: all 11 files were downloaded separately from Drive on 15/11/2026; SHA-256 and byte size matched the retained staging receipt, and all three ZIP CRC checks passed.",
+    "Initial full readback at 2026-11-15T05:45:25.182913+00:00: 11 files matched staging, including manifest revision 1; all three ZIP CRC checks passed. Manifest revision 2 alone was uploaded and re-downloaded at 2026-11-15T05:52:02.392331+00:00; its SHA-256 and size matched, while nine payload files and the index were unchanged.",
     "Member guide and archive results are retained from the earlier check; this main-delivery readback did not repeat member access or download checks.",
-    "Delivery hashes do not establish lecturer access, approval, receipt, individual authorship, member understanding or peer review."
+    "Delivery hashes do not establish lecturer access, approval, receipt, individual authorship, member understanding or peer review.",
+    "Manifest revision 2 removes local source/staging paths from its current Drive version. Older Drive versions remain; this metadata cleanup does not resolve all historical privacy issues."
   ]
 }
