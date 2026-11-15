@@ -8,7 +8,7 @@
   "brand": "ATTQ NIDS",
   "meaning": "Anh · Thu · Tín · Quang: Trịnh Trâm Anh, Hoàng Văn Vương Thu, Nguyễn Trọng Tín; GVHD ThS. Nguyễn Đăng Quang",
   "previous_url": "https://nids-unsw-nb15-tlcn.phttrongtin-nguyen-a46.workers.dev",
-  "current_version": "dcb95f55-17cd-41c2-a30b-4cbdd51525f3",
+  "current_version": "245b5fd6-bc91-4e4c-9f6d-f4ea383eb308",
   "release_state": "COMPLETE_CONTENT_HANDOFF",
   "download_manifest": "deployment/cloudflare/download-manifest.json"
 }
