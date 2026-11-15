@@ -4,6 +4,8 @@ Ngày lập bảng: **14/11/2026**. Bảng này nối mã SP/T trong [bản đ�
 
 **Trạng thái nộp:** đợt 3 đã gửi ngày 12/11 theo [hồ sơ bản gửi](../releases/submission_dot3_20261111/README.md). Đợt 4 và tổng trong [bộ bàn giao 14/11](../releases/final_handoff_20261114/README.md) đã hoàn chỉnh nội dung; email nộp chưa gửi. Nhóm dùng bộ này để xem lại và ôn báo cáo.
 
+**Cập nhật ngày 15/11:** đã nhận phản hồi tích cực về báo cáo và số liệu, cùng góp ý về repository. Xem [phần đã xử lý và việc còn mở](CAP_NHAT_REPO_20261115.md); chưa có xác nhận nghiệm thu toàn bộ đợt 3. [Drive bàn giao hiện hành](https://drive.google.com/drive/folders/1s5d-14RMFRqoWnEDMVtRtUSsrUeguP_z) đã tải lại đủ 11 tệp, khớp SHA-256 và dung lượng, cả ba ZIP đạt CRC theo [biên bản 15/11](../releases/cloudflare_20261114/evidence/DRIVE_DELIVERY_STATUS_20261115.json). Quyền xem riêng của thầy và phần tự kiểm, đọc chéo của từng thành viên vẫn còn mở. Đoạn Drive 13/11 cuối trang được giữ làm lịch sử.
+
 ## Cách đọc trạng thái
 
 - **Có đầu ra và biên bản kỹ thuật:** đã có tệp/nguồn cùng phép kiểm được ghi trong biên bản. Mốc kiểm đi theo biên bản; không tự xác nhận mã đã đổi sau đó.
@@ -58,6 +60,6 @@ Các hình H1–H8 và chi tiết prototype P1–P5 vẫn truy vết theo bảng
 | Tập nói, HDMI và demo dự phòng | Dùng [HDMI và màn hình lớp](BAN_GIAO_BAO_VE_20261113.md#hdmi-và-màn-hình-lớp) và kịch bản tập trong guide; kiểm UI ở máy không thay thử thiết bị lớp |
 | Thông báo lịch chính thức | [Gantt](GANTT_CHART.md) là baseline gốc; các ghi nhận ngày truyền miệng cũ không thay thông báo của khoa/giảng viên. Lưu thông báo được nhóm cung cấp để chốt lịch nộp/báo cáo |
 
-## Bản nào đã được kiểm trên Drive
+## Bản Drive đã kiểm ngày 13/11 — lịch sử
 
 [Biên bản tải lại Drive ngày 13/11](../releases/review_final_20261113/evidence/DRIVE_DOWNLOAD_CHECK.json) ghi gói `NIDS_BAN_GIAO_20261113.zip` phiên bản 2 khớp bản ở máy, 30 tệp trong manifest khớp kích thước/SHA-256, ZIP chính và ZIP offline không lỗi CRC. Đây là phép kiểm nội dung đã tải, không phải xác nhận nhóm hoặc giảng viên duyệt. Tài liệu đối chiếu ngày 14/11 này chưa được dùng để thay hoặc đóng gói lại bản 13/11.

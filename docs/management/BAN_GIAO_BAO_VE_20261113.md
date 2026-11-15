@@ -59,7 +59,9 @@ Bản public tải tham số mô hình và tính trong Web Worker tại trình d
 
 ## Khi mất mạng hoặc cần phương án dự phòng
 
-Trước buổi báo cáo, tải và giải nén `NIDS_DEMO_OFFLINE_20261113.zip` ra thư mục thường. Máy cần Python 3 và trình duyệt Chrome/Edge hiện hành. Chạy `CHAY_DEMO.cmd`, giữ cửa sổ đó mở, vào địa chỉ được in trong cửa sổ, thường là `http://127.0.0.1:4399/`. Nếu cổng đang bận, chương trình tự chọn cổng trống tiếp theo. Gói có đủ tham số 16 model và CSV mẫu, không cần pip hoặc Internet để suy luận. Không mở `web/index.html` bằng nhấp đúp vì Web Worker cần HTTP.
+Trước buổi báo cáo, [tải gói v4 hoàn chỉnh hiện hành](https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/ATTQ_NIDS_BAN_GIAO_20261114.zip) rồi giải nén toàn bộ ra thư mục thường. Gói gồm báo cáo, nguồn và demo offline; mở thư mục vừa giải nén để chạy `CHAY_DEMO.cmd`. Máy cần Python 3 và trình duyệt Chrome/Edge hiện hành. Giữ cửa sổ chạy đó mở, vào địa chỉ được in trong cửa sổ, thường là `http://127.0.0.1:4399/`. Nếu cổng đang bận, chương trình tự chọn cổng trống tiếp theo. Gói có đủ tham số 16 model và CSV mẫu, không cần pip hoặc Internet để suy luận; các liên kết GitHub/Drive bên ngoài vẫn cần mạng. Không mở `web/index.html` bằng nhấp đúp vì Web Worker cần HTTP.
+
+`NIDS_DEMO_OFFLINE_20261113.zip` là gói dự phòng cũ. Khi chuẩn bị mới, dùng liên kết v4 phía trên để lấy cùng bộ báo cáo và demo hiện hành; không cần tìm hoặc tải thêm gói 13/11.
 
 Trên máy Tín đã có môi trường Python nghiên cứu, có thể chạy từ repository: `python scripts/demo_server.py`, rồi mở `http://127.0.0.1:4397/presentation/`. Bản này cần các `results/runs/*-S42/model_bundle.joblib` và thư viện theo `requirements-repro.txt`.
 
