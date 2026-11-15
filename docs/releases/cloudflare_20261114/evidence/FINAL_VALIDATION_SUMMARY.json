@@ -28,12 +28,17 @@
   "physical_hdmi": "NOT_TESTED",
   "drive": {
     "folder": "https://drive.google.com/drive/folders/1s5d-14RMFRqoWnEDMVtRtUSsrUeguP_z",
-    "current_release_upload_status": "UI_LISTED_READBACK_PENDING",
+    "current_release_upload_status": "DOWNLOAD_HASHES_VERIFIED",
     "current_release_uploaded": true,
-    "download_hashes_verified": false,
+    "download_hashes_verified": true,
     "current_complete_download_available_on_website": true,
-    "last_rechecked_at_utc": "2026-11-14T17:31:24.260085+00:00",
-    "receipt": "DRIVE_DELIVERY_STATUS_20261115.json"
+    "last_rechecked_at_utc": "2026-11-15T05:45:25.182913+00:00",
+    "receipt": "DRIVE_DELIVERY_STATUS_20261115.json",
+    "verified_download_files": 11,
+    "verified_download_sizes": 11,
+    "zip_crc_checks_passed": 3,
+    "lecturer_access_verified": false,
+    "scope": "All 11 current main-delivery files downloaded separately through authenticated Drive UI; SHA-256 and size matched retained staging, all three ZIP CRC checks passed. This update does not repeat other validation suites or confirm lecturer access, member authorship or review."
   },
   "academic_limits": [
     "S07 abstract-only evidence",
@@ -45,7 +50,7 @@
   "group_signoff_asserted": false,
   "deployment_version": "245b5fd6-bc91-4e4c-9f6d-f4ea383eb308",
   "public_package_revision": "v4",
-  "updated_at_utc": "2026-11-15T05:06:03.641129+00:00",
+  "updated_at_utc": "2026-11-15T05:45:25.182913+00:00",
   "public_package_bytes": 80829337,
   "public_package_sha256": "95ce270772fe2da8f05696f3aa1586f4ff1baab3e56fc28ba26de38fd15530c4"
 }
