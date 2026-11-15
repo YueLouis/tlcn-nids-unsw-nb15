@@ -18,8 +18,8 @@ Uploaded 5 of 5 assets
 Total Upload: 3.18 KiB / gzip: 1.30 KiB
 Worker Startup Time: 1 ms
 Your Worker has access to the following bindings:
-Binding            Resource      
-env.ASSETS         Assets        
+Binding            Resource
+env.ASSETS         Assets
 
 Uploaded attq-nids (16.14 sec)
 Deployed attq-nids triggers (0.80 sec)

@@ -1,0 +1,17 @@
+{
+  "checked_at_utc": "2026-11-15T05:09:13.761381+00:00",
+  "integration_head": "6734e4c67022ea37216033486c9d01f3c9a96c1c",
+  "integrated_branch_tips": {
+    "tramanh": "074f80c1625d9a4fad4f421c1410bd5d759ad47e",
+    "vuongthu": "ae5f0a8d9cd854e4e717ee1b285d2b2db1c28173",
+    "trongtin": "a0c62e5d0a131f7c6dc6cfdea819b33fc4c15aab"
+  },
+  "all_tips_are_ancestors": true,
+  "member_folder_tree_unchanged_from_pre_merge": true,
+  "member_tree_listing_sha256": "2a12196a24b87fa48e5daa831c9d9cd13b482a133d2555eda5f949dc64f87781",
+  "shared_readme_preserved": true,
+  "duplicate_root_guide_removed": true,
+  "canonical_member_guide_count": 3,
+  "substantive_member_contributions_certified": false,
+  "scope": "Integrates already-uploaded guides; no authorship change and no new experiment claim."
+}

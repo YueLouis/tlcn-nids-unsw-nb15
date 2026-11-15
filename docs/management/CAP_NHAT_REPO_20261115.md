@@ -12,7 +12,7 @@
 | Kiểm tự động | [Workflow](../../.github/workflows/checks.yml) chạy unit test Python, validator protocol và ba bộ kiểm Node trên Windows/Linux; dùng phiên bản thư viện ghi trong hai requirements. Không cần dataset hoặc model riêng, không chạy lại 80 thí nghiệm và không xác nhận chất lượng học thuật bằng CI. Trạng thái chạy thật xem ở tab Actions và Checks của PR. |
 | Mốc kiểm thử lịch sử | [Làm rõ log 42/46 bài](../evidence/dot_03/clarifications_20261115/KIEM_CHUNG_MOC_KIEM_THU_20261115.md). Có log local 42 bài, chưa xác định được commit nguồn đúng của lượt đó. |
 | Nguồn gói cá nhân | [Đối chiếu ZIP và phiên bản Git](../evidence/dot_03/clarifications_20261115/GIAI_THICH_NGUON_SNAPSHOT_20261115.md). Manifest khớp byte trong ZIP, nhưng có hai HTML chưa tìm được phiên bản tương ứng trong Git. Giữ nguyên ZIP lịch sử. |
-| Tích hợp nhánh | [Thử merge ba chiều](../evidence/dot_03/clarifications_20261115/DOI_CHIEU_TICH_HOP_NHANH_20261115.md) ghi rõ xung đột README và hồ sơ được giữ. Khi tích hợp thật, trang gốc giữ vai trò tổng hợp và mỗi hướng dẫn đặt ở thư mục thành viên. |
+| Tích hợp nhánh | [Thử merge ba chiều](../evidence/dot_03/clarifications_20261115/DOI_CHIEU_TICH_HOP_NHANH_20261115.md) ghi rõ xung đột README và hồ sơ được giữ. Đã tích hợp thật trên nhánh PR và đối chiếu nguyên cây hồ sơ trước/sau; trang gốc giữ vai trò tổng hợp, hướng dẫn ở đúng thư mục thành viên. |
 
 ## Phần đóng góp cá nhân còn mở
 
