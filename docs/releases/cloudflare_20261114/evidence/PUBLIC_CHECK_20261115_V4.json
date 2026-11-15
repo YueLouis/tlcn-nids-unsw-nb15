@@ -120,8 +120,8 @@
   ],
   "missing_model_status": 404,
   "package": {
-    "local": "E:\\Học kì 7 2026-2027\\Tiểu luận chuyên ngành\\tlcn-nids-unsw-nb15\\output\\attq_handoff_20261114_v4\\ATTQ_NIDS_BAN_GIAO_20261114_v4.zip",
-    "download": "E:\\Học kì 7 2026-2027\\Tiểu luận chuyên ngành\\tlcn-nids-unsw-nb15\\output\\attq_handoff_20261114_v4\\PUBLIC_DOWNLOADED_v4.zip",
+    "local": "<local-file>/ATTQ_NIDS_BAN_GIAO_20261114_v4.zip",
+    "download": "<local-file>/PUBLIC_DOWNLOADED_v4.zip",
     "status": 200,
     "bytes": 80829337,
     "sha256": "95ce270772fe2da8f05696f3aa1586f4ff1baab3e56fc28ba26de38fd15530c4",
