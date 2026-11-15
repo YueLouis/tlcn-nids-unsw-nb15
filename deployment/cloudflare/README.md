@@ -12,7 +12,7 @@ Dùng đúng `deployment/cloudflare/wrangler.json`; tên Worker `attq-nids` là 
 
 1. Chỉnh nguồn trong `demo/presentation/`; giữ PDF chốt và model đã kiểm.
 2. Chạy `python -X utf8 scripts/build_public_presentation.py` từ thư mục gốc kho NIDS.
-3. Đóng gói và gắn nút tải trọn bộ: `python -X utf8 scripts/package_review_update_20261114.py --complete --revision v20261114` (chọn revision mới nếu tệp đã tồn tại), rồi `python -X utf8 scripts/attach_cloudflare_download.py <đường-dẫn-ZIP-vừa-tạo>`. Gói ZIP được chia thành các phần tĩnh dưới 25 MiB; endpoint download ghép luồng thành một ZIP cho người dùng, không cần thao tác ghép tay.
+3. Chỉ đóng gói lại khi thay đổi nội dung cần đưa vào ZIP: `python -X utf8 scripts/package_review_update_20261114.py --complete --revision v5` (revision phải có dạng `v4`, `v5`…; chọn số mới nếu tệp đã tồn tại), rồi `python -X utf8 scripts/attach_cloudflare_download.py <đường-dẫn-ZIP-vừa-tạo>`. Nếu chỉ cập nhật hướng dẫn online, có thể giữ gói v4 đã đóng và không chạy lại hai lệnh này; ghi rõ ZIP là ảnh chụp tại lần đóng gói. Gói ZIP được chia thành các phần tĩnh dưới 25 MiB; endpoint download ghép luồng thành một ZIP cho người dùng, không cần thao tác ghép tay.
 4. Chạy `wrangler deploy --dry-run --config deployment/cloudflare/wrangler.json` để kiểm thư mục tài nguyên.
 5. Chạy `wrangler deploy --config deployment/cloudflare/wrangler.json`; ghi lại Version ID và URL từ đầu ra.
 6. Mở URL public, kiểm Hồ sơ nhóm, bốn PDF, demo RF với hai ngưỡng 1%/5% và AE. Kiểm model tải đủ, một đường model không có phải trả 404. Tập lại bằng gói offline trước buổi báo cáo.

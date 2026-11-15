@@ -19,7 +19,7 @@
 
     <div class="page-heading">
       <div><p class="eyebrow">BỘ CHUẨN BỊ BẢO VỆ</p><h1>Hồ sơ chung của nhóm</h1></div>
-      <div class="edition"><span>ĐỐI CHIẾU 14/11/2026</span><p>Đợt 4 &amp; tổng <strong>hoàn chỉnh nội dung</strong></p></div>
+      <div class="edition"><span>HƯỚNG DẪN CẬP NHẬT 15/11/2026</span><p>Đợt 4 &amp; tổng <strong>hoàn chỉnh nội dung</strong></p></div>
     </div>
 
     <nav class="tabs" role="tablist" aria-label="Nội dung hồ sơ">
@@ -59,10 +59,10 @@
             <button type="button" data-person="anh" aria-pressed="true"><span>TA</span><strong>Trâm Anh</strong><small>Dữ liệu &amp; nguồn</small></button>
             <button type="button" data-person="thu" aria-pressed="false"><span>VT</span><strong>Vương Thu</strong><small>Mô hình &amp; kết quả</small></button>
             <button type="button" data-person="tin" aria-pressed="false"><span>TT</span><strong>Trọng Tín</strong><small>Pipeline &amp; demo</small></button>
-            <p class="picker-note">Phân công là trách nhiệm đọc, kiểm và giải thích; chưa xác nhận đã hoàn thành.</p>
+            <p class="picker-note">Chọn tên rồi mở Việc tự kiểm. Phần tự làm và đọc chéo vẫn cần hoàn thành.</p>
           </div>
           <article class="person-detail" aria-live="polite" aria-atomic="true">
-            <div class="person-heading"><div><p class="eyebrow" id="person-area"></p><h2 id="person-name"></h2></div><a id="person-branch" target="_blank" rel="noopener">Mở nhánh <span aria-hidden="true">↗</span></a></div>
+            <div class="person-heading"><div><p class="eyebrow" id="person-area"></p><h2 id="person-name"></h2></div><div class="person-actions"><button id="practice-open" type="button" aria-haspopup="dialog">Việc tự kiểm <span aria-hidden="true">↗</span></button><a id="person-branch" target="_blank" rel="noopener">Mở nhánh <span aria-hidden="true">↗</span></a></div></div>
             <p class="person-task" id="person-task"></p>
             <div class="person-columns">
               <div><h3>Đọc và mở nguồn</h3><div class="page-reference"><a id="person-total" target="_blank" rel="noopener"><span>Báo cáo tổng</span><strong id="person-total-pages"></strong></a><a id="person-round4" target="_blank" rel="noopener"><span>Báo cáo đợt 4</span><strong id="person-round4-pages"></strong></a></div><p class="page-note">Số trang theo thứ tự trong trình xem PDF.</p><div class="code-references" id="person-code"></div></div>
@@ -80,7 +80,7 @@
       </section>
     </main>
 
-    <footer class="footer"><span>ATTQ NIDS · BÀN GIAO 14/11/2026</span><span>Anh · Thu · Tín thực hiện / ThS. Nguyễn Đăng Quang hướng dẫn</span></footer>
+    <footer class="footer"><span>ATTQ NIDS · HƯỚNG DẪN 15/11 / BÁO CÁO 14/11</span><span>Anh · Thu · Tín thực hiện / ThS. Nguyễn Đăng Quang hướng dẫn</span></footer>
   </div>
   <dialog id="feedback-copy-dialog" aria-labelledby="feedback-copy-title">
     <h2 id="feedback-copy-title">Sao chép thủ công</h2>
@@ -88,6 +88,15 @@
     <label for="feedback-copy-preview">Góp ý kèm tên người ghi</label>
     <textarea id="feedback-copy-preview" readonly spellcheck="false"></textarea>
     <button id="feedback-copy-close" type="button">Đóng khung sao chép</button>
+  </dialog>
+  <dialog id="practice-dialog" class="practice-dialog" aria-labelledby="practice-title">
+    <div class="practice-heading"><div><p class="eyebrow">BẮT ĐẦU TỪ MỘT VIỆC NHỎ</p><h2 id="practice-title"></h2></div><button id="practice-close" type="button" aria-label="Đóng hướng dẫn tự kiểm">Đóng ×</button></div>
+    <p class="practice-intro">Đây là hướng dẫn thực hiện, chưa phải bài tự kiểm đã hoàn thành.</p>
+    <ol id="practice-steps"></ol>
+    <div class="practice-output"><h3>Tệp cần tự viết và lưu</h3><code id="practice-output"></code><p>Ghi ngày làm thật, nguồn đã mở, kết quả và cách hiểu của mình, phần được hỗ trợ và câu còn vướng. Đính kèm đầu ra vừa kiểm; không dùng ảnh cũ thay lượt thực hiện.</p></div>
+    <p id="practice-review" class="cross-review"></p>
+    <p class="practice-save">Lưu bằng tài khoản người thực hiện lên nhánh cá nhân và Drive, rồi gửi liên kết vào Zalo nhóm. Gửi TXT góp ý riêng chưa thay cho tệp tự kiểm này.</p>
+    <div class="practice-links"><a id="practice-source" target="_blank" rel="noopener">Mở đầu vào cần kiểm ↗</a><a href="downloads/TU_KIEM_CA_NHAN_20261115.md" download>Tải hướng dẫn ba người ↓</a></div>
   </dialog>
 </body>
 </html>
