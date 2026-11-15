@@ -4,7 +4,7 @@
 
 Web trình bày hiện hành (chuyển Cloudflare ngày 14/11): https://attq-nids.phttrongtin-nguyen-a46.workers.dev
 
-Ba bạn đọc tài liệu này cùng phiếu phân việc PDF. Bộ này phục vụ ôn và tập báo cáo; [bản hoàn chỉnh nội dung ngày 14/11](../releases/final_handoff_20261114/README.md) đã đóng để nhóm sử dụng, email chưa gửi. Đợt 3 đã gửi trong chuỗi thư cũ lúc 23:16 ngày 12/11, kèm đúng PDF 62 trang; chưa có bằng chứng thầy đã đọc hoặc duyệt.
+Ba bạn đọc tài liệu này cùng phiếu phân việc PDF. Bộ này phục vụ ôn và tập báo cáo; [bản hoàn chỉnh nội dung ngày 14/11](../releases/final_handoff_20261114/README.md) đã đóng để nhóm sử dụng, email đợt 4 và tổng chưa gửi. Đợt 3 đã gửi trong chuỗi thư cũ lúc 23:16 ngày 12/11, kèm đúng [PDF 62 trang](../releases/submission_dot3_20261111/README.md). Ngày 15/11 thầy đã phản hồi tích cực về báo cáo và số liệu, đồng thời gửi nhận xét về repository; chưa có xác nhận nghiệm thu toàn bộ đợt 3. Đọc [cập nhật xử lý repo](CAP_NHAT_REPO_20261115.md) trước khi chốt phần cá nhân.
 
 ## Mở gì trước
 
@@ -17,7 +17,7 @@ Ba bạn đọc tài liệu này cùng phiếu phân việc PDF. Bộ này phụ
 
 | Thành viên | Đọc và kiểm | Mở mã/tài liệu | Tự giải thích được |
 |---|---|---|---|
-| Trịnh Trâm Anh | Nguồn UNSW-NB15, 42 feature, chia tập, giấu lớp, nguy cơ trùng dữ liệu | `docs/group_delivery_20261110/TramAnh/PHAN_CHUYEN_MON.md`, `src/nids_benchmark/data.py`, `src/nids_benchmark/preprocessing.py`; web Dữ liệu và Thực nghiệm | Vì sao bỏ id/label/attack_cat; lớp bị giấu bị loại ở đâu; tại sao test giữ độc lập |
+| Trịnh Trâm Anh | Nguồn UNSW-NB15, 42 feature, chia tập, giấu lớp, nguy cơ trùng dữ liệu | `docs/group_delivery_20261110/TramAnh/PHAN_CHUYEN_MON.md`, `src/nids_benchmark/data.py`, `src/nids_benchmark/contracts.py`, `src/nids_benchmark/preprocessing.py`, `scripts/audit_duplicate_overlap.py`; web Dữ liệu và Thực nghiệm | Vì sao bỏ id/label/attack_cat; lớp bị giấu bị loại ở đâu; tại sao test giữ độc lập |
 | Hoàng Văn Vương Thu | IF/AE, ý nghĩa score, chọn ngưỡng, FPR/Recall/UADR/AP, phân tích sai số | `docs/group_delivery_20261110/VuongThu/PHAN_CHUYEN_MON.md`, `src/nids_benchmark/evaluation.py`; web Kết quả và Hỏi đáp | Vì sao IF/AE chỉ học Normal; ngưỡng 1%/5% từ đâu; AP cao chưa đủ kết luận phát hiện lớp mới tốt |
 | Nguyễn Trọng Tín | RF/XGB, ma trận 80 run, khả năng tái lập, API và demo, ghép kết luận | `docs/group_delivery_20261110/TrongTin/PHAN_CHUYEN_MON.md`, `scripts/demo_server.py`, `demo/presentation/`; web Bài toán, Demo và Tự đánh giá | 80 run được tính thế nào; bản public tính ở đâu; CSV chưa có nhãn có thể kết luận gì |
 

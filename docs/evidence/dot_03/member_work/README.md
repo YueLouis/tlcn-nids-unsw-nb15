@@ -1,6 +1,18 @@
 # Bàn giao cá nhân đợt 3
 
-Thư mục này là nơi để từng thành viên đưa phần tự đọc hoặc tự chạy của mình vào **bộ chung**. Bản rà soát trình bày 07/11 có 62 trang, đang chờ nhóm duyệt, tại `docs/report_dot3_review_20261106/build/main.pdf` trên máy local; [hướng dẫn và mẫu trắng mới](../../../management/ban_giao_dot3_review_20261107/DOC_TRUOC.md). Bản PDF 60 trang ở `docs/releases/dot_03/` được giữ làm lịch sử 30/10. Chưa đồng bộ bản rà soát hoặc xác nhận nhóm đã duyệt.
+## Cập nhật ngày 15/11/2026
+
+Đợt 3 đã gửi lúc 23:16 ngày 12/11, kèm [báo cáo 62 trang ngày 11/11](../../../releases/submission_dot3_20261111/README.md). Ngày 15/11 thầy phản hồi tích cực về báo cáo và số liệu, đồng thời góp ý về repository; đây chưa phải xác nhận nghiệm thu toàn bộ đợt 3.
+
+Ba nhánh thành viên đã được tích hợp vào `main` qua [PR #1](https://github.com/YueLouis/tlcn-nids-unsw-nb15/pull/1); [PR #2](https://github.com/YueLouis/tlcn-nids-unsw-nb15/pull/2) ghi nhận đối chiếu tệp bàn giao trên Drive. Bốn nhánh không còn cùng trỏ tới `93d9c13`. Xem [cập nhật repo](../../../management/CAP_NHAT_REPO_20261115.md) để phân biệt thay đổi kỹ thuật với phần còn mở.
+
+Ba tệp tự phân tích hoặc tự chạy trong bảng dưới vẫn chưa có. Đọc [phạm vi hồ sơ cá nhân](../clarifications_20261115/PHAM_VI_HO_SO_CA_NHAN_20261115.md) và [hướng dẫn mở nguồn, demo hiện hành](../../../management/BAN_GIAO_BAO_VE_20261113.md). Ghi ngày thực hiện thật, nguồn đã kiểm, phần được hỗ trợ và nhận xét đọc chéo cụ thể; không dùng tài liệu chuẩn bị hoặc thao tác đăng tải thay cho việc đã trực tiếp làm.
+
+## Khung bàn giao ngày 06–10/11 — giữ để truy vết
+
+Phần bên dưới ghi trạng thái tại thời điểm chuẩn bị khung. Các câu “đang chờ nhóm duyệt”, “chưa đồng bộ” và mốc nhánh `93d9c13` thuộc lịch sử; dùng mục cập nhật phía trên để xem trạng thái hiện hành. Các bản PDF cũ và ghi nhận cũ được giữ nguyên.
+
+Thư mục này là nơi để từng thành viên đưa phần tự đọc hoặc tự chạy của mình vào **bộ chung**. Bản rà soát trình bày 07/11 có 62 trang, đang chờ nhóm duyệt tại mốc đó, ở `docs/report_dot3_review_20261106/build/main.pdf` trên máy local. Khung cũ dẫn tới hướng dẫn và mẫu trắng `docs/management/ban_giao_dot3_review_20261107/DOC_TRUOC.md`; tệp này không có trong repository hiện hành, nên dùng hướng dẫn ở đầu trang. Bản PDF 60 trang ở `docs/releases/dot_03/` được giữ làm lịch sử 30/10. Tại mốc khung cũ, chưa đồng bộ bản rà soát hoặc xác nhận nhóm đã duyệt.
 
 ## Ba phần cần bàn giao
 
@@ -12,7 +24,7 @@ Thư mục này là nơi để từng thành viên đưa phần tự đọc ho�
 
 Mỗi file phải do người được giao tự viết, ghi ngày, nguồn hoặc trang đã mở, phần được hỗ trợ, điều chưa rõ và nhận xét đọc chéo. Bài yêu cầu chạy demo phải kèm log hoặc ảnh của chính lượt chạy đó.
 
-## Trạng thái hiện tại
+## Trạng thái ghi nhận trong khung cũ
 
 - Đây là khung bàn giao do Tín chuẩn bị ngày 06/11/2026, không phải bài đã làm của Anh hoặc Thu.
 - Bốn nhánh `main`, `tramanh`, `vuongthu`, `trongtin` hiện cùng trỏ tới commit `93d9c13` (10/11/2026); lịch sử commit riêng của ba bạn chưa được chứng minh. Xem hướng dẫn theo từng nhánh tại `docs/group_delivery_20261110/`.
