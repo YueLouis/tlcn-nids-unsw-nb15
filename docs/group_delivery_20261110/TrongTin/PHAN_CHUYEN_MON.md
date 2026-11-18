@@ -1,6 +1,6 @@
 # Protocol, tái lập và demo
 
-**Cập nhật chỉ mục ngày 19/11/2026:** nội dung bên dưới là hồ sơ chuyên môn tại mốc 11/11. Các câu nói giao diện hoặc báo cáo còn đang hoàn thiện thuộc mốc đó. Báo cáo đợt 4/tổng và bộ demo hiện hành đã hoàn chỉnh nội dung ngày 14/11; mở [bộ bàn giao](../../releases/final_handoff_20261114/README.md) và [hướng dẫn phần Trọng Tín](BAN_GIAO_BAO_VE_20261115.md). Giữ nguyên số liệu, ZIP và ghi nhận kiểm cũ để đối chiếu; cập nhật này không xác nhận Tín đã tự chạy, đọc duyệt hoặc báo cáo đã được gửi hay nghiệm thu.
+**Cập nhật chỉ mục ngày 19/11/2026:** nội dung bên dưới là hồ sơ chuyên môn tại mốc 11/11. Các câu nói giao diện hoặc báo cáo còn đang hoàn thiện thuộc mốc đó. Báo cáo đợt 4/tổng và bộ demo hiện hành đã hoàn chỉnh nội dung ngày 14/11; mở [bộ bàn giao](https://github.com/YueLouis/tlcn-nids-unsw-nb15/tree/main/docs/releases/final_handoff_20261114) và [hướng dẫn phần Trọng Tín](https://github.com/YueLouis/tlcn-nids-unsw-nb15/blob/main/docs/group_delivery_20261110/TrongTin/BAN_GIAO_BAO_VE_20261115.md). Giữ nguyên số liệu, ZIP và ghi nhận kiểm cũ để đối chiếu; cập nhật này không xác nhận Tín đã tự chạy, đọc duyệt hoặc báo cáo đã được gửi hay nghiệm thu.
 
 ## Thực nghiệm chung
 
