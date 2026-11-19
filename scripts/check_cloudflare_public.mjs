@@ -12,10 +12,12 @@ assert.ok(origin && dist && referencePath && receiptPath,
 assert.equal(new URL(origin).protocol, 'https:');
 const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const nativeFetch = globalThis.fetch;
+const privacy = JSON.parse(await readFile(new URL('../deployment/cloudflare/private-documents.json', import.meta.url), 'utf8'));
 const downloaded = new Map();
 const checks = [];
-async function get(path) {
+async function get(path, redirect = 'follow') {
   const response = await nativeFetch(new URL(path, origin + '/'), {
+    redirect,
     headers: {'User-Agent': 'Mozilla/5.0 NIDS-public-audit'},
     signal: AbortSignal.timeout(45000),
   });
@@ -36,6 +38,10 @@ await Promise.all(Array.from({length: 4}, async () => {
   while (index < pending.length) {
     const local = pending[index++];
     const path = '/' + relative(dist, local).replaceAll('\\', '/');
+    assert.ok(!privacy.retired_prefixes.some((prefix) => path === prefix || path.startsWith(prefix + '/')),
+      path + ' must not exist in the public build');
+    assert.ok(!privacy.private_extensions.some((extension) => path.toLowerCase().endsWith(extension)),
+      path + ' is a private document');
     const expected = await readFile(local);
     const {response, bytes} = await get(path);
     assert.equal(response.status, 200, path + ' must be public HTTP 200');
@@ -60,6 +66,26 @@ for (const path of ['/', '/ho-so', '/ho-so.html']) {
 }
 const missing = await get('/models/no-such-model.bin.gz');
 assert.equal(missing.response.status, 404, 'Missing model must never be a 200 SPA page');
+const privateRedirects = [];
+for (const path of [
+  '/assets/BAO_CAO_DOT3.pdf',
+  '/downloads/NhomTLCN_dot4_20261114.pdf', '/downloads/NhomTLCN_tong_20261114.pdf',
+  '/downloads/NhomTLCN_slide_du_phong_20261113.pdf',
+  '/downloads/NhomTLCN_phan_viec_on_nhom_20261113.pdf',
+  '/downloads/Nguon_dot4_20261114.zip', '/downloads/Nguon_tong_20261114.zip',
+  '/downloads/BAN_GIAO_BAO_VE_20261113.md', '/downloads/DOI_CHIEU_YEU_CAU_20261114.md',
+  '/downloads/TU_KIEM_CA_NHAN_20261115.md', '/downloads/MANIFEST.json',
+  '/downloads/ATTQ_NIDS_BAN_GIAO_20261114.zip',
+  ...Array.from({length: 4}, (_, index) => `/package-parts/ATTQ_NIDS_20261114_0${index}.part`),
+]) {
+  const {response, bytes} = await get(path, 'manual');
+  const destination = path === '/assets/BAO_CAO_DOT3.pdf' ? privacy.round3_url : privacy.reports_url;
+  assert.equal(response.status, 302, path + ' must redirect to restricted Drive');
+  assert.equal(response.headers.get('location'), destination, path);
+  assert.equal(bytes.length, 0, path + ' must not serve private file bytes');
+  assert.equal(response.headers.get('cache-control'), 'no-store', path);
+  privateRedirects.push({path, status: 302, location: destination, private_bytes_returned: 0});
+}
 
 // Run the shipped worker module with Fetch responses obtained above, including
 // its DecompressionStream and parameter unpacking; no CSV leaves this process.
@@ -111,10 +137,12 @@ const receipt = {checked_at_utc: new Date().toISOString(), url: origin,
   credential_used: false, all_asset_hashes_match: true,
   model_files: checks.filter((row) => row.path.endsWith('.bin.gz')).length,
   root_and_hub_routes_pass: true, missing_model_http_status: 404,
+  private_document_redirects: privateRedirects,
   assets: checks.sort((a, b) => a.path.localeCompare(b.path)), inference: outcomes,
   clipboard_download_browser_e2e: 'NOT_RETESTED', layout_no_scroll: 'NOT_RETESTED'};
 await writeFile(receiptPath, JSON.stringify(receipt, null, 2) + '\n');
 console.log(JSON.stringify({assets: checks.length, model_files: receipt.model_files,
   inference_cases: outcomes.length, predictions: outcomes.reduce((sum, row) => sum + row.rows, 0),
+  private_document_redirects: privateRedirects.length,
   max_score_error: Math.max(...outcomes.map((row) => row.max_absolute_score_error)),
   missing_model_http_status: 404, receipt: receiptPath}));

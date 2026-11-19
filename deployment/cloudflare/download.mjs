@@ -1,4 +1,4 @@
-import archive from './download-manifest.json';
-import {createDownloadWorker} from './zip-download.mjs';
+import policy from './private-documents.json';
+import {createPublicDemoWorker} from './private-documents.mjs';
 
-export default createDownloadWorker(archive);
+export default createPublicDemoWorker(policy);

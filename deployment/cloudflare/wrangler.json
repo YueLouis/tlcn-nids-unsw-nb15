@@ -7,9 +7,7 @@
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page",
     "binding": "ASSETS",
-    "run_worker_first": [
-      "/downloads/ATTQ_NIDS_BAN_GIAO_20261114.zip"
-    ]
+    "run_worker_first": true
   },
   "main": "download.mjs"
 }

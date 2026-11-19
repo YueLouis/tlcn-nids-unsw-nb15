@@ -137,6 +137,10 @@ def require(condition: bool, message: str) -> None:
 
 
 def collect_sources() -> list[tuple[str, Path]]:
+    require((DIST / 'downloads').is_dir(),
+            'Legacy private packaging needs the archived full web snapshot. '
+            'The current public dist deliberately excludes private documents; '
+            'keep the validated offline ZIP in restricted Drive, do not republish it.')
     required = (
         "index.html", "presentation.js", "presentation.css", "browser-engine.mjs",
         "browser-worker.mjs", "browser-adapter.js", "ho-so.html", "ho-so.css",
