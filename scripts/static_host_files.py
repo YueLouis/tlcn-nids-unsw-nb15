@@ -16,9 +16,6 @@ HEADERS = '''/*
 
 /models/*
   Content-Type: application/octet-stream
-
-/package-parts/*
-  Content-Type: application/octet-stream
 '''
 
 

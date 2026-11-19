@@ -41,3 +41,5 @@ jobs:
         run: node tests/test_hub_feedback.mjs
       - name: Offline archive download
         run: node tests/test_cloudflare_download.mjs
+      - name: Public document privacy guard
+        run: node tests/test_public_document_guard.mjs

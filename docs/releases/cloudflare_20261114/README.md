@@ -1,4 +1,23 @@
-# ATTQ NIDS — bản công khai Cloudflare, cập nhật 15/11/2026
+# ATTQ NIDS — bản công khai Cloudflare, cập nhật 19/11/2026
+
+## Phạm vi công khai từ 19/11
+
+Web public phục vụ trình bày và demo, CSV số liệu và tham số model. **PDF báo cáo, nguồn ZIP, gói offline và tài liệu ôn được mở trong [Drive hạn chế của nhóm](https://drive.google.com/drive/folders/1s5d-14RMFRqoWnEDMVtRtUSsrUeguP_z)** bằng tài khoản đã được mời. [Hồ sơ đề tài](https://attq-nids.phttrongtin-nguyen-a46.workers.dev/ho-so) dẫn tới Drive và bốn nhánh GitHub. Hướng dẫn tự kiểm vẫn có trong Drive/repo và snapshot offline; không còn hiển thị trên hub public.
+
+Builder dùng danh sách tệp cho phép và dọn tài liệu còn sót ở dist. Worker chuyển URL tài liệu cũ, kể cả các phần ZIP, sang Drive mà không đọc hoặc phục vụ byte riêng tư. Các PDF/ZIP đã chốt giữ nguyên. Lệnh kiểm và triển khai hiện hành nằm ở [hướng dẫn Cloudflare](../../../deployment/cloudflare/README.md).
+
+## Kết quả triển khai ngày 19/11
+
+- [Phiên bản đã đăng](evidence/DEPLOYMENT_20261119_PRIVACY.json): `1e2bd12e-0754-4d41-be68-7506407a0220`, từ commit `b11cf7c`.
+- [Kiểm HTTP ẩn danh và suy luận](evidence/PUBLIC_PRIVACY_CHECK_20261119.json): 39 tài nguyên khớp hash, 16 model, 1.600 dự đoán khớp Python; 16 URL tài liệu chuyển sang Drive và không trả byte tài liệu. Phần suy luận này chạy bằng Node trên tài nguyên tải từ public.
+- [Kiểm giao diện bằng trình duyệt Codex](evidence/BROWSER_UI_CHECK_20261119.json): bảy màn không cuộn ở 1366×768; hub không cuộn ở 1280×720; demo RF ở hai ngưỡng và AE đã chạy qua nút giao diện. Chưa thử HDMI tại lớp.
+- [Kiểm host cũ](evidence/LEGACY_ORIGINS_CHECK_20261119.json): Workers cũ chuyển sang ATTQ; bản Sites cũ đã giới hạn quyền, hai URL kiểm ẩn danh trả 401.
+
+Drive đã giới hạn bốn người ở các thư mục được kiểm, thầy có quyền nhận xét. GitHub vẫn chờ thầy nhận lời mời trước khi chuyển riêng tư theo yêu cầu nhóm; lịch sử repo còn công khai trong thời gian chờ. Kiểm kỹ thuật không thay cho phần tự làm, đọc chéo và tập báo cáo của thành viên. Email đợt 4/tổng chưa gửi.
+
+## Lịch sử hướng dẫn và kết quả kiểm ngày 14–15/11
+
+Các bước tự đọc, góp ý và tải ZIP public bên dưới mô tả snapshot trước khi giới hạn tài liệu ngày 19/11; dùng Drive cho tài liệu hiện hành.
 
 **ATTQ = Anh · Thu · Tín · Quang:** ba thành viên Trịnh Trâm Anh, Hoàng Văn Vương Thu, Nguyễn Trọng Tín thực hiện; ThS. Nguyễn Đăng Quang hướng dẫn. Tên web do nhóm chọn, không thay tên đề tài học thuật hoặc ghi thầy là người thực hiện mã nguồn.
 
@@ -24,9 +43,9 @@ Cấu hình duy nhất: [wrangler.json](../../../deployment/cloudflare/wrangler.
 
 Các biên bản ở thư mục evidence chỉ chứng minh phạm vi kiểm được ghi; không thay lượt đọc duyệt và tập báo cáo của thành viên.
 
-## Bộ hiện hành và kết quả kiểm
+## Bộ và kết quả kiểm ngày 15/11
 
-- [Tải trọn bộ PDF, nguồn và demo offline](https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/ATTQ_NIDS_BAN_GIAO_20261114.zip). Gói v4 có 80.829.337 byte, 55 tệp theo manifest; đã tải lại qua URL công khai, kiểm đủ hash và CRC. Giải nén rồi chạy `CHAY_DEMO.cmd`; cần Python 3 và Chrome/Edge hiện hành.
+- Gói PDF, nguồn và demo offline v4 có 80.829.337 byte, 55 tệp theo manifest; ngày 15/11 đã tải lại qua URL công khai, kiểm đủ hash và CRC. Từ 19/11 lấy gói này trong [Drive hạn chế](https://drive.google.com/drive/folders/1s5d-14RMFRqoWnEDMVtRtUSsrUeguP_z). Giải nén rồi chạy `CHAY_DEMO.cmd`; cần Python 3 và Chrome/Edge hiện hành.
 - [Báo cáo đợt 4, tổng và nguồn hiện hành](../final_handoff_20261114/README.md): đợt 4 có 68 trang, tổng có 62 trang. Mỗi PDF đã đối chiếu 174 dòng bảng, kiểm font nhúng, liên kết và trang thay đổi.
 - [Biên bản public](evidence/COMPLETE_PUBLIC_CHECK.json): 55 tài nguyên khớp bản build, đủ 16 model; thực thi worker được phát hành bằng Node và đối chiếu 1.600 dự đoán với Python, không lệch nhãn. Đây không phải kiểm thao tác trong trình duyệt.
 - [Biên bản tải gói v4](evidence/PUBLIC_CHECK_20261115_V4.json), [phiên bản triển khai v4](evidence/DEPLOYMENT_20261115_V4.json), [tổng kiểm](evidence/FINAL_VALIDATION_SUMMARY.json).
