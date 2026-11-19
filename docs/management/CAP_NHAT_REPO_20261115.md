@@ -2,14 +2,16 @@
 
 Đợt 3 đã gửi ngày 12/11. Ngày 15/11 nhóm nhận nhận xét về repository; phản hồi tích cực về báo cáo và số liệu chưa đồng nghĩa mọi yêu cầu của đợt 3 đã được nghiệm thu. Phần đóng góp cá nhân và quản lý hồ sơ còn cần xử lý.
 
+Cập nhật kiểm ngày 19/11: Drive đã giới hạn nhóm và thầy ở các thư mục được kiểm; thầy có quyền nhận xét. Web chỉ công khai trình bày, demo và tài nguyên mô hình; PDF/ZIP chuyển sang Drive hạn chế. Bản Sites cũ đã giới hạn quyền. [Biên bản triển khai và kiểm](../releases/cloudflare_20261114/README.md) ghi riêng phạm vi kỹ thuật và việc còn cần thành viên thực hiện. GitHub đã nhận diện tài khoản thầy là `quang-ute`, lời mời còn chờ chấp nhận; repo giữ public theo điều kiện nhóm đã chốt, nên lịch sử riêng tư vẫn còn tồn tại công khai trong thời gian chờ.
+
 ## Các việc có thể kiểm chứng bằng kho mã
 
 | Nội dung | Thay đổi và bằng chứng |
 |---|---|
-| Trạng thái công khai | Đính chính tại [phân công nền](PHAN_CONG_NHOM.md). Repo hiện public; chưa đổi private để tránh mất quyền theo dõi khi tài khoản người hướng dẫn chưa được xác nhận. |
+| Trạng thái công khai | Đính chính tại [phân công nền](PHAN_CONG_NHOM.md). Repo hiện public; lời mời `quang-ute` còn chờ chấp nhận tại lần kiểm ngày 19/11. Chuyển private sau khi thầy nhận lời mời theo yêu cầu nhóm. |
 | Thư và thông tin liên hệ | Bỏ toàn văn hai thư cũ khỏi tệp hiện hành; bản gốc giữ riêng. Lịch sử Git và một số báo cáo cũ vẫn có dữ liệu cá nhân. Đây mới là giảm công khai ở bản hiện hành, chưa xử lý xong quyền truy cập toàn bộ lịch sử. |
 | Quy trình cập nhật | Bổ sung mẫu pull request. Lần sửa này đưa lên nhánh tạm để mở PR vào `main`; giữ bốn nhánh lâu dài `main`, `tramanh`, `vuongthu`, `trongtin`. PR là nơi xem thay đổi và kết quả kiểm, không tự thay review chuyên môn của thành viên. |
-| Kiểm tự động | [Workflow](../../.github/workflows/checks.yml) chạy unit test Python, validator protocol và ba bộ kiểm Node trên Windows/Linux; dùng phiên bản thư viện ghi trong hai requirements. Không cần dataset hoặc model riêng, không chạy lại 80 thí nghiệm và không xác nhận chất lượng học thuật bằng CI. Trạng thái chạy thật xem ở tab Actions và Checks của PR. |
+| Kiểm tự động | [Workflow](../../.github/workflows/checks.yml) chạy unit test Python, validator protocol và bốn bộ kiểm Node trên Windows/Linux; dùng phiên bản thư viện ghi trong hai requirements. Không cần dataset hoặc model riêng, không chạy lại 80 thí nghiệm và không xác nhận chất lượng học thuật bằng CI. Trạng thái chạy thật xem ở tab Actions và Checks của PR. |
 | Mốc kiểm thử lịch sử | [Làm rõ log 42/46 bài](../evidence/dot_03/clarifications_20261115/KIEM_CHUNG_MOC_KIEM_THU_20261115.md). Có log local 42 bài, chưa xác định được commit nguồn đúng của lượt đó. |
 | Nguồn gói cá nhân | [Đối chiếu ZIP và phiên bản Git](../evidence/dot_03/clarifications_20261115/GIAI_THICH_NGUON_SNAPSHOT_20261115.md). Manifest khớp byte trong ZIP, nhưng có hai HTML chưa tìm được phiên bản tương ứng trong Git. Giữ nguyên ZIP lịch sử. |
 | Tích hợp nhánh | [Thử merge ba chiều](../evidence/dot_03/clarifications_20261115/DOI_CHIEU_TICH_HOP_NHANH_20261115.md) ghi rõ xung đột README và hồ sơ được giữ. Đã tích hợp thật trên nhánh PR và đối chiếu nguyên cây hồ sơ trước/sau; trang gốc giữ vai trò tổng hợp, hướng dẫn ở đúng thư mục thành viên. |
