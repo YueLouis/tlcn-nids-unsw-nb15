@@ -1,0 +1,42 @@
+[
+  {
+    "origin": "https://nids-unsw-nb15-tlcn.phttrongtin-nguyen-a46.workers.dev",
+    "path": "/",
+    "status": 302,
+    "location": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/",
+    "content_type": null,
+    "pdf_bytes": false
+  },
+  {
+    "origin": "https://nids-unsw-nb15-tlcn.phttrongtin-nguyen-a46.workers.dev",
+    "path": "/downloads/NhomTLCN_tong_20261114.pdf",
+    "status": 302,
+    "location": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/NhomTLCN_tong_20261114.pdf",
+    "content_type": null,
+    "pdf_bytes": false
+  },
+  {
+    "origin": "https://nids-unsw-nb15-tlcn.phttrongtin-nguyen-a46.workers.dev",
+    "path": "/downloads/ATTQ_NIDS_BAN_GIAO_20261114.zip",
+    "status": 302,
+    "location": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/downloads/ATTQ_NIDS_BAN_GIAO_20261114.zip",
+    "content_type": null,
+    "pdf_bytes": false
+  },
+  {
+    "origin": "https://nids-unsw-nb15-tlcn.nttin181.chatgpt.site",
+    "path": "/",
+    "status": 401,
+    "location": "",
+    "content_type": "text/html; charset=utf-8",
+    "pdf_bytes": false
+  },
+  {
+    "origin": "https://nids-unsw-nb15-tlcn.nttin181.chatgpt.site",
+    "path": "/downloads/NhomTLCN_phan_viec_on_nhom_20261113.pdf",
+    "status": 401,
+    "location": "",
+    "content_type": "text/html; charset=utf-8",
+    "pdf_bytes": false
+  }
+]

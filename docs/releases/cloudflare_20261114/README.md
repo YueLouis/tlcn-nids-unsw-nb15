@@ -4,7 +4,16 @@
 
 Web public phục vụ trình bày và demo, CSV số liệu và tham số model. **PDF báo cáo, nguồn ZIP, gói offline và tài liệu ôn được mở trong [Drive hạn chế của nhóm](https://drive.google.com/drive/folders/1s5d-14RMFRqoWnEDMVtRtUSsrUeguP_z)** bằng tài khoản đã được mời. [Hồ sơ đề tài](https://attq-nids.phttrongtin-nguyen-a46.workers.dev/ho-so) dẫn tới Drive và bốn nhánh GitHub. Hướng dẫn tự kiểm vẫn có trong Drive/repo và snapshot offline; không còn hiển thị trên hub public.
 
-Builder dùng danh sách tệp cho phép và dọn tài liệu còn sót ở dist. Worker chuyển URL tài liệu cũ, kể cả các phần ZIP, sang Drive mà không đọc hoặc phục vụ byte riêng tư. Các PDF/ZIP đã chốt giữ nguyên. Lệnh kiểm và triển khai hiện hành nằm ở [hướng dẫn Cloudflare](../../../deployment/cloudflare/README.md); các biên bản dưới đây thuộc ngày 14–15/11, không tự xác nhận bản triển khai ngày 19/11.
+Builder dùng danh sách tệp cho phép và dọn tài liệu còn sót ở dist. Worker chuyển URL tài liệu cũ, kể cả các phần ZIP, sang Drive mà không đọc hoặc phục vụ byte riêng tư. Các PDF/ZIP đã chốt giữ nguyên. Lệnh kiểm và triển khai hiện hành nằm ở [hướng dẫn Cloudflare](../../../deployment/cloudflare/README.md).
+
+## Kết quả triển khai ngày 19/11
+
+- [Phiên bản đã đăng](evidence/DEPLOYMENT_20261119_PRIVACY.json): `1e2bd12e-0754-4d41-be68-7506407a0220`, từ commit `b11cf7c`.
+- [Kiểm HTTP ẩn danh và suy luận](evidence/PUBLIC_PRIVACY_CHECK_20261119.json): 39 tài nguyên khớp hash, 16 model, 1.600 dự đoán khớp Python; 16 URL tài liệu chuyển sang Drive và không trả byte tài liệu. Phần suy luận này chạy bằng Node trên tài nguyên tải từ public.
+- [Kiểm giao diện bằng trình duyệt Codex](evidence/BROWSER_UI_CHECK_20261119.json): bảy màn không cuộn ở 1366×768; hub không cuộn ở 1280×720; demo RF ở hai ngưỡng và AE đã chạy qua nút giao diện. Chưa thử HDMI tại lớp.
+- [Kiểm host cũ](evidence/LEGACY_ORIGINS_CHECK_20261119.json): Workers cũ chuyển sang ATTQ; bản Sites cũ đã giới hạn quyền, hai URL kiểm ẩn danh trả 401.
+
+Drive đã giới hạn bốn người ở các thư mục được kiểm, thầy có quyền nhận xét. GitHub vẫn chờ thầy nhận lời mời trước khi chuyển riêng tư theo yêu cầu nhóm; lịch sử repo còn công khai trong thời gian chờ. Kiểm kỹ thuật không thay cho phần tự làm, đọc chéo và tập báo cáo của thành viên. Email đợt 4/tổng chưa gửi.
 
 ## Lịch sử hướng dẫn và kết quả kiểm ngày 14–15/11
 

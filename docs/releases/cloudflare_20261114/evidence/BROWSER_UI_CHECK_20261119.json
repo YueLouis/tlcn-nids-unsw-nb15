@@ -1,0 +1,28 @@
+{
+  "verified_on": "2026-11-19",
+  "url": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev",
+  "tool": "Codex in-app browser via computer-use",
+  "scope": "Live browser smoke after privacy deployment; separate from HTTP and Node inference receipt",
+  "hub": {
+    "viewport": [1280, 720],
+    "document": [1280, 720],
+    "links_verified": ["restricted final Drive", "four-part Drive root", "GitHub main", "tramanh", "vuongthu", "trongtin", "presentation"],
+    "public_internal_feedback_form_present": false
+  },
+  "presentation": {
+    "viewport": [1366, 768],
+    "screens_without_document_overflow": ["Bài toán", "Dữ liệu", "Thực nghiệm", "Kết quả", "Demo", "Hỏi đáp", "Tự đánh giá"],
+    "demo_results_without_document_overflow": true,
+    "viewport_override_reset": true
+  },
+  "demo_ui_cases": [
+    {"run_id": "CS-RF-S42", "target_fpr": 0.05, "rows": 50, "attack_predictions": 48, "confusion": {"TP": 40, "FP": 8, "TN": 2, "FN": 0}},
+    {"run_id": "CS-RF-S42", "target_fpr": 0.01, "rows": 50, "attack_predictions": 39, "confusion": {"TP": 39, "FP": 0, "TN": 10, "FN": 1}},
+    {"run_id": "CS-AE-S42", "target_fpr": 0.01, "rows": 50, "attack_predictions": 22, "confusion": {"TP": 22, "FP": 0, "TN": 10, "FN": 18}}
+  ],
+  "limitations": [
+    "Other model, scenario and threshold combinations checked by separate Node inference receipt, not all clicked in browser this operation",
+    "CSV download, upload, clipboard and schema-error journeys not retested this operation",
+    "No classroom HDMI test or human acceptance claimed"
+  ]
+}

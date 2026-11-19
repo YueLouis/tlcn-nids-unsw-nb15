@@ -1,0 +1,19 @@
+{
+  "verified_on": "2026-11-19",
+  "provider": "Cloudflare Workers Static Assets",
+  "worker_name": "attq-nids",
+  "version": "1e2bd12e-0754-4d41-be68-7506407a0220",
+  "source_commit": "b11cf7c7e09f4ea4f8ad6084eb3add1d776cbe6b",
+  "url": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev",
+  "public_check": "PUBLIC_PRIVACY_CHECK_20261119.json",
+  "legacy_origins_check": "LEGACY_ORIGINS_CHECK_20261119.json",
+  "browser_check": "BROWSER_UI_CHECK_20261119.json",
+  "reports_and_archives": "restricted Drive",
+  "frozen_reports_changed": false,
+  "email_sent_this_operation": false,
+  "limitations": [
+    "GitHub invitation to lecturer is pending; repository remains public pending acceptance as requested by group",
+    "Technical verification does not establish member self-work, cross-review or lecturer approval",
+    "Classroom HDMI and final report rehearsal not verified"
+  ]
+}
