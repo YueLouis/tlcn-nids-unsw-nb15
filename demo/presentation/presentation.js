@@ -15,6 +15,42 @@
  el('notes-toggle').onclick=()=>{el('speaker-notes').showModal();el('notes-toggle').setAttribute('aria-pressed','true')};
  el('speaker-notes').addEventListener('close',()=>el('notes-toggle').setAttribute('aria-pressed','false'));
  el('close-notes').onclick=()=>el('speaker-notes').close();
+
+ const recordsLink=el('records-link');
+ const recordsDialog=el('records-dialog');
+ const recordsFrame=el('records-frame');
+ const closeRecords=el('close-records');
+ let recordsReturnLink=null;
+
+ function followsLinkInSameTab(event){
+  return !event.defaultPrevented&&event.button===0&&!event.altKey&&!event.ctrlKey&&!event.metaKey&&!event.shiftKey;
+ }
+
+ recordsLink.addEventListener('click',event=>{
+  if(!document.fullscreenElement||!followsLinkInSameTab(event))return;
+  event.preventDefault();
+  recordsDialog.showModal();
+  if(!recordsFrame.hasAttribute('src'))recordsFrame.src=recordsLink.href;
+  recordsReturnLink?.focus();
+ });
+ closeRecords.onclick=()=>recordsDialog.close();
+ recordsDialog.addEventListener('close',()=>recordsLink.focus());
+ recordsFrame.addEventListener('load',()=>{
+  const hub=recordsFrame.contentDocument;
+  recordsReturnLink=hub?.querySelector('.back-link[data-return-to-deck]');
+  if(recordsReturnLink&&document.activeElement===closeRecords)recordsReturnLink.focus();
+  closeRecords.hidden=Boolean(recordsReturnLink);
+  if(!recordsReturnLink)return;
+
+  hub.querySelectorAll('[data-return-to-deck]').forEach(link=>{
+   link.addEventListener('click',event=>{
+    if(!followsLinkInSameTab(event))return;
+    event.preventDefault();
+    recordsDialog.close();
+   });
+  });
+ });
+
  function invalidate(){version++;result=null;el('live-result').hidden=true;el('run-provenance').hidden=true;el('demo-result-tab').disabled=true;showDemoView('setup');status('Cấu hình đã đổi · bấm Chạy suy luận để xem kết quả mới')}
  function setBusy(value){busy=value;el('live-output').setAttribute('aria-busy',String(value));el('run-demo').disabled=value;el('run-demo').textContent=value?'Đang suy luận…':'Chạy suy luận →';document.querySelectorAll('#inference-form select,#inference-form input').forEach(x=>x.disabled=value)}
  function rowView(){

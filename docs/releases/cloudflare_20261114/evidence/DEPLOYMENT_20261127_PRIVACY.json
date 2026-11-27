@@ -1,0 +1,101 @@
+{
+  "checked_at": "2026-11-27",
+  "worker": "attq-nids",
+  "url": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev",
+  "version_id": "ecb2f073-bd6d-4fd6-bcf7-4dfe88e03b6c",
+  "change": "Cập nhật giao diện trình bày nền trắng, hồ sơ có nút Drive đúng thư mục bàn giao và giữ tài liệu báo cáo ở Drive hạn chế",
+  "restricted_drive": "https://drive.google.com/drive/folders/1s5d-14RMFRqoWnEDMVtRtUSsrUeguP_z",
+  "source": {
+    "base_commit": "7391fad0baac1d2aea5fa8a301b94f663e509981",
+    "working_tree_diff_sha256": "498b506ac407baa1cf377a1c850a36ec93975a1000cbba021219057ed0f5fd3e",
+    "note": "Deployment was made from the base commit plus this exact working-tree diff. The diff was then preserved in the repository handoff."
+  },
+  "fresh_http_check": {
+    "user_agent": "Mozilla/5.0",
+    "routes": [
+      {
+        "path": "/",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 42286,
+        "sha256_prefix": "0f486557de781ec8"
+      },
+      {
+        "path": "/ho-so",
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 4067,
+        "sha256_prefix": "6044834310fdc5a8"
+      },
+      {
+        "path": "/ho-so.html",
+        "status": 307,
+        "location": "/ho-so",
+        "bytes": 0
+      },
+      {
+        "path": "/ho-so.css",
+        "status": 200,
+        "content_type": "text/css",
+        "bytes": 16401,
+        "sha256_prefix": "405a67014af578d3"
+      },
+      {
+        "path": "/browser-worker.mjs",
+        "status": 200,
+        "content_type": "application/javascript; charset=utf-8",
+        "bytes": 1578,
+        "sha256_prefix": "8731521439cc879a"
+      },
+      {
+        "path": "/models/CS-RF-S42.bin.gz",
+        "status": 200,
+        "content_type": "application/octet-stream",
+        "bytes_read_limited": 1048576,
+        "sha256_prefix": "cb39dc666d6a59ed"
+      },
+      {
+        "path": "/cases/normal.csv",
+        "status": 200,
+        "content_type": "text/csv",
+        "bytes": 3306,
+        "sha256_prefix": "c223a8914c63a9dd"
+      },
+      {
+        "path": "/assets/AP_MEAN_STD.csv",
+        "status": 200,
+        "content_type": "text/csv",
+        "bytes": 2615,
+        "sha256_prefix": "f67222984617b8a7"
+      },
+      {
+        "path": "/downloads/NhomTLCN_tong_20261114.pdf",
+        "status": 302,
+        "location": "https://drive.google.com/drive/folders/1s5d-14RMFRqoWnEDMVtRtUSsrUeguP_z",
+        "bytes": 0
+      },
+      {
+        "path": "/downloads/Nguon_tong_20261114.zip",
+        "status": 302,
+        "location": "https://drive.google.com/drive/folders/1s5d-14RMFRqoWnEDMVtRtUSsrUeguP_z",
+        "bytes": 0
+      },
+      {
+        "path": "/README.md",
+        "status": 302,
+        "location": "https://drive.google.com/drive/folders/1s5d-14RMFRqoWnEDMVtRtUSsrUeguP_z",
+        "bytes": 0
+      }
+    ]
+  },
+  "checks": {
+    "test_public_privacy": "PASS 3/3",
+    "test_public_document_guard": "PASS",
+    "wrangler_dry_run": "PASS 43 assets"
+  },
+  "limits": [
+    "Không kiểm HDMI vật lý trong lần triển khai này",
+    "Không đánh dấu bài tự kiểm hoặc đọc chéo của thành viên",
+    "Không xem bản kiểm kỹ thuật là xác nhận nộp bài hoặc duyệt học thuật"
+  ]
+}

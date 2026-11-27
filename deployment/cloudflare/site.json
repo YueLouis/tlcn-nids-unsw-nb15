@@ -8,13 +8,15 @@
   "brand": "ATTQ NIDS",
   "meaning": "Anh · Thu · Tín · Quang: Trịnh Trâm Anh, Hoàng Văn Vương Thu, Nguyễn Trọng Tín; GVHD ThS. Nguyễn Đăng Quang",
   "previous_url": "https://nids-unsw-nb15-tlcn.phttrongtin-nguyen-a46.workers.dev",
-  "current_version": "1e2bd12e-0754-4d41-be68-7506407a0220",
+  "current_version": "ecb2f073-bd6d-4fd6-bcf7-4dfe88e03b6c",
   "release_state": "PUBLIC_DEMO_RESTRICTED_DOCUMENTS",
   "legacy_download_manifest": "deployment/cloudflare/download-manifest.json",
-  "last_deployed_on": "2026-11-19",
-  "last_deployment_source_commit": "b11cf7c7e09f4ea4f8ad6084eb3add1d776cbe6b",
+  "last_deployed_on": "2026-11-27",
+  "last_deployment_source_commit": "7391fad0baac1d2aea5fa8a301b94f663e509981",
   "last_deployment_scope": "Public presentation, demo, CSV summaries and model parameters; reports, offline archives and study documents on restricted Drive; frozen reports and ZIPs unchanged",
-  "last_deployment_check": "docs/releases/cloudflare_20261114/evidence/PUBLIC_PRIVACY_CHECK_20261119.json",
+  "last_deployment_check": "docs/releases/cloudflare_20261114/evidence/DEPLOYMENT_20261127_PRIVACY.json",
   "last_browser_check": "docs/releases/cloudflare_20261114/evidence/BROWSER_UI_CHECK_20261119.json",
-  "last_deployment_receipt": "docs/releases/cloudflare_20261114/evidence/DEPLOYMENT_20261119_PRIVACY.json"
+  "last_deployment_receipt": "docs/releases/cloudflare_20261114/evidence/DEPLOYMENT_20261127_PRIVACY.json",
+  "last_deployment_source_worktree_diff_sha256": "498b506ac407baa1cf377a1c850a36ec93975a1000cbba021219057ed0f5fd3e",
+  "last_deployment_source_note": "Deployed from base commit plus the recorded working-tree diff. The diff includes the presentation refresh and restricted Drive link correction."
 }
