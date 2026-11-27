@@ -18,5 +18,5 @@
   "last_browser_check": "docs/releases/cloudflare_20261114/evidence/PUBLIC_PRIVACY_CHECK_20261127_FINAL.json",
   "last_deployment_receipt": "docs/releases/cloudflare_20261114/evidence/PUBLIC_PRIVACY_CHECK_20261127_FINAL.json",
   "last_deployment_source_worktree_diff_sha256": "b8f32cd5b596f049958b8aeb3951782d73a7611289b007791d8e5a97c60c5636",
-  "last_deployment_source_note": "Deployed after the final laptop presentation-hub spacing adjustment. Browser screenshot check confirms the three member links fit in one row at the checked viewport."
+  "last_deployment_source_note": "Deployed after final laptop presentation-hub spacing adjustment. Browser screenshot confirms the three member links fit in one row at the checked viewport."
 }

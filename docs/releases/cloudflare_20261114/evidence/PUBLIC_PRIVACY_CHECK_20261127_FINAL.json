@@ -497,7 +497,7 @@
         "TN": 9,
         "FN": 1
       },
-      "max_absolute_score_error": 5.960464477539063e-8,
+      "max_absolute_score_error": 5.960464477539063e-08,
       "prediction_mismatches": 0,
       "threshold_matches": true
     },
@@ -511,7 +511,7 @@
         "TN": 2,
         "FN": 1
       },
-      "max_absolute_score_error": 5.960464477539063e-8,
+      "max_absolute_score_error": 5.960464477539063e-08,
       "prediction_mismatches": 0,
       "threshold_matches": true
     },
@@ -553,7 +553,7 @@
         "TN": 10,
         "FN": 18
       },
-      "max_absolute_score_error": 2.6640286354684406e-7,
+      "max_absolute_score_error": 2.6640286354684406e-07,
       "prediction_mismatches": 0,
       "threshold_matches": true
     },
@@ -567,7 +567,7 @@
         "TN": 10,
         "FN": 15
       },
-      "max_absolute_score_error": 2.6640286354684406e-7,
+      "max_absolute_score_error": 2.6640286354684406e-07,
       "prediction_mismatches": 0,
       "threshold_matches": true
     },
@@ -609,7 +609,7 @@
         "TN": 9,
         "FN": 3
       },
-      "max_absolute_score_error": 5.960464477539063e-8,
+      "max_absolute_score_error": 5.960464477539063e-08,
       "prediction_mismatches": 0,
       "threshold_matches": true
     },
@@ -623,7 +623,7 @@
         "TN": 2,
         "FN": 1
       },
-      "max_absolute_score_error": 5.960464477539063e-8,
+      "max_absolute_score_error": 5.960464477539063e-08,
       "prediction_mismatches": 0,
       "threshold_matches": true
     },
@@ -665,7 +665,7 @@
         "TN": 10,
         "FN": 18
       },
-      "max_absolute_score_error": 3.0662216393695374e-7,
+      "max_absolute_score_error": 3.0662216393695374e-07,
       "prediction_mismatches": 0,
       "threshold_matches": true
     },
@@ -679,7 +679,7 @@
         "TN": 10,
         "FN": 14
       },
-      "max_absolute_score_error": 3.0662216393695374e-7,
+      "max_absolute_score_error": 3.0662216393695374e-07,
       "prediction_mismatches": 0,
       "threshold_matches": true
     },
@@ -721,7 +721,7 @@
         "TN": 8,
         "FN": 1
       },
-      "max_absolute_score_error": 1.1920928955078125e-7,
+      "max_absolute_score_error": 1.1920928955078125e-07,
       "prediction_mismatches": 0,
       "threshold_matches": true
     },
@@ -735,7 +735,7 @@
         "TN": 2,
         "FN": 0
       },
-      "max_absolute_score_error": 1.1920928955078125e-7,
+      "max_absolute_score_error": 1.1920928955078125e-07,
       "prediction_mismatches": 0,
       "threshold_matches": true
     },
@@ -777,7 +777,7 @@
         "TN": 10,
         "FN": 18
       },
-      "max_absolute_score_error": 3.74111952083922e-7,
+      "max_absolute_score_error": 3.74111952083922e-07,
       "prediction_mismatches": 0,
       "threshold_matches": true
     },
@@ -791,7 +791,7 @@
         "TN": 10,
         "FN": 14
       },
-      "max_absolute_score_error": 3.74111952083922e-7,
+      "max_absolute_score_error": 3.74111952083922e-07,
       "prediction_mismatches": 0,
       "threshold_matches": true
     },
@@ -833,7 +833,7 @@
         "TN": 9,
         "FN": 3
       },
-      "max_absolute_score_error": 5.960464477539063e-8,
+      "max_absolute_score_error": 5.960464477539063e-08,
       "prediction_mismatches": 0,
       "threshold_matches": true
     },
@@ -847,7 +847,7 @@
         "TN": 3,
         "FN": 1
       },
-      "max_absolute_score_error": 5.960464477539063e-8,
+      "max_absolute_score_error": 5.960464477539063e-08,
       "prediction_mismatches": 0,
       "threshold_matches": true
     },
@@ -889,7 +889,7 @@
         "TN": 10,
         "FN": 19
       },
-      "max_absolute_score_error": 3.11399389829603e-7,
+      "max_absolute_score_error": 3.11399389829603e-07,
       "prediction_mismatches": 0,
       "threshold_matches": true
     },
@@ -903,11 +903,19 @@
         "TN": 10,
         "FN": 15
       },
-      "max_absolute_score_error": 3.11399389829603e-7,
+      "max_absolute_score_error": 3.11399389829603e-07,
       "prediction_mismatches": 0,
       "threshold_matches": true
     }
   ],
   "clipboard_download_browser_e2e": "NOT_RETESTED",
-  "layout_no_scroll": "NOT_RETESTED"
+  "layout_no_scroll": "NOT_RETESTED",
+  "version_id": "843dca75-7f9b-4304-b001-3b4605766aff",
+  "presentation_browser_check": {
+    "hub_url": "https://attq-nids.phttrongtin-nguyen-a46.workers.dev/ho-so",
+    "viewport_check": "browser screenshot at current Codex viewport",
+    "drive_link_present": true,
+    "member_links_fit_one_row": true,
+    "layout_no_scroll": "not proven for every viewport"
+  }
 }
