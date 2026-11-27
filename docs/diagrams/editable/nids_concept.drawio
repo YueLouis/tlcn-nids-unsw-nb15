@@ -1,0 +1,21 @@
+<mxfile host="app.diagrams.net" modified="2026-11-27T00:00:00.000Z" agent="Mozilla/5.0" version="24.7.17" type="device">
+  <diagram id="nids-concept" name="Luồng dự đoán NIDS">
+    <mxGraphModel dx="1200" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="csv" value="&lt;b&gt;Bản ghi luồng mạng&lt;/b&gt;&lt;br&gt;Đọc đặc trưng từ một&lt;br&gt;dòng trong tệp CSV" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=12;fillColor=#FFFFFF;strokeColor=#163A5F;fontColor=#163A5F;strokeWidth=1.2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="220" width="250" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="model" value="&lt;b&gt;Tính điểm&lt;/b&gt;&lt;br&gt;Tiền xử lý đặc trưng rồi&lt;br&gt;đưa vào mô hình" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=12;fillColor=#FFFFFF;strokeColor=#163A5F;fontColor=#163A5F;strokeWidth=1.2;" vertex="1" parent="1">
+          <mxGeometry x="410" y="220" width="250" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="result" value="&lt;b&gt;Phân loại&lt;/b&gt;&lt;br&gt;Điểm ≥ ngưỡng: Attack&lt;br&gt;Điểm &lt; ngưỡng: Normal" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=12;fillColor=#EAF3F9;strokeColor=#163A5F;fontColor=#163A5F;strokeWidth=1.2;" vertex="1" parent="1">
+          <mxGeometry x="760" y="220" width="250" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=block;strokeColor=#163A5F;strokeWidth=1.2;" edge="1" parent="1" source="csv" target="model"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=block;strokeColor=#163A5F;strokeWidth=1.2;" edge="1" parent="1" source="model" target="result"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,22 @@
+<mxfile host="app.diagrams.net" modified="2026-11-27T00:00:00.000Z" agent="Mozilla/5.0" version="24.7.17" type="device">
+  <diagram id="gantt-plan" name="Kế hoạch toàn đề tài">
+    <mxGraphModel dx="1500" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Kế hoạch dự kiến toàn đề tài năm 2026" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontColor=#163A5F;" vertex="1" parent="1"><mxGeometry x="40" y="25" width="500" height="30" as="geometry"/></mxCell>
+        <mxCell id="note" value="Thanh biểu thị cửa sổ kế hoạch, không phải phần trăm hoàn thành hoặc nhật ký thực hiện." style="text;html=1;strokeColor=none;fillColor=none;align=left;fontColor=#333333;" vertex="1" parent="1"><mxGeometry x="40" y="55" width="650" height="30" as="geometry"/></mxCell>
+        <mxCell id="headers" value="17/08     24/08     31/08     07/09     14/09     21/09     28/09     05/10     12/10     19/10     26/10     02/11     09/11     16/11     23/11     30/11     07/12     14/12     21/12" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontFamily=Consolas;fontSize=10;fontColor=#163A5F;" vertex="1" parent="1"><mxGeometry x="250" y="100" width="1100" height="30" as="geometry"/></mxCell>
+        <mxCell id="rows" value="&lt;b&gt;ND1. Bài toán và phạm vi&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;ND2. Lý thuyết và tài liệu&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;ND3. Protocol&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;ND4. Audit và tiền xử lý&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;ND5. Bốn baseline&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;ND6. Thí nghiệm và đánh giá&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;ND7. Phân tích lỗi và demo&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;ND8. Viết và bàn giao&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontColor=#163A5F;spacing=4;" vertex="1" parent="1"><mxGeometry x="40" y="145" width="205" height="400" as="geometry"/></mxCell>
+        <mxCell id="bars" value="" style="shape=mxgraph.gantt.bar;html=1;fillColor=#6B9AC0;strokeColor=#163A5F;" vertex="1" parent="1"><mxGeometry x="255" y="148" width="250" height="28" as="geometry"/></mxCell>
+        <mxCell id="bar2" value="" style="shape=mxgraph.gantt.bar;html=1;fillColor=#6B9AC0;strokeColor=#163A5F;" vertex="1" parent="1"><mxGeometry x="315" y="190" width="450" height="28" as="geometry"/></mxCell>
+        <mxCell id="bar3" value="" style="shape=mxgraph.gantt.bar;html=1;fillColor=#6B9AC0;strokeColor=#163A5F;" vertex="1" parent="1"><mxGeometry x="375" y="232" width="350" height="28" as="geometry"/></mxCell>
+        <mxCell id="bar4" value="" style="shape=mxgraph.gantt.bar;html=1;fillColor=#6B9AC0;strokeColor=#163A5F;" vertex="1" parent="1"><mxGeometry x="495" y="274" width="350" height="28" as="geometry"/></mxCell>
+        <mxCell id="bar5" value="" style="shape=mxgraph.gantt.bar;html=1;fillColor=#6B9AC0;strokeColor=#163A5F;" vertex="1" parent="1"><mxGeometry x="675" y="316" width="250" height="28" as="geometry"/></mxCell>
+        <mxCell id="bar6" value="" style="shape=mxgraph.gantt.bar;html=1;fillColor=#6B9AC0;strokeColor=#163A5F;" vertex="1" parent="1"><mxGeometry x="795" y="358" width="500" height="28" as="geometry"/></mxCell>
+        <mxCell id="bar7" value="" style="shape=mxgraph.gantt.bar;html=1;fillColor=#6B9AC0;strokeColor=#163A5F;" vertex="1" parent="1"><mxGeometry x="1095" y="400" width="190" height="28" as="geometry"/></mxCell>
+        <mxCell id="bar8" value="" style="shape=mxgraph.gantt.bar;html=1;fillColor=#6B9AC0;strokeColor=#163A5F;" vertex="1" parent="1"><mxGeometry x="255" y="442" width="1100" height="28" as="geometry"/></mxCell>
+        <mxCell id="milestones" value="Đợt 1: 13/09     Đợt 2: 11/10     Đợt 3: 08/11     Kỳ tiếp: 06/12     Bản cuối: 23/12" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontFamily=Consolas;fontSize=10;fontColor=#B8681B;" vertex="1" parent="1"><mxGeometry x="40" y="520" width="1100" height="30" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

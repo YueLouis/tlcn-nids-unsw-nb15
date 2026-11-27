@@ -1,0 +1,22 @@
+<mxfile host="app.diagrams.net" modified="2026-11-27T00:00:00.000Z" agent="Mozilla/5.0" version="24.7.17" type="device">
+  <diagram id="benchmark-split" name="Luồng benchmark">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="train-title" value="175.341 dòng trong tập huấn luyện gốc" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontColor=#163A5F;" vertex="1" parent="1"><mxGeometry x="60" y="40" width="380" height="30" as="geometry"/></mxCell>
+        <mxCell id="train-note" value="Closed-set giữ đủ lớp. LOACO loại một lớp trước khi chia 80/20 theo loại tấn công." style="text;html=1;strokeColor=none;fillColor=none;align=left;fontColor=#333333;" vertex="1" parent="1"><mxGeometry x="60" y="75" width="650" height="30" as="geometry"/></mxCell>
+        <mxCell id="fit" value="&lt;b&gt;80% để huấn luyện&lt;/b&gt;&lt;br&gt;Học bộ tiền xử lý và mô hình.&lt;br&gt;Với IF/AE, chỉ dùng các dòng Normal." style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=12;fillColor=#EAF3F9;strokeColor=#163A5F;fontColor=#163A5F;" vertex="1" parent="1"><mxGeometry x="60" y="140" width="360" height="90" as="geometry"/></mxCell>
+        <mxCell id="val" value="&lt;b&gt;20% để chọn ngưỡng&lt;/b&gt;&lt;br&gt;Chấm các dòng Normal.&lt;br&gt;Chọn ngưỡng FPR mục tiêu 1% và 5%." style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=12;fillColor=#EAF3F9;strokeColor=#163A5F;fontColor=#163A5F;" vertex="1" parent="1"><mxGeometry x="520" y="140" width="360" height="90" as="geometry"/></mxCell>
+        <mxCell id="e-fit-val" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=block;strokeColor=#163A5F;strokeWidth=1.2;" edge="1" parent="1" source="fit" target="val"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="test-title" value="Đánh giá trên tập kiểm thử giữ riêng" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontColor=#163A5F;" vertex="1" parent="1"><mxGeometry x="60" y="285" width="450" height="30" as="geometry"/></mxCell>
+        <mxCell id="test" value="&lt;b&gt;Tập kiểm thử gốc&lt;/b&gt;&lt;br&gt;82.332 dòng, giữ nguyên" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=12;fillColor=#FFFFFF;strokeColor=#163A5F;fontColor=#163A5F;" vertex="1" parent="1"><mxGeometry x="60" y="340" width="250" height="75" as="geometry"/></mxCell>
+        <mxCell id="apply" value="&lt;b&gt;Chấm tập kiểm thử&lt;/b&gt;&lt;br&gt;Tính điểm rồi so với ngưỡng" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=12;fillColor=#FFFFFF;strokeColor=#163A5F;fontColor=#163A5F;" vertex="1" parent="1"><mxGeometry x="360" y="340" width="250" height="75" as="geometry"/></mxCell>
+        <mxCell id="results" value="&lt;b&gt;Tổng hợp kết quả&lt;/b&gt;&lt;br&gt;FPR, Recall, UADR và AP" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=12;fillColor=#EAF3F9;strokeColor=#163A5F;fontColor=#163A5F;" vertex="1" parent="1"><mxGeometry x="660" y="340" width="250" height="75" as="geometry"/></mxCell>
+        <mxCell id="e-test" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=block;strokeColor=#163A5F;strokeWidth=1.2;" edge="1" parent="1" source="test" target="apply"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-results" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=block;strokeColor=#163A5F;strokeWidth=1.2;" edge="1" parent="1" source="apply" target="results"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e-val-apply" value="ngưỡng từ validation" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;dashed=1;endArrow=block;strokeColor=#005A9C;strokeWidth=1.2;fontColor=#005A9C;" edge="1" parent="1" source="val" target="apply"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
